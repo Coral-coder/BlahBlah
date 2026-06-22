@@ -65,4 +65,8 @@ jobs:
         env:
           APPSTORE_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
           APPSTORE_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
+          # Known name/password for the temporary CI keychain so fastlane can
+          # import the signing certificate without prompting.
+          MATCH_KEYCHAIN_NAME: fastlane_tmp_keychain
+          MATCH_KEYCHAIN_PASSWORD: ci-build-keychain
         run: bundle exec fastlane ios beta

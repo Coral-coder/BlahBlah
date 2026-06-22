@@ -23,8 +23,11 @@ platform :ios do
     )
 
     # Prepare an isolated, unlocked keychain on the CI runner for the signing
-    # identity we're about to download.
+    # identity we're about to download. MATCH_KEYCHAIN_* are set in the workflow
+    # so we know the keychain name + password to import the cert into.
     setup_ci
+    keychain_name = ENV.fetch("MATCH_KEYCHAIN_NAME", "fastlane_tmp_keychain")
+    keychain_password = ENV.fetch("MATCH_KEYCHAIN_PASSWORD", "")
 
     # Monotonic build number from the CI run so TestFlight never rejects a dupe.
     increment_build_number(
@@ -39,7 +42,9 @@ platform :ios do
     # and an App Store provisioning profile with the API key on each run.
     get_certificates(
       api_key: api_key,
-      development: false
+      development: false,
+      keychain_path: keychain_name,
+      keychain_password: keychain_password
     )
     get_provisioning_profile(
       api_key: api_key,
