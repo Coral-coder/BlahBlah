@@ -61,12 +61,23 @@ jobs:
           fi
           echo "ASC_API_KEY_PATH=$KEY_PATH" >> "$GITHUB_ENV"
 
+      - name: Create signing keychain
+        run: |
+          set -euo pipefail
+          KEYCHAIN="$RUNNER_TEMP/signing.keychain-db"
+          PASSWORD="ci-build-keychain"
+          security create-keychain -p "$PASSWORD" "$KEYCHAIN"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN"
+          security unlock-keychain -p "$PASSWORD" "$KEYCHAIN"
+          # Put our keychain first in the search list (keep the existing ones)
+          # and make it the default so xcodebuild/codesign use it.
+          security list-keychains -d user -s "$KEYCHAIN" $(security list-keychains -d user | tr -d '"')
+          security default-keychain -s "$KEYCHAIN"
+          echo "SIGNING_KEYCHAIN=$KEYCHAIN" >> "$GITHUB_ENV"
+          echo "SIGNING_KEYCHAIN_PASSWORD=$PASSWORD" >> "$GITHUB_ENV"
+
       - name: Build & upload to TestFlight
         env:
           APPSTORE_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
           APPSTORE_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
-          # Known name/password for the temporary CI keychain so fastlane can
-          # import the signing certificate without prompting.
-          MATCH_KEYCHAIN_NAME: fastlane_tmp_keychain
-          MATCH_KEYCHAIN_PASSWORD: ci-build-keychain
         run: bundle exec fastlane ios beta

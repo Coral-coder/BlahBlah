@@ -22,12 +22,11 @@ platform :ios do
       in_house: false
     )
 
-    # Prepare an isolated, unlocked keychain on the CI runner for the signing
-    # identity we're about to download. MATCH_KEYCHAIN_* are set in the workflow
-    # so we know the keychain name + password to import the cert into.
-    setup_ci
-    keychain_name = ENV.fetch("MATCH_KEYCHAIN_NAME", "fastlane_tmp_keychain")
-    keychain_password = ENV.fetch("MATCH_KEYCHAIN_PASSWORD", "")
+    # The workflow creates and unlocks a dedicated keychain (absolute path in
+    # SIGNING_KEYCHAIN) and sets it as default, so the downloaded certificate
+    # imports somewhere xcodebuild can actually find it.
+    keychain_name = ENV.fetch("SIGNING_KEYCHAIN")
+    keychain_password = ENV.fetch("SIGNING_KEYCHAIN_PASSWORD")
 
     # Monotonic build number from the CI run so TestFlight never rejects a dupe.
     increment_build_number(
