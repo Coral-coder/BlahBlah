@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "BlahBlah",
+    "slug": "blahblah",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "blahblah",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#0E1116"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.blahblah.app"
+    },
+    "android": {
+      "package": "com.blahblah.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0E1116"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
