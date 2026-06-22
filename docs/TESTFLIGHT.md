@@ -13,28 +13,17 @@ Trigger by pushing a `v*` tag or running the workflow manually.
 
 ## Secrets (GitHub → Settings → Secrets and variables → Actions)
 
-You already have the first two. Add the last two.
+Three secrets, all already set:
 
-| Secret | Status | What it is / where to get it |
-|---|---|---|
-| `APPSTORE_API_KEY_ID` | ✅ you have it | The API key's **Key ID** |
-| `APPSTORE_API_PRIVATE_KEY` | ✅ you have it | Contents of the `.p8` file (raw PEM or base64 — the workflow handles both) |
-| `APPSTORE_ISSUER_ID` | ➕ add this | **Issuer ID** at the top of the App Store Connect → Keys page |
-| `APPLE_TEAM_ID` | ➕ add this | 10-char **Team ID** from developer.apple.com → Membership |
+| Secret | What it is |
+|---|---|
+| `APPSTORE_API_KEY_ID` | The API key's **Key ID** |
+| `APPSTORE_API_PRIVATE_KEY` | Contents of the `.p8` file (raw PEM or base64 — the workflow handles both) |
+| `APPSTORE_ISSUER_ID` | **Issuer ID** from the App Store Connect → Keys page |
 
-That's the entire secret set.
-
-### Where each value lives
-- **Issuer ID**: App Store Connect → **Users and Access → Integrations → App
-  Store Connect API** — it's the `Issuer ID` shown above the keys list (a UUID).
-- **Team ID**: https://developer.apple.com/account → **Membership details** →
-  *Team ID* (10 characters, e.g. `A1B2C3D4E5`).
-
-Add them with the CLI if you prefer:
-```bash
-gh secret set APPSTORE_ISSUER_ID --body "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-gh secret set APPLE_TEAM_ID      --body "A1B2C3D4E5"
-```
+The **Team ID** (`9BQDEVHKJZ`) is set in `fastlane/Appfile` — it isn't secret, so
+it lives in the repo rather than as a GitHub secret. (You can override it at
+runtime with an `APPLE_TEAM_ID` env var/secret if it ever changes.)
 
 > The API key's role must allow creating signing assets — **Admin** is safest
 > for the first run (it lets Xcode create the cloud-managed distribution
