@@ -38,19 +38,22 @@ platform :ios do
       targets: [SCHEME]
     )
 
-    auth = "-allowProvisioningUpdates " \
-           "-authenticationKeyPath #{key_path} " \
-           "-authenticationKeyID #{key_id} " \
-           "-authenticationKeyIssuerID #{issuer_id}"
-
+    # fastlane auto-injects the App Store Connect API key auth flags
+    # (-authenticationKeyPath/ID/IssuerID) into every xcodebuild call because the
+    # key is registered above. We only add -allowProvisioningUpdates so Xcode
+    # cloud-signing can create/download the cert + profile. Passing the auth
+    # flags here too would duplicate them and fail with exit 64.
     build_app(
       workspace: WORKSPACE,
       scheme: SCHEME,
       configuration: "Release",
       export_method: "app-store",
-      xcargs: auth,
-      export_xcargs: auth,
-      export_options: { signingStyle: "automatic" }
+      xcargs: "-allowProvisioningUpdates",
+      export_xcargs: "-allowProvisioningUpdates",
+      export_options: {
+        signingStyle: "automatic",
+        teamID: team_id
+      }
     )
 
     upload_to_testflight(
