@@ -1,4 +1,3 @@
-import { Link, useRouter } from "expo-router";
 import { useState } from "react";
 import {
   Pressable,
@@ -17,13 +16,15 @@ import {
   customLanguage,
   type Language,
 } from "@/lib/languages";
+import { useNav } from "@/navigation";
 import { useApp } from "@/state/AppContext";
 import { theme } from "@/theme";
 
-export default function Home() {
+export function HomeScreen() {
   const { ready, language, level, setLanguage, setLevel, hasApiKey } = useApp();
-  const router = useRouter();
+  const nav = useNav();
   const [custom, setCustom] = useState("");
+  const insets = useSafeAreaInsets();
 
   if (!ready) return null;
 
@@ -43,16 +44,14 @@ export default function Home() {
       </Text>
 
       {!hasApiKey && (
-        <Link href="/settings" asChild>
-          <Pressable>
-            <Card style={styles.warning}>
-              <Text style={styles.warningText}>
-                ⚠️  Add your Claude API key in Settings to generate lessons and
-                chat. Tap here.
-              </Text>
-            </Card>
-          </Pressable>
-        </Link>
+        <Pressable onPress={() => nav.navigate("settings")}>
+          <Card style={styles.warning}>
+            <Text style={styles.warningText}>
+              ⚠️  Add your Claude API key in Settings to generate lessons and
+              chat. Tap here.
+            </Text>
+          </Card>
+        </Pressable>
       )}
 
       <Text style={styles.section}>Featured</Text>
@@ -124,22 +123,22 @@ export default function Home() {
 
       <Button
         label="📖  Generate a lesson"
-        onPress={() => router.push("/lesson")}
+        onPress={() => nav.navigate("lesson")}
         style={{ marginBottom: theme.spacing(1.5) }}
       />
       <Button
         label="💬  Practice conversation"
         variant="ghost"
-        onPress={() => router.push("/immersion")}
+        onPress={() => nav.navigate("immersion")}
         style={{ marginBottom: theme.spacing(1.5) }}
       />
       <Button
         label="⚙️  Settings"
         variant="ghost"
-        onPress={() => router.push("/settings")}
+        onPress={() => nav.navigate("settings")}
       />
 
-      <View style={{ height: useSafeAreaInsets().bottom + theme.spacing(2) }} />
+      <View style={{ height: insets.bottom + theme.spacing(2) }} />
     </ScrollView>
   );
 }

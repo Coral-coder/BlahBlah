@@ -20,7 +20,7 @@ const MODELS: { id: ModelId; label: string; note: string }[] = [
   { id: "claude-haiku-4-5", label: "Haiku 4.5", note: "Fastest · cheapest" },
 ];
 
-export default function SettingsScreen() {
+export function SettingsScreen() {
   const { settings, setSettings } = useApp();
   const [apiKey, setApiKey] = useState(settings.apiKey);
   const [model, setModel] = useState<ModelId>(settings.model);
@@ -52,7 +52,9 @@ export default function SettingsScreen() {
         <Button
           label="Get an API key →"
           variant="ghost"
-          onPress={() => Linking.openURL("https://console.anthropic.com/settings/keys")}
+          onPress={() =>
+            Linking.openURL("https://console.anthropic.com/settings/keys")
+          }
           style={{ marginTop: theme.spacing(1) }}
         />
       </Card>

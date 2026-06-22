@@ -1,5 +1,3 @@
-import * as Speech from "expo-speech";
-import { useRouter } from "expo-router";
 import { useState } from "react";
 import {
   Pressable,
@@ -12,8 +10,10 @@ import {
 
 import { Button, Card, Chip } from "@/components/ui";
 import { describeError, generateLesson } from "@/lib/claude";
-import type { Lesson } from "@/lib/types";
+import { speak } from "@/lib/speech";
 import { storage } from "@/lib/storage";
+import type { Exercise as ExerciseType, Lesson } from "@/lib/types";
+import { useNav } from "@/navigation";
 import { useApp } from "@/state/AppContext";
 import { theme } from "@/theme";
 
@@ -26,9 +26,9 @@ const SUGGESTED = [
   "Shopping for groceries",
 ];
 
-export default function LessonScreen() {
+export function LessonScreen() {
   const { settings, language, level, hasApiKey } = useApp();
-  const router = useRouter();
+  const nav = useNav();
   const [topic, setTopic] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -82,7 +82,14 @@ export default function LessonScreen() {
         />
         <View style={styles.chips}>
           {SUGGESTED.map((s) => (
-            <Chip key={s} label={s} onPress={() => { setTopic(s); run(s); }} />
+            <Chip
+              key={s}
+              label={s}
+              onPress={() => {
+                setTopic(s);
+                run(s);
+              }}
+            />
           ))}
         </View>
         <Button
@@ -99,7 +106,7 @@ export default function LessonScreen() {
             <Button
               label="Open Settings"
               variant="ghost"
-              onPress={() => router.push("/settings")}
+              onPress={() => nav.navigate("settings")}
               style={{ marginTop: theme.spacing(1) }}
             />
           )}
@@ -119,7 +126,9 @@ export default function LessonScreen() {
               </Text>
             </Pressable>
             {showTranslation && (
-              <Text style={styles.translation}>{lesson.immersionTranslation}</Text>
+              <Text style={styles.translation}>
+                {lesson.immersionTranslation}
+              </Text>
             )}
             <SpeakButton text={lesson.immersionText} />
           </Card>
@@ -148,7 +157,7 @@ export default function LessonScreen() {
           <Button
             label="💬  Practice this in conversation"
             variant="ghost"
-            onPress={() => router.push("/immersion")}
+            onPress={() => nav.navigate("immersion")}
           />
         </View>
       )}
@@ -164,7 +173,7 @@ function SectionLabel({ text }: { text: string }) {
 function SpeakButton({ text, compact }: { text: string; compact?: boolean }) {
   return (
     <Pressable
-      onPress={() => Speech.speak(text)}
+      onPress={() => speak(text)}
       style={[styles.speak, compact && { paddingVertical: 4, marginTop: 0 }]}
     >
       <Text style={styles.speakText}>🔊 {compact ? "" : "Listen"}</Text>
@@ -172,7 +181,7 @@ function SpeakButton({ text, compact }: { text: string; compact?: boolean }) {
   );
 }
 
-function Exercise({ index, ex }: { index: number; ex: { prompt: string; answer: string; hint?: string } }) {
+function Exercise({ index, ex }: { index: number; ex: ExerciseType }) {
   const [revealed, setRevealed] = useState(false);
   return (
     <Card>
@@ -207,7 +216,11 @@ const styles = StyleSheet.create({
     fontSize: 15,
     marginBottom: theme.spacing(1.5),
   },
-  chips: { flexDirection: "row", flexWrap: "wrap", marginBottom: theme.spacing(1) },
+  chips: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    marginBottom: theme.spacing(1),
+  },
   error: { backgroundColor: "#2A1A1A", borderColor: "#5C2A28" },
   errorText: { color: "#F2A8A2", fontWeight: "600" },
   title: { color: theme.colors.text, fontSize: 26, fontWeight: "800" },

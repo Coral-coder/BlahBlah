@@ -1,0 +1,63 @@
+default_platform(:ios)
+
+APP_IDENTIFIER = "com.lightwave.blahblah".freeze
+XCODEPROJ = "ios/BlahBlah.xcodeproj".freeze
+WORKSPACE = "ios/BlahBlah.xcworkspace".freeze
+SCHEME = "BlahBlah".freeze
+
+platform :ios do
+  desc "Build the iOS app and upload it to TestFlight"
+  lane :beta do
+    # App Store Connect API key — used both to read the latest build number and
+    # to upload. Authenticates with your Apple Developer account only; no Expo
+    # or third-party account involved.
+    api_key = app_store_connect_api_key(
+      key_id: ENV.fetch("ASC_KEY_ID"),
+      issuer_id: ENV.fetch("ASC_ISSUER_ID"),
+      key_content: ENV.fetch("ASC_API_KEY_P8"),
+      is_key_content_base64: true,
+      in_house: false
+    )
+
+    # Always upload a build number higher than what's already on TestFlight.
+    next_build = latest_testflight_build_number(
+      api_key: api_key,
+      app_identifier: APP_IDENTIFIER,
+      initial_build_number: 0
+    ) + 1
+
+    increment_build_number(
+      xcodeproj: XCODEPROJ,
+      build_number: next_build
+    )
+
+    # Manual signing with the certificate + provisioning profile that the CI
+    # workflow imported from GitHub secrets.
+    update_code_signing_settings(
+      use_automatic_signing: false,
+      path: XCODEPROJ,
+      team_id: ENV.fetch("APPLE_TEAM_ID"),
+      targets: [SCHEME],
+      code_sign_identity: "Apple Distribution",
+      profile_name: ENV.fetch("PROVISIONING_PROFILE_NAME")
+    )
+
+    build_app(
+      workspace: WORKSPACE,
+      scheme: SCHEME,
+      configuration: "Release",
+      export_method: "app-store",
+      export_options: {
+        provisioningProfiles: {
+          APP_IDENTIFIER => ENV.fetch("PROVISIONING_PROFILE_NAME")
+        }
+      }
+    )
+
+    upload_to_testflight(
+      api_key: api_key,
+      app_identifier: APP_IDENTIFIER,
+      skip_waiting_for_build_processing: true
+    )
+  end
+end

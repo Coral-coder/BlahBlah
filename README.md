@@ -4,93 +4,90 @@ An immersion-first language-learning app — like Duolingo, but the lessons are
 generated on the fly by Claude and tailored to *you*. Lead languages are
 **German** and **Mandarin Chinese**, but you can learn **any** language.
 
-Built with **Expo / React Native + TypeScript** and the **Claude API**
-(`claude-opus-4-8` by default).
+Built with **bare React Native + TypeScript** (no Expo) and the **Claude API**
+(`claude-opus-4-8` by default). CI compiles with Xcode and ships straight to
+**TestFlight** via Fastlane using only your Apple Developer account.
 
 ## What it does
 
-- **Pick any language & level.** German and Chinese are featured; a dozen more
-  are one tap away; or type any language at all. Set your CEFR level (A1–C1).
+- **Pick any language & level.** German and Chinese are featured; more are one
+  tap away; or type any language at all. Set your CEFR level (A1–C1).
 - **AI-generated immersion lessons.** Give a topic ("ordering coffee") and Claude
-  writes an immersion passage in the target language, 8 vocabulary cards (with
-  pronunciation aids — pinyin for Chinese, romaji for Japanese, etc.), and 4
-  exercises. Lessons are cached on-device so you can revisit them.
+  writes an immersion passage in the target language, vocabulary cards (with
+  pronunciation aids — pinyin for Chinese, romaji for Japanese, etc.), and
+  exercises. Lessons are cached on-device.
 - **Conversation tutor.** Chat in your target language. Claude replies at your
-  level, gently corrects you, keeps the conversation going, and offers a
-  tap-to-reveal English translation of every reply.
-- **Listen.** Tap 🔊 on any phrase to hear it via on-device text-to-speech.
+  level, gently corrects you, and offers a tap-to-reveal English translation.
+- **Listen.** Tap 🔊 on any phrase to hear it (device text-to-speech).
 
-## Getting started
+## Run it locally
+
+Requires Xcode + CocoaPods (macOS) for iOS.
 
 ```bash
 npm install
-npm start
+bundle install
+bundle exec pod install --project-directory=ios
+npm run ios        # or: open ios/BlahBlah.xcworkspace in Xcode
+# Android: npm run android
 ```
 
-Then press `i` (iOS simulator), `a` (Android), or `w` (web), or scan the QR code
-with the **Expo Go** app on your phone.
+Then open **Settings** in the app and paste a Claude API key from the
+[Anthropic Console](https://console.anthropic.com/settings/keys). The key is
+stored only on the device.
 
-### Add your Claude API key
+## Ship to TestFlight
 
-1. Open the app → **Settings**.
-2. Paste a key from the [Anthropic Console](https://console.anthropic.com/settings/keys).
-3. (Optional) Choose a model — Opus 4.8 (best), Sonnet 4.6 (balanced), or
-   Haiku 4.5 (fastest/cheapest).
+Push a `v*` tag (or run the **iOS → TestFlight** GitHub Action manually) and it
+builds with Xcode and uploads to TestFlight — your Apple account only, no Expo /
+EAS / second account. Full secret-by-secret setup is in
+**[docs/TESTFLIGHT.md](docs/TESTFLIGHT.md)**.
 
-The key is stored only on your device (AsyncStorage).
-
-## Shipping to iOS / TestFlight
-
-This is a native iOS app. Builds and TestFlight releases run through **EAS Build
-+ EAS Submit** from GitHub Actions (`.github/workflows/testflight.yml`) — no Mac
-or Xcode required. Push a `v*` tag (or run the workflow manually) and it builds
-in the cloud and uploads to TestFlight.
-
-Full step-by-step setup, including exactly which secrets to import and where, is
-in **[docs/TESTFLIGHT.md](docs/TESTFLIGHT.md)**. (Short version: one GitHub
-secret, `EXPO_TOKEN`; your App Store Connect API key is stored in EAS itself.)
+```bash
+git tag v0.1.0 && git push origin v0.1.0
+```
 
 ## Project structure
 
 ```
-app/                 Screens (expo-router, file-based)
-  _layout.tsx        Navigation stack + providers
-  index.tsx          Home: language/level selection
-  lesson.tsx         AI-generated immersion lessons
-  immersion.tsx      Conversation tutor
-  settings.tsx       API key + model
+ios/                 Native iOS project (Xcode) — bundle id com.lightwave.blahblah
+android/             Native Android project
+App.tsx              Root: providers + lightweight stack navigator + header
+index.js             React Native entry point
 src/
-  lib/claude.ts      Claude API calls (lesson gen + chat)
-  lib/languages.ts   Featured languages, CEFR levels
+  screens/           HomeScreen, LessonScreen, ImmersionScreen, SettingsScreen
+  navigation.tsx     Minimal stack navigator (no extra native deps)
+  state/AppContext   Global app state (settings, language, level)
+  lib/claude.ts      Claude API calls (lesson generation + chat)
+  lib/speech.ts      Text-to-speech wrapper (react-native-tts)
+  lib/languages.ts   Featured languages + CEFR levels
   lib/storage.ts     AsyncStorage persistence
   lib/types.ts       Shared types
-  state/AppContext.tsx  Global app state
   components/ui.tsx  Buttons, cards, chips
   theme.ts           Colors / spacing
+fastlane/            Fastfile (lane :beta) + Appfile
+.github/workflows/   testflight.yml (Xcode build → TestFlight)
 ```
 
 ## How the AI works
 
-- **Lessons** use Claude's **structured outputs** (`output_config.format` with a
-  JSON schema) so every lesson parses reliably into vocabulary + exercises.
-- **Conversation** sends the running history to Claude with a level- and
-  language-aware system prompt; the reply carries an inline `[[EN: …]]` gloss
-  that the app splits out for the translate toggle.
+- **Lessons** ask Claude for a strict JSON object and parse it (tolerant of code
+  fences) into vocabulary + exercises.
+- **Conversation** sends the running history with a level- and language-aware
+  system prompt; the reply carries an inline `[[EN: …]]` gloss that the app
+  splits out for the translate toggle.
 
-## ⚠️ Security note (read before shipping publicly)
+## ⚠️ Security note
 
-This prototype calls the Claude API **directly from the device** using a key the
-user supplies, which is great for personal use and demos. An embedded API key
-can be extracted from network traffic, so for a **public release** you should:
-
-1. Stand up a small backend that holds the Anthropic key server-side.
-2. Add per-user authentication and rate limiting.
-3. Point the app's `src/lib/claude.ts` calls at your backend instead of the
-   Anthropic API.
+The app calls the Claude API **directly from the device** with a user-supplied
+key — fine for personal use and demos, but an embedded key can be extracted from
+traffic. For a public release, proxy these calls through a backend that holds the
+Anthropic key server-side and add per-user auth + rate limiting, then point
+`src/lib/claude.ts` at your backend.
 
 ## Roadmap ideas
 
 - Spaced-repetition review of saved vocabulary
 - Streaks & daily goals
-- Speech *input* (speak your answers) via on-device speech recognition
-- Grammar deep-dives generated on demand
+- Speech *input* (speak your answers)
+- Grammar deep-dives on demand

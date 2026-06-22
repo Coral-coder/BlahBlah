@@ -1,5 +1,3 @@
-import * as Speech from "expo-speech";
-import { useRouter } from "expo-router";
 import { useRef, useState } from "react";
 import {
   ActivityIndicator,
@@ -16,13 +14,15 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Button } from "@/components/ui";
 import { chatReply, describeError } from "@/lib/claude";
+import { speak } from "@/lib/speech";
 import type { ChatMessage } from "@/lib/types";
+import { useNav } from "@/navigation";
 import { useApp } from "@/state/AppContext";
 import { theme } from "@/theme";
 
-export default function ImmersionScreen() {
+export function ImmersionScreen() {
   const { settings, language, level, hasApiKey } = useApp();
-  const router = useRouter();
+  const nav = useNav();
   const insets = useSafeAreaInsets();
   const scrollRef = useRef<ScrollView>(null);
 
@@ -105,7 +105,7 @@ export default function ImmersionScreen() {
               <Button
                 label="Open Settings"
                 variant="ghost"
-                onPress={() => router.push("/settings")}
+                onPress={() => nav.navigate("settings")}
                 style={{ marginTop: theme.spacing(1) }}
               />
             )}
@@ -123,7 +123,12 @@ export default function ImmersionScreen() {
           multiline
           onSubmitEditing={send}
         />
-        <Button label="Send" onPress={send} loading={sending} style={styles.sendBtn} />
+        <Button
+          label="Send"
+          onPress={send}
+          loading={sending}
+          style={styles.sendBtn}
+        />
       </View>
     </KeyboardAvoidingView>
   );
@@ -137,14 +142,12 @@ function Bubble({ message }: { message: ChatMessage }) {
       <Text style={styles.bubbleText}>{message.content}</Text>
       {!isUser && (
         <View style={styles.bubbleActions}>
-          <Pressable onPress={() => Speech.speak(message.content)}>
+          <Pressable onPress={() => speak(message.content)}>
             <Text style={styles.action}>🔊 Listen</Text>
           </Pressable>
           {message.translation ? (
             <Pressable onPress={() => setShowTr((v) => !v)}>
-              <Text style={styles.action}>
-                {showTr ? "Hide" : "Translate"}
-              </Text>
+              <Text style={styles.action}>{showTr ? "Hide" : "Translate"}</Text>
             </Pressable>
           ) : null}
         </View>
