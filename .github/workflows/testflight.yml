@@ -24,10 +24,27 @@ on:
 jobs:
   testflight:
     name: Build & upload to TestFlight
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Select newest Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Verify iOS 26 SDK is available
+        run: |
+          set -euo pipefail
+          xcodebuild -version
+          SDK=$(xcodebuild -showsdks | grep -oE 'iphoneos[0-9.]+' | sed 's/iphoneos//' | sort -V | tail -1)
+          echo "Latest iOS SDK on runner: ${SDK:-none}"
+          major=${SDK%%.*}
+          if [ "${major:-0}" -lt 26 ]; then
+            echo "::error::App Store now requires the iOS 26 SDK (Xcode 26) but this runner's newest is ${SDK:-none}. Bump the runner image."
+            exit 1
+          fi
 
       - name: Setup Node
         uses: actions/setup-node@v4
