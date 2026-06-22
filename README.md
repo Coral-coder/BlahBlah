@@ -40,8 +40,10 @@ stored only on the device.
 
 Push a `v*` tag (or run the **iOS → TestFlight** GitHub Action manually) and it
 builds with Xcode and uploads to TestFlight — your Apple account only, no Expo /
-EAS / second account. Full secret-by-secret setup is in
-**[docs/TESTFLIGHT.md](docs/TESTFLIGHT.md)**.
+EAS / second account. Auth is an App Store Connect API key with **Xcode cloud
+signing**, so there are no cert/profile files to manage — just four GitHub
+secrets (`APPSTORE_API_KEY_ID`, `APPSTORE_API_PRIVATE_KEY`, `APPSTORE_ISSUER_ID`,
+`APPLE_TEAM_ID`). Full setup in **[docs/TESTFLIGHT.md](docs/TESTFLIGHT.md)**.
 
 ```bash
 git tag v0.1.0 && git push origin v0.1.0

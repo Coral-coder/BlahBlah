@@ -6,52 +6,49 @@ WORKSPACE = "ios/BlahBlah.xcworkspace".freeze
 SCHEME = "BlahBlah".freeze
 
 platform :ios do
-  desc "Build the iOS app and upload it to TestFlight"
+  desc "Build the iOS app and upload it to TestFlight (App Store Connect API key + cloud signing)"
   lane :beta do
-    # App Store Connect API key — used both to read the latest build number and
-    # to upload. Authenticates with your Apple Developer account only; no Expo
-    # or third-party account involved.
+    key_id = ENV.fetch("APPSTORE_API_KEY_ID")
+    issuer_id = ENV.fetch("APPSTORE_ISSUER_ID")
+    key_path = ENV.fetch("ASC_API_KEY_PATH") # .p8 written to disk by the workflow
+    team_id = ENV.fetch("APPLE_TEAM_ID")
+
     api_key = app_store_connect_api_key(
-      key_id: ENV.fetch("ASC_KEY_ID"),
-      issuer_id: ENV.fetch("ASC_ISSUER_ID"),
-      key_content: ENV.fetch("ASC_API_KEY_P8"),
-      is_key_content_base64: true,
+      key_id: key_id,
+      issuer_id: issuer_id,
+      key_filepath: key_path,
       in_house: false
     )
 
-    # Always upload a build number higher than what's already on TestFlight.
-    next_build = latest_testflight_build_number(
-      api_key: api_key,
-      app_identifier: APP_IDENTIFIER,
-      initial_build_number: 0
-    ) + 1
-
+    # Monotonic build number from the CI run so TestFlight never rejects a dupe.
     increment_build_number(
       xcodeproj: XCODEPROJ,
-      build_number: next_build
+      build_number: ENV.fetch("GITHUB_RUN_NUMBER", Time.now.to_i.to_s)
     )
 
-    # Manual signing with the certificate + provisioning profile that the CI
-    # workflow imported from GitHub secrets.
+    # Cloud signing: Xcode creates/downloads the distribution certificate and
+    # provisioning profile on the fly using the API key — no .p12 or
+    # .mobileprovision needed.
     update_code_signing_settings(
-      use_automatic_signing: false,
+      use_automatic_signing: true,
       path: XCODEPROJ,
-      team_id: ENV.fetch("APPLE_TEAM_ID"),
-      targets: [SCHEME],
-      code_sign_identity: "Apple Distribution",
-      profile_name: ENV.fetch("PROVISIONING_PROFILE_NAME")
+      team_id: team_id,
+      targets: [SCHEME]
     )
+
+    auth = "-allowProvisioningUpdates " \
+           "-authenticationKeyPath #{key_path} " \
+           "-authenticationKeyID #{key_id} " \
+           "-authenticationKeyIssuerID #{issuer_id}"
 
     build_app(
       workspace: WORKSPACE,
       scheme: SCHEME,
       configuration: "Release",
       export_method: "app-store",
-      export_options: {
-        provisioningProfiles: {
-          APP_IDENTIFIER => ENV.fetch("PROVISIONING_PROFILE_NAME")
-        }
-      }
+      xcargs: auth,
+      export_xcargs: auth,
+      export_options: { signingStyle: "automatic" }
     )
 
     upload_to_testflight(
