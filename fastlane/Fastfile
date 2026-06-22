@@ -34,6 +34,28 @@ platform :ios do
       build_number: ENV.fetch("GITHUB_RUN_NUMBER", Time.now.to_i.to_s)
     )
 
+    # Apple caps the number of Distribution certificates. On ephemeral runners
+    # each run would mint a brand-new one (the private key never persists), so we
+    # hit that cap. Revoke the stale Distribution certs first — their private
+    # keys are gone, so they can't sign anything, and revoking does NOT
+    # invalidate builds already on TestFlight.
+    require "spaceship"
+    Spaceship::ConnectAPI.token = Spaceship::ConnectAPI::Token.create(
+      key_id: key_id,
+      issuer_id: issuer_id,
+      filepath: File.expand_path(key_path)
+    )
+    Spaceship::ConnectAPI::Certificate.all.each do |cert|
+      next unless cert.certificate_type.to_s.include?("DISTRIBUTION")
+
+      UI.message("Revoking stale distribution certificate #{cert.id} (#{cert.certificate_type})")
+      begin
+        cert.delete!
+      rescue StandardError => e
+        UI.important("Could not revoke #{cert.id}: #{e.message}")
+      end
+    end
+
     # We deliberately use MANUAL signing instead of Xcode automatic/cloud
     # signing: on ephemeral CI runners automatic signing tries to provision an
     # "Apple Development" certificate tied to the machine and fails to
