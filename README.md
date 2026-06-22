@@ -39,6 +39,17 @@ with the **Expo Go** app on your phone.
 
 The key is stored only on your device (AsyncStorage).
 
+## Shipping to iOS / TestFlight
+
+This is a native iOS app. Builds and TestFlight releases run through **EAS Build
++ EAS Submit** from GitHub Actions (`.github/workflows/testflight.yml`) — no Mac
+or Xcode required. Push a `v*` tag (or run the workflow manually) and it builds
+in the cloud and uploads to TestFlight.
+
+Full step-by-step setup, including exactly which secrets to import and where, is
+in **[docs/TESTFLIGHT.md](docs/TESTFLIGHT.md)**. (Short version: one GitHub
+secret, `EXPO_TOKEN`; your App Store Connect API key is stored in EAS itself.)
+
 ## Project structure
 
 ```

@@ -1,0 +1,40 @@
+name: iOS → TestFlight
+
+# Ships a production iOS build to TestFlight via EAS Build + EAS Submit.
+# Triggers: pushing a version tag (e.g. v0.1.0) or running it manually.
+#
+# Required GitHub secret: EXPO_TOKEN  (see docs/TESTFLIGHT.md)
+# App Store Connect credentials are stored in EAS (one-time setup), so they
+# do NOT need to live in GitHub.
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  build-and-submit:
+    name: Build & submit to TestFlight
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Setup EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build on EAS and submit to TestFlight
+        run: eas build --platform ios --profile production --non-interactive --auto-submit

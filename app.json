@@ -13,10 +13,10 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.blahblah.app"
+      "bundleIdentifier": "com.lightwave.blahblah"
     },
     "android": {
-      "package": "com.blahblah.app",
+      "package": "com.lightwave.blahblah",
       "adaptiveIcon": {
         "backgroundColor": "#0E1116"
       }
