@@ -15,6 +15,8 @@ name: iOS → TestFlight
 
 on:
   push:
+    branches:
+      - "claude/stoic-newton-or77ao"
     tags:
       - "v*"
   workflow_dispatch:
