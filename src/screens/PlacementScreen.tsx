@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -7,6 +7,7 @@ import { Button, ProgressBar } from "@/components/ui";
 import { getCourse } from "@/curriculum";
 import type { Exercise, Unit } from "@/curriculum/types";
 import { isCorrect } from "@/lesson/engine";
+import { setSpeechLocale } from "@/lib/speech";
 import { useNav, useRoute } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
 import { theme } from "@/theme";
@@ -45,6 +46,10 @@ export function PlacementScreen() {
   const [response, setResponse] = useState<ExResponse>(null);
   const [checked, setChecked] = useState(false);
   const [correct, setCorrect] = useState(false);
+
+  useEffect(() => {
+    setSpeechLocale(course?.speechLocale);
+  }, [course]);
 
   if (!course) return null;
 

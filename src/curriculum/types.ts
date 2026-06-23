@@ -13,9 +13,13 @@ export interface SelectExercise {
   prompt: string;
   /** The word/phrase the question is about (shown large). */
   question: string;
+  /** Optional smaller line under the question (e.g. pinyin or a gloss). */
+  subtext?: string;
   /** Optional text to speak aloud (target language). */
   speak?: string;
   options: string[];
+  /** Optional pronunciation/gloss shown under each option (parallel to options). */
+  optionSubs?: string[];
   /** Index into options of the correct answer. */
   answer: number;
 }
@@ -32,6 +36,10 @@ export interface WordbankExercise {
   bank: string[];
   /** Optional TTS of the answer. */
   speak?: string;
+  /** Optional pronunciation (e.g. pinyin), revealed after answering. */
+  pinyin?: string;
+  /** Optional English meaning, revealed after answering. */
+  translation?: string;
 }
 
 /** Tap the word that fills the blank. */
@@ -48,6 +56,8 @@ export interface FillExercise {
   options: string[];
   /** Optional English meaning shown under the sentence. */
   translation?: string;
+  /** Optional pronunciation (e.g. pinyin) shown under the sentence. */
+  pinyin?: string;
   speak?: string;
 }
 
@@ -55,7 +65,8 @@ export interface FillExercise {
 export interface MatchExercise {
   type: "match";
   prompt: string;
-  pairs: { target: string; source: string; speak?: string }[];
+  /** `sub` is an optional small line under the target (e.g. pinyin). */
+  pairs: { target: string; source: string; sub?: string; speak?: string }[];
 }
 
 /** Hear a sentence and rebuild it from word tiles. */
@@ -68,6 +79,8 @@ export interface ListenExercise {
   bank: string[];
   /** English meaning, revealed after answering. */
   translation?: string;
+  /** Optional pronunciation (e.g. pinyin), revealed after answering. */
+  pinyin?: string;
 }
 
 export type Exercise =
@@ -110,6 +123,8 @@ export interface Course {
   endonym: string;
   flag: string;
   fromLanguage: string;
+  /** BCP-47 locale for text-to-speech, e.g. "zh-CN", "de-DE". */
+  speechLocale?: string;
   sections: Section[];
 }
 

@@ -9,6 +9,7 @@ export const germanCourse: Course = {
   endonym: "Deutsch",
   flag: "🇩🇪",
   fromLanguage: "English",
+  speechLocale: "de-DE",
   sections: [
     {
       id: "de-s1",

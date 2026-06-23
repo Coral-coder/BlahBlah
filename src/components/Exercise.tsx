@@ -66,6 +66,7 @@ function SelectView({
         <Text style={styles.question}>{exercise.question}</Text>
         {exercise.speak ? <Speaker text={exercise.speak} /> : null}
       </View>
+      {exercise.subtext ? <Text style={styles.subtext}>{exercise.subtext}</Text> : null}
       <View style={{ gap: 12, marginTop: theme.spacing(2) }}>
         {exercise.options.map((opt, i) => {
           const isSel = selected === i;
@@ -92,6 +93,9 @@ function SelectView({
               style={[styles.option, { borderColor, backgroundColor: bg }]}
             >
               <Text style={styles.optionText}>{opt}</Text>
+              {exercise.optionSubs?.[i] ? (
+                <Text style={styles.optionSub}>{exercise.optionSubs[i]}</Text>
+              ) : null}
             </Pressable>
           );
         })}
@@ -135,6 +139,7 @@ function FillView({
         </Text>
         {exercise.speak ? <Speaker text={exercise.speak} /> : null}
       </View>
+      {exercise.pinyin ? <Text style={styles.pinyin}>{exercise.pinyin}</Text> : null}
       {exercise.translation ? (
         <Text style={styles.translation}>{exercise.translation}</Text>
       ) : null}
@@ -255,6 +260,14 @@ function WordbankView({
       {revealed && answer.trim() !== exercise.answer ? (
         <Text style={styles.correctHint}>Answer: {exercise.answer}</Text>
       ) : null}
+      {revealed && (exercise.pinyin || exercise.translation) ? (
+        <View style={{ marginTop: 10 }}>
+          {exercise.pinyin ? <Text style={styles.pinyin}>{exercise.pinyin}</Text> : null}
+          {exercise.translation ? (
+            <Text style={styles.translation}>{exercise.translation}</Text>
+          ) : null}
+        </View>
+      ) : null}
     </View>
   );
 }
@@ -303,6 +316,7 @@ function MatchView({
     side: "L" | "R",
     selected: boolean,
     speakText?: string,
+    sub?: string,
   ) => {
     const isDone = done.includes(key);
     return (
@@ -327,6 +341,7 @@ function MatchView({
         ]}
       >
         <Text style={styles.matchText}>{label}</Text>
+        {sub ? <Text style={styles.matchSub}>{sub}</Text> : null}
       </Pressable>
     );
   };
@@ -336,7 +351,9 @@ function MatchView({
       <Instruction text={exercise.prompt} />
       <View style={styles.matchRow}>
         <View style={styles.matchCol}>
-          {left.map((p) => cell(p.target, p.key, "L", selL === p.key, p.speak ?? p.target))}
+          {left.map((p) =>
+            cell(p.target, p.key, "L", selL === p.key, p.speak ?? p.target, p.sub),
+          )}
         </View>
         <View style={styles.matchCol}>
           {right.map((p) => cell(p.source, p.key, "R", selR === p.key))}
@@ -368,6 +385,10 @@ const styles = StyleSheet.create({
     padding: theme.spacing(2),
   },
   optionText: { color: theme.colors.text, fontSize: 18, fontWeight: "600" },
+  optionSub: { color: theme.colors.textMuted, fontSize: 14, marginTop: 4 },
+  subtext: { color: theme.colors.accent, fontSize: 18, marginTop: 6 },
+  pinyin: { color: theme.colors.accent, fontSize: 16, marginTop: 6 },
+  matchSub: { color: theme.colors.textMuted, fontSize: 13, marginTop: 3 },
   sentenceWrap: { flexDirection: "row", alignItems: "center", gap: 10, flexWrap: "wrap" },
   sentence: { color: theme.colors.text, fontSize: 22, lineHeight: 34, flexShrink: 1 },
   blank: {

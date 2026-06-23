@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -7,6 +7,7 @@ import { Button, Hearts, ProgressBar } from "@/components/ui";
 import { flattenCourse, type Exercise } from "@/curriculum/types";
 import { getCourse } from "@/curriculum";
 import { isCorrect, lessonXp } from "@/lesson/engine";
+import { setSpeechLocale } from "@/lib/speech";
 import { useNav, useRoute } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
 import { theme } from "@/theme";
@@ -24,6 +25,10 @@ export function LessonScreen() {
     () => (course ? flattenCourse(course).find((n) => n.lesson.id === lessonId) : undefined),
     [course, lessonId],
   );
+
+  useEffect(() => {
+    setSpeechLocale(course?.speechLocale);
+  }, [course]);
 
   const total = node?.lesson.exercises.length ?? 0;
   const [queue, setQueue] = useState<Exercise[]>(node ? [...node.lesson.exercises] : []);

@@ -62,6 +62,12 @@ jobs:
           bundler-cache: true
 
       - name: Install CocoaPods
+        # Disable the React Native New Architecture: it's on by default in RN
+        # 0.76 but several native modules (e.g. react-native-tts) don't run under
+        # it, which silently breaks text-to-speech. We don't use any New-Arch
+        # features, so build the legacy architecture for reliable native modules.
+        env:
+          RCT_NEW_ARCH_ENABLED: "0"
         run: bundle exec pod install --project-directory=ios
 
       - name: Write App Store Connect API key
