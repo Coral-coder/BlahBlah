@@ -12,7 +12,9 @@ import { LessonScreen } from "@/screens/LessonScreen";
 import { PathScreen } from "@/screens/PathScreen";
 import { PlacementScreen } from "@/screens/PlacementScreen";
 import { ProfileScreen } from "@/screens/ProfileScreen";
+import { DictationScreen } from "@/screens/DictationScreen";
 import { ReviewScreen } from "@/screens/ReviewScreen";
+import { TipsScreen } from "@/screens/TipsScreen";
 import { SettingsScreen } from "@/screens/SettingsScreen";
 import { StoriesListScreen } from "@/screens/StoriesListScreen";
 import { StoryScreen } from "@/screens/StoryScreen";
@@ -90,6 +92,10 @@ function Router() {
       return <AIStoryScreen />;
     case "review":
       return <ReviewScreen />;
+    case "tips":
+      return <TipsScreen />;
+    case "dictation":
+      return <DictationScreen />;
     default:
       return <Shell />;
   }

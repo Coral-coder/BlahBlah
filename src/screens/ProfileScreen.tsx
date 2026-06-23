@@ -117,6 +117,24 @@ export function ProfileScreen() {
             style={{ marginTop: theme.spacing(1.5) }}
           />
           <Button
+            label="🎯  Practice your mistakes"
+            variant="ghost"
+            onPress={() => nav.navigate("review", { mistakesOnly: true })}
+            style={{ marginTop: theme.spacing(1) }}
+          />
+          <Button
+            label="👂  Dictation"
+            variant="ghost"
+            onPress={() => nav.navigate("dictation")}
+            style={{ marginTop: theme.spacing(1) }}
+          />
+          <Button
+            label="💡  Grammar tips"
+            variant="ghost"
+            onPress={() => nav.navigate("tips")}
+            style={{ marginTop: theme.spacing(1) }}
+          />
+          <Button
             label="📚  Stories"
             variant="ghost"
             onPress={() => nav.navigate("stories")}

@@ -16,7 +16,7 @@ import { normalize, shuffle } from "@/lesson/engine";
 import { learnedWordsFor, type LearnedWord } from "@/lib/learned";
 import { playSfx } from "@/lib/sfx";
 import { setSpeechLocale, speak } from "@/lib/speech";
-import { useNav } from "@/navigation";
+import { useNav, useRoute } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
 import { theme } from "@/theme";
 
@@ -32,6 +32,7 @@ export function ReviewScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
   const { state, isCompleted, completeLesson, recordWordResult } = useProgress();
+  const { mistakesOnly } = useRoute<{ mistakesOnly?: boolean }>();
   const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
 
   const cards = useMemo<Card[]>(() => {
@@ -40,8 +41,13 @@ export function ReviewScreen() {
     const words = learnedWordsFor(course, isCompleted);
     if (words.length < 4) return [];
     const stats = state.wordStats[course.code] ?? {};
+    let pool = words;
+    if (mistakesOnly) {
+      pool = words.filter((w) => (stats[w.target]?.w ?? 0) > 0);
+      if (pool.length === 0) return [];
+    }
     // weakest first: lower (correct - wrong) and least-recently seen
-    const scored = words
+    const scored = pool
       .map((w) => {
         const s = stats[w.target];
         return { w, score: s ? s.c - s.w : 0, t: s ? s.t : 0 };
@@ -70,9 +76,11 @@ export function ReviewScreen() {
   if (!course || cards.length === 0) {
     return (
       <View style={[styles.root, { paddingTop: insets.top + 60, alignItems: "center" }]}>
-        <Text style={{ fontSize: 52 }}>🧠</Text>
+        <Text style={{ fontSize: 52 }}>{mistakesOnly ? "🎯" : "🧠"}</Text>
         <Text style={styles.empty}>
-          Finish a few lessons first — Review drills the words you've learned.
+          {mistakesOnly
+            ? "No mistakes to review — nice work! Keep learning and check back."
+            : "Finish a few lessons first — Review drills the words you've learned."}
         </Text>
         <Button label="Back" variant="ghost" onPress={nav.goBack} style={{ marginTop: 20 }} />
       </View>

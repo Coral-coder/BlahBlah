@@ -23,7 +23,9 @@ export type ScreenName =
   | "watch"
   | "news"
   | "aistory"
-  | "review";
+  | "review"
+  | "tips"
+  | "dictation";
 
 export type RouteParams = Record<string, unknown>;
 export interface Route {
