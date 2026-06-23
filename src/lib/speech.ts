@@ -1,5 +1,48 @@
 import { Platform } from "react-native";
+import Sound from "react-native-sound";
 import Tts from "react-native-tts";
+
+import { loadNeuralModel, neuralAvailable, synthesizeToFile } from "./neuralTts";
+import { installedModelForLocale, modelDir, scanInstalled } from "./voiceModels";
+
+// Master switch for on-device neural voices (set from Settings). When on and a
+// neural model is installed for the active locale, speak() uses it; otherwise it
+// falls back to the system voice.
+let neuralEnabled = false;
+export function setNeuralEnabled(on: boolean): void {
+  neuralEnabled = on;
+}
+
+let currentSound: Sound | null = null;
+function playFile(path: string): void {
+  try {
+    currentSound?.stop(() => currentSound?.release());
+  } catch {
+    // no-op
+  }
+  const s = new Sound(path, "", (err) => {
+    if (err) return;
+    currentSound = s;
+    s.play(() => s.release());
+  });
+}
+
+// Returns true if it handled speaking via the neural engine.
+async function speakNeural(text: string, locale: string): Promise<boolean> {
+  const model = installedModelForLocale(locale);
+  if (!model) return false;
+  const ok = await loadNeuralModel({
+    dir: modelDir(model.id),
+    modelFile: model.modelFile,
+    tokensFile: model.tokensFile,
+    dataDir: model.dataDir,
+  });
+  if (!ok) return false;
+  const path = await synthesizeToFile(text, { sid: model.sid, speed: model.speed });
+  if (!path) return false;
+  playFile(path);
+  return true;
+}
 
 // The active course's speech locale (e.g. "zh-CN"), set when a lesson starts so
 // every speak() call uses the right voice without threading it through props.
@@ -28,6 +71,7 @@ function ensureInit(): void {
   } catch {
     // no-op
   }
+  scanInstalled();
 }
 
 async function loadVoices(): Promise<void> {
@@ -107,6 +151,19 @@ export function speak(text: string, languageTag?: string): void {
   ensureInit();
   const locale = languageTag ?? currentLocale;
   const spoken = locale?.startsWith("zh") ? text.replace(/\s+/g, "") : text;
+
+  // Prefer the on-device neural voice when enabled and installed for this locale.
+  if (neuralEnabled && neuralAvailable() && locale) {
+    Tts.stop();
+    speakNeural(spoken, locale).then((handled) => {
+      if (!handled) systemSpeak(spoken, locale);
+    });
+    return;
+  }
+  systemSpeak(spoken, locale);
+}
+
+function systemSpeak(spoken: string, locale?: string): void {
   try {
     Tts.stop();
     if (locale) {
