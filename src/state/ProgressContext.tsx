@@ -22,6 +22,8 @@ export interface CourseProgress {
 export interface Settings {
   apiKey: string;
   model: ModelId;
+  /** Use downloaded on-device neural voices when available. */
+  neuralVoices: boolean;
 }
 
 export interface LearnedWord {
@@ -144,7 +146,7 @@ const DEFAULT: Persisted = {
   xpToday: 0,
   reminderEnabled: false,
   reminderHour: 19,
-  settings: { apiKey: "", model: "claude-opus-4-8" },
+  settings: { apiKey: "", model: "claude-opus-4-8", neuralVoices: false },
 };
 
 function dayStr(d: Date): string {

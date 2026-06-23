@@ -22,6 +22,7 @@ import { StoriesListScreen } from "@/screens/StoriesListScreen";
 import { StoryScreen } from "@/screens/StoryScreen";
 import { TraceScreen } from "@/screens/TraceScreen";
 import { WordsScreen } from "@/screens/WordsScreen";
+import { setNeuralEnabled } from "@/lib/speech";
 import { NavProvider, useNav } from "@/navigation";
 import { ProgressProvider, useProgress } from "@/state/ProgressContext";
 import { theme } from "@/theme";
@@ -168,6 +169,9 @@ function Splash() {
 
 function Root() {
   const { ready, state } = useProgress();
+  useEffect(() => {
+    setNeuralEnabled(!!state.settings.neuralVoices);
+  }, [state.settings.neuralVoices]);
   if (!ready) {
     return <Splash />;
   }

@@ -1,10 +1,19 @@
 import { useEffect, useState } from "react";
-import { Linking, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { ActivityIndicator, Linking, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { Button, Card, Chip } from "@/components/ui";
+import { Button, Card, Chip, ProgressBar } from "@/components/ui";
 import { getCourse } from "@/curriculum";
-import { hasNaturalVoice } from "@/lib/speech";
+import { hasNaturalVoice, setNeuralEnabled } from "@/lib/speech";
+import { neuralAvailable } from "@/lib/neuralTts";
+import {
+  downloadModel,
+  isInstalled,
+  removeModel,
+  scanInstalled,
+  VOICE_MODELS,
+  type VoiceModel,
+} from "@/lib/voiceModels";
 import { cancelReminders, scheduleDailyReminder } from "@/lib/reminders";
 import { useNav } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
@@ -90,6 +99,8 @@ export function SettingsScreen() {
             </>
           )}
         </Card>
+
+        <NeuralVoicesCard />
 
         <Card>
           <Text style={styles.cardTitle}>Daily reminder</Text>
@@ -196,6 +207,94 @@ export function SettingsScreen() {
   );
 }
 
+function NeuralVoicesCard() {
+  const { state, setSettings } = useProgress();
+  const enabled = state.settings.neuralVoices;
+  const [, force] = useState(0);
+  const [progress, setProgress] = useState<Record<string, number>>({});
+  const [busy, setBusy] = useState<Record<string, boolean>>({});
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    scanInstalled().then(() => force((n) => n + 1));
+  }, []);
+
+  async function onDownload(m: VoiceModel) {
+    setError(null);
+    setBusy((b) => ({ ...b, [m.id]: true }));
+    setProgress((p) => ({ ...p, [m.id]: 0 }));
+    const ok = await downloadModel(m, (p) => setProgress((s) => ({ ...s, [m.id]: p })));
+    setBusy((b) => ({ ...b, [m.id]: false }));
+    if (!ok) setError(`Couldn't download ${m.language}. Check your connection and try again.`);
+    force((n) => n + 1);
+  }
+  async function onRemove(m: VoiceModel) {
+    await removeModel(m.id);
+    force((n) => n + 1);
+  }
+
+  return (
+    <Card>
+      <Text style={styles.cardTitle}>Natural voices (on-device) ✨</Text>
+      <Text style={styles.cardSub}>
+        Download free, human-sounding neural voices — including Icelandic, which iOS doesn't
+        offer. They work fully offline once downloaded.
+      </Text>
+      {!neuralAvailable() ? (
+        <Text style={styles.warn}>
+          The voice engine ships in an upcoming build — you can download voices now and they'll
+          activate automatically once it lands.
+        </Text>
+      ) : null}
+
+      <Button
+        label={enabled ? "Using natural voices ✓ — tap to turn off" : "Use natural voices"}
+        variant={enabled ? "primary" : "ghost"}
+        onPress={() => {
+          const next = !enabled;
+          setSettings({ neuralVoices: next });
+          setNeuralEnabled(next);
+        }}
+        style={{ marginTop: theme.spacing(2) }}
+      />
+
+      <View style={{ marginTop: theme.spacing(2), gap: 12 }}>
+        {VOICE_MODELS.map((m) => {
+          const installed = isInstalled(m.id);
+          const downloading = busy[m.id];
+          return (
+            <View key={m.id} style={styles.voiceRow}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.voiceLang}>{m.language}</Text>
+                <Text style={styles.voiceMeta}>
+                  {m.name} · {installed ? "Installed" : `${m.mb} MB`}
+                </Text>
+                {downloading ? (
+                  <View style={{ marginTop: 6 }}>
+                    <ProgressBar progress={progress[m.id] ?? 0} height={8} />
+                  </View>
+                ) : null}
+              </View>
+              {downloading ? (
+                <ActivityIndicator color={theme.colors.primary} />
+              ) : installed ? (
+                <Pressable onPress={() => onRemove(m)} hitSlop={8}>
+                  <Text style={styles.voiceRemove}>Remove</Text>
+                </Pressable>
+              ) : (
+                <Pressable onPress={() => onDownload(m)} hitSlop={8} style={styles.voiceDl}>
+                  <Text style={styles.voiceDlText}>Download</Text>
+                </Pressable>
+              )}
+            </View>
+          );
+        })}
+      </View>
+      {error ? <Text style={styles.warn}>{error}</Text> : null}
+    </Card>
+  );
+}
+
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: theme.colors.bg },
   top: {
@@ -209,6 +308,17 @@ const styles = StyleSheet.create({
   cardTitle: { color: theme.colors.text, fontSize: 18, fontWeight: "800" },
   cardSub: { color: theme.colors.textMuted, marginTop: 6, lineHeight: 20 },
   warn: { color: theme.colors.gold, marginTop: 10, fontWeight: "600" },
+  voiceRow: { flexDirection: "row", alignItems: "center", gap: 12 },
+  voiceLang: { color: theme.colors.text, fontSize: 16, fontWeight: "700" },
+  voiceMeta: { color: theme.colors.textMuted, marginTop: 2, fontSize: 13 },
+  voiceDl: {
+    backgroundColor: theme.colors.primary,
+    paddingHorizontal: 16,
+    paddingVertical: 9,
+    borderRadius: theme.radius.md,
+  },
+  voiceDlText: { color: theme.colors.primaryText, fontWeight: "800" },
+  voiceRemove: { color: theme.colors.danger, fontWeight: "700" },
   input: {
     backgroundColor: theme.colors.surfaceAlt,
     borderRadius: theme.radius.md,
