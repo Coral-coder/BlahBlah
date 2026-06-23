@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Linking, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Button, Card, Chip } from "@/components/ui";
 import { getCourse } from "@/curriculum";
+import { hasNaturalVoice } from "@/lib/speech";
 import { cancelReminders, scheduleDailyReminder } from "@/lib/reminders";
 import { useNav } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
@@ -21,8 +22,19 @@ export function SettingsScreen() {
   const [reminderMsg, setReminderMsg] = useState<string | null>(null);
   const [apiKey, setApiKey] = useState(state.settings.apiKey);
   const [savedKey, setSavedKey] = useState(false);
+  const [naturalVoice, setNaturalVoice] = useState<boolean | null>(null);
 
   const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
+
+  useEffect(() => {
+    let alive = true;
+    if (course?.speechLocale) {
+      hasNaturalVoice(course.speechLocale).then((v) => alive && setNaturalVoice(v));
+    }
+    return () => {
+      alive = false;
+    };
+  }, [course]);
 
   async function toggleReminder() {
     if (state.reminderEnabled) {
@@ -51,6 +63,34 @@ export function SettingsScreen() {
       </View>
 
       <ScrollView contentContainerStyle={{ padding: theme.spacing(2), gap: theme.spacing(2) }}>
+        <Card>
+          <Text style={styles.cardTitle}>Natural voice</Text>
+          {naturalVoice === true ? (
+            <Text style={styles.cardSub}>
+              ✓ A high-quality voice is installed for {course?.name}. You're all set.
+            </Text>
+          ) : (
+            <>
+              <Text style={styles.cardSub}>
+                {naturalVoice === false
+                  ? `${course?.name ?? "This language"} is using iOS's basic (robotic) voice.`
+                  : "Checking your installed voices…"}
+                {"\n\n"}iOS won't let apps install voices automatically, but it's a one-time setup:
+                {"\n"}1. Open iOS Settings
+                {"\n"}2. Accessibility → Spoken Content → Voices
+                {"\n"}3. Pick your language → download the “Premium” (or “Enhanced”) voice
+                {"\n\n"}BlahBlah then uses it automatically — much more human.
+              </Text>
+              <Button
+                label="Open iOS Settings"
+                variant="ghost"
+                onPress={() => Linking.openSettings()}
+                style={{ marginTop: theme.spacing(1.5) }}
+              />
+            </>
+          )}
+        </Card>
+
         <Card>
           <Text style={styles.cardTitle}>Daily reminder</Text>
           <Text style={styles.cardSub}>

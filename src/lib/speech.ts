@@ -90,6 +90,15 @@ export function getSpeechLocale(): string {
   return currentLocale ?? "en-US";
 }
 
+/** True if a high-quality (Enhanced/Premium) voice is installed for the locale. */
+export async function hasNaturalVoice(locale: string): Promise<boolean> {
+  await loadVoices();
+  const id = bestVoiceFor(locale);
+  if (!id) return false;
+  const v = voices.find((x) => x.id === id);
+  return !!v && qualityScore(v) >= 500;
+}
+
 /**
  * Speak text in the active locale's voice. Sets the voice/language on every call
  * so rapidly switching languages can't leave a stale voice selected.
