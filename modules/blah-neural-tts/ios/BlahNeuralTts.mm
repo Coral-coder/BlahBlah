@@ -23,7 +23,7 @@ RCT_EXPORT_MODULE();
 
 - (void)dealloc {
   if (_tts) {
-    SherpaOnnxDestroyOfflineTts(_tts);
+    SherpaOnnxDestroyOfflineTts((SherpaOnnxOfflineTts *)_tts);
     _tts = NULL;
   }
 }
@@ -47,7 +47,7 @@ RCT_EXPORT_METHOD(load:(NSDictionary *)opts
   NSString *dataPath = dataDir.length ? [dir stringByAppendingPathComponent:dataDir] : @"";
 
   if (_tts) {
-    SherpaOnnxDestroyOfflineTts(_tts);
+    SherpaOnnxDestroyOfflineTts((SherpaOnnxOfflineTts *)_tts);
     _tts = NULL;
     _loadedDir = nil;
   }
