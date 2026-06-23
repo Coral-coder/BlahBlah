@@ -1,24 +1,31 @@
 # BlahBlah 🗣️
 
-An immersion-first language-learning app — like Duolingo, but the lessons are
-generated on the fly by Claude and tailored to *you*. Lead languages are
-**German** and **Mandarin Chinese**, but you can learn **any** language.
+A structured, guided language-learning app — Duolingo-style. You follow a path of
+bite-sized lessons made of interactive exercises, and the app always shows you
+exactly what to do next. Lead languages are **German** (full course) and
+**Spanish**, with a content model built to add more.
 
-Built with **bare React Native + TypeScript** (no Expo) and the **Claude API**
-(`claude-opus-4-8` by default). CI compiles with Xcode and ships straight to
-**TestFlight** via Fastlane using only your Apple Developer account.
+Built with **bare React Native + TypeScript** (no Expo). Course content is
+hand-authored data — there is no AI generating lessons at runtime. Ships to
+TestFlight via the Fastlane pipeline in `.github/workflows/testflight.yml`.
 
 ## What it does
 
-- **Pick any language & level.** German and Chinese are featured; more are one
-  tap away; or type any language at all. Set your CEFR level (A1–C1).
-- **AI-generated immersion lessons.** Give a topic ("ordering coffee") and Claude
-  writes an immersion passage in the target language, vocabulary cards (with
-  pronunciation aids — pinyin for Chinese, romaji for Japanese, etc.), and
-  exercises. Lessons are cached on-device.
-- **Conversation tutor.** Chat in your target language. Claude replies at your
-  level, gently corrects you, and offers a tap-to-reveal English translation.
-- **Listen.** Tap 🔊 on any phrase to hear it (device text-to-speech).
+- **Guided learning path.** Sections → units → lessons laid out as a path. The
+  next lesson is highlighted with **START**; finished lessons are gold; later
+  lessons stay locked until you reach them. You never have to wonder what's next.
+- **Placement test.** New to a language or not? A quick adaptive check gauges what
+  you already know and starts you at the right unit (or start from zero).
+- **Interactive exercises** that make you produce the language, not just read it:
+  - **Word bank** — tap tiles to build the translation
+  - **Fill in the blank** — choose the missing word
+  - **Match** — pair words with their meanings
+  - **Multiple choice** — pick the right translation
+  - **Listen** — hear a sentence (device TTS) and rebuild it
+- **Mastery-gated progress.** Wrong answers come back around later in the lesson;
+  you finish only once you've gotten everything right. Hearts add light stakes.
+- **Goals & motivation.** Daily XP goal, streaks, total XP, and per-course
+  completion — all on the Profile tab.
 
 ## Run it locally
 
@@ -28,69 +35,58 @@ Requires Xcode + CocoaPods (macOS) for iOS.
 npm install
 bundle install
 bundle exec pod install --project-directory=ios
-npm run ios        # or: open ios/BlahBlah.xcworkspace in Xcode
+npm run ios        # or open ios/BlahBlah.xcworkspace in Xcode
 # Android: npm run android
 ```
 
-Then open **Settings** in the app and paste a Claude API key from the
-[Anthropic Console](https://console.anthropic.com/settings/keys). The key is
-stored only on the device.
+No API keys or accounts needed — all content is bundled.
 
 ## Ship to TestFlight
 
-Push a `v*` tag (or run the **iOS → TestFlight** GitHub Action manually) and it
-builds with Xcode and uploads to TestFlight — your Apple account only, no Expo /
-EAS / second account. Auth is an App Store Connect API key with **Xcode cloud
-signing**, so there are no cert/profile files to manage — just three GitHub
-secrets (`APPSTORE_API_KEY_ID`, `APPSTORE_API_PRIVATE_KEY`, `APPSTORE_ISSUER_ID`;
-Team ID lives in `fastlane/Appfile`). Full setup in
-**[docs/TESTFLIGHT.md](docs/TESTFLIGHT.md)**.
-
-```bash
-git tag v0.1.0 && git push origin v0.1.0
-```
+Push a `v*` tag or a commit to the working branch (or run the **iOS → TestFlight**
+Action) and it builds with Xcode 26 and uploads to TestFlight. Setup details and
+the App Store Connect secrets are in **[docs/TESTFLIGHT.md](docs/TESTFLIGHT.md)**.
 
 ## Project structure
 
 ```
-ios/                 Native iOS project (Xcode) — bundle id com.lightwave.blahblah
-android/             Native Android project
-App.tsx              Root: providers + lightweight stack navigator + header
-index.js             React Native entry point
+App.tsx                  Root: providers + bottom-tab shell (Learn / Profile) + router
 src/
-  screens/           HomeScreen, LessonScreen, ImmersionScreen, SettingsScreen
-  navigation.tsx     Minimal stack navigator (no extra native deps)
-  state/AppContext   Global app state (settings, language, level)
-  lib/claude.ts      Claude API calls (lesson generation + chat)
-  lib/speech.ts      Text-to-speech wrapper (react-native-tts)
-  lib/languages.ts   Featured languages + CEFR levels
-  lib/storage.ts     AsyncStorage persistence
-  lib/types.ts       Shared types
-  components/ui.tsx  Buttons, cards, chips
-  theme.ts           Colors / spacing
-fastlane/            Fastfile (lane :beta) + Appfile
-.github/workflows/   testflight.yml (Xcode build → TestFlight)
+  curriculum/
+    types.ts             Course → Section → Unit → Lesson → Exercise model + flattenCourse
+    courses/de.ts        German course (5 units, 15 lessons, 90 exercises)
+    courses/es.ts        Spanish course (2 units, 6 lessons, 36 exercises)
+    index.ts             COURSES registry + getCourse()
+  lesson/engine.ts       Answer checking, shuffling, XP
+  state/ProgressContext  Persisted progress: XP, streak, daily goal, completion, placement
+  navigation.tsx         Small stack navigator with params (useNav / useRoute)
+  components/
+    Exercise.tsx         Renderers for every exercise type (the interactive core)
+    ui.tsx               Button, Card, Chip, ProgressBar, Hearts
+  screens/
+    CourseSelectScreen   Pick a language
+    PlacementScreen      Placement test
+    PathScreen           The guided learning path (Learn tab)
+    LessonScreen         The exercise player
+    LessonCompleteScreen End-of-lesson stats (XP, accuracy, streak)
+    ProfileScreen        Goals, streak, progress (Profile tab)
+    SettingsScreen       Reset progress, about
+  lib/speech.ts          Text-to-speech (react-native-tts)
+  theme.ts               Colors / spacing
+fastlane/                Fastfile (lane :beta) + Appfile
+.github/workflows/       testflight.yml (Xcode build → TestFlight)
 ```
 
-## How the AI works
+## Adding content
 
-- **Lessons** ask Claude for a strict JSON object and parse it (tolerant of code
-  fences) into vocabulary + exercises.
-- **Conversation** sends the running history with a level- and language-aware
-  system prompt; the reply carries an inline `[[EN: …]]` gloss that the app
-  splits out for the translate toggle.
-
-## ⚠️ Security note
-
-The app calls the Claude API **directly from the device** with a user-supplied
-key — fine for personal use and demos, but an embedded key can be extracted from
-traffic. For a public release, proxy these calls through a backend that holds the
-Anthropic key server-side and add per-user auth + rate limiting, then point
-`src/lib/claude.ts` at your backend.
+A course is plain data conforming to `src/curriculum/types.ts`. Add a file under
+`src/curriculum/courses/`, export a `Course`, and register it in
+`src/curriculum/index.ts`. The path, placement test, and exercise player all work
+automatically from the data — no UI changes needed.
 
 ## Roadmap ideas
 
-- Spaced-repetition review of saved vocabulary
-- Streaks & daily goals
-- Speech *input* (speak your answers)
-- Grammar deep-dives on demand
+- More languages and deeper units
+- Spaced-repetition review of completed lessons
+- Per-lesson "legendary"/crown levels and harder review sessions
+- Optional AI conversation practice as a bonus mode

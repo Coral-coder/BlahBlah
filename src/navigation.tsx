@@ -1,36 +1,58 @@
-import React, { createContext, useContext, useMemo, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useMemo,
+  useState,
+} from "react";
 
-// A tiny stack navigator. The app has four screens and no deep-linking needs,
-// so this avoids pulling in react-navigation + its native dependencies.
-export type ScreenName = "home" | "lesson" | "immersion" | "settings";
+// A small stack navigator with route params. The app's main surface is the
+// "shell" (a bottom-tab container); full-screen flows like a lesson or the
+// placement test are pushed on top of it.
+export type ScreenName =
+  | "shell"
+  | "courseSelect"
+  | "placement"
+  | "lesson"
+  | "lessonComplete"
+  | "settings";
 
-export const SCREEN_TITLES: Record<ScreenName, string> = {
-  home: "BlahBlah",
-  lesson: "Immersion Lesson",
-  immersion: "Conversation",
-  settings: "Settings",
-};
+export type RouteParams = Record<string, unknown>;
+export interface Route {
+  name: ScreenName;
+  params: RouteParams;
+}
 
-type NavContextValue = {
-  stack: ScreenName[];
-  current: ScreenName;
-  navigate: (name: ScreenName) => void;
-  goBack: () => void;
+interface NavContextValue {
+  stack: Route[];
+  current: Route;
   canGoBack: boolean;
-};
+  navigate: (name: ScreenName, params?: RouteParams) => void;
+  replace: (name: ScreenName, params?: RouteParams) => void;
+  reset: (name: ScreenName, params?: RouteParams) => void;
+  goBack: () => void;
+}
 
 const NavContext = createContext<NavContextValue | null>(null);
 
-export function NavProvider({ children }: { children: React.ReactNode }) {
-  const [stack, setStack] = useState<ScreenName[]>(["home"]);
+export function NavProvider({
+  initial,
+  children,
+}: {
+  initial: ScreenName;
+  children: React.ReactNode;
+}) {
+  const [stack, setStack] = useState<Route[]>([{ name: initial, params: {} }]);
 
   const value = useMemo<NavContextValue>(() => {
-    const current = stack[stack.length - 1];
     return {
       stack,
-      current,
+      current: stack[stack.length - 1],
       canGoBack: stack.length > 1,
-      navigate: (name) => setStack((s) => [...s, name]),
+      navigate: (name, params = {}) =>
+        setStack((s) => [...s, { name, params }]),
+      replace: (name, params = {}) =>
+        setStack((s) => [...s.slice(0, -1), { name, params }]),
+      reset: (name, params = {}) => setStack([{ name, params }]),
       goBack: () => setStack((s) => (s.length > 1 ? s.slice(0, -1) : s)),
     };
   }, [stack]);
@@ -42,4 +64,9 @@ export function useNav(): NavContextValue {
   const ctx = useContext(NavContext);
   if (!ctx) throw new Error("useNav must be used within NavProvider");
   return ctx;
+}
+
+/** Read the current route's params, typed by the caller. */
+export function useRoute<T = RouteParams>(): T {
+  return useNav().current.params as T;
 }

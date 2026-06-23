@@ -1,133 +1,84 @@
 import { useState } from "react";
-import {
-  Linking,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { Button, Card, Chip } from "@/components/ui";
-import { storage } from "@/lib/storage";
-import type { ModelId } from "@/lib/types";
-import { useApp } from "@/state/AppContext";
+import { Button, Card } from "@/components/ui";
+import { getCourse } from "@/curriculum";
+import { useNav } from "@/navigation";
+import { useProgress } from "@/state/ProgressContext";
 import { theme } from "@/theme";
 
-const MODELS: { id: ModelId; label: string; note: string }[] = [
-  { id: "claude-opus-4-8", label: "Opus 4.8", note: "Most capable · best lessons" },
-  { id: "claude-sonnet-4-6", label: "Sonnet 4.6", note: "Balanced speed & cost" },
-  { id: "claude-haiku-4-5", label: "Haiku 4.5", note: "Fastest · cheapest" },
-];
-
 export function SettingsScreen() {
-  const { settings, setSettings } = useApp();
-  const [apiKey, setApiKey] = useState(settings.apiKey);
-  const [model, setModel] = useState<ModelId>(settings.model);
-  const [saved, setSaved] = useState(false);
+  const nav = useNav();
+  const insets = useSafeAreaInsets();
+  const { state, resetCourse } = useProgress();
+  const [confirm, setConfirm] = useState(false);
 
-  async function save() {
-    await setSettings({ apiKey: apiKey.trim(), model });
-    setSaved(true);
-    setTimeout(() => setSaved(false), 1500);
-  }
+  const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
 
   return (
-    <ScrollView style={{ flex: 1 }} contentContainerStyle={styles.container}>
-      <Card>
-        <Text style={styles.label}>Claude API key</Text>
-        <TextInput
-          value={apiKey}
-          onChangeText={setApiKey}
-          placeholder="sk-ant-…"
-          placeholderTextColor={theme.colors.textMuted}
-          style={styles.input}
-          autoCapitalize="none"
-          autoCorrect={false}
-          secureTextEntry
-        />
-        <Text style={styles.help}>
-          Stored only on this device. Get a key from the Anthropic Console.
-        </Text>
-        <Button
-          label="Get an API key →"
-          variant="ghost"
-          onPress={() =>
-            Linking.openURL("https://console.anthropic.com/settings/keys")
-          }
-          style={{ marginTop: theme.spacing(1) }}
-        />
-      </Card>
-
-      <Text style={styles.section}>Model</Text>
-      <View style={styles.chips}>
-        {MODELS.map((m) => (
-          <Chip
-            key={m.id}
-            label={m.label}
-            active={model === m.id}
-            onPress={() => setModel(m.id)}
-          />
-        ))}
+    <View style={styles.root}>
+      <View style={[styles.top, { paddingTop: insets.top + 12 }]}>
+        <Text style={styles.title}>Settings</Text>
+        <Button label="Done" variant="ghost" onPress={nav.goBack} />
       </View>
-      <Text style={styles.help}>
-        {MODELS.find((m) => m.id === model)?.note}
-      </Text>
 
-      <Button
-        label={saved ? "Saved ✓" : "Save settings"}
-        onPress={save}
-        style={{ marginTop: theme.spacing(2) }}
-      />
+      <ScrollView contentContainerStyle={{ padding: theme.spacing(2), gap: theme.spacing(2) }}>
+        <Card>
+          <Text style={styles.cardTitle}>Reset course progress</Text>
+          <Text style={styles.cardSub}>
+            {course
+              ? `Clears all completed lessons and your placement for ${course.name}. XP and streak are kept.`
+              : "Pick a course first."}
+          </Text>
+          {course ? (
+            confirm ? (
+              <View style={{ flexDirection: "row", gap: 10, marginTop: theme.spacing(2) }}>
+                <Button
+                  label="Yes, reset"
+                  variant="danger"
+                  style={{ flex: 1 }}
+                  onPress={() => {
+                    resetCourse(course.code);
+                    setConfirm(false);
+                    nav.reset("shell");
+                  }}
+                />
+                <Button label="Cancel" variant="ghost" style={{ flex: 1 }} onPress={() => setConfirm(false)} />
+              </View>
+            ) : (
+              <Button
+                label="Reset progress"
+                variant="danger"
+                style={{ marginTop: theme.spacing(2) }}
+                onPress={() => setConfirm(true)}
+              />
+            )
+          ) : null}
+        </Card>
 
-      <View style={styles.divider} />
-
-      <Button
-        label="Clear cached lessons"
-        variant="danger"
-        onPress={() => storage.clearLessons()}
-      />
-
-      <Card style={styles.note}>
-        <Text style={styles.noteText}>
-          Heads up: a key embedded in a mobile app can be extracted from network
-          traffic. This is fine for personal use. For a public release, route
-          requests through your own backend that holds the key server-side.
-        </Text>
-      </Card>
-    </ScrollView>
+        <Card>
+          <Text style={styles.cardTitle}>About</Text>
+          <Text style={styles.cardSub}>
+            BlahBlah — learn languages through a guided, structured path of bite-sized lessons.
+            Version 0.2.0.
+          </Text>
+        </Card>
+      </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { padding: theme.spacing(2), gap: theme.spacing(1) },
-  label: { color: theme.colors.text, fontWeight: "700", marginBottom: 10 },
-  input: {
-    backgroundColor: theme.colors.surfaceAlt,
-    borderRadius: theme.radius.md,
-    borderWidth: 1,
-    borderColor: theme.colors.border,
-    color: theme.colors.text,
-    paddingHorizontal: 14,
-    paddingVertical: 12,
-    fontSize: 15,
+  root: { flex: 1, backgroundColor: theme.colors.bg },
+  top: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: theme.spacing(2),
+    paddingBottom: 8,
   },
-  help: { color: theme.colors.textMuted, marginTop: 8, lineHeight: 20 },
-  section: {
-    color: theme.colors.text,
-    fontWeight: "800",
-    letterSpacing: 1,
-    textTransform: "uppercase",
-    fontSize: 13,
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(1),
-  },
-  chips: { flexDirection: "row", flexWrap: "wrap" },
-  divider: {
-    height: 1,
-    backgroundColor: theme.colors.border,
-    marginVertical: theme.spacing(3),
-  },
-  note: { marginTop: theme.spacing(2), backgroundColor: theme.colors.surfaceAlt },
-  noteText: { color: theme.colors.textMuted, lineHeight: 20 },
+  title: { color: theme.colors.text, fontSize: 24, fontWeight: "900" },
+  cardTitle: { color: theme.colors.text, fontSize: 18, fontWeight: "800" },
+  cardSub: { color: theme.colors.textMuted, marginTop: 6, lineHeight: 20 },
 });

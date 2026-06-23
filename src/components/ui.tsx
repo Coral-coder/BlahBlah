@@ -105,7 +105,47 @@ export function Chip({
   );
 }
 
+export function ProgressBar({
+  progress,
+  color = theme.colors.success,
+  height = 14,
+}: {
+  progress: number;
+  color?: string;
+  height?: number;
+}) {
+  const pct = Math.max(0, Math.min(1, progress));
+  return (
+    <View style={[styles.track, { height, borderRadius: height }]}>
+      <View
+        style={{
+          width: `${pct * 100}%`,
+          height: "100%",
+          backgroundColor: color,
+          borderRadius: height,
+        }}
+      />
+    </View>
+  );
+}
+
+export function Hearts({ count }: { count: number }) {
+  return (
+    <View style={{ flexDirection: "row", alignItems: "center" }}>
+      <Text style={{ fontSize: 18 }}>❤️</Text>
+      <Text style={{ color: theme.colors.danger, fontWeight: "800", marginLeft: 4 }}>
+        {count}
+      </Text>
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
+  track: {
+    width: "100%",
+    backgroundColor: theme.colors.surfaceAlt,
+    overflow: "hidden",
+  },
   button: {
     paddingVertical: 14,
     paddingHorizontal: 18,
