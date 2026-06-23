@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
+  Animated,
+  Easing,
   LayoutChangeEvent,
   Pressable,
   ScrollView,
@@ -204,6 +206,7 @@ function LessonNode({
   // zigzag offset
   const offset = [-70, 0, 70, 0][node.indexInUnit % 4];
   const locked = state === "locked";
+  const isCurrent = state === "current";
   const color = node.unit.color;
   const bg =
     state === "done"
@@ -211,22 +214,64 @@ function LessonNode({
       : state === "locked"
         ? theme.colors.locked
         : color;
+
+  // Gentle breathing pulse on the lesson you're up to, so the eye lands on it.
+  const pulse = useRef(new Animated.Value(0)).current;
+  useEffect(() => {
+    if (!isCurrent) return;
+    const loop = Animated.loop(
+      Animated.sequence([
+        Animated.timing(pulse, {
+          toValue: 1,
+          duration: 900,
+          easing: Easing.inOut(Easing.ease),
+          useNativeDriver: true,
+        }),
+        Animated.timing(pulse, {
+          toValue: 0,
+          duration: 900,
+          easing: Easing.inOut(Easing.ease),
+          useNativeDriver: true,
+        }),
+      ]),
+    );
+    loop.start();
+    return () => loop.stop();
+  }, [isCurrent, pulse]);
+
+  const scale = pulse.interpolate({ inputRange: [0, 1], outputRange: [1, 1.08] });
+  const ringScale = pulse.interpolate({ inputRange: [0, 1], outputRange: [1, 1.45] });
+  const ringOpacity = pulse.interpolate({ inputRange: [0, 1], outputRange: [0.45, 0] });
+
   return (
     <View style={[styles.nodeRow, { transform: [{ translateX: offset }] }]}>
-      {state === "current" ? <View style={styles.startBubble}><Text style={styles.startText}>START</Text></View> : null}
-      <Pressable
-        disabled={locked}
-        onPress={onPress}
-        style={[
-          styles.node,
-          { backgroundColor: bg, opacity: locked ? 0.6 : 1 },
-          state === "current" && styles.nodeCurrent,
-        ]}
-      >
-        <Text style={styles.nodeIcon}>
-          {state === "done" ? "✓" : state === "locked" ? "🔒" : "★"}
-        </Text>
-      </Pressable>
+      {isCurrent ? <View style={styles.startBubble}><Text style={styles.startText}>START</Text></View> : null}
+      <View style={{ alignItems: "center", justifyContent: "center" }}>
+        {isCurrent ? (
+          <Animated.View
+            pointerEvents="none"
+            style={[
+              styles.pulseRing,
+              { backgroundColor: bg, opacity: ringOpacity, transform: [{ scale: ringScale }] },
+            ]}
+          />
+        ) : null}
+        <Animated.View style={isCurrent ? { transform: [{ scale }] } : undefined}>
+          <Pressable
+            disabled={locked}
+            onPress={onPress}
+            style={[
+              styles.node,
+              { backgroundColor: bg, opacity: locked ? 0.6 : 1 },
+              isCurrent && styles.nodeCurrent,
+            ]}
+          >
+            <Text style={styles.nodeIcon}>
+              {state === "done" ? "✓" : state === "locked" ? "🔒" : "★"}
+            </Text>
+          </Pressable>
+        </Animated.View>
+      </View>
       <Text style={styles.nodeLabel} numberOfLines={1}>
         {node.lesson.title}
       </Text>
@@ -328,6 +373,7 @@ const styles = StyleSheet.create({
     borderColor: "rgba(0,0,0,0.25)",
   },
   nodeCurrent: { borderColor: "#fff" },
+  pulseRing: { position: "absolute", width: 74, height: 74, borderRadius: 37 },
   nodeIcon: { fontSize: 30, color: "#fff", fontWeight: "900" },
   nodeLabel: { color: theme.colors.textMuted, marginTop: 6, fontSize: 12, maxWidth: 120 },
   startBubble: {

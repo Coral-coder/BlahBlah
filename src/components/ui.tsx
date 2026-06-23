@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   ActivityIndicator,
+  Animated,
   Pressable,
   StyleSheet,
   Text,
@@ -10,6 +11,8 @@ import {
 
 import { theme } from "@/theme";
 
+// Juicy "3D" button with a darker bottom lip that compresses when pressed —
+// the tactile feel Duolingo uses to make taps feel satisfying.
 export function Button({
   label,
   onPress,
@@ -30,34 +33,48 @@ export function Button({
       ? theme.colors.primary
       : variant === "danger"
         ? theme.colors.danger
-        : "transparent";
+        : theme.colors.surfaceAlt;
+  const lip =
+    variant === "primary"
+      ? theme.colors.primaryDark
+      : variant === "danger"
+        ? theme.colors.dangerDark
+        : theme.colors.border;
+  const isGhost = variant === "ghost";
   const isDisabled = disabled || loading;
+  const LIP = 4;
+
   return (
-    <Pressable
-      onPress={onPress}
-      disabled={isDisabled}
-      style={({ pressed }) => [
-        styles.button,
-        {
-          backgroundColor: bg,
-          borderWidth: variant === "ghost" ? 1 : 0,
-          borderColor: theme.colors.border,
-          opacity: isDisabled ? 0.5 : pressed ? 0.85 : 1,
-        },
-        style,
-      ]}
-    >
-      {loading ? (
-        <ActivityIndicator color={theme.colors.primaryText} />
-      ) : (
-        <Text
+    <Pressable onPress={onPress} disabled={isDisabled} style={style}>
+      {({ pressed }) => (
+        <View
           style={[
-            styles.buttonText,
-            { color: variant === "ghost" ? theme.colors.text : theme.colors.primaryText },
+            styles.button,
+            {
+              backgroundColor: bg,
+              borderBottomWidth: isGhost ? 1 : LIP,
+              borderWidth: isGhost ? 1 : 0,
+              borderBottomColor: lip,
+              borderColor: isGhost ? theme.colors.border : lip,
+              opacity: isDisabled ? 0.5 : 1,
+              transform: [{ translateY: pressed && !isDisabled ? LIP : 0 }],
+              marginBottom: pressed && !isDisabled ? 0 : 0,
+            },
           ]}
         >
-          {label}
-        </Text>
+          {loading ? (
+            <ActivityIndicator color={theme.colors.primaryText} />
+          ) : (
+            <Text
+              style={[
+                styles.buttonText,
+                { color: isGhost ? theme.colors.text : theme.colors.primaryText },
+              ]}
+            >
+              {label}
+            </Text>
+          )}
+        </View>
       )}
     </Pressable>
   );
@@ -85,18 +102,19 @@ export function Chip({
   return (
     <Pressable
       onPress={onPress}
-      style={[
+      style={({ pressed }) => [
         styles.chip,
         {
           backgroundColor: active ? theme.colors.primary : theme.colors.surfaceAlt,
-          borderColor: active ? theme.colors.primary : theme.colors.border,
+          borderColor: active ? theme.colors.primaryDark : theme.colors.border,
+          transform: [{ scale: pressed ? 0.96 : 1 }],
         },
       ]}
     >
       <Text
         style={{
           color: active ? theme.colors.primaryText : theme.colors.textMuted,
-          fontWeight: "600",
+          fontWeight: "700",
         }}
       >
         {label}
@@ -105,6 +123,8 @@ export function Chip({
   );
 }
 
+// Progress bar whose fill springs smoothly to the target width, with a subtle
+// glossy highlight stripe for a polished feel.
 export function ProgressBar({
   progress,
   color = theme.colors.success,
@@ -115,16 +135,45 @@ export function ProgressBar({
   height?: number;
 }) {
   const pct = Math.max(0, Math.min(1, progress));
+  const anim = useRef(new Animated.Value(pct)).current;
+
+  useEffect(() => {
+    Animated.spring(anim, {
+      toValue: pct,
+      useNativeDriver: false,
+      friction: 9,
+      tension: 60,
+    }).start();
+  }, [pct, anim]);
+
+  const width = anim.interpolate({
+    inputRange: [0, 1],
+    outputRange: ["0%", "100%"],
+  });
+
   return (
     <View style={[styles.track, { height, borderRadius: height }]}>
-      <View
+      <Animated.View
         style={{
-          width: `${pct * 100}%`,
+          width,
           height: "100%",
           backgroundColor: color,
           borderRadius: height,
+          justifyContent: "center",
         }}
-      />
+      >
+        <View
+          style={{
+            position: "absolute",
+            top: 3,
+            left: 6,
+            right: 6,
+            height: Math.max(2, height * 0.25),
+            borderRadius: height,
+            backgroundColor: "rgba(255,255,255,0.35)",
+          }}
+        />
+      </Animated.View>
     </View>
   );
 }
@@ -153,13 +202,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  buttonText: { fontSize: 16, fontWeight: "700" },
+  buttonText: { fontSize: 16, fontWeight: "800", letterSpacing: 0.3 },
   card: {
     backgroundColor: theme.colors.surface,
     borderRadius: theme.radius.lg,
     borderWidth: 1,
     borderColor: theme.colors.border,
     padding: theme.spacing(2),
+    ...theme.shadow,
   },
   chip: {
     paddingVertical: 8,
