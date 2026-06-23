@@ -23,7 +23,8 @@ import { theme } from "@/theme";
 export function PathScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
-  const { state, courseProgress, currentStreak, xpToday, isCompleted } = useProgress();
+  const { state, courseProgress, currentStreak, xpToday, isCompleted, crownLevel, totalCrowns } =
+    useProgress();
 
   const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
   const cp = course ? courseProgress(course.code) : undefined;
@@ -90,6 +91,13 @@ export function PathScreen() {
           <View style={styles.headerStat}>
             <Text style={[styles.headerStatText, { color: "#7FD3FF" }]}>
               🧊 {state.streakFreezes}
+            </Text>
+          </View>
+        ) : null}
+        {totalCrowns(course.code) > 0 ? (
+          <View style={styles.headerStat}>
+            <Text style={[styles.headerStatText, { color: theme.colors.gold }]}>
+              👑 {totalCrowns(course.code)}
             </Text>
           </View>
         ) : null}
@@ -179,6 +187,7 @@ export function PathScreen() {
                     <LessonNode
                       key={node.lesson.id}
                       node={node}
+                      crowns={crownLevel(course.code, node.lesson.id)}
                       state={
                         completed[node.lesson.id]
                           ? "done"
@@ -209,10 +218,12 @@ export function PathScreen() {
 function LessonNode({
   node,
   state,
+  crowns,
   onPress,
 }: {
   node: PathNode;
   state: "done" | "current" | "available" | "locked";
+  crowns: number;
   onPress: () => void;
 }) {
   // zigzag offset
@@ -287,6 +298,15 @@ function LessonNode({
       <Text style={styles.nodeLabel} numberOfLines={1}>
         {node.lesson.title}
       </Text>
+      {state === "done" && crowns > 0 ? (
+        <View style={styles.crownRow}>
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Text key={i} style={[styles.crownPip, { opacity: i < crowns ? 1 : 0.18 }]}>
+              👑
+            </Text>
+          ))}
+        </View>
+      ) : null}
     </View>
   );
 }
@@ -388,6 +408,8 @@ const styles = StyleSheet.create({
   pulseRing: { position: "absolute", width: 74, height: 74, borderRadius: 37 },
   nodeIcon: { fontSize: 30, color: "#fff", fontWeight: "900" },
   nodeLabel: { color: theme.colors.textMuted, marginTop: 6, fontSize: 12, maxWidth: 120 },
+  crownRow: { flexDirection: "row", gap: 1, marginTop: 3 },
+  crownPip: { fontSize: 10 },
   startBubble: {
     backgroundColor: "#fff",
     paddingHorizontal: 12,

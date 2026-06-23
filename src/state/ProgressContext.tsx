@@ -186,6 +186,10 @@ interface ProgressContextValue {
     learned?: LearnedWord[],
   ) => void;
   learnedWords: (code: string) => LearnedWord[];
+  /** Mastery/crown level (0..5) for a single path lesson. */
+  crownLevel: (code: string, lessonId: string) => number;
+  /** Sum of all crown levels earned in a course. */
+  totalCrowns: (code: string) => number;
   /** XP for each of the last 7 days, oldest first. */
   weeklyXp: () => { label: string; xp: number; today: boolean }[];
   traceCount: (code: string, glyph: string) => number;
@@ -279,6 +283,9 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
       courseProgress,
       isCompleted: (code, lessonId) => !!courseProgress(code).completed[lessonId],
       learnedWords: (code) => Object.values(state.learnedVocab[code] ?? {}),
+      crownLevel: (code, lessonId) => state.crowns[code]?.[lessonId] ?? 0,
+      totalCrowns: (code) =>
+        Object.values(state.crowns[code] ?? {}).reduce((s, n) => s + n, 0),
       weeklyXp: () => {
         const labels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
         const out: { label: string; xp: number; today: boolean }[] = [];
@@ -346,6 +353,12 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
         (learned ?? []).forEach((w) => {
           courseWords[w.target] = { target: w.target, en: w.en, pinyin: w.pinyin };
         });
+        // Crown/mastery: only real path lessons (auxiliary modes use a "kind:id"
+        // lessonId). Each completion levels the lesson up, capped at 5.
+        const courseCrowns = { ...(state.crowns[code] ?? {}) };
+        if (!lessonId.includes(":")) {
+          courseCrowns[lessonId] = Math.min(5, (courseCrowns[lessonId] ?? 0) + 1);
+        }
         persist({
           ...state,
           byCourse: {
@@ -353,6 +366,7 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
             [code]: { ...cp, completed: { ...cp.completed, [lessonId]: true } },
           },
           learnedVocab: { ...state.learnedVocab, [code]: courseWords },
+          crowns: { ...state.crowns, [code]: courseCrowns },
           xpHistory: {
             ...state.xpHistory,
             [today2]: (state.xpHistory[today2] ?? 0) + xpEarned,
