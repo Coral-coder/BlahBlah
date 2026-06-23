@@ -17,6 +17,10 @@ on:
   push:
     branches:
       - "claude/stoic-newton-or77ao"
+      # Integration branch: pushes here run the SAME build so risky changes
+      # (e.g. the native neural-voice engine) are validated before they reach
+      # the delivery branch.
+      - "claude/blahblah-next"
     tags:
       - "v*"
   workflow_dispatch:
