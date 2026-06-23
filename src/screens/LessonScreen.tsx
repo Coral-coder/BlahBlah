@@ -51,8 +51,9 @@ export function LessonScreen() {
   }
 
   const current = queue[0];
-  // "speak" and "match" manage their own grading and just report completion.
-  const noCheck = current.type === "match" || current.type === "speak";
+  // card/match/speak manage their own flow and just report completion.
+  const noCheck =
+    current.type === "match" || current.type === "speak" || current.type === "card";
 
   function finish(passed: boolean) {
     const xp = passed ? lessonXp(mistakes) : 0;

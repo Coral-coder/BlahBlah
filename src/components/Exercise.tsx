@@ -1,5 +1,5 @@
 import Voice from "@react-native-voice/voice";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from "react-native";
 
 import type { Exercise } from "@/curriculum/types";
@@ -39,9 +39,40 @@ export function ExerciseView(props: Props) {
       return <MatchView {...props} exercise={exercise} />;
     case "speak":
       return <SpeakView {...props} exercise={exercise} />;
+    case "card":
+      return <CardView {...props} exercise={exercise} />;
     default:
       return null;
   }
+}
+
+function CardView({
+  exercise,
+  onChange,
+}: Props & { exercise: Extract<Exercise, { type: "card" }> }) {
+  useEffect(() => {
+    speak(exercise.target);
+    onChange("done"); // presentation card — Continue is always available
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [exercise]);
+  return (
+    <View style={[styles.body, { alignItems: "center", justifyContent: "center", flex: 1 }]}>
+      <Text style={styles.newWord}>NEW WORD</Text>
+      <Pressable onPress={() => speak(exercise.target)} style={styles.cardArt}>
+        {exercise.emoji ? (
+          <Text style={{ fontSize: 88 }}>{exercise.emoji}</Text>
+        ) : (
+          <Text style={styles.cardLetter}>{Array.from(exercise.target)[0] ?? "?"}</Text>
+        )}
+      </Pressable>
+      <View style={{ flexDirection: "row", alignItems: "center", gap: 12, marginTop: theme.spacing(2) }}>
+        <Text style={styles.cardWord}>{exercise.target}</Text>
+        <Speaker text={exercise.target} />
+      </View>
+      {exercise.pinyin ? <Text style={styles.pinyin}>{exercise.pinyin}</Text> : null}
+      <Text style={styles.cardMeaning}>{exercise.en}</Text>
+    </View>
+  );
 }
 
 function levenshtein(a: string, b: string): number {
@@ -407,33 +438,55 @@ function SpeakView({
   const [heard, setHeard] = useState<string | null>(null);
   const [score, setScore] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // Latest (cumulative) transcript; scoring happens only when recognition ends,
+  // so the learner can say the WHOLE sentence before being graded.
+  const transcript = useRef<string>("");
+  const scored = useRef(false);
+
+  function finalize() {
+    if (scored.current) return;
+    const text = transcript.current.trim();
+    if (!text) {
+      setStatus("idle");
+      setError("Didn't catch that — tap the mic and try again.");
+      return;
+    }
+    scored.current = true;
+    const sc = pronunciationScore(exercise.text, text);
+    setHeard(text);
+    setScore(sc);
+    setStatus("done");
+    playSfx(sc >= 60 ? "correct" : "wrong");
+    onChange("done");
+  }
 
   useEffect(() => {
     (Voice as any).onSpeechResults = (e: { value?: string[] }) => {
-      const text = e.value?.[0] ?? "";
-      setHeard(text);
-      const sc = pronunciationScore(exercise.text, text);
-      setScore(sc);
-      setStatus("done");
-      playSfx(sc >= 60 ? "correct" : "wrong");
-      onChange("done");
+      // iOS reports the growing full transcript here; just remember it.
+      if (e.value?.[0]) transcript.current = e.value[0];
     };
     (Voice as any).onSpeechError = () => {
-      setStatus("idle");
-      setError("Didn't catch that — try again, or skip.");
+      if (!scored.current) {
+        setStatus("idle");
+        setError("Didn't catch that — try again, or skip.");
+      }
     };
-    (Voice as any).onSpeechEnd = () => setStatus((s) => (s === "listening" ? "idle" : s));
+    // Recognition stopped (user tapped done, or a natural pause) -> score now.
+    (Voice as any).onSpeechEnd = () => finalize();
     return () => {
       Voice.destroy()
         .then(() => Voice.removeAllListeners())
         .catch(() => {});
     };
-  }, [exercise, onChange]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [exercise]);
 
   async function start() {
     setError(null);
     setHeard(null);
     setScore(null);
+    transcript.current = "";
+    scored.current = false;
     try {
       setStatus("listening");
       await Voice.start(getSpeechLocale());
@@ -443,11 +496,13 @@ function SpeakView({
     }
   }
   async function stop() {
+    // Stop and let onSpeechEnd finalize; also finalize as a fallback.
     try {
       await Voice.stop();
     } catch {
       // no-op
     }
+    setTimeout(finalize, 700);
   }
 
   const tip =
@@ -492,10 +547,10 @@ function SpeakView({
         </Pressable>
         <Text style={styles.micLabel}>
           {status === "listening"
-            ? "Listening… tap to stop"
+            ? "Listening… say the whole sentence, then tap ✓"
             : status === "done"
               ? "Tap to try again"
-              : "Tap and say it out loud"}
+              : "Tap, then say the whole sentence"}
         </Text>
       </View>
 
@@ -616,4 +671,19 @@ const styles = StyleSheet.create({
   heard: { color: theme.colors.textMuted, fontStyle: "italic", marginTop: 4 },
   skip: { alignSelf: "center", marginTop: theme.spacing(3), padding: 8 },
   skipText: { color: theme.colors.textMuted, fontWeight: "700" },
+  newWord: { color: theme.colors.accent, fontWeight: "900", letterSpacing: 2, fontSize: 13 },
+  cardArt: {
+    marginTop: theme.spacing(2),
+    width: 160,
+    height: 160,
+    borderRadius: theme.radius.lg,
+    backgroundColor: theme.colors.surface,
+    borderWidth: 1,
+    borderColor: theme.colors.border,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  cardLetter: { fontSize: 80, fontWeight: "900", color: theme.colors.primary },
+  cardWord: { color: theme.colors.text, fontSize: 34, fontWeight: "900" },
+  cardMeaning: { color: theme.colors.textMuted, fontSize: 18, marginTop: 6 },
 });

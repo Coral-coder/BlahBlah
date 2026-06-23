@@ -95,13 +95,24 @@ export interface SpeakExercise {
   translation?: string;
 }
 
+/** An introduction card for a new word: picture (emoji), word, meaning, audio. */
+export interface CardExercise {
+  type: "card";
+  target: string;
+  en: string;
+  pinyin?: string;
+  /** Illustration (emoji) for the word, if one is known. */
+  emoji?: string;
+}
+
 export type Exercise =
   | SelectExercise
   | WordbankExercise
   | FillExercise
   | MatchExercise
   | ListenExercise
-  | SpeakExercise;
+  | SpeakExercise
+  | CardExercise;
 
 export interface Lesson {
   id: string;
