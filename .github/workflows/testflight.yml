@@ -93,9 +93,18 @@ jobs:
           rm -rf work
           echo "Vendored:"; ls -1 "$DEST"
           echo "Slices:"; ls -1 "$DEST/sherpa-onnx.xcframework"
-          echo "c-api.h locations:"; find "$DEST/sherpa-onnx.xcframework" -name "c-api.h" || true
           test -d "$DEST/sherpa-onnx.xcframework"
           test -d "$DEST/onnxruntime.xcframework"
+
+          # Copy the sherpa-onnx C-API headers next to the module source so
+          # `#import "c-api.h"` resolves regardless of the xcframework's internal
+          # layout. Must happen BEFORE pod install so source_files picks them up.
+          HDR=$(find "$DEST/sherpa-onnx.xcframework" -name "c-api.h" | head -n1)
+          echo "c-api.h: $HDR"
+          test -n "$HDR"
+          HDRDIR=$(dirname "$HDR")
+          cp "$HDRDIR"/*.h "$MOD/ios/" 2>/dev/null || cp "$HDR" "$MOD/ios/"
+          echo "Headers copied into module ios/:"; ls -1 "$MOD/ios/"*.h
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
