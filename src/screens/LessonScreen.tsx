@@ -7,6 +7,7 @@ import { Button, Hearts, ProgressBar } from "@/components/ui";
 import { flattenCourse, type Exercise } from "@/curriculum/types";
 import { getCourse } from "@/curriculum";
 import { isCorrect, lessonXp } from "@/lesson/engine";
+import { playSfx } from "@/lib/sfx";
 import { setSpeechLocale } from "@/lib/speech";
 import { useNav, useRoute } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
@@ -50,7 +51,8 @@ export function LessonScreen() {
   }
 
   const current = queue[0];
-  const isMatch = current.type === "match";
+  // "speak" and "match" manage their own grading and just report completion.
+  const noCheck = current.type === "match" || current.type === "speak";
 
   function finish(passed: boolean) {
     const xp = passed ? lessonXp(mistakes) : 0;
@@ -62,6 +64,7 @@ export function LessonScreen() {
     const ok = isCorrect(current, response as number | string);
     setCorrect(ok);
     setPhase("checked");
+    playSfx(ok ? "correct" : "wrong");
     if (!ok) {
       setMistakes((m) => m + 1);
       setHearts((h) => h - 1);
@@ -91,7 +94,7 @@ export function LessonScreen() {
   }
 
   const canCheck = response !== null;
-  const showContinue = phase === "checked" || (isMatch && response === "done");
+  const showContinue = phase === "checked" || (noCheck && response === "done");
 
   return (
     <View style={styles.root}>
@@ -137,14 +140,17 @@ export function LessonScreen() {
         {showContinue ? (
           <Button
             label="Continue"
-            onPress={() => proceed(isMatch ? true : correct === true)}
+            onPress={() => {
+              if (current.type === "match") playSfx("correct");
+              proceed(noCheck ? true : correct === true);
+            }}
             style={correct === false ? { backgroundColor: theme.colors.danger } : undefined}
           />
         ) : (
-          <Button label="Check" onPress={check} disabled={!canCheck || isMatch} />
+          <Button label="Check" onPress={check} disabled={!canCheck || noCheck} />
         )}
-        {isMatch && !showContinue ? (
-          <Text style={styles.matchHint}>Tap each pair to match them all.</Text>
+        {current.type === "match" && !showContinue ? (
+          <Text style={styles.matchHint}>Tap a word, then its match.</Text>
         ) : null}
       </View>
     </View>

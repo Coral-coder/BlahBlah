@@ -83,12 +83,25 @@ export interface ListenExercise {
   pinyin?: string;
 }
 
+/** Say a phrase out loud; speech recognition scores the pronunciation. */
+export interface SpeakExercise {
+  type: "speak";
+  prompt: string;
+  /** The phrase the learner should say (target language). */
+  text: string;
+  /** Optional pronunciation aid (e.g. pinyin). */
+  pinyin?: string;
+  /** English meaning. */
+  translation?: string;
+}
+
 export type Exercise =
   | SelectExercise
   | WordbankExercise
   | FillExercise
   | MatchExercise
-  | ListenExercise;
+  | ListenExercise
+  | SpeakExercise;
 
 export interface Lesson {
   id: string;

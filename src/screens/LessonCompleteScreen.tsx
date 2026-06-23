@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Button } from "@/components/ui";
+import { playSfx } from "@/lib/sfx";
 import { useNav, useRoute } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
 import { theme } from "@/theme";
@@ -20,6 +22,10 @@ export function LessonCompleteScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
   const { currentStreak } = useProgress();
+
+  useEffect(() => {
+    if (passed) playSfx("complete");
+  }, [passed]);
 
   const accuracy =
     total > 0 ? Math.round((total / (total + mistakes)) * 100) : 100;

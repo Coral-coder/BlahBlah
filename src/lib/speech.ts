@@ -27,6 +27,10 @@ export function setSpeechLocale(locale?: string): void {
   currentLocale = locale;
 }
 
+export function getSpeechLocale(): string {
+  return currentLocale ?? "en-US";
+}
+
 /**
  * Thin wrapper over react-native-tts so screens can just call `speak(text)`.
  * Failures (e.g. no TTS engine on the device) are swallowed — listening is a

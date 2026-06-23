@@ -1,9 +1,11 @@
+import Voice from "@react-native-voice/voice";
 import React, { useEffect, useMemo, useState } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Pressable, StyleSheet, Text, View } from "react-native";
 
 import type { Exercise } from "@/curriculum/types";
-import { shuffle } from "@/lesson/engine";
-import { speak } from "@/lib/speech";
+import { normalize, shuffle } from "@/lesson/engine";
+import { getSpeechLocale, speak } from "@/lib/speech";
+import { playSfx } from "@/lib/sfx";
 import { theme } from "@/theme";
 
 /** Sentinel response that means "match exercise finished". */
@@ -35,9 +37,39 @@ export function ExerciseView(props: Props) {
       return <WordbankView {...props} exercise={exercise} listen />;
     case "match":
       return <MatchView {...props} exercise={exercise} />;
+    case "speak":
+      return <SpeakView {...props} exercise={exercise} />;
     default:
       return null;
   }
+}
+
+function levenshtein(a: string, b: string): number {
+  const m = a.length;
+  const n = b.length;
+  if (!m) return n;
+  if (!n) return m;
+  const prev = Array.from({ length: n + 1 }, (_, i) => i);
+  const curr = new Array(n + 1).fill(0);
+  for (let i = 1; i <= m; i++) {
+    curr[0] = i;
+    for (let j = 1; j <= n; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      curr[j] = Math.min(prev[j] + 1, curr[j - 1] + 1, prev[j - 1] + cost);
+    }
+    for (let j = 0; j <= n; j++) prev[j] = curr[j];
+  }
+  return prev[n];
+}
+
+/** 0..100 similarity of a spoken transcript to the expected phrase. */
+function pronunciationScore(expected: string, heard: string): number {
+  const e = normalize(expected).replace(/\s+/g, "");
+  const h = normalize(heard).replace(/\s+/g, "");
+  if (!e) return 0;
+  if (e === h) return 100;
+  const dist = levenshtein(e, h);
+  return Math.max(0, Math.round((1 - dist / Math.max(e.length, h.length)) * 100));
 }
 
 function Speaker({ text, big }: { text: string; big?: boolean }) {
@@ -324,11 +356,14 @@ function MatchView({
         key={`${side}${key}`}
         disabled={isDone}
         onPress={() => {
-          if (speakText) speak(speakText);
+          // Either column can be tapped first; tapping a selected cell deselects.
           if (side === "L") {
+            if (selL === key) return setSelL(null);
+            if (speakText) speak(speakText);
             setSelL(key);
             tryMatch(key, selR);
           } else {
+            if (selR === key) return setSelR(null);
             setSelR(key);
             tryMatch(selL, key);
           }
@@ -359,6 +394,124 @@ function MatchView({
           {right.map((p) => cell(p.source, p.key, "R", selR === p.key))}
         </View>
       </View>
+    </View>
+  );
+}
+
+// ---------------------------------------------------------------- speak
+function SpeakView({
+  exercise,
+  onChange,
+}: Props & { exercise: Extract<Exercise, { type: "speak" }> }) {
+  const [status, setStatus] = useState<"idle" | "listening" | "done">("idle");
+  const [heard, setHeard] = useState<string | null>(null);
+  const [score, setScore] = useState<number | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    (Voice as any).onSpeechResults = (e: { value?: string[] }) => {
+      const text = e.value?.[0] ?? "";
+      setHeard(text);
+      const sc = pronunciationScore(exercise.text, text);
+      setScore(sc);
+      setStatus("done");
+      playSfx(sc >= 60 ? "correct" : "wrong");
+      onChange("done");
+    };
+    (Voice as any).onSpeechError = () => {
+      setStatus("idle");
+      setError("Didn't catch that — try again, or skip.");
+    };
+    (Voice as any).onSpeechEnd = () => setStatus((s) => (s === "listening" ? "idle" : s));
+    return () => {
+      Voice.destroy()
+        .then(() => Voice.removeAllListeners())
+        .catch(() => {});
+    };
+  }, [exercise, onChange]);
+
+  async function start() {
+    setError(null);
+    setHeard(null);
+    setScore(null);
+    try {
+      setStatus("listening");
+      await Voice.start(getSpeechLocale());
+    } catch {
+      setStatus("idle");
+      setError("Speech recognition isn't available here — tap Skip to continue.");
+    }
+  }
+  async function stop() {
+    try {
+      await Voice.stop();
+    } catch {
+      // no-op
+    }
+  }
+
+  const tip =
+    score == null
+      ? null
+      : score >= 85
+        ? "Excellent pronunciation! 🎉"
+        : score >= 60
+          ? "Good — almost there. Listen again and refine it."
+          : "Keep practicing — tap the speaker and copy it closely.";
+  const scoreColor =
+    score == null
+      ? theme.colors.text
+      : score >= 85
+        ? theme.colors.success
+        : score >= 60
+          ? theme.colors.gold
+          : theme.colors.danger;
+
+  return (
+    <View style={styles.body}>
+      <Instruction text={exercise.prompt} />
+      <View style={styles.questionRow}>
+        <Text style={styles.question}>{exercise.text}</Text>
+        <Speaker text={exercise.text} />
+      </View>
+      {exercise.pinyin ? <Text style={styles.pinyin}>{exercise.pinyin}</Text> : null}
+      {exercise.translation ? (
+        <Text style={styles.translation}>{exercise.translation}</Text>
+      ) : null}
+
+      <View style={styles.micWrap}>
+        <Pressable
+          onPress={status === "listening" ? stop : start}
+          style={[styles.mic, status === "listening" && { backgroundColor: theme.colors.danger }]}
+        >
+          {status === "listening" ? (
+            <ActivityIndicator color="#fff" size="large" />
+          ) : (
+            <Text style={{ fontSize: 36 }}>🎤</Text>
+          )}
+        </Pressable>
+        <Text style={styles.micLabel}>
+          {status === "listening"
+            ? "Listening… tap to stop"
+            : status === "done"
+              ? "Tap to try again"
+              : "Tap and say it out loud"}
+        </Text>
+      </View>
+
+      {score != null ? (
+        <View style={styles.result}>
+          <Text style={[styles.scoreText, { color: scoreColor }]}>{score}%</Text>
+          <Text style={styles.tip}>{tip}</Text>
+          {heard ? <Text style={styles.heard}>Heard: “{heard}”</Text> : null}
+        </View>
+      ) : null}
+
+      {error ? <Text style={styles.correctHint}>{error}</Text> : null}
+
+      <Pressable onPress={() => onChange("done")} style={styles.skip}>
+        <Text style={styles.skipText}>Skip this one</Text>
+      </Pressable>
     </View>
   );
 }
@@ -447,4 +600,20 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   matchText: { color: theme.colors.text, fontSize: 17, fontWeight: "600" },
+  micWrap: { alignItems: "center", marginTop: theme.spacing(4), gap: 12 },
+  mic: {
+    width: 96,
+    height: 96,
+    borderRadius: 48,
+    backgroundColor: theme.colors.primary,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  micLabel: { color: theme.colors.textMuted, fontWeight: "700" },
+  result: { alignItems: "center", marginTop: theme.spacing(3), gap: 6 },
+  scoreText: { fontSize: 40, fontWeight: "900" },
+  tip: { color: theme.colors.text, fontSize: 16, textAlign: "center" },
+  heard: { color: theme.colors.textMuted, fontStyle: "italic", marginTop: 4 },
+  skip: { alignSelf: "center", marginTop: theme.spacing(3), padding: 8 },
+  skipText: { color: theme.colors.textMuted, fontWeight: "700" },
 });
