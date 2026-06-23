@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Button, Card, Chip, ProgressBar } from "@/components/ui";
@@ -13,8 +13,17 @@ const GOALS = [10, 20, 30, 50];
 export function ProfileScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
-  const { state, currentStreak, xpToday, setDailyGoal, courseProgress, weeklyXp } =
-    useProgress();
+  const {
+    state,
+    currentStreak,
+    xpToday,
+    setDailyGoal,
+    courseProgress,
+    weeklyXp,
+    todayQuests,
+    claimQuest,
+    buyStreakFreeze,
+  } = useProgress();
   const week = weeklyXp();
   const weekMax = Math.max(1, ...week.map((d) => d.xp));
   const weekTotal = week.reduce((s, d) => s + d.xp, 0);
@@ -63,6 +72,70 @@ export function ProfileScreen() {
               </View>
             ))}
           </View>
+        </Card>
+
+        <Card>
+          <View style={styles.questHead}>
+            <Text style={styles.cardTitle}>Daily quests</Text>
+            <Text style={styles.gemPill}>💎 {state.gems}</Text>
+          </View>
+          <Text style={styles.cardSub}>Fresh challenges every day — earn gems</Text>
+          {todayQuests.items.map((q, i) => {
+            const pct = q.goal ? q.progress / q.goal : 0;
+            const ready = q.progress >= q.goal && !q.claimed;
+            return (
+              <View key={`${q.kind}-${i}`} style={styles.quest}>
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.questLabel}>
+                    {q.claimed ? "✅ " : ""}
+                    {q.label}
+                  </Text>
+                  <View style={{ marginTop: 6 }}>
+                    <ProgressBar
+                      progress={pct}
+                      height={10}
+                      color={q.claimed ? theme.colors.success : theme.colors.accent}
+                    />
+                  </View>
+                  <Text style={styles.questMeta}>
+                    {Math.min(q.progress, q.goal)}/{q.goal} · 💎 {q.reward}
+                  </Text>
+                </View>
+                {ready ? (
+                  <Pressable style={styles.claim} onPress={() => claimQuest(i)}>
+                    <Text style={styles.claimText}>Claim</Text>
+                  </Pressable>
+                ) : null}
+              </View>
+            );
+          })}
+        </Card>
+
+        <Card>
+          <Text style={styles.cardTitle}>Power-ups</Text>
+          <Text style={styles.cardSub}>
+            🧊 Streak Freeze protects your streak if you miss a day
+          </Text>
+          <View style={styles.freezeRow}>
+            <Text style={styles.freezeCount}>
+              {"🧊".repeat(Math.max(1, state.streakFreezes))}{" "}
+              <Text style={{ color: theme.colors.textMuted, fontWeight: "700" }}>
+                {state.streakFreezes}/{2} equipped
+              </Text>
+            </Text>
+          </View>
+          <Button
+            label={
+              state.streakFreezes >= 2
+                ? "Freezes full"
+                : state.gems < 50
+                  ? `Need 💎 50 (you have ${state.gems})`
+                  : "Buy a Streak Freeze · 💎 50"
+            }
+            onPress={() => buyStreakFreeze()}
+            disabled={state.streakFreezes >= 2 || state.gems < 50}
+            style={{ marginTop: theme.spacing(1.5) }}
+          />
         </Card>
 
         <Card>
@@ -217,6 +290,29 @@ const styles = StyleSheet.create({
   bigStatLabel: { color: theme.colors.textMuted, marginTop: 4 },
   cardTitle: { color: theme.colors.text, fontSize: 18, fontWeight: "800" },
   cardSub: { color: theme.colors.textMuted, marginTop: 4 },
+  questHead: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
+  gemPill: {
+    color: theme.colors.accent,
+    fontWeight: "900",
+    fontSize: 16,
+    backgroundColor: theme.colors.surfaceAlt,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 999,
+    overflow: "hidden",
+  },
+  quest: { flexDirection: "row", alignItems: "center", gap: 12, marginTop: theme.spacing(2) },
+  questLabel: { color: theme.colors.text, fontWeight: "700" },
+  questMeta: { color: theme.colors.textMuted, marginTop: 4, fontSize: 12, fontWeight: "700" },
+  claim: {
+    backgroundColor: theme.colors.gold,
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderRadius: theme.radius.md,
+  },
+  claimText: { color: theme.colors.bg, fontWeight: "900" },
+  freezeRow: { marginTop: theme.spacing(1.5) },
+  freezeCount: { fontSize: 20, fontWeight: "900", color: theme.colors.text },
   chart: {
     flexDirection: "row",
     alignItems: "flex-end",

@@ -30,6 +30,76 @@ export interface LearnedWord {
   pinyin?: string;
 }
 
+export type QuestKind = "xp" | "lessons" | "correct";
+
+export interface QuestItem {
+  kind: QuestKind;
+  label: string;
+  goal: number;
+  reward: number; // gems
+  progress: number;
+  claimed: boolean;
+}
+
+export interface DailyQuests {
+  day: string;
+  items: QuestItem[];
+}
+
+const MAX_FREEZES = 2;
+const FREEZE_COST = 50;
+
+// Daily quest pool — two difficulty tiers per kind. One of each kind is offered
+// per day, with the tier picked deterministically from the date.
+const QUEST_POOL: Record<QuestKind, QuestItem[]> = {
+  xp: [
+    { kind: "xp", label: "Earn 30 XP", goal: 30, reward: 15, progress: 0, claimed: false },
+    { kind: "xp", label: "Earn 50 XP", goal: 50, reward: 25, progress: 0, claimed: false },
+  ],
+  lessons: [
+    { kind: "lessons", label: "Complete 3 lessons", goal: 3, reward: 15, progress: 0, claimed: false },
+    { kind: "lessons", label: "Complete 5 lessons", goal: 5, reward: 25, progress: 0, claimed: false },
+  ],
+  correct: [
+    { kind: "correct", label: "Answer 20 correctly", goal: 20, reward: 15, progress: 0, claimed: false },
+    { kind: "correct", label: "Answer 40 correctly", goal: 40, reward: 25, progress: 0, claimed: false },
+  ],
+};
+
+function hashDay(day: string): number {
+  let h = 0;
+  for (let i = 0; i < day.length; i++) h = (h * 31 + day.charCodeAt(i)) | 0;
+  return Math.abs(h);
+}
+
+function generateQuests(day: string): DailyQuests {
+  const seed = hashDay(day);
+  const pick = (kind: QuestKind, bit: number) =>
+    QUEST_POOL[kind][(seed >> bit) & 1];
+  return {
+    day,
+    items: [pick("xp", 0), pick("lessons", 1), pick("correct", 2)].map((q) => ({
+      ...q,
+    })),
+  };
+}
+
+function advanceQuests(
+  quests: DailyQuests | undefined,
+  day: string,
+  deltas: Partial<Record<QuestKind, number>>,
+): DailyQuests {
+  const base = quests && quests.day === day ? quests : generateQuests(day);
+  return {
+    day,
+    items: base.items.map((q) => {
+      const d = deltas[q.kind] ?? 0;
+      if (!d || q.claimed) return q;
+      return { ...q, progress: Math.min(q.goal, q.progress + d) };
+    }),
+  };
+}
+
 interface Persisted {
   currentCourse?: string;
   byCourse: Record<string, CourseProgress>;
@@ -42,6 +112,9 @@ interface Persisted {
   /** course code -> (word target -> recall stats) for spaced review */
   wordStats: Record<string, Record<string, { c: number; w: number; t: number }>>;
   xp: number;
+  gems: number;
+  streakFreezes: number;
+  quests?: DailyQuests;
   streak: number;
   lastActiveDay?: string;
   dailyGoal: number;
@@ -59,6 +132,8 @@ const DEFAULT: Persisted = {
   tracePractice: {},
   wordStats: {},
   xp: 0,
+  gems: 0,
+  streakFreezes: 0,
   streak: 0,
   dailyGoal: 30,
   xpToday: 0,
@@ -75,6 +150,15 @@ function yesterdayStr(): string {
   d.setDate(d.getDate() - 1);
   return dayStr(d);
 }
+function parseDay(s: string): Date {
+  const [y, m, d] = s.split("-").map(Number);
+  return new Date(y, m - 1, d);
+}
+/** Whole calendar days between two day-strings (b - a). */
+function daysBetween(a: string, b: string): number {
+  const ms = parseDay(b).getTime() - parseDay(a).getTime();
+  return Math.round(ms / 86400000);
+}
 
 interface ProgressContextValue {
   ready: boolean;
@@ -83,6 +167,10 @@ interface ProgressContextValue {
   currentStreak: number;
   /** XP earned today (0 if the stored value is from a previous day). */
   xpToday: number;
+  /** Today's daily quests (regenerated each day). */
+  todayQuests: DailyQuests;
+  claimQuest: (index: number) => void;
+  buyStreakFreeze: () => boolean;
   setCurrentCourse: (code: string) => void;
   courseProgress: (code: string) => CourseProgress;
   isCompleted: (code: string, lessonId: string) => boolean;
@@ -143,11 +231,14 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
 
   const value = useMemo<ProgressContextValue>(() => {
     const today = dayStr(new Date());
+    // Missed full days since last activity (0 if active today/yesterday). A
+    // streak survives as long as freezes can cover the gap.
+    const missed = state.lastActiveDay ? Math.max(0, daysBetween(state.lastActiveDay, today) - 1) : 0;
     const currentStreak =
-      state.lastActiveDay === today || state.lastActiveDay === yesterdayStr()
-        ? state.streak
-        : 0;
+      state.lastActiveDay === today || missed <= state.streakFreezes ? state.streak : 0;
     const xpToday = state.xpTodayDay === today ? state.xpToday : 0;
+    const todayQuests =
+      state.quests && state.quests.day === today ? state.quests : generateQuests(today);
 
     const courseProgress = (code: string): CourseProgress =>
       state.byCourse[code] ?? { completed: {}, placed: false };
@@ -157,6 +248,28 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
       state,
       currentStreak,
       xpToday,
+      todayQuests,
+      claimQuest: (index) => {
+        const q = todayQuests.items[index];
+        if (!q || q.claimed || q.progress < q.goal) return;
+        const items = todayQuests.items.map((it, i) =>
+          i === index ? { ...it, claimed: true } : it,
+        );
+        persist({
+          ...state,
+          gems: state.gems + q.reward,
+          quests: { day: todayQuests.day, items },
+        });
+      },
+      buyStreakFreeze: () => {
+        if (state.gems < FREEZE_COST || state.streakFreezes >= MAX_FREEZES) return false;
+        persist({
+          ...state,
+          gems: state.gems - FREEZE_COST,
+          streakFreezes: state.streakFreezes + 1,
+        });
+        return true;
+      },
       courseProgress,
       isCompleted: (code, lessonId) => !!courseProgress(code).completed[lessonId],
       learnedWords: (code) => Object.values(state.learnedVocab[code] ?? {}),
@@ -191,7 +304,16 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
           w: prev.w + (correct ? 0 : 1),
           t: Date.now(),
         };
-        persist({ ...state, wordStats: { ...state.wordStats, [code]: cs } });
+        const today3 = dayStr(new Date());
+        persist({
+          ...state,
+          wordStats: { ...state.wordStats, [code]: cs },
+          quests: correct
+            ? advanceQuests(state.quests, today3, { correct: 1 })
+            : state.quests && state.quests.day === today3
+              ? state.quests
+              : generateQuests(today3),
+        });
       },
       setCurrentCourse: (code) => persist({ ...state, currentCourse: code }),
       completeLesson: (code, lessonId, xpEarned, learned) => {
@@ -199,8 +321,18 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
         const today2 = dayStr(new Date());
         let streak = state.streak;
         let lastActiveDay = state.lastActiveDay;
+        let streakFreezes = state.streakFreezes;
         if (lastActiveDay !== today2) {
-          streak = lastActiveDay === yesterdayStr() ? state.streak + 1 : 1;
+          const missedDays = lastActiveDay ? Math.max(0, daysBetween(lastActiveDay, today2) - 1) : 0;
+          if (lastActiveDay === yesterdayStr()) {
+            streak = state.streak + 1;
+          } else if (missedDays > 0 && streakFreezes >= missedDays) {
+            // Freezes cover the gap — consume them and keep the streak going.
+            streakFreezes -= missedDays;
+            streak = state.streak + 1;
+          } else {
+            streak = 1;
+          }
           lastActiveDay = today2;
         }
         const baseToday = state.xpTodayDay === today2 ? state.xpToday : 0;
@@ -220,6 +352,9 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
             [today2]: (state.xpHistory[today2] ?? 0) + xpEarned,
           },
           xp: state.xp + xpEarned,
+          gems: state.gems + 1,
+          streakFreezes,
+          quests: advanceQuests(state.quests, today2, { xp: xpEarned, lessons: 1 }),
           streak,
           lastActiveDay,
           xpToday: baseToday + xpEarned,

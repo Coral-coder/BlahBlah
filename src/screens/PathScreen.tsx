@@ -81,6 +81,18 @@ export function PathScreen() {
             ⭐ {state.xp}
           </Text>
         </View>
+        <View style={styles.headerStat}>
+          <Text style={[styles.headerStatText, { color: theme.colors.accent }]}>
+            💎 {state.gems}
+          </Text>
+        </View>
+        {state.streakFreezes > 0 ? (
+          <View style={styles.headerStat}>
+            <Text style={[styles.headerStatText, { color: "#7FD3FF" }]}>
+              🧊 {state.streakFreezes}
+            </Text>
+          </View>
+        ) : null}
         <View style={{ flex: 1 }} />
         <Pressable onPress={() => nav.navigate("settings")} hitSlop={10}>
           <Text style={{ fontSize: 22 }}>⚙️</Text>
