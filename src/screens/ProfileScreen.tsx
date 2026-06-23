@@ -111,10 +111,16 @@ export function ProfileScreen() {
         <Card>
           <Text style={styles.cardTitle}>Practice & play</Text>
           <Button
+            label="📚  Stories"
+            variant="ghost"
+            onPress={() => nav.navigate("stories")}
+            style={{ marginTop: theme.spacing(1.5) }}
+          />
+          <Button
             label="📖  Words you know"
             variant="ghost"
             onPress={() => nav.navigate("words")}
-            style={{ marginTop: theme.spacing(1.5) }}
+            style={{ marginTop: theme.spacing(1) }}
           />
           <Button
             label="⚡  Match Blitz"

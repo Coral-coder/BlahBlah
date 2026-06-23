@@ -1,0 +1,100 @@
+import type { Story } from "@/stories/types";
+
+export const thaiStories: Story[] = [
+  {
+    id: "th-story-1",
+    courseCode: "th",
+    title: "ขอกาแฟครับ",
+    emoji: "☕",
+    cefr: "A1",
+    blurb: "Ana orders coffee, but the waiter brings something sweet.",
+    lines: [
+      { speaker: "📖", target: "อานาเข้าไปในร้านกาแฟ", pinyin: "aa-naa khao pai nai raan gaa-fae", en: "Ana goes into the café." },
+      { speaker: "🧑‍🍳 พนักงาน", target: "สวัสดีค่ะ รับอะไรดีคะ", pinyin: "sa-wat-dii kha, rap a-rai dii kha", en: "Hello, what would you like?" },
+      { speaker: "🧑 อานา", target: "ขอกาแฟหนึ่งแก้วค่ะ", pinyin: "khor gaa-fae nueng gaeo kha", en: "One coffee, please." },
+      { speaker: "🧑‍🍳 พนักงาน", target: "ขนมเค้กใช่ไหมคะ", pinyin: "kha-nom khek chai mai kha", en: "Cake, right?" },
+      { speaker: "🧑 อานา", target: "ไม่ใช่ค่ะ กาแฟค่ะ", pinyin: "mai chai kha, gaa-fae kha", en: "No, coffee." },
+      { speaker: "🧑‍🍳 พนักงาน", target: "ขอโทษค่ะ ฟังผิด", pinyin: "khor-thot kha, fang phit", en: "Sorry, I misheard." },
+      { speaker: "🧑 อานา", target: "ไม่เป็นไรค่ะ", pinyin: "mai pen rai kha", en: "It's okay." },
+      { speaker: "🧑‍🍳 พนักงาน", target: "กาแฟมาแล้วค่ะ", pinyin: "gaa-fae maa laeo kha", en: "Here is your coffee." },
+      { speaker: "🧑 อานา", target: "ขอบคุณค่ะ", pinyin: "khop-khun kha", en: "Thank you." },
+      { speaker: "🧑‍🍳 พนักงาน", target: "เค้กแถมให้ฟรีค่ะ", pinyin: "khek thaem hai free kha", en: "The cake is free!" },
+    ],
+    questions: [
+      {
+        question: "What does Ana order?",
+        options: ["Cake", "Coffee", "Tea", "Juice"],
+        answer: 1,
+      },
+      {
+        question: "What does the waiter give for free?",
+        options: ["Coffee", "Cake", "Tea", "Nothing"],
+        answer: 1,
+      },
+    ],
+  },
+  {
+    id: "th-story-2",
+    courseCode: "th",
+    title: "แมวอยู่ไหน",
+    emoji: "🐱",
+    cefr: "A1",
+    blurb: "Ana hunts for her cat all over the house.",
+    lines: [
+      { speaker: "🧑 อานา", target: "แมวของฉันอยู่ไหน", pinyin: "maeo khong chan yuu nai", en: "Where is my cat?" },
+      { speaker: "📖", target: "อานาหาในครัว", pinyin: "aa-naa haa nai khrua", en: "Ana looks in the kitchen." },
+      { speaker: "🧑 อานา", target: "ไม่อยู่ที่นี่", pinyin: "mai yuu thii nii", en: "Not here." },
+      { speaker: "📖", target: "อานาหาใต้เตียง", pinyin: "aa-naa haa tai tiang", en: "Ana looks under the bed." },
+      { speaker: "🧑 อานา", target: "ก็ไม่อยู่อีก", pinyin: "gor mai yuu iik", en: "Not here either." },
+      { speaker: "👵 ยาย", target: "หาแมวเหรอ", pinyin: "haa maeo ror", en: "Looking for the cat?" },
+      { speaker: "🧑 อานา", target: "ใช่ค่ะ ยายเห็นไหม", pinyin: "chai kha, yaai hen mai", en: "Yes, did you see it, Grandma?" },
+      { speaker: "👵 ยาย", target: "มันอยู่ในหมวกของหนู", pinyin: "man yuu nai muak khong nuu", en: "It is in your hat." },
+      { speaker: "🧑 อานา", target: "แมวตัวนี้ซนจริง ๆ", pinyin: "maeo tua nii son jing jing", en: "This cat is so naughty!" },
+      { speaker: "👵 ยาย", target: "มันชอบนอนที่นั่น", pinyin: "man chop non thii nan", en: "It likes to sleep there." },
+    ],
+    questions: [
+      {
+        question: "Where is the cat?",
+        options: ["Under the bed", "In the kitchen", "In the hat", "On the bed"],
+        answer: 2,
+      },
+      {
+        question: "Who finds the cat?",
+        options: ["Ana", "Grandma", "The waiter", "A friend"],
+        answer: 1,
+      },
+    ],
+  },
+  {
+    id: "th-story-3",
+    courseCode: "th",
+    title: "ขึ้นรถผิดคัน",
+    emoji: "🚌",
+    cefr: "A2",
+    blurb: "Ana boards the wrong bus and meets an old friend.",
+    lines: [
+      { speaker: "📖", target: "อานาขึ้นรถเมล์สายห้า", pinyin: "aa-naa khuen rot-mee saai haa", en: "Ana gets on bus number five." },
+      { speaker: "🧑 อานา", target: "รถคันนี้ไปในเมืองไหมคะ", pinyin: "rot khan nii pai nai mueang mai kha", en: "Does this bus go to town?" },
+      { speaker: "🧑‍🍳 คนขับ", target: "ไม่ครับ คันนี้ไปทะเล", pinyin: "mai khrap, khan nii pai tha-lee", en: "No, this one goes to the sea." },
+      { speaker: "🧑 อานา", target: "ตายแล้ว ขึ้นผิดคัน", pinyin: "taai laeo, khuen phit khan", en: "Oh no, I'm on the wrong bus!" },
+      { speaker: "👵 ป้า", target: "อานา มาทำอะไรที่นี่", pinyin: "aa-naa, maa tham a-rai thii nii", en: "Ana, what are you doing here?" },
+      { speaker: "🧑 อานา", target: "สวัสดีค่ะ หนูขึ้นรถผิด", pinyin: "sa-wat-dii kha, nuu khuen rot phit", en: "Hello, I took the wrong bus." },
+      { speaker: "👵 ป้า", target: "งั้นไปทะเลด้วยกันสิ", pinyin: "ngan pai tha-lee duai gan si", en: "Then let's go to the sea together!" },
+      { speaker: "🧑 อานา", target: "แต่หนูไม่มีชุดว่ายน้ำ", pinyin: "tae nuu mai mii chut waai-naam", en: "But I don't have a swimsuit." },
+      { speaker: "👵 ป้า", target: "ไม่เป็นไร เรากินไอติมกัน", pinyin: "mai pen rai, rao gin ai-tim gan", en: "It's okay, we'll eat ice cream." },
+      { speaker: "🧑 อานา", target: "ดีเลยค่ะ ขึ้นผิดก็ดีนะ", pinyin: "dii loei kha, khuen phit gor dii na", en: "Great! The wrong bus was a good thing." },
+    ],
+    questions: [
+      {
+        question: "Where did Ana want to go?",
+        options: ["The sea", "Town", "Home", "The market"],
+        answer: 1,
+      },
+      {
+        question: "What do they decide to eat?",
+        options: ["Cake", "Ice cream", "Coffee", "Fruit"],
+        answer: 1,
+      },
+    ],
+  },
+];

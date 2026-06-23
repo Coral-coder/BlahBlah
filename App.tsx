@@ -10,6 +10,8 @@ import { PathScreen } from "@/screens/PathScreen";
 import { PlacementScreen } from "@/screens/PlacementScreen";
 import { ProfileScreen } from "@/screens/ProfileScreen";
 import { SettingsScreen } from "@/screens/SettingsScreen";
+import { StoriesListScreen } from "@/screens/StoriesListScreen";
+import { StoryScreen } from "@/screens/StoryScreen";
 import { TraceScreen } from "@/screens/TraceScreen";
 import { WordsScreen } from "@/screens/WordsScreen";
 import { NavProvider, useNav } from "@/navigation";
@@ -72,6 +74,10 @@ function Router() {
       return <TraceScreen />;
     case "game":
       return <GameScreen />;
+    case "stories":
+      return <StoriesListScreen />;
+    case "story":
+      return <StoryScreen />;
     default:
       return <Shell />;
   }
