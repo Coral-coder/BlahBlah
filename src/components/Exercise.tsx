@@ -4,9 +4,61 @@ import { ActivityIndicator, Pressable, StyleSheet, Text, View } from "react-nati
 
 import type { Exercise } from "@/curriculum/types";
 import { normalize, shuffle } from "@/lesson/engine";
+import { glossWord } from "@/lib/glossary";
 import { getSpeechLocale, speak } from "@/lib/speech";
 import { playSfx } from "@/lib/sfx";
 import { theme } from "@/theme";
+
+// ---- Tap-to-translate word hints --------------------------------------------
+// A learner can tap (or long-press, on interactive tiles) any target-language
+// word to hear it and see what it means.
+function useHint() {
+  const [hint, setHint] = useState<string | null>(null);
+  const reveal = (word: string) => {
+    const w = word.trim();
+    if (!w) return;
+    speak(w);
+    const g = glossWord(w);
+    setHint(g ? `${w} — ${g}` : `🔊 ${w}`);
+  };
+  return { hint, reveal };
+}
+
+function HintBar({ hint }: { hint: string | null }) {
+  if (!hint) return null;
+  return (
+    <View style={styles.hintBar}>
+      <Text style={styles.hintText}>💡 {hint}</Text>
+    </View>
+  );
+}
+
+/** Read-only target text whose words are each tappable for a translation. */
+function GlossedText({
+  text,
+  textStyle,
+}: {
+  text: string;
+  textStyle?: object;
+}) {
+  const { hint, reveal } = useHint();
+  const tokens = text.split(" ").filter((t) => t.length > 0);
+  return (
+    <View>
+      <View style={styles.glossRow}>
+        {tokens.map((w, i) => {
+          const known = !!glossWord(w);
+          return (
+            <Pressable key={`${w}-${i}`} onPress={() => reveal(w)} hitSlop={4}>
+              <Text style={[styles.question, textStyle, known && styles.glossable]}>{w}</Text>
+            </Pressable>
+          );
+        })}
+      </View>
+      <HintBar hint={hint} />
+    </View>
+  );
+}
 
 /** Sentinel response that means "match exercise finished". */
 export const MATCH_DONE = "__match_done__";
@@ -122,6 +174,7 @@ function SelectView({
   onChange,
 }: Props & { exercise: Extract<Exercise, { type: "select" }> }) {
   const [selected, setSelected] = useState<number | null>(null);
+  const { hint, reveal } = useHint();
   return (
     <View style={styles.body}>
       <Instruction text={exercise.prompt} />
@@ -130,6 +183,7 @@ function SelectView({
         {exercise.speak ? <Speaker text={exercise.speak} /> : null}
       </View>
       {exercise.subtext ? <Text style={styles.subtext}>{exercise.subtext}</Text> : null}
+      <HintBar hint={hint} />
       <View style={{ gap: 12, marginTop: theme.spacing(2) }}>
         {exercise.options.map((opt, i) => {
           const isSel = selected === i;
@@ -149,6 +203,7 @@ function SelectView({
             <Pressable
               key={i}
               disabled={revealed}
+              onLongPress={() => reveal(opt)}
               onPress={() => {
                 setSelected(i);
                 onChange(i);
@@ -175,33 +230,44 @@ function FillView({
 }: Props & { exercise: Extract<Exercise, { type: "fill" }> }) {
   const [choice, setChoice] = useState<string | null>(null);
   const options = useMemo(() => shuffle(exercise.options), [exercise]);
+  const { hint, reveal } = useHint();
+  const beforeWords = exercise.before.split(" ").filter(Boolean);
+  const afterWords = exercise.after.split(" ").filter(Boolean);
+  const blankColor = !choice
+    ? theme.colors.text
+    : revealed
+      ? choice === exercise.answer
+        ? theme.colors.success
+        : theme.colors.danger
+      : theme.colors.text;
   return (
     <View style={styles.body}>
       <Instruction text={exercise.prompt} />
       <View style={styles.sentenceWrap}>
-        <Text style={styles.sentence}>
-          {exercise.before}
-          <Text
-            style={[
-              styles.blank,
-              choice
-                ? {
-                    color: revealed
-                      ? choice === exercise.answer
-                        ? theme.colors.success
-                        : theme.colors.danger
-                      : theme.colors.text,
-                    borderBottomColor: theme.colors.primary,
-                  }
-                : null,
-            ]}
-          >
+        <View style={styles.glossRow}>
+          {beforeWords.map((w, i) => {
+            const known = !!glossWord(w);
+            return (
+              <Pressable key={`b-${w}-${i}`} onPress={() => reveal(w)} hitSlop={4}>
+                <Text style={[styles.sentence, known && styles.glossable]}>{w}</Text>
+              </Pressable>
+            );
+          })}
+          <Text style={[styles.sentence, styles.blank, { color: blankColor, borderBottomColor: choice ? theme.colors.primary : theme.colors.border }]}>
             {choice ? ` ${choice} ` : "  ______  "}
           </Text>
-          {exercise.after}
-        </Text>
+          {afterWords.map((w, i) => {
+            const known = !!glossWord(w);
+            return (
+              <Pressable key={`a-${w}-${i}`} onPress={() => reveal(w)} hitSlop={4}>
+                <Text style={[styles.sentence, known && styles.glossable]}>{w}</Text>
+              </Pressable>
+            );
+          })}
+        </View>
         {exercise.speak ? <Speaker text={exercise.speak} /> : null}
       </View>
+      <HintBar hint={hint} />
       {exercise.pinyin ? <Text style={styles.pinyin}>{exercise.pinyin}</Text> : null}
       {exercise.translation ? (
         <Text style={styles.translation}>{exercise.translation}</Text>
@@ -254,6 +320,7 @@ function WordbankView({
     [exercise],
   );
   const [used, setUsed] = useState<number[]>([]); // bank ids in chosen order
+  const { hint, reveal } = useHint();
 
   useEffect(() => {
     if (listen && exercise.speak) speak(exercise.speak);
@@ -283,6 +350,8 @@ function WordbankView({
         </View>
       )}
 
+      <HintBar hint={hint} />
+
       {/* assembled answer line */}
       <View style={styles.answerLine}>
         {used.map((id, idx) => {
@@ -309,6 +378,7 @@ function WordbankView({
             <Pressable
               key={b.id}
               disabled={revealed || isUsed}
+              onLongPress={() => reveal(b.word)}
               onPress={() => setChosen([...used, b.id])}
               style={[styles.tile, isUsed && styles.tileGhost]}
             >
@@ -353,6 +423,7 @@ function MatchView({
   const [selR, setSelR] = useState<number | null>(null);
   const [done, setDone] = useState<number[]>([]);
   const [wrong, setWrong] = useState<number | null>(null);
+  const { hint, reveal } = useHint();
 
   function tryMatch(l: number | null, r: number | null) {
     if (l == null || r == null) return;
@@ -386,6 +457,7 @@ function MatchView({
       <Pressable
         key={`${side}${key}`}
         disabled={isDone}
+        onLongPress={side === "L" && speakText ? () => reveal(speakText) : undefined}
         onPress={() => {
           // Either column can be tapped first; tapping a selected cell deselects.
           if (side === "L") {
@@ -415,6 +487,7 @@ function MatchView({
   return (
     <View style={styles.body}>
       <Instruction text={exercise.prompt} />
+      <HintBar hint={hint} />
       <View style={styles.matchRow}>
         <View style={styles.matchCol}>
           {left.map((p) =>
@@ -526,7 +599,9 @@ function SpeakView({
     <View style={styles.body}>
       <Instruction text={exercise.prompt} />
       <View style={styles.questionRow}>
-        <Text style={styles.question}>{exercise.text}</Text>
+        <View style={{ flex: 1 }}>
+          <GlossedText text={exercise.text} />
+        </View>
         <Speaker text={exercise.text} />
       </View>
       {exercise.pinyin ? <Text style={styles.pinyin}>{exercise.pinyin}</Text> : null}
@@ -574,6 +649,23 @@ function SpeakView({
 const styles = StyleSheet.create({
   body: { flex: 1, paddingHorizontal: theme.spacing(2), paddingTop: theme.spacing(2) },
   instruction: { color: theme.colors.text, fontSize: 22, fontWeight: "800", marginBottom: theme.spacing(2) },
+  glossRow: { flexDirection: "row", flexWrap: "wrap", alignItems: "flex-end", columnGap: 8, rowGap: 4 },
+  glossable: {
+    borderBottomWidth: 1,
+    borderStyle: "dotted",
+    borderBottomColor: theme.colors.textMuted,
+  },
+  hintBar: {
+    alignSelf: "flex-start",
+    backgroundColor: theme.colors.surfaceAlt,
+    borderWidth: 1,
+    borderColor: theme.colors.primary,
+    borderRadius: theme.radius.md,
+    paddingVertical: 8,
+    paddingHorizontal: 14,
+    marginTop: 10,
+  },
+  hintText: { color: theme.colors.text, fontSize: 16, fontWeight: "700" },
   questionRow: { flexDirection: "row", alignItems: "center", gap: 12, flexWrap: "wrap" },
   question: { color: theme.colors.text, fontSize: 26, fontWeight: "700" },
   given: { color: theme.colors.text, fontSize: 22, fontWeight: "600" },

@@ -111,6 +111,8 @@ export interface Persisted {
   tracePractice: Record<string, Record<string, number>>;
   /** course code -> (word target -> recall stats) for spaced review */
   wordStats: Record<string, Record<string, { c: number; w: number; t: number }>>;
+  /** course code -> (lessonId -> crown/mastery level 1..5) */
+  crowns: Record<string, Record<string, number>>;
   xp: number;
   gems: number;
   maxStreak: number;
@@ -132,6 +134,7 @@ const DEFAULT: Persisted = {
   xpHistory: {},
   tracePractice: {},
   wordStats: {},
+  crowns: {},
   xp: 0,
   gems: 0,
   maxStreak: 0,
@@ -215,6 +218,7 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
             xpHistory: parsed.xpHistory ?? {},
             tracePractice: parsed.tracePractice ?? {},
             wordStats: parsed.wordStats ?? {},
+            crowns: parsed.crowns ?? {},
             settings: { ...DEFAULT.settings, ...(parsed.settings ?? {}) },
           });
         }

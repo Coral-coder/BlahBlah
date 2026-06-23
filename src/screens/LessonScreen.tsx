@@ -7,6 +7,7 @@ import { Button, Hearts, ProgressBar } from "@/components/ui";
 import { flattenCourse, type Exercise } from "@/curriculum/types";
 import { getCourse } from "@/curriculum";
 import { isCorrect, lessonXp } from "@/lesson/engine";
+import { setActiveGlossary } from "@/lib/glossary";
 import { playSfx } from "@/lib/sfx";
 import { setSpeechLocale } from "@/lib/speech";
 import { useNav, useRoute } from "@/navigation";
@@ -29,6 +30,7 @@ export function LessonScreen() {
 
   useEffect(() => {
     setSpeechLocale(course?.speechLocale);
+    setActiveGlossary(course?.code);
   }, [course]);
 
   const total = node?.lesson.exercises.length ?? 0;
@@ -110,6 +112,8 @@ export function LessonScreen() {
         <Hearts count={Math.max(0, hearts)} />
       </View>
 
+      <Text style={styles.tapTip}>💡 Tap a dotted word — or hold any word tile — for its meaning</Text>
+
       <ScrollView contentContainerStyle={{ flexGrow: 1, paddingBottom: 20 }}>
         <ExerciseView
           key={`${node.lesson.id}-${round}`}
@@ -167,6 +171,14 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
   },
   close: { color: theme.colors.textMuted, fontSize: 24, fontWeight: "700" },
+  tapTip: {
+    color: theme.colors.textMuted,
+    fontSize: 12,
+    fontWeight: "600",
+    textAlign: "center",
+    paddingHorizontal: theme.spacing(2),
+    paddingBottom: 6,
+  },
   footer: {
     borderTopWidth: 1,
     borderTopColor: theme.colors.border,
