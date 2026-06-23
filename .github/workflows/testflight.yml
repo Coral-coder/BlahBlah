@@ -83,10 +83,17 @@ jobs:
           fi
           tar -xjf sherpa.tar.bz2
           cd ..
-          find work -name "sherpa-onnx.xcframework" -maxdepth 6 -exec cp -R {} "$DEST/" \;
-          find work -name "onnxruntime.xcframework" -maxdepth 6 -exec cp -R {} "$DEST/" \;
+          SO=$(find work -type d -name "sherpa-onnx.xcframework" | head -n1)
+          ORT=$(find work -type d -name "onnxruntime.xcframework" | head -n1)
+          echo "sherpa: $SO"; echo "onnx: $ORT"
+          test -n "$SO" && test -n "$ORT"
+          rm -rf "$DEST/sherpa-onnx.xcframework" "$DEST/onnxruntime.xcframework"
+          cp -R "$SO" "$DEST/sherpa-onnx.xcframework"
+          cp -R "$ORT" "$DEST/onnxruntime.xcframework"
           rm -rf work
           echo "Vendored:"; ls -1 "$DEST"
+          echo "Slices:"; ls -1 "$DEST/sherpa-onnx.xcframework"
+          echo "c-api.h locations:"; find "$DEST/sherpa-onnx.xcframework" -name "c-api.h" || true
           test -d "$DEST/sherpa-onnx.xcframework"
           test -d "$DEST/onnxruntime.xcframework"
 
