@@ -4,7 +4,7 @@
 // the in-order flattening of all lessons; a lesson unlocks when the previous one
 // is complete. All content is hand-authored data (no AI generation at runtime).
 
-export type CEFR = "A1" | "A2" | "B1" | "B2" | "C1";
+export type CEFR = "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
 
 /** Multiple choice — pick the one correct option. */
 export interface SelectExercise {
