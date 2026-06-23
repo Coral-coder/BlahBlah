@@ -5,6 +5,13 @@ name: Publish voice models
 # Source models are free/open Piper & MMS voices distributed by sherpa-onnx.
 on:
   workflow_dispatch:
+  # Self-trigger: pushing a change to THIS file (re)publishes the voice packs,
+  # since the integration token can't dispatch workflows manually.
+  push:
+    branches:
+      - "claude/blahblah-next"
+    paths:
+      - ".github/workflows/voice-models.yml"
 
 permissions:
   contents: write
