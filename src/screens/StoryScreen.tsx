@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -29,6 +29,7 @@ export function StoryScreen() {
   const [checked, setChecked] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
   const [revealed, setRevealed] = useState<Record<number, boolean>>({});
+  const scrollRef = useRef<ScrollView>(null);
 
   useEffect(() => {
     if (course) setSpeechLocale(course.speechLocale);
@@ -95,7 +96,11 @@ export function StoryScreen() {
 
       {phase === "read" ? (
         <>
-          <ScrollView contentContainerStyle={{ padding: theme.spacing(2), gap: 12 }}>
+          <ScrollView
+            ref={scrollRef}
+            contentContainerStyle={{ padding: theme.spacing(2), gap: 12 }}
+            onContentSizeChange={() => scrollRef.current?.scrollToEnd({ animated: true })}
+          >
             {shownLines.map((l, i) => (
               <Pressable
                 key={i}

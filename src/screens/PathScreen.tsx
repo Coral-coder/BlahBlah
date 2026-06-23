@@ -1,5 +1,12 @@
-import { useMemo } from "react";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { useEffect, useMemo, useRef, useState } from "react";
+import {
+  LayoutChangeEvent,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Mascot } from "@/components/Mascot";
@@ -25,6 +32,13 @@ export function PathScreen() {
     return idx === -1 ? nodes.length : idx;
   }, [nodes, completed]);
 
+  const scrollRef = useRef<ScrollView>(null);
+  const scrolledRef = useRef(false);
+  const [openUnits, setOpenUnits] = useState<Record<string, boolean>>({});
+  useEffect(() => {
+    scrolledRef.current = false;
+  }, [course]);
+
   if (!course) {
     return (
       <View style={[styles.root, { paddingTop: insets.top + 60, alignItems: "center" }]}>
@@ -37,6 +51,9 @@ export function PathScreen() {
   }
 
   const goalPct = state.dailyGoal > 0 ? xpToday / state.dailyGoal : 0;
+  const currentUnitId = nodes[Math.min(currentIndex, nodes.length - 1)]?.unit.id;
+  const isUnitComplete = (unitId: string) =>
+    nodes.filter((n) => n.unit.id === unitId).every((n) => completed[n.lesson.id]);
 
   // Group consecutive nodes by unit for rendering headers.
   const units = course.sections.flatMap((s) => s.units.map((u) => ({ section: s, unit: u })));
@@ -70,7 +87,7 @@ export function PathScreen() {
         <ProgressBar progress={goalPct} color={theme.colors.gold} height={10} />
       </View>
 
-      <ScrollView contentContainerStyle={{ paddingBottom: insets.bottom + 30 }}>
+      <ScrollView ref={scrollRef} contentContainerStyle={{ paddingBottom: insets.bottom + 30 }}>
         <View style={styles.greeting}>
           <Mascot size={52} />
           <View style={styles.bubble}>
@@ -94,41 +111,63 @@ export function PathScreen() {
         {units.map(({ section, unit }, ui) => {
           const unitNodes = nodes.filter((n) => n.unit.id === unit.id);
           const isFirstOfSection = section.units[0].id === unit.id;
+          const complete = isUnitComplete(unit.id);
+          const isCurrentUnit = unit.id === currentUnitId;
+          const open = openUnits[unit.id] ?? !complete; // completed units collapse
+          const doneCount = unitNodes.filter((n) => completed[n.lesson.id]).length;
           return (
-            <View key={unit.id}>
+            <View
+              key={unit.id}
+              onLayout={(e: LayoutChangeEvent) => {
+                // Auto-scroll to the unit you're currently working on (once).
+                if (isCurrentUnit && !scrolledRef.current) {
+                  scrolledRef.current = true;
+                  const y = e.nativeEvent.layout.y;
+                  setTimeout(() => scrollRef.current?.scrollTo({ y: Math.max(0, y - 12), animated: false }), 0);
+                }
+              }}
+            >
               {isFirstOfSection ? (
                 <Text style={styles.sectionTitle}>{section.title.toUpperCase()}</Text>
               ) : null}
-              <View style={[styles.unitHeader, { backgroundColor: unit.color }]}>
-                <Text style={styles.unitIcon}>{unit.icon}</Text>
+              <Pressable
+                onPress={() => setOpenUnits((o) => ({ ...o, [unit.id]: !open }))}
+                style={[styles.unitHeader, { backgroundColor: unit.color }]}
+              >
+                <Text style={styles.unitIcon}>{complete ? "✅" : unit.icon}</Text>
                 <View style={{ flex: 1 }}>
                   <Text style={styles.unitTitle}>
                     {unit.title} · {unit.cefr}
                   </Text>
-                  <Text style={styles.unitSubtitle}>{unit.subtitle}</Text>
+                  <Text style={styles.unitSubtitle}>
+                    {complete ? `Complete · tap to ${open ? "hide" : "review"}` : `${doneCount}/${unitNodes.length} lessons`}
+                  </Text>
                 </View>
-              </View>
+                <Text style={styles.chevron}>{open ? "▾" : "▸"}</Text>
+              </Pressable>
 
-              <View style={styles.nodes}>
-                {unitNodes.map((node) => (
-                  <LessonNode
-                    key={node.lesson.id}
-                    node={node}
-                    state={
-                      completed[node.lesson.id]
-                        ? "done"
-                        : node.index === currentIndex
-                          ? "current"
-                          : node.index < currentIndex
-                            ? "available"
-                            : "locked"
-                    }
-                    onPress={() =>
-                      nav.navigate("lesson", { courseCode: course.code, lessonId: node.lesson.id })
-                    }
-                  />
-                ))}
-              </View>
+              {open ? (
+                <View style={styles.nodes}>
+                  {unitNodes.map((node) => (
+                    <LessonNode
+                      key={node.lesson.id}
+                      node={node}
+                      state={
+                        completed[node.lesson.id]
+                          ? "done"
+                          : node.index === currentIndex
+                            ? "current"
+                            : node.index < currentIndex
+                              ? "available"
+                              : "locked"
+                      }
+                      onPress={() =>
+                        nav.navigate("lesson", { courseCode: course.code, lessonId: node.lesson.id })
+                      }
+                    />
+                  ))}
+                </View>
+              ) : null}
               {ui === units.length - 1 && currentIndex >= nodes.length ? (
                 <Text style={styles.doneAll}>🏆 You finished every lesson here!</Text>
               ) : null}
@@ -250,6 +289,7 @@ const styles = StyleSheet.create({
     borderRadius: theme.radius.lg,
   },
   unitIcon: { fontSize: 30 },
+  chevron: { color: "#fff", fontSize: 20, fontWeight: "900", marginLeft: 8 },
   unitTitle: { color: "#fff", fontWeight: "900", fontSize: 17 },
   unitSubtitle: { color: "rgba(255,255,255,0.85)", marginTop: 2 },
   nodes: { alignItems: "center", paddingVertical: theme.spacing(2), gap: theme.spacing(2) },

@@ -12,6 +12,7 @@ import Svg, { Path } from "react-native-svg";
 
 import { Button } from "@/components/ui";
 import { getCourse } from "@/curriculum";
+import { learnedWordsFor } from "@/lib/learned";
 import { speak } from "@/lib/speech";
 import { useNav } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
@@ -25,14 +26,14 @@ interface Glyph {
 export function TraceScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
-  const { state, learnedWords, traceCount, recordTrace } = useProgress();
+  const { state, isCompleted, traceCount, recordTrace } = useProgress();
   const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
 
   // Build the practice set. For Chinese, practice individual characters; for
   // other scripts, whole words. Prefer words the learner has seen.
   const glyphs = useMemo<Glyph[]>(() => {
     if (!course) return [];
-    const learned = learnedWords(course.code);
+    const learned = learnedWordsFor(course, isCompleted);
     const source =
       learned.length > 0
         ? learned
@@ -53,7 +54,7 @@ export function TraceScreen() {
       }
     }
     return out;
-  }, [course, learnedWords]);
+  }, [course, isCompleted]);
 
   const [idx, setIdx] = useState(0);
   // null = follow auto-fade (guide shows while the character is new, then hides

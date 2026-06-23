@@ -4,6 +4,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Button, ProgressBar } from "@/components/ui";
 import { getCourse } from "@/curriculum";
+import { learnedWordsFor } from "@/lib/learned";
 import { shuffle } from "@/lesson/engine";
 import { playSfx } from "@/lib/sfx";
 import { speak } from "@/lib/speech";
@@ -22,17 +23,17 @@ interface W {
 export function GameScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
-  const { state, learnedWords } = useProgress();
+  const { state, isCompleted } = useProgress();
   const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
 
   const pool = useMemo<W[]>(() => {
     if (!course) return [];
-    const learned = learnedWords(course.code);
+    const learned = learnedWordsFor(course, isCompleted);
     if (learned.length >= ROUND * 2) return learned.map((w) => ({ target: w.target, en: w.en }));
     const all: W[] = [];
     for (const s of course.sections) for (const u of s.units) for (const v of u.vocab ?? []) all.push({ target: v.target, en: v.en });
     return all;
-  }, [course, learnedWords]);
+  }, [course, isCompleted]);
 
   const [round, setRound] = useState<W[]>([]);
   const [leftOrder, setLeftOrder] = useState<number[]>([]);

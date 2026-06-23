@@ -4,6 +4,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Button } from "@/components/ui";
 import { getCourse } from "@/curriculum";
+import { learnedWordsFor } from "@/lib/learned";
 import { speak } from "@/lib/speech";
 import { useNav } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
@@ -12,13 +13,13 @@ import { theme } from "@/theme";
 export function WordsScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
-  const { state, learnedWords } = useProgress();
+  const { state, isCompleted } = useProgress();
   const [q, setQ] = useState("");
 
   const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
   const words = useMemo(
-    () => (course ? learnedWords(course.code) : []),
-    [course, learnedWords],
+    () => (course ? learnedWordsFor(course, isCompleted) : []),
+    [course, isCompleted],
   );
 
   const filtered = q

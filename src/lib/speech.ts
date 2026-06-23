@@ -6,25 +6,84 @@ import Tts from "react-native-tts";
 let currentLocale: string | undefined;
 let initialized = false;
 
+type Voice = {
+  id: string;
+  language: string;
+  quality?: number | string;
+  notInstalled?: boolean;
+  networkConnectionRequired?: boolean;
+};
+let voices: Voice[] = [];
+let voicesLoaded = false;
+const chosenVoice: Record<string, string> = {}; // locale -> voice id
+
 function ensureInit(): void {
   if (initialized) return;
   initialized = true;
   try {
-    // iOS respects the ring/silent switch for TTS by default, which is the most
-    // common reason "no sound" happens. Route audio to playback so lessons are
-    // audible even when the phone is on silent.
     if (Platform.OS === "ios" && typeof (Tts as any).setIgnoreSilentSwitch === "function") {
       (Tts as any).setIgnoreSilentSwitch("ignore");
     }
-    // A slightly slower rate is clearer for learners.
     Tts.setDefaultRate(0.48);
   } catch {
     // no-op
   }
 }
 
-export function setSpeechLocale(locale?: string): void {
+async function loadVoices(): Promise<void> {
+  if (voicesLoaded) return;
+  voicesLoaded = true;
+  try {
+    voices = (await Tts.voices()) as unknown as Voice[];
+  } catch {
+    voices = [];
+  }
+}
+
+function qualityScore(v: Voice): number {
+  const q = v.quality;
+  if (typeof q === "number") return q; // iOS: 300 default, 500 enhanced/premium
+  const s = String(q).toLowerCase();
+  if (s.includes("premium")) return 600;
+  if (s.includes("enhanced")) return 500;
+  return 300;
+}
+
+/** Pick the most natural installed voice for a locale (prefers enhanced/premium). */
+function bestVoiceFor(locale: string): string | undefined {
+  const lang = locale.toLowerCase();
+  const prefix = lang.split("-")[0];
+  const cands = voices.filter((v) => {
+    if (v.notInstalled) return false;
+    const vl = String(v.language).toLowerCase();
+    return vl === lang || vl.startsWith(prefix + "-") || vl === prefix;
+  });
+  if (!cands.length) return undefined;
+  cands.sort((a, b) => qualityScore(b) - qualityScore(a));
+  return cands[0].id;
+}
+
+export async function setSpeechLocale(locale?: string): Promise<void> {
   currentLocale = locale;
+  if (!locale) return;
+  ensureInit();
+  await loadVoices();
+  if (!chosenVoice[locale]) {
+    const id = bestVoiceFor(locale);
+    if (id) chosenVoice[locale] = id;
+  }
+  // Switch the engine to this language's voice immediately so a previous
+  // language's voice never bleeds into the new one.
+  try {
+    if (chosenVoice[locale]) await Tts.setDefaultVoice(chosenVoice[locale]);
+  } catch {
+    // some engines reject setDefaultVoice; language fallback below still applies
+  }
+  try {
+    await Tts.setDefaultLanguage(locale);
+  } catch {
+    // no-op
+  }
 }
 
 export function getSpeechLocale(): string {
@@ -32,36 +91,22 @@ export function getSpeechLocale(): string {
 }
 
 /**
- * Thin wrapper over react-native-tts so screens can just call `speak(text)`.
- * Failures (e.g. no TTS engine on the device) are swallowed — listening is a
- * nice-to-have, not something that should crash a lesson.
+ * Speak text in the active locale's voice. Sets the voice/language on every call
+ * so rapidly switching languages can't leave a stale voice selected.
  */
 export function speak(text: string, languageTag?: string): void {
   ensureInit();
   const locale = languageTag ?? currentLocale;
-  // Word-bank answers are space-separated for the tile UI; spoken Chinese should
-  // have no spaces so the engine reads it naturally.
   const spoken = locale?.startsWith("zh") ? text.replace(/\s+/g, "") : text;
-
-  const run = () => {
-    try {
-      Tts.stop();
-      if (locale) {
-        // Best-effort; ignored if the device lacks a voice for this language.
-        Tts.setDefaultLanguage(locale).catch(() => {});
-      }
-      Tts.speak(spoken);
-    } catch {
-      // no-op
-    }
-  };
-
-  // Wait for the engine to be ready (resolves immediately if already inited).
   try {
-    const status = Tts.getInitStatus?.();
-    if (status && typeof status.then === "function") status.then(run).catch(run);
-    else run();
+    Tts.stop();
+    if (locale) {
+      const vid = chosenVoice[locale];
+      if (vid) Tts.setDefaultVoice(vid).catch(() => {});
+      Tts.setDefaultLanguage(locale).catch(() => {});
+    }
+    Tts.speak(spoken);
   } catch {
-    run();
+    // no-op
   }
 }
