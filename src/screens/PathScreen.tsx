@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
+import { Mascot } from "@/components/Mascot";
 import { ProgressBar } from "@/components/ui";
 import { getCourse } from "@/curriculum";
 import { flattenCourse, type PathNode } from "@/curriculum/types";
@@ -70,6 +71,19 @@ export function PathScreen() {
       </View>
 
       <ScrollView contentContainerStyle={{ paddingBottom: insets.bottom + 30 }}>
+        <View style={styles.greeting}>
+          <Mascot size={52} />
+          <View style={styles.bubble}>
+            <Text style={styles.bubbleText}>
+              {xpToday >= state.dailyGoal && state.dailyGoal > 0
+                ? "Goal smashed today! 🎉"
+                : currentStreak > 0
+                  ? `Keep your ${currentStreak}-day streak alive!`
+                  : "Ready to learn? Let's go!"}
+            </Text>
+          </View>
+        </View>
+
         {!cp?.placed ? (
           <Pressable style={styles.placementBanner} onPress={() => nav.navigate("placement", { courseCode: course.code })}>
             <Text style={styles.placementTitle}>📊  Already know some {course.name}?</Text>
@@ -191,6 +205,22 @@ const styles = StyleSheet.create({
   headerStatText: { color: theme.colors.text, fontWeight: "800", fontSize: 16 },
   goal: { paddingHorizontal: theme.spacing(2), paddingBottom: 12, gap: 6 },
   goalLabel: { color: theme.colors.textMuted, fontWeight: "700", fontSize: 13 },
+  greeting: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+    paddingHorizontal: theme.spacing(2),
+    paddingTop: theme.spacing(1),
+  },
+  bubble: {
+    flex: 1,
+    backgroundColor: theme.colors.surface,
+    borderWidth: 1,
+    borderColor: theme.colors.border,
+    borderRadius: theme.radius.lg,
+    padding: theme.spacing(1.5),
+  },
+  bubbleText: { color: theme.colors.text, fontWeight: "700" },
   placementBanner: {
     margin: theme.spacing(2),
     padding: theme.spacing(2),

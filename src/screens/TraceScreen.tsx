@@ -25,7 +25,7 @@ interface Glyph {
 export function TraceScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
-  const { state, learnedWords } = useProgress();
+  const { state, learnedWords, traceCount, recordTrace } = useProgress();
   const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
 
   // Build the practice set. For Chinese, practice individual characters; for
@@ -56,7 +56,9 @@ export function TraceScreen() {
   }, [course, learnedWords]);
 
   const [idx, setIdx] = useState(0);
-  const [showGuide, setShowGuide] = useState(true);
+  // null = follow auto-fade (guide shows while the character is new, then hides
+  // on recaps); true/false = user override for the current glyph.
+  const [overrideGuide, setOverrideGuide] = useState<boolean | null>(null);
   const [size, setSize] = useState(0);
   const strokes = useRef<string[]>([]);
   const cur = useRef<string>("");
@@ -91,7 +93,10 @@ export function TraceScreen() {
   }
   function go(delta: number) {
     if (!glyphs.length) return;
+    // Count the rep just practiced so the guide fades over time.
+    if (course) recordTrace(course.code, glyphs[idx].char);
     setIdx((i) => (i + delta + glyphs.length) % glyphs.length);
+    setOverrideGuide(null);
     reset();
   }
 
@@ -107,6 +112,10 @@ export function TraceScreen() {
   }
 
   const glyph = glyphs[idx];
+  const level = traceCount(course.code, glyph.char);
+  const autoShow = level < 3; // show the guide for the first few reps, then hide
+  const showGuide = overrideGuide ?? autoShow;
+  const guideOpacity = level <= 0 ? 0.55 : level === 1 ? 0.42 : level === 2 ? 0.3 : 0.22;
   const allStrokes = cur.current ? [...strokes.current, cur.current] : strokes.current;
 
   return (
@@ -116,6 +125,7 @@ export function TraceScreen() {
           <Text style={styles.title}>Practice writing</Text>
           <Text style={styles.subtitle}>
             {idx + 1} / {glyphs.length} · {glyph.hint ?? ""}
+            {level >= 3 ? " · recap" : level > 0 ? " · guide fading" : ""}
           </Text>
         </View>
         <Button label="Done" variant="ghost" onPress={nav.goBack} />
@@ -128,7 +138,7 @@ export function TraceScreen() {
           {...pan.panHandlers}
         >
           {showGuide ? (
-            <Text style={[styles.guide, { fontSize: size * 0.72, lineHeight: size }]}>
+            <Text style={[styles.guide, { fontSize: size * 0.72, lineHeight: size, opacity: guideOpacity }]}>
               {glyph.char}
             </Text>
           ) : null}
@@ -154,7 +164,7 @@ export function TraceScreen() {
         <Pressable onPress={() => speak(glyph.char)} style={styles.ctrl}>
           <Text style={styles.ctrlText}>🔊 Hear</Text>
         </Pressable>
-        <Pressable onPress={() => setShowGuide((g) => !g)} style={styles.ctrl}>
+        <Pressable onPress={() => setOverrideGuide(!showGuide)} style={styles.ctrl}>
           <Text style={styles.ctrlText}>{showGuide ? "🙈 Hide guide" : "👁 Show guide"}</Text>
         </Pressable>
         <Pressable onPress={reset} style={styles.ctrl}>

@@ -35,22 +35,32 @@ interface Persisted {
   byCourse: Record<string, CourseProgress>;
   /** course code -> (target word -> learned word) */
   learnedVocab: Record<string, Record<string, LearnedWord>>;
+  /** date (YYYY-M-D) -> XP earned that day */
+  xpHistory: Record<string, number>;
+  /** course code -> (glyph -> times practiced in tracing) */
+  tracePractice: Record<string, Record<string, number>>;
   xp: number;
   streak: number;
   lastActiveDay?: string;
   dailyGoal: number;
   xpToday: number;
   xpTodayDay?: string;
+  reminderEnabled: boolean;
+  reminderHour: number;
   settings: Settings;
 }
 
 const DEFAULT: Persisted = {
   byCourse: {},
   learnedVocab: {},
+  xpHistory: {},
+  tracePractice: {},
   xp: 0,
   streak: 0,
   dailyGoal: 30,
   xpToday: 0,
+  reminderEnabled: false,
+  reminderHour: 19,
   settings: { apiKey: "", model: "claude-opus-4-8" },
 };
 
@@ -80,8 +90,13 @@ interface ProgressContextValue {
     learned?: LearnedWord[],
   ) => void;
   learnedWords: (code: string) => LearnedWord[];
+  /** XP for each of the last 7 days, oldest first. */
+  weeklyXp: () => { label: string; xp: number; today: boolean }[];
+  traceCount: (code: string, glyph: string) => number;
+  recordTrace: (code: string, glyph: string) => void;
   applyPlacement: (code: string, completedLessonIds: string[]) => void;
   setDailyGoal: (goal: number) => void;
+  setReminder: (enabled: boolean, hour: number) => void;
   setSettings: (partial: Partial<Settings>) => void;
   resetCourse: (code: string) => void;
 }
@@ -103,6 +118,8 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
             ...parsed,
             byCourse: parsed.byCourse ?? {},
             learnedVocab: parsed.learnedVocab ?? {},
+            xpHistory: parsed.xpHistory ?? {},
+            tracePractice: parsed.tracePractice ?? {},
             settings: { ...DEFAULT.settings, ...(parsed.settings ?? {}) },
           });
         }
@@ -138,6 +155,29 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
       courseProgress,
       isCompleted: (code, lessonId) => !!courseProgress(code).completed[lessonId],
       learnedWords: (code) => Object.values(state.learnedVocab[code] ?? {}),
+      weeklyXp: () => {
+        const labels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        const out: { label: string; xp: number; today: boolean }[] = [];
+        for (let i = 6; i >= 0; i--) {
+          const d = new Date();
+          d.setDate(d.getDate() - i);
+          out.push({
+            label: labels[d.getDay()],
+            xp: state.xpHistory[dayStr(d)] ?? 0,
+            today: i === 0,
+          });
+        }
+        return out;
+      },
+      traceCount: (code, glyph) => state.tracePractice[code]?.[glyph] ?? 0,
+      recordTrace: (code, glyph) => {
+        const courseTrace = { ...(state.tracePractice[code] ?? {}) };
+        courseTrace[glyph] = (courseTrace[glyph] ?? 0) + 1;
+        persist({
+          ...state,
+          tracePractice: { ...state.tracePractice, [code]: courseTrace },
+        });
+      },
       setCurrentCourse: (code) => persist({ ...state, currentCourse: code }),
       completeLesson: (code, lessonId, xpEarned, learned) => {
         const cp = courseProgress(code);
@@ -160,6 +200,10 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
             [code]: { ...cp, completed: { ...cp.completed, [lessonId]: true } },
           },
           learnedVocab: { ...state.learnedVocab, [code]: courseWords },
+          xpHistory: {
+            ...state.xpHistory,
+            [today2]: (state.xpHistory[today2] ?? 0) + xpEarned,
+          },
           xp: state.xp + xpEarned,
           streak,
           lastActiveDay,
@@ -177,6 +221,8 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
         });
       },
       setDailyGoal: (goal) => persist({ ...state, dailyGoal: goal }),
+      setReminder: (enabled, hour) =>
+        persist({ ...state, reminderEnabled: enabled, reminderHour: hour }),
       setSettings: (partial) =>
         persist({ ...state, settings: { ...state.settings, ...partial } }),
       resetCourse: (code) =>

@@ -2,19 +2,44 @@ import { useState } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { Button, Card } from "@/components/ui";
+import { Button, Card, Chip } from "@/components/ui";
 import { getCourse } from "@/curriculum";
+import { cancelReminders, scheduleDailyReminder } from "@/lib/reminders";
 import { useNav } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
 import { theme } from "@/theme";
 
+const TIMES = [8, 12, 17, 20];
+const fmtHour = (h: number) =>
+  h === 12 ? "12 PM" : h > 12 ? `${h - 12} PM` : `${h} AM`;
+
 export function SettingsScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
-  const { state, resetCourse } = useProgress();
+  const { state, resetCourse, setReminder } = useProgress();
   const [confirm, setConfirm] = useState(false);
+  const [reminderMsg, setReminderMsg] = useState<string | null>(null);
 
   const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
+
+  async function toggleReminder() {
+    if (state.reminderEnabled) {
+      await cancelReminders();
+      setReminder(false, state.reminderHour);
+      setReminderMsg(null);
+    } else {
+      const ok = await scheduleDailyReminder(state.reminderHour);
+      setReminder(ok, state.reminderHour);
+      setReminderMsg(
+        ok ? null : "Couldn't enable — allow notifications for BlahBlah in iOS Settings.",
+      );
+    }
+  }
+
+  async function pickHour(hour: number) {
+    setReminder(state.reminderEnabled, hour);
+    if (state.reminderEnabled) await scheduleDailyReminder(hour);
+  }
 
   return (
     <View style={styles.root}>
@@ -24,6 +49,31 @@ export function SettingsScreen() {
       </View>
 
       <ScrollView contentContainerStyle={{ padding: theme.spacing(2), gap: theme.spacing(2) }}>
+        <Card>
+          <Text style={styles.cardTitle}>Daily reminder</Text>
+          <Text style={styles.cardSub}>
+            Get a nudge to practice every day and keep your streak going.
+          </Text>
+          <Button
+            label={state.reminderEnabled ? "Reminder on ✓ — tap to turn off" : "Turn on daily reminder"}
+            variant={state.reminderEnabled ? "primary" : "ghost"}
+            onPress={toggleReminder}
+            style={{ marginTop: theme.spacing(2) }}
+          />
+          <Text style={[styles.cardSub, { marginTop: theme.spacing(2) }]}>Remind me at</Text>
+          <View style={{ flexDirection: "row", flexWrap: "wrap", marginTop: 8 }}>
+            {TIMES.map((h) => (
+              <Chip
+                key={h}
+                label={fmtHour(h)}
+                active={state.reminderHour === h}
+                onPress={() => pickHour(h)}
+              />
+            ))}
+          </View>
+          {reminderMsg ? <Text style={styles.warn}>{reminderMsg}</Text> : null}
+        </Card>
+
         <Card>
           <Text style={styles.cardTitle}>Reset course progress</Text>
           <Text style={styles.cardSub}>
@@ -81,4 +131,5 @@ const styles = StyleSheet.create({
   title: { color: theme.colors.text, fontSize: 24, fontWeight: "900" },
   cardTitle: { color: theme.colors.text, fontSize: 18, fontWeight: "800" },
   cardSub: { color: theme.colors.textMuted, marginTop: 6, lineHeight: 20 },
+  warn: { color: theme.colors.gold, marginTop: 10, fontWeight: "600" },
 });
