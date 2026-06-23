@@ -12,6 +12,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Mascot } from "@/components/Mascot";
 import { ProgressBar } from "@/components/ui";
 import { getCourse } from "@/curriculum";
+import { dueWords } from "@/lib/srs";
 import { flattenCourse, type PathNode } from "@/curriculum/types";
 import { useNav } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
@@ -20,7 +21,7 @@ import { theme } from "@/theme";
 export function PathScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
-  const { state, courseProgress, currentStreak, xpToday } = useProgress();
+  const { state, courseProgress, currentStreak, xpToday, isCompleted } = useProgress();
 
   const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
   const cp = course ? courseProgress(course.code) : undefined;
@@ -31,6 +32,11 @@ export function PathScreen() {
     const idx = nodes.findIndex((n) => !completed[n.lesson.id]);
     return idx === -1 ? nodes.length : idx;
   }, [nodes, completed]);
+
+  const dueCount = useMemo(
+    () => (course ? dueWords(course, isCompleted, state.wordStats[course.code] ?? {}).length : 0),
+    [course, isCompleted, state.wordStats],
+  );
 
   const scrollRef = useRef<ScrollView>(null);
   const scrolledRef = useRef(false);
@@ -100,6 +106,13 @@ export function PathScreen() {
             </Text>
           </View>
         </View>
+
+        {dueCount > 0 ? (
+          <Pressable style={styles.dueBanner} onPress={() => nav.navigate("review")}>
+            <Text style={styles.dueTitle}>🧠  {dueCount} word{dueCount === 1 ? "" : "s"} due for review</Text>
+            <Text style={styles.dueSub}>Spaced repetition keeps them in long-term memory →</Text>
+          </Pressable>
+        ) : null}
 
         {!cp?.placed ? (
           <Pressable style={styles.placementBanner} onPress={() => nav.navigate("placement", { courseCode: course.code })}>
@@ -270,6 +283,17 @@ const styles = StyleSheet.create({
   },
   placementTitle: { color: theme.colors.text, fontWeight: "800", fontSize: 16 },
   placementSub: { color: theme.colors.textMuted, marginTop: 4 },
+  dueBanner: {
+    margin: theme.spacing(2),
+    marginBottom: 0,
+    padding: theme.spacing(2),
+    borderRadius: theme.radius.lg,
+    backgroundColor: "#2A2418",
+    borderWidth: 1,
+    borderColor: theme.colors.gold,
+  },
+  dueTitle: { color: theme.colors.gold, fontWeight: "800", fontSize: 16 },
+  dueSub: { color: theme.colors.textMuted, marginTop: 4 },
   sectionTitle: {
     color: theme.colors.textMuted,
     fontWeight: "900",

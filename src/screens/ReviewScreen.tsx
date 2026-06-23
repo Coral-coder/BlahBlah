@@ -14,6 +14,7 @@ import { Button, ProgressBar } from "@/components/ui";
 import { getCourse } from "@/curriculum";
 import { normalize, shuffle } from "@/lesson/engine";
 import { learnedWordsFor, type LearnedWord } from "@/lib/learned";
+import { isDue } from "@/lib/srs";
 import { playSfx } from "@/lib/sfx";
 import { setSpeechLocale, speak } from "@/lib/speech";
 import { useNav, useRoute } from "@/navigation";
@@ -46,13 +47,13 @@ export function ReviewScreen() {
       pool = words.filter((w) => (stats[w.target]?.w ?? 0) > 0);
       if (pool.length === 0) return [];
     }
-    // weakest first: lower (correct - wrong) and least-recently seen
+    // due first, then weakest (lower correct-wrong), then least-recently seen
     const scored = pool
       .map((w) => {
         const s = stats[w.target];
-        return { w, score: s ? s.c - s.w : 0, t: s ? s.t : 0 };
+        return { w, due: isDue(s) ? 0 : 1, score: s ? s.c - s.w : 0, t: s ? s.t : 0 };
       })
-      .sort((a, b) => a.score - b.score || a.t - b.t);
+      .sort((a, b) => a.due - b.due || a.score - b.score || a.t - b.t);
     const chosen = scored.slice(0, SESSION).map((x) => x.w);
     return shuffle(chosen).map((word, i) => {
       if (i % 2 === 0) return { word, mode: "type" as const };

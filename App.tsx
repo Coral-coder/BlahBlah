@@ -14,6 +14,7 @@ import { PlacementScreen } from "@/screens/PlacementScreen";
 import { ProfileScreen } from "@/screens/ProfileScreen";
 import { DictationScreen } from "@/screens/DictationScreen";
 import { ReviewScreen } from "@/screens/ReviewScreen";
+import { RoleplayScreen } from "@/screens/RoleplayScreen";
 import { TipsScreen } from "@/screens/TipsScreen";
 import { SettingsScreen } from "@/screens/SettingsScreen";
 import { StoriesListScreen } from "@/screens/StoriesListScreen";
@@ -96,6 +97,8 @@ function Router() {
       return <TipsScreen />;
     case "dictation":
       return <DictationScreen />;
+    case "roleplay":
+      return <RoleplayScreen />;
     default:
       return <Shell />;
   }

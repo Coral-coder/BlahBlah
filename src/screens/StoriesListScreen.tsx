@@ -4,13 +4,15 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Button } from "@/components/ui";
 import { getCourse } from "@/curriculum";
 import { getStories } from "@/stories";
-import { useNav } from "@/navigation";
+import { useNav, useRoute } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
 import { theme } from "@/theme";
 
 export function StoriesListScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
+  const { mode } = useRoute<{ mode?: "roleplay" }>();
+  const roleplay = mode === "roleplay";
   const { state, isCompleted } = useProgress();
   const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
   const stories = course ? getStories(course.code) : [];
@@ -19,8 +21,10 @@ export function StoriesListScreen() {
     <View style={styles.root}>
       <View style={[styles.top, { paddingTop: insets.top + 12 }]}>
         <View>
-          <Text style={styles.title}>Stories</Text>
-          <Text style={styles.subtitle}>Read & listen to short {course?.name} tales</Text>
+          <Text style={styles.title}>{roleplay ? "Role-play" : "Stories"}</Text>
+          <Text style={styles.subtitle}>
+            {roleplay ? `Act out a ${course?.name} dialogue aloud` : `Read & listen to short ${course?.name} tales`}
+          </Text>
         </View>
         <Button label="Done" variant="ghost" onPress={nav.goBack} />
       </View>
@@ -38,7 +42,7 @@ export function StoriesListScreen() {
               <Pressable
                 key={s.id}
                 style={styles.card}
-                onPress={() => nav.navigate("story", { storyId: s.id })}
+                onPress={() => nav.navigate(roleplay ? "roleplay" : "story", { storyId: s.id })}
               >
                 <Text style={{ fontSize: 40 }}>{s.emoji}</Text>
                 <View style={{ flex: 1 }}>

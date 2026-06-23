@@ -141,6 +141,12 @@ export function ProfileScreen() {
             style={{ marginTop: theme.spacing(1.5) }}
           />
           <Button
+            label="🎭  Role-play (speak a scene)"
+            variant="ghost"
+            onPress={() => nav.navigate("stories", { mode: "roleplay" })}
+            style={{ marginTop: theme.spacing(1) }}
+          />
+          <Button
             label="🎬  Watch"
             variant="ghost"
             onPress={() => nav.navigate("watch")}
