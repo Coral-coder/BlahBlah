@@ -111,6 +111,12 @@ export function ProfileScreen() {
         <Card>
           <Text style={styles.cardTitle}>Practice & play</Text>
           <Button
+            label="🧠  Review (recall your weak words)"
+            variant="ghost"
+            onPress={() => nav.navigate("review")}
+            style={{ marginTop: theme.spacing(1.5) }}
+          />
+          <Button
             label="📚  Stories"
             variant="ghost"
             onPress={() => nav.navigate("stories")}

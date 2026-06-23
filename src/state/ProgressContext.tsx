@@ -39,6 +39,8 @@ interface Persisted {
   xpHistory: Record<string, number>;
   /** course code -> (glyph -> times practiced in tracing) */
   tracePractice: Record<string, Record<string, number>>;
+  /** course code -> (word target -> recall stats) for spaced review */
+  wordStats: Record<string, Record<string, { c: number; w: number; t: number }>>;
   xp: number;
   streak: number;
   lastActiveDay?: string;
@@ -55,6 +57,7 @@ const DEFAULT: Persisted = {
   learnedVocab: {},
   xpHistory: {},
   tracePractice: {},
+  wordStats: {},
   xp: 0,
   streak: 0,
   dailyGoal: 30,
@@ -94,6 +97,7 @@ interface ProgressContextValue {
   weeklyXp: () => { label: string; xp: number; today: boolean }[];
   traceCount: (code: string, glyph: string) => number;
   recordTrace: (code: string, glyph: string) => void;
+  recordWordResult: (code: string, target: string, correct: boolean) => void;
   applyPlacement: (code: string, completedLessonIds: string[]) => void;
   setDailyGoal: (goal: number) => void;
   setReminder: (enabled: boolean, hour: number) => void;
@@ -120,6 +124,7 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
             learnedVocab: parsed.learnedVocab ?? {},
             xpHistory: parsed.xpHistory ?? {},
             tracePractice: parsed.tracePractice ?? {},
+            wordStats: parsed.wordStats ?? {},
             settings: { ...DEFAULT.settings, ...(parsed.settings ?? {}) },
           });
         }
@@ -177,6 +182,16 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
           ...state,
           tracePractice: { ...state.tracePractice, [code]: courseTrace },
         });
+      },
+      recordWordResult: (code, target, correct) => {
+        const cs = { ...(state.wordStats[code] ?? {}) };
+        const prev = cs[target] ?? { c: 0, w: 0, t: 0 };
+        cs[target] = {
+          c: prev.c + (correct ? 1 : 0),
+          w: prev.w + (correct ? 0 : 1),
+          t: Date.now(),
+        };
+        persist({ ...state, wordStats: { ...state.wordStats, [code]: cs } });
       },
       setCurrentCourse: (code) => persist({ ...state, currentCourse: code }),
       completeLesson: (code, lessonId, xpEarned, learned) => {
