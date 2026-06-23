@@ -1,0 +1,16 @@
+👑 Crown / Mastery Levels — what's new
+
+Replay any lesson you've already finished and it now levels up! Each lesson can reach 5 crowns, and your completed nodes on the path show 1–5 little crown pips. Your total crowns appear up in the header next to your XP and gems.
+
+WHAT TO TEST
+• Finish a lesson, then go back into the same (✓) lesson on the path and complete it again — watch the crown pips fill in.
+• Check the header: a 👑 total should appear once you've earned any crowns.
+
+ALSO LANDED RECENTLY (please poke at these too)
+• Tap-to-translate: in any lesson, TAP a dotted word (in the sentence / "say it" prompt) or HOLD a word tile / answer option to see its meaning and hear it. There's a tip line at the top of every lesson.
+• Daily Quests: 3 rotating challenges per day on the Profile tab — earn 💎 gems and tap Claim.
+• Streak Freeze: buy with 💎 50 in Profile → Power-ups; it protects your streak if you miss a day.
+• Achievements: tap 🏅 Achievements on the Profile tab to see milestone badges and progress.
+• Polish: bouncier buttons, animated progress bars, a pulsing "current" lesson, and smoother screen transitions.
+
+Tip: if something looks stale, fully close and reopen the app.

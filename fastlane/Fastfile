@@ -99,9 +99,15 @@ platform :ios do
       }
     )
 
+    # "What to Test" notes for this build, authored in the repo so every ship
+    # carries a narrative for the tester. Optional — absent file = no changelog.
+    notes_path = File.expand_path("testflight_notes.txt", __dir__)
+    changelog = File.exist?(notes_path) ? File.read(notes_path).strip : nil
+
     upload_to_testflight(
       api_key: api_key,
       app_identifier: APP_IDENTIFIER,
+      changelog: changelog,
       skip_waiting_for_build_processing: true
     )
   end
