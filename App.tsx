@@ -3,12 +3,15 @@ import { ActivityIndicator, Pressable, StatusBar, StyleSheet, Text, View } from 
 import { SafeAreaProvider, useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { CourseSelectScreen } from "@/screens/CourseSelectScreen";
+import { GameScreen } from "@/screens/GameScreen";
 import { LessonCompleteScreen } from "@/screens/LessonCompleteScreen";
 import { LessonScreen } from "@/screens/LessonScreen";
 import { PathScreen } from "@/screens/PathScreen";
 import { PlacementScreen } from "@/screens/PlacementScreen";
 import { ProfileScreen } from "@/screens/ProfileScreen";
 import { SettingsScreen } from "@/screens/SettingsScreen";
+import { TraceScreen } from "@/screens/TraceScreen";
+import { WordsScreen } from "@/screens/WordsScreen";
 import { NavProvider, useNav } from "@/navigation";
 import { ProgressProvider, useProgress } from "@/state/ProgressContext";
 import { theme } from "@/theme";
@@ -63,6 +66,12 @@ function Router() {
       return <LessonCompleteScreen />;
     case "settings":
       return <SettingsScreen />;
+    case "words":
+      return <WordsScreen />;
+    case "trace":
+      return <TraceScreen />;
+    case "game":
+      return <GameScreen />;
     default:
       return <Shell />;
   }
@@ -73,8 +82,9 @@ function Root() {
   if (!ready) {
     return (
       <View style={styles.splash}>
-        <Text style={styles.logo}>BlahBlah</Text>
-        <ActivityIndicator color={theme.colors.primary} style={{ marginTop: 16 }} />
+        <Text style={styles.logo}>blah blah</Text>
+        <Text style={styles.tagline}>better than Duolingo</Text>
+        <ActivityIndicator color={theme.colors.primary} style={{ marginTop: 24 }} />
       </View>
     );
   }
@@ -107,5 +117,6 @@ const styles = StyleSheet.create({
   tab: { flex: 1, alignItems: "center", gap: 2 },
   tabLabel: { fontSize: 12, fontWeight: "700" },
   splash: { flex: 1, backgroundColor: theme.colors.bg, alignItems: "center", justifyContent: "center" },
-  logo: { color: theme.colors.text, fontSize: 32, fontWeight: "900" },
+  logo: { color: theme.colors.text, fontSize: 52, fontWeight: "900", letterSpacing: -1 },
+  tagline: { color: theme.colors.success, fontSize: 18, fontWeight: "800", marginTop: 8 },
 });

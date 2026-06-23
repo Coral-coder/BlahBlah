@@ -107,6 +107,8 @@ export interface Lesson {
   id: string;
   title: string;
   exercises: Exercise[];
+  /** New vocabulary introduced by this lesson (for the "words I know" list). */
+  vocab?: { target: string; en: string; pinyin?: string }[];
 }
 
 export interface Unit {
@@ -120,6 +122,8 @@ export interface Unit {
   /** Emoji shown on the unit header. */
   icon: string;
   lessons: Lesson[];
+  /** Full vocabulary for this unit (for the words list + tracing practice). */
+  vocab?: { target: string; en: string; pinyin?: string }[];
 }
 
 export interface Section {

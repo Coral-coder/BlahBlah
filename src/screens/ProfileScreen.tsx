@@ -79,6 +79,28 @@ export function ProfileScreen() {
           </Card>
         ) : null}
 
+        <Card>
+          <Text style={styles.cardTitle}>Practice & play</Text>
+          <Button
+            label="📖  Words you know"
+            variant="ghost"
+            onPress={() => nav.navigate("words")}
+            style={{ marginTop: theme.spacing(1.5) }}
+          />
+          <Button
+            label="⚡  Match Blitz"
+            variant="ghost"
+            onPress={() => nav.navigate("game")}
+            style={{ marginTop: theme.spacing(1) }}
+          />
+          <Button
+            label="✍️  Practice writing"
+            variant="ghost"
+            onPress={() => nav.navigate("trace")}
+            style={{ marginTop: theme.spacing(1) }}
+          />
+        </Card>
+
         <Button label="Settings" variant="ghost" onPress={() => nav.navigate("settings")} />
       </ScrollView>
     </View>

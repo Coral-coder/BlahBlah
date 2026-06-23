@@ -249,7 +249,12 @@ function introLesson(
   });
   // a little spaced review of older words
   sample(known, 2, r).forEach((w) => ex.push(mkSelect(w, known, r)));
-  return { id, title: "New words", exercises: ex.slice(0, 8) };
+  return {
+    id,
+    title: "New words",
+    exercises: ex.slice(0, 8),
+    vocab: batch.map((v) => ({ target: v.target, en: v.en, pinyin: v.pinyin })),
+  };
 }
 
 function reviewLesson(
@@ -310,6 +315,7 @@ function buildUnit(bp: UnitBlueprint): Unit {
     color: bp.color,
     icon: bp.icon,
     lessons,
+    vocab: vocab.map((v) => ({ target: v.target, en: v.en, pinyin: v.pinyin })),
   };
 }
 

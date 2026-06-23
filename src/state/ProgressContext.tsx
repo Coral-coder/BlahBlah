@@ -24,9 +24,17 @@ export interface Settings {
   model: ModelId;
 }
 
+export interface LearnedWord {
+  target: string;
+  en: string;
+  pinyin?: string;
+}
+
 interface Persisted {
   currentCourse?: string;
   byCourse: Record<string, CourseProgress>;
+  /** course code -> (target word -> learned word) */
+  learnedVocab: Record<string, Record<string, LearnedWord>>;
   xp: number;
   streak: number;
   lastActiveDay?: string;
@@ -38,6 +46,7 @@ interface Persisted {
 
 const DEFAULT: Persisted = {
   byCourse: {},
+  learnedVocab: {},
   xp: 0,
   streak: 0,
   dailyGoal: 30,
@@ -64,7 +73,13 @@ interface ProgressContextValue {
   setCurrentCourse: (code: string) => void;
   courseProgress: (code: string) => CourseProgress;
   isCompleted: (code: string, lessonId: string) => boolean;
-  completeLesson: (code: string, lessonId: string, xpEarned: number) => void;
+  completeLesson: (
+    code: string,
+    lessonId: string,
+    xpEarned: number,
+    learned?: LearnedWord[],
+  ) => void;
+  learnedWords: (code: string) => LearnedWord[];
   applyPlacement: (code: string, completedLessonIds: string[]) => void;
   setDailyGoal: (goal: number) => void;
   setSettings: (partial: Partial<Settings>) => void;
@@ -87,6 +102,7 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
             ...DEFAULT,
             ...parsed,
             byCourse: parsed.byCourse ?? {},
+            learnedVocab: parsed.learnedVocab ?? {},
             settings: { ...DEFAULT.settings, ...(parsed.settings ?? {}) },
           });
         }
@@ -121,8 +137,9 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
       xpToday,
       courseProgress,
       isCompleted: (code, lessonId) => !!courseProgress(code).completed[lessonId],
+      learnedWords: (code) => Object.values(state.learnedVocab[code] ?? {}),
       setCurrentCourse: (code) => persist({ ...state, currentCourse: code }),
-      completeLesson: (code, lessonId, xpEarned) => {
+      completeLesson: (code, lessonId, xpEarned, learned) => {
         const cp = courseProgress(code);
         const today2 = dayStr(new Date());
         let streak = state.streak;
@@ -132,12 +149,17 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
           lastActiveDay = today2;
         }
         const baseToday = state.xpTodayDay === today2 ? state.xpToday : 0;
+        const courseWords = { ...(state.learnedVocab[code] ?? {}) };
+        (learned ?? []).forEach((w) => {
+          courseWords[w.target] = { target: w.target, en: w.en, pinyin: w.pinyin };
+        });
         persist({
           ...state,
           byCourse: {
             ...state.byCourse,
             [code]: { ...cp, completed: { ...cp.completed, [lessonId]: true } },
           },
+          learnedVocab: { ...state.learnedVocab, [code]: courseWords },
           xp: state.xp + xpEarned,
           streak,
           lastActiveDay,

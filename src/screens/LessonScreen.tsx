@@ -56,7 +56,7 @@ export function LessonScreen() {
 
   function finish(passed: boolean) {
     const xp = passed ? lessonXp(mistakes) : 0;
-    if (passed) completeLesson(courseCode, lessonId, xp);
+    if (passed) completeLesson(courseCode, lessonId, xp, node?.lesson.vocab);
     nav.replace("lessonComplete", { courseCode, lessonId, passed, xp, mistakes, total });
   }
 

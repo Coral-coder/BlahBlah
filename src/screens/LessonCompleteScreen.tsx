@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
+import { Confetti } from "@/components/Confetti";
 import { Button } from "@/components/ui";
 import { playSfx } from "@/lib/sfx";
 import { useNav, useRoute } from "@/navigation";
@@ -32,6 +33,7 @@ export function LessonCompleteScreen() {
 
   return (
     <View style={[styles.root, { paddingTop: insets.top + 40, paddingBottom: insets.bottom + 20 }]}>
+      {passed ? <Confetti /> : null}
       <View style={styles.center}>
         <Text style={styles.emoji}>{passed ? "🎉" : "💪"}</Text>
         <Text style={styles.title}>{passed ? "Lesson complete!" : "Out of hearts"}</Text>
