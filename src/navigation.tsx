@@ -26,7 +26,8 @@ export type ScreenName =
   | "review"
   | "tips"
   | "dictation"
-  | "roleplay";
+  | "roleplay"
+  | "achievements";
 
 export type RouteParams = Record<string, unknown>;
 export interface Route {

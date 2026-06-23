@@ -100,7 +100,7 @@ function advanceQuests(
   };
 }
 
-interface Persisted {
+export interface Persisted {
   currentCourse?: string;
   byCourse: Record<string, CourseProgress>;
   /** course code -> (target word -> learned word) */
@@ -113,6 +113,7 @@ interface Persisted {
   wordStats: Record<string, Record<string, { c: number; w: number; t: number }>>;
   xp: number;
   gems: number;
+  maxStreak: number;
   streakFreezes: number;
   quests?: DailyQuests;
   streak: number;
@@ -133,6 +134,7 @@ const DEFAULT: Persisted = {
   wordStats: {},
   xp: 0,
   gems: 0,
+  maxStreak: 0,
   streakFreezes: 0,
   streak: 0,
   dailyGoal: 30,
@@ -353,6 +355,7 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
           },
           xp: state.xp + xpEarned,
           gems: state.gems + 1,
+          maxStreak: Math.max(state.maxStreak, streak),
           streakFreezes,
           quests: advanceQuests(state.quests, today2, { xp: xpEarned, lessons: 1 }),
           streak,

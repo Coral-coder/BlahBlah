@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ActivityIndicator, Animated, Easing, Pressable, StatusBar, StyleSheet, Text, View } from "react-native";
 import { SafeAreaProvider, useSafeAreaInsets } from "react-native-safe-area-context";
 
+import { AchievementsScreen } from "@/screens/AchievementsScreen";
 import { AIStoryScreen } from "@/screens/AIStoryScreen";
 import { CourseSelectScreen } from "@/screens/CourseSelectScreen";
 import { GameScreen } from "@/screens/GameScreen";
@@ -141,6 +142,8 @@ function RouterInner() {
       return <DictationScreen />;
     case "roleplay":
       return <RoleplayScreen />;
+    case "achievements":
+      return <AchievementsScreen />;
     default:
       return <Shell />;
   }

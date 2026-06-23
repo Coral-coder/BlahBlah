@@ -49,6 +49,12 @@ export function ProfileScreen() {
           <BigStat value={`${state.xp}`} label="total XP" emoji="⭐" />
         </View>
 
+        <Button
+          label="🏅  Achievements"
+          variant="ghost"
+          onPress={() => nav.navigate("achievements")}
+        />
+
         <Card>
           <Text style={styles.cardTitle}>This week</Text>
           <Text style={styles.cardSub}>{weekTotal} XP over the last 7 days</Text>
