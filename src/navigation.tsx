@@ -19,7 +19,10 @@ export type ScreenName =
   | "trace"
   | "game"
   | "stories"
-  | "story";
+  | "story"
+  | "watch"
+  | "news"
+  | "aistory";
 
 export type RouteParams = Record<string, unknown>;
 export interface Route {

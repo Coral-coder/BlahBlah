@@ -9,16 +9,17 @@ import { playSfx } from "@/lib/sfx";
 import { setSpeechLocale, speak } from "@/lib/speech";
 import { useNav, useRoute } from "@/navigation";
 import { getStory } from "@/stories";
+import type { Story } from "@/stories/types";
 import { useProgress } from "@/state/ProgressContext";
 import { theme } from "@/theme";
 
 export function StoryScreen() {
-  const { storyId } = useRoute<{ storyId: string }>();
+  const { storyId, story: inlineStory } = useRoute<{ storyId?: string; story?: Story }>();
   const nav = useNav();
   const insets = useSafeAreaInsets();
   const { completeLesson } = useProgress();
 
-  const story = getStory(storyId);
+  const story = inlineStory ?? (storyId ? getStory(storyId) : undefined);
   const course = story ? getCourse(story.courseCode) : undefined;
 
   const [lineIdx, setLineIdx] = useState(0); // how many lines revealed

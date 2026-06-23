@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Linking, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Button, Card, Chip } from "@/components/ui";
@@ -16,9 +16,11 @@ const fmtHour = (h: number) =>
 export function SettingsScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
-  const { state, resetCourse, setReminder } = useProgress();
+  const { state, resetCourse, setReminder, setSettings } = useProgress();
   const [confirm, setConfirm] = useState(false);
   const [reminderMsg, setReminderMsg] = useState<string | null>(null);
+  const [apiKey, setApiKey] = useState(state.settings.apiKey);
+  const [savedKey, setSavedKey] = useState(false);
 
   const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
 
@@ -108,6 +110,41 @@ export function SettingsScreen() {
         </Card>
 
         <Card>
+          <Text style={styles.cardTitle}>Claude API key</Text>
+          <Text style={styles.cardSub}>
+            Optional — only needed for AI Stories. Stored on this device.
+          </Text>
+          <TextInput
+            value={apiKey}
+            onChangeText={(t) => {
+              setApiKey(t);
+              setSavedKey(false);
+            }}
+            placeholder="sk-ant-…"
+            placeholderTextColor={theme.colors.textMuted}
+            style={styles.input}
+            autoCapitalize="none"
+            autoCorrect={false}
+            secureTextEntry
+          />
+          <Button
+            label={savedKey ? "Saved ✓" : "Save key"}
+            variant="ghost"
+            style={{ marginTop: theme.spacing(1.5) }}
+            onPress={() => {
+              setSettings({ apiKey: apiKey.trim() });
+              setSavedKey(true);
+            }}
+          />
+          <Button
+            label="Get an API key →"
+            variant="ghost"
+            onPress={() => Linking.openURL("https://console.anthropic.com/settings/keys")}
+            style={{ marginTop: theme.spacing(1) }}
+          />
+        </Card>
+
+        <Card>
           <Text style={styles.cardTitle}>About</Text>
           <Text style={styles.cardSub}>
             BlahBlah — learn languages through a guided, structured path of bite-sized lessons.
@@ -132,4 +169,15 @@ const styles = StyleSheet.create({
   cardTitle: { color: theme.colors.text, fontSize: 18, fontWeight: "800" },
   cardSub: { color: theme.colors.textMuted, marginTop: 6, lineHeight: 20 },
   warn: { color: theme.colors.gold, marginTop: 10, fontWeight: "600" },
+  input: {
+    backgroundColor: theme.colors.surfaceAlt,
+    borderRadius: theme.radius.md,
+    borderWidth: 1,
+    borderColor: theme.colors.border,
+    color: theme.colors.text,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    fontSize: 15,
+    marginTop: theme.spacing(1.5),
+  },
 });

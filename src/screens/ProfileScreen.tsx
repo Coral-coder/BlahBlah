@@ -117,6 +117,24 @@ export function ProfileScreen() {
             style={{ marginTop: theme.spacing(1.5) }}
           />
           <Button
+            label="🎬  Watch"
+            variant="ghost"
+            onPress={() => nav.navigate("watch")}
+            style={{ marginTop: theme.spacing(1) }}
+          />
+          <Button
+            label="📰  News"
+            variant="ghost"
+            onPress={() => nav.navigate("news")}
+            style={{ marginTop: theme.spacing(1) }}
+          />
+          <Button
+            label="✨  AI Story"
+            variant="ghost"
+            onPress={() => nav.navigate("aistory")}
+            style={{ marginTop: theme.spacing(1) }}
+          />
+          <Button
             label="📖  Words you know"
             variant="ghost"
             onPress={() => nav.navigate("words")}

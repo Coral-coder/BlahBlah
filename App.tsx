@@ -2,8 +2,11 @@ import { useState } from "react";
 import { ActivityIndicator, Pressable, StatusBar, StyleSheet, Text, View } from "react-native";
 import { SafeAreaProvider, useSafeAreaInsets } from "react-native-safe-area-context";
 
+import { AIStoryScreen } from "@/screens/AIStoryScreen";
 import { CourseSelectScreen } from "@/screens/CourseSelectScreen";
 import { GameScreen } from "@/screens/GameScreen";
+import { NewsScreen } from "@/screens/NewsScreen";
+import { WatchScreen } from "@/screens/WatchScreen";
 import { LessonCompleteScreen } from "@/screens/LessonCompleteScreen";
 import { LessonScreen } from "@/screens/LessonScreen";
 import { PathScreen } from "@/screens/PathScreen";
@@ -78,6 +81,12 @@ function Router() {
       return <StoriesListScreen />;
     case "story":
       return <StoryScreen />;
+    case "watch":
+      return <WatchScreen />;
+    case "news":
+      return <NewsScreen />;
+    case "aistory":
+      return <AIStoryScreen />;
     default:
       return <Shell />;
   }
