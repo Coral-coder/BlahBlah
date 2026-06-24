@@ -29,6 +29,11 @@ const ROOT = fileURLToPath(new URL("../../", import.meta.url));
 const OUT_DIR = join(ROOT, "src/curriculum/blueprints/generated");
 const MAX_WORDS = Number(process.env.MAX_WORDS || 400);
 const UNIT_SIZE = Number(process.env.UNIT_SIZE || 25);
+// Skip the very top of the frequency list: those are function words (articles,
+// pronouns, common prepositions) that are already in the hand-authored basics
+// AND have the noisiest dictionary glosses (e.g. German "es" → a musical note).
+// Harvesting from a bit deeper yields cleaner, more teachable content words.
+const SKIP_TOP = Number(process.env.SKIP_TOP || 100);
 const ONLY = (process.env.ONLY || "").split(",").map((s) => s.trim()).filter(Boolean);
 
 // Languages we can source well (FreeDict <x>-eng + hermitdave frequency exist).
@@ -48,15 +53,32 @@ function cefrFor(unitIndex) {
   return ramp[Math.min(unitIndex, ramp.length - 1)];
 }
 
+async function withRetry(fn, what) {
+  let lastErr;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      return await fn();
+    } catch (e) {
+      lastErr = e;
+      console.log(`  retry ${attempt}/3 (${what}): ${e.message}`);
+      await new Promise((r) => setTimeout(r, attempt * 1500));
+    }
+  }
+  throw lastErr;
+}
 async function fetchText(url) {
-  const res = await fetch(url, { redirect: "follow" });
-  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-  return res.text();
+  return withRetry(async () => {
+    const res = await fetch(url, { redirect: "follow" });
+    if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+    return res.text();
+  }, url);
 }
 async function fetchBuffer(url) {
-  const res = await fetch(url, { redirect: "follow" });
-  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-  return Buffer.from(await res.arrayBuffer());
+  return withRetry(async () => {
+    const res = await fetch(url, { redirect: "follow" });
+    if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+    return Buffer.from(await res.arrayBuffer());
+  }, url);
 }
 
 function decodeEntities(s) {
@@ -72,7 +94,7 @@ function decodeEntities(s) {
 
 // Turn a raw FreeDict translation gloss into a single clean English meaning, or
 // null if it isn't trustworthy enough to teach.
-function cleanGloss(raw, target) {
+export function cleanGloss(raw, target) {
   if (!raw) return null;
   let g = decodeEntities(raw).trim();
   g = g.replace(/<[^>]+>/g, " "); // strip any nested tags
@@ -81,6 +103,7 @@ function cleanGloss(raw, target) {
   g = g.replace(/\s+/g, " ").trim();
   g = g.replace(/^["'“”‘’]+|["'“”‘’]+$/g, "").trim();
   if (!g) return null;
+  if (g.length < 2) return null; // drop single-letter glosses (e.g. "E")
   if (g.length > 32) return null;
   if (/\d/.test(g)) return null;
   if (!/^[a-zA-Z][a-zA-Z '-]*$/.test(g)) return null; // English-looking only
@@ -94,10 +117,14 @@ async function freedictTeiUrl(pair) {
   const db = JSON.parse(await fetchText("https://freedict.org/freedict-database.json"));
   const entry = db.find((d) => d.name === pair);
   if (!entry || !Array.isArray(entry.releases)) throw new Error(`FreeDict pair not found: ${pair}`);
-  // Prefer the TEI source release; fall back to any release with a .tei.
-  const src = entry.releases.find((r) => r.platform === "src") || entry.releases[0];
-  if (!src || !src.URL) throw new Error(`No downloadable release for ${pair}`);
-  return src.URL;
+  // Prefer the TEI source release; then anything whose URL looks like source/TEI;
+  // then any release with a URL at all.
+  const byPlatform = entry.releases.find((r) => r.platform === "src" && r.URL);
+  const byUrl = entry.releases.find((r) => r.URL && /\.src\.|\.tei/i.test(r.URL));
+  const any = entry.releases.find((r) => r.URL);
+  const pick = byPlatform || byUrl || any;
+  if (!pick || !pick.URL) throw new Error(`No downloadable release for ${pair}`);
+  return pick.URL;
 }
 
 // Download + extract the TEI archive, return a Map(lowerHeadword -> {orth, gloss}).
@@ -244,10 +271,11 @@ async function buildLang(lang) {
   const vocab = [];
   const usedEn = new Set();
   const usedTarget = new Set();
-  for (const w of freq) {
+  for (const w of freq.slice(SKIP_TOP)) {
     if (vocab.length >= MAX_WORDS) break;
     const hit = dict.get(w);
     if (!hit) continue;
+    if (hit.orth.length < 3) continue; // skip short function words
     const targetKey = hit.orth.toLowerCase();
     if (usedTarget.has(targetKey)) continue;
     const enKey = hit.gloss.toLowerCase();
@@ -281,7 +309,10 @@ async function main() {
   console.log(`\nDone. Built: ${built.join(", ")}`);
 }
 
-main().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+// Allow importing the pure helpers (e.g. cleanGloss) in tests without running.
+if (!process.env.PIPELINE_NOMAIN) {
+  main().catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
+}
