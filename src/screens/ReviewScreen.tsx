@@ -1,5 +1,8 @@
 import { useMemo, useState } from "react";
 import {
+  Keyboard,
+  KeyboardAvoidingView,
+  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -36,6 +39,10 @@ export function ReviewScreen() {
   const { mistakesOnly } = useRoute<{ mistakesOnly?: boolean }>();
   const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
 
+  // Honor the global "I hate typing" opt-out: when typing is disabled, every
+  // review card becomes a tap-to-choose card (no keyboard at all).
+  const typingOff = state.settings.typingExercises === false;
+
   const cards = useMemo<Card[]>(() => {
     if (course) setSpeechLocale(course.speechLocale);
     if (!course) return [];
@@ -55,16 +62,19 @@ export function ReviewScreen() {
       })
       .sort((a, b) => a.due - b.due || a.score - b.score || a.t - b.t);
     const chosen = scored.slice(0, SESSION).map((x) => x.w);
-    return shuffle(chosen).map((word, i) => {
-      if (i % 2 === 0) return { word, mode: "type" as const };
+    const chooseCard = (word: LearnedWord): Card => {
       const distract = shuffle(words.filter((x) => x.target !== word.target)).slice(0, 3);
       return {
         word,
-        mode: "choose" as const,
+        mode: "choose",
         options: shuffle([word.target, ...distract.map((d) => d.target)]),
       };
+    };
+    return shuffle(chosen).map((word, i) => {
+      if (typingOff || i % 2 !== 0) return chooseCard(word);
+      return { word, mode: "type" as const };
     });
-  }, [course, isCompleted]);
+  }, [course, isCompleted, typingOff]);
 
   const [idx, setIdx] = useState(0);
   const [typed, setTyped] = useState("");
@@ -91,6 +101,7 @@ export function ReviewScreen() {
   const card = cards[idx];
 
   function check() {
+    Keyboard.dismiss();
     const resp = card.mode === "type" ? typed : pick ?? "";
     const ok = normalize(resp) === normalize(card.word.target);
     setCorrect(ok);
@@ -102,6 +113,7 @@ export function ReviewScreen() {
   }
 
   function next() {
+    Keyboard.dismiss();
     if (idx < cards.length - 1) {
       setIdx((i) => i + 1);
       setTyped("");
@@ -139,7 +151,15 @@ export function ReviewScreen() {
         </View>
       </View>
 
-      <ScrollView contentContainerStyle={{ padding: theme.spacing(2), flexGrow: 1 }}>
+      <KeyboardAvoidingView
+        style={{ flex: 1 }}
+        behavior={Platform.OS === "ios" ? "padding" : undefined}
+        keyboardVerticalOffset={insets.top + 10}
+      >
+      <ScrollView
+        contentContainerStyle={{ padding: theme.spacing(2), flexGrow: 1 }}
+        keyboardShouldPersistTaps="handled"
+      >
         <Text style={styles.prompt}>How do you say…</Text>
         <Text style={styles.english}>{card.word.en}</Text>
 
@@ -153,6 +173,11 @@ export function ReviewScreen() {
               placeholderTextColor={theme.colors.textMuted}
               autoCapitalize="none"
               autoCorrect={false}
+              returnKeyType="done"
+              blurOnSubmit
+              onSubmitEditing={() => {
+                if (!checked && typed.trim().length > 0) check();
+              }}
               style={[
                 styles.input,
                 checked && { borderColor: correct ? theme.colors.success : theme.colors.danger },
@@ -193,6 +218,7 @@ export function ReviewScreen() {
           <Button label="Check" onPress={check} disabled={!canCheck} />
         )}
       </View>
+      </KeyboardAvoidingView>
     </View>
   );
 }

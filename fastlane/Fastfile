@@ -112,3 +112,52 @@ platform :ios do
     )
   end
 end
+
+platform :android do
+  desc "Build a signed release AAB and (if a Play service-account key is " \
+       "configured) upload it to the Google Play internal track. Without the " \
+       "key it just builds the artifact for the workflow to publish."
+  lane :beta do
+    # Build the App Bundle. Signing + versionCode come from env vars the workflow
+    # exports (BLAHBLAH_UPLOAD_* + BLAHBLAH_VERSION_CODE), read in app/build.gradle.
+    gradle(
+      project_dir: "android",
+      task: "bundle",
+      build_type: "Release"
+    )
+
+    aab = lane_context[SharedValues::GRADLE_AAB_OUTPUT_PATH]
+    UI.message("Built AAB: #{aab}")
+
+    json_key = ENV["PLAY_JSON_KEY_PATH"] # written to disk by the workflow if the secret exists
+    unless json_key && File.exist?(json_key)
+      UI.important("No Google Play service-account key configured " \
+                   "(PLAY_JSON_KEY_PATH unset). Skipping upload — the signed AAB " \
+                   "is still attached as a workflow artifact.")
+      next
+    end
+
+    # Play requires release notes under metadata/android/<locale>/changelogs/.
+    notes_path = File.expand_path("testflight_notes.txt", __dir__)
+    if File.exist?(notes_path)
+      changelog = File.read(notes_path).strip
+      changelog_dir = File.expand_path("metadata/android/en-US/changelogs", __dir__)
+      FileUtils.mkdir_p(changelog_dir)
+      version_code = ENV["BLAHBLAH_VERSION_CODE"]
+      File.write(File.join(changelog_dir, "#{version_code}.txt"), changelog) if version_code
+      File.write(File.join(changelog_dir, "default.txt"), changelog)
+    end
+
+    upload_to_play_store(
+      package_name: APP_IDENTIFIER,
+      track: "internal",
+      aab: aab,
+      json_key: json_key,
+      release_status: "draft",
+      skip_upload_apk: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+  end
+end

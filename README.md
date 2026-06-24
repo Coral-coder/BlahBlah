@@ -84,6 +84,11 @@ carries tester notes from `fastlane/testflight_notes.txt`. The neural voice pack
 are (re)published by the **Publish voice models** workflow. Setup + secrets:
 **[docs/TESTFLIGHT.md](docs/TESTFLIGHT.md)**.
 
+The same delivery push also runs **Android → release build**, which produces a
+signed AAB + APK (download them from the workflow run's artifacts). Add an
+upload-keystore secret for Play-ready signing, and a Play service-account secret
+to auto-upload to the internal testing track. See **[docs/ANDROID.md](docs/ANDROID.md)**.
+
 ## Project structure
 
 ```
@@ -108,17 +113,26 @@ src/
   theme.ts               Colors / spacing / shadow
 modules/blah-neural-tts  Native ObjC++ module wrapping sherpa-onnx (TTS)
 fastlane/                Fastfile (lane :beta) + tester notes
-.github/workflows/       testflight.yml, voice-models.yml
+.github/workflows/       testflight.yml (iOS), android.yml (AAB/APK), voice-models.yml
 ```
 
 ## Dream Log
 
 Running changelog of features dreamed up on this branch (newest first).
 
-- **Reverb sound effects** — re-synthesized correct/complete/wrong with a
-  Freeverb-style reverb (parallel comb + series allpass filters) over the
-  Karplus-Strong plucks, plus a sub-octave body layer. Warmer, fuller, with real
-  tail — no more thin/weak beeps.
+- **Android shipping** — the build pipeline now also produces a signed Android
+  release (AAB + APK) on every ship via `.github/workflows/android.yml`, attached
+  as downloadable artifacts. Play Store internal-track upload auto-activates when
+  a service-account secret is added. Android falls back to the system voice
+  (the neural engine is iOS-only for now).
+
+- **Review keyboard fixes** — in Review, the Check/Continue button now rides above
+  the keyboard, the return key submits, the typed box clears between cards, and
+  the "turn off typing" setting now also makes Review all tap-to-choose.
+
+- **Soft multi-voice sounds** — correct/complete/wrong re-synthesized as soft,
+  detuned multi-voice instrument tones (gentle harmonic stack + light chorus) with
+  a subtle reverb tail. Warm and roomy, not the harsh plucks.
 
 - **Auto-confirm speaking** — speaking exercises now detect when you stop talking,
   score automatically, and auto-advance when correct. No more double-tap.

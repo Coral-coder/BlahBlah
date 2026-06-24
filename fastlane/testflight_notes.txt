@@ -1,12 +1,17 @@
-🔊 Richer sound effects (now with reverb)
+🔊 Softer, richer sounds + ⌨️ Review keyboard fixes
 
-• The correct / lesson-complete / wrong sounds were re-synthesized with a
-  Freeverb-style reverb and a sub-octave body layer over the plucked-string
-  tones. They should sound warmer and fuller now, with a real tail — not thin.
+• Sounds: correct / lesson-complete / wrong were re-done as soft, multi-voice
+  instrument tones (gentle harmonics + a little chorus) with a light reverb tail.
+  They should feel warm and roomy now — not harsh, not thin.
+• Review typing: the Check/Continue button now rises above the keyboard, the
+  return key submits your answer, and the box clears between cards. If you've
+  turned typing off in Settings, Review is now all tap-to-choose too.
 
 WHAT TO TEST
-• Answer a question correctly → the "correct" chime should sound full, with a
-  short reverb tail (not a flat beep).
-• Finish a lesson → the completion fanfare should feel triumphant and roomy.
-• Get one wrong → the "wrong" sound should be soft and low, not harsh.
-• Toggle Settings → Sound effects off and confirm they go silent.
+• Answer correctly → warm chime with a short tail (not harsh).
+• Finish a lesson → fuller, triumphant fanfare.
+• Get one wrong → soft, low, gentle (not a buzzer).
+• Settings → Sound effects off → all silent.
+• Review (Profile → Review): with typing on, type an answer and hit return — it
+  should submit and the box should clear on the next card; the button stays above
+  the keyboard. With typing off, Review should show only tap-to-choose cards.

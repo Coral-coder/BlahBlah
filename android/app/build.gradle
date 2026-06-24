@@ -79,12 +79,21 @@ android {
 
     namespace "com.blahblah"
     defaultConfig {
-        applicationId "com.blahblah"
+        // Keep the Play Store identity aligned with the iOS bundle id so it's the
+        // same product across stores. (The Kotlin namespace stays com.blahblah.)
+        applicationId "com.lightwave.blahblah"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        // CI passes a monotonic versionCode (the run number) so Play never
+        // rejects a duplicate. Falls back to 1 for local builds.
+        versionCode (System.getenv("BLAHBLAH_VERSION_CODE") ?: "1").toInteger()
+        versionName (System.getenv("BLAHBLAH_VERSION_NAME") ?: "1.0")
     }
+    // A real upload keystore is provided in CI via env (decoded from a secret).
+    // When absent (local dev, PR builds), we fall back to the debug keystore so
+    // the release variant still assembles and is installable for testing.
+    def releaseStorePath = System.getenv("BLAHBLAH_UPLOAD_STORE_FILE")
+    def hasUploadKeystore = releaseStorePath != null && file(releaseStorePath).exists()
     signingConfigs {
         debug {
             storeFile file('debug.keystore')
@@ -92,15 +101,21 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            if (hasUploadKeystore) {
+                storeFile file(releaseStorePath)
+                storePassword System.getenv("BLAHBLAH_UPLOAD_STORE_PASSWORD")
+                keyAlias System.getenv("BLAHBLAH_UPLOAD_KEY_ALIAS")
+                keyPassword System.getenv("BLAHBLAH_UPLOAD_KEY_PASSWORD")
+            }
+        }
     }
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
         }
         release {
-            // Caution! In production, you need to generate your own keystore file.
-            // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            signingConfig hasUploadKeystore ? signingConfigs.release : signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }

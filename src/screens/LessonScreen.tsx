@@ -1,5 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  KeyboardAvoidingView,
+  Platform,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { ExerciseView, type ExResponse } from "@/components/Exercise";
@@ -178,7 +186,15 @@ export function LessonScreen() {
 
       <Text style={styles.tapTip}>💡 Tap a dotted word — or hold any word tile — for its meaning</Text>
 
-      <ScrollView contentContainerStyle={{ flexGrow: 1, paddingBottom: 20 }}>
+      <KeyboardAvoidingView
+        style={{ flex: 1 }}
+        behavior={Platform.OS === "ios" ? "padding" : undefined}
+        keyboardVerticalOffset={insets.top + 8}
+      >
+      <ScrollView
+        contentContainerStyle={{ flexGrow: 1, paddingBottom: 20 }}
+        keyboardShouldPersistTaps="handled"
+      >
         <ExerciseView
           key={`${node.lesson.id}-${round}`}
           exercise={current}
@@ -224,6 +240,7 @@ export function LessonScreen() {
           <Text style={styles.matchHint}>Tap a word, then its match.</Text>
         ) : null}
       </View>
+      </KeyboardAvoidingView>
     </View>
   );
 }
