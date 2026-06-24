@@ -206,6 +206,17 @@ function mkListenSentence(s: SentenceItem, pool: VocabItem[], r: () => number): 
   };
 }
 
+function mkType(s: SentenceItem): Exercise {
+  return {
+    type: "type",
+    prompt: "Type this in the target language",
+    question: s.en,
+    answer: s.target,
+    pinyin: s.pinyin,
+    speak: s.target,
+  };
+}
+
 function mkSpeakSentence(s: SentenceItem): Exercise {
   return {
     type: "speak",
@@ -290,7 +301,7 @@ function reviewLesson(
 ): Lesson {
   const ex: Exercise[] = [];
   if (pool.length >= 2) ex.push(mkMatch(sample(pool, 5, r), r));
-  const sents = sample(sentences, 4, r);
+  const sents = sample(sentences, 5, r);
   if (sents[0]) ex.push(mkWordbank(sents[0], pool, r));
   if (sents[1]) {
     const f = mkFill(sents[1], pool, vocabTargets, r);
@@ -298,6 +309,9 @@ function reviewLesson(
   }
   if (sents[2]) ex.push(mkListenSentence(sents[2], pool, r));
   if (sents[3]) ex.push(mkSpeakSentence(sents[3]));
+  // Typed production: write the sentence from scratch (great for recall/spelling).
+  const typeSent = sents[4] ?? sents[0];
+  if (typeSent) ex.push(mkType(typeSent));
   for (const v of sample(pool, 6, r)) {
     if (ex.length >= 8) break;
     if (pool.length >= 4 && r() > 0.5) ex.push(mkSelect(v, pool, r));

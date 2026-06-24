@@ -1,6 +1,6 @@
 import Voice from "@react-native-voice/voice";
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { ActivityIndicator, Pressable, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
 import type { Exercise } from "@/curriculum/types";
 import { normalize, shuffle } from "@/lesson/engine";
@@ -93,6 +93,8 @@ export function ExerciseView(props: Props) {
       return <SpeakView {...props} exercise={exercise} />;
     case "card":
       return <CardView {...props} exercise={exercise} />;
+    case "type":
+      return <TypeView {...props} exercise={exercise} />;
     default:
       return null;
   }
@@ -401,6 +403,49 @@ function WordbankView({
           ) : null}
         </View>
       ) : null}
+    </View>
+  );
+}
+
+// ---------------------------------------------------------------- type
+function TypeView({
+  exercise,
+  revealed,
+  correct,
+  onChange,
+}: Props & { exercise: Extract<Exercise, { type: "type" }> }) {
+  const [text, setText] = useState("");
+  return (
+    <View style={styles.body}>
+      <Instruction text={exercise.prompt} />
+      <View style={styles.questionRow}>
+        <Text style={styles.question}>{exercise.question}</Text>
+        {exercise.speak ? <Speaker text={exercise.speak} /> : null}
+      </View>
+      <TextInput
+        value={text}
+        onChangeText={(t) => {
+          setText(t);
+          onChange(t.trim() ? t : null);
+        }}
+        editable={!revealed}
+        placeholder="Type your translation…"
+        placeholderTextColor={theme.colors.textMuted}
+        autoCapitalize="none"
+        autoCorrect={false}
+        multiline
+        style={[
+          styles.typeInput,
+          revealed && {
+            borderColor: correct ? theme.colors.success : theme.colors.danger,
+            color: correct ? theme.colors.success : theme.colors.danger,
+          },
+        ]}
+      />
+      {revealed && !correct ? (
+        <Text style={styles.correctHint}>Answer: {exercise.answer}</Text>
+      ) : null}
+      {revealed && exercise.pinyin ? <Text style={styles.pinyin}>{exercise.pinyin}</Text> : null}
     </View>
   );
 }
@@ -736,6 +781,20 @@ const styles = StyleSheet.create({
   },
   bigSpeakLabel: { color: theme.colors.primaryText, fontWeight: "700", fontSize: 16 },
   correctHint: { color: theme.colors.success, fontWeight: "700", marginTop: theme.spacing(2), fontSize: 16 },
+  typeInput: {
+    marginTop: theme.spacing(3),
+    minHeight: 96,
+    borderWidth: 2,
+    borderColor: theme.colors.border,
+    borderRadius: theme.radius.md,
+    backgroundColor: theme.colors.surface,
+    color: theme.colors.text,
+    fontSize: 20,
+    fontWeight: "600",
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    textAlignVertical: "top",
+  },
   matchRow: { flexDirection: "row", gap: 14, marginTop: theme.spacing(1) },
   matchCol: { flex: 1, gap: 12 },
   matchCell: {

@@ -95,6 +95,20 @@ export interface SpeakExercise {
   translation?: string;
 }
 
+/** Type the translation: the learner writes the target sentence from memory. */
+export interface TypeExercise {
+  type: "type";
+  prompt: string;
+  /** The source-language word/sentence to translate by typing. */
+  question: string;
+  /** The correct target answer. */
+  answer: string;
+  /** Optional pronunciation (e.g. pinyin), revealed after answering. */
+  pinyin?: string;
+  /** Optional TTS of the answer. */
+  speak?: string;
+}
+
 /** An introduction card for a new word: picture (emoji), word, meaning, audio. */
 export interface CardExercise {
   type: "card";
@@ -112,6 +126,7 @@ export type Exercise =
   | MatchExercise
   | ListenExercise
   | SpeakExercise
+  | TypeExercise
   | CardExercise;
 
 export interface Lesson {
