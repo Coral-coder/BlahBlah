@@ -1,33 +1,11 @@
-🚀 Big update — lots to play with
+✨ Polish update
 
-NEW EXERCISES & LEARNING
-• Type-the-translation: write the sentence from memory (forgiving of accents/typos).
-• Accent bar above the keyboard for ä ö ü ß / ñ ¿ ¡ / ð þ æ.
-• Tap-to-translate still here; now long-press any 🔊 to hear it SLOWLY.
-• Can't do a speak/listen exercise right now? It now offers a written version
-  instead of a free skip.
-
-MOTIVATION & FUN
-• Weekly League with rivals (promotion/demotion zones).
-• Double or Nothing: wager 💎50 to practice 7 days straight, win 💎100.
-• In-lesson 🔥 combo meter with bonus XP.
-• Flashcards self-test over your learned words.
-• Word of the Day on the path; Tricky-words card on Profile.
-• Daily-goal + streak-milestone celebrations (confetti!).
-• Share your progress from Profile.
-
-FEEL & POLISH
-• Way punchier correct/wrong/complete sounds.
-• Supercharged lesson-complete: emoji pop, XP count-up, PERFECT badge, more confetti.
-• Colorful tile menu for Practice & play; animated stats; tactile lesson nodes.
-• The path now re-scrolls so your next lesson sits near the top — no more scrolling.
-
-SETTINGS
-• Challenge mode: type answers instead of using word tiles.
-• Natural voices: if you haven't yet, download one — pronunciation is key!
+WHAT'S NEW
+• Per-unit progress bars on the learning path — see how far through each unit you are at a glance.
+• Sound-effects toggle in Settings — mute the correct/wrong/complete sounds if you like.
+• A "What's New" card in Settings so you can see recent features in-app.
 
 WHAT TO TEST
-• Do a lesson: check the new sounds, combo meter, and the big complete screen.
-• Finish it → confirm the path is already scrolled to your next lesson.
-• Profile: try Flashcards, the League, Double or Nothing, and the colorful menu.
-• Skip a speak/listen exercise → confirm it gives you a typed/tile version.
+• Open the Learn path → each in-progress unit header now shows a white progress bar.
+• Settings → Sound effects → toggle off, do an exercise, confirm it's silent; toggle back on.
+• Settings → scroll to "What's new".
