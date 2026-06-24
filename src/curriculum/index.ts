@@ -11,7 +11,9 @@ import { thaiBlueprint } from "@/curriculum/blueprints/th";
 import { thaiThemeSections } from "@/curriculum/blueprints/th_themes";
 import { icelandicBlueprint } from "@/curriculum/blueprints/is";
 import { frenchBlueprint } from "@/curriculum/blueprints/fr";
+import { frenchExtraSections } from "@/curriculum/blueprints/fr_extra";
 import { italianBlueprint } from "@/curriculum/blueprints/it";
+import { italianExtraSections } from "@/curriculum/blueprints/it_extra";
 import { sindarinBlueprint } from "@/curriculum/blueprints/sindarin";
 
 // Courses are generated from compact vocab/sentence blueprints: the generator
@@ -33,6 +35,14 @@ const thaiFull: CourseBlueprint = {
   ...thaiBlueprint,
   sections: [...thaiBlueprint.sections, ...thaiThemeSections],
 };
+const frenchFull: CourseBlueprint = {
+  ...frenchBlueprint,
+  sections: [...frenchBlueprint.sections, ...frenchExtraSections],
+};
+const italianFull: CourseBlueprint = {
+  ...italianBlueprint,
+  sections: [...italianBlueprint.sections, ...italianExtraSections],
+};
 
 export const COURSES: Course[] = [
   generateCourse(germanFull),
@@ -40,8 +50,8 @@ export const COURSES: Course[] = [
   generateCourse(thaiFull),
   generateCourse(spanishFull),
   generateCourse(icelandicBlueprint),
-  generateCourse(frenchBlueprint),
-  generateCourse(italianBlueprint),
+  generateCourse(frenchFull),
+  generateCourse(italianFull),
   generateCourse(sindarinBlueprint),
 ];
 

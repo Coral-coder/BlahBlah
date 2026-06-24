@@ -115,6 +115,15 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Instrument sound effects** — re-synthesized correct/complete/wrong as
+  Karplus-Strong plucked strings (harp/guitar) with soft reverb — warm and real,
+  not buzzy.
+- **Deeper French & Italian** — added Family and Numbers & time units (now ~90
+  vocab / 225 lessons each), all verified by the content checker.
+- **Content integrity suite** — `npm run validate:content` checks every exercise
+  in every course; runs in CI before each build. Census: 8 courses, 34k+
+  exercises, 1,760 vocab.
+
 - **New languages (proof set)** — **French** 🇫🇷 and **Italian** 🇮🇹 (full treatment +
   downloadable neural voice packs), plus **Elvish (Sindarin)** 🧝 as a for-fun
   mythical novelty (curated words/phrases, system voice). The framework supports
