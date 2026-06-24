@@ -33,6 +33,8 @@ jobs:
             "is_IS-steinn-medium|vits-piper-is_IS-steinn-medium"
             "zh_CN-huayan-medium|vits-piper-zh_CN-huayan-medium"
             "th_TH-mms-medium|vits-mms-tha"
+            "fr_FR-siwis-medium|vits-piper-fr_FR-siwis-medium"
+            "it_IT-paola-medium|vits-piper-it_IT-paola-medium"
           )
 
           for e in "${ENTRIES[@]}"; do

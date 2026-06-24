@@ -115,6 +115,11 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **New languages (proof set)** — **French** 🇫🇷 and **Italian** 🇮🇹 (full treatment +
+  downloadable neural voice packs), plus **Elvish (Sindarin)** 🧝 as a for-fun
+  mythical novelty (curated words/phrases, system voice). The framework supports
+  adding the rest of the top-20 the same way; word counts grow over time.
+
 - **What's-new card** in Settings; version bumped to 0.3.0.
 - **Sound-effects toggle** — mute the UI sounds from Settings.
 - **Unit progress bars** — each unit header on the path shows a white progress

@@ -10,6 +10,9 @@ import { spanishThemeSections } from "@/curriculum/blueprints/es_themes";
 import { thaiBlueprint } from "@/curriculum/blueprints/th";
 import { thaiThemeSections } from "@/curriculum/blueprints/th_themes";
 import { icelandicBlueprint } from "@/curriculum/blueprints/is";
+import { frenchBlueprint } from "@/curriculum/blueprints/fr";
+import { italianBlueprint } from "@/curriculum/blueprints/it";
+import { sindarinBlueprint } from "@/curriculum/blueprints/sindarin";
 
 // Courses are generated from compact vocab/sentence blueprints: the generator
 // expands each unit into many lessons that introduce a couple of words at a time
@@ -37,6 +40,9 @@ export const COURSES: Course[] = [
   generateCourse(thaiFull),
   generateCourse(spanishFull),
   generateCourse(icelandicBlueprint),
+  generateCourse(frenchBlueprint),
+  generateCourse(italianBlueprint),
+  generateCourse(sindarinBlueprint),
 ];
 
 export function getCourse(code: string): Course | undefined {

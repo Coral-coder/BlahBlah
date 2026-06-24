@@ -1,11 +1,15 @@
-✨ Polish update
+🌍 New languages!
 
-WHAT'S NEW
-• Per-unit progress bars on the learning path — see how far through each unit you are at a glance.
-• Sound-effects toggle in Settings — mute the correct/wrong/complete sounds if you like.
-• A "What's New" card in Settings so you can see recent features in-app.
+• French 🇫🇷 and Italian 🇮🇹 — full courses (greetings + food to start), with
+  downloadable natural neural voices (Settings → Natural voices).
+• Elvish (Sindarin) 🧝 — a for-fun mythical language pack with iconic words and
+  phrases (mae govannen!). Uses the system voice — it's a novelty, learn it for joy.
+
+This is a "prove it" set showing the full treatment end-to-end; more of the
+world's top languages will get the same packs next.
 
 WHAT TO TEST
-• Open the Learn path → each in-progress unit header now shows a white progress bar.
-• Settings → Sound effects → toggle off, do an exercise, confirm it's silent; toggle back on.
-• Settings → scroll to "What's new".
+• Profile → Switch language → pick French, Italian, or Elvish.
+• Do the first lessons; for French/Italian, download the voice in Settings and
+  confirm it sounds natural.
+• Elvish: confirm it loads and plays through lessons (audio is the system voice).
