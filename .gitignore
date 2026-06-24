@@ -76,3 +76,6 @@ yarn-error.log
 # env / secrets
 .env
 .env.local
+
+# OTA content bundle (built in CI, published to the 'content' release)
+content-bundle.json

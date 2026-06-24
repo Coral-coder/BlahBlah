@@ -113,12 +113,21 @@ src/
   theme.ts               Colors / spacing / shadow
 modules/blah-neural-tts  Native ObjC++ module wrapping sherpa-onnx (TTS)
 fastlane/                Fastfile (lane :beta) + tester notes
-.github/workflows/       testflight.yml (iOS), android.yml (AAB/APK), voice-models.yml
+.github/workflows/       testflight.yml (iOS), android.yml (AAB/APK), voice-models.yml,
+                         content-pipeline.yml (grow vocab), content-bundle.yml (OTA publish)
 ```
 
 ## Dream Log
 
 Running changelog of features dreamed up on this branch (newest first).
+
+- **Over-the-air content** — the app ships with content baked in, but on launch it
+  also pulls a `content-bundle.json` (all course blueprints) from this public
+  repo's GitHub Releases, caches it to disk, and regenerates courses live. Lessons
+  can be edited/added — even whole languages — without a new app build. A schema
+  number gates it so bundles authored for a newer engine are ignored by older
+  installs (they keep using the baked-in content). Publishing is automatic and
+  validator-gated (`content-bundle.yml`). See **[docs/CONTENT.md](docs/CONTENT.md)**.
 
 - **Auto natural voices** — on-device neural voices are now on by default and the
   voice for your active course downloads automatically in the background the first

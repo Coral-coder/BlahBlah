@@ -8,6 +8,7 @@
     "lint": "eslint .",
     "tsc": "tsc --noEmit",
     "validate:content": "node scripts/validateContent.run.js",
+    "build:content-bundle": "node scripts/buildContentBundle.run.js",
     "start": "react-native start",
     "test": "jest"
   },

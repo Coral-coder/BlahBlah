@@ -67,7 +67,8 @@ jobs:
             exit 0
           fi
           git add src/curriculum/blueprints/generated
-          git commit -m "content: refresh generated vocabulary from open data [skip ci]"
+          # No [skip ci]: this commit should trigger the content-bundle publish.
+          git commit -m "content: refresh generated vocabulary from open data"
           # Retry push a few times in case the branch moved under us.
           for i in 1 2 3 4; do
             if git pull --rebase origin claude/blahblah-next && git push origin HEAD:claude/blahblah-next; then

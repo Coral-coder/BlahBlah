@@ -53,7 +53,11 @@ const italianFull: CourseBlueprint = {
   sections: [...italianBlueprint.sections, ...italianExtraSections, ...italianThemeSections],
 };
 
-export const COURSES: Course[] = [
+// The compact blueprint inputs for every course, with pipeline-generated
+// sections already folded in. This is the canonical content payload: it is what
+// gets serialized into the over-the-air content bundle, and what the generator
+// expands into full courses on device.
+export const BLUEPRINTS: CourseBlueprint[] = [
   germanFull,
   chineseFull,
   thaiFull,
@@ -62,8 +66,60 @@ export const COURSES: Course[] = [
   frenchFull,
   italianFull,
   sindarinBlueprint,
-].map((bp) => generateCourse(withGenerated(bp)));
+].map(withGenerated);
+
+// Bump when the blueprint schema OR generator changes in a way that needs a new
+// app build. Over-the-air bundles carry the same number; the app ignores a
+// bundle whose schema doesn't match (and keeps using the version bundled in the
+// binary), so old installs never crash on content authored for a newer engine.
+export const CONTENT_SCHEMA = 1;
+
+function buildCourses(blueprints: CourseBlueprint[]): Course[] {
+  return blueprints.map(generateCourse);
+}
+
+// The courses bundled in the binary — always available offline / on first run.
+const bundledCourses: Course[] = buildCourses(BLUEPRINTS);
+
+// The active course set. Starts as the bundled one and is swapped in-place when
+// a newer over-the-air bundle loads (see src/lib/remoteContent.ts). getCourse()
+// stays synchronous for all the screens that call it during render.
+let activeCourses: Course[] = bundledCourses;
+
+type Listener = () => void;
+const listeners = new Set<Listener>();
+/** Subscribe to active-content swaps (returns an unsubscribe fn). */
+export function onContentChange(fn: Listener): () => void {
+  listeners.add(fn);
+  return () => listeners.delete(fn);
+}
+
+/** Replace the active courses from an OTA blueprint set; notifies subscribers. */
+export function setActiveBlueprints(blueprints: CourseBlueprint[]): boolean {
+  try {
+    const next = buildCourses(blueprints);
+    if (!next.length) return false;
+    activeCourses = next;
+    listeners.forEach((fn) => fn());
+    return true;
+  } catch {
+    return false; // bad bundle: keep whatever was active
+  }
+}
+
+/** Reset back to the content bundled in the binary. */
+export function resetToBundledContent(): void {
+  activeCourses = bundledCourses;
+  listeners.forEach((fn) => fn());
+}
+
+export function getCourses(): Course[] {
+  return activeCourses;
+}
+
+/** Backwards-compatible alias; prefer getCourses() so OTA swaps are picked up. */
+export const COURSES: Course[] = bundledCourses;
 
 export function getCourse(code: string): Course | undefined {
-  return COURSES.find((c) => c.code === code);
+  return activeCourses.find((c) => c.code === code);
 }

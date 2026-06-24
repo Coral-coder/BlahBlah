@@ -24,6 +24,8 @@ import { StoriesListScreen } from "@/screens/StoriesListScreen";
 import { StoryScreen } from "@/screens/StoryScreen";
 import { TraceScreen } from "@/screens/TraceScreen";
 import { WordsScreen } from "@/screens/WordsScreen";
+import { onContentChange } from "@/curriculum";
+import { initRemoteContent } from "@/lib/remoteContent";
 import { setSfxEnabled } from "@/lib/sfx";
 import { setNeuralEnabled } from "@/lib/speech";
 import { NavProvider, useNav } from "@/navigation";
@@ -176,6 +178,14 @@ function Splash() {
 
 function Root() {
   const { ready, state } = useProgress();
+  const [, bumpContent] = useState(0);
+  useEffect(() => {
+    // Re-render the tree whenever an over-the-air content bundle swaps the active
+    // courses, then kick off the cached-then-network content load.
+    const unsub = onContentChange(() => bumpContent((n) => n + 1));
+    void initRemoteContent();
+    return unsub;
+  }, []);
   useEffect(() => {
     setNeuralEnabled(!!state.settings.neuralVoices);
   }, [state.settings.neuralVoices]);
