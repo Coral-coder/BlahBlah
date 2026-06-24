@@ -18,310 +18,6 @@ export const sections: SectionBlueprint[] = [
         "icon": "📚",
         "vocab": [
           {
-            "target": "ich",
-            "en": "I"
-          },
-          {
-            "target": "Sie",
-            "en": "you"
-          },
-          {
-            "target": "das",
-            "en": "the"
-          },
-          {
-            "target": "nicht",
-            "en": "not"
-          },
-          {
-            "target": "die",
-            "en": "that"
-          },
-          {
-            "target": "Es",
-            "en": "E"
-          },
-          {
-            "target": "und",
-            "en": "and"
-          },
-          {
-            "target": "wir",
-            "en": "we"
-          },
-          {
-            "target": "was",
-            "en": "what"
-          },
-          {
-            "target": "zu",
-            "en": "closed"
-          },
-          {
-            "target": "er",
-            "en": "he"
-          },
-          {
-            "target": "ein",
-            "en": "a"
-          },
-          {
-            "target": "in",
-            "en": "on"
-          },
-          {
-            "target": "Ja",
-            "en": "yes"
-          },
-          {
-            "target": "mir",
-            "en": "me"
-          },
-          {
-            "target": "mit",
-            "en": "as from"
-          },
-          {
-            "target": "wie",
-            "en": "as"
-          },
-          {
-            "target": "den",
-            "en": "who"
-          },
-          {
-            "target": "Aber",
-            "en": "but"
-          },
-          {
-            "target": "so",
-            "en": "in this way"
-          },
-          {
-            "target": "hier",
-            "en": "here"
-          },
-          {
-            "target": "haben",
-            "en": "hold"
-          },
-          {
-            "target": "für",
-            "en": "for"
-          },
-          {
-            "target": "von",
-            "en": "from"
-          },
-          {
-            "target": "wenn",
-            "en": "if"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u2",
-        "title": "Common words 26–50",
-        "subtitle": "The 26–50 most frequent words",
-        "cefr": "A1",
-        "color": "#1CB0F6",
-        "icon": "🗣️",
-        "vocab": [
-          {
-            "target": "dich",
-            "en": "thee"
-          },
-          {
-            "target": "Ihr",
-            "en": "yours"
-          },
-          {
-            "target": "Nein",
-            "en": "no"
-          },
-          {
-            "target": "Habe",
-            "en": "possessions"
-          },
-          {
-            "target": "an",
-            "en": "at"
-          },
-          {
-            "target": "noch",
-            "en": "more"
-          },
-          {
-            "target": "nur",
-            "en": "other than"
-          },
-          {
-            "target": "da",
-            "en": "when"
-          },
-          {
-            "target": "sich",
-            "en": "each other"
-          },
-          {
-            "target": "uns",
-            "en": "ourselves"
-          },
-          {
-            "target": "Hast",
-            "en": "hurry"
-          },
-          {
-            "target": "gut",
-            "en": "cum laude"
-          },
-          {
-            "target": "auch",
-            "en": "also"
-          },
-          {
-            "target": "schon",
-            "en": "just"
-          },
-          {
-            "target": "Sein",
-            "en": "existence"
-          },
-          {
-            "target": "Mal",
-            "en": "time"
-          },
-          {
-            "target": "jetzt",
-            "en": "now"
-          },
-          {
-            "target": "ihn",
-            "en": "him"
-          },
-          {
-            "target": "dann",
-            "en": "then"
-          },
-          {
-            "target": "Aus",
-            "en": "out of bounds"
-          },
-          {
-            "target": "meine",
-            "en": "mine"
-          },
-          {
-            "target": "um",
-            "en": "round"
-          },
-          {
-            "target": "mein",
-            "en": "my"
-          },
-          {
-            "target": "alles",
-            "en": "the lot"
-          },
-          {
-            "target": "weiß",
-            "en": "white"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u3",
-        "title": "Common words 51–75",
-        "subtitle": "The 51–75 most frequent words",
-        "cefr": "A1",
-        "color": "#CE82FF",
-        "icon": "✍️",
-        "vocab": [
-          {
-            "target": "oder",
-            "en": "or"
-          },
-          {
-            "target": "Nichts",
-            "en": "emptiness"
-          },
-          {
-            "target": "man",
-            "en": "one"
-          },
-          {
-            "target": "Werden",
-            "en": "development"
-          },
-          {
-            "target": "geht",
-            "en": "walks"
-          },
-          {
-            "target": "Etwas",
-            "en": "something"
-          },
-          {
-            "target": "oh",
-            "en": "uh"
-          },
-          {
-            "target": "Mehr",
-            "en": "increase"
-          },
-          {
-            "target": "bei",
-            "en": "care of"
-          },
-          {
-            "target": "also",
-            "en": "so"
-          },
-          {
-            "target": "Bitte",
-            "en": "plea"
-          },
-          {
-            "target": "immer",
-            "en": "always"
-          },
-          {
-            "target": "warum",
-            "en": "why"
-          },
-          {
-            "target": "Los",
-            "en": "lot"
-          },
-          {
-            "target": "Können",
-            "en": "workmanship"
-          },
-          {
-            "target": "wieder",
-            "en": "again"
-          },
-          {
-            "target": "Sagen",
-            "en": "legends"
-          },
-          {
-            "target": "machen",
-            "en": "make"
-          },
-          {
-            "target": "danke",
-            "en": "thanks"
-          },
-          {
-            "target": "sehr",
-            "en": "damned"
-          },
-          {
-            "target": "alle",
-            "en": "all"
-          },
-          {
             "target": "Mann",
             "en": "husband"
           },
@@ -330,26 +26,32 @@ export const sections: SectionBlueprint[] = [
             "en": "doing"
           },
           {
+            "target": "ihm",
+            "en": "him"
+          },
+          {
+            "target": "zum",
+            "en": "the"
+          },
+          {
             "target": "Gehen",
             "en": "going"
           },
           {
             "target": "Sehen",
             "en": "eyesight"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u4",
-        "title": "Common words 76–100",
-        "subtitle": "The 76–100 most frequent words",
-        "cefr": "A2",
-        "color": "#FF9600",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "vielleicht",
             "en": "perhaps"
+          },
+          {
+            "target": "wer",
+            "en": "who"
+          },
+          {
+            "target": "Ihre",
+            "en": "yours"
           },
           {
             "target": "diese",
@@ -362,6 +64,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Einer",
             "en": "unit"
+          },
+          {
+            "target": "über",
+            "en": "on"
           },
           {
             "target": "gibt",
@@ -405,12 +111,22 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Des",
-            "en": "D"
+            "en": "D sharp"
           },
           {
             "target": "einfach",
             "en": "unpretentious"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u2",
+        "title": "Common words 26–50",
+        "subtitle": "The 26–50 most frequent words",
+        "cefr": "A1",
+        "color": "#1CB0F6",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "Leben",
             "en": "life"
@@ -418,6 +134,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Zeit",
             "en": "spell"
+          },
+          {
+            "target": "weil",
+            "en": "as"
           },
           {
             "target": "kommen",
@@ -446,20 +166,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "weißt",
             "en": "limewashes"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u5",
-        "title": "Common words 101–125",
-        "subtitle": "The 101–125 most frequent words",
-        "cefr": "A2",
-        "color": "#FF4B4B",
-        "icon": "🍽️",
-        "vocab": [
-          {
-            "target": "ok",
-            "en": "all right"
           },
           {
             "target": "sicher",
@@ -472,6 +178,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Frau",
             "en": "woman"
+          },
+          {
+            "target": "nun",
+            "en": "now"
           },
           {
             "target": "bis",
@@ -516,7 +226,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Waren",
             "en": "items"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u3",
+        "title": "Common words 51–75",
+        "subtitle": "The 51–75 most frequent words",
+        "cefr": "A1",
+        "color": "#CE82FF",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "Klar",
             "en": "egg-white"
@@ -556,17 +276,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Reden",
             "en": "monologues"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u6",
-        "title": "Common words 126–150",
-        "subtitle": "The 126–150 most frequent words",
-        "cefr": "A2",
-        "color": "#2B70C9",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "Wohl",
             "en": "well-being"
@@ -574,6 +284,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Liebe",
             "en": "love"
+          },
+          {
+            "target": "sollte",
+            "en": "if"
           },
           {
             "target": "unsere",
@@ -590,10 +304,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "durch",
             "en": "by means of"
-          },
-          {
-            "target": "ob",
-            "en": "whether"
           },
           {
             "target": "Mutter",
@@ -620,9 +330,23 @@ export const sections: SectionBlueprint[] = [
             "en": "Bessi"
           },
           {
+            "target": "wieso",
+            "en": "why"
+          },
+          {
             "target": "selbst",
             "en": "personally"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u4",
+        "title": "Common words 76–100",
+        "subtitle": "The 76–100 most frequent words",
+        "cefr": "A2",
+        "color": "#FF9600",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "gehört",
             "en": "found out"
@@ -630,6 +354,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ohne",
             "en": "without"
+          },
+          {
+            "target": "meiner",
+            "en": "mine"
           },
           {
             "target": "helfen",
@@ -666,17 +394,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "dort",
             "en": "there"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u7",
-        "title": "Common words 151–175",
-        "subtitle": "The 151–175 most frequent words",
-        "cefr": "B1",
-        "color": "#FFC800",
-        "icon": "🧭",
-        "vocab": [
+          },
           {
             "target": "weiter",
             "en": "broader"
@@ -728,7 +446,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sollen",
             "en": "shall"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u5",
+        "title": "Common words 101–125",
+        "subtitle": "The 101–125 most frequent words",
+        "cefr": "A2",
+        "color": "#FF4B4B",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "Abend",
             "en": "evening"
@@ -776,17 +504,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Welt",
             "en": "world"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u8",
-        "title": "Common words 176–200",
-        "subtitle": "The 176–200 most frequent words",
-        "cefr": "B1",
-        "color": "#00CD9C",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "Unter",
             "en": "jack"
@@ -838,7 +556,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Ganze",
             "en": "whole"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u6",
+        "title": "Common words 126–150",
+        "subtitle": "The 126–150 most frequent words",
+        "cefr": "A2",
+        "color": "#2B70C9",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "genug",
             "en": "sufficient"
@@ -886,17 +614,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "dabei",
             "en": "with it"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u9",
-        "title": "Common words 201–225",
-        "subtitle": "The 201–225 most frequent words",
-        "cefr": "B1",
-        "color": "#58CC02",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "Familie",
             "en": "family"
@@ -934,6 +652,10 @@ export const sections: SectionBlueprint[] = [
             "en": "son"
           },
           {
+            "target": "wann",
+            "en": "when"
+          },
+          {
             "target": "fertig",
             "en": "beat"
           },
@@ -944,7 +666,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "allein",
             "en": "alone"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u7",
+        "title": "Common words 151–175",
+        "subtitle": "The 151–175 most frequent words",
+        "cefr": "B1",
+        "color": "#FFC800",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "beim",
             "en": "near the"
@@ -968,6 +700,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Hilfe",
             "en": "help"
+          },
+          {
+            "target": "verdammt",
+            "en": "damned"
           },
           {
             "target": "jeder",
@@ -996,17 +732,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "dazu",
             "en": "it"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u10",
-        "title": "Common words 226–250",
-        "subtitle": "The 226–250 most frequent words",
-        "cefr": "B2",
-        "color": "#1CB0F6",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "Bruder",
             "en": "brother"
@@ -1050,7 +776,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Sage",
             "en": "legend"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u8",
+        "title": "Common words 176–200",
+        "subtitle": "The 176–200 most frequent words",
+        "cefr": "B1",
+        "color": "#00CD9C",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "echt",
             "en": "authentic"
@@ -1106,17 +842,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Glück",
             "en": "good fortune"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u11",
-        "title": "Common words 251–275",
-        "subtitle": "The 251–275 most frequent words",
-        "cefr": "B2",
-        "color": "#CE82FF",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "letzte",
             "en": "ultimate"
@@ -1146,6 +872,10 @@ export const sections: SectionBlueprint[] = [
             "en": "show-stopping"
           },
           {
+            "target": "Eins",
+            "en": "one"
+          },
+          {
             "target": "Minuten",
             "en": "minutes"
           },
@@ -1156,7 +886,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "weit",
             "en": "ample"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u9",
+        "title": "Common words 201–225",
+        "subtitle": "The 201–225 most frequent words",
+        "cefr": "B1",
+        "color": "#58CC02",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "Ahnung",
             "en": "intuitiveness"
@@ -1216,17 +956,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "verrückt",
             "en": "lunatic"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u12",
-        "title": "Common words 276–300",
-        "subtitle": "The 276–300 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "🗣️",
-        "vocab": [
+          },
           {
             "target": "Neue",
             "en": "new member"
@@ -1266,7 +996,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "drin",
             "en": "within"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u10",
+        "title": "Common words 226–250",
+        "subtitle": "The 226–250 most frequent words",
+        "cefr": "B2",
+        "color": "#1CB0F6",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "ruhig",
             "en": "even"
@@ -1304,10 +1044,6 @@ export const sections: SectionBlueprint[] = [
             "en": "prospect"
           },
           {
-            "target": "je",
-            "en": "ever"
-          },
-          {
             "target": "woher",
             "en": "wherefrom"
           },
@@ -1320,23 +1056,17 @@ export const sections: SectionBlueprint[] = [
             "en": "racket"
           },
           {
+            "target": "keiner",
+            "en": "no"
+          },
+          {
             "target": "hört",
             "en": "listens"
           },
           {
             "target": "Verstehen",
             "en": "comprehension"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u13",
-        "title": "Common words 301–325",
-        "subtitle": "The 301–325 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "✍️",
-        "vocab": [
+          },
           {
             "target": "Spielen",
             "en": "play"
@@ -1376,7 +1106,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Ruhe",
             "en": "relaxation"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u11",
+        "title": "Common words 251–275",
+        "subtitle": "The 251–275 most frequent words",
+        "cefr": "B2",
+        "color": "#CE82FF",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "gewesen",
             "en": "been"
@@ -1422,6 +1162,10 @@ export const sections: SectionBlueprint[] = [
             "en": "related"
           },
           {
+            "target": "läuft",
+            "en": "walks"
+          },
+          {
             "target": "schwer",
             "en": "pregnantly"
           },
@@ -1436,17 +1180,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Wasser",
             "en": "water"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u14",
-        "title": "Common words 326–350",
-        "subtitle": "The 326–350 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "erste",
             "en": "first"
@@ -1482,7 +1216,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Wahrheit",
             "en": "verisimilitude"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u12",
+        "title": "Common words 276–300",
+        "subtitle": "The 276–300 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "Woche",
             "en": "week"
@@ -1494,6 +1238,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "deshalb",
             "en": "hence"
+          },
+          {
+            "target": "welche",
+            "en": "what"
           },
           {
             "target": "bestimmt",
@@ -1546,17 +1294,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Beste",
             "en": "best"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u15",
-        "title": "Common words 351–375",
-        "subtitle": "The 351–375 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🍽️",
-        "vocab": [
+          },
           {
             "target": "Ernst",
             "en": "seriousness"
@@ -1588,7 +1326,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "zwischen",
             "en": "betwixt"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u13",
+        "title": "Common words 301–325",
+        "subtitle": "The 301–325 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "eben",
             "en": "flush"
@@ -1656,17 +1404,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Captain",
             "en": "team captain"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u16",
-        "title": "Common words 376–400",
-        "subtitle": "The 376–400 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "Gesicht",
             "en": "facies"
@@ -1698,7 +1436,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "oft",
             "en": "often"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u14",
+        "title": "Common words 326–350",
+        "subtitle": "The 326–350 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "Sorge",
             "en": "worry"
@@ -1766,6 +1514,258 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "reicht",
             "en": "lasts out"
+          },
+          {
+            "target": "Fest",
+            "en": "celebration"
+          },
+          {
+            "target": "Besten",
+            "en": "bests"
+          },
+          {
+            "target": "Waffe",
+            "en": "gun"
+          },
+          {
+            "target": "kaum",
+            "en": "hardly"
+          },
+          {
+            "target": "irgendwas",
+            "en": "something"
+          },
+          {
+            "target": "klingt",
+            "en": "clinks"
+          },
+          {
+            "target": "Platz",
+            "en": "square"
+          },
+          {
+            "target": "Rede",
+            "en": "monologue"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u15",
+        "title": "Common words 351–375",
+        "subtitle": "The 351–375 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "Papa",
+            "en": "daddy"
+          },
+          {
+            "target": "falsch",
+            "en": "recreant"
+          },
+          {
+            "target": "sondern",
+            "en": "but"
+          },
+          {
+            "target": "Nummer",
+            "en": "act"
+          },
+          {
+            "target": "früher",
+            "en": "earlier"
+          },
+          {
+            "target": "Jungen",
+            "en": "boys"
+          },
+          {
+            "target": "wohin",
+            "en": "where"
+          },
+          {
+            "target": "außer",
+            "en": "out of"
+          },
+          {
+            "target": "früh",
+            "en": "early"
+          },
+          {
+            "target": "Setzen",
+            "en": "consolidation"
+          },
+          {
+            "target": "zuerst",
+            "en": "at first"
+          },
+          {
+            "target": "wahrscheinlich",
+            "en": "probable"
+          },
+          {
+            "target": "dürfen",
+            "en": "may"
+          },
+          {
+            "target": "jede",
+            "en": "anybody"
+          },
+          {
+            "target": "Arsch",
+            "en": "arse"
+          },
+          {
+            "target": "Telefon",
+            "en": "customer hotline"
+          },
+          {
+            "target": "Willkommen",
+            "en": "welcome"
+          },
+          {
+            "target": "Plan",
+            "en": "layout"
+          },
+          {
+            "target": "hierher",
+            "en": "hither"
+          },
+          {
+            "target": "Fehler",
+            "en": "mistake"
+          },
+          {
+            "target": "Dollar",
+            "en": "Tonga Paanga"
+          },
+          {
+            "target": "Zehn",
+            "en": "ten"
+          },
+          {
+            "target": "Pass",
+            "en": "col"
+          },
+          {
+            "target": "nächste",
+            "en": "next"
+          },
+          {
+            "target": "Stunde",
+            "en": "lesson"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u16",
+        "title": "Common words 376–400",
+        "subtitle": "The 376–400 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "Hände",
+            "en": "hands"
+          },
+          {
+            "target": "gegeben",
+            "en": "performed"
+          },
+          {
+            "target": "Menge",
+            "en": "batch"
+          },
+          {
+            "target": "langsam",
+            "en": "lazy"
+          },
+          {
+            "target": "bereits",
+            "en": "already"
+          },
+          {
+            "target": "Sechs",
+            "en": "six"
+          },
+          {
+            "target": "Büro",
+            "en": "office"
+          },
+          {
+            "target": "Wochen",
+            "en": "weeks"
+          },
+          {
+            "target": "Ruf",
+            "en": "reputation"
+          },
+          {
+            "target": "Schaffen",
+            "en": "tubs"
+          },
+          {
+            "target": "leider",
+            "en": "worse luck"
+          },
+          {
+            "target": "Scheiß",
+            "en": "crap"
+          },
+          {
+            "target": "Hölle",
+            "en": "purgatory"
+          },
+          {
+            "target": "trotzdem",
+            "en": "anyway"
+          },
+          {
+            "target": "Doktor",
+            "en": "medical doctor"
+          },
+          {
+            "target": "tja",
+            "en": "oh well"
+          },
+          {
+            "target": "voll",
+            "en": "at full blast"
+          },
+          {
+            "target": "Film",
+            "en": "picture"
+          },
+          {
+            "target": "überall",
+            "en": "here"
+          },
+          {
+            "target": "Hund",
+            "en": "mine car"
+          },
+          {
+            "target": "geworden",
+            "en": "developed"
+          },
+          {
+            "target": "direkt",
+            "en": "direct"
+          },
+          {
+            "target": "Tat",
+            "en": "crime"
+          },
+          {
+            "target": "Schiff",
+            "en": "ship"
+          },
+          {
+            "target": "wem",
+            "en": "whom"
           }
         ]
       }
