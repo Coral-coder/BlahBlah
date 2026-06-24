@@ -1,17 +1,19 @@
-🔊 Softer, richer sounds + ⌨️ Review keyboard fixes
+🔊 Softer sounds · ⌨️ Review fixes · 📚 Way more vocabulary · 🤖 Android builds
 
-• Sounds: correct / lesson-complete / wrong were re-done as soft, multi-voice
-  instrument tones (gentle harmonics + a little chorus) with a light reverb tail.
-  They should feel warm and roomy now — not harsh, not thin.
-• Review typing: the Check/Continue button now rises above the keyboard, the
-  return key submits your answer, and the box clears between cards. If you've
-  turned typing off in Settings, Review is now all tap-to-choose too.
+• Sounds: correct / complete / wrong are now soft, multi-voice instrument tones
+  with a light reverb tail — warm and roomy, not harsh or thin.
+• Review: the Check/Continue button rides above the keyboard, the return key
+  submits, the box clears between cards, and "turn off typing" now makes Review
+  all tap-to-choose too.
+• Vocabulary: German, Spanish, French and Italian each gained a new "Most common
+  words" section built from open data (high-frequency words + dictionary
+  translations). Hundreds of new words per language, validated before shipping.
+• Behind the scenes: the build pipeline now also produces Android releases.
 
 WHAT TO TEST
-• Answer correctly → warm chime with a short tail (not harsh).
-• Finish a lesson → fuller, triumphant fanfare.
-• Get one wrong → soft, low, gentle (not a buzzer).
-• Settings → Sound effects off → all silent.
-• Review (Profile → Review): with typing on, type an answer and hit return — it
-  should submit and the box should clear on the next card; the button stays above
-  the keyboard. With typing off, Review should show only tap-to-choose cards.
+• Answer correct/wrong, finish a lesson → sounds should be soft & full.
+• Review with typing on: type, press return → submits & clears next card; the
+  button stays above the keyboard. With typing off → only tap-to-choose.
+• Open German/Spanish/French/Italian → scroll to the new "Most common words"
+  section near the end and try a few lessons. (These are dictionary-sourced, so
+  flag any odd translation — the hand-authored early units remain the polished core.)
