@@ -80,6 +80,8 @@ export function ProfileScreen() {
           </View>
         </Card>
 
+        <PracticeCalendar history={state.xpHistory} />
+
         <Card>
           <View style={styles.questHead}>
             <Text style={styles.cardTitle}>Daily quests</Text>
@@ -269,6 +271,61 @@ export function ProfileScreen() {
   );
 }
 
+function dayKey(d: Date): string {
+  return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+}
+
+// 5-week heatmap of practice days, built from the persisted XP history.
+function PracticeCalendar({ history }: { history: Record<string, number> }) {
+  const WEEKS = 5;
+  const today = new Date();
+  // Build columns (weeks) of 7 days, ending with today in the last column.
+  const cells: { key: string; xp: number; today: boolean }[] = [];
+  const total = WEEKS * 7;
+  let active = 0;
+  for (let i = total - 1; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const key = dayKey(d);
+    const xp = history[key] ?? 0;
+    if (xp > 0) active++;
+    cells.push({ key, xp, today: i === 0 });
+  }
+  const shade = (xp: number) => {
+    if (xp <= 0) return theme.colors.surfaceAlt;
+    if (xp < 15) return "#1E4620";
+    if (xp < 30) return "#2E7D32";
+    if (xp < 60) return "#43A047";
+    return theme.colors.success;
+  };
+
+  return (
+    <Card>
+      <Text style={styles.cardTitle}>Practice calendar</Text>
+      <Text style={styles.cardSub}>{active} active day{active === 1 ? "" : "s"} in the last 5 weeks</Text>
+      <View style={styles.calGrid}>
+        {cells.map((c) => (
+          <View
+            key={c.key}
+            style={[
+              styles.calCell,
+              { backgroundColor: shade(c.xp) },
+              c.today && { borderColor: theme.colors.gold, borderWidth: 2 },
+            ]}
+          />
+        ))}
+      </View>
+      <View style={styles.calLegend}>
+        <Text style={styles.calLegendText}>Less</Text>
+        {[theme.colors.surfaceAlt, "#1E4620", "#2E7D32", "#43A047", theme.colors.success].map((c, i) => (
+          <View key={i} style={[styles.calCell, { backgroundColor: c, margin: 0 }]} />
+        ))}
+        <Text style={styles.calLegendText}>More</Text>
+      </View>
+    </Card>
+  );
+}
+
 function BigStat({ value, label, emoji }: { value: string; label: string; emoji: string }) {
   return (
     <View style={styles.bigStat}>
@@ -331,5 +388,16 @@ const styles = StyleSheet.create({
   chartVal: { color: theme.colors.textMuted, fontSize: 10, marginBottom: 2 },
   barTrack: { flex: 1, width: "70%", justifyContent: "flex-end" },
   chartLabel: { color: theme.colors.textMuted, fontSize: 11, marginTop: 4, fontWeight: "700" },
+  calGrid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 6,
+    marginTop: theme.spacing(2),
+    width: 7 * 28,
+    alignSelf: "center",
+  },
+  calCell: { width: 22, height: 22, borderRadius: 5, margin: 0 },
+  calLegend: { flexDirection: "row", alignItems: "center", gap: 5, marginTop: 12, justifyContent: "center" },
+  calLegendText: { color: theme.colors.textMuted, fontSize: 11, fontWeight: "700" },
 });
 
