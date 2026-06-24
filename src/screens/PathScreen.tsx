@@ -16,6 +16,8 @@ import { ProgressBar } from "@/components/ui";
 import { getCourse } from "@/curriculum";
 import { dueWords } from "@/lib/srs";
 import { speak } from "@/lib/speech";
+import { neuralAvailable } from "@/lib/neuralTts";
+import { installedModelForLocale, scanInstalled } from "@/lib/voiceModels";
 import { flattenCourse, type PathNode } from "@/curriculum/types";
 import { useNav } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
@@ -24,8 +26,12 @@ import { theme } from "@/theme";
 export function PathScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
-  const { state, courseProgress, currentStreak, xpToday, isCompleted, crownLevel, totalCrowns } =
+  const { state, courseProgress, currentStreak, xpToday, isCompleted, crownLevel, totalCrowns, setSettings } =
     useProgress();
+  const [voiceScanned, setVoiceScanned] = useState(false);
+  useEffect(() => {
+    scanInstalled().then(() => setVoiceScanned(true));
+  }, []);
 
   const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
   const cp = course ? courseProgress(course.code) : undefined;
@@ -151,6 +157,23 @@ export function PathScreen() {
         </View>
 
         <WordOfDay course={course} />
+
+        {neuralAvailable() &&
+        voiceScanned &&
+        !installedModelForLocale(course.speechLocale) &&
+        !state.settings.voicePromptDismissed ? (
+          <Pressable style={styles.voiceBanner} onPress={() => nav.navigate("settings")}>
+            <View style={{ flex: 1 }}>
+              <Text style={styles.voiceTitle}>🎧 Get a natural voice for {course.name}</Text>
+              <Text style={styles.voiceSub}>
+                Pronunciation is key — download a free, human-sounding voice →
+              </Text>
+            </View>
+            <Pressable hitSlop={12} onPress={() => setSettings({ voicePromptDismissed: true })}>
+              <Text style={styles.voiceDismiss}>✕</Text>
+            </Pressable>
+          </Pressable>
+        ) : null}
 
         {dueCount > 0 ? (
           <Pressable style={styles.dueBanner} onPress={() => nav.navigate("review")}>
@@ -421,6 +444,21 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: theme.colors.accent,
   },
+  voiceBanner: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+    margin: theme.spacing(2),
+    marginBottom: 0,
+    padding: theme.spacing(2),
+    borderRadius: theme.radius.lg,
+    backgroundColor: "#172a2e",
+    borderWidth: 1,
+    borderColor: theme.colors.accent,
+  },
+  voiceTitle: { color: theme.colors.accent, fontWeight: "800", fontSize: 15 },
+  voiceSub: { color: theme.colors.textMuted, marginTop: 3 },
+  voiceDismiss: { color: theme.colors.textMuted, fontSize: 18, fontWeight: "800" },
   wotdLabel: { color: theme.colors.accent, fontWeight: "900", letterSpacing: 1.5, fontSize: 11 },
   wotdRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 6 },
   wotdTarget: { color: theme.colors.text, fontWeight: "900", fontSize: 26 },

@@ -26,6 +26,8 @@ export interface Settings {
   neuralVoices: boolean;
   /** Challenge mode: turn word-bank exercises into typed answers. */
   hardMode: boolean;
+  /** Whether the "download a natural voice" prompt has been dismissed. */
+  voicePromptDismissed: boolean;
 }
 
 export interface LearnedWord {
@@ -167,7 +169,13 @@ const DEFAULT: Persisted = {
   xpToday: 0,
   reminderEnabled: false,
   reminderHour: 19,
-  settings: { apiKey: "", model: "claude-opus-4-8", neuralVoices: false, hardMode: false },
+  settings: {
+    apiKey: "",
+    model: "claude-opus-4-8",
+    neuralVoices: false,
+    hardMode: false,
+    voicePromptDismissed: false,
+  },
 };
 
 function dayStr(d: Date): string {

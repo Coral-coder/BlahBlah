@@ -115,6 +115,12 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Feedback pass** — audio exercises now swap to a written equivalent instead of a
+  free skip; the path re-scrolls so the next lesson sits in "second place"; richer
+  sound effects; supercharged lesson-complete (emoji pop, XP count-up, PERFECT
+  badge, more confetti); colorful tile menu; a first-run prompt to download a
+  natural voice ("pronunciation is key").
+
 - **Combo meter** — consecutive correct answers build a 🔥 combo in-lesson, with
   bonus XP for long perfect runs.
 - **Tricky words** — a Profile card surfacing your lowest-accuracy words (from
