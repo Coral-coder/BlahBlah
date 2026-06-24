@@ -20,7 +20,8 @@ export function LessonScreen() {
   const { courseCode, lessonId } = useRoute<{ courseCode: string; lessonId: string }>();
   const nav = useNav();
   const insets = useSafeAreaInsets();
-  const { completeLesson } = useProgress();
+  const { completeLesson, state } = useProgress();
+  const hardMode = state.settings.hardMode;
 
   const course = getCourse(courseCode);
   const node = useMemo(
@@ -33,8 +34,21 @@ export function LessonScreen() {
     setActiveGlossary(course?.code);
   }, [course]);
 
-  const total = node?.lesson.exercises.length ?? 0;
-  const [queue, setQueue] = useState<Exercise[]>(node ? [...node.lesson.exercises] : []);
+  // Challenge mode: convert word-bank tiles into typed answers for harder recall.
+  const harden = (ex: Exercise): Exercise =>
+    hardMode && ex.type === "wordbank"
+      ? {
+          type: "type",
+          prompt: "Type the translation",
+          question: ex.given,
+          answer: ex.answer,
+          speak: ex.speak,
+          pinyin: ex.pinyin,
+        }
+      : ex;
+  const exercises = node ? node.lesson.exercises.map(harden) : [];
+  const total = exercises.length;
+  const [queue, setQueue] = useState<Exercise[]>(exercises);
   const [response, setResponse] = useState<ExResponse>(null);
   const [phase, setPhase] = useState<"answer" | "checked">("answer");
   const [correct, setCorrect] = useState<boolean | null>(null);

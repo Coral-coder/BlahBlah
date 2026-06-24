@@ -115,6 +115,8 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Challenge mode** — a Settings toggle that turns word-bank exercises into
+  typed answers everywhere, for harder recall.
 - **Slow replay** — long-press any 🔊 (or the listen replay) to hear it slowly;
   works with both neural and system voices.
 - **Practice calendar** — a 5-week heatmap of your active days on the Profile tab,

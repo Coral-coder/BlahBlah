@@ -103,6 +103,19 @@ export function SettingsScreen() {
         <NeuralVoicesCard />
 
         <Card>
+          <Text style={styles.cardTitle}>Challenge mode ⚡</Text>
+          <Text style={styles.cardSub}>
+            Type your answers instead of tapping word tiles — harder recall, faster fluency.
+          </Text>
+          <Button
+            label={state.settings.hardMode ? "On ✓ — tap to turn off" : "Turn on challenge mode"}
+            variant={state.settings.hardMode ? "primary" : "ghost"}
+            onPress={() => setSettings({ hardMode: !state.settings.hardMode })}
+            style={{ marginTop: theme.spacing(2) }}
+          />
+        </Card>
+
+        <Card>
           <Text style={styles.cardTitle}>Daily reminder</Text>
           <Text style={styles.cardSub}>
             Get a nudge to practice every day and keep your streak going.

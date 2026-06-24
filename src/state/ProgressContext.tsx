@@ -24,6 +24,8 @@ export interface Settings {
   model: ModelId;
   /** Use downloaded on-device neural voices when available. */
   neuralVoices: boolean;
+  /** Challenge mode: turn word-bank exercises into typed answers. */
+  hardMode: boolean;
 }
 
 export interface LearnedWord {
@@ -146,7 +148,7 @@ const DEFAULT: Persisted = {
   xpToday: 0,
   reminderEnabled: false,
   reminderHour: 19,
-  settings: { apiKey: "", model: "claude-opus-4-8", neuralVoices: false },
+  settings: { apiKey: "", model: "claude-opus-4-8", neuralVoices: false, hardMode: false },
 };
 
 function dayStr(d: Date): string {
