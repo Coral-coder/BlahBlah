@@ -1,15 +1,13 @@
-🌍 New languages!
+🔊 Better sounds + deeper languages
 
-• French 🇫🇷 and Italian 🇮🇹 — full courses (greetings + food to start), with
-  downloadable natural neural voices (Settings → Natural voices).
-• Elvish (Sindarin) 🧝 — a for-fun mythical language pack with iconic words and
-  phrases (mae govannen!). Uses the system voice — it's a novelty, learn it for joy.
-
-This is a "prove it" set showing the full treatment end-to-end; more of the
-world's top languages will get the same packs next.
+• Brand-new sound effects — the correct / complete / wrong sounds are now real
+  plucked-string instrument tones (harp/guitar) with a soft reverb. Warm, not buzzy.
+• French 🇫🇷 and Italian 🇮🇹 are much deeper now — added Family and Numbers & Time
+  units (≈90 words / 225 lessons each).
+• Under the hood: an automated content checker now guards every lesson in every
+  language so nothing broken can ship.
 
 WHAT TO TEST
-• Profile → Switch language → pick French, Italian, or Elvish.
-• Do the first lessons; for French/Italian, download the voice in Settings and
-  confirm it sounds natural.
-• Elvish: confirm it loads and plays through lessons (audio is the system voice).
+• Get an answer right / wrong, and finish a lesson — listen to the new sounds.
+  (Settings → Sound effects lets you mute them.)
+• Switch to French or Italian and play past the first units into Family / Numbers.
