@@ -30,6 +30,9 @@ on:
       - "v*"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   android:
     name: Build signed Android release
@@ -96,6 +99,11 @@ jobs:
           mkdir -p dist
           find android/app/build/outputs -name "*.aab" -exec cp {} dist/ \;
           find android/app/build/outputs/apk/release -name "*.apk" -exec cp {} dist/ \;
+          # Stable, predictable names for the public install link.
+          APK=$(find dist -name "*.apk" | head -1)
+          AAB=$(find dist -name "*.aab" | head -1)
+          [ -n "$APK" ] && cp "$APK" dist/blahblah-latest.apk
+          [ -n "$AAB" ] && cp "$AAB" dist/blahblah-latest.aab
           echo "Artifacts:"; ls -la dist
 
       - name: Upload Android artifacts
@@ -105,6 +113,21 @@ jobs:
           path: dist/*
           if-no-files-found: error
           retention-days: 30
+
+      - name: Publish APK to the "android-latest" release (tap-to-install link)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if ! gh release view android-latest >/dev/null 2>&1; then
+            gh release create android-latest \
+              --title "Latest Android build" \
+              --notes "Newest installable Android build (sideload the .apk). Auto-updated by CI." \
+              --latest=false
+          fi
+          gh release upload android-latest dist/blahblah-latest.apk dist/blahblah-latest.aab --clobber
+          echo "Published APK: https://github.com/Coral-coder/BlahBlah/releases/download/android-latest/blahblah-latest.apk"
+
 
       - name: Publish to Google Play internal track (if configured)
         # The `secrets` context isn't allowed in `if:`, so gate inside the script:
