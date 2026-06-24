@@ -17,6 +17,8 @@ import { italianBlueprint } from "@/curriculum/blueprints/it";
 import { italianExtraSections } from "@/curriculum/blueprints/it_extra";
 import { italianThemeSections } from "@/curriculum/blueprints/it_themes";
 import { sindarinBlueprint } from "@/curriculum/blueprints/sindarin";
+import { klingonBlueprint } from "@/curriculum/blueprints/klingon";
+import { dovahzulBlueprint } from "@/curriculum/blueprints/dovahzul";
 import { generatedSections } from "@/curriculum/blueprints/generated";
 
 // Append any pipeline-generated sections for a language onto its blueprint.
@@ -66,6 +68,8 @@ export const BLUEPRINTS: CourseBlueprint[] = [
   frenchFull,
   italianFull,
   sindarinBlueprint,
+  klingonBlueprint,
+  dovahzulBlueprint,
 ].map(withGenerated);
 
 // Bump when the blueprint schema OR generator changes in a way that needs a new
