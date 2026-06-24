@@ -4,6 +4,7 @@ import { SafeAreaProvider, useSafeAreaInsets } from "react-native-safe-area-cont
 
 import { AchievementsScreen } from "@/screens/AchievementsScreen";
 import { LeagueScreen } from "@/screens/LeagueScreen";
+import { FlashcardsScreen } from "@/screens/FlashcardsScreen";
 import { AIStoryScreen } from "@/screens/AIStoryScreen";
 import { CourseSelectScreen } from "@/screens/CourseSelectScreen";
 import { GameScreen } from "@/screens/GameScreen";
@@ -148,6 +149,8 @@ function RouterInner() {
       return <AchievementsScreen />;
     case "league":
       return <LeagueScreen />;
+    case "flashcards":
+      return <FlashcardsScreen />;
     default:
       return <Shell />;
   }

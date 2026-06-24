@@ -115,6 +115,9 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Flashcards** — a classic self-test deck over your learned words: tap to flip
+  (with audio), mark "Got it"/"Again"; missed cards loop until the deck clears.
+
 - **Feedback pass** — audio exercises now swap to a written equivalent instead of a
   free skip; the path re-scrolls so the next lesson sits in "second place"; richer
   sound effects; supercharged lesson-complete (emoji pop, XP count-up, PERFECT

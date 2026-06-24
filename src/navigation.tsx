@@ -28,7 +28,8 @@ export type ScreenName =
   | "dictation"
   | "roleplay"
   | "achievements"
-  | "league";
+  | "league"
+  | "flashcards";
 
 export type RouteParams = Record<string, unknown>;
 export interface Route {

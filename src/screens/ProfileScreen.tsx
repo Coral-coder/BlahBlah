@@ -30,6 +30,7 @@ const PLAY_TILES: {
   { label: "News", emoji: "📰", color: "#4DB6AC", route: "news" },
   { label: "AI Story", emoji: "✨", color: "#7C4DFF", route: "aistory" },
   { label: "Words", emoji: "📖", color: "#58CC02", route: "words" },
+  { label: "Flashcards", emoji: "🃏", color: "#EC407A", route: "flashcards" },
   { label: "Match Blitz", emoji: "⚡", color: "#FFB300", route: "game" },
   { label: "Writing", emoji: "✍️", color: "#26C6DA", route: "trace" },
 ];
