@@ -1,13 +1,14 @@
-🔊 Better sounds + deeper languages
+⌨️➡️👆 Hate typing? Turn it off.
 
-• Brand-new sound effects — the correct / complete / wrong sounds are now real
-  plucked-string instrument tones (harp/guitar) with a soft reverb. Warm, not buzzy.
-• French 🇫🇷 and Italian 🇮🇹 are much deeper now — added Family and Numbers & Time
-  units (≈90 words / 225 lessons each).
-• Under the hood: an automated content checker now guards every lesson in every
-  language so nothing broken can ship.
+• New: Settings → "Typing exercises" → turn OFF, and every typing exercise
+  becomes a tap-the-tiles word bank instead. No more typing if you don't want it.
+
+Also in this build:
+• New plucked-string instrument sound effects (warm, not buzzy) — mute them in
+  Settings → Sound effects if you like.
+• French 🇫🇷 and Italian 🇮🇹 are deeper now (Family + Numbers & Time units).
 
 WHAT TO TEST
-• Get an answer right / wrong, and finish a lesson — listen to the new sounds.
-  (Settings → Sound effects lets you mute them.)
-• Switch to French or Italian and play past the first units into Family / Numbers.
+• Settings → Typing exercises → Off, then do a review lesson — confirm you only
+  ever tap tiles, never type.
+• Listen to the new correct/complete/wrong sounds.
