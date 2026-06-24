@@ -22,7 +22,10 @@ name: Android → release build
 on:
   push:
     branches:
+      # Delivery branch ships; the dreaming branch builds artifacts for testing
+      # without triggering an iOS TestFlight upload.
       - "claude/stoic-newton-or77ao"
+      - "claude/blahblah-next"
     tags:
       - "v*"
   workflow_dispatch:
