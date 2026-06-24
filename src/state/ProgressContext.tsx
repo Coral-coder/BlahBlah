@@ -52,6 +52,24 @@ export interface DailyQuests {
 
 const MAX_FREEZES = 2;
 const FREEZE_COST = 50;
+const WAGER_STAKE = 50;
+const WAGER_REWARD = 100;
+const WAGER_DAYS = 7;
+
+export interface Wager {
+  startDay: string;
+  days: number;
+  stake: number;
+  reward: number;
+  /** Day-strings on which a lesson was completed during the wager. */
+  completed: string[];
+}
+
+export type WagerState =
+  | { kind: "none" }
+  | { kind: "active"; done: number; target: number; todayDone: boolean }
+  | { kind: "won"; reward: number }
+  | { kind: "lost" };
 
 // Daily quest pool — two difficulty tiers per kind. One of each kind is offered
 // per day, with the tier picked deterministically from the date.
@@ -121,6 +139,7 @@ export interface Persisted {
   gems: number;
   maxStreak: number;
   streakFreezes: number;
+  wager?: Wager | null;
   quests?: DailyQuests;
   streak: number;
   lastActiveDay?: string;
@@ -163,6 +182,11 @@ function parseDay(s: string): Date {
   const [y, m, d] = s.split("-").map(Number);
   return new Date(y, m - 1, d);
 }
+function addDays(s: string, n: number): string {
+  const d = parseDay(s);
+  d.setDate(d.getDate() + n);
+  return dayStr(d);
+}
 /** Whole calendar days between two day-strings (b - a). */
 function daysBetween(a: string, b: string): number {
   const ms = parseDay(b).getTime() - parseDay(a).getTime();
@@ -180,6 +204,10 @@ interface ProgressContextValue {
   todayQuests: DailyQuests;
   claimQuest: (index: number) => void;
   buyStreakFreeze: () => boolean;
+  /** Double-or-Nothing wager helpers. */
+  wagerState: () => WagerState;
+  startWager: () => boolean;
+  claimWager: () => void;
   setCurrentCourse: (code: string) => void;
   courseProgress: (code: string) => CourseProgress;
   isCompleted: (code: string, lessonId: string) => boolean;
@@ -274,6 +302,43 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
           gems: state.gems + q.reward,
           quests: { day: todayQuests.day, items },
         });
+      },
+      wagerState: (): WagerState => {
+        const w = state.wager;
+        if (!w) return { kind: "none" };
+        const have = new Set(w.completed);
+        const elapsed = daysBetween(w.startDay, today); // 0 on start day
+        // Every fully-elapsed day in the window must have a completion.
+        for (let i = 0; i < Math.min(elapsed, w.days); i++) {
+          if (!have.has(addDays(w.startDay, i))) return { kind: "lost" };
+        }
+        let done = 0;
+        for (let i = 0; i < w.days; i++) if (have.has(addDays(w.startDay, i))) done++;
+        if (done >= w.days) return { kind: "won", reward: w.reward };
+        return { kind: "active", done, target: w.days, todayDone: have.has(today) };
+      },
+      startWager: () => {
+        if (state.wager || state.gems < WAGER_STAKE) return false;
+        const today2 = dayStr(new Date());
+        persist({
+          ...state,
+          gems: state.gems - WAGER_STAKE,
+          wager: { startDay: today2, days: WAGER_DAYS, stake: WAGER_STAKE, reward: WAGER_REWARD, completed: [] },
+        });
+        return true;
+      },
+      claimWager: () => {
+        const w = state.wager;
+        if (!w) return;
+        const have = new Set(w.completed);
+        let done = 0;
+        for (let i = 0; i < w.days; i++) if (have.has(addDays(w.startDay, i))) done++;
+        if (done >= w.days) {
+          persist({ ...state, gems: state.gems + w.reward, wager: null });
+        } else {
+          // Lost or abandoned — clear it.
+          persist({ ...state, wager: null });
+        }
       },
       buyStreakFreeze: () => {
         if (state.gems < FREEZE_COST || state.streakFreezes >= MAX_FREEZES) return false;
@@ -379,6 +444,14 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
           gems: state.gems + 1,
           maxStreak: Math.max(state.maxStreak, streak),
           streakFreezes,
+          wager: state.wager
+            ? {
+                ...state.wager,
+                completed: state.wager.completed.includes(today2)
+                  ? state.wager.completed
+                  : [...state.wager.completed, today2],
+              }
+            : state.wager,
           quests: advanceQuests(state.quests, today2, { xp: xpEarned, lessons: 1 }),
           streak,
           lastActiveDay,

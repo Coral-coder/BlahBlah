@@ -115,6 +115,8 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Double or Nothing** — wager 💎50 that you'll practice every day for 7 days to
+  win 💎100. Tracked by completion days; miss one and it's lost.
 - **Weekly League** — a Duolingo-style XP leaderboard with simulated rivals,
   promotion/demotion zones, and tiers (Bronze→Diamond). Fully local & deterministic
   per week; your XP is real.

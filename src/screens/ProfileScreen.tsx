@@ -23,7 +23,11 @@ export function ProfileScreen() {
     todayQuests,
     claimQuest,
     buyStreakFreeze,
+    wagerState,
+    startWager,
+    claimWager,
   } = useProgress();
+  const wager = wagerState();
   const week = weeklyXp();
   const weekMax = Math.max(1, ...week.map((d) => d.xp));
   const weekTotal = week.reduce((s, d) => s + d.xp, 0);
@@ -149,6 +153,43 @@ export function ProfileScreen() {
             disabled={state.streakFreezes >= 2 || state.gems < 50}
             style={{ marginTop: theme.spacing(1.5) }}
           />
+        </Card>
+
+        <Card>
+          <Text style={styles.cardTitle}>🎲 Double or Nothing</Text>
+          {wager.kind === "none" ? (
+            <>
+              <Text style={styles.cardSub}>
+                Wager 💎 50 that you'll practice every day for 7 days. Win 💎 100.
+              </Text>
+              <Button
+                label={state.gems < 50 ? `Need 💎 50 (you have ${state.gems})` : "Start the wager · 💎 50"}
+                onPress={() => startWager()}
+                disabled={state.gems < 50}
+                style={{ marginTop: theme.spacing(1.5) }}
+              />
+            </>
+          ) : wager.kind === "active" ? (
+            <>
+              <Text style={styles.cardSub}>
+                Day {wager.done}/{wager.target} ·{" "}
+                {wager.todayDone ? "✓ done today — keep it up!" : "practice today to stay in!"}
+              </Text>
+              <View style={{ marginTop: 12 }}>
+                <ProgressBar progress={wager.done / wager.target} color={theme.colors.gold} />
+              </View>
+            </>
+          ) : wager.kind === "won" ? (
+            <>
+              <Text style={styles.cardSub}>🎉 You did it! Claim your 💎 {wager.reward}.</Text>
+              <Button label={`Claim 💎 ${wager.reward}`} onPress={() => claimWager()} style={{ marginTop: theme.spacing(1.5) }} />
+            </>
+          ) : (
+            <>
+              <Text style={styles.cardSub}>💔 You missed a day — the wager is lost.</Text>
+              <Button label="Clear" variant="ghost" onPress={() => claimWager()} style={{ marginTop: theme.spacing(1.5) }} />
+            </>
+          )}
         </Card>
 
         <Card>
