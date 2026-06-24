@@ -6,7 +6,7 @@ import type { Exercise } from "@/curriculum/types";
 import { normalize, shuffle } from "@/lesson/engine";
 import { accentChars } from "@/lib/accents";
 import { glossWord } from "@/lib/glossary";
-import { getSpeechLocale, speak } from "@/lib/speech";
+import { getSpeechLocale, speak, speakSlow } from "@/lib/speech";
 import { playSfx } from "@/lib/sfx";
 import { theme } from "@/theme";
 
@@ -160,7 +160,12 @@ function pronunciationScore(expected: string, heard: string): number {
 
 function Speaker({ text, big }: { text: string; big?: boolean }) {
   return (
-    <Pressable onPress={() => speak(text)} hitSlop={10} style={styles.speaker}>
+    <Pressable
+      onPress={() => speak(text)}
+      onLongPress={() => speakSlow(text)}
+      hitSlop={10}
+      style={styles.speaker}
+    >
       <Text style={{ fontSize: big ? 30 : 18 }}>🔊</Text>
     </Pressable>
   );
@@ -342,9 +347,13 @@ function WordbankView({
     <View style={styles.body}>
       <Instruction text={exercise.prompt} />
       {listen ? (
-        <Pressable style={styles.bigSpeak} onPress={() => speak(exercise.speak ?? "")}>
+        <Pressable
+          style={styles.bigSpeak}
+          onPress={() => speak(exercise.speak ?? "")}
+          onLongPress={() => speakSlow(exercise.speak ?? "")}
+        >
           <Text style={{ fontSize: 36 }}>🔊</Text>
-          <Text style={styles.bigSpeakLabel}>Tap to replay</Text>
+          <Text style={styles.bigSpeakLabel}>Tap to replay · hold for slow</Text>
         </Pressable>
       ) : (
         <View style={styles.questionRow}>

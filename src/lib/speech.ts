@@ -28,7 +28,7 @@ function playFile(path: string): void {
 }
 
 // Returns true if it handled speaking via the neural engine.
-async function speakNeural(text: string, locale: string): Promise<boolean> {
+async function speakNeural(text: string, locale: string, slow: boolean): Promise<boolean> {
   const model = installedModelForLocale(locale);
   if (!model) return false;
   const ok = await loadNeuralModel({
@@ -38,7 +38,9 @@ async function speakNeural(text: string, locale: string): Promise<boolean> {
     dataDir: model.dataDir,
   });
   if (!ok) return false;
-  const path = await synthesizeToFile(text, { sid: model.sid, speed: model.speed });
+  // Higher speed value = slower speech in sherpa-onnx (length scale).
+  const speed = slow ? model.speed * 1.5 : model.speed;
+  const path = await synthesizeToFile(text, { sid: model.sid, speed });
   if (!path) return false;
   playFile(path);
   return true;
@@ -147,25 +149,32 @@ export async function hasNaturalVoice(locale: string): Promise<boolean> {
  * Speak text in the active locale's voice. Sets the voice/language on every call
  * so rapidly switching languages can't leave a stale voice selected.
  */
-export function speak(text: string, languageTag?: string): void {
+export function speak(text: string, languageTag?: string, opts?: { slow?: boolean }): void {
   ensureInit();
+  const slow = !!opts?.slow;
   const locale = languageTag ?? currentLocale;
   const spoken = locale?.startsWith("zh") ? text.replace(/\s+/g, "") : text;
 
   // Prefer the on-device neural voice when enabled and installed for this locale.
   if (neuralEnabled && neuralAvailable() && locale) {
     Tts.stop();
-    speakNeural(spoken, locale).then((handled) => {
-      if (!handled) systemSpeak(spoken, locale);
+    speakNeural(spoken, locale, slow).then((handled) => {
+      if (!handled) systemSpeak(spoken, locale, slow);
     });
     return;
   }
-  systemSpeak(spoken, locale);
+  systemSpeak(spoken, locale, slow);
 }
 
-function systemSpeak(spoken: string, locale?: string): void {
+/** Convenience: speak slowly (for a long-press "hear it slowly" affordance). */
+export function speakSlow(text: string, languageTag?: string): void {
+  speak(text, languageTag, { slow: true });
+}
+
+function systemSpeak(spoken: string, locale?: string, slow?: boolean): void {
   try {
     Tts.stop();
+    Tts.setDefaultRate(slow ? 0.3 : 0.48);
     if (locale) {
       const vid = chosenVoice[locale];
       if (vid) Tts.setDefaultVoice(vid).catch(() => {});

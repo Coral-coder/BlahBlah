@@ -115,6 +115,8 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Slow replay** — long-press any 🔊 (or the listen replay) to hear it slowly;
+  works with both neural and system voices.
 - **Practice calendar** — a 5-week heatmap of your active days on the Profile tab,
   built from XP history (GitHub-contributions style).
 - **Accent bar** — a tap row of language-specific special characters
