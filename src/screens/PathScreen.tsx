@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
+import { Confetti } from "@/components/Confetti";
 import { Mascot } from "@/components/Mascot";
 import { ProgressBar } from "@/components/ui";
 import { getCourse } from "@/curriculum";
@@ -26,12 +27,29 @@ import { theme } from "@/theme";
 export function PathScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
-  const { state, courseProgress, currentStreak, xpToday, isCompleted, crownLevel, totalCrowns, setSettings } =
+  const { state, courseProgress, currentStreak, xpToday, isCompleted, crownLevel, totalCrowns, setSettings, markGoalCelebrated } =
     useProgress();
   const [voiceScanned, setVoiceScanned] = useState(false);
   useEffect(() => {
     scanInstalled().then(() => setVoiceScanned(true));
   }, []);
+
+  // Celebrate the first time the daily goal is reached each day.
+  const [celebrate, setCelebrate] = useState(false);
+  const todayKey = (() => {
+    const d = new Date();
+    return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+  })();
+  const goalMet = state.dailyGoal > 0 && xpToday >= state.dailyGoal;
+  useEffect(() => {
+    if (goalMet && state.goalCelebratedDay !== todayKey) {
+      setCelebrate(true);
+      markGoalCelebrated();
+      const t = setTimeout(() => setCelebrate(false), 4000);
+      return () => clearTimeout(t);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [goalMet, state.goalCelebratedDay]);
 
   const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
   const cp = course ? courseProgress(course.code) : undefined;
@@ -253,6 +271,14 @@ export function PathScreen() {
           );
         })}
       </ScrollView>
+      {celebrate ? (
+        <View style={styles.goalCelebrate} pointerEvents="none">
+          <Confetti count={50} />
+          <View style={styles.goalToast}>
+            <Text style={styles.goalToastText}>🎉 Daily goal reached!</Text>
+          </View>
+        </View>
+      ) : null}
     </View>
   );
 }
@@ -445,6 +471,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: theme.colors.accent,
   },
+  goalCelebrate: { ...StyleSheet.absoluteFillObject, alignItems: "center", justifyContent: "center" },
+  goalToast: {
+    backgroundColor: theme.colors.gold,
+    paddingHorizontal: 22,
+    paddingVertical: 14,
+    borderRadius: 999,
+    ...theme.shadow,
+  },
+  goalToastText: { color: theme.colors.bg, fontWeight: "900", fontSize: 18 },
   voiceBanner: {
     flexDirection: "row",
     alignItems: "center",

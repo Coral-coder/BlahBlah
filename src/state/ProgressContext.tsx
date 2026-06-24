@@ -150,6 +150,8 @@ export interface Persisted {
   xpTodayDay?: string;
   reminderEnabled: boolean;
   reminderHour: number;
+  /** Day-string on which the daily-goal celebration was last shown. */
+  goalCelebratedDay?: string;
   settings: Settings;
 }
 
@@ -237,6 +239,8 @@ interface ProgressContextValue {
   recordWordResult: (code: string, target: string, correct: boolean) => void;
   applyPlacement: (code: string, completedLessonIds: string[]) => void;
   setDailyGoal: (goal: number) => void;
+  /** Record that today's daily-goal celebration has been shown. */
+  markGoalCelebrated: () => void;
   setReminder: (enabled: boolean, hour: number) => void;
   setSettings: (partial: Partial<Settings>) => void;
   resetCourse: (code: string) => void;
@@ -477,6 +481,7 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
         });
       },
       setDailyGoal: (goal) => persist({ ...state, dailyGoal: goal }),
+      markGoalCelebrated: () => persist({ ...state, goalCelebratedDay: dayStr(new Date()) }),
       setReminder: (enabled, hour) =>
         persist({ ...state, reminderEnabled: enabled, reminderHour: hour }),
       setSettings: (partial) =>
