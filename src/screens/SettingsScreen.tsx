@@ -19,6 +19,16 @@ import { useNav } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
 import { theme } from "@/theme";
 
+const WHATS_NEW = [
+  "On-device natural voices (incl. Icelandic) — download in Settings",
+  "Type-the-translation exercise + accent bar",
+  "Weekly League, Double-or-Nothing, daily quests & streak freezes",
+  "Flashcards, Word of the Day, Tricky words",
+  "In-lesson combo meter & a juicier lesson-complete screen",
+  "Tap-to-translate any word; long-press 🔊 for slow audio",
+  "Crowns, achievements, practice calendar & progress sharing",
+];
+
 const TIMES = [8, 12, 17, 20];
 const fmtHour = (h: number) =>
   h === 12 ? "12 PM" : h > 12 ? `${h - 12} PM` : `${h} AM`;
@@ -220,10 +230,19 @@ export function SettingsScreen() {
         </Card>
 
         <Card>
+          <Text style={styles.cardTitle}>What's new ✨</Text>
+          {WHATS_NEW.map((line) => (
+            <Text key={line} style={styles.whatsNew}>
+              • {line}
+            </Text>
+          ))}
+        </Card>
+
+        <Card>
           <Text style={styles.cardTitle}>About</Text>
           <Text style={styles.cardSub}>
             BlahBlah — learn languages through a guided, structured path of bite-sized lessons.
-            Version 0.2.0.
+            Version 0.3.0.
           </Text>
         </Card>
       </ScrollView>
@@ -332,6 +351,7 @@ const styles = StyleSheet.create({
   cardTitle: { color: theme.colors.text, fontSize: 18, fontWeight: "800" },
   cardSub: { color: theme.colors.textMuted, marginTop: 6, lineHeight: 20 },
   warn: { color: theme.colors.gold, marginTop: 10, fontWeight: "600" },
+  whatsNew: { color: theme.colors.textMuted, marginTop: 8, lineHeight: 20 },
   voiceRow: { flexDirection: "row", alignItems: "center", gap: 12 },
   voiceLang: { color: theme.colors.text, fontSize: 16, fontWeight: "700" },
   voiceMeta: { color: theme.colors.textMuted, marginTop: 2, fontSize: 13 },
