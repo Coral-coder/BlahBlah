@@ -1,11 +1,12 @@
-🎤 Speaking exercises now auto-confirm
+🔊 Richer sound effects (now with reverb)
 
-• Just tap the mic once and say the sentence — it detects when you've finished,
-  scores you automatically, and moves on if you got it right. No more tapping
-  the button twice.
-
-(Also continuing to deepen the courses — French & Italian keep growing.)
+• The correct / lesson-complete / wrong sounds were re-synthesized with a
+  Freeverb-style reverb and a sub-octave body layer over the plucked-string
+  tones. They should sound warmer and fuller now, with a real tail — not thin.
 
 WHAT TO TEST
-• Do a speaking exercise: tap mic, say the line, then stop talking — it should
-  score on its own and advance when correct.
+• Answer a question correctly → the "correct" chime should sound full, with a
+  short reverb tail (not a flat beep).
+• Finish a lesson → the completion fanfare should feel triumphant and roomy.
+• Get one wrong → the "wrong" sound should be soft and low, not harsh.
+• Toggle Settings → Sound effects off and confirm they go silent.

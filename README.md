@@ -115,6 +115,11 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Reverb sound effects** — re-synthesized correct/complete/wrong with a
+  Freeverb-style reverb (parallel comb + series allpass filters) over the
+  Karplus-Strong plucks, plus a sub-octave body layer. Warmer, fuller, with real
+  tail — no more thin/weak beeps.
+
 - **Auto-confirm speaking** — speaking exercises now detect when you stop talking,
   score automatically, and auto-advance when correct. No more double-tap.
 
