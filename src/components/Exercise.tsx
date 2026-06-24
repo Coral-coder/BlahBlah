@@ -4,6 +4,7 @@ import { ActivityIndicator, Pressable, StyleSheet, Text, TextInput, View } from 
 
 import type { Exercise } from "@/curriculum/types";
 import { normalize, shuffle } from "@/lesson/engine";
+import { accentChars } from "@/lib/accents";
 import { glossWord } from "@/lib/glossary";
 import { getSpeechLocale, speak } from "@/lib/speech";
 import { playSfx } from "@/lib/sfx";
@@ -415,6 +416,11 @@ function TypeView({
   onChange,
 }: Props & { exercise: Extract<Exercise, { type: "type" }> }) {
   const [text, setText] = useState("");
+  const setBoth = (t: string) => {
+    setText(t);
+    onChange(t.trim() ? t : null);
+  };
+  const accents = accentChars(getSpeechLocale());
   return (
     <View style={styles.body}>
       <Instruction text={exercise.prompt} />
@@ -424,10 +430,7 @@ function TypeView({
       </View>
       <TextInput
         value={text}
-        onChangeText={(t) => {
-          setText(t);
-          onChange(t.trim() ? t : null);
-        }}
+        onChangeText={setBoth}
         editable={!revealed}
         placeholder="Type your translation…"
         placeholderTextColor={theme.colors.textMuted}
@@ -442,6 +445,15 @@ function TypeView({
           },
         ]}
       />
+      {!revealed && accents.length > 0 ? (
+        <View style={styles.accentBar}>
+          {accents.map((c) => (
+            <Pressable key={c} onPress={() => setBoth(text + c)} style={styles.accentKey}>
+              <Text style={styles.accentKeyText}>{c}</Text>
+            </Pressable>
+          ))}
+        </View>
+      ) : null}
       {revealed && !correct ? (
         <Text style={styles.correctHint}>Answer: {exercise.answer}</Text>
       ) : null}
@@ -795,6 +807,18 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     textAlignVertical: "top",
   },
+  accentBar: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginTop: 10 },
+  accentKey: {
+    minWidth: 40,
+    alignItems: "center",
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    borderRadius: theme.radius.sm,
+    borderWidth: 1,
+    borderColor: theme.colors.border,
+    backgroundColor: theme.colors.surfaceAlt,
+  },
+  accentKeyText: { color: theme.colors.text, fontSize: 18, fontWeight: "700" },
   matchRow: { flexDirection: "row", gap: 14, marginTop: theme.spacing(1) },
   matchCol: { flex: 1, gap: 12 },
   matchCell: {

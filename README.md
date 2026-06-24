@@ -115,6 +115,9 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Accent bar** — a tap row of language-specific special characters
+  (ä ö ü ß · ñ ¿ ¡ · ð þ æ …) above the typing exercise, so you can enter them
+  without the system keyboard.
 - **Type-the-translation exercise** — typed production drill with forgiving
   grading (ignores case/spacing/accents, tolerates minor typos). Added to review
   lessons.
