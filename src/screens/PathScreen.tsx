@@ -255,6 +255,16 @@ export function PathScreen() {
                   <Text style={styles.unitSubtitle}>
                     {complete ? `Complete · tap to ${open ? "hide" : "review"}` : `${doneCount}/${unitNodes.length} lessons`}
                   </Text>
+                  {!complete && unitNodes.length > 0 ? (
+                    <View style={styles.unitBarTrack}>
+                      <View
+                        style={[
+                          styles.unitBarFill,
+                          { width: `${Math.round((doneCount / unitNodes.length) * 100)}%` },
+                        ]}
+                      />
+                    </View>
+                  ) : null}
                 </View>
                 <Text style={styles.chevron}>{open ? "▾" : "▸"}</Text>
               </Pressable>
@@ -542,6 +552,14 @@ const styles = StyleSheet.create({
   chevron: { color: "#fff", fontSize: 20, fontWeight: "900", marginLeft: 8 },
   unitTitle: { color: "#fff", fontWeight: "900", fontSize: 17 },
   unitSubtitle: { color: "rgba(255,255,255,0.85)", marginTop: 2 },
+  unitBarTrack: {
+    height: 6,
+    borderRadius: 6,
+    backgroundColor: "rgba(0,0,0,0.25)",
+    marginTop: 8,
+    overflow: "hidden",
+  },
+  unitBarFill: { height: "100%", borderRadius: 6, backgroundColor: "rgba(255,255,255,0.95)" },
   nodes: { alignItems: "center", paddingVertical: theme.spacing(2), gap: theme.spacing(2) },
   nodeRow: { alignItems: "center" },
   node: {
