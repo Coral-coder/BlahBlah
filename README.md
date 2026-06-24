@@ -115,6 +115,10 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Rich French & Italian** — added a full themed section to each (Around town,
+  Daily life, Shopping, Travel, Weather & nature). Now ~184 vocab / ~485 lessons
+  each, all validated.
+
 - **Typing opt-out** — Settings toggle to turn off typing exercises; they become
   tap-the-tiles word banks instead.
 - **Instrument sound effects** — re-synthesized correct/complete/wrong as

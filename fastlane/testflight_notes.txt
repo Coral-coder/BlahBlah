@@ -1,14 +1,13 @@
-⌨️➡️👆 Hate typing? Turn it off.
+📚 French & Italian got a LOT deeper
 
-• New: Settings → "Typing exercises" → turn OFF, and every typing exercise
-  becomes a tap-the-tiles word bank instead. No more typing if you don't want it.
+Both languages now have full themed sections on top of the basics:
+• Around town  • Daily life  • Shopping & money  • Travel & transport  • Weather & nature
 
-Also in this build:
-• New plucked-string instrument sound effects (warm, not buzzy) — mute them in
-  Settings → Sound effects if you like.
-• French 🇫🇷 and Italian 🇮🇹 are deeper now (Family + Numbers & Time units).
+That's ~184 words and ~485 lessons each now (4× more than before), every line
+hand-checked and run through the automated content validator.
 
 WHAT TO TEST
-• Settings → Typing exercises → Off, then do a review lesson — confirm you only
-  ever tap tiles, never type.
-• Listen to the new correct/complete/wrong sounds.
+• Switch to French or Italian and scroll the path — you'll see the new
+  "Explorer" and "Globetrotter" sections with lots more units.
+• Play a few of the new lessons; download the natural voice in Settings for the
+  best pronunciation.

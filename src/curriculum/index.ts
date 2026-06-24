@@ -12,8 +12,10 @@ import { thaiThemeSections } from "@/curriculum/blueprints/th_themes";
 import { icelandicBlueprint } from "@/curriculum/blueprints/is";
 import { frenchBlueprint } from "@/curriculum/blueprints/fr";
 import { frenchExtraSections } from "@/curriculum/blueprints/fr_extra";
+import { frenchThemeSections } from "@/curriculum/blueprints/fr_themes";
 import { italianBlueprint } from "@/curriculum/blueprints/it";
 import { italianExtraSections } from "@/curriculum/blueprints/it_extra";
+import { italianThemeSections } from "@/curriculum/blueprints/it_themes";
 import { sindarinBlueprint } from "@/curriculum/blueprints/sindarin";
 
 // Courses are generated from compact vocab/sentence blueprints: the generator
@@ -37,11 +39,11 @@ const thaiFull: CourseBlueprint = {
 };
 const frenchFull: CourseBlueprint = {
   ...frenchBlueprint,
-  sections: [...frenchBlueprint.sections, ...frenchExtraSections],
+  sections: [...frenchBlueprint.sections, ...frenchExtraSections, ...frenchThemeSections],
 };
 const italianFull: CourseBlueprint = {
   ...italianBlueprint,
-  sections: [...italianBlueprint.sections, ...italianExtraSections],
+  sections: [...italianBlueprint.sections, ...italianExtraSections, ...italianThemeSections],
 };
 
 export const COURSES: Course[] = [
