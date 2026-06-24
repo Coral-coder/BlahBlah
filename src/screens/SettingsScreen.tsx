@@ -8,10 +8,10 @@ import { hasNaturalVoice, setNeuralEnabled, setVoiceDownloadListener } from "@/l
 import { neuralAvailable } from "@/lib/neuralTts";
 import {
   downloadModel,
+  getVoices,
   isInstalled,
   removeModel,
   scanInstalled,
-  VOICE_MODELS,
   type VoiceModel,
 } from "@/lib/voiceModels";
 import { cancelReminders, scheduleDailyReminder } from "@/lib/reminders";
@@ -326,7 +326,7 @@ function NeuralVoicesCard() {
       />
 
       <View style={{ marginTop: theme.spacing(2), gap: 12 }}>
-        {VOICE_MODELS.map((m) => {
+        {getVoices().map((m) => {
           const installed = isInstalled(m.id);
           const downloading = busy[m.id];
           return (

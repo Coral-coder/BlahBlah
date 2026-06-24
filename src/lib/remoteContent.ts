@@ -2,6 +2,8 @@ import RNBlobUtil from "react-native-blob-util";
 
 import { CONTENT_SCHEMA, setActiveBlueprints } from "@/curriculum";
 import type { CourseBlueprint } from "@/curriculum/generate";
+import { setActiveVoices } from "@/lib/voiceModels";
+import type { VoiceModel } from "@/lib/voiceCatalog";
 
 // Over-the-air content: the app ships with content baked into the binary, but on
 // launch it also pulls the latest content bundle from this public repo's GitHub
@@ -18,6 +20,9 @@ interface ContentBundle {
   /** Opaque version (git sha / timestamp) used to skip redundant re-applies. */
   version: string;
   courses: CourseBlueprint[];
+  /** Voice catalog (which natural voices exist, their settings + download base). */
+  voices?: VoiceModel[];
+  voicesBaseUrl?: string;
 }
 
 const BUNDLE_URL =
@@ -42,6 +47,9 @@ function applyBundle(b: ContentBundle): boolean {
   if (b.schema !== CONTENT_SCHEMA) return false;
   if (b.version && b.version === appliedVersion) return false;
   if (setActiveBlueprints(b.courses)) {
+    // Languages carry their own voice config in the bundle, so a new language's
+    // natural voice works without an app build.
+    setActiveVoices(b.voices, b.voicesBaseUrl);
     appliedVersion = b.version ?? null;
     return true;
   }

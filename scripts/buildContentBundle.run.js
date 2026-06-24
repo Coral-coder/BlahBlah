@@ -36,6 +36,9 @@ for (const ext of [".ts", ".tsx"]) {
 }
 
 const { BLUEPRINTS, CONTENT_SCHEMA } = require("@/curriculum");
+// Pure-data voice catalog (no RN imports) so the bundle fully describes each
+// language including where to fetch its natural voice and its settings.
+const { VOICE_MODELS, VOICE_RELEASE_BASE } = require("@/lib/voiceCatalog");
 
 const outPath = process.argv[2] || path.join(root, "content-bundle.json");
 const version = process.argv[3] || String(Date.now());
@@ -44,6 +47,8 @@ const bundle = {
   schema: CONTENT_SCHEMA,
   version,
   courses: BLUEPRINTS,
+  voices: VOICE_MODELS,
+  voicesBaseUrl: VOICE_RELEASE_BASE,
 };
 
 fs.writeFileSync(outPath, JSON.stringify(bundle));

@@ -1,119 +1,32 @@
 import RNBlobUtil from "react-native-blob-util";
 import { unzip } from "react-native-zip-archive";
 
-// Catalog of downloadable on-device neural voices and a small manager that
-// downloads/extracts/caches them under the app's Documents directory. Voices are
-// hosted in this repo's GitHub Releases (built by the voice-models workflow from
-// free, open Piper / VITS models) and pulled on demand.
+import { VOICE_MODELS as BUNDLED_VOICES, VOICE_RELEASE_BASE, type VoiceModel } from "./voiceCatalog";
 
-export interface VoiceModel {
-  id: string;
-  /** Speech locale this voice serves (matches a course's speechLocale prefix). */
-  locale: string;
-  name: string;
-  /** Human label for the language. */
-  language: string;
-  /** Approx download size in MB (for the UI). */
-  mb: number;
-  /** File names inside the extracted folder. */
-  modelFile: string;
-  tokensFile: string;
-  dataDir: string;
-  /** Default speaker id and speaking speed. */
-  sid: number;
-  speed: number;
+// Manager that downloads/extracts/caches on-device neural voices under the app's
+// Documents directory. The catalog itself (which voices exist, their URLs and
+// settings) comes from the active content bundle — bundled in the binary by
+// default, replaced by the over-the-air bundle when one loads — so adding a
+// language's voice never needs an app build.
+
+export type { VoiceModel };
+
+// Active catalog + download base, swappable from the OTA bundle.
+let activeVoices: VoiceModel[] = BUNDLED_VOICES;
+let releaseBase: string = VOICE_RELEASE_BASE;
+
+/** Replace the voice catalog (and optionally its download base) from the OTA bundle. */
+export function setActiveVoices(voices?: VoiceModel[], baseUrl?: string): void {
+  if (Array.isArray(voices) && voices.length) activeVoices = voices;
+  if (typeof baseUrl === "string" && baseUrl) releaseBase = baseUrl;
 }
 
-const RELEASE = "https://github.com/Coral-coder/BlahBlah/releases/download/voice-models";
+export function getVoices(): VoiceModel[] {
+  return activeVoices;
+}
 
-// One natural voice per supported language. IDs match the .zip asset names the
-// hosting workflow produces.
-export const VOICE_MODELS: VoiceModel[] = [
-  {
-    id: "de_DE-thorsten-medium",
-    locale: "de-DE",
-    name: "Thorsten (natural)",
-    language: "German",
-    mb: 64,
-    modelFile: "model.onnx",
-    tokensFile: "tokens.txt",
-    dataDir: "espeak-ng-data",
-    sid: 0,
-    speed: 1.0,
-  },
-  {
-    id: "es_ES-davefx-medium",
-    locale: "es-ES",
-    name: "Davefx (natural)",
-    language: "Spanish",
-    mb: 64,
-    modelFile: "model.onnx",
-    tokensFile: "tokens.txt",
-    dataDir: "espeak-ng-data",
-    sid: 0,
-    speed: 1.0,
-  },
-  {
-    id: "is_IS-steinn-medium",
-    locale: "is-IS",
-    name: "Steinn (natural)",
-    language: "Icelandic",
-    mb: 64,
-    modelFile: "model.onnx",
-    tokensFile: "tokens.txt",
-    dataDir: "espeak-ng-data",
-    sid: 0,
-    speed: 1.0,
-  },
-  {
-    id: "zh_CN-huayan-medium",
-    locale: "zh-CN",
-    name: "Huayan (natural)",
-    language: "Chinese",
-    mb: 64,
-    modelFile: "model.onnx",
-    tokensFile: "tokens.txt",
-    dataDir: "espeak-ng-data",
-    sid: 0,
-    speed: 1.0,
-  },
-  {
-    id: "fr_FR-siwis-medium",
-    locale: "fr-FR",
-    name: "Siwis (natural)",
-    language: "French",
-    mb: 64,
-    modelFile: "model.onnx",
-    tokensFile: "tokens.txt",
-    dataDir: "espeak-ng-data",
-    sid: 0,
-    speed: 1.0,
-  },
-  {
-    id: "it_IT-paola-medium",
-    locale: "it-IT",
-    name: "Paola (natural)",
-    language: "Italian",
-    mb: 64,
-    modelFile: "model.onnx",
-    tokensFile: "tokens.txt",
-    dataDir: "espeak-ng-data",
-    sid: 0,
-    speed: 1.0,
-  },
-  {
-    id: "th_TH-mms-medium",
-    locale: "th-TH",
-    name: "Thai (natural)",
-    language: "Thai",
-    mb: 38,
-    modelFile: "model.onnx",
-    tokensFile: "tokens.txt",
-    dataDir: "espeak-ng-data",
-    sid: 0,
-    speed: 1.0,
-  },
-];
+/** Back-compat: the active catalog (was a static const). */
+export const VOICE_MODELS: VoiceModel[] = BUNDLED_VOICES;
 
 const ROOT = `${RNBlobUtil.fs.dirs.DocumentDir}/voices`;
 
@@ -128,7 +41,7 @@ export function modelDir(id: string): string {
 export function modelForLocale(locale?: string): VoiceModel | undefined {
   if (!locale) return undefined;
   const prefix = locale.toLowerCase().split("-")[0];
-  return VOICE_MODELS.find(
+  return activeVoices.find(
     (m) => m.locale.toLowerCase() === locale.toLowerCase() || m.locale.toLowerCase().startsWith(prefix),
   );
 }
@@ -140,7 +53,7 @@ export async function scanInstalled(): Promise<void> {
   try {
     const exists = await RNBlobUtil.fs.exists(ROOT);
     if (!exists) return;
-    for (const m of VOICE_MODELS) {
+    for (const m of activeVoices) {
       const ok = await RNBlobUtil.fs.exists(`${modelDir(m.id)}/${m.modelFile}`);
       if (ok) installed.add(m.id);
     }
@@ -169,7 +82,7 @@ export async function downloadModel(
     await RNBlobUtil.fs.mkdir(ROOT).catch(() => {});
     const task = RNBlobUtil.config({ path: zipPath, fileCache: true }).fetch(
       "GET",
-      `${RELEASE}/${model.id}.zip`,
+      `${releaseBase}/${model.id}.zip`,
     );
     task.progress({ interval: 250 }, (received, total) => {
       if (total > 0 && onProgress) onProgress(Math.min(0.95, received / total));

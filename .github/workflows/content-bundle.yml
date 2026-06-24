@@ -16,6 +16,7 @@ on:
     # this branch from going live; only content edits + pipeline vocab publish.
     paths:
       - "src/curriculum/blueprints/**"
+      - "src/lib/voiceCatalog.ts"
       - "scripts/buildContentBundle.run.js"
       - ".github/workflows/content-bundle.yml"
   workflow_dispatch:

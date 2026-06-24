@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup/transfer rules (Android 12+). Keep progress/settings; exclude the
+     large re-downloadable voice models and cached content bundle. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="file" path="voices/" />
+        <exclude domain="file" path="content-bundle.json" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="file" path="voices/" />
+        <exclude domain="file" path="content-bundle.json" />
+    </device-transfer>
+</data-extraction-rules>

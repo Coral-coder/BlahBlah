@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { ActivityIndicator, Animated, Easing, Pressable, StatusBar, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Animated, AppState, Easing, Pressable, StatusBar, StyleSheet, Text, View } from "react-native";
 import { SafeAreaProvider, useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { AchievementsScreen } from "@/screens/AchievementsScreen";
@@ -25,7 +25,7 @@ import { StoryScreen } from "@/screens/StoryScreen";
 import { TraceScreen } from "@/screens/TraceScreen";
 import { WordsScreen } from "@/screens/WordsScreen";
 import { onContentChange } from "@/curriculum";
-import { initRemoteContent } from "@/lib/remoteContent";
+import { initRemoteContent, refreshRemoteContent } from "@/lib/remoteContent";
 import { setSfxEnabled } from "@/lib/sfx";
 import { setNeuralEnabled } from "@/lib/speech";
 import { NavProvider, useNav } from "@/navigation";
@@ -184,7 +184,14 @@ function Root() {
     // courses, then kick off the cached-then-network content load.
     const unsub = onContentChange(() => bumpContent((n) => n + 1));
     void initRemoteContent();
-    return unsub;
+    // Re-check for new content every time the app returns to the foreground.
+    const sub = AppState.addEventListener("change", (s) => {
+      if (s === "active") void refreshRemoteContent();
+    });
+    return () => {
+      unsub();
+      sub.remove();
+    };
   }, []);
   useEffect(() => {
     setNeuralEnabled(!!state.settings.neuralVoices);

@@ -121,6 +121,16 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Voices in the OTA bundle** — the natural-voice catalog (which voices exist,
+  their settings and download source) now travels inside the content bundle, so a
+  new language ships with its voice config over-the-air, no app build. The app
+  also re-checks for a fresh bundle every time it returns to the foreground.
+
+- **Survives reinstall** — on Android, progress/settings are kept via Auto Backup
+  (the big re-downloadable voice/content caches are excluded from the backup
+  quota), so a delete/reinstall restores your data. iOS iCloud persistence is the
+  next step (needs the iCloud capability enabled on the App ID).
+
 - **Over-the-air content** — the app ships with content baked in, but on launch it
   also pulls a `content-bundle.json` (all course blueprints) from this public
   repo's GitHub Releases, caches it to disk, and regenerates courses live. Lessons
