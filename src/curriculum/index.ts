@@ -17,6 +17,13 @@ import { italianBlueprint } from "@/curriculum/blueprints/it";
 import { italianExtraSections } from "@/curriculum/blueprints/it_extra";
 import { italianThemeSections } from "@/curriculum/blueprints/it_themes";
 import { sindarinBlueprint } from "@/curriculum/blueprints/sindarin";
+import { generatedSections } from "@/curriculum/blueprints/generated";
+
+// Append any pipeline-generated sections for a language onto its blueprint.
+function withGenerated(bp: CourseBlueprint): CourseBlueprint {
+  const extra = generatedSections[bp.code];
+  return extra && extra.length ? { ...bp, sections: [...bp.sections, ...extra] } : bp;
+}
 
 // Courses are generated from compact vocab/sentence blueprints: the generator
 // expands each unit into many lessons that introduce a couple of words at a time
@@ -47,15 +54,15 @@ const italianFull: CourseBlueprint = {
 };
 
 export const COURSES: Course[] = [
-  generateCourse(germanFull),
-  generateCourse(chineseFull),
-  generateCourse(thaiFull),
-  generateCourse(spanishFull),
-  generateCourse(icelandicBlueprint),
-  generateCourse(frenchFull),
-  generateCourse(italianFull),
-  generateCourse(sindarinBlueprint),
-];
+  germanFull,
+  chineseFull,
+  thaiFull,
+  spanishFull,
+  icelandicBlueprint,
+  frenchFull,
+  italianFull,
+  sindarinBlueprint,
+].map((bp) => generateCourse(withGenerated(bp)));
 
 export function getCourse(code: string): Course | undefined {
   return COURSES.find((c) => c.code === code);

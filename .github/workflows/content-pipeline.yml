@@ -1,0 +1,78 @@
+name: Content pipeline
+
+# Grows each course's vocabulary from open data (FreeDict translations ranked by
+# word frequency), validates the result, and commits the generated blueprints
+# back to the dreaming branch. See scripts/content-pipeline/build.mjs.
+#
+# Triggers: editing the pipeline itself (so a push exercises it), a weekly
+# refresh, or manual dispatch. The bot commit only touches the generated/ folder
+# — which is NOT a trigger path — so it cannot loop.
+
+on:
+  push:
+    branches: ["claude/blahblah-next"]
+    paths:
+      - "scripts/content-pipeline/**"
+      - ".github/workflows/content-pipeline.yml"
+  schedule:
+    - cron: "0 6 * * 1" # Mondays 06:00 UTC
+  workflow_dispatch:
+    inputs:
+      max_words:
+        description: "Max words per language"
+        required: false
+        default: "400"
+
+concurrency:
+  group: content-pipeline
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build-content:
+    name: Build & validate generated content
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (dreaming branch)
+        uses: actions/checkout@v4
+        with:
+          ref: claude/blahblah-next
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install JS dependencies
+        run: npm ci
+
+      - name: Build generated content
+        env:
+          MAX_WORDS: ${{ github.event.inputs.max_words || '400' }}
+        run: node scripts/content-pipeline/build.mjs
+
+      - name: Validate course content (gate)
+        run: npm run validate:content
+
+      - name: Commit generated content if changed
+        run: |
+          set -euo pipefail
+          git config user.name "Coral Coder"
+          git config user.email "Coral-coder@proton.me"
+          if git diff --quiet -- src/curriculum/blueprints/generated; then
+            echo "No content changes."
+            exit 0
+          fi
+          git add src/curriculum/blueprints/generated
+          git commit -m "content: refresh generated vocabulary from open data [skip ci]"
+          # Retry push a few times in case the branch moved under us.
+          for i in 1 2 3 4; do
+            if git pull --rebase origin claude/blahblah-next && git push origin HEAD:claude/blahblah-next; then
+              echo "pushed"; exit 0
+            fi
+            echo "push failed, retry $i"; sleep $((i * 3))
+          done
+          echo "::error::could not push generated content"; exit 1

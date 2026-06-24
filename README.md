@@ -120,6 +120,13 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Content data pipeline** — a CI job (`scripts/content-pipeline/build.mjs`,
+  `.github/workflows/content-pipeline.yml`) grows each course's vocabulary from
+  open data: FreeDict translations ranked by hermitdave word-frequency lists. It
+  emits CEFR-laddered "Most common words" sections, gates them through
+  `validate:content`, and commits the generated blueprints back. Starts with DE
+  / ES / FR / IT; word budget scales over time toward the 5–10k goal.
+
 - **Android shipping** — the build pipeline now also produces a signed Android
   release (AAB + APK) on every ship via `.github/workflows/android.yml`, attached
   as downloadable artifacts. Play Store internal-track upload auto-activates when
