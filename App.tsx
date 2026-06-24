@@ -3,6 +3,7 @@ import { ActivityIndicator, Animated, Easing, Pressable, StatusBar, StyleSheet, 
 import { SafeAreaProvider, useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { AchievementsScreen } from "@/screens/AchievementsScreen";
+import { LeagueScreen } from "@/screens/LeagueScreen";
 import { AIStoryScreen } from "@/screens/AIStoryScreen";
 import { CourseSelectScreen } from "@/screens/CourseSelectScreen";
 import { GameScreen } from "@/screens/GameScreen";
@@ -145,6 +146,8 @@ function RouterInner() {
       return <RoleplayScreen />;
     case "achievements":
       return <AchievementsScreen />;
+    case "league":
+      return <LeagueScreen />;
     default:
       return <Shell />;
   }

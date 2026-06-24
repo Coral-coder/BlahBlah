@@ -54,6 +54,11 @@ export function ProfileScreen() {
           variant="ghost"
           onPress={() => nav.navigate("achievements")}
         />
+        <Button
+          label="🏆  League"
+          variant="ghost"
+          onPress={() => nav.navigate("league")}
+        />
 
         <Card>
           <Text style={styles.cardTitle}>This week</Text>

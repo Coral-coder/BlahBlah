@@ -115,6 +115,9 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Weekly League** — a Duolingo-style XP leaderboard with simulated rivals,
+  promotion/demotion zones, and tiers (Bronze→Diamond). Fully local & deterministic
+  per week; your XP is real.
 - **Challenge mode** — a Settings toggle that turns word-bank exercises into
   typed answers everywhere, for harder recall.
 - **Slow replay** — long-press any 🔊 (or the listen replay) to hear it slowly;
