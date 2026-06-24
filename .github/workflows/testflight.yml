@@ -21,6 +21,13 @@ on:
       - "v*"
   workflow_dispatch:
 
+# Only one TestFlight build at a time. The Fastfile revokes stale distribution
+# certs at the start of each run, so overlapping builds would revoke each other's
+# signing cert and fail at upload ("Certificate Revoked"). Serialize to prevent it.
+concurrency:
+  group: testflight-upload
+  cancel-in-progress: false
+
 jobs:
   testflight:
     name: Build & upload to TestFlight
