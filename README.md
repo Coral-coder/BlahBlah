@@ -115,6 +115,8 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Typing opt-out** — Settings toggle to turn off typing exercises; they become
+  tap-the-tiles word banks instead.
 - **Instrument sound effects** — re-synthesized correct/complete/wrong as
   Karplus-Strong plucked strings (harp/guitar) with soft reverb — warm and real,
   not buzzy.

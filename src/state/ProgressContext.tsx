@@ -26,6 +26,8 @@ export interface Settings {
   neuralVoices: boolean;
   /** Challenge mode: turn word-bank exercises into typed answers. */
   hardMode: boolean;
+  /** Include typing exercises (when false, they become tap word-banks). */
+  typingExercises: boolean;
   /** Whether the "download a natural voice" prompt has been dismissed. */
   voicePromptDismissed: boolean;
   /** Play UI sound effects (correct/wrong/complete). */
@@ -180,6 +182,7 @@ const DEFAULT: Persisted = {
     model: "claude-opus-4-8",
     neuralVoices: false,
     hardMode: false,
+    typingExercises: true,
     voicePromptDismissed: false,
     soundEnabled: true,
   },

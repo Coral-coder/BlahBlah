@@ -124,6 +124,19 @@ export function SettingsScreen() {
         </Card>
 
         <Card>
+          <Text style={styles.cardTitle}>Typing exercises ⌨️</Text>
+          <Text style={styles.cardSub}>
+            Prefer tapping? Turn this off and typing exercises become tap-the-tiles word banks.
+          </Text>
+          <Button
+            label={state.settings.typingExercises === false ? "Off — tap tiles instead" : "On ✓ — tap to turn off"}
+            variant={state.settings.typingExercises === false ? "ghost" : "primary"}
+            onPress={() => setSettings({ typingExercises: state.settings.typingExercises === false })}
+            style={{ marginTop: theme.spacing(2) }}
+          />
+        </Card>
+
+        <Card>
           <Text style={styles.cardTitle}>Challenge mode ⚡</Text>
           <Text style={styles.cardSub}>
             Type your answers instead of tapping word tiles — harder recall, faster fluency.

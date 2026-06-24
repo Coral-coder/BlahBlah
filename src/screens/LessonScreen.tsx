@@ -21,7 +21,8 @@ export function LessonScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
   const { completeLesson, state } = useProgress();
-  const hardMode = state.settings.hardMode;
+  const typingDisabled = state.settings.typingExercises === false;
+  const hardMode = state.settings.hardMode && !typingDisabled;
 
   const course = getCourse(courseCode);
   const node = useMemo(
@@ -46,7 +47,37 @@ export function LessonScreen() {
           pinyin: ex.pinyin,
         }
       : ex;
-  const exercises = node ? node.lesson.exercises.map(harden) : [];
+
+  // Word pool from this lesson, used to build tiles when converting typing → tap.
+  const lessonWordPool = useMemo(() => {
+    const set = new Set<string>();
+    for (const e of node?.lesson.exercises ?? []) {
+      if (e.type === "wordbank" || e.type === "listen") e.bank.forEach((w) => set.add(w));
+      else if (e.type === "fill") e.options.forEach((w) => set.add(w));
+      else if (e.type === "match") e.pairs.forEach((p) => p.target.split(" ").forEach((w) => set.add(w)));
+    }
+    return [...set];
+  }, [node]);
+
+  // When the learner has turned typing off, present a tap-the-tiles word bank
+  // instead of any typing exercise (generated or via Challenge mode).
+  const soften = (ex: Exercise): Exercise => {
+    if (!typingDisabled || ex.type !== "type") return ex;
+    const answerWords = ex.answer.split(" ").filter(Boolean);
+    const excl = new Set(answerWords);
+    const distractors = lessonWordPool.filter((w) => !excl.has(w)).slice(0, 4);
+    return {
+      type: "wordbank",
+      prompt: "Tap the translation",
+      given: ex.question,
+      answer: ex.answer,
+      bank: [...answerWords, ...distractors],
+      speak: ex.speak,
+      pinyin: ex.pinyin,
+    };
+  };
+  const transform = (ex: Exercise): Exercise => soften(harden(ex));
+  const exercises = node ? node.lesson.exercises.map(transform) : [];
   const total = exercises.length;
   const [queue, setQueue] = useState<Exercise[]>(exercises);
   const [response, setResponse] = useState<ExResponse>(null);
@@ -116,7 +147,7 @@ export function LessonScreen() {
 
   // Swap the current audio exercise for a written equivalent (no penalty, no skip).
   function swapCurrent(replacement: Exercise) {
-    setQueue((q) => [replacement, ...q.slice(1)]);
+    setQueue((q) => [soften(replacement), ...q.slice(1)]);
     setResponse(null);
     setPhase("answer");
     setCorrect(null);
