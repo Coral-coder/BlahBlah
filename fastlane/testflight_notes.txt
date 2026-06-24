@@ -1,19 +1,15 @@
-🎙️ Natural Neural Voices (on-device) — what's new
+⌨️ New exercise: Type the translation — what's new
 
-BlahBlah now has real, human-sounding neural voices that run entirely on your phone — including ICELANDIC, which iOS doesn't offer at all. They're free, downloaded on demand, and work fully offline once installed.
+Lessons now include typed production: you read the English and TYPE the sentence in your target language from memory. It's the toughest, highest-retention drill — great for getting to fluency, and it builds spelling too.
 
-HOW TO TURN IT ON
-1. Profile tab → Settings → "Natural voices (on-device) ✨"
-2. Tap "Use natural voices"
-3. Download the language(s) you want (German, Spanish, Icelandic, Chinese, Thai) — each is a one-time download
-4. Go do a lesson or tap any 🔊 — it now uses the natural voice
+Grading is forgiving: it ignores capitalization, spacing, and accents, and tolerates a small typo, so a missing umlaut won't fail you — but it still pushes you to recall the real word.
 
 WHAT TO TEST
-• Download Icelandic and a couple others; confirm the voice sounds natural (not robotic).
-• Switch languages and make sure the right voice plays (no stale voice).
-• Toggle "Use natural voices" off → it falls back to the system voice.
-• Tap 🔊 in lessons, the word bank, and tap-to-translate hints.
+• Play a few review lessons until a "Type this in the target language" screen appears; type the answer and Check.
+• Try it with a missing accent (e.g. type "uber" for "über") — it should still accept it.
+• Type something clearly wrong — it should mark it and show the correct answer.
 
-Note: if a language hasn't been downloaded (or while a download is in progress), that language keeps using the system voice automatically.
+REMINDER — natural neural voices shipped in the previous build:
+Profile → Settings → "Natural voices (on-device) ✨" → turn on → download a language (Icelandic included!). Fully offline once downloaded.
 
-Everything from the last build is still here too: tap-to-translate, crowns, daily quests, streak freeze, achievements.
+Also still here: tap-to-translate, crowns, daily quests, streak freeze, achievements.

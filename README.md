@@ -1,31 +1,70 @@
-# BlahBlah 🗣️
+# BlahBlah 🗣️ — *better than Duolingo*
 
-A structured, guided language-learning app — Duolingo-style. You follow a path of
-bite-sized lessons made of interactive exercises, and the app always shows you
-exactly what to do next. Lead languages are **German** (full course) and
-**Spanish**, with a content model built to add more.
+A structured, guided language-learning app. You follow a path of bite-sized
+lessons made of interactive exercises, and the app always shows you exactly what
+to do next. Built with **bare React Native + TypeScript** (no Expo). Course
+content is hand-authored and expanded by a generator — no AI writing lessons at
+runtime. Ships to TestFlight via `.github/workflows/testflight.yml`.
 
-Built with **bare React Native + TypeScript** (no Expo). Course content is
-hand-authored data — there is no AI generating lessons at runtime. Ships to
-TestFlight via the Fastlane pipeline in `.github/workflows/testflight.yml`.
+> This branch (`claude/blahblah-next`) is the **dreaming branch**: new features
+> are built and documented here continuously, then cherry-picked to ship. See the
+> **[Dream Log](#dream-log)** at the bottom for the running changelog.
 
-## What it does
+## Languages
 
-- **Guided learning path.** Sections → units → lessons laid out as a path. The
-  next lesson is highlighted with **START**; finished lessons are gold; later
-  lessons stay locked until you reach them. You never have to wonder what's next.
-- **Placement test.** New to a language or not? A quick adaptive check gauges what
-  you already know and starts you at the right unit (or start from zero).
-- **Interactive exercises** that make you produce the language, not just read it:
+German 🇩🇪 (to C2), Chinese 🇨🇳 (with pinyin), Spanish 🇪🇸, Thai 🇹🇭 (intensive),
+Icelandic 🇮🇸. Vocabulary builds gradually — one new word at a time with heavy
+spaced review between introductions.
+
+## Core learning
+
+- **Guided path.** Sections → units → lessons. The current lesson pulses with a
+  **START** badge; finished lessons show **crowns**; completed units auto-collapse;
+  the path auto-scrolls to where you are.
+- **Placement test** to skip ahead if you already know some.
+- **Interactive exercises:**
+  - **Card** — picture (emoji) intro for a new word
   - **Word bank** — tap tiles to build the translation
   - **Fill in the blank** — choose the missing word
-  - **Match** — pair words with their meanings
+  - **Match** — pair words with meanings (tap either side)
   - **Multiple choice** — pick the right translation
-  - **Listen** — hear a sentence (device TTS) and rebuild it
-- **Mastery-gated progress.** Wrong answers come back around later in the lesson;
-  you finish only once you've gotten everything right. Hearts add light stakes.
-- **Goals & motivation.** Daily XP goal, streaks, total XP, and per-course
-  completion — all on the Profile tab.
+  - **Listen** — hear it and rebuild it
+  - **Speak** — say the whole sentence; pronunciation is scored
+  - **Type** — write the translation from memory (forgiving of accents/typos)
+- **Tap-to-translate.** Tap any dotted word (or hold a tile/option) in a lesson to
+  see its meaning and hear it — built from a per-course glossary.
+- **Mastery-gated.** Wrong answers come back around; hearts add light stakes.
+
+## Natural voices (on-device) ✨
+
+Free neural TTS that runs **entirely on the phone** — including **Icelandic**,
+which iOS doesn't offer. Voices (Piper / MMS via sherpa-onnx) are hosted in this
+repo's Releases and downloaded on demand from **Settings → Natural voices**. Fully
+offline once downloaded; falls back to the system voice otherwise.
+
+## Motivation & gamification
+
+- **Streaks** with a **Streak Freeze** power-up (buy with gems; auto-protects a
+  missed day).
+- **Gems** currency, earned per lesson and from quests.
+- **Daily Quests** — 3 rotating challenges/day with gem rewards.
+- **Crowns / mastery levels** — replay finished lessons to level them up (1–5).
+- **Achievements** — milestone badges across lessons, words, streaks, XP, languages.
+- **Daily goal**, weekly XP chart, animated mascot, and daily reminder notifications.
+
+## Practice & immersion
+
+- **Review (SRS)** — spaced-repetition recall of your weak words; due scheduling.
+- **Practice mistakes**, **Dictation**, **Grammar tips**.
+- **Stories** (auto-scrolling, read aloud), **Role-play** (act a scene aloud),
+  **Watch**, **News**, and **AI Story** generation.
+- **Words you know** list, **Match Blitz** game, **character tracing** practice
+  (fading stencil guides for non-Latin scripts).
+
+## Polish
+
+Juicy 3D buttons, animated progress bars, pulsing path nodes, screen transitions,
+animated tab bar and splash.
 
 ## Run it locally
 
@@ -36,57 +75,54 @@ npm install
 bundle install
 bundle exec pod install --project-directory=ios
 npm run ios        # or open ios/BlahBlah.xcworkspace in Xcode
-# Android: npm run android
 ```
-
-No API keys or accounts needed — all content is bundled.
 
 ## Ship to TestFlight
 
-Push a `v*` tag or a commit to the working branch (or run the **iOS → TestFlight**
-Action) and it builds with Xcode 26 and uploads to TestFlight. Setup details and
-the App Store Connect secrets are in **[docs/TESTFLIGHT.md](docs/TESTFLIGHT.md)**.
+Push to the delivery branch (or run the **iOS → TestFlight** Action). Each ship
+carries tester notes from `fastlane/testflight_notes.txt`. The neural voice packs
+are (re)published by the **Publish voice models** workflow. Setup + secrets:
+**[docs/TESTFLIGHT.md](docs/TESTFLIGHT.md)**.
 
 ## Project structure
 
 ```
-App.tsx                  Root: providers + bottom-tab shell (Learn / Profile) + router
+App.tsx                  Providers + bottom-tab shell (Learn / Profile) + router + transitions
 src/
   curriculum/
-    types.ts             Course → Section → Unit → Lesson → Exercise model + flattenCourse
-    courses/de.ts        German course (5 units, 15 lessons, 90 exercises)
-    courses/es.ts        Spanish course (2 units, 6 lessons, 36 exercises)
+    types.ts             Course → Section → Unit → Lesson → Exercise model
+    generate.ts          Blueprint → many spaced-repetition lessons
+    blueprints/          Per-language vocab + sentences (de, zh, es, th, is, + themes)
     index.ts             COURSES registry + getCourse()
-  lesson/engine.ts       Answer checking, shuffling, XP
-  state/ProgressContext  Persisted progress: XP, streak, daily goal, completion, placement
-  navigation.tsx         Small stack navigator with params (useNav / useRoute)
-  components/
-    Exercise.tsx         Renderers for every exercise type (the interactive core)
-    ui.tsx               Button, Card, Chip, ProgressBar, Hearts
-  screens/
-    CourseSelectScreen   Pick a language
-    PlacementScreen      Placement test
-    PathScreen           The guided learning path (Learn tab)
-    LessonScreen         The exercise player
-    LessonCompleteScreen End-of-lesson stats (XP, accuracy, streak)
-    ProfileScreen        Goals, streak, progress (Profile tab)
-    SettingsScreen       Reset progress, about
-  lib/speech.ts          Text-to-speech (react-native-tts)
-  theme.ts               Colors / spacing
-fastlane/                Fastfile (lane :beta) + Appfile
-.github/workflows/       testflight.yml (Xcode build → TestFlight)
+  lesson/engine.ts       Answer checking (incl. forgiving typed grading), XP
+  state/ProgressContext  Persisted store: XP, gems, streak+freezes, quests, crowns, …
+  navigation.tsx         Small stack navigator (useNav / useRoute)
+  components/            Exercise.tsx (all exercise renderers), ui.tsx, Mascot, Confetti
+  screens/               Path, Lesson, Review, Stories, Settings, Achievements, …
+  lib/
+    speech.ts            TTS routing (neural ↔ system)
+    neuralTts.ts         Bridge to the on-device sherpa-onnx engine
+    voiceModels.ts       Downloadable voice catalog + cache manager
+    glossary.ts          Per-course word→meaning lookup (tap-to-translate)
+    srs.ts, learned.ts, sfx.ts, reminders.ts, achievements.ts, ai.ts
+  theme.ts               Colors / spacing / shadow
+modules/blah-neural-tts  Native ObjC++ module wrapping sherpa-onnx (TTS)
+fastlane/                Fastfile (lane :beta) + tester notes
+.github/workflows/       testflight.yml, voice-models.yml
 ```
 
-## Adding content
+## Dream Log
 
-A course is plain data conforming to `src/curriculum/types.ts`. Add a file under
-`src/curriculum/courses/`, export a `Course`, and register it in
-`src/curriculum/index.ts`. The path, placement test, and exercise player all work
-automatically from the data — no UI changes needed.
+Running changelog of features dreamed up on this branch (newest first).
 
-## Roadmap ideas
-
-- More languages and deeper units
-- Spaced-repetition review of completed lessons
-- Per-lesson "legendary"/crown levels and harder review sessions
-- Optional AI conversation practice as a bonus mode
+- **Type-the-translation exercise** — typed production drill with forgiving
+  grading (ignores case/spacing/accents, tolerates minor typos). Added to review
+  lessons.
+- **On-device neural voices** — sherpa-onnx engine + downloadable Piper/MMS voice
+  packs (incl. Icelandic), Settings UI, system-voice fallback.
+- **Crowns / mastery levels** — replay lessons to level them up 1–5; crown pips on
+  the path; total crowns in the header.
+- **Achievements** — 17 milestone badges with progress.
+- **Gamification** — gems, daily quests, streak freezes.
+- **Tap-to-translate** — tap/hold any word in a lesson for its meaning.
+- **Visual polish** — 3D buttons, animated progress, pulsing nodes, transitions.
