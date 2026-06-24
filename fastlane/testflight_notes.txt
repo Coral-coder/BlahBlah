@@ -1,15 +1,33 @@
-⌨️ New exercise: Type the translation — what's new
+🚀 Big update — lots to play with
 
-Lessons now include typed production: you read the English and TYPE the sentence in your target language from memory. It's the toughest, highest-retention drill — great for getting to fluency, and it builds spelling too.
+NEW EXERCISES & LEARNING
+• Type-the-translation: write the sentence from memory (forgiving of accents/typos).
+• Accent bar above the keyboard for ä ö ü ß / ñ ¿ ¡ / ð þ æ.
+• Tap-to-translate still here; now long-press any 🔊 to hear it SLOWLY.
+• Can't do a speak/listen exercise right now? It now offers a written version
+  instead of a free skip.
 
-Grading is forgiving: it ignores capitalization, spacing, and accents, and tolerates a small typo, so a missing umlaut won't fail you — but it still pushes you to recall the real word.
+MOTIVATION & FUN
+• Weekly League with rivals (promotion/demotion zones).
+• Double or Nothing: wager 💎50 to practice 7 days straight, win 💎100.
+• In-lesson 🔥 combo meter with bonus XP.
+• Flashcards self-test over your learned words.
+• Word of the Day on the path; Tricky-words card on Profile.
+• Daily-goal + streak-milestone celebrations (confetti!).
+• Share your progress from Profile.
+
+FEEL & POLISH
+• Way punchier correct/wrong/complete sounds.
+• Supercharged lesson-complete: emoji pop, XP count-up, PERFECT badge, more confetti.
+• Colorful tile menu for Practice & play; animated stats; tactile lesson nodes.
+• The path now re-scrolls so your next lesson sits near the top — no more scrolling.
+
+SETTINGS
+• Challenge mode: type answers instead of using word tiles.
+• Natural voices: if you haven't yet, download one — pronunciation is key!
 
 WHAT TO TEST
-• Play a few review lessons until a "Type this in the target language" screen appears; type the answer and Check.
-• Try it with a missing accent (e.g. type "uber" for "über") — it should still accept it.
-• Type something clearly wrong — it should mark it and show the correct answer.
-
-REMINDER — natural neural voices shipped in the previous build:
-Profile → Settings → "Natural voices (on-device) ✨" → turn on → download a language (Icelandic included!). Fully offline once downloaded.
-
-Also still here: tap-to-translate, crowns, daily quests, streak freeze, achievements.
+• Do a lesson: check the new sounds, combo meter, and the big complete screen.
+• Finish it → confirm the path is already scrolled to your next lesson.
+• Profile: try Flashcards, the League, Double or Nothing, and the colorful menu.
+• Skip a speak/listen exercise → confirm it gives you a typed/tile version.
