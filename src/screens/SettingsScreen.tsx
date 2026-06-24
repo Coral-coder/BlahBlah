@@ -103,6 +103,17 @@ export function SettingsScreen() {
         <NeuralVoicesCard />
 
         <Card>
+          <Text style={styles.cardTitle}>Sound effects 🔊</Text>
+          <Text style={styles.cardSub}>Play the correct / wrong / lesson-complete sounds.</Text>
+          <Button
+            label={state.settings.soundEnabled !== false ? "On ✓ — tap to mute" : "Off — tap to enable"}
+            variant={state.settings.soundEnabled !== false ? "primary" : "ghost"}
+            onPress={() => setSettings({ soundEnabled: !(state.settings.soundEnabled !== false) })}
+            style={{ marginTop: theme.spacing(2) }}
+          />
+        </Card>
+
+        <Card>
           <Text style={styles.cardTitle}>Challenge mode ⚡</Text>
           <Text style={styles.cardSub}>
             Type your answers instead of tapping word tiles — harder recall, faster fluency.

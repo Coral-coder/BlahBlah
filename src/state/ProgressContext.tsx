@@ -28,6 +28,8 @@ export interface Settings {
   hardMode: boolean;
   /** Whether the "download a natural voice" prompt has been dismissed. */
   voicePromptDismissed: boolean;
+  /** Play UI sound effects (correct/wrong/complete). */
+  soundEnabled: boolean;
 }
 
 export interface LearnedWord {
@@ -179,6 +181,7 @@ const DEFAULT: Persisted = {
     neuralVoices: false,
     hardMode: false,
     voicePromptDismissed: false,
+    soundEnabled: true,
   },
 };
 

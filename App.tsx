@@ -24,6 +24,7 @@ import { StoriesListScreen } from "@/screens/StoriesListScreen";
 import { StoryScreen } from "@/screens/StoryScreen";
 import { TraceScreen } from "@/screens/TraceScreen";
 import { WordsScreen } from "@/screens/WordsScreen";
+import { setSfxEnabled } from "@/lib/sfx";
 import { setNeuralEnabled } from "@/lib/speech";
 import { NavProvider, useNav } from "@/navigation";
 import { ProgressProvider, useProgress } from "@/state/ProgressContext";
@@ -178,6 +179,9 @@ function Root() {
   useEffect(() => {
     setNeuralEnabled(!!state.settings.neuralVoices);
   }, [state.settings.neuralVoices]);
+  useEffect(() => {
+    setSfxEnabled(state.settings.soundEnabled !== false);
+  }, [state.settings.soundEnabled]);
   if (!ready) {
     return <Splash />;
   }

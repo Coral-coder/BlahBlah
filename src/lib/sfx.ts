@@ -12,6 +12,11 @@ const FILES: Record<Name, number> = {
   complete: require("@/assets/sfx/complete.wav"),
 };
 
+let enabled = true;
+export function setSfxEnabled(on: boolean): void {
+  enabled = on;
+}
+
 const cache: Partial<Record<Name, Sound>> = {};
 
 function load(name: Name): Promise<Sound> {
@@ -27,6 +32,7 @@ function load(name: Name): Promise<Sound> {
 }
 
 export function playSfx(name: Name): void {
+  if (!enabled) return;
   load(name)
     .then((s) => {
       s.stop(() => s.play());

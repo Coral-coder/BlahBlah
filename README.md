@@ -115,6 +115,7 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Sound-effects toggle** — mute the UI sounds from Settings.
 - **Unit progress bars** — each unit header on the path shows a white progress
   bar of lessons completed.
 - **Streak milestones** — a one-time confetti toast at 3/7/14/30/60/100/180/365-day streaks.
