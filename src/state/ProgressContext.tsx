@@ -1,4 +1,4 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { durableGet, durableSet } from "@/lib/durableStore";
 import React, {
   createContext,
   useCallback,
@@ -270,7 +270,7 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     (async () => {
       try {
-        const raw = await AsyncStorage.getItem(STORAGE_KEY);
+        const raw = await durableGet(STORAGE_KEY);
         if (raw) {
           const parsed = JSON.parse(raw) as Partial<Persisted>;
           const settings = { ...DEFAULT.settings, ...(parsed.settings ?? {}) };
@@ -303,7 +303,7 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
 
   const persist = useCallback((next: Persisted) => {
     setState(next);
-    AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(next)).catch(() => {});
+    durableSet(STORAGE_KEY, JSON.stringify(next)).catch(() => {});
   }, []);
 
   const value = useMemo<ProgressContextValue>(() => {

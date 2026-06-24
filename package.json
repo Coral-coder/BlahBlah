@@ -25,7 +25,8 @@
     "react-native-svg": "^15.8.0",
     "react-native-tts": "^4.1.1",
     "react-native-zip-archive": "^7.1.1",
-    "blah-neural-tts": "file:./modules/blah-neural-tts"
+    "blah-neural-tts": "file:./modules/blah-neural-tts",
+    "blah-icloud-kv": "file:./modules/blah-icloud-kv"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
