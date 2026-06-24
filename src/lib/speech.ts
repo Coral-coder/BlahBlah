@@ -3,7 +3,14 @@ import Sound from "react-native-sound";
 import Tts from "react-native-tts";
 
 import { loadNeuralModel, neuralAvailable, synthesizeToFile } from "./neuralTts";
-import { installedModelForLocale, modelDir, scanInstalled } from "./voiceModels";
+import {
+  downloadModel,
+  installedModelForLocale,
+  isInstalled,
+  modelDir,
+  modelForLocale,
+  scanInstalled,
+} from "./voiceModels";
 
 // Master switch for on-device neural voices (set from Settings). When on and a
 // neural model is installed for the active locale, speak() uses it; otherwise it
@@ -11,6 +18,31 @@ import { installedModelForLocale, modelDir, scanInstalled } from "./voiceModels"
 let neuralEnabled = false;
 export function setNeuralEnabled(on: boolean): void {
   neuralEnabled = on;
+  if (on) void ensureNeuralVoice();
+}
+
+// Auto-download: when neural voices are on and the engine is present, the natural
+// voice for the active course is fetched in the background the first time we see
+// its locale. Until it lands, speak() uses the system voice; afterwards it
+// upgrades automatically. One attempt per voice per session.
+const autoAttempted = new Set<string>();
+let downloadListener: ((id: string, progress: number) => void) | undefined;
+/** Settings can subscribe to show live auto-download progress. */
+export function setVoiceDownloadListener(fn?: (id: string, progress: number) => void): void {
+  downloadListener = fn;
+}
+
+export async function ensureNeuralVoice(locale?: string): Promise<void> {
+  const loc = locale ?? currentLocale;
+  if (!neuralEnabled || !neuralAvailable() || !loc) return;
+  const model = modelForLocale(loc);
+  if (!model) return;
+  await scanInstalled();
+  if (isInstalled(model.id) || autoAttempted.has(model.id)) return;
+  autoAttempted.add(model.id);
+  // Fire-and-forget; failures just leave the system voice in place (we'll retry
+  // next session). Progress is forwarded to any UI listener.
+  void downloadModel(model, (p) => downloadListener?.(model.id, p)).catch(() => {});
 }
 
 let currentSound: Sound | null = null;
@@ -113,6 +145,8 @@ export async function setSpeechLocale(locale?: string): Promise<void> {
   currentLocale = locale;
   if (!locale) return;
   ensureInit();
+  // Kick off the natural-voice download for this course in the background.
+  void ensureNeuralVoice(locale);
   await loadVoices();
   if (!chosenVoice[locale]) {
     const id = bestVoiceFor(locale);

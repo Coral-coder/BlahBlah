@@ -4,7 +4,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Button, Card, Chip, ProgressBar } from "@/components/ui";
 import { getCourse } from "@/curriculum";
-import { hasNaturalVoice, setNeuralEnabled } from "@/lib/speech";
+import { hasNaturalVoice, setNeuralEnabled, setVoiceDownloadListener } from "@/lib/speech";
 import { neuralAvailable } from "@/lib/neuralTts";
 import {
   downloadModel,
@@ -273,6 +273,16 @@ function NeuralVoicesCard() {
 
   useEffect(() => {
     scanInstalled().then(() => force((n) => n + 1));
+    // Reflect background auto-downloads (started when a course is opened) live.
+    setVoiceDownloadListener((id, p) => {
+      setBusy((b) => (b[id] ? b : { ...b, [id]: true }));
+      setProgress((s) => ({ ...s, [id]: p }));
+      if (p >= 1) {
+        setBusy((b) => ({ ...b, [id]: false }));
+        scanInstalled().then(() => force((n) => n + 1));
+      }
+    });
+    return () => setVoiceDownloadListener(undefined);
   }, []);
 
   async function onDownload(m: VoiceModel) {
@@ -293,18 +303,19 @@ function NeuralVoicesCard() {
     <Card>
       <Text style={styles.cardTitle}>Natural voices (on-device) ✨</Text>
       <Text style={styles.cardSub}>
-        Download free, human-sounding neural voices — including Icelandic, which iOS doesn't
-        offer. They work fully offline once downloaded.
+        Free, human-sounding neural voices — including Icelandic, which iOS doesn't offer. When
+        on, the voice for your current course downloads automatically and then works fully
+        offline. You can also grab other languages below.
       </Text>
       {!neuralAvailable() ? (
         <Text style={styles.warn}>
-          The voice engine ships in an upcoming build — you can download voices now and they'll
-          activate automatically once it lands.
+          The voice engine ships in an upcoming build — voices download now and activate
+          automatically once it lands.
         </Text>
       ) : null}
 
       <Button
-        label={enabled ? "Using natural voices ✓ — tap to turn off" : "Use natural voices"}
+        label={enabled ? "Natural voices on ✓ — tap to turn off" : "Turn on natural voices"}
         variant={enabled ? "primary" : "ghost"}
         onPress={() => {
           const next = !enabled;

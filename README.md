@@ -120,6 +120,12 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Auto natural voices** — on-device neural voices are now on by default and the
+  voice for your active course downloads automatically in the background the first
+  time you open it (falling back to the system voice until it lands, then
+  upgrading silently). Settings shows live progress and still lets you grab other
+  languages or turn it off.
+
 - **Content data pipeline** — a CI job (`scripts/content-pipeline/build.mjs`,
   `.github/workflows/content-pipeline.yml`) grows each course's vocabulary from
   open data: FreeDict translations ranked by hermitdave word-frequency lists. It

@@ -1,5 +1,8 @@
-🔊 Softer sounds · ⌨️ Review fixes · 📚 Way more vocabulary · 🤖 Android builds
+🗣️ Auto natural voices · 🔊 Softer sounds · ⌨️ Review fixes · 📚 More vocabulary
 
+• Natural voices: now ON by default and the voice for your course downloads
+  automatically in the background — no trip to Settings. You'll hear the system
+  voice until it finishes, then it upgrades to the natural one on its own.
 • Sounds: correct / complete / wrong are now soft, multi-voice instrument tones
   with a light reverb tail — warm and roomy, not harsh or thin.
 • Review: the Check/Continue button rides above the keyboard, the return key
@@ -11,6 +14,8 @@
 • Behind the scenes: the build pipeline now also produces Android releases.
 
 WHAT TO TEST
+• Open a course → the natural voice should auto-download (watch Settings →
+  Natural voices for live progress); speech upgrades automatically when ready.
 • Answer correct/wrong, finish a lesson → sounds should be soft & full.
 • Review with typing on: type, press return → submits & clears next card; the
   button stays above the keyboard. With typing off → only tap-to-choose.

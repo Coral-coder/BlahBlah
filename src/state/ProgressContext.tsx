@@ -32,6 +32,8 @@ export interface Settings {
   voicePromptDismissed: boolean;
   /** Play UI sound effects (correct/wrong/complete). */
   soundEnabled: boolean;
+  /** One-time flag: existing installs have been migrated to auto-download voices. */
+  voiceAutoMigrated: boolean;
 }
 
 export interface LearnedWord {
@@ -180,11 +182,14 @@ const DEFAULT: Persisted = {
   settings: {
     apiKey: "",
     model: "claude-opus-4-8",
-    neuralVoices: false,
+    // Natural on-device voices are on by default and download automatically for
+    // the active course; users can turn this off in Settings.
+    neuralVoices: true,
     hardMode: false,
     typingExercises: true,
     voicePromptDismissed: false,
     soundEnabled: true,
+    voiceAutoMigrated: false,
   },
 };
 
@@ -268,6 +273,14 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
         const raw = await AsyncStorage.getItem(STORAGE_KEY);
         if (raw) {
           const parsed = JSON.parse(raw) as Partial<Persisted>;
+          const settings = { ...DEFAULT.settings, ...(parsed.settings ?? {}) };
+          // One-time migration: natural voices now download automatically, so
+          // turn them on for existing installs that predate this (then respect
+          // the user's choice going forward).
+          if (!settings.voiceAutoMigrated) {
+            settings.neuralVoices = true;
+            settings.voiceAutoMigrated = true;
+          }
           setState({
             ...DEFAULT,
             ...parsed,
@@ -277,7 +290,7 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
             tracePractice: parsed.tracePractice ?? {},
             wordStats: parsed.wordStats ?? {},
             crowns: parsed.crowns ?? {},
-            settings: { ...DEFAULT.settings, ...(parsed.settings ?? {}) },
+            settings,
           });
         }
       } catch {
