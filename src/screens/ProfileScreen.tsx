@@ -11,6 +11,55 @@ import { theme } from "@/theme";
 
 const GOALS = [10, 20, 30, 50];
 
+// Colorful tile menu for the practice & play modes.
+const PLAY_TILES: {
+  label: string;
+  emoji: string;
+  color: string;
+  route: string;
+  params?: Record<string, unknown>;
+}[] = [
+  { label: "Review", emoji: "🧠", color: "#5B8DEF", route: "review" },
+  { label: "Mistakes", emoji: "🎯", color: "#E5534B", route: "review", params: { mistakesOnly: true } },
+  { label: "Dictation", emoji: "👂", color: "#3DDC97", route: "dictation" },
+  { label: "Grammar", emoji: "💡", color: "#FFC800", route: "tips" },
+  { label: "Stories", emoji: "📚", color: "#A36BFE", route: "stories" },
+  { label: "Role-play", emoji: "🎭", color: "#FF7AC6", route: "stories", params: { mode: "roleplay" } },
+  { label: "Watch", emoji: "🎬", color: "#FF9F1C", route: "watch" },
+  { label: "News", emoji: "📰", color: "#4DB6AC", route: "news" },
+  { label: "AI Story", emoji: "✨", color: "#7C4DFF", route: "aistory" },
+  { label: "Words", emoji: "📖", color: "#58CC02", route: "words" },
+  { label: "Match Blitz", emoji: "⚡", color: "#FFB300", route: "game" },
+  { label: "Writing", emoji: "✍️", color: "#26C6DA", route: "trace" },
+];
+
+function PlayTile({
+  label,
+  emoji,
+  color,
+  onPress,
+}: {
+  label: string;
+  emoji: string;
+  color: string;
+  onPress: () => void;
+}) {
+  return (
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => [
+        styles.tile,
+        { borderColor: color, transform: [{ scale: pressed ? 0.96 : 1 }] },
+      ]}
+    >
+      <View style={[styles.tileIcon, { backgroundColor: color + "22" }]}>
+        <Text style={{ fontSize: 26 }}>{emoji}</Text>
+      </View>
+      <Text style={styles.tileLabel}>{label}</Text>
+    </Pressable>
+  );
+}
+
 export function ProfileScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
@@ -244,81 +293,12 @@ export function ProfileScreen() {
           />
         ) : null}
 
-        <Card>
-          <Text style={styles.cardTitle}>Practice & play</Text>
-          <Button
-            label="🧠  Review (recall your weak words)"
-            variant="ghost"
-            onPress={() => nav.navigate("review")}
-            style={{ marginTop: theme.spacing(1.5) }}
-          />
-          <Button
-            label="🎯  Practice your mistakes"
-            variant="ghost"
-            onPress={() => nav.navigate("review", { mistakesOnly: true })}
-            style={{ marginTop: theme.spacing(1) }}
-          />
-          <Button
-            label="👂  Dictation"
-            variant="ghost"
-            onPress={() => nav.navigate("dictation")}
-            style={{ marginTop: theme.spacing(1) }}
-          />
-          <Button
-            label="💡  Grammar tips"
-            variant="ghost"
-            onPress={() => nav.navigate("tips")}
-            style={{ marginTop: theme.spacing(1) }}
-          />
-          <Button
-            label="📚  Stories"
-            variant="ghost"
-            onPress={() => nav.navigate("stories")}
-            style={{ marginTop: theme.spacing(1.5) }}
-          />
-          <Button
-            label="🎭  Role-play (speak a scene)"
-            variant="ghost"
-            onPress={() => nav.navigate("stories", { mode: "roleplay" })}
-            style={{ marginTop: theme.spacing(1) }}
-          />
-          <Button
-            label="🎬  Watch"
-            variant="ghost"
-            onPress={() => nav.navigate("watch")}
-            style={{ marginTop: theme.spacing(1) }}
-          />
-          <Button
-            label="📰  News"
-            variant="ghost"
-            onPress={() => nav.navigate("news")}
-            style={{ marginTop: theme.spacing(1) }}
-          />
-          <Button
-            label="✨  AI Story"
-            variant="ghost"
-            onPress={() => nav.navigate("aistory")}
-            style={{ marginTop: theme.spacing(1) }}
-          />
-          <Button
-            label="📖  Words you know"
-            variant="ghost"
-            onPress={() => nav.navigate("words")}
-            style={{ marginTop: theme.spacing(1) }}
-          />
-          <Button
-            label="⚡  Match Blitz"
-            variant="ghost"
-            onPress={() => nav.navigate("game")}
-            style={{ marginTop: theme.spacing(1) }}
-          />
-          <Button
-            label="✍️  Practice writing"
-            variant="ghost"
-            onPress={() => nav.navigate("trace")}
-            style={{ marginTop: theme.spacing(1) }}
-          />
-        </Card>
+        <Text style={[styles.cardTitle, { marginTop: theme.spacing(1) }]}>Practice & play</Text>
+        <View style={styles.tileGrid}>
+          {PLAY_TILES.map((t) => (
+            <PlayTile key={t.label} {...t} onPress={() => nav.navigate(t.route as any, t.params)} />
+          ))}
+        </View>
 
         <Button label="Settings" variant="ghost" onPress={() => nav.navigate("settings")} />
       </ScrollView>
@@ -502,5 +482,26 @@ const styles = StyleSheet.create({
   trickyTarget: { color: theme.colors.text, fontWeight: "800", fontSize: 16 },
   trickyEn: { color: theme.colors.textMuted, marginTop: 2, fontSize: 13 },
   trickyAcc: { color: theme.colors.danger, fontWeight: "800" },
+  tileGrid: { flexDirection: "row", flexWrap: "wrap", gap: 10, marginTop: theme.spacing(1.5) },
+  tile: {
+    width: "31%",
+    aspectRatio: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
+    backgroundColor: theme.colors.surface,
+    borderWidth: 2,
+    borderRadius: theme.radius.lg,
+    paddingVertical: theme.spacing(1.5),
+    ...theme.shadow,
+  },
+  tileIcon: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  tileLabel: { color: theme.colors.text, fontWeight: "800", fontSize: 12, textAlign: "center" },
 });
 
