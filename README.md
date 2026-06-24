@@ -115,6 +115,8 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Tricky words** — a Profile card surfacing your lowest-accuracy words (from
+  recall stats), tap to hear.
 - **Word of the Day** — a rotating vocabulary card on the path (tap to hear),
   refreshed daily from the course vocab.
 - **Double or Nothing** — wager 💎50 that you'll practice every day for 7 days to

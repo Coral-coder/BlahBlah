@@ -4,6 +4,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Button, Card, Chip, ProgressBar } from "@/components/ui";
 import { getCourse } from "@/curriculum";
 import { flattenCourse } from "@/curriculum/types";
+import { speak } from "@/lib/speech";
 import { useNav } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
 import { theme } from "@/theme";
@@ -235,6 +236,14 @@ export function ProfileScreen() {
           </Card>
         ) : null}
 
+        {course ? (
+          <TrickyWords
+            stats={state.wordStats[course.code] ?? {}}
+            vocab={state.learnedVocab[course.code] ?? {}}
+            locale={course.speechLocale}
+          />
+        ) : null}
+
         <Card>
           <Text style={styles.cardTitle}>Practice & play</Text>
           <Button
@@ -314,6 +323,42 @@ export function ProfileScreen() {
         <Button label="Settings" variant="ghost" onPress={() => nav.navigate("settings")} />
       </ScrollView>
     </View>
+  );
+}
+
+// Your lowest-accuracy words, surfaced from the recall stats already tracked.
+function TrickyWords({
+  stats,
+  vocab,
+  locale,
+}: {
+  stats: Record<string, { c: number; w: number; t: number }>;
+  vocab: Record<string, { target: string; en: string; pinyin?: string }>;
+  locale?: string;
+}) {
+  const tricky = Object.entries(stats)
+    .map(([target, s]) => ({ target, w: s.w, total: s.c + s.w, acc: s.c + s.w ? s.c / (s.c + s.w) : 1 }))
+    .filter((x) => x.w > 0)
+    .sort((a, b) => a.acc - b.acc || b.w - a.w)
+    .slice(0, 5);
+  if (tricky.length === 0) return null;
+  return (
+    <Card>
+      <Text style={styles.cardTitle}>Tricky words</Text>
+      <Text style={styles.cardSub}>The words you miss most — tap to hear them</Text>
+      <View style={{ marginTop: theme.spacing(1.5), gap: 10 }}>
+        {tricky.map((t) => (
+          <Pressable key={t.target} style={styles.trickyRow} onPress={() => speak(t.target, locale)}>
+            <View style={{ flex: 1 }}>
+              <Text style={styles.trickyTarget}>{t.target}</Text>
+              {vocab[t.target]?.en ? <Text style={styles.trickyEn}>{vocab[t.target].en}</Text> : null}
+            </View>
+            <Text style={styles.trickyAcc}>{Math.round(t.acc * 100)}%</Text>
+            <Text style={{ fontSize: 18 }}>🔊</Text>
+          </Pressable>
+        ))}
+      </View>
+    </Card>
   );
 }
 
@@ -445,5 +490,17 @@ const styles = StyleSheet.create({
   calCell: { width: 22, height: 22, borderRadius: 5, margin: 0 },
   calLegend: { flexDirection: "row", alignItems: "center", gap: 5, marginTop: 12, justifyContent: "center" },
   calLegendText: { color: theme.colors.textMuted, fontSize: 11, fontWeight: "700" },
+  trickyRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+    backgroundColor: theme.colors.surfaceAlt,
+    borderRadius: theme.radius.md,
+    paddingVertical: 10,
+    paddingHorizontal: 14,
+  },
+  trickyTarget: { color: theme.colors.text, fontWeight: "800", fontSize: 16 },
+  trickyEn: { color: theme.colors.textMuted, marginTop: 2, fontSize: 13 },
+  trickyAcc: { color: theme.colors.danger, fontWeight: "800" },
 });
 
