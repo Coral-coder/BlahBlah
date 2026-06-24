@@ -187,6 +187,7 @@ export function LessonScreen() {
           onChange={setResponse}
           onMistake={onMatchMistake}
           onSwap={swapCurrent}
+          onAutoAdvance={() => proceed(true)}
         />
       </ScrollView>
 

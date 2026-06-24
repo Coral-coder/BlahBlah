@@ -115,6 +115,9 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Auto-confirm speaking** — speaking exercises now detect when you stop talking,
+  score automatically, and auto-advance when correct. No more double-tap.
+
 - **Rich French & Italian** — added a full themed section to each (Around town,
   Daily life, Shopping, Travel, Weather & nature). Now ~184 vocab / ~485 lessons
   each, all validated.

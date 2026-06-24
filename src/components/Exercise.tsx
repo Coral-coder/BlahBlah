@@ -77,6 +77,8 @@ interface Props {
   onMistake?: () => void;
   /** Replace this exercise with an equivalent (e.g. swap audio → written). */
   onSwap?: (replacement: Exercise) => void;
+  /** Advance to the next exercise automatically (used by auto-confirm speaking). */
+  onAutoAdvance?: () => void;
 }
 
 export function ExerciseView(props: Props) {
@@ -595,6 +597,7 @@ function SpeakView({
   exercise,
   onChange,
   onSwap,
+  onAutoAdvance,
 }: Props & { exercise: Extract<Exercise, { type: "speak" }> }) {
   const [status, setStatus] = useState<"idle" | "listening" | "done">("idle");
   const [heard, setHeard] = useState<string | null>(null);
@@ -604,6 +607,15 @@ function SpeakView({
   // so the learner can say the WHOLE sentence before being graded.
   const transcript = useRef<string>("");
   const scored = useRef(false);
+  // Auto-finalize once the speaker pauses, so there's no second tap.
+  const silenceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const advanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const clearTimers = () => {
+    if (silenceTimer.current) clearTimeout(silenceTimer.current);
+    if (advanceTimer.current) clearTimeout(advanceTimer.current);
+    silenceTimer.current = null;
+    advanceTimer.current = null;
+  };
 
   function finalize() {
     if (scored.current) return;
@@ -613,19 +625,29 @@ function SpeakView({
       setError("Didn't catch that — tap the mic and try again.");
       return;
     }
+    clearTimers();
     scored.current = true;
     const sc = pronunciationScore(exercise.text, text);
     setHeard(text);
     setScore(sc);
     setStatus("done");
-    playSfx(sc >= 60 ? "correct" : "wrong");
+    const passed = sc >= 60;
+    playSfx(passed ? "correct" : "wrong");
     onChange("done");
+    Voice.stop().catch(() => {});
+    // Got it right? Confirm and move on automatically — no extra tap.
+    if (passed && onAutoAdvance) {
+      advanceTimer.current = setTimeout(() => onAutoAdvance(), 1100);
+    }
   }
 
   useEffect(() => {
     (Voice as any).onSpeechResults = (e: { value?: string[] }) => {
       // iOS reports the growing full transcript here; just remember it.
       if (e.value?.[0]) transcript.current = e.value[0];
+      // Each time new speech arrives, (re)start the "stopped talking" timer.
+      if (silenceTimer.current) clearTimeout(silenceTimer.current);
+      silenceTimer.current = setTimeout(() => finalize(), 1500);
     };
     (Voice as any).onSpeechError = () => {
       if (!scored.current) {
@@ -633,9 +655,10 @@ function SpeakView({
         setError("Didn't catch that — try again, or skip.");
       }
     };
-    // Recognition stopped (user tapped done, or a natural pause) -> score now.
+    // Recognition stopped (natural pause or manual stop) -> score now.
     (Voice as any).onSpeechEnd = () => finalize();
     return () => {
+      clearTimers();
       Voice.destroy()
         .then(() => Voice.removeAllListeners())
         .catch(() => {});
@@ -649,6 +672,7 @@ function SpeakView({
     setScore(null);
     transcript.current = "";
     scored.current = false;
+    clearTimers();
     try {
       setStatus("listening");
       await Voice.start(getSpeechLocale());
@@ -664,7 +688,7 @@ function SpeakView({
     } catch {
       // no-op
     }
-    setTimeout(finalize, 700);
+    setTimeout(finalize, 500);
   }
 
   const tip =
@@ -711,7 +735,7 @@ function SpeakView({
         </Pressable>
         <Text style={styles.micLabel}>
           {status === "listening"
-            ? "Listening… say the whole sentence, then tap ✓"
+            ? "Listening… just say it — I'll confirm automatically"
             : status === "done"
               ? "Tap to try again"
               : "Tap, then say the whole sentence"}

@@ -1,13 +1,11 @@
-📚 French & Italian got a LOT deeper
+🎤 Speaking exercises now auto-confirm
 
-Both languages now have full themed sections on top of the basics:
-• Around town  • Daily life  • Shopping & money  • Travel & transport  • Weather & nature
+• Just tap the mic once and say the sentence — it detects when you've finished,
+  scores you automatically, and moves on if you got it right. No more tapping
+  the button twice.
 
-That's ~184 words and ~485 lessons each now (4× more than before), every line
-hand-checked and run through the automated content validator.
+(Also continuing to deepen the courses — French & Italian keep growing.)
 
 WHAT TO TEST
-• Switch to French or Italian and scroll the path — you'll see the new
-  "Explorer" and "Globetrotter" sections with lots more units.
-• Play a few of the new lessons; download the natural voice in Settings for the
-  best pronunciation.
+• Do a speaking exercise: tap mic, say the line, then stop talking — it should
+  score on its own and advance when correct.
