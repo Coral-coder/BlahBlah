@@ -1,12 +1,11 @@
-// AUTO-GENERATED BARREL — do not edit by hand.
-//
-// The content pipeline (`scripts/content-pipeline/build.mjs`, run by the
-// "Content pipeline" GitHub Action) regenerates the per-language section files
-// in this folder from open data (FreeDict translations ranked by word
-// frequency), and rewrites this barrel to import them. Until the pipeline has
-// run, this map is empty and the app uses only the hand-authored blueprints.
-//
-// Each value is an array of SectionBlueprint appended to that language's course.
+// AUTO-GENERATED BARREL — do not edit by hand. See scripts/content-pipeline/build.mjs.
 import type { SectionBlueprint } from "@/curriculum/generate";
+import { sections as deSections } from "@/curriculum/blueprints/generated/de";
+import { sections as frSections } from "@/curriculum/blueprints/generated/fr";
+import { sections as itSections } from "@/curriculum/blueprints/generated/it";
 
-export const generatedSections: Record<string, SectionBlueprint[]> = {};
+export const generatedSections: Record<string, SectionBlueprint[]> = {
+  de: deSections,
+  fr: frSections,
+  it: itSections,
+};
