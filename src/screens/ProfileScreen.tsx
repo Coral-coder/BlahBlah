@@ -1,4 +1,5 @@
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { useEffect, useRef, useState } from "react";
+import { Animated, Easing, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Button, Card, Chip, ProgressBar } from "@/components/ui";
@@ -99,8 +100,8 @@ export function ProfileScreen() {
         <Text style={styles.title}>Your progress</Text>
 
         <View style={styles.statRow}>
-          <BigStat value={`${currentStreak}`} label="day streak" emoji="🔥" />
-          <BigStat value={`${state.xp}`} label="total XP" emoji="⭐" />
+          <BigStat value={currentStreak} label="day streak" emoji="🔥" />
+          <BigStat value={state.xp} label="total XP" emoji="⭐" />
         </View>
 
         <Button
@@ -397,11 +398,23 @@ function PracticeCalendar({ history }: { history: Record<string, number> }) {
   );
 }
 
-function BigStat({ value, label, emoji }: { value: string; label: string; emoji: string }) {
+function BigStat({ value, label, emoji }: { value: number; label: string; emoji: string }) {
+  const anim = useRef(new Animated.Value(0)).current;
+  const [shown, setShown] = useState(0);
+  useEffect(() => {
+    const id = anim.addListener(({ value: v }) => setShown(Math.round(v)));
+    Animated.timing(anim, {
+      toValue: value,
+      duration: 900,
+      easing: Easing.out(Easing.cubic),
+      useNativeDriver: false,
+    }).start();
+    return () => anim.removeListener(id);
+  }, [value, anim]);
   return (
     <View style={styles.bigStat}>
       <Text style={styles.bigStatValue}>
-        {emoji} {value}
+        {emoji} {shown}
       </Text>
       <Text style={styles.bigStatLabel}>{label}</Text>
     </View>
