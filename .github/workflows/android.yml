@@ -104,12 +104,17 @@ jobs:
           retention-days: 30
 
       - name: Publish to Google Play internal track (if configured)
-        if: ${{ secrets.PLAY_JSON_KEY != '' }}
+        # The `secrets` context isn't allowed in `if:`, so gate inside the script:
+        # without a Play key this is a no-op (the AAB/APK artifacts are enough).
         env:
           PLAY_JSON_KEY: ${{ secrets.PLAY_JSON_KEY }}
           BLAHBLAH_VERSION_CODE: ${{ github.run_number }}
         run: |
           set -euo pipefail
+          if [ -z "${PLAY_JSON_KEY:-}" ]; then
+            echo "No PLAY_JSON_KEY secret — skipping Play upload. Artifacts are attached to this run."
+            exit 0
+          fi
           KEY_PATH="$RUNNER_TEMP/play-key.json"
           printf '%s' "$PLAY_JSON_KEY" > "$KEY_PATH"
           export PLAY_JSON_KEY_PATH="$KEY_PATH"
