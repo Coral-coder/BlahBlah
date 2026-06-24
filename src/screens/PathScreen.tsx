@@ -27,29 +27,47 @@ import { theme } from "@/theme";
 export function PathScreen() {
   const nav = useNav();
   const insets = useSafeAreaInsets();
-  const { state, courseProgress, currentStreak, xpToday, isCompleted, crownLevel, totalCrowns, setSettings, markGoalCelebrated } =
-    useProgress();
+  const {
+    state,
+    courseProgress,
+    currentStreak,
+    xpToday,
+    isCompleted,
+    crownLevel,
+    totalCrowns,
+    setSettings,
+    markGoalCelebrated,
+    setStreakMilestone,
+  } = useProgress();
   const [voiceScanned, setVoiceScanned] = useState(false);
   useEffect(() => {
     scanInstalled().then(() => setVoiceScanned(true));
   }, []);
 
-  // Celebrate the first time the daily goal is reached each day.
-  const [celebrate, setCelebrate] = useState(false);
+  // One celebration overlay, driven by a message (daily goal or streak milestone).
+  const [celebrate, setCelebrate] = useState<string | null>(null);
   const todayKey = (() => {
     const d = new Date();
     return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
   })();
   const goalMet = state.dailyGoal > 0 && xpToday >= state.dailyGoal;
+  const STREAK_MILESTONES = [3, 7, 14, 30, 60, 100, 180, 365];
+  const reachedMilestone = STREAK_MILESTONES.filter((m) => currentStreak >= m).pop() ?? 0;
   useEffect(() => {
-    if (goalMet && state.goalCelebratedDay !== todayKey) {
-      setCelebrate(true);
+    if (reachedMilestone > (state.lastStreakMilestone ?? 0)) {
+      setCelebrate(`🔥 ${reachedMilestone}-day streak!`);
+      setStreakMilestone(reachedMilestone);
+    } else if (goalMet && state.goalCelebratedDay !== todayKey) {
+      setCelebrate("🎉 Daily goal reached!");
       markGoalCelebrated();
-      const t = setTimeout(() => setCelebrate(false), 4000);
-      return () => clearTimeout(t);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [goalMet, state.goalCelebratedDay]);
+  }, [goalMet, state.goalCelebratedDay, reachedMilestone, state.lastStreakMilestone]);
+  useEffect(() => {
+    if (!celebrate) return;
+    const t = setTimeout(() => setCelebrate(null), 4000);
+    return () => clearTimeout(t);
+  }, [celebrate]);
 
   const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
   const cp = course ? courseProgress(course.code) : undefined;
@@ -275,7 +293,7 @@ export function PathScreen() {
         <View style={styles.goalCelebrate} pointerEvents="none">
           <Confetti count={50} />
           <View style={styles.goalToast}>
-            <Text style={styles.goalToastText}>🎉 Daily goal reached!</Text>
+            <Text style={styles.goalToastText}>{celebrate}</Text>
           </View>
         </View>
       ) : null}

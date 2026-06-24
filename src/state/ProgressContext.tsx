@@ -152,6 +152,8 @@ export interface Persisted {
   reminderHour: number;
   /** Day-string on which the daily-goal celebration was last shown. */
   goalCelebratedDay?: string;
+  /** Highest streak milestone already celebrated. */
+  lastStreakMilestone?: number;
   settings: Settings;
 }
 
@@ -241,6 +243,8 @@ interface ProgressContextValue {
   setDailyGoal: (goal: number) => void;
   /** Record that today's daily-goal celebration has been shown. */
   markGoalCelebrated: () => void;
+  /** Record the highest streak milestone celebrated. */
+  setStreakMilestone: (n: number) => void;
   setReminder: (enabled: boolean, hour: number) => void;
   setSettings: (partial: Partial<Settings>) => void;
   resetCourse: (code: string) => void;
@@ -482,6 +486,7 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
       },
       setDailyGoal: (goal) => persist({ ...state, dailyGoal: goal }),
       markGoalCelebrated: () => persist({ ...state, goalCelebratedDay: dayStr(new Date()) }),
+      setStreakMilestone: (n) => persist({ ...state, lastStreakMilestone: n }),
       setReminder: (enabled, hour) =>
         persist({ ...state, reminderEnabled: enabled, reminderHour: hour }),
       setSettings: (partial) =>

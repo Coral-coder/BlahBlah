@@ -115,6 +115,7 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Streak milestones** — a one-time confetti toast at 3/7/14/30/60/100/180/365-day streaks.
 - **Daily-goal celebration** — confetti + a toast the first time you hit your
   daily XP goal each day.
 - **Share progress** — a one-tap native share sheet posting your streak + XP.
