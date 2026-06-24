@@ -349,10 +349,11 @@ function LessonNode({
           <Pressable
             disabled={locked}
             onPress={onPress}
-            style={[
+            style={({ pressed }) => [
               styles.node,
               { backgroundColor: bg, opacity: locked ? 0.6 : 1 },
               isCurrent && styles.nodeCurrent,
+              pressed && !locked && { transform: [{ translateY: 3 }, { scale: 0.94 }] },
             ]}
           >
             <Text style={styles.nodeIcon}>
