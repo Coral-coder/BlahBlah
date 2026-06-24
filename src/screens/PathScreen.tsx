@@ -15,6 +15,7 @@ import { Mascot } from "@/components/Mascot";
 import { ProgressBar } from "@/components/ui";
 import { getCourse } from "@/curriculum";
 import { dueWords } from "@/lib/srs";
+import { speak } from "@/lib/speech";
 import { flattenCourse, type PathNode } from "@/curriculum/types";
 import { useNav } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
@@ -129,6 +130,8 @@ export function PathScreen() {
           </View>
         </View>
 
+        <WordOfDay course={course} />
+
         {dueCount > 0 ? (
           <Pressable style={styles.dueBanner} onPress={() => nav.navigate("review")}>
             <Text style={styles.dueTitle}>🧠  {dueCount} word{dueCount === 1 ? "" : "s"} due for review</Text>
@@ -212,6 +215,30 @@ export function PathScreen() {
         })}
       </ScrollView>
     </View>
+  );
+}
+
+function WordOfDay({ course }: { course: ReturnType<typeof getCourse> }) {
+  const vocab = useMemo(() => {
+    if (!course) return [];
+    const out: { target: string; en: string; pinyin?: string }[] = [];
+    for (const s of course.sections) for (const u of s.units) for (const v of u.vocab ?? []) out.push(v);
+    return out;
+  }, [course]);
+  if (!course || vocab.length === 0) return null;
+  const now = new Date();
+  const dayNum = Math.floor(now.getTime() / 86400000);
+  const word = vocab[dayNum % vocab.length];
+  return (
+    <Pressable style={styles.wotd} onPress={() => speak(word.target, course.speechLocale)}>
+      <Text style={styles.wotdLabel}>WORD OF THE DAY</Text>
+      <View style={styles.wotdRow}>
+        <Text style={styles.wotdTarget}>{word.target}</Text>
+        <Text style={{ fontSize: 22 }}>🔊</Text>
+      </View>
+      {word.pinyin ? <Text style={styles.wotdPinyin}>{word.pinyin}</Text> : null}
+      <Text style={styles.wotdEn}>{word.en}</Text>
+    </Pressable>
   );
 }
 
@@ -369,6 +396,20 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: theme.colors.gold,
   },
+  wotd: {
+    margin: theme.spacing(2),
+    marginBottom: 0,
+    padding: theme.spacing(2),
+    borderRadius: theme.radius.lg,
+    backgroundColor: theme.colors.surfaceAlt,
+    borderWidth: 1,
+    borderColor: theme.colors.accent,
+  },
+  wotdLabel: { color: theme.colors.accent, fontWeight: "900", letterSpacing: 1.5, fontSize: 11 },
+  wotdRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 6 },
+  wotdTarget: { color: theme.colors.text, fontWeight: "900", fontSize: 26 },
+  wotdPinyin: { color: theme.colors.accent, marginTop: 2, fontSize: 15 },
+  wotdEn: { color: theme.colors.textMuted, marginTop: 4, fontSize: 15 },
   dueTitle: { color: theme.colors.gold, fontWeight: "800", fontSize: 16 },
   dueSub: { color: theme.colors.textMuted, marginTop: 4 },
   sectionTitle: {
