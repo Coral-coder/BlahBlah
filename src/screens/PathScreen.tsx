@@ -43,11 +43,32 @@ export function PathScreen() {
   );
 
   const scrollRef = useRef<ScrollView>(null);
-  const scrolledRef = useRef(false);
+  const unitYRef = useRef<Record<string, number>>({});
   const [openUnits, setOpenUnits] = useState<Record<string, boolean>>({});
+
+  // Keep the current (next-incomplete) lesson parked in ~second place so it's
+  // visible without scrolling — re-runs whenever you advance a lesson.
+  const HEADER_BLOCK = 96; // section/unit header + top padding (approx)
+  const ROW_STRIDE = 112; // height of one lesson node row (approx)
+  const currentUnitId = nodes[Math.min(currentIndex, nodes.length - 1)]?.unit.id;
   useEffect(() => {
-    scrolledRef.current = false;
-  }, [course]);
+    if (!currentUnitId) return;
+    const firstIdx = nodes.findIndex((n) => n.unit.id === currentUnitId);
+    const pos = Math.max(0, currentIndex - firstIdx);
+    let tries = 0;
+    const id = setInterval(() => {
+      const uy = unitYRef.current[currentUnitId];
+      if (uy != null) {
+        const y = Math.max(0, uy + HEADER_BLOCK + pos * ROW_STRIDE - ROW_STRIDE - 12);
+        scrollRef.current?.scrollTo({ y, animated: true });
+        clearInterval(id);
+      } else if (++tries > 12) {
+        clearInterval(id);
+      }
+    }, 60);
+    return () => clearInterval(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentIndex, currentUnitId, course]);
 
   if (!course) {
     return (
@@ -61,7 +82,6 @@ export function PathScreen() {
   }
 
   const goalPct = state.dailyGoal > 0 ? xpToday / state.dailyGoal : 0;
-  const currentUnitId = nodes[Math.min(currentIndex, nodes.length - 1)]?.unit.id;
   const isUnitComplete = (unitId: string) =>
     nodes.filter((n) => n.unit.id === unitId).every((n) => completed[n.lesson.id]);
 
@@ -150,19 +170,15 @@ export function PathScreen() {
           const unitNodes = nodes.filter((n) => n.unit.id === unit.id);
           const isFirstOfSection = section.units[0].id === unit.id;
           const complete = isUnitComplete(unit.id);
-          const isCurrentUnit = unit.id === currentUnitId;
           const open = openUnits[unit.id] ?? !complete; // completed units collapse
           const doneCount = unitNodes.filter((n) => completed[n.lesson.id]).length;
           return (
             <View
               key={unit.id}
               onLayout={(e: LayoutChangeEvent) => {
-                // Auto-scroll to the unit you're currently working on (once).
-                if (isCurrentUnit && !scrolledRef.current) {
-                  scrolledRef.current = true;
-                  const y = e.nativeEvent.layout.y;
-                  setTimeout(() => scrollRef.current?.scrollTo({ y: Math.max(0, y - 12), animated: false }), 0);
-                }
+                // Record each unit's position so the scroll effect can park the
+                // current lesson in second place.
+                unitYRef.current[unit.id] = e.nativeEvent.layout.y;
               }}
             >
               {isFirstOfSection ? (
