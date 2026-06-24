@@ -56,6 +56,8 @@ export function LessonScreen() {
   const [hearts, setHearts] = useState(START_HEARTS);
   const [solved, setSolved] = useState(0);
   const [round, setRound] = useState(0);
+  const [combo, setCombo] = useState(0);
+  const [maxCombo, setMaxCombo] = useState(0);
 
   if (!node) {
     return (
@@ -72,7 +74,8 @@ export function LessonScreen() {
     current.type === "match" || current.type === "speak" || current.type === "card";
 
   function finish(passed: boolean) {
-    const xp = passed ? lessonXp(mistakes) : 0;
+    const comboBonus = Math.floor(maxCombo / 5) * 3; // reward long perfect runs
+    const xp = passed ? lessonXp(mistakes) + comboBonus : 0;
     if (passed) completeLesson(courseCode, lessonId, xp, node?.lesson.vocab);
     nav.replace("lessonComplete", { courseCode, lessonId, passed, xp, mistakes, total });
   }
@@ -94,8 +97,14 @@ export function LessonScreen() {
     if (wasCorrect) {
       next = queue.slice(1);
       setSolved((s) => s + 1);
+      setCombo((c) => {
+        const nc = c + 1;
+        setMaxCombo((m) => Math.max(m, nc));
+        return nc;
+      });
     } else {
       next = [...queue.slice(1), queue[0]];
+      setCombo(0);
     }
     if (next.length === 0) return finish(true);
     setQueue(next);
@@ -123,6 +132,7 @@ export function LessonScreen() {
         <View style={{ flex: 1, marginHorizontal: 14 }}>
           <ProgressBar progress={total ? solved / total : 0} />
         </View>
+        {combo >= 2 ? <Text style={styles.combo}>🔥{combo}</Text> : null}
         <Hearts count={Math.max(0, hearts)} />
       </View>
 
@@ -185,6 +195,7 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
   },
   close: { color: theme.colors.textMuted, fontSize: 24, fontWeight: "700" },
+  combo: { color: theme.colors.gold, fontWeight: "900", fontSize: 16, marginRight: 10 },
   tapTip: {
     color: theme.colors.textMuted,
     fontSize: 12,

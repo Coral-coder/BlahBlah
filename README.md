@@ -115,6 +115,8 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Combo meter** — consecutive correct answers build a 🔥 combo in-lesson, with
+  bonus XP for long perfect runs.
 - **Tricky words** — a Profile card surfacing your lowest-accuracy words (from
   recall stats), tap to hear.
 - **Word of the Day** — a rotating vocabulary card on the path (tap to hear),
