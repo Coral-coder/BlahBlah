@@ -75,6 +75,8 @@ interface Props {
   onChange: (r: ExResponse) => void;
   /** Called when the user makes a wrong tap inside a match exercise. */
   onMistake?: () => void;
+  /** Replace this exercise with an equivalent (e.g. swap audio → written). */
+  onSwap?: (replacement: Exercise) => void;
 }
 
 export function ExerciseView(props: Props) {
@@ -316,6 +318,7 @@ function WordbankView({
   exercise,
   revealed,
   onChange,
+  onSwap,
   listen,
   given,
 }: Props & {
@@ -355,12 +358,31 @@ function WordbankView({
           <Text style={{ fontSize: 36 }}>🔊</Text>
           <Text style={styles.bigSpeakLabel}>Tap to replay · hold for slow</Text>
         </Pressable>
-      ) : (
+      ) : null}
+      {listen && onSwap && !revealed ? (
+        <Pressable
+          onPress={() =>
+            onSwap({
+              type: "wordbank",
+              prompt: "Translate this",
+              given: exercise.translation ?? exercise.answer,
+              answer: exercise.answer,
+              bank: exercise.bank,
+              speak: exercise.speak,
+              pinyin: exercise.pinyin,
+            })
+          }
+          style={{ marginTop: 10, alignSelf: "flex-start" }}
+        >
+          <Text style={styles.swapLink}>Can't listen right now? Show the text →</Text>
+        </Pressable>
+      ) : null}
+      {!listen ? (
         <View style={styles.questionRow}>
           <Text style={styles.given}>{given}</Text>
           {exercise.speak ? <Speaker text={exercise.speak} /> : null}
         </View>
-      )}
+      ) : null}
 
       <HintBar hint={hint} />
 
@@ -572,6 +594,7 @@ function MatchView({
 function SpeakView({
   exercise,
   onChange,
+  onSwap,
 }: Props & { exercise: Extract<Exercise, { type: "speak" }> }) {
   const [status, setStatus] = useState<"idle" | "listening" | "done">("idle");
   const [heard, setHeard] = useState<string | null>(null);
@@ -705,9 +728,27 @@ function SpeakView({
 
       {error ? <Text style={styles.correctHint}>{error}</Text> : null}
 
-      <Pressable onPress={() => onChange("done")} style={styles.skip}>
-        <Text style={styles.skipText}>Skip this one</Text>
-      </Pressable>
+      {onSwap ? (
+        <Pressable
+          onPress={() =>
+            onSwap({
+              type: "type",
+              prompt: "Type the translation",
+              question: exercise.translation ?? exercise.text,
+              answer: exercise.text,
+              pinyin: exercise.pinyin,
+              speak: exercise.text,
+            })
+          }
+          style={styles.skip}
+        >
+          <Text style={styles.swapLink}>Can't speak right now? Type it instead →</Text>
+        </Pressable>
+      ) : (
+        <Pressable onPress={() => onChange("done")} style={styles.skip}>
+          <Text style={styles.skipText}>Skip this one</Text>
+        </Pressable>
+      )}
     </View>
   );
 }
@@ -855,6 +896,7 @@ const styles = StyleSheet.create({
   heard: { color: theme.colors.textMuted, fontStyle: "italic", marginTop: 4 },
   skip: { alignSelf: "center", marginTop: theme.spacing(3), padding: 8 },
   skipText: { color: theme.colors.textMuted, fontWeight: "700" },
+  swapLink: { color: theme.colors.primary, fontWeight: "800", fontSize: 15 },
   newWord: { color: theme.colors.accent, fontWeight: "900", letterSpacing: 2, fontSize: 13 },
   cardArt: {
     marginTop: theme.spacing(2),

@@ -114,6 +114,15 @@ export function LessonScreen() {
     setRound((r) => r + 1);
   }
 
+  // Swap the current audio exercise for a written equivalent (no penalty, no skip).
+  function swapCurrent(replacement: Exercise) {
+    setQueue((q) => [replacement, ...q.slice(1)]);
+    setResponse(null);
+    setPhase("answer");
+    setCorrect(null);
+    setRound((r) => r + 1);
+  }
+
   function onMatchMistake() {
     setMistakes((m) => m + 1);
     setHearts((h) => h - 1);
@@ -146,6 +155,7 @@ export function LessonScreen() {
           correct={correct}
           onChange={setResponse}
           onMistake={onMatchMistake}
+          onSwap={swapCurrent}
         />
       </ScrollView>
 
