@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Animated, Easing, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Animated, Easing, Pressable, ScrollView, Share, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Button, Card, Chip, ProgressBar } from "@/components/ui";
@@ -301,6 +301,18 @@ export function ProfileScreen() {
             <PlayTile key={t.label} {...t} onPress={() => nav.navigate(t.route as any, t.params)} />
           ))}
         </View>
+
+        <Button
+          label="📣  Share my progress"
+          variant="ghost"
+          onPress={() => {
+            const streakBit = currentStreak > 0 ? `on a ${currentStreak}-day streak 🔥 ` : "";
+            const langBit = course ? ` learning ${course.name} ${course.flag}` : "";
+            Share.share({
+              message: `I'm ${streakBit}with ${state.xp} XP${langBit} on BlahBlah — better than Duolingo! 🗣️`,
+            }).catch(() => {});
+          }}
+        />
 
         <Button label="Settings" variant="ghost" onPress={() => nav.navigate("settings")} />
       </ScrollView>

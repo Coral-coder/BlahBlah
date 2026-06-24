@@ -115,6 +115,7 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Share progress** — a one-tap native share sheet posting your streak + XP.
 - **Flashcards** — a classic self-test deck over your learned words: tap to flip
   (with audio), mark "Got it"/"Again"; missed cards loop until the deck clears.
 
