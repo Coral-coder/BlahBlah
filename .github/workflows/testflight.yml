@@ -55,6 +55,9 @@ jobs:
       - name: Install JS dependencies
         run: npm ci
 
+      - name: Validate course content
+        run: npm run validate:content
+
       - name: Fetch neural-voice frameworks (sherpa-onnx)
         # CocoaPods does not run a podspec's prepare_command for local path pods,
         # so we vendor the prebuilt sherpa-onnx + onnxruntime xcframeworks here,
