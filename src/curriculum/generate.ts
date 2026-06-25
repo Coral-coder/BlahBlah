@@ -277,11 +277,21 @@ function pad(ex: Exercise[], pool: VocabItem[], r: () => number): Exercise[] {
 
 // A varied per-word practice exercise — rotated by index so a batch of new words
 // isn't drilled the same way five times in a row (select → listen → speak).
-function practiceForWord(word: VocabItem, pool: VocabItem[], i: number, r: () => number): Exercise {
+// `speech` is false for constructed languages (Elvish/Klingon/Dragon) that have
+// no speech-recognition locale — there we never emit speak exercises (they can't
+// be scored), substituting another type instead.
+function practiceForWord(
+  word: VocabItem,
+  pool: VocabItem[],
+  i: number,
+  r: () => number,
+  speech: boolean,
+): Exercise {
   const mode = i % 3;
   if (mode === 0 && pool.length >= 4) return mkSelect(word, pool, r);
   if (mode === 1) return mkListenWord(word, pool, r);
-  return mkSpeakWord(word);
+  if (speech) return mkSpeakWord(word);
+  return pool.length >= 4 ? mkSelect(word, pool, r) : mkListenWord(word, pool, r);
 }
 
 // A dense lesson: teach a batch of new words, practise each once (varied), use
@@ -293,6 +303,7 @@ function teachLesson(
   sentences: SentenceItem[],
   vocabTargets: Set<string>,
   r: () => number,
+  speech: boolean,
 ): Lesson {
   const pool = uniqByTarget([...newWords, ...known]);
   const knownTargets = new Set([...known, ...newWords].map((v) => v.target));
@@ -305,7 +316,7 @@ function teachLesson(
     ex.push(mkMatch(uniqByTarget([...newWords, ...sample(known, 2, r)]), r));
   }
   // 3) Practise each new word once, with a rotating exercise type.
-  newWords.forEach((w, i) => ex.push(practiceForWord(w, pool, i, r)));
+  newWords.forEach((w, i) => ex.push(practiceForWord(w, pool, i, r, speech)));
   // 4) Apply in sentences the learner can fully build from words seen so far.
   const usable = sentences.filter((s) =>
     words(s.target).every((w) => !vocabTargets.has(w) || knownTargets.has(w)),
@@ -324,7 +335,7 @@ function teachLesson(
   if (known.length) {
     const want = MAX_EX_PER_LESSON - ex.length;
     sample(known, Math.max(0, want), r).forEach((w, i) => {
-      if (ex.length < MAX_EX_PER_LESSON) ex.push(practiceForWord(w, pool, i, r));
+      if (ex.length < MAX_EX_PER_LESSON) ex.push(practiceForWord(w, pool, i, r, speech));
     });
   }
 
@@ -343,6 +354,7 @@ function reviewLesson(
   sentences: SentenceItem[],
   vocabTargets: Set<string>,
   r: () => number,
+  speech: boolean,
 ): Lesson {
   const ex: Exercise[] = [];
   if (pool.length >= 3) ex.push(mkMatch(sample(pool, 5, r), r));
@@ -353,11 +365,11 @@ function reviewLesson(
     if (f) ex.push(f);
   }
   if (sents[2]) ex.push(mkListenSentence(sents[2], pool, r));
-  if (sents[3]) ex.push(mkSpeakSentence(sents[3]));
+  if (sents[3]) ex.push(speech ? mkSpeakSentence(sents[3]) : mkListenSentence(sents[3], pool, r));
   if (sents[4]) ex.push(mkType(sents[4]));
   sample(pool, 8, r).forEach((v, i) => {
     if (ex.length >= MAX_EX_PER_LESSON) return;
-    ex.push(practiceForWord(v, pool, i, r));
+    ex.push(practiceForWord(v, pool, i, r, speech));
   });
   return { id, title: "Practice", exercises: pad(ex, pool, r) };
 }
@@ -383,7 +395,7 @@ export function courseLessonCount(bp: CourseBlueprint): number {
   return n;
 }
 
-function buildUnit(bp: UnitBlueprint): Unit {
+function buildUnit(bp: UnitBlueprint, speech: boolean): Unit {
   const r = rng(hashString(bp.id));
   const vocab = bp.vocab;
   const sentences = bp.sentences ?? [];
@@ -397,18 +409,18 @@ function buildUnit(bp: UnitBlueprint): Unit {
     const batch = vocab.slice(i, i + NEW_PER_LESSON);
     const priorKnown = [...known];
     lessons.push(
-      teachLesson(`${bp.id}-l${lessonNo++}`, batch, priorKnown, sentences, vocabTargets, r),
+      teachLesson(`${bp.id}-l${lessonNo++}`, batch, priorKnown, sentences, vocabTargets, r, speech),
     );
     known.push(...batch);
     // A consolidation review after every few batches, once enough is known.
     if (known.length >= NEW_PER_LESSON * 2 && (i / NEW_PER_LESSON) % 3 === 2) {
       lessons.push(
-        reviewLesson(`${bp.id}-l${lessonNo++}`, [...known], sentences, vocabTargets, r),
+        reviewLesson(`${bp.id}-l${lessonNo++}`, [...known], sentences, vocabTargets, r, speech),
       );
     }
   }
   for (let k = 0; k < END_REVIEWS; k++) {
-    lessons.push(reviewLesson(`${bp.id}-l${lessonNo++}`, vocab, sentences, vocabTargets, r));
+    lessons.push(reviewLesson(`${bp.id}-l${lessonNo++}`, vocab, sentences, vocabTargets, r, speech));
   }
 
   return {
@@ -424,11 +436,14 @@ function buildUnit(bp: UnitBlueprint): Unit {
 }
 
 export function generateCourse(bp: CourseBlueprint): Course {
+  // Constructed languages (Elvish/Klingon/Dragon) have no speech-recognition
+  // locale, so don't generate speak exercises the recognizer can't score.
+  const speech = !!bp.speechLocale;
   const sections: Section[] = bp.sections.map((s) => ({
     id: s.id,
     title: s.title,
     subtitle: s.subtitle,
-    units: s.units.map(buildUnit),
+    units: s.units.map((u) => buildUnit(u, speech)),
   }));
   return {
     code: bp.code,
