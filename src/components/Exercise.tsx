@@ -1,6 +1,6 @@
 import Voice from "@react-native-voice/voice";
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { ActivityIndicator, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 import type { Exercise } from "@/curriculum/types";
 import { normalize, shuffle } from "@/lesson/engine";
@@ -98,11 +98,67 @@ export function ExerciseView(props: Props) {
       return <SpeakView {...props} exercise={exercise} />;
     case "card":
       return <CardView {...props} exercise={exercise} />;
+    case "concept":
+      return <ConceptView {...props} exercise={exercise} />;
     case "type":
       return <TypeView {...props} exercise={exercise} />;
     default:
       return null;
   }
+}
+
+// A teaching card: explanation + worked examples, no scoring. This is the
+// "teach before you practise" step that makes a lesson a lesson.
+function ConceptView({
+  exercise,
+  onChange,
+}: Props & { exercise: Extract<Exercise, { type: "concept" }> }) {
+  useEffect(() => {
+    onChange("done"); // Continue is always available
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [exercise]);
+  const paragraphs = exercise.body.split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+  return (
+    <ScrollView style={styles.body} contentContainerStyle={{ paddingBottom: 24 }}>
+      <Text style={styles.conceptKicker}>LEARN</Text>
+      <Text style={styles.conceptTitle}>{exercise.title}</Text>
+      {paragraphs.map((p, i) => {
+        const lines = p.split("\n").map((l) => l.trim()).filter(Boolean);
+        const isBullets = lines.every((l) => l.startsWith("• "));
+        if (isBullets) {
+          return (
+            <View key={i} style={{ marginTop: 12, gap: 6 }}>
+              {lines.map((l, j) => (
+                <Text key={j} style={styles.conceptBullet}>
+                  {"•  "}
+                  <Text style={styles.conceptBody}>{l.replace(/^•\s*/, "")}</Text>
+                </Text>
+              ))}
+            </View>
+          );
+        }
+        return (
+          <Text key={i} style={[styles.conceptBody, { marginTop: 12 }]}>
+            {p}
+          </Text>
+        );
+      })}
+      {exercise.examples?.length ? (
+        <View style={styles.conceptExamples}>
+          {exercise.examples.map((ex, i) => (
+            <Pressable key={i} style={styles.conceptExample} onPress={() => speak(ex.target)}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.conceptExampleTarget}>{ex.target}</Text>
+                {ex.pinyin ? <Text style={styles.conceptExamplePinyin}>{ex.pinyin}</Text> : null}
+                <Text style={styles.conceptExampleEn}>{ex.en}</Text>
+              </View>
+              <Text style={{ fontSize: 20 }}>🔊</Text>
+            </Pressable>
+          ))}
+        </View>
+      ) : null}
+    </ScrollView>
+  );
 }
 
 function CardView({
@@ -854,6 +910,24 @@ const styles = StyleSheet.create({
   tileGhost: { backgroundColor: theme.colors.surfaceAlt, borderColor: theme.colors.surfaceAlt },
   tileText: { color: theme.colors.text, fontSize: 18, fontWeight: "600" },
   tileSub: { color: theme.colors.textMuted, fontSize: 12, marginTop: 3, textAlign: "center" },
+  conceptKicker: { color: theme.colors.primary, fontSize: 13, fontWeight: "800", letterSpacing: 1 },
+  conceptTitle: { color: theme.colors.text, fontSize: 24, fontWeight: "900", marginTop: 6 },
+  conceptBody: { color: theme.colors.text, fontSize: 17, lineHeight: 25 },
+  conceptBullet: { color: theme.colors.text, fontSize: 17, lineHeight: 25 },
+  conceptExamples: { marginTop: 18, gap: 10 },
+  conceptExample: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+    backgroundColor: theme.colors.surface,
+    borderWidth: 1,
+    borderColor: theme.colors.border,
+    borderRadius: theme.radius.md,
+    padding: theme.spacing(2),
+  },
+  conceptExampleTarget: { color: theme.colors.text, fontSize: 19, fontWeight: "700" },
+  conceptExamplePinyin: { color: theme.colors.textMuted, fontSize: 14, marginTop: 2 },
+  conceptExampleEn: { color: theme.colors.textMuted, fontSize: 15, marginTop: 2 },
   answerLine: {
     flexDirection: "row",
     flexWrap: "wrap",

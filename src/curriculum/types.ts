@@ -119,6 +119,18 @@ export interface CardExercise {
   emoji?: string;
 }
 
+/** A teaching card: explains a concept (grammar, script, usage) before practice.
+ * No scoring — the learner reads it and taps Continue. This is what makes a
+ * lesson *teach* rather than just quiz. */
+export interface ConceptExercise {
+  type: "concept";
+  title: string;
+  /** Explanation. Blank lines separate paragraphs; "• " lines render as bullets. */
+  body: string;
+  /** Worked examples shown under the explanation. */
+  examples?: { target: string; en: string; pinyin?: string }[];
+}
+
 export type Exercise =
   | SelectExercise
   | WordbankExercise
@@ -127,7 +139,8 @@ export type Exercise =
   | ListenExercise
   | SpeakExercise
   | TypeExercise
-  | CardExercise;
+  | CardExercise
+  | ConceptExercise;
 
 export interface Lesson {
   id: string;

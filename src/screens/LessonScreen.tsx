@@ -110,7 +110,10 @@ export function LessonScreen() {
   const current = queue[0];
   // card/match/speak manage their own flow and just report completion.
   const noCheck =
-    current.type === "match" || current.type === "speak" || current.type === "card";
+    current.type === "match" ||
+    current.type === "speak" ||
+    current.type === "card" ||
+    current.type === "concept";
 
   function finish(passed: boolean) {
     const comboBonus = Math.floor(maxCombo / 5) * 3; // reward long perfect runs

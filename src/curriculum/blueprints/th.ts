@@ -27,6 +27,35 @@ export const thaiBlueprint: CourseBlueprint = {
           cefr: "A1",
           color: "#E2483D",
           icon: "👋",
+          teach: [
+            {
+              title: "How to read Thai",
+              body:
+                "Thai has its own alphabet and no spaces between words — but you don't need to master the script to start. Under every Thai word in this app you'll see its sound spelled out (a romanization), so you can always read and say it.\n\nStart by matching the sound to the script. Recognizing the letters comes naturally with repetition.",
+              examples: [
+                { target: "สวัสดี", en: "hello", pinyin: "sà-wàt-dii" },
+                { target: "ขอบคุณ", en: "thank you", pinyin: "kɔ̀ɔp-kun" },
+              ],
+            },
+            {
+              title: "Thai is a tonal language",
+              body:
+                "The same syllable means different things depending on its pitch. Thai has 5 tones, and the romanization marks them with an accent over the vowel:\n\n• a — mid (flat)\n• à — low\n• á — high\n• â — falling (like a surprised \"oh!\")\n• ǎ — rising (like a question)\n\nLong vowels are written doubled (aa, ii, uu). Copy the audio closely — tone changes meaning.",
+              examples: [
+                { target: "ค่ะ", en: "yes / polite (female)", pinyin: "kâ" },
+                { target: "ครับ", en: "polite (male)", pinyin: "kráp" },
+              ],
+            },
+            {
+              title: "Be polite: ครับ / ค่ะ",
+              body:
+                "Thai adds a politeness word at the end of sentences. A male speaker says ครับ (kráp); a female speaker says ค่ะ (kâ). Use them often — they make everything sound friendly and respectful.",
+              examples: [
+                { target: "สวัสดีครับ", en: "hello (said by a man)", pinyin: "sà-wàt-dii kráp" },
+                { target: "สวัสดีค่ะ", en: "hello (said by a woman)", pinyin: "sà-wàt-dii kâ" },
+              ],
+            },
+          ],
           vocab: [
             { target: "สวัสดี", en: "hello; goodbye", pinyin: "sà-wàt-dii" },
             { target: "ครับ", en: "(polite, male)", pinyin: "kráp" },

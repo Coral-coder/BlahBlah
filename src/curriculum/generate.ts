@@ -7,6 +7,7 @@ import type {
   Unit,
 } from "@/curriculum/types";
 import { emojiFor } from "@/curriculum/emoji";
+import { getTips } from "@/tips/content";
 
 // ----------------------------------------------------------------------------
 // Blueprint: the compact, hand-authored input. A small vocab + sentence bank per
@@ -31,6 +32,13 @@ export interface SentenceItem {
   pinyin?: string;
 }
 
+/** A teaching note shown (as a concept card) before practice in a unit. */
+export interface TeachNote {
+  title: string;
+  body: string;
+  examples?: { target: string; en: string; pinyin?: string }[];
+}
+
 export interface UnitBlueprint {
   id: string;
   title: string;
@@ -40,6 +48,8 @@ export interface UnitBlueprint {
   icon: string;
   vocab: VocabItem[];
   sentences?: SentenceItem[];
+  /** Explicit instruction shown at the start of this unit (script, grammar, …). */
+  teach?: TeachNote[];
 }
 
 export interface SectionBlueprint {
@@ -129,6 +139,10 @@ function mkMatch(items: VocabItem[], r: () => number): Exercise {
       speak: v.target,
     })),
   };
+}
+
+function mkConcept(t: TeachNote): Exercise {
+  return { type: "concept", title: t.title, body: t.body, examples: t.examples };
 }
 
 function mkCard(v: VocabItem): Exercise {
@@ -395,7 +409,7 @@ export function courseLessonCount(bp: CourseBlueprint): number {
   return n;
 }
 
-function buildUnit(bp: UnitBlueprint, speech: boolean): Unit {
+function buildUnit(bp: UnitBlueprint, speech: boolean, intro: TeachNote[]): Unit {
   const r = rng(hashString(bp.id));
   const vocab = bp.vocab;
   const sentences = bp.sentences ?? [];
@@ -421,6 +435,16 @@ function buildUnit(bp: UnitBlueprint, speech: boolean): Unit {
   }
   for (let k = 0; k < END_REVIEWS; k++) {
     lessons.push(reviewLesson(`${bp.id}-l${lessonNo++}`, vocab, sentences, vocabTargets, r, speech));
+  }
+
+  // Teach first: open the unit's first lesson with its concept card(s) so the
+  // learner is taught the idea before being asked to practise it.
+  const notes = [...(bp.teach ?? []), ...intro];
+  if (notes.length && lessons[0]) {
+    lessons[0] = {
+      ...lessons[0],
+      exercises: [...notes.map(mkConcept), ...lessons[0].exercises].slice(0, MAX_EX_PER_LESSON + notes.length),
+    };
   }
 
   return {
@@ -455,11 +479,20 @@ export function generateCourse(bp: CourseBlueprint): Course {
   // Only generate speak exercises when the device can recognize this language.
   // (Constructed languages have no locale; Icelandic has TTS but no recognizer.)
   const speech = speechSupported(bp.speechLocale);
+  // Distribute the course's grammar notes as in-lesson teaching: each of the
+  // first units opens with one concept card, so the learner is taught the rules
+  // in context instead of only finding them on a separate Tips screen.
+  const tips = getTips(bp.code);
+  let tipIdx = 0;
   const sections: Section[] = bp.sections.map((s) => ({
     id: s.id,
     title: s.title,
     subtitle: s.subtitle,
-    units: s.units.map((u) => buildUnit(u, speech)),
+    units: s.units.map((u) => {
+      // A unit's own `teach` takes priority; otherwise hand it the next tip.
+      const intro = (u.teach?.length ?? 0) === 0 && tipIdx < tips.length ? [tips[tipIdx++]] : [];
+      return buildUnit(u, speech, intro);
+    }),
   }));
   return {
     code: bp.code,
