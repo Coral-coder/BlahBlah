@@ -39,7 +39,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Sehen",
-            "en": "eyesight"
+            "en": "have vision problems"
           },
           {
             "target": "vielleicht",
@@ -55,7 +55,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "diese",
-            "en": "such"
+            "en": "every such offence"
           },
           {
             "target": "euch",
@@ -63,7 +63,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Einer",
-            "en": "unit"
+            "en": "unit place"
           },
           {
             "target": "über",
@@ -91,7 +91,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "nie",
-            "en": "hardly ever"
+            "en": "almost never"
           },
           {
             "target": "wirklich",
@@ -99,7 +99,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "viel",
-            "en": "much"
+            "en": "much about him"
           },
           {
             "target": "Weg",
@@ -111,7 +111,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Des",
-            "en": "D sharp"
+            "en": "D double sharp"
           },
           {
             "target": "einfach",
@@ -129,7 +129,7 @@ export const sections: SectionBlueprint[] = [
         "vocab": [
           {
             "target": "Leben",
-            "en": "life"
+            "en": "the full life"
           },
           {
             "target": "Zeit",
@@ -165,7 +165,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "weißt",
-            "en": "limewashes"
+            "en": "washes"
           },
           {
             "target": "sicher",
@@ -177,7 +177,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Frau",
-            "en": "woman"
+            "en": "the new woman"
           },
           {
             "target": "nun",
@@ -185,7 +185,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "bis",
-            "en": "until"
+            "en": "up to"
           },
           {
             "target": "Leid",
@@ -201,7 +201,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "lassen",
-            "en": "let"
+            "en": "he"
           },
           {
             "target": "meinen",
@@ -209,7 +209,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Gott",
-            "en": "God"
+            "en": "for heaven's sake"
           },
           {
             "target": "seine",
@@ -243,7 +243,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Morgen",
-            "en": "morning"
+            "en": "the morning after"
           },
           {
             "target": "Leute",
@@ -259,19 +259,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Glaube",
-            "en": "faith"
+            "en": "the Christian"
           },
           {
             "target": "gerade",
-            "en": "at this moment"
+            "en": "at the moment"
           },
           {
             "target": "Tag",
             "en": "HTML tag"
-          },
-          {
-            "target": "gesehen",
-            "en": "seen"
           },
           {
             "target": "Reden",
@@ -291,7 +287,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "unsere",
-            "en": "our"
+            "en": "of us"
           },
           {
             "target": "jemand",
@@ -299,7 +295,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Geld",
-            "en": "money"
+            "en": "pots of money"
           },
           {
             "target": "durch",
@@ -308,10 +304,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Mutter",
             "en": "mother"
-          },
-          {
-            "target": "gemacht",
-            "en": "made"
           },
           {
             "target": "Paar",
@@ -323,7 +315,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "passiert",
-            "en": "happened"
+            "en": "it has"
           },
           {
             "target": "Besser",
@@ -334,8 +326,16 @@ export const sections: SectionBlueprint[] = [
             "en": "why"
           },
           {
+            "target": "dieses",
+            "en": "such"
+          },
+          {
             "target": "selbst",
-            "en": "personally"
+            "en": "in the flesh"
+          },
+          {
+            "target": "gehört",
+            "en": "found out"
           }
         ]
       },
@@ -348,16 +348,12 @@ export const sections: SectionBlueprint[] = [
         "icon": "🌍",
         "vocab": [
           {
-            "target": "gehört",
-            "en": "found out"
-          },
-          {
             "target": "ohne",
-            "en": "without"
+            "en": "without the car"
           },
           {
             "target": "meiner",
-            "en": "mine"
+            "en": "of me"
           },
           {
             "target": "helfen",
@@ -365,7 +361,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Nacht",
-            "en": "night"
+            "en": "all night"
           },
           {
             "target": "Gute",
@@ -401,11 +397,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "geben",
-            "en": "deal"
+            "en": "deal out"
           },
           {
             "target": "seit",
-            "en": "since"
+            "en": "since the accident"
           },
           {
             "target": "gleich",
@@ -413,7 +409,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Recht",
-            "en": "right"
+            "en": "be entitled to"
           },
           {
             "target": "Ordnung",
@@ -429,7 +425,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "davon",
-            "en": "of them"
+            "en": "of it"
           },
           {
             "target": "dafür",
@@ -437,7 +433,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "wegen",
-            "en": "because of"
+            "en": "due to"
           },
           {
             "target": "Mädchen",
@@ -445,7 +441,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "sollen",
-            "en": "shall"
+            "en": "should"
+          },
+          {
+            "target": "Abend",
+            "en": "evening"
           }
         ]
       },
@@ -458,16 +458,12 @@ export const sections: SectionBlueprint[] = [
         "icon": "🍽️",
         "vocab": [
           {
-            "target": "Abend",
-            "en": "evening"
-          },
-          {
             "target": "Haus",
-            "en": "establishment"
+            "en": "institution"
           },
           {
             "target": "viele",
-            "en": "many"
+            "en": "a lot of"
           },
           {
             "target": "Drei",
@@ -475,11 +471,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Freund",
-            "en": "friend"
+            "en": "my best friend"
           },
           {
             "target": "Warte",
-            "en": "viewpoint"
+            "en": "point of view"
           },
           {
             "target": "Menschen",
@@ -487,15 +483,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Essen",
-            "en": "food"
+            "en": "food and drink"
           },
           {
             "target": "Angst",
-            "en": "fear"
+            "en": "for fear of"
           },
           {
             "target": "bleiben",
-            "en": "last"
+            "en": "continue to exist"
           },
           {
             "target": "zusammen",
@@ -503,11 +499,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Welt",
-            "en": "world"
+            "en": "the Third World"
           },
           {
             "target": "Unter",
-            "en": "jack"
+            "en": "jack of hearts"
           },
           {
             "target": "schnell",
@@ -523,11 +519,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "erst",
-            "en": "only just"
+            "en": "no more than"
           },
           {
             "target": "rein",
-            "en": "sheer"
+            "en": "from sheer malice"
           },
           {
             "target": "stimmt",
@@ -539,7 +535,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Kinder",
-            "en": "children"
+            "en": "children aged three"
           },
           {
             "target": "eines",
@@ -555,7 +551,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Ganze",
-            "en": "whole"
+            "en": "the big picture"
+          },
+          {
+            "target": "genug",
+            "en": "sufficient"
           }
         ]
       },
@@ -567,10 +567,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "🏙️",
         "vocab": [
-          {
-            "target": "genug",
-            "en": "sufficient"
-          },
           {
             "target": "Scheiße",
             "en": "shit"
@@ -589,7 +585,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "sonst",
-            "en": "otherwise"
+            "en": "or else"
           },
           {
             "target": "Musik",
@@ -597,11 +593,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Arbeit",
-            "en": "work"
+            "en": "in the works"
           },
           {
             "target": "ihrer",
-            "en": "hers"
+            "en": "their"
           },
           {
             "target": "Fragen",
@@ -617,7 +613,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Familie",
-            "en": "family"
+            "en": "the close family"
           },
           {
             "target": "Warten",
@@ -637,15 +633,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Jahre",
-            "en": "years"
+            "en": "the advancing years"
           },
           {
             "target": "einmal",
-            "en": "once"
+            "en": "one moment so"
           },
           {
             "target": "Problem",
-            "en": "solve a problem"
+            "en": "run into problems"
           },
           {
             "target": "Sohn",
@@ -653,7 +649,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "wann",
-            "en": "when"
+            "en": "from when"
           },
           {
             "target": "fertig",
@@ -665,7 +661,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "allein",
-            "en": "alone"
+            "en": "just for me"
+          },
+          {
+            "target": "beim",
+            "en": "near the"
           }
         ]
       },
@@ -678,20 +678,12 @@ export const sections: SectionBlueprint[] = [
         "icon": "🧭",
         "vocab": [
           {
-            "target": "beim",
-            "en": "near the"
-          },
-          {
             "target": "Sprechen",
             "en": "speaking"
           },
           {
             "target": "beide",
-            "en": "both"
-          },
-          {
-            "target": "gefunden",
-            "en": "thought"
+            "en": "the two"
           },
           {
             "target": "Sache",
@@ -711,23 +703,27 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "gern",
-            "en": "gladly"
+            "en": "with pleasure"
           },
           {
             "target": "darüber",
-            "en": "across"
+            "en": "over"
           },
           {
             "target": "halten",
             "en": "constrain"
           },
           {
+            "target": "kam",
+            "en": "happened"
+          },
+          {
             "target": "Kind",
-            "en": "child"
+            "en": "be expecting"
           },
           {
             "target": "wahr",
-            "en": "real"
+            "en": "the real reason"
           },
           {
             "target": "dazu",
@@ -742,16 +738,20 @@ export const sections: SectionBlueprint[] = [
             "en": "at it"
           },
           {
+            "target": "Denken",
+            "en": "thought"
+          },
+          {
             "target": "Dank",
             "en": "thank"
           },
           {
             "target": "lieber",
-            "en": "sooner"
+            "en": "just as soon"
           },
           {
             "target": "Fall",
-            "en": "case"
+            "en": "in that case"
           },
           {
             "target": "egal",
@@ -759,15 +759,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "kennen",
-            "en": "know"
+            "en": "be acquainted with"
           },
           {
             "target": "Vergessen",
-            "en": "forgetfulness"
+            "en": "drink of forgetfulness"
           },
           {
             "target": "Frage",
-            "en": "question"
+            "en": "the German question"
           },
           {
             "target": "Mache",
@@ -793,7 +793,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "eigentlich",
-            "en": "actually"
+            "en": "in essence"
           },
           {
             "target": "gab",
@@ -801,11 +801,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Uhr",
-            "en": "clock"
+            "en": "around the clock"
           },
           {
             "target": "Stadt",
-            "en": "town"
+            "en": "in town"
           },
           {
             "target": "Männer",
@@ -817,7 +817,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Fahren",
-            "en": "driving"
+            "en": "high speed driving"
           },
           {
             "target": "Namen",
@@ -825,7 +825,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "bekommen",
-            "en": "received"
+            "en": "Did you get"
           },
           {
             "target": "Kopf",
@@ -856,16 +856,20 @@ export const sections: SectionBlueprint[] = [
             "en": "universe"
           },
           {
+            "target": "darauf",
+            "en": "on it"
+          },
+          {
             "target": "Ende",
             "en": "termination"
           },
           {
             "target": "bald",
-            "en": "soon"
+            "en": "by and by"
           },
           {
             "target": "Dinge",
-            "en": "things"
+            "en": "let things slide"
           },
           {
             "target": "toll",
@@ -881,11 +885,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "bereit",
-            "en": "ready"
-          },
-          {
-            "target": "weit",
-            "en": "ample"
+            "en": "ready for anything"
           }
         ]
       },
@@ -898,20 +898,24 @@ export const sections: SectionBlueprint[] = [
         "icon": "🎓",
         "vocab": [
           {
+            "target": "weit",
+            "en": "an ample garden"
+          },
+          {
             "target": "Ahnung",
             "en": "intuitiveness"
           },
           {
             "target": "Tür",
-            "en": "door"
+            "en": "at the door"
           },
           {
             "target": "Auto",
-            "en": "car"
+            "en": "go by car"
           },
           {
             "target": "Augen",
-            "en": "eyes"
+            "en": "in private"
           },
           {
             "target": "Stehen",
@@ -919,7 +923,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Sterben",
-            "en": "death"
+            "en": "fear of death"
           },
           {
             "target": "draußen",
@@ -927,15 +931,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "fast",
-            "en": "almost"
+            "en": "in almost"
           },
           {
             "target": "runter",
             "en": "down"
-          },
-          {
-            "target": "vorbei",
-            "en": "over"
           },
           {
             "target": "Treffen",
@@ -944,10 +944,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "gerne",
             "en": "willingly"
-          },
-          {
-            "target": "wurden",
-            "en": "was"
           },
           {
             "target": "Arbeiten",
@@ -967,7 +963,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "hinter",
-            "en": "behind"
+            "en": "behind the house"
           },
           {
             "target": "Sorgen",
@@ -996,6 +992,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "drin",
             "en": "within"
+          },
+          {
+            "target": "ruhig",
+            "en": "even"
           }
         ]
       },
@@ -1007,10 +1007,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "⭐",
         "vocab": [
-          {
-            "target": "ruhig",
-            "en": "even"
-          },
           {
             "target": "sah",
             "en": "viewed"
@@ -1026,6 +1022,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Name",
             "en": "nominal details"
+          },
+          {
+            "target": "sogar",
+            "en": "actually"
           },
           {
             "target": "kurz",
@@ -1049,7 +1049,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "lang",
-            "en": "oblong"
+            "en": "an oblong table"
           },
           {
             "target": "Job",
@@ -1077,7 +1077,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Teufel",
-            "en": "devil"
+            "en": "where"
           },
           {
             "target": "verstanden",
@@ -1089,23 +1089,23 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Hand",
-            "en": "by hand"
+            "en": "with sure touch"
           },
           {
             "target": "Grund",
             "en": "motive"
           },
           {
-            "target": "Jahr",
-            "en": "year"
-          },
-          {
             "target": "Mama",
-            "en": "ma"
+            "en": "mom"
           },
           {
             "target": "Ruhe",
             "en": "relaxation"
+          },
+          {
+            "target": "gewesen",
+            "en": "you have been"
           }
         ]
       },
@@ -1118,10 +1118,6 @@ export const sections: SectionBlueprint[] = [
         "icon": "📚",
         "vocab": [
           {
-            "target": "gewesen",
-            "en": "been"
-          },
-          {
             "target": "Tod",
             "en": "quietus"
           },
@@ -1131,7 +1127,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "oben",
-            "en": "upstairs"
+            "en": "the man upstairs"
           },
           {
             "target": "Gestern",
@@ -1183,11 +1179,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "erste",
-            "en": "first"
-          },
-          {
-            "target": "versucht",
-            "en": "tried"
+            "en": "the first day"
           },
           {
             "target": "gekommen",
@@ -1206,16 +1198,24 @@ export const sections: SectionBlueprint[] = [
             "en": "summon"
           },
           {
-            "target": "bedeutet",
-            "en": "meant"
-          },
-          {
             "target": "nett",
             "en": "pleasant"
           },
           {
             "target": "Wahrheit",
             "en": "verisimilitude"
+          },
+          {
+            "target": "Woche",
+            "en": "during the week"
+          },
+          {
+            "target": "bringt",
+            "en": "conveys"
+          },
+          {
+            "target": "deshalb",
+            "en": "hence"
           }
         ]
       },
@@ -1227,18 +1227,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "🗣️",
         "vocab": [
-          {
-            "target": "Woche",
-            "en": "week"
-          },
-          {
-            "target": "bringt",
-            "en": "conveys"
-          },
-          {
-            "target": "deshalb",
-            "en": "hence"
-          },
           {
             "target": "welche",
             "en": "what"
@@ -1256,12 +1244,16 @@ export const sections: SectionBlueprint[] = [
             "en": "antiqueness"
           },
           {
+            "target": "Schau",
+            "en": "trade show"
+          },
+          {
             "target": "Land",
             "en": "federal state"
           },
           {
             "target": "Zimmer",
-            "en": "room"
+            "en": "rooms for rent"
           },
           {
             "target": "vier",
@@ -1273,15 +1265,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Spaß",
-            "en": "gag"
+            "en": "laugh"
           },
           {
             "target": "Schuld",
             "en": "guilt"
-          },
-          {
-            "target": "getötet",
-            "en": "killed"
           },
           {
             "target": "Verlassen",
@@ -1293,7 +1281,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Beste",
-            "en": "best"
+            "en": "do one's best"
           },
           {
             "target": "Ernst",
@@ -1305,7 +1293,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "denen",
-            "en": "those"
+            "en": "the ones indicated"
           },
           {
             "target": "Ort",
@@ -1321,11 +1309,23 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Seite",
-            "en": "spin"
+            "en": "put a positive"
           },
           {
             "target": "zwischen",
             "en": "betwixt"
+          },
+          {
+            "target": "eben",
+            "en": "flush"
+          },
+          {
+            "target": "Spiel",
+            "en": "bearing play"
+          },
+          {
+            "target": "Chance",
+            "en": "opportunity"
           }
         ]
       },
@@ -1338,20 +1338,8 @@ export const sections: SectionBlueprint[] = [
         "icon": "✍️",
         "vocab": [
           {
-            "target": "eben",
-            "en": "flush"
-          },
-          {
-            "target": "Spiel",
-            "en": "bearing play"
-          },
-          {
-            "target": "Chance",
-            "en": "opportunity"
-          },
-          {
             "target": "Krieg",
-            "en": "war"
+            "en": "go to war"
           },
           {
             "target": "gefällt",
@@ -1363,7 +1351,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Tage",
-            "en": "menstrual cycle"
+            "en": "female cycle"
           },
           {
             "target": "wichtig",
@@ -1371,7 +1359,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Bett",
-            "en": "bed"
+            "en": "warm the bed"
+          },
+          {
+            "target": "Sachen",
+            "en": "things"
           },
           {
             "target": "schlecht",
@@ -1379,7 +1371,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Schule",
-            "en": "pod"
+            "en": "school"
           },
           {
             "target": "Entschuldigung",
@@ -1387,15 +1379,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Wort",
-            "en": "word"
+            "en": "in simple terms"
           },
           {
             "target": "Typ",
             "en": "type"
-          },
-          {
-            "target": "schlafen",
-            "en": "sleep"
           },
           {
             "target": "euer",
@@ -1407,7 +1395,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Gesicht",
-            "en": "facies"
+            "en": "face"
           },
           {
             "target": "falls",
@@ -1420,6 +1408,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "bloß",
             "en": "bare"
+          },
+          {
+            "target": "unten",
+            "en": "as stated below"
           },
           {
             "target": "Teil",
@@ -1435,7 +1427,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "oft",
-            "en": "often"
+            "en": "There is"
+          },
+          {
+            "target": "Sorge",
+            "en": "worry"
+          },
+          {
+            "target": "trinken",
+            "en": "suckle"
           }
         ]
       },
@@ -1448,20 +1448,12 @@ export const sections: SectionBlueprint[] = [
         "icon": "🌍",
         "vocab": [
           {
-            "target": "Sorge",
-            "en": "worry"
-          },
-          {
-            "target": "trinken",
-            "en": "suckle"
-          },
-          {
             "target": "einige",
             "en": "a few"
           },
           {
             "target": "dies",
-            "en": "this"
+            "en": "this and that"
           },
           {
             "target": "Ding",
@@ -1473,7 +1465,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Blut",
-            "en": "blood"
+            "en": "bay for blood"
           },
           {
             "target": "ehrlich",
@@ -1485,7 +1477,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Herz",
-            "en": "heart"
+            "en": "take heart"
           },
           {
             "target": "glücklich",
@@ -1509,7 +1501,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "irgendwie",
-            "en": "somehow"
+            "en": "somehow or other"
           },
           {
             "target": "reicht",
@@ -1525,7 +1517,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Waffe",
-            "en": "gun"
+            "en": "at gunpoint"
           },
           {
             "target": "kaum",
@@ -1546,6 +1538,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Rede",
             "en": "monologue"
+          },
+          {
+            "target": "Papa",
+            "en": "dad"
+          },
+          {
+            "target": "falsch",
+            "en": "recreant"
           }
         ]
       },
@@ -1557,14 +1557,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "🍽️",
         "vocab": [
-          {
-            "target": "Papa",
-            "en": "daddy"
-          },
-          {
-            "target": "falsch",
-            "en": "recreant"
-          },
           {
             "target": "sondern",
             "en": "but"
@@ -1583,7 +1575,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "wohin",
-            "en": "where"
+            "en": "wherever you look"
           },
           {
             "target": "außer",
@@ -1591,15 +1583,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "früh",
-            "en": "early"
+            "en": "her early writings"
           },
           {
             "target": "Setzen",
-            "en": "consolidation"
+            "en": "settling"
           },
           {
             "target": "zuerst",
-            "en": "at first"
+            "en": "first of all"
           },
           {
             "target": "wahrscheinlich",
@@ -1611,11 +1603,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "jede",
-            "en": "anybody"
+            "en": "anyone"
           },
           {
             "target": "Arsch",
-            "en": "arse"
+            "en": "in the boondocks"
           },
           {
             "target": "Telefon",
@@ -1635,11 +1627,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Fehler",
-            "en": "mistake"
+            "en": "It's your decision"
           },
           {
             "target": "Dollar",
-            "en": "Tonga Paanga"
+            "en": "US dollar"
           },
           {
             "target": "Zehn",
@@ -1651,11 +1643,19 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "nächste",
-            "en": "next"
+            "en": "the next time"
           },
           {
             "target": "Stunde",
             "en": "lesson"
+          },
+          {
+            "target": "Hände",
+            "en": "put"
+          },
+          {
+            "target": "gegeben",
+            "en": "performed"
           }
         ]
       },
@@ -1667,14 +1667,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "🏙️",
         "vocab": [
-          {
-            "target": "Hände",
-            "en": "hands"
-          },
-          {
-            "target": "gegeben",
-            "en": "performed"
-          },
           {
             "target": "Menge",
             "en": "batch"
@@ -1692,6 +1684,10 @@ export const sections: SectionBlueprint[] = [
             "en": "six"
           },
           {
+            "target": "lieben",
+            "en": "love to distraction"
+          },
+          {
             "target": "Büro",
             "en": "office"
           },
@@ -1701,7 +1697,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Ruf",
-            "en": "reputation"
+            "en": "have a good"
           },
           {
             "target": "Schaffen",
@@ -1712,16 +1708,12 @@ export const sections: SectionBlueprint[] = [
             "en": "worse luck"
           },
           {
-            "target": "Scheiß",
-            "en": "crap"
-          },
-          {
             "target": "Hölle",
-            "en": "purgatory"
+            "en": "purgatorial fire"
           },
           {
             "target": "trotzdem",
-            "en": "anyway"
+            "en": "just the same"
           },
           {
             "target": "Doktor",
@@ -1753,7 +1745,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "direkt",
-            "en": "direct"
+            "en": "a direct flight"
           },
           {
             "target": "Tat",
@@ -1766,6 +1758,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "wem",
             "en": "whom"
+          },
+          {
+            "target": "König",
+            "en": "king"
+          },
+          {
+            "target": "danach",
+            "en": "after it"
           }
         ]
       },
@@ -1778,20 +1778,12 @@ export const sections: SectionBlueprint[] = [
         "icon": "🧭",
         "vocab": [
           {
-            "target": "König",
-            "en": "king"
-          },
-          {
-            "target": "danach",
-            "en": "after it"
-          },
-          {
             "target": "funktioniert",
             "en": "gone"
           },
           {
             "target": "Lernen",
-            "en": "learning"
+            "en": "take up studying"
           },
           {
             "target": "nennen",
@@ -1803,7 +1795,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Laufen",
-            "en": "operation"
+            "en": "running"
+          },
+          {
+            "target": "alleine",
+            "en": "go stag"
           },
           {
             "target": "völlig",
@@ -1815,15 +1811,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Kumpel",
-            "en": "teammate"
+            "en": "work mate"
           },
           {
             "target": "verlieren",
             "en": "lose the game"
-          },
-          {
-            "target": "Probleme",
-            "en": "problems"
           },
           {
             "target": "Kaffee",
@@ -1839,15 +1831,19 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Verschwinden",
-            "en": "dying-out"
+            "en": "disappearance"
           },
           {
             "target": "aufhören",
-            "en": "knock off"
+            "en": "knock it off"
           },
           {
             "target": "Suche",
-            "en": "search"
+            "en": "in search of"
+          },
+          {
+            "target": "groß",
+            "en": "extensive"
           },
           {
             "target": "Buch",
@@ -1866,6 +1862,10 @@ export const sections: SectionBlueprint[] = [
             "en": "worth"
           },
           {
+            "target": "Arzt",
+            "en": "the attending physician"
+          },
+          {
             "target": "froh",
             "en": "joyous"
           },
@@ -1874,8 +1874,8 @@ export const sections: SectionBlueprint[] = [
             "en": "experiments"
           },
           {
-            "target": "Straße",
-            "en": "avenue"
+            "target": "Heiraten",
+            "en": "marriage"
           }
         ]
       },
@@ -1887,10 +1887,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "💬",
         "vocab": [
-          {
-            "target": "Heiraten",
-            "en": "marrying"
-          },
           {
             "target": "super",
             "en": "great"
@@ -1928,6 +1924,10 @@ export const sections: SectionBlueprint[] = [
             "en": "ballot"
           },
           {
+            "target": "Vertrauen",
+            "en": "faith"
+          },
+          {
             "target": "damals",
             "en": "on that occasion"
           },
@@ -1949,7 +1949,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Gefühl",
-            "en": "hunch"
+            "en": "follow a hunch"
           },
           {
             "target": "Kaufen",
@@ -1965,7 +1965,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Halte",
-            "en": "stopping points"
+            "en": "manned stopping point"
           },
           {
             "target": "hält",
@@ -1973,19 +1973,19 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "irgendwo",
-            "en": "somewhere"
+            "en": "somewhere or other"
           },
           {
             "target": "Stück",
             "en": "chapter"
           },
           {
-            "target": "genauso",
-            "en": "just the same"
+            "target": "Zukunft",
+            "en": "future"
           },
           {
-            "target": "genommen",
-            "en": "taken"
+            "target": "weniger",
+            "en": "less"
           }
         ]
       },
@@ -1997,14 +1997,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "🎓",
         "vocab": [
-          {
-            "target": "Zukunft",
-            "en": "future"
-          },
-          {
-            "target": "weniger",
-            "en": "less"
-          },
           {
             "target": "cool",
             "en": "fierce"
@@ -2023,11 +2015,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Nachricht",
-            "en": "tidings"
+            "en": "bring glad"
           },
           {
             "target": "drüben",
-            "en": "over here"
+            "en": "on both sides"
           },
           {
             "target": "passt",
@@ -2035,7 +2027,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Laut",
-            "en": "ejaculation"
+            "en": "ejaculation of surprise"
           },
           {
             "target": "angerufen",
@@ -2051,7 +2043,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Erde",
-            "en": "Earth"
+            "en": "Earth Day"
           },
           {
             "target": "Schlüssel",
@@ -2083,7 +2075,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Körper",
-            "en": "body"
+            "en": "mind and body"
+          },
+          {
+            "target": "solche",
+            "en": "that kind of"
           },
           {
             "target": "Mist",
@@ -2092,6 +2088,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Schreiben",
             "en": "letter"
+          },
+          {
+            "target": "Böse",
+            "en": "good and evil"
           },
           {
             "target": "gesprochen",
@@ -2109,7 +2109,7 @@ export const sections: SectionBlueprint[] = [
         "vocab": [
           {
             "target": "Versuch",
-            "en": "experiment"
+            "en": "trial"
           },
           {
             "target": "Vorstellen",
@@ -2120,12 +2120,16 @@ export const sections: SectionBlueprint[] = [
             "en": "whereof"
           },
           {
+            "target": "sobald",
+            "en": "soon"
+          },
+          {
             "target": "Herren",
             "en": "taskmasters"
           },
           {
             "target": "Sex",
-            "en": "sexual intercourse"
+            "en": "have underage sex"
           },
           {
             "target": "Waffen",
@@ -2133,19 +2137,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Wohnung",
-            "en": "flat"
+            "en": "apartment"
           },
           {
             "target": "Weh",
-            "en": "ache"
-          },
-          {
-            "target": "heißen",
-            "en": "mean"
+            "en": "aches and pains"
           },
           {
             "target": "Krankenhaus",
-            "en": "hospital"
+            "en": "be in hospital"
           },
           {
             "target": "Millionen",
@@ -2161,11 +2161,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Sinn",
-            "en": "meaning"
+            "en": "in the common"
           },
           {
             "target": "außerdem",
-            "en": "in addition"
+            "en": "what is more"
           },
           {
             "target": "verletzt",
@@ -2219,7 +2219,7 @@ export const sections: SectionBlueprint[] = [
         "vocab": [
           {
             "target": "Schöne",
-            "en": "beauty"
+            "en": "the only beauty"
           },
           {
             "target": "schicken",
@@ -2251,7 +2251,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Stand",
-            "en": "profession"
+            "en": "trade"
           },
           {
             "target": "Fühlen",
@@ -2267,7 +2267,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Boss",
-            "en": "top dog"
+            "en": "big kahuna"
           },
           {
             "target": "Stimme",
@@ -2283,7 +2283,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Mund",
-            "en": "mouth"
+            "en": "wrap up"
           },
           {
             "target": "kämpfen",
@@ -2292,10 +2292,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Lachen",
             "en": "pools"
-          },
-          {
-            "target": "Zeug",
-            "en": "equipment"
           },
           {
             "target": "lustig",
@@ -2316,6 +2312,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Laden",
             "en": "chests"
+          },
+          {
+            "target": "Führen",
+            "en": "conduct"
           }
         ]
       },
@@ -2328,16 +2328,12 @@ export const sections: SectionBlueprint[] = [
         "icon": "🗣️",
         "vocab": [
           {
-            "target": "Führen",
-            "en": "conduct"
-          },
-          {
             "target": "gestorben",
             "en": "dead"
           },
           {
             "target": "Schauen",
-            "en": "fairs"
+            "en": "trade shows"
           },
           {
             "target": "Lesen",
@@ -2357,15 +2353,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Geschäft",
-            "en": "business"
+            "en": "run a business"
           },
           {
             "target": "Idiot",
-            "en": "dumbass"
+            "en": "wally"
           },
           {
             "target": "Verzeihung",
-            "en": "forgiveness"
+            "en": "ask forgiveness"
           },
           {
             "target": "Fliegen",
@@ -2377,7 +2373,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Schluss",
-            "en": "closure"
+            "en": "closure motion"
           },
           {
             "target": "Schneller",
@@ -2413,7 +2409,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "acht",
-            "en": "eight"
+            "en": "every week"
           },
           {
             "target": "Fallen",
@@ -2421,11 +2417,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Rufe",
-            "en": "telephone calls"
+            "en": "phone calls"
           },
           {
             "target": "nötig",
-            "en": "required"
+            "en": "called for"
+          },
+          {
+            "target": "Mord",
+            "en": "murder of passion"
           }
         ]
       },
@@ -2437,10 +2437,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "✍️",
         "vocab": [
-          {
-            "target": "Mord",
-            "en": "murder"
-          },
           {
             "target": "unmöglich",
             "en": "outrageous"
@@ -2455,11 +2451,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Bitten",
-            "en": "requests"
+            "en": "at request of"
           },
           {
             "target": "Behalten",
-            "en": "memory retention"
+            "en": "retention in memory"
           },
           {
             "target": "Nähe",
@@ -2475,7 +2471,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Tisch",
-            "en": "table"
+            "en": "on the table"
           },
           {
             "target": "Michael",
@@ -2515,7 +2511,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Antwort",
-            "en": "answer"
+            "en": "in answer to"
           },
           {
             "target": "geschickt",
@@ -2523,7 +2519,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "obwohl",
-            "en": "although"
+            "en": "though"
           },
           {
             "target": "Sieben",
@@ -2536,6 +2532,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "gewinnen",
             "en": "clinch a win"
+          },
+          {
+            "target": "bezahlt",
+            "en": "funded"
           }
         ]
       },
@@ -2548,12 +2548,8 @@ export const sections: SectionBlueprint[] = [
         "icon": "🌍",
         "vocab": [
           {
-            "target": "bezahlt",
-            "en": "funded"
-          },
-          {
             "target": "voller",
-            "en": "drunker"
+            "en": "more drunk"
           },
           {
             "target": "unterwegs",
@@ -2588,12 +2584,8 @@ export const sections: SectionBlueprint[] = [
             "en": "dead body"
           },
           {
-            "target": "Auge",
-            "en": "eye"
-          },
-          {
             "target": "Arschloch",
-            "en": "shithead"
+            "en": "asshole"
           },
           {
             "target": "verheiratet",
@@ -2609,11 +2601,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Traum",
-            "en": "dream"
+            "en": "an erotic dream"
           },
           {
             "target": "Entscheidung",
-            "en": "decision"
+            "en": "in determining whether"
           },
           {
             "target": "schlimmer",
@@ -2621,11 +2613,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Regeln",
-            "en": "rules"
+            "en": "under the rules"
           },
           {
             "target": "Fenster",
             "en": "box"
+          },
+          {
+            "target": "fort",
+            "en": "on and on"
           },
           {
             "target": "ständig",
@@ -2637,7 +2633,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Augenblick",
-            "en": "moment"
+            "en": "seize the moment"
           },
           {
             "target": "Bescheid",
@@ -2645,7 +2641,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Gedanken",
-            "en": "thoughts"
+            "en": "lost in thought"
+          },
+          {
+            "target": "Ziel",
+            "en": "bourne"
           }
         ]
       },
@@ -2658,10 +2658,6 @@ export const sections: SectionBlueprint[] = [
         "icon": "🍽️",
         "vocab": [
           {
-            "target": "Ziel",
-            "en": "bourn"
-          },
-          {
             "target": "benutzt",
             "en": "used"
           },
@@ -2672,10 +2668,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "wünschte",
             "en": "wanted"
-          },
-          {
-            "target": "Worte",
-            "en": "words"
           },
           {
             "target": "welcher",
@@ -2699,7 +2691,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "offen",
-            "en": "open-minded"
+            "en": "liberal"
           },
           {
             "target": "Schönen",
@@ -2711,7 +2703,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Bier",
-            "en": "beer"
+            "en": "beer on draught"
           },
           {
             "target": "Partner",
@@ -2719,11 +2711,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "klein",
-            "en": "small"
+            "en": "the smallest problem"
           },
           {
             "target": "Klappe",
-            "en": "clapperboard"
+            "en": "production board"
           },
           {
             "target": "süß",
@@ -2739,7 +2731,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Ehe",
-            "en": "marriage"
+            "en": "consummate the marriage"
           },
           {
             "target": "Rolle",
@@ -2755,7 +2747,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Hochzeit",
-            "en": "heyday"
+            "en": "prime"
+          },
+          {
+            "target": "führt",
+            "en": "guides"
+          },
+          {
+            "target": "wach",
+            "en": "be wide awake"
           }
         ]
       },
@@ -2767,14 +2767,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "🏙️",
         "vocab": [
-          {
-            "target": "führt",
-            "en": "guides"
-          },
-          {
-            "target": "wach",
-            "en": "awake"
-          },
           {
             "target": "wozu",
             "en": "for what reason"
@@ -2789,11 +2781,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Chef",
-            "en": "chief"
+            "en": "boss"
           },
           {
             "target": "Informationen",
-            "en": "information"
+            "en": "pieces of information"
           },
           {
             "target": "erledigt",
@@ -2829,7 +2821,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "gewonnen",
-            "en": "obtained"
+            "en": "prepared"
           },
           {
             "target": "Dame",
@@ -2837,7 +2829,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "irgendwann",
-            "en": "sometime"
+            "en": "sometime next year"
           },
           {
             "target": "steckt",
@@ -2845,27 +2837,35 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "jedenfalls",
-            "en": "anyhow"
+            "en": "in any case"
           },
           {
             "target": "schreit",
             "en": "bawls"
           },
           {
+            "target": "rüber",
+            "en": "over here"
+          },
+          {
             "target": "nennt",
             "en": "terms"
+          },
+          {
+            "target": "Raum",
+            "en": "room"
           },
           {
             "target": "heiß",
             "en": "hot"
           },
           {
-            "target": "kalt",
-            "en": "cold"
+            "target": "Foto",
+            "en": "take a picture"
           },
           {
-            "target": "Weile",
-            "en": "while"
+            "target": "kalt",
+            "en": "cold"
           }
         ]
       },
@@ -2878,8 +2878,12 @@ export const sections: SectionBlueprint[] = [
         "icon": "🧭",
         "vocab": [
           {
+            "target": "Weile",
+            "en": "while"
+          },
+          {
             "target": "bisher",
-            "en": "until now"
+            "en": "up to now"
           },
           {
             "target": "Minute",
@@ -2926,8 +2930,12 @@ export const sections: SectionBlueprint[] = [
             "en": "lasts"
           },
           {
+            "target": "Brief",
+            "en": "get"
+          },
+          {
             "target": "gelernt",
-            "en": "skilled"
+            "en": "trained"
           },
           {
             "target": "Sucht",
@@ -2935,7 +2943,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "bekannt",
-            "en": "known"
+            "en": "be more"
           },
           {
             "target": "Weitere",
@@ -2943,7 +2951,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Unfall",
-            "en": "accident"
+            "en": "cause an accident"
           },
           {
             "target": "Kontrolle",
@@ -2951,7 +2959,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Beispiel",
-            "en": "example"
+            "en": "cite an example"
           },
           {
             "target": "dasselbe",
@@ -2959,7 +2967,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Herzen",
-            "en": "hearts"
+            "en": "humble one's heart"
           },
           {
             "target": "Schlagen",
@@ -2968,14 +2976,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "wütend",
             "en": "furious"
-          },
-          {
-            "target": "Weise",
-            "en": "way"
-          },
-          {
-            "target": "Damen",
-            "en": "ladies"
           }
         ]
       },
@@ -2988,8 +2988,16 @@ export const sections: SectionBlueprint[] = [
         "icon": "💬",
         "vocab": [
           {
+            "target": "Weise",
+            "en": "in different ways"
+          },
+          {
+            "target": "Damen",
+            "en": "ladies"
+          },
+          {
             "target": "darin",
-            "en": "therein"
+            "en": "in it"
           },
           {
             "target": "holt",
@@ -3005,11 +3013,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "gehabt",
-            "en": "held"
+            "en": "had possession of"
           },
           {
             "target": "zumindest",
-            "en": "at a"
+            "en": "no less than"
           },
           {
             "target": "vermisst",
@@ -3025,15 +3033,19 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Tief",
-            "en": "depression"
+            "en": "low-pressure area"
           },
           {
             "target": "Richtung",
-            "en": "line"
+            "en": "a new strain"
           },
           {
             "target": "Lage",
             "en": "layer"
+          },
+          {
+            "target": "sowieso",
+            "en": "anyway"
           },
           {
             "target": "Kraft",
@@ -3045,7 +3057,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Lauf",
-            "en": "launder"
+            "en": "runner"
           },
           {
             "target": "Ehre",
@@ -3068,24 +3080,12 @@ export const sections: SectionBlueprint[] = [
             "en": "harvested"
           },
           {
-            "target": "gekauft",
-            "en": "bought"
-          },
-          {
-            "target": "gestohlen",
-            "en": "stolen"
-          },
-          {
             "target": "Hunger",
-            "en": "hungriness"
+            "en": "starve to death"
           },
           {
             "target": "Lügen",
-            "en": "lies"
-          },
-          {
-            "target": "Beziehung",
-            "en": "relation"
+            "en": "nothing but lies"
           }
         ]
       },
@@ -3098,8 +3098,12 @@ export const sections: SectionBlueprint[] = [
         "icon": "🎓",
         "vocab": [
           {
-            "target": "gearbeitet",
-            "en": "worked"
+            "target": "Beziehung",
+            "en": "relation"
+          },
+          {
+            "target": "nächstes",
+            "en": "next"
           },
           {
             "target": "Preis",
@@ -3119,11 +3123,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Geist",
-            "en": "spirit"
+            "en": "the Holy Spirit"
           },
           {
             "target": "neben",
-            "en": "by"
+            "en": "next to"
           },
           {
             "target": "gesucht",
@@ -3136,10 +3140,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Süße",
             "en": "lusciousness"
-          },
-          {
-            "target": "Rücken",
-            "en": "book spine"
           },
           {
             "target": "schrecklich",
@@ -3187,7 +3187,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Pferd",
-            "en": "horse"
+            "en": "back the wrong"
           },
           {
             "target": "Wunder",
@@ -3225,7 +3225,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Majestät",
-            "en": "majesty"
+            "en": "His Majesty"
           },
           {
             "target": "Aussehen",
@@ -3240,28 +3240,24 @@ export const sections: SectionBlueprint[] = [
             "en": "shelter"
           },
           {
-            "target": "geboren",
-            "en": "born"
-          },
-          {
             "target": "Erreichen",
             "en": "achievement"
           },
           {
             "target": "Punkt",
-            "en": "dot"
+            "en": "dot an i"
           },
           {
             "target": "Kirche",
-            "en": "church service"
+            "en": "go to church"
           },
           {
             "target": "verraten",
-            "en": "blabbed"
+            "en": "spilled the beans"
           },
           {
             "target": "selber",
-            "en": "oneself"
+            "en": "myself"
           },
           {
             "target": "Befehl",
@@ -3277,7 +3273,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Geburtstag",
-            "en": "birthday"
+            "en": "natal day"
           },
           {
             "target": "Haut",
@@ -3285,11 +3281,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Wette",
-            "en": "bet"
+            "en": "make a bet"
           },
           {
             "target": "Reich",
-            "en": "empire"
+            "en": "Holy Roman Empire"
           },
           {
             "target": "Sekunde",
@@ -3305,7 +3301,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "eigene",
-            "en": "own"
+            "en": "his own car"
+          },
+          {
+            "target": "Zeiten",
+            "en": "times"
           }
         ]
       },
@@ -3318,10 +3318,6 @@ export const sections: SectionBlueprint[] = [
         "icon": "📚",
         "vocab": [
           {
-            "target": "Zeiten",
-            "en": "times"
-          },
-          {
             "target": "traurig",
             "en": "sorrowful"
           },
@@ -3331,11 +3327,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Nachrichten",
-            "en": "news"
+            "en": "the latest news"
           },
           {
             "target": "Frieden",
-            "en": "peace"
+            "en": "peace and quiet"
           },
           {
             "target": "Karte",
@@ -3378,6 +3374,10 @@ export const sections: SectionBlueprint[] = [
             "en": "namely"
           },
           {
+            "target": "letztes",
+            "en": "last"
+          },
+          {
             "target": "ruft",
             "en": "hoots"
           },
@@ -3411,7 +3411,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Computer",
-            "en": "pen computer"
+            "en": "boot up"
           },
           {
             "target": "Toten",
@@ -3449,15 +3449,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Überraschung",
-            "en": "surprise"
+            "en": "my surprise"
           },
           {
             "target": "Geheimnis",
-            "en": "secret"
+            "en": "keep a secret"
           },
           {
             "target": "Kontakt",
-            "en": "contact"
+            "en": "removal of contacts"
           },
           {
             "target": "Gold",
@@ -3465,7 +3465,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Drogen",
-            "en": "addictive substances"
+            "en": "addictive drugs"
           },
           {
             "target": "Regierung",
@@ -3473,11 +3473,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Wein",
-            "en": "wine"
+            "en": "free run wine"
           },
           {
             "target": "ermordet",
-            "en": "murderred"
+            "en": "slain"
           },
           {
             "target": "Fotos",
@@ -3486,10 +3486,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "entfernt",
             "en": "taken off"
-          },
-          {
-            "target": "geschlafen",
-            "en": "slept"
           },
           {
             "target": "manche",
@@ -3502,6 +3498,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Gegenüber",
             "en": "neighbours opposite"
+          },
+          {
+            "target": "Schlaf",
+            "en": "sleep"
           },
           {
             "target": "Lust",
@@ -3555,7 +3555,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Blick",
-            "en": "sight"
+            "en": "at first blush"
           },
           {
             "target": "Besuch",
@@ -3563,7 +3563,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Haare",
-            "en": "hair"
+            "en": "go grey"
           },
           {
             "target": "Antworten",
@@ -3575,11 +3575,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Hoffnung",
-            "en": "hope"
+            "en": "past all hope"
           },
           {
             "target": "Stecken",
             "en": "stick"
+          },
+          {
+            "target": "rechts",
+            "en": "right"
           },
           {
             "target": "interessant",
@@ -3611,11 +3615,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Flugzeug",
-            "en": "aeroplane"
+            "en": "down a plane"
           },
           {
             "target": "Vergangenheit",
-            "en": "past"
+            "en": "in the past"
           },
           {
             "target": "Zweite",
@@ -3623,7 +3627,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Armee",
-            "en": "army"
+            "en": "the Red Army"
           },
           {
             "target": "Jim",
@@ -3631,11 +3635,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Tee",
-            "en": "tea"
-          },
-          {
-            "target": "entweder",
-            "en": "either"
+            "en": "tea in bags"
           }
         ]
       },
@@ -3648,12 +3648,16 @@ export const sections: SectionBlueprint[] = [
         "icon": "🌍",
         "vocab": [
           {
+            "target": "entweder",
+            "en": "either"
+          },
+          {
             "target": "Aufhalten",
             "en": "detention"
           },
           {
             "target": "stellt",
-            "en": "provides"
+            "en": "made available"
           },
           {
             "target": "überrascht",
@@ -3661,7 +3665,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "sauber",
-            "en": "shiny"
+            "en": "shining"
           },
           {
             "target": "Mark",
@@ -3669,7 +3673,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Untertitel",
-            "en": "subhead"
+            "en": "subheading"
           },
           {
             "target": "setzt",
@@ -3681,7 +3685,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Gesellschaft",
-            "en": "society"
+            "en": "change society"
           },
           {
             "target": "Verstecken",
@@ -3689,7 +3693,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "schuldig",
-            "en": "guilty"
+            "en": "guilty as charged"
           },
           {
             "target": "Hals",
@@ -3717,7 +3721,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Gebäude",
-            "en": "building"
+            "en": "land and buildings"
           },
           {
             "target": "Schicksal",
@@ -3729,7 +3733,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Richter",
-            "en": "judge"
+            "en": "Supreme Court justice"
           },
           {
             "target": "besorgt",
@@ -3742,10 +3746,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Vergnügen",
             "en": "joy"
-          },
-          {
-            "target": "Königin",
-            "en": "queen consort"
           }
         ]
       },
@@ -3757,6 +3757,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "🍽️",
         "vocab": [
+          {
+            "target": "Königin",
+            "en": "queen consort"
+          },
           {
             "target": "Soldaten",
             "en": "soldiers"
@@ -3779,7 +3783,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "soweit",
-            "en": "as far as"
+            "en": "so far as"
           },
           {
             "target": "Gefahren",
@@ -3787,11 +3791,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Verstand",
-            "en": "common sense"
+            "en": "sanity and reason"
           },
           {
             "target": "Bord",
-            "en": "board"
+            "en": "go aboard"
           },
           {
             "target": "angefangen",
@@ -3803,19 +3807,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Bob",
-            "en": "bobsleigh"
+            "en": "bobsled"
           },
           {
             "target": "Rat",
-            "en": "advice"
+            "en": "ask for advice"
           },
           {
             "target": "worauf",
             "en": "whereupon"
-          },
-          {
-            "target": "gebeten",
-            "en": "asked"
           },
           {
             "target": "Kamera",
@@ -3823,7 +3823,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Achtung",
-            "en": "regard"
+            "en": "high regard"
+          },
+          {
+            "target": "ganzes",
+            "en": "whole"
           },
           {
             "target": "Schuhe",
@@ -3847,15 +3851,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Wald",
-            "en": "wood"
+            "en": "in deep woods"
           },
           {
             "target": "Erkennen",
             "en": "recognition"
-          },
-          {
-            "target": "Glas",
-            "en": "spectacles glass"
           }
         ]
       },
@@ -3868,12 +3868,16 @@ export const sections: SectionBlueprint[] = [
         "icon": "🏙️",
         "vocab": [
           {
+            "target": "Glas",
+            "en": "spectacles glass"
+          },
+          {
             "target": "verantwortlich",
-            "en": "answerable"
+            "en": "responsible"
           },
           {
             "target": "stöhnt",
-            "en": "moans"
+            "en": "groans"
           },
           {
             "target": "herein",
@@ -3893,23 +3897,23 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "gegessen",
-            "en": "eaten"
+            "en": "I have"
           },
           {
             "target": "Abendessen",
-            "en": "supper"
+            "en": "evening meal"
           },
           {
             "target": "Gesetz",
-            "en": "law"
+            "en": "an unwritten law"
           },
           {
             "target": "gemeinsam",
             "en": "common"
           },
           {
-            "target": "geholfen",
-            "en": "helped"
+            "target": "Erster",
+            "en": "the first"
           },
           {
             "target": "Schritt",
@@ -3929,7 +3933,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Aufgabe",
-            "en": "job"
+            "en": "an uphill job"
           },
           {
             "target": "Neun",
@@ -3944,6 +3948,10 @@ export const sections: SectionBlueprint[] = [
             "en": "indoors"
           },
           {
+            "target": "zuvor",
+            "en": "the day before"
+          },
+          {
             "target": "Amerika",
             "en": "America"
           },
@@ -3953,19 +3961,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Spur",
-            "en": "traffic lane"
+            "en": "change lanes"
           },
           {
             "target": "Melden",
             "en": "saltbushes"
-          },
-          {
-            "target": "werfen",
-            "en": "fawn"
-          },
-          {
-            "target": "erinnert",
-            "en": "been evocative"
           }
         ]
       },
@@ -3978,8 +3978,20 @@ export const sections: SectionBlueprint[] = [
         "icon": "🧭",
         "vocab": [
           {
+            "target": "werfen",
+            "en": "fawn"
+          },
+          {
+            "target": "erinnert",
+            "en": "been evocative"
+          },
+          {
+            "target": "Freude",
+            "en": "jump for joy"
+          },
+          {
             "target": "erschossen",
-            "en": "be worn out"
+            "en": "all in"
           },
           {
             "target": "verzeihen",
@@ -3995,11 +4007,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "entschieden",
-            "en": "emphatic"
+            "en": "an emphatic denial"
           },
           {
             "target": "Brauch",
             "en": "convention"
+          },
+          {
+            "target": "gewusst",
+            "en": "known"
           },
           {
             "target": "vorne",
@@ -4007,7 +4023,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Schlampe",
-            "en": "floozie"
+            "en": "slut"
           },
           {
             "target": "schöner",
@@ -4019,7 +4035,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Unsinn",
-            "en": "nonsense"
+            "en": "Stop fooling"
           },
           {
             "target": "Messer",
@@ -4027,7 +4043,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "gesund",
-            "en": "healthy"
+            "en": "healthy new cells"
           },
           {
             "target": "Respekt",
@@ -4043,11 +4059,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "davor",
-            "en": "in front"
+            "en": "before it"
+          },
+          {
+            "target": "bedeuten",
+            "en": "mean"
           },
           {
             "target": "Ball",
-            "en": "low"
+            "en": "keep the ball"
           },
           {
             "target": "mitnehmen",
@@ -4056,7 +4076,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Schwierigkeiten",
             "en": "bother"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u38",
+        "title": "Common words 926–950",
+        "subtitle": "The 926–950 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "Hälfte",
             "en": "half"
@@ -4076,17 +4106,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "verhaftet",
             "en": "arrested"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u38",
-        "title": "Common words 926–950",
-        "subtitle": "The 926–950 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "Deal",
             "en": "business deal"
@@ -4101,7 +4121,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Eis",
-            "en": "E sharp"
+            "en": "E double sharp"
           },
           {
             "target": "danken",
@@ -4109,7 +4129,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Erfolg",
-            "en": "success"
+            "en": "Your satifaction means"
           },
           {
             "target": "Schließen",
@@ -4121,7 +4141,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Wochenende",
-            "en": "weekend"
+            "en": "at the weeksends"
           },
           {
             "target": "Stimmen",
@@ -4129,7 +4149,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Witze",
-            "en": "gags"
+            "en": "laughs"
           },
           {
             "target": "Beine",
@@ -4141,7 +4161,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Bericht",
-            "en": "report"
+            "en": "make out"
           },
           {
             "target": "nachts",
@@ -4153,7 +4173,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Schmerz",
-            "en": "grief"
+            "en": "riven by grief"
           },
           {
             "target": "klingelt",
@@ -4166,26 +4186,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "gleichen",
             "en": "equal"
-          },
-          {
-            "target": "Fernsehen",
-            "en": "television"
-          },
-          {
-            "target": "schließlich",
-            "en": "in the end"
-          },
-          {
-            "target": "gefangen",
-            "en": "fielded"
-          },
-          {
-            "target": "Schätzchen",
-            "en": "sweetie"
-          },
-          {
-            "target": "schwierig",
-            "en": "awkward"
           }
         ]
       },
@@ -4198,16 +4198,36 @@ export const sections: SectionBlueprint[] = [
         "icon": "🎓",
         "vocab": [
           {
+            "target": "Fernsehen",
+            "en": "shown on television"
+          },
+          {
+            "target": "Wünsche",
+            "en": "requests"
+          },
+          {
+            "target": "schließlich",
+            "en": "in the end"
+          },
+          {
+            "target": "gefangen",
+            "en": "fielded"
+          },
+          {
+            "target": "Schätzchen",
+            "en": "honey"
+          },
+          {
+            "target": "schwierig",
+            "en": "an awkward customer"
+          },
+          {
             "target": "Angebot",
-            "en": "offer"
+            "en": "submit an offer"
           },
           {
             "target": "nah",
             "en": "near"
-          },
-          {
-            "target": "gewartet",
-            "en": "waited"
           },
           {
             "target": "Ring",
@@ -4219,7 +4239,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Lied",
-            "en": "song"
+            "en": "burst into song"
           },
           {
             "target": "Eier",
@@ -4254,10 +4274,6 @@ export const sections: SectionBlueprint[] = [
             "en": "village"
           },
           {
-            "target": "bewegt",
-            "en": "moved"
-          },
-          {
             "target": "Mitten",
             "en": "middles"
           },
@@ -4267,7 +4283,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Feind",
-            "en": "adversary"
+            "en": "They are sworn"
           },
           {
             "target": "einverstanden",
@@ -4279,23 +4295,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Bauen",
-            "en": "constructing"
-          },
-          {
-            "target": "trägt",
-            "en": "bears"
-          },
-          {
-            "target": "hängen",
-            "en": "hang"
-          },
-          {
-            "target": "deren",
-            "en": "whose"
-          },
-          {
-            "target": "verpasst",
-            "en": "slipped"
+            "en": "construction"
           }
         ]
       },
@@ -4308,8 +4308,28 @@ export const sections: SectionBlueprint[] = [
         "icon": "⭐",
         "vocab": [
           {
+            "target": "trägt",
+            "en": "bears"
+          },
+          {
+            "target": "hängen",
+            "en": "hang"
+          },
+          {
+            "target": "deren",
+            "en": "the flood"
+          },
+          {
+            "target": "halb",
+            "en": "halfway up"
+          },
+          {
+            "target": "verpasst",
+            "en": "slipped"
+          },
+          {
             "target": "Unternehmen",
-            "en": "concern"
+            "en": "a going concern"
           },
           {
             "target": "Träume",
@@ -4317,7 +4337,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "kostet",
-            "en": "tastes"
+            "en": "tries"
           },
           {
             "target": "Spiele",
@@ -4325,15 +4345,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "entlang",
-            "en": "along"
+            "en": "along the path"
           },
           {
             "target": "Versprechen",
-            "en": "promise"
+            "en": "keep your promise"
           },
           {
             "target": "Tiere",
-            "en": "animals"
+            "en": "food animals"
           },
           {
             "target": "Freiheit",
@@ -4353,23 +4373,27 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Schaden",
-            "en": "impairment"
+            "en": "damage"
+          },
+          {
+            "target": "genannt",
+            "en": "a couple"
           },
           {
             "target": "beenden",
-            "en": "finalise"
-          },
-          {
-            "target": "geändert",
-            "en": "changed"
+            "en": "finalize"
           },
           {
             "target": "lächerlich",
-            "en": "laughable"
+            "en": "ridiculous"
           },
           {
             "target": "geschlagen",
             "en": "washed"
+          },
+          {
+            "target": "schätzen",
+            "en": "regard"
           },
           {
             "target": "beginnt",
@@ -4377,12 +4401,22 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Ehren",
-            "en": "honours"
+            "en": "honors"
           },
           {
             "target": "größte",
             "en": "major"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u41",
+        "title": "Common words 1001–1025",
+        "subtitle": "The 1001–1025 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "Energie",
             "en": "energy"
@@ -4405,25 +4439,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Zeitung",
-            "en": "newspaper"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u41",
-        "title": "Common words 1001–1025",
-        "subtitle": "The 1001–1025 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "📚",
-        "vocab": [
+            "en": "paper"
+          },
           {
             "target": "worum",
             "en": "about what"
-          },
-          {
-            "target": "nachgedacht",
-            "en": "thought about"
           },
           {
             "target": "betrunken",
@@ -4443,11 +4463,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Taxi",
-            "en": "taxicab"
+            "en": "go by taxi"
           },
           {
             "target": "See",
-            "en": "inland lake"
+            "en": "a lake house"
           },
           {
             "target": "Unterschied",
@@ -4459,7 +4479,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "schreien",
-            "en": "holler"
+            "en": "holler out"
           },
           {
             "target": "Wand",
@@ -4467,7 +4487,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Bus",
-            "en": "jitney"
+            "en": "go by bus"
           },
           {
             "target": "Angriff",
@@ -4476,10 +4496,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Verhalten",
             "en": "manner"
-          },
-          {
-            "target": "Loch",
-            "en": "drill hole"
           },
           {
             "target": "Interesse",
@@ -4491,7 +4507,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Quatsch",
-            "en": "rubbish"
+            "en": "trash"
           },
           {
             "target": "Polizist",
@@ -4500,22 +4516,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Blumen",
             "en": "flowers"
-          },
-          {
-            "target": "Flasche",
-            "en": "bottle"
-          },
-          {
-            "target": "rief",
-            "en": "hooted"
-          },
-          {
-            "target": "Schuss",
-            "en": "shoot"
-          },
-          {
-            "target": "Fassen",
-            "en": "bite"
           }
         ]
       },
@@ -4528,12 +4528,36 @@ export const sections: SectionBlueprint[] = [
         "icon": "🗣️",
         "vocab": [
           {
+            "target": "Neuigkeiten",
+            "en": "news"
+          },
+          {
+            "target": "Flasche",
+            "en": "bottle"
+          },
+          {
+            "target": "rief",
+            "en": "hooted"
+          },
+          {
+            "target": "Schuss",
+            "en": "shot"
+          },
+          {
+            "target": "Fassen",
+            "en": "bite"
+          },
+          {
             "target": "Meer",
             "en": "sea"
           },
           {
+            "target": "Maschine",
+            "en": "plane"
+          },
+          {
             "target": "Bein",
-            "en": "leg"
+            "en": "bandy legs"
           },
           {
             "target": "verbringen",
@@ -4549,7 +4573,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Frühstück",
-            "en": "breakfast"
+            "en": "a big"
           },
           {
             "target": "Meter",
@@ -4558,6 +4582,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "aufpassen",
             "en": "attend"
+          },
+          {
+            "target": "dessen",
+            "en": "of whom"
           },
           {
             "target": "Engel",
@@ -4569,15 +4597,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Gelegenheit",
-            "en": "occasion"
+            "en": "have occasion to"
           },
           {
             "target": "Fang",
             "en": "take"
-          },
-          {
-            "target": "Lüge",
-            "en": "lie"
           },
           {
             "target": "Ohren",
@@ -4597,35 +4621,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Ecke",
-            "en": "corner kick"
+            "en": "corner throw"
           },
           {
             "target": "Brücke",
             "en": "jigger"
-          },
-          {
-            "target": "Druck",
-            "en": "buffeting"
-          },
-          {
-            "target": "mitgebracht",
-            "en": "brought"
-          },
-          {
-            "target": "seufzt",
-            "en": "sighs"
-          },
-          {
-            "target": "Date",
-            "en": "rendezvous"
-          },
-          {
-            "target": "Haufen",
-            "en": "cluster"
-          },
-          {
-            "target": "Oma",
-            "en": "grandma"
           }
         ]
       },
@@ -4638,6 +4638,34 @@ export const sections: SectionBlueprint[] = [
         "icon": "✍️",
         "vocab": [
           {
+            "target": "Druck",
+            "en": "buffeting"
+          },
+          {
+            "target": "mitgebracht",
+            "en": "brought with you"
+          },
+          {
+            "target": "seufzt",
+            "en": "sighs"
+          },
+          {
+            "target": "Date",
+            "en": "rendezvous"
+          },
+          {
+            "target": "Haufen",
+            "en": "a pathetic bunch"
+          },
+          {
+            "target": "Oma",
+            "en": "grandma"
+          },
+          {
+            "target": "Auftrag",
+            "en": "job"
+          },
+          {
             "target": "leer",
             "en": "blank"
           },
@@ -4647,7 +4675,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Weißen",
-            "en": "limewash"
+            "en": "whiting"
           },
           {
             "target": "Lösung",
@@ -4655,15 +4683,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Pause",
-            "en": "time-out"
-          },
-          {
-            "target": "Irre",
-            "en": "madman"
-          },
-          {
-            "target": "gestellt",
-            "en": "provided"
+            "en": "take a time-out"
           },
           {
             "target": "Keller",
@@ -4678,16 +4698,16 @@ export const sections: SectionBlueprint[] = [
             "en": "crying"
           },
           {
-            "target": "Nutzen",
-            "en": "cutout"
-          },
-          {
             "target": "wünschen",
             "en": "wish"
           },
           {
+            "target": "Maul",
+            "en": "mouth"
+          },
+          {
             "target": "Verantwortung",
-            "en": "responsibility"
+            "en": "corporate social responsibility"
           },
           {
             "target": "Schloss",
@@ -4695,7 +4715,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Hut",
-            "en": "stiff hat"
+            "en": "be on alert"
           },
           {
             "target": "Lächeln",
@@ -4703,39 +4723,19 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Grad",
-            "en": "degree"
+            "en": "a certain degree"
           },
           {
             "target": "mitkommen",
             "en": "tag along"
           },
           {
+            "target": "vorhin",
+            "en": "just now"
+          },
+          {
             "target": "gemeint",
             "en": "referred to"
-          },
-          {
-            "target": "ernsthaft",
-            "en": "serious"
-          },
-          {
-            "target": "gebaut",
-            "en": "constructed"
-          },
-          {
-            "target": "Bombe",
-            "en": "bomb"
-          },
-          {
-            "target": "hasst",
-            "en": "abhors"
-          },
-          {
-            "target": "Kosten",
-            "en": "outlay"
-          },
-          {
-            "target": "Operation",
-            "en": "false-flag operation"
           }
         ]
       },
@@ -4748,12 +4748,36 @@ export const sections: SectionBlueprint[] = [
         "icon": "🌍",
         "vocab": [
           {
+            "target": "ernsthaft",
+            "en": "a serious problem"
+          },
+          {
+            "target": "gebaut",
+            "en": "constructed"
+          },
+          {
+            "target": "Bombe",
+            "en": "the bomb explodes"
+          },
+          {
+            "target": "hasst",
+            "en": "abhors"
+          },
+          {
+            "target": "Kosten",
+            "en": "outlay"
+          },
+          {
+            "target": "Operation",
+            "en": "false-flag operation"
+          },
+          {
             "target": "Befehle",
             "en": "orders"
           },
           {
             "target": "Schmerzen",
-            "en": "pain"
+            "en": "racked by"
           },
           {
             "target": "erklärt",
@@ -4769,11 +4793,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Schwarze",
-            "en": "black"
+            "en": "black person"
           },
           {
             "target": "dankbar",
-            "en": "grateful"
+            "en": "show one's gratitude"
           },
           {
             "target": "Gehirn",
@@ -4781,19 +4805,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Mut",
-            "en": "courage"
+            "en": "reward the courage"
           },
           {
             "target": "Heilige",
-            "en": "saint"
-          },
-          {
-            "target": "Tier",
-            "en": "animal"
+            "en": "Saint Peter"
           },
           {
             "target": "System",
-            "en": "stave"
+            "en": "staff"
           },
           {
             "target": "Wahnsinn",
@@ -4805,11 +4825,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Hintern",
-            "en": "buttock"
+            "en": "rear end"
           },
           {
             "target": "Thema",
-            "en": "issue"
+            "en": "issue at stake"
           },
           {
             "target": "fiel",
@@ -4817,7 +4837,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "gehalten",
-            "en": "kennelled"
+            "en": "kenneled"
           },
           {
             "target": "Urlaub",
@@ -4826,6 +4846,20 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Steig",
             "en": "via ferrata"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u45",
+        "title": "Common words 1101–1125",
+        "subtitle": "The 1101–1125 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "vorwärts",
+            "en": "along"
           },
           {
             "target": "überprüfen",
@@ -4846,20 +4880,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Lehrer",
             "en": "teacher"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u45",
-        "title": "Common words 1101–1125",
-        "subtitle": "The 1101–1125 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🍽️",
-        "vocab": [
+          },
+          {
+            "target": "hoffen",
+            "en": "hope"
+          },
           {
             "target": "Nachmittag",
-            "en": "afternoon"
+            "en": "over the afternoon"
           },
           {
             "target": "Risiko",
@@ -4867,7 +4895,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Knast",
-            "en": "jug"
+            "en": "clink"
           },
           {
             "target": "entschuldigt",
@@ -4876,6 +4904,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "daraus",
             "en": "out of it"
+          },
+          {
+            "target": "erstes",
+            "en": "first"
           },
           {
             "target": "Fräulein",
@@ -4891,7 +4923,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Nachdenken",
-            "en": "thinking"
+            "en": "time to think"
           },
           {
             "target": "Tor",
@@ -4899,7 +4931,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Erfahrung",
-            "en": "experience"
+            "en": "in my experience"
           },
           {
             "target": "Pläne",
@@ -4915,7 +4947,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Runde",
-            "en": "round"
+            "en": "do the rounds"
           },
           {
             "target": "Deutsche",
@@ -4924,7 +4956,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Taten",
             "en": "doings"
-          },
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u46",
+        "title": "Common words 1126–1150",
+        "subtitle": "The 1126–1150 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "dringend",
             "en": "insisting on"
@@ -4943,7 +4985,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Gewissen",
-            "en": "conscience"
+            "en": "We cannot"
           },
           {
             "target": "getrunken",
@@ -4956,24 +4998,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Kunden",
             "en": "customers"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u46",
-        "title": "Common words 1126–1150",
-        "subtitle": "The 1126–1150 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "Kate",
-            "en": "croft"
+            "en": "but and ben"
           },
           {
             "target": "Zeugen",
-            "en": "witnesses"
+            "en": "before witnesses"
           },
           {
             "target": "geplant",
@@ -4985,7 +5017,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "stören",
-            "en": "jam"
+            "en": "override a signal"
           },
           {
             "target": "Stein",
@@ -4993,11 +5025,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Atmen",
-            "en": "respiration"
+            "en": "breathing"
           },
           {
             "target": "Hose",
-            "en": "trousers"
+            "en": "pants"
           },
           {
             "target": "Weiße",
@@ -5013,7 +5045,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "City",
-            "en": "city centre"
+            "en": "central business district"
           },
           {
             "target": "Prinz",
@@ -5025,11 +5057,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Tote",
-            "en": "deceased"
-          },
-          {
-            "target": "Überlegen",
-            "en": "consideration"
+            "en": "dead person"
           },
           {
             "target": "Karten",
@@ -5038,34 +5066,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Restaurant",
             "en": "eating house"
-          },
-          {
-            "target": "Natur",
-            "en": "nature"
-          },
-          {
-            "target": "Streit",
-            "en": "contestation"
-          },
-          {
-            "target": "küssen",
-            "en": "kiss"
-          },
-          {
-            "target": "sprich",
-            "en": "wit"
-          },
-          {
-            "target": "längst",
-            "en": "long ago"
-          },
-          {
-            "target": "fängt",
-            "en": "traps"
-          },
-          {
-            "target": "erlaubt",
-            "en": "allowed for"
           }
         ]
       },
@@ -5078,8 +5078,40 @@ export const sections: SectionBlueprint[] = [
         "icon": "🧭",
         "vocab": [
           {
+            "target": "Natur",
+            "en": "back to nature"
+          },
+          {
+            "target": "Streit",
+            "en": "contesting"
+          },
+          {
+            "target": "küssen",
+            "en": "kiss"
+          },
+          {
+            "target": "sprich",
+            "en": "Pilot error"
+          },
+          {
+            "target": "längst",
+            "en": "long ago"
+          },
+          {
+            "target": "fängt",
+            "en": "traps"
+          },
+          {
+            "target": "erlaubt",
+            "en": "allowed for"
+          },
+          {
             "target": "Bad",
             "en": "swim"
+          },
+          {
+            "target": "schmeckt",
+            "en": "tastes"
           },
           {
             "target": "Kugel",
@@ -5095,11 +5127,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Flug",
-            "en": "flight"
+            "en": "a flight to"
           },
           {
             "target": "beruhigen",
-            "en": "cheer"
+            "en": "cheer up"
           },
           {
             "target": "Dan",
@@ -5131,11 +5163,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Louis",
-            "en": "procurer"
+            "en": "pimp"
           },
           {
             "target": "Schwert",
-            "en": "sword"
+            "en": "Beauty is power"
           },
           {
             "target": "Hunde",
@@ -5143,8 +5175,18 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Steigen",
-            "en": "crates"
-          },
+            "en": "fruit crates"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u48",
+        "title": "Common words 1176–1200",
+        "subtitle": "The 1176–1200 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "verdammter",
             "en": "more condemned"
@@ -5159,11 +5201,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Fisch",
-            "en": "fish"
+            "en": "feed the fishes"
           },
           {
             "target": "Füße",
-            "en": "feet"
+            "en": "stand by oneself"
           },
           {
             "target": "Erschießen",
@@ -5176,24 +5218,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "versuchte",
             "en": "tempted"
-          }
-        ]
-      },
-      {
-        "id": "de-gen-u48",
-        "title": "Common words 1176–1200",
-        "subtitle": "The 1176–1200 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "Zustand",
-            "en": "trim"
+            "en": "in good trim"
           },
           {
             "target": "Wunsch",
-            "en": "request"
+            "en": "by popular request"
           },
           {
             "target": "Gäste",
@@ -5201,7 +5233,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "erwähnt",
-            "en": "mentioned"
+            "en": "be honourably mentioned"
           },
           {
             "target": "Farbe",
@@ -5241,51 +5273,19 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Idioten",
-            "en": "dumbasses"
+            "en": "muppets"
           },
           {
             "target": "netter",
             "en": "neater"
           },
           {
+            "target": "seitdem",
+            "en": "since"
+          },
+          {
             "target": "angegriffen",
             "en": "affected"
-          },
-          {
-            "target": "Geschichten",
-            "en": "tales"
-          },
-          {
-            "target": "wahnsinnig",
-            "en": "frenzied"
-          },
-          {
-            "target": "Aufgeben",
-            "en": "dispatch"
-          },
-          {
-            "target": "entführt",
-            "en": "kidnapped"
-          },
-          {
-            "target": "geschossen",
-            "en": "loosed off"
-          },
-          {
-            "target": "Lager",
-            "en": "lair"
-          },
-          {
-            "target": "besprechen",
-            "en": "talk about"
-          },
-          {
-            "target": "Reihe",
-            "en": "array"
-          },
-          {
-            "target": "Vogel",
-            "en": "bird"
           }
         ]
       }

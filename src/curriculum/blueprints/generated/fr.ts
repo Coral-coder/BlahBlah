@@ -35,7 +35,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "autre",
-            "en": "other"
+            "en": "rest of"
           },
           {
             "target": "temps",
@@ -43,7 +43,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "quelque",
-            "en": "a few"
+            "en": "some"
           },
           {
             "target": "toujours",
@@ -51,7 +51,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "encore",
-            "en": "more"
+            "en": "all over again"
           },
           {
             "target": "mes",
@@ -63,7 +63,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "accord",
-            "en": "accordance"
+            "en": "agreement"
           },
           {
             "target": "vie",
@@ -75,11 +75,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "aller",
-            "en": "fare"
-          },
-          {
-            "target": "fois",
-            "en": "occasion"
+            "en": "go"
           },
           {
             "target": "donc",
@@ -95,11 +91,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "avant",
-            "en": "before"
+            "en": "in front of"
           },
           {
             "target": "sûr",
-            "en": "certain"
+            "en": "sure"
           },
           {
             "target": "trop",
@@ -107,15 +103,19 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "parler",
-            "en": "speak"
+            "en": "talk"
           },
           {
             "target": "personne",
-            "en": "neither"
+            "en": "nobody"
           },
           {
             "target": "père",
             "en": "father"
+          },
+          {
+            "target": "après",
+            "en": "then"
           }
         ]
       },
@@ -128,10 +128,6 @@ export const sections: SectionBlueprint[] = [
         "icon": "🗣️",
         "vocab": [
           {
-            "target": "après",
-            "en": "after"
-          },
-          {
             "target": "aux",
             "en": "the"
           },
@@ -141,7 +137,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "leur",
-            "en": "them"
+            "en": "to them"
           },
           {
             "target": "homme",
@@ -157,15 +153,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "mal",
-            "en": "ache"
+            "en": "bad"
           },
           {
             "target": "chez",
-            "en": "at"
+            "en": "with"
           },
           {
             "target": "déjà",
-            "en": "already"
+            "en": "by now"
           },
           {
             "target": "depuis",
@@ -181,7 +177,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "mieux",
-            "en": "preferably"
+            "en": "rather"
           },
           {
             "target": "mère",
@@ -189,7 +185,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "fille",
-            "en": "daughter"
+            "en": "girl"
           },
           {
             "target": "gens",
@@ -205,11 +201,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "voilà",
-            "en": "behold"
+            "en": "here you are"
           },
           {
             "target": "petit",
-            "en": "diminutive"
+            "en": "little"
           },
           {
             "target": "maison",
@@ -217,7 +213,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "soit",
-            "en": "agreed"
+            "en": "that is"
           },
           {
             "target": "cela",
@@ -226,6 +222,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "soir",
             "en": "evening"
+          },
+          {
+            "target": "passé",
+            "en": "last"
           }
         ]
       },
@@ -238,12 +238,8 @@ export const sections: SectionBlueprint[] = [
         "icon": "✍️",
         "vocab": [
           {
-            "target": "passé",
-            "en": "last"
-          },
-          {
             "target": "prendre",
-            "en": "get"
+            "en": "lay hold of"
           },
           {
             "target": "jour",
@@ -259,19 +255,19 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "choses",
-            "en": "stuff"
+            "en": "things"
           },
           {
             "target": "salut",
-            "en": "greeting"
+            "en": "recovery"
           },
           {
             "target": "nom",
-            "en": "appellation"
+            "en": "name"
           },
           {
             "target": "argent",
-            "en": "silver"
+            "en": "money"
           },
           {
             "target": "bonjour",
@@ -291,11 +287,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "maman",
-            "en": "mam"
+            "en": "mom"
           },
           {
             "target": "reste",
-            "en": "remainder"
+            "en": "rest"
           },
           {
             "target": "moment",
@@ -303,19 +299,19 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "seul",
-            "en": "alone"
+            "en": "only"
           },
           {
             "target": "aider",
-            "en": "abet"
+            "en": "help"
           },
           {
             "target": "air",
-            "en": "appearance"
+            "en": "look"
           },
           {
             "target": "entre",
-            "en": "among"
+            "en": "between"
           },
           {
             "target": "papa",
@@ -327,7 +323,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "peur",
-            "en": "fright"
+            "en": "fear"
           },
           {
             "target": "fils",
@@ -336,6 +332,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "trouver",
             "en": "find"
+          },
+          {
+            "target": "trois",
+            "en": "three"
           }
         ]
       },
@@ -347,10 +347,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "🌍",
         "vocab": [
-          {
-            "target": "trois",
-            "en": "three"
-          },
           {
             "target": "assez",
             "en": "enough"
@@ -369,7 +365,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "partir",
-            "en": "start out"
+            "en": "go away"
           },
           {
             "target": "vite",
@@ -377,7 +373,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "voiture",
-            "en": "vehicle"
+            "en": "car"
           },
           {
             "target": "enfants",
@@ -405,7 +401,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "part",
-            "en": "Parthian"
+            "en": "piece"
           },
           {
             "target": "elles",
@@ -413,7 +409,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "grand",
-            "en": "big"
+            "en": "great"
           },
           {
             "target": "aujourd'hui",
@@ -441,11 +437,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "puis",
-            "en": "afterwards"
+            "en": "next"
           },
           {
             "target": "passer",
-            "en": "give"
+            "en": "go beyond"
+          },
+          {
+            "target": "tant",
+            "en": "that much"
           }
         ]
       },
@@ -458,16 +458,12 @@ export const sections: SectionBlueprint[] = [
         "icon": "🍽️",
         "vocab": [
           {
-            "target": "tant",
-            "en": "so much"
-          },
-          {
             "target": "combien",
             "en": "how many"
           },
           {
             "target": "sens",
-            "en": "meaning"
+            "en": "sense"
           },
           {
             "target": "porte",
@@ -475,15 +471,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "sortir",
-            "en": "come out"
-          },
-          {
-            "target": "heure",
-            "en": "hour"
+            "en": "go out"
           },
           {
             "target": "contre",
-            "en": "across from"
+            "en": "opposed to"
           },
           {
             "target": "coup",
@@ -491,7 +483,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "ensemble",
-            "en": "bevy"
+            "en": "set"
           },
           {
             "target": "nouveau",
@@ -499,7 +491,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "amour",
-            "en": "affection"
+            "en": "love"
           },
           {
             "target": "sang",
@@ -507,15 +499,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "cas",
-            "en": "affair"
+            "en": "matter"
           },
           {
             "target": "sous",
-            "en": "below"
+            "en": "under"
           },
           {
             "target": "rester",
-            "en": "remain"
+            "en": "stay over"
           },
           {
             "target": "partie",
@@ -523,11 +515,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "histoire",
-            "en": "fairy tale"
-          },
-          {
-            "target": "aide",
-            "en": "aid"
+            "en": "story"
           },
           {
             "target": "chercher",
@@ -539,11 +527,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "seulement",
-            "en": "exclusively"
+            "en": "just"
           },
           {
             "target": "car",
-            "en": "because"
+            "en": "as"
           },
           {
             "target": "mois",
@@ -555,7 +543,19 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "laisser",
-            "en": "allow"
+            "en": "let"
+          },
+          {
+            "target": "aucun",
+            "en": "nothing"
+          },
+          {
+            "target": "mettre",
+            "en": "put in"
+          },
+          {
+            "target": "chaque",
+            "en": "every"
           }
         ]
       },
@@ -567,18 +567,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "🏙️",
         "vocab": [
-          {
-            "target": "aucun",
-            "en": "none"
-          },
-          {
-            "target": "mettre",
-            "en": "insert"
-          },
-          {
-            "target": "chaque",
-            "en": "each"
-          },
           {
             "target": "ville",
             "en": "city"
@@ -593,7 +581,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "place",
-            "en": "location"
+            "en": "public square"
           },
           {
             "target": "revoir",
@@ -601,11 +589,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "putain",
-            "en": "hooker"
+            "en": "whore"
           },
           {
             "target": "attention",
             "en": "acuity"
+          },
+          {
+            "target": "endroit",
+            "en": "place"
           },
           {
             "target": "corps",
@@ -616,8 +608,12 @@ export const sections: SectionBlueprint[] = [
             "en": "way"
           },
           {
+            "target": "voici",
+            "en": "here is"
+          },
+          {
             "target": "dont",
-            "en": "of which"
+            "en": "that one's"
           },
           {
             "target": "pouvoir",
@@ -633,7 +629,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "point",
-            "en": "dot"
+            "en": "spot"
           },
           {
             "target": "main",
@@ -641,11 +637,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "enfant",
-            "en": "bairn"
+            "en": "child"
           },
           {
             "target": "vieux",
-            "en": "decayed"
+            "en": "old"
           },
           {
             "target": "matin",
@@ -657,7 +653,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "suite",
-            "en": "train"
+            "en": "party"
+          },
+          {
+            "target": "vers",
+            "en": "to"
           },
           {
             "target": "enfin",
@@ -665,7 +665,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "arrêter",
-            "en": "arrest"
+            "en": "stop"
           }
         ]
       },
@@ -683,11 +683,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "chambre",
-            "en": "chamber"
-          },
-          {
-            "target": "parti",
-            "en": "decision-making"
+            "en": "room"
           },
           {
             "target": "eau",
@@ -699,7 +695,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "terre",
-            "en": "ground"
+            "en": "earth"
           },
           {
             "target": "loin",
@@ -715,15 +711,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "croire",
-            "en": "acknowledge"
+            "en": "believe"
           },
           {
             "target": "gros",
-            "en": "bold"
+            "en": "fat"
           },
           {
             "target": "prêt",
-            "en": "finished"
+            "en": "through"
           },
           {
             "target": "bureau",
@@ -731,7 +727,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "mourir",
-            "en": "die"
+            "en": "pass away"
           },
           {
             "target": "hier",
@@ -739,15 +735,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "jouer",
-            "en": "act"
+            "en": "play"
           },
           {
             "target": "demander",
-            "en": "ask"
+            "en": "ask for"
           },
           {
             "target": "beau",
-            "en": "beautiful"
+            "en": "fine"
           },
           {
             "target": "jeune",
@@ -755,7 +751,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "dehors",
-            "en": "abroad"
+            "en": "outside"
           },
           {
             "target": "docteur",
@@ -776,6 +772,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "école",
             "en": "school"
+          },
+          {
+            "target": "chef",
+            "en": "boss"
           }
         ]
       },
@@ -788,12 +788,8 @@ export const sections: SectionBlueprint[] = [
         "icon": "💬",
         "vocab": [
           {
-            "target": "chef",
-            "en": "chief"
-          },
-          {
             "target": "propos",
-            "en": "intention"
+            "en": "plan"
           },
           {
             "target": "semaine",
@@ -817,7 +813,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "près",
-            "en": "nearby"
+            "en": "close"
           },
           {
             "target": "meilleur",
@@ -825,11 +821,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "dessus",
-            "en": "above"
+            "en": "on top"
           },
           {
             "target": "équipe",
-            "en": "detachment"
+            "en": "team"
           },
           {
             "target": "manger",
@@ -837,11 +833,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "arriver",
-            "en": "end up"
+            "en": "come about"
           },
           {
             "target": "dur",
-            "en": "difficult"
+            "en": "hard"
           },
           {
             "target": "guerre",
@@ -849,15 +845,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "marche",
-            "en": "stair"
+            "en": "step"
           },
           {
             "target": "sécurité",
-            "en": "safety"
+            "en": "security"
           },
           {
             "target": "garçon",
-            "en": "bachelor"
+            "en": "boy"
           },
           {
             "target": "important",
@@ -869,11 +865,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "fort",
-            "en": "strong"
+            "en": "very"
           },
           {
             "target": "presque",
-            "en": "as if"
+            "en": "in a way"
           },
           {
             "target": "plein",
@@ -881,11 +877,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "derrière",
-            "en": "behind"
+            "en": "after"
           },
           {
             "target": "mariage",
             "en": "marriage"
+          },
+          {
+            "target": "capitaine",
+            "en": "captain"
           }
         ]
       },
@@ -898,32 +898,20 @@ export const sections: SectionBlueprint[] = [
         "icon": "🎓",
         "vocab": [
           {
-            "target": "capitaine",
-            "en": "captain"
-          },
-          {
             "target": "fou",
             "en": "crazy"
           },
           {
             "target": "tomber",
-            "en": "drop"
+            "en": "fall"
           },
           {
             "target": "attendre",
-            "en": "abide"
-          },
-          {
-            "target": "vue",
-            "en": "exterior"
+            "en": "wait for"
           },
           {
             "target": "envie",
             "en": "envy"
-          },
-          {
-            "target": "fête",
-            "en": "celebration"
           },
           {
             "target": "jeu",
@@ -939,7 +927,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "cours",
-            "en": "class"
+            "en": "course"
           },
           {
             "target": "bientôt",
@@ -958,16 +946,24 @@ export const sections: SectionBlueprint[] = [
             "en": "perfect"
           },
           {
+            "target": "ainsi",
+            "en": "like that"
+          },
+          {
             "target": "retour",
             "en": "return"
           },
           {
             "target": "autant",
-            "en": "such"
+            "en": "that kind of"
+          },
+          {
+            "target": "peine",
+            "en": "pain"
           },
           {
             "target": "plan",
-            "en": "map"
+            "en": "plane"
           },
           {
             "target": "instant",
@@ -983,19 +979,23 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "essayer",
-            "en": "attempt"
+            "en": "try"
           },
           {
             "target": "arme",
             "en": "weapon"
           },
           {
-            "target": "mauvais",
-            "en": "rotten"
-          },
-          {
             "target": "mot",
             "en": "word"
+          },
+          {
+            "target": "quatre",
+            "en": "four"
+          },
+          {
+            "target": "choix",
+            "en": "choice"
           }
         ]
       },
@@ -1007,18 +1007,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "⭐",
         "vocab": [
-          {
-            "target": "quatre",
-            "en": "four"
-          },
-          {
-            "target": "regarder",
-            "en": "look"
-          },
-          {
-            "target": "choix",
-            "en": "choice"
-          },
           {
             "target": "parfois",
             "en": "several times"
@@ -1037,11 +1025,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "bas",
-            "en": "stocking"
+            "en": "lower part"
           },
           {
             "target": "changer",
-            "en": "change"
+            "en": "turn"
           },
           {
             "target": "entendre",
@@ -1053,7 +1041,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "heureux",
-            "en": "fortunate"
+            "en": "happy"
           },
           {
             "target": "entrer",
@@ -1064,8 +1052,8 @@ export const sections: SectionBlueprint[] = [
             "en": "own"
           },
           {
-            "target": "tour",
-            "en": "castle"
+            "target": "garder",
+            "en": "look after"
           },
           {
             "target": "agent",
@@ -1077,15 +1065,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "rendre",
-            "en": "cause"
-          },
-          {
-            "target": "route",
-            "en": "track"
-          },
-          {
-            "target": "lieu",
-            "en": "inducement"
+            "en": "get"
           },
           {
             "target": "année",
@@ -1093,7 +1073,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "service",
-            "en": "favor"
+            "en": "job"
           },
           {
             "target": "devoir",
@@ -1101,11 +1081,31 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "drôle",
-            "en": "amusing"
+            "en": "funny"
           },
           {
             "target": "pire",
             "en": "worse"
+          },
+          {
+            "target": "sujet",
+            "en": "subject"
+          },
+          {
+            "target": "état",
+            "en": "state"
+          },
+          {
+            "target": "ceci",
+            "en": "this"
+          },
+          {
+            "target": "perdre",
+            "en": "lose"
+          },
+          {
+            "target": "bizarre",
+            "en": "weird"
           }
         ]
       },
@@ -1117,26 +1117,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "📚",
         "vocab": [
-          {
-            "target": "sujet",
-            "en": "subject"
-          },
-          {
-            "target": "état",
-            "en": "condition"
-          },
-          {
-            "target": "ceci",
-            "en": "these"
-          },
-          {
-            "target": "perdre",
-            "en": "lose"
-          },
-          {
-            "target": "bizarre",
-            "en": "odd"
-          },
           {
             "target": "tôt",
             "en": "early"
@@ -1151,15 +1131,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "café",
-            "en": "coffee-house"
+            "en": "coffee"
           },
           {
             "target": "calme",
-            "en": "calm"
+            "en": "quiet"
           },
           {
             "target": "montrer",
-            "en": "indicate"
+            "en": "point out"
           },
           {
             "target": "photo",
@@ -1171,7 +1151,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "sûrement",
-            "en": "certainly"
+            "en": "without fail"
           },
           {
             "target": "verre",
@@ -1191,7 +1171,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "sauf",
-            "en": "apart from"
+            "en": "except for"
           },
           {
             "target": "moyen",
@@ -1210,12 +1190,32 @@ export const sections: SectionBlueprint[] = [
             "en": "hospital"
           },
           {
-            "target": "sérieux",
-            "en": "earnest"
-          },
-          {
             "target": "seconde",
             "en": "second"
+          },
+          {
+            "target": "comprendre",
+            "en": "understand"
+          },
+          {
+            "target": "esprit",
+            "en": "mind"
+          },
+          {
+            "target": "marché",
+            "en": "fair"
+          },
+          {
+            "target": "haut",
+            "en": "high"
+          },
+          {
+            "target": "malade",
+            "en": "sick"
+          },
+          {
+            "target": "simple",
+            "en": "straightforward"
           }
         ]
       },
@@ -1228,36 +1228,8 @@ export const sections: SectionBlueprint[] = [
         "icon": "🗣️",
         "vocab": [
           {
-            "target": "comprendre",
-            "en": "understand"
-          },
-          {
-            "target": "esprit",
-            "en": "mind"
-          },
-          {
-            "target": "marché",
-            "en": "bazaar"
-          },
-          {
-            "target": "haut",
-            "en": "high"
-          },
-          {
-            "target": "malade",
-            "en": "ill"
-          },
-          {
-            "target": "gentil",
-            "en": "affable"
-          },
-          {
-            "target": "simple",
-            "en": "straightforward"
-          },
-          {
             "target": "appris",
-            "en": "acquired"
+            "en": "learnt"
           },
           {
             "target": "seigneur",
@@ -1265,11 +1237,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "dîner",
-            "en": "dine"
-          },
-          {
-            "target": "chemin",
-            "en": "path"
+            "en": "have dinner"
           },
           {
             "target": "partout",
@@ -1280,8 +1248,8 @@ export const sections: SectionBlueprint[] = [
             "en": "arm"
           },
           {
-            "target": "prochaine",
-            "en": "close"
+            "target": "cul",
+            "en": "behind"
           },
           {
             "target": "visage",
@@ -1305,7 +1273,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "rapport",
-            "en": "relevance"
+            "en": "report"
           },
           {
             "target": "message",
@@ -1317,7 +1285,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "président",
-            "en": "chairman"
+            "en": "president"
           },
           {
             "target": "bois",
@@ -1325,21 +1293,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "erreur",
-            "en": "aberration"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u13",
-        "title": "Common words 301–325",
-        "subtitle": "The 301–325 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "✍️",
-        "vocab": [
+            "en": "mistake"
+          },
           {
             "target": "rendez-vous",
-            "en": "appointment"
+            "en": "date"
           },
           {
             "target": "revenir",
@@ -1351,32 +1309,34 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "pauvre",
-            "en": "pitiful"
+            "en": "poor"
           },
           {
             "target": "rencontrer",
-            "en": "bore"
-          },
-          {
-            "target": "sort",
-            "en": "destiny"
+            "en": "come across"
           },
           {
             "target": "commencer",
-            "en": "begin"
+            "en": "set in"
           },
           {
             "target": "souvent",
-            "en": "frequently"
-          },
-          {
-            "target": "pièce",
-            "en": "certificate"
+            "en": "often"
           },
           {
             "target": "reçu",
-            "en": "acknowledgement"
-          },
+            "en": "receipt"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u13",
+        "title": "Common words 301–325",
+        "subtitle": "The 301–325 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "grave",
             "en": "important"
@@ -1406,12 +1366,16 @@ export const sections: SectionBlueprint[] = [
             "en": "dream"
           },
           {
+            "target": "carte",
+            "en": "card"
+          },
+          {
             "target": "manque",
-            "en": "absence"
+            "en": "lack"
           },
           {
             "target": "début",
-            "en": "beginning"
+            "en": "start"
           },
           {
             "target": "bonsoir",
@@ -1419,7 +1383,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "content",
-            "en": "contented"
+            "en": "pleased"
           },
           {
             "target": "venue",
@@ -1427,7 +1391,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "cher",
-            "en": "costly"
+            "en": "dear"
           },
           {
             "target": "effet",
@@ -1436,17 +1400,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sac",
             "en": "bag"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u14",
-        "title": "Common words 326–350",
-        "subtitle": "The 326–350 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "voix",
             "en": "voice"
@@ -1457,15 +1411,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "gagner",
-            "en": "earn"
+            "en": "win"
           },
           {
-            "target": "maître",
-            "en": "adept"
+            "target": "grâce",
+            "en": "favor"
           },
           {
             "target": "prix",
-            "en": "premium"
+            "en": "price"
           },
           {
             "target": "général",
@@ -1481,8 +1435,18 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "apprendre",
-            "en": "teach"
-          },
+            "en": "learn"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u14",
+        "title": "Common words 326–350",
+        "subtitle": "The 326–350 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "cheveux",
             "en": "hair"
@@ -1492,12 +1456,8 @@ export const sections: SectionBlueprint[] = [
             "en": "Negro"
           },
           {
-            "target": "patron",
-            "en": "boss"
-          },
-          {
             "target": "avocat",
-            "en": "advocate"
+            "en": "lawyer"
           },
           {
             "target": "force",
@@ -1517,7 +1477,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "cru",
-            "en": "crude"
+            "en": "rough"
           },
           {
             "target": "incroyable",
@@ -1525,7 +1485,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "voyage",
-            "en": "journey"
+            "en": "trip"
           },
           {
             "target": "ailleurs",
@@ -1537,26 +1497,12 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "situation",
-            "en": "circumstances"
-          },
-          {
-            "target": "simplement",
-            "en": "simply"
+            "en": "condition"
           },
           {
             "target": "scène",
             "en": "scene"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u15",
-        "title": "Common words 351–375",
-        "subtitle": "The 351–375 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🍽️",
-        "vocab": [
+          },
           {
             "target": "sœur",
             "en": "sister"
@@ -1567,11 +1513,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "liste",
-            "en": "nomination"
+            "en": "table"
           },
           {
             "target": "complètement",
-            "en": "completely"
+            "en": "at all"
           },
           {
             "target": "dos",
@@ -1587,20 +1533,30 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "battre",
-            "en": "beat"
+            "en": "hit"
           },
           {
             "target": "anniversaire",
-            "en": "anniversary"
+            "en": "birthday"
           },
           {
             "target": "finir",
-            "en": "accommodate"
+            "en": "end up"
           },
           {
             "target": "retourner",
-            "en": "turn"
-          },
+            "en": "turn around"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u15",
+        "title": "Common words 351–375",
+        "subtitle": "The 351–375 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "sale",
             "en": "dirty"
@@ -1611,31 +1567,23 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "idiot",
-            "en": "addled"
-          },
-          {
-            "target": "absolument",
-            "en": "absolutely"
+            "en": "stupid"
           },
           {
             "target": "victime",
             "en": "victim"
           },
           {
+            "target": "impression",
+            "en": "printed matter"
+          },
+          {
             "target": "sympa",
             "en": "sympathetic"
           },
           {
-            "target": "avion",
-            "en": "aeroplane"
-          },
-          {
             "target": "bordel",
             "en": "brothel"
-          },
-          {
-            "target": "habitude",
-            "en": "custom"
           },
           {
             "target": "rouge",
@@ -1647,33 +1595,19 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "bateau",
-            "en": "boat"
-          },
-          {
-            "target": "stupide",
-            "en": "idiotic"
+            "en": "ship"
           },
           {
             "target": "faim",
             "en": "hunger"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u16",
-        "title": "Common words 376–400",
-        "subtitle": "The 376–400 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "autour",
             "en": "goshawk"
           },
           {
             "target": "fond",
-            "en": "bottom"
+            "en": "ground"
           },
           {
             "target": "ligne",
@@ -1681,19 +1615,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "porter",
-            "en": "carry"
+            "en": "wear"
           },
           {
             "target": "clair",
-            "en": "clear"
+            "en": "light"
           },
           {
             "target": "balle",
-            "en": "bullet"
-          },
-          {
-            "target": "hors",
-            "en": "outside"
+            "en": "ball"
           },
           {
             "target": "magnifique",
@@ -1701,15 +1631,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "risque",
-            "en": "hazard"
+            "en": "risk"
           },
           {
             "target": "présent",
             "en": "present"
-          },
-          {
-            "target": "cadeau",
-            "en": "gift"
           },
           {
             "target": "expliquer",
@@ -1730,7 +1656,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "suivre",
             "en": "act on"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u16",
+        "title": "Common words 376–400",
+        "subtitle": "The 376–400 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "inspecteur",
             "en": "inspector"
@@ -1740,24 +1676,16 @@ export const sections: SectionBlueprint[] = [
             "en": "answer"
           },
           {
-            "target": "lumière",
-            "en": "light"
-          },
-          {
             "target": "montre",
             "en": "watch"
           },
           {
             "target": "marcher",
-            "en": "march"
+            "en": "walk"
           },
           {
             "target": "envoyer",
             "en": "send"
-          },
-          {
-            "target": "espèce",
-            "en": "species"
           },
           {
             "target": "allô",
@@ -1766,24 +1694,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pareil",
             "en": "like"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u17",
-        "title": "Common words 401–425",
-        "subtitle": "The 401–425 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "🧭",
-        "vocab": [
+          },
           {
             "target": "soleil",
             "en": "sun"
           },
           {
             "target": "camp",
-            "en": "camping ground"
+            "en": "camp of tents"
           },
           {
             "target": "coin",
@@ -1795,27 +1713,27 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "selon",
-            "en": "according as"
+            "en": "according to"
           },
           {
             "target": "tenir",
-            "en": "hang onto"
+            "en": "hold"
           },
           {
             "target": "vouloir",
             "en": "be willing to"
           },
           {
+            "target": "continuer",
+            "en": "keep on"
+          },
+          {
             "target": "sortie",
-            "en": "exit"
+            "en": "way out"
           },
           {
             "target": "recherche",
-            "en": "exploration"
-          },
-          {
-            "target": "arrière",
-            "en": "autumn"
+            "en": "search"
           },
           {
             "target": "lire",
@@ -1827,11 +1745,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "avance",
-            "en": "advance"
-          },
-          {
-            "target": "exact",
-            "en": "correct"
+            "en": "progress"
           },
           {
             "target": "club",
@@ -1839,7 +1753,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "poser",
-            "en": "achieve"
+            "en": "do"
           },
           {
             "target": "chaud",
@@ -1851,8 +1765,18 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "quitter",
-            "en": "abandon"
-          },
+            "en": "leave"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u17",
+        "title": "Common words 401–425",
+        "subtitle": "The 401–425 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "loi",
             "en": "law"
@@ -1876,44 +1800,42 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "danger",
             "en": "peril"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u18",
-        "title": "Common words 426–450",
-        "subtitle": "The 426–450 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "dangereux",
             "en": "dangerous"
           },
           {
             "target": "offre",
-            "en": "presentation"
+            "en": "offer"
           },
           {
             "target": "but",
-            "en": "aim"
+            "en": "target"
           },
           {
             "target": "froid",
-            "en": "frigid"
+            "en": "cold"
           },
           {
             "target": "gamin",
             "en": "naughty boy"
           },
           {
+            "target": "classe",
+            "en": "class"
+          },
+          {
             "target": "poste",
-            "en": "mail"
+            "en": "post"
           },
           {
             "target": "con",
-            "en": "cunt"
+            "en": "pussy"
+          },
+          {
+            "target": "attaque",
+            "en": "attack"
           },
           {
             "target": "boîte",
@@ -1921,7 +1843,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "enquête",
-            "en": "inquiry"
+            "en": "investigation"
           },
           {
             "target": "visite",
@@ -1933,15 +1855,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "bord",
-            "en": "coast"
+            "en": "edge"
           },
           {
             "target": "debout",
-            "en": "directly"
+            "en": "straight ahead"
           },
           {
             "target": "preuve",
-            "en": "proof"
+            "en": "sign"
           },
           {
             "target": "oublier",
@@ -1954,14 +1876,20 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ciel",
             "en": "heaven"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u18",
+        "title": "Common words 426–450",
+        "subtitle": "The 426–450 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "touche",
             "en": "key"
-          },
-          {
-            "target": "aimer",
-            "en": "love"
           },
           {
             "target": "écouter",
@@ -1981,22 +1909,12 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "sentir",
-            "en": "smell"
+            "en": "feel"
           },
           {
             "target": "ouvrir",
-            "en": "open"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u19",
-        "title": "Common words 451–475",
-        "subtitle": "The 451–475 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🎓",
-        "vocab": [
+            "en": "open up"
+          },
           {
             "target": "santé",
             "en": "health"
@@ -2014,20 +1932,12 @@ export const sections: SectionBlueprint[] = [
             "en": "kitchen"
           },
           {
-            "target": "relation",
-            "en": "understanding"
-          },
-          {
             "target": "centre",
-            "en": "core"
-          },
-          {
-            "target": "dame",
-            "en": "queen"
+            "en": "mean"
           },
           {
             "target": "chacun",
-            "en": "everybody"
+            "en": "every one"
           },
           {
             "target": "chanson",
@@ -2046,16 +1956,8 @@ export const sections: SectionBlueprint[] = [
             "en": "white"
           },
           {
-            "target": "certain",
-            "en": "sure"
-          },
-          {
             "target": "âme",
             "en": "soul"
-          },
-          {
-            "target": "manière",
-            "en": "manner"
           },
           {
             "target": "décision",
@@ -2083,11 +1985,21 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "responsable",
-            "en": "accountable"
-          },
+            "en": "responsible"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u19",
+        "title": "Common words 451–475",
+        "subtitle": "The 451–475 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🎓",
+        "vocab": [
           {
-            "target": "signe",
-            "en": "character"
+            "target": "étrange",
+            "en": "strange"
           },
           {
             "target": "diable",
@@ -2096,17 +2008,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "monter",
             "en": "get in"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u20",
-        "title": "Common words 476–500",
-        "subtitle": "The 476–500 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "capable",
             "en": "able"
@@ -2117,7 +2019,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "écrire",
-            "en": "compose"
+            "en": "write"
           },
           {
             "target": "bouche",
@@ -2140,10 +2042,6 @@ export const sections: SectionBlueprint[] = [
             "en": "apartment"
           },
           {
-            "target": "prochain",
-            "en": "speedy"
-          },
-          {
             "target": "cerveau",
             "en": "brain"
           },
@@ -2153,7 +2051,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "réunion",
-            "en": "assemblage"
+            "en": "meeting"
           },
           {
             "target": "connu",
@@ -2185,11 +2083,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "cacher",
-            "en": "conceal"
+            "en": "hide"
           },
           {
             "target": "amoureux",
-            "en": "affectionate"
+            "en": "loving"
           },
           {
             "target": "drogue",
@@ -2198,7 +2096,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "commandant",
             "en": "major"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u20",
+        "title": "Common words 476–500",
+        "subtitle": "The 476–500 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "prise",
             "en": "catch"
@@ -2206,17 +2114,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "gouvernement",
             "en": "control"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u21",
-        "title": "Common words 501–525",
-        "subtitle": "The 501–525 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "client",
             "en": "customer"
@@ -2227,23 +2125,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "journal",
-            "en": "gazette"
+            "en": "daily paper"
           },
           {
             "target": "récupérer",
             "en": "recover"
           },
           {
-            "target": "peau",
-            "en": "fur"
-          },
-          {
             "target": "servir",
             "en": "serve"
-          },
-          {
-            "target": "peuple",
-            "en": "folk"
           },
           {
             "target": "exemple",
@@ -2255,7 +2145,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "blessé",
-            "en": "injured"
+            "en": "wounded"
           },
           {
             "target": "tort",
@@ -2275,11 +2165,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "jeter",
-            "en": "spit"
+            "en": "throw"
           },
           {
             "target": "bière",
-            "en": "ale"
+            "en": "beer"
           },
           {
             "target": "robe",
@@ -2295,7 +2185,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "horrible",
-            "en": "abhorrent"
+            "en": "awful"
           },
           {
             "target": "vin",
@@ -2303,7 +2193,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "dommage",
-            "en": "damage"
+            "en": "shame"
           },
           {
             "target": "nez",
@@ -2315,17 +2205,17 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "bruit",
-            "en": "noise"
+            "en": "sound"
           }
         ]
       },
       {
-        "id": "fr-gen-u22",
-        "title": "Common words 526–550",
-        "subtitle": "The 526–550 most frequent words",
+        "id": "fr-gen-u21",
+        "title": "Common words 501–525",
+        "subtitle": "The 501–525 most frequent words",
         "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🗣️",
+        "color": "#FF4B4B",
+        "icon": "📚",
         "vocab": [
           {
             "target": "secours",
@@ -2333,7 +2223,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "vérifier",
-            "en": "audit"
+            "en": "check up on"
           },
           {
             "target": "mise",
@@ -2349,7 +2239,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "intéressant",
-            "en": "curious"
+            "en": "interesting"
           },
           {
             "target": "environ",
@@ -2357,11 +2247,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "inutile",
-            "en": "abortive"
+            "en": "useless"
           },
           {
             "target": "terrible",
-            "en": "abysmal"
+            "en": "horrible"
           },
           {
             "target": "danse",
@@ -2401,7 +2291,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "tas",
-            "en": "accumulation"
+            "en": "crowd"
           },
           {
             "target": "empêcher",
@@ -2430,16 +2320,16 @@ export const sections: SectionBlueprint[] = [
         ]
       },
       {
-        "id": "fr-gen-u23",
-        "title": "Common words 551–575",
-        "subtitle": "The 551–575 most frequent words",
+        "id": "fr-gen-u22",
+        "title": "Common words 526–550",
+        "subtitle": "The 526–550 most frequent words",
         "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "✍️",
+        "color": "#2B70C9",
+        "icon": "🗣️",
         "vocab": [
           {
             "target": "pitié",
-            "en": "compassion"
+            "en": "pity"
           },
           {
             "target": "liberté",
@@ -2462,10 +2352,6 @@ export const sections: SectionBlueprint[] = [
             "en": "wall"
           },
           {
-            "target": "revenu",
-            "en": "income"
-          },
-          {
             "target": "ridicule",
             "en": "ridiculous"
           },
@@ -2474,8 +2360,16 @@ export const sections: SectionBlueprint[] = [
             "en": "north"
           },
           {
+            "target": "baiser",
+            "en": "have sex"
+          },
+          {
             "target": "Anglais",
             "en": "Englishman"
+          },
+          {
+            "target": "reine",
+            "en": "queen"
           },
           {
             "target": "cour",
@@ -2483,7 +2377,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "église",
-            "en": "church"
+            "en": "house of worship"
           },
           {
             "target": "vide",
@@ -2491,7 +2385,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "conduire",
-            "en": "conduct"
+            "en": "lead"
           },
           {
             "target": "huit",
@@ -2503,15 +2397,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "spécial",
-            "en": "particular"
+            "en": "special"
           },
           {
             "target": "vêtements",
-            "en": "clothing"
+            "en": "clothes"
           },
           {
             "target": "défense",
-            "en": "defence"
+            "en": "defense"
           },
           {
             "target": "sud",
@@ -2531,29 +2425,29 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "excuser",
-            "en": "forgive"
-          },
-          {
-            "target": "magasin",
-            "en": "boutique"
+            "en": "excuse"
           }
         ]
       },
       {
-        "id": "fr-gen-u24",
-        "title": "Common words 576–600",
-        "subtitle": "The 576–600 most frequent words",
+        "id": "fr-gen-u23",
+        "title": "Common words 551–575",
+        "subtitle": "The 551–575 most frequent words",
         "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🌍",
+        "color": "#FFC800",
+        "icon": "✍️",
         "vocab": [
           {
+            "target": "magasin",
+            "en": "store"
+          },
+          {
             "target": "marier",
-            "en": "wed"
+            "en": "be married"
           },
           {
             "target": "souvenir",
-            "en": "keepsake"
+            "en": "memento"
           },
           {
             "target": "presse",
@@ -2580,10 +2474,6 @@ export const sections: SectionBlueprint[] = [
             "en": "sergeant"
           },
           {
-            "target": "projet",
-            "en": "design"
-          },
-          {
             "target": "quartier",
             "en": "district"
           },
@@ -2592,24 +2482,20 @@ export const sections: SectionBlueprint[] = [
             "en": "planet"
           },
           {
+            "target": "certainement",
+            "en": "certainly"
+          },
+          {
             "target": "lorsque",
             "en": "when"
           },
           {
-            "target": "assurer",
-            "en": "insure"
-          },
-          {
-            "target": "présenter",
-            "en": "introduce"
-          },
-          {
             "target": "importance",
-            "en": "bulk"
+            "en": "size"
           },
           {
             "target": "mérite",
-            "en": "value"
+            "en": "worth"
           },
           {
             "target": "machine",
@@ -2617,7 +2503,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "honnête",
-            "en": "above-board"
+            "en": "honest"
+          },
+          {
+            "target": "occasion",
+            "en": "chance"
           },
           {
             "target": "prouver",
@@ -2629,7 +2519,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "camion",
-            "en": "lorry"
+            "en": "truck"
           },
           {
             "target": "fier",
@@ -2650,12 +2540,12 @@ export const sections: SectionBlueprint[] = [
         ]
       },
       {
-        "id": "fr-gen-u25",
-        "title": "Common words 601–625",
-        "subtitle": "The 601–625 most frequent words",
+        "id": "fr-gen-u24",
+        "title": "Common words 576–600",
+        "subtitle": "The 576–600 most frequent words",
         "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "🍽️",
+        "color": "#00CD9C",
+        "icon": "🌍",
         "vocab": [
           {
             "target": "parole",
@@ -2675,7 +2565,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "choisir",
-            "en": "choose"
+            "en": "pick out"
           },
           {
             "target": "découvrir",
@@ -2714,10 +2604,6 @@ export const sections: SectionBlueprint[] = [
             "en": "married"
           },
           {
-            "target": "espace",
-            "en": "room"
-          },
-          {
             "target": "préparer",
             "en": "prepare"
           },
@@ -2731,7 +2617,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "offrir",
-            "en": "donate"
+            "en": "present with"
           },
           {
             "target": "bain",
@@ -2739,38 +2625,38 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "ennemi",
-            "en": "adversary"
-          },
-          {
-            "target": "immédiatement",
-            "en": "at once"
+            "en": "enemy"
           },
           {
             "target": "énorme",
-            "en": "gigantic"
+            "en": "huge"
           },
           {
             "target": "grand-père",
             "en": "grandfather"
           },
           {
+            "target": "réfléchir",
+            "en": "reflect on"
+          },
+          {
             "target": "chanter",
             "en": "sing"
+          },
+          {
+            "target": "lâche",
+            "en": "low"
           }
         ]
       },
       {
-        "id": "fr-gen-u26",
-        "title": "Common words 626–650",
-        "subtitle": "The 626–650 most frequent words",
+        "id": "fr-gen-u25",
+        "title": "Common words 601–625",
+        "subtitle": "The 601–625 most frequent words",
         "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🏙️",
+        "color": "#58CC02",
+        "icon": "🍽️",
         "vocab": [
-          {
-            "target": "lâche",
-            "en": "abject"
-          },
           {
             "target": "mademoiselle",
             "en": "Miss"
@@ -2780,24 +2666,16 @@ export const sections: SectionBlueprint[] = [
             "en": "take off"
           },
           {
-            "target": "gosse",
-            "en": "girl"
-          },
-          {
             "target": "arranger",
-            "en": "arrange"
+            "en": "fix up"
           },
           {
             "target": "riche",
-            "en": "affluent"
-          },
-          {
-            "target": "ancien",
-            "en": "ex-"
+            "en": "rich"
           },
           {
             "target": "accepter",
-            "en": "accept"
+            "en": "take in"
           },
           {
             "target": "sauter",
@@ -2805,19 +2683,23 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "politique",
-            "en": "policy"
+            "en": "politics"
           },
           {
             "target": "repas",
             "en": "meal"
           },
           {
-            "target": "mémoire",
-            "en": "memory"
+            "target": "tourner",
+            "en": "turn on"
           },
           {
-            "target": "série",
-            "en": "series"
+            "target": "toucher",
+            "en": "touch"
+          },
+          {
+            "target": "mémoire",
+            "en": "memory"
           },
           {
             "target": "contraire",
@@ -2857,26 +2739,12 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "beauté",
-            "en": "beauty"
+            "en": "beautiful woman"
           },
           {
             "target": "après-midi",
             "en": "afternoon"
           },
-          {
-            "target": "excellent",
-            "en": "fine"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u27",
-        "title": "Common words 651–675",
-        "subtitle": "The 651–675 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🧭",
-        "vocab": [
           {
             "target": "parmi",
             "en": "in"
@@ -2888,26 +2756,28 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "permis",
             "en": "permission"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u26",
+        "title": "Common words 626–650",
+        "subtitle": "The 626–650 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "différence",
             "en": "difference"
           },
           {
             "target": "mille",
-            "en": "thousand"
-          },
-          {
-            "target": "accès",
-            "en": "aggression"
-          },
-          {
-            "target": "joyeux",
-            "en": "cheerful"
+            "en": "one thousand"
           },
           {
             "target": "action",
-            "en": "achievement"
+            "en": "act"
           },
           {
             "target": "Marie",
@@ -2915,11 +2785,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "crise",
-            "en": "crisis"
-          },
-          {
-            "target": "piste",
-            "en": "arena"
+            "en": "emergency"
           },
           {
             "target": "coupe",
@@ -2927,7 +2793,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "maladie",
-            "en": "sickness"
+            "en": "disease"
           },
           {
             "target": "alcool",
@@ -2936,10 +2802,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "fil",
             "en": "wire"
-          },
-          {
-            "target": "totalement",
-            "en": "at all"
           },
           {
             "target": "Londres",
@@ -2962,31 +2824,25 @@ export const sections: SectionBlueprint[] = [
             "en": "cry"
           },
           {
+            "target": "régler",
+            "en": "put in order"
+          },
+          {
             "target": "entier",
-            "en": "complete"
+            "en": "whole"
+          },
+          {
+            "target": "fermer",
+            "en": "shut"
           },
           {
             "target": "image",
             "en": "picture"
           },
           {
-            "target": "étage",
-            "en": "floor"
-          },
-          {
             "target": "rejoindre",
             "en": "be similar"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u28",
-        "title": "Common words 676–700",
-        "subtitle": "The 676–700 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "amuser",
             "en": "amuse"
@@ -3005,15 +2861,33 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "soldat",
-            "en": "pawn"
+            "en": "soldier"
           },
           {
             "target": "couleur",
-            "en": "dye"
-          },
+            "en": "paint"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u27",
+        "title": "Common words 651–675",
+        "subtitle": "The 651–675 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "bouger",
             "en": "move"
+          },
+          {
+            "target": "frapper",
+            "en": "run across"
+          },
+          {
+            "target": "évidemment",
+            "en": "obviously"
           },
           {
             "target": "sacré",
@@ -3021,19 +2895,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "mentir",
-            "en": "lie"
+            "en": "tell a lie"
           },
           {
             "target": "épouse",
             "en": "wife"
           },
           {
-            "target": "faible",
-            "en": "faint"
-          },
-          {
             "target": "bleu",
-            "en": "blue"
+            "en": "very rare"
           },
           {
             "target": "courir",
@@ -3041,19 +2911,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Américain",
-            "en": "American"
+            "en": "US citizen"
           },
           {
             "target": "pont",
-            "en": "deck"
+            "en": "bridge"
           },
           {
             "target": "gay",
             "en": "homosexual"
-          },
-          {
-            "target": "attraper",
-            "en": "capture"
           },
           {
             "target": "poisson",
@@ -3081,22 +2947,8 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "chasse",
-            "en": "hunt"
+            "en": "chase"
           },
-          {
-            "target": "signal",
-            "en": "mark"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u29",
-        "title": "Common words 701–725",
-        "subtitle": "The 701–725 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🎓",
-        "vocab": [
           {
             "target": "Français",
             "en": "Frenchman"
@@ -3106,32 +2958,46 @@ export const sections: SectionBlueprint[] = [
             "en": "princess"
           },
           {
+            "target": "foi",
+            "en": "trust"
+          },
+          {
             "target": "présence",
             "en": "presence"
           },
           {
             "target": "adieu",
-            "en": "farewell"
+            "en": "bye"
           },
           {
             "target": "costume",
-            "en": "outfit"
+            "en": "suit"
           },
           {
             "target": "entreprise",
-            "en": "orginisation"
-          },
+            "en": "enterprise"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u28",
+        "title": "Common words 676–700",
+        "subtitle": "The 676–700 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "utile",
-            "en": "advantageous"
+            "en": "useful"
           },
           {
             "target": "lien",
-            "en": "bond"
+            "en": "tie"
           },
           {
             "target": "moindre",
-            "en": "lesser"
+            "en": "lower"
           },
           {
             "target": "amener",
@@ -3147,23 +3013,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "raconter",
-            "en": "narrate"
-          },
-          {
-            "target": "superbe",
-            "en": "delightful"
-          },
-          {
-            "target": "formidable",
-            "en": "extraordinary"
+            "en": "tell"
           },
           {
             "target": "pause",
             "en": "break"
-          },
-          {
-            "target": "campagne",
-            "en": "campaign"
           },
           {
             "target": "couper",
@@ -3172,10 +3026,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "morceau",
             "en": "bit"
-          },
-          {
-            "target": "nombre",
-            "en": "amount"
           },
           {
             "target": "intelligent",
@@ -3187,7 +3037,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "compter",
-            "en": "calculate"
+            "en": "work out"
           },
           {
             "target": "cou",
@@ -3195,21 +3045,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "reprendre",
-            "en": "censure"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u30",
-        "title": "Common words 726–750",
-        "subtitle": "The 726–750 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "⭐",
-        "vocab": [
+            "en": "blame"
+          },
           {
             "target": "joie",
-            "en": "gladness"
+            "en": "joy"
           },
           {
             "target": "star",
@@ -3225,19 +3065,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "malgré",
-            "en": "despite"
-          },
-          {
-            "target": "appareil",
-            "en": "apparatus"
+            "en": "in spite of"
           },
           {
             "target": "privé",
             "en": "private"
-          },
-          {
-            "target": "méchant",
-            "en": "cruel"
           },
           {
             "target": "jambe",
@@ -3248,16 +3080,30 @@ export const sections: SectionBlueprint[] = [
             "en": "angel"
           },
           {
+            "target": "agir",
+            "en": "have effect"
+          },
+          {
             "target": "imbécile",
             "en": "fool"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u29",
+        "title": "Common words 701–725",
+        "subtitle": "The 701–725 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "cinéma",
             "en": "cinema"
           },
           {
             "target": "malheureusement",
-            "en": "alas"
+            "en": "unfortunately"
           },
           {
             "target": "décider",
@@ -3281,15 +3127,19 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "mince",
-            "en": "gaunt"
+            "en": "thin"
           },
           {
             "target": "vitesse",
             "en": "speed"
           },
           {
+            "target": "succès",
+            "en": "success"
+          },
+          {
             "target": "odeur",
-            "en": "odor"
+            "en": "smell"
           },
           {
             "target": "pain",
@@ -3297,29 +3147,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "règle",
-            "en": "regulation"
+            "en": "rule"
           },
           {
             "target": "imaginer",
-            "en": "fancy"
+            "en": "imagine"
           },
           {
             "target": "accepté",
             "en": "accepted"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u31",
-        "title": "Common words 751–775",
-        "subtitle": "The 751–775 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "📚",
-        "vocab": [
-          {
-            "target": "celui-ci",
-            "en": "this"
           },
           {
             "target": "ministre",
@@ -3331,7 +3167,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "lever",
-            "en": "lift"
+            "en": "raise"
           },
           {
             "target": "arbre",
@@ -3355,19 +3191,29 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "réel",
-            "en": "actual"
+            "en": "real"
           },
           {
             "target": "couverture",
             "en": "cover"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u30",
+        "title": "Common words 726–750",
+        "subtitle": "The 726–750 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "article",
             "en": "commodity"
           },
           {
             "target": "doux",
-            "en": "mild"
+            "en": "sweet"
           },
           {
             "target": "parc",
@@ -3379,7 +3225,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "unité",
-            "en": "unity"
+            "en": "unit"
           },
           {
             "target": "plage",
@@ -3387,11 +3233,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "partager",
-            "en": "divide"
+            "en": "share"
           },
           {
             "target": "malin",
-            "en": "vicious"
+            "en": "smart"
           },
           {
             "target": "mode",
@@ -3399,11 +3245,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "membre",
-            "en": "limb"
-          },
-          {
-            "target": "hasard",
-            "en": "accidence"
+            "en": "member"
           },
           {
             "target": "génie",
@@ -3414,22 +3256,12 @@ export const sections: SectionBlueprint[] = [
             "en": "garden"
           },
           {
-            "target": "abandonner",
-            "en": "cede"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u32",
-        "title": "Common words 776–800",
-        "subtitle": "The 776–800 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🗣️",
-        "vocab": [
+            "target": "saison",
+            "en": "season"
+          },
           {
-            "target": "suivant",
-            "en": "hind"
+            "target": "abandonner",
+            "en": "give in"
           },
           {
             "target": "ouest",
@@ -3444,8 +3276,12 @@ export const sections: SectionBlueprint[] = [
             "en": "pocket"
           },
           {
+            "target": "directement",
+            "en": "at once"
+          },
+          {
             "target": "source",
-            "en": "fountain"
+            "en": "spring"
           },
           {
             "target": "créer",
@@ -3464,17 +3300,23 @@ export const sections: SectionBlueprint[] = [
             "en": "meat"
           },
           {
-            "target": "bal",
-            "en": "ball"
-          },
-          {
             "target": "piège",
-            "en": "snare"
+            "en": "trap"
           },
           {
             "target": "trésor",
             "en": "treasure"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u31",
+        "title": "Common words 751–775",
+        "subtitle": "The 751–775 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "perte",
             "en": "loss"
@@ -3485,11 +3327,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "retraite",
-            "en": "pension"
+            "en": "retirement"
           },
           {
             "target": "étranger",
-            "en": "foreigner"
+            "en": "alien"
           },
           {
             "target": "poulet",
@@ -3504,8 +3346,12 @@ export const sections: SectionBlueprint[] = [
             "en": "rid"
           },
           {
+            "target": "marque",
+            "en": "mark"
+          },
+          {
             "target": "cent",
-            "en": "hundred"
+            "en": "one hundred"
           },
           {
             "target": "bâtiment",
@@ -3513,7 +3359,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "embrasser",
-            "en": "embrace"
+            "en": "kiss"
           },
           {
             "target": "manquer",
@@ -3526,17 +3372,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "fatigué",
             "en": "tired"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u33",
-        "title": "Common words 801–825",
-        "subtitle": "The 801–825 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "✍️",
-        "vocab": [
+          },
           {
             "target": "heureusement",
             "en": "fortunately"
@@ -3554,40 +3390,46 @@ export const sections: SectionBlueprint[] = [
             "en": "clean"
           },
           {
-            "target": "file",
-            "en": "column"
-          },
-          {
             "target": "dimanche",
             "en": "Sunday"
           },
           {
             "target": "agréable",
-            "en": "agreeable"
+            "en": "nice"
           },
           {
             "target": "conscience",
-            "en": "awareness"
+            "en": "consciousness"
           },
           {
             "target": "connaissance",
-            "en": "acquaintance"
-          },
-          {
-            "target": "sentiment",
-            "en": "feel"
+            "en": "knowledge"
           },
           {
             "target": "vôtre",
             "en": "yours"
           },
           {
-            "target": "souci",
-            "en": "sadness"
+            "target": "note",
+            "en": "bill"
           },
           {
             "target": "doigt",
             "en": "finger"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u32",
+        "title": "Common words 776–800",
+        "subtitle": "The 776–800 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "mensonge",
+            "en": "lie"
           },
           {
             "target": "volonté",
@@ -3603,15 +3445,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "joindre",
-            "en": "add"
+            "en": "put right"
           },
           {
             "target": "proches",
-            "en": "relations"
+            "en": "relatives"
           },
           {
             "target": "nerveux",
-            "en": "agitated"
+            "en": "nervous"
           },
           {
             "target": "traitement",
@@ -3636,17 +3478,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "gaz",
             "en": "gas"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u34",
-        "title": "Common words 826–850",
-        "subtitle": "The 826–850 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "interdit",
             "en": "forbidden"
@@ -3656,8 +3488,8 @@ export const sections: SectionBlueprint[] = [
             "en": "theory"
           },
           {
-            "target": "signer",
-            "en": "sign"
+            "target": "trace",
+            "en": "track"
           },
           {
             "target": "salon",
@@ -3681,43 +3513,53 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "queue",
-            "en": "stalk"
+            "en": "tail"
           },
           {
             "target": "innocent",
             "en": "guiltless"
           },
           {
-            "target": "infirmière",
-            "en": "nurse"
+            "target": "supporter",
+            "en": "endure"
           },
           {
+            "target": "infirmière",
+            "en": "nurse"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u33",
+        "title": "Common words 801–825",
+        "subtitle": "The 801–825 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "✍️",
+        "vocab": [
+          {
             "target": "métier",
-            "en": "handicraft"
+            "en": "trade"
+          },
+          {
+            "target": "retirer",
+            "en": "draw back"
           },
           {
             "target": "militaire",
             "en": "warrior"
           },
           {
-            "target": "atteindre",
-            "en": "accomplish"
-          },
-          {
             "target": "fuir",
-            "en": "flee"
+            "en": "run away"
           },
           {
             "target": "paquet",
-            "en": "packet"
+            "en": "pack"
           },
           {
             "target": "défendre",
             "en": "defend"
-          },
-          {
-            "target": "immeuble",
-            "en": "mansion"
           },
           {
             "target": "récemment",
@@ -3725,7 +3567,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Chinois",
-            "en": "Chinaman"
+            "en": "Chinese"
           },
           {
             "target": "aveugle",
@@ -3746,20 +3588,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "lis",
             "en": "lily"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u35",
-        "title": "Common words 851–875",
-        "subtitle": "The 851–875 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🍽️",
-        "vocab": [
-          {
-            "target": "station",
-            "en": "stage"
           },
           {
             "target": "mandat",
@@ -3779,23 +3607,19 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "ventre",
-            "en": "abdomen"
+            "en": "belly"
           },
           {
             "target": "terme",
-            "en": "expression"
+            "en": "term"
           },
           {
             "target": "vert",
             "en": "green"
           },
           {
-            "target": "hâte",
-            "en": "haste"
-          },
-          {
             "target": "réveiller",
-            "en": "arouse"
+            "en": "wake up"
           },
           {
             "target": "commun",
@@ -3806,17 +3630,23 @@ export const sections: SectionBlueprint[] = [
             "en": "mouse"
           },
           {
-            "target": "charmant",
-            "en": "charming"
-          },
-          {
             "target": "virer",
             "en": "endorse"
           },
           {
             "target": "permettre",
-            "en": "accord"
-          },
+            "en": "allow"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u34",
+        "title": "Common words 826–850",
+        "subtitle": "The 826–850 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "pluie",
             "en": "rain"
@@ -3851,25 +3681,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "chemise",
-            "en": "folder"
+            "en": "shirt"
           },
           {
-            "target": "emploi",
-            "en": "function"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u36",
-        "title": "Common words 876–900",
-        "subtitle": "The 876–900 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "🏙️",
-        "vocab": [
-          {
             "target": "surveiller",
-            "en": "advert"
+            "en": "pay attention to"
           },
           {
             "target": "facilement",
@@ -3889,7 +3705,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "zéro",
-            "en": "naught"
+            "en": "zero"
           },
           {
             "target": "mouvement",
@@ -3904,12 +3720,12 @@ export const sections: SectionBlueprint[] = [
             "en": "survivor"
           },
           {
-            "target": "repos",
-            "en": "calmness"
+            "target": "siège",
+            "en": "seat"
           },
           {
             "target": "puissance",
-            "en": "force"
+            "en": "power"
           },
           {
             "target": "ours",
@@ -3921,15 +3737,29 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "examen",
-            "en": "investigation"
+            "en": "test"
           },
           {
             "target": "évident",
-            "en": "evident"
+            "en": "obvious"
           },
           {
             "target": "distance",
             "en": "offset"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u35",
+        "title": "Common words 851–875",
+        "subtitle": "The 851–875 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "titre",
+            "en": "heading"
           },
           {
             "target": "lundi",
@@ -3937,7 +3767,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "choc",
-            "en": "collision"
+            "en": "shock"
           },
           {
             "target": "théâtre",
@@ -3957,7 +3787,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "logique",
-            "en": "consistent"
+            "en": "logical"
           },
           {
             "target": "montagne",
@@ -3966,24 +3796,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "lunettes",
             "en": "glasses"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u37",
-        "title": "Common words 901–925",
-        "subtitle": "The 901–925 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🧭",
-        "vocab": [
+          },
           {
-            "target": "attaquer",
-            "en": "commit aggression"
+            "target": "mine",
+            "en": "expression"
           },
           {
             "target": "pistolet",
-            "en": "pistol"
+            "en": "spray gun"
           },
           {
             "target": "respirer",
@@ -3992,10 +3812,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "principal",
             "en": "most important"
-          },
-          {
-            "target": "tableau",
-            "en": "index"
           },
           {
             "target": "cabinet",
@@ -4015,15 +3831,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "mesure",
-            "en": "measure"
+            "en": "musical time"
           },
           {
             "target": "secrétaire",
             "en": "secretary"
-          },
-          {
-            "target": "fuite",
-            "en": "flight"
           },
           {
             "target": "amitié",
@@ -4035,7 +3847,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "pousser",
-            "en": "chase"
+            "en": "drive on"
           },
           {
             "target": "nombreux",
@@ -4044,14 +3856,20 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "physique",
             "en": "physics"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u36",
+        "title": "Common words 876–900",
+        "subtitle": "The 876–900 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "crier",
             "en": "cry out"
-          },
-          {
-            "target": "permission",
-            "en": "furlough"
           },
           {
             "target": "romantique",
@@ -4067,37 +3885,35 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "modèle",
-            "en": "model"
+            "en": "type"
           },
           {
             "target": "prudent",
-            "en": "reasonable"
+            "en": "careful"
           },
           {
             "target": "blessure",
-            "en": "injury"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u38",
-        "title": "Common words 926–950",
-        "subtitle": "The 926–950 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "💬",
-        "vocab": [
+            "en": "wound"
+          },
           {
             "target": "chauffeur",
             "en": "driver"
           },
           {
             "target": "midi",
-            "en": "midday"
+            "en": "noon"
+          },
+          {
+            "target": "puissant",
+            "en": "strong"
+          },
+          {
+            "target": "dessous",
+            "en": "downstairs"
           },
           {
             "target": "souffle",
-            "en": "inspiration"
+            "en": "breath"
           },
           {
             "target": "bosse",
@@ -4116,16 +3932,24 @@ export const sections: SectionBlueprint[] = [
             "en": "factory"
           },
           {
+            "target": "château",
+            "en": "castle"
+          },
+          {
             "target": "oreille",
             "en": "ear"
           },
           {
             "target": "réellement",
-            "en": "genuinely"
+            "en": "really"
+          },
+          {
+            "target": "avancer",
+            "en": "go forward"
           },
           {
             "target": "sage",
-            "en": "prudent"
+            "en": "wise"
           },
           {
             "target": "crédit",
@@ -4142,18 +3966,24 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "canon",
             "en": "cannon"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u37",
+        "title": "Common words 901–925",
+        "subtitle": "The 901–925 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "liquide",
             "en": "liquid"
           },
           {
-            "target": "particulier",
-            "en": "apart"
-          },
-          {
             "target": "sombre",
-            "en": "bleak"
+            "en": "dark"
           },
           {
             "target": "agence",
@@ -4165,7 +3995,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "résoudre",
-            "en": "dissolve"
+            "en": "transform"
           },
           {
             "target": "période",
@@ -4181,33 +4011,23 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "essence",
-            "en": "gasolene"
+            "en": "petrol"
           },
           {
             "target": "côte",
-            "en": "acclivity"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u39",
-        "title": "Common words 951–975",
-        "subtitle": "The 951–975 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🎓",
-        "vocab": [
-          {
-            "target": "objet",
-            "en": "article"
+            "en": "coast"
           },
           {
             "target": "disparaître",
             "en": "disappear"
           },
           {
-            "target": "résultat",
-            "en": "conclusion"
+            "target": "concernant",
+            "en": "as to"
+          },
+          {
+            "target": "souffrir",
+            "en": "put up with"
           },
           {
             "target": "fusil",
@@ -4215,7 +4035,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "déranger",
-            "en": "disquiet"
+            "en": "interfere with"
           },
           {
             "target": "herbe",
@@ -4231,7 +4051,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "siècle",
-            "en": "centennial"
+            "en": "century"
           },
           {
             "target": "attente",
@@ -4255,19 +4075,25 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "élevé",
-            "en": "noble"
-          },
+            "en": "well mannered"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u38",
+        "title": "Common words 926–950",
+        "subtitle": "The 926–950 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "chair",
             "en": "flesh"
           },
           {
-            "target": "magique",
-            "en": "magical"
-          },
-          {
             "target": "chaîne",
-            "en": "fetter"
+            "en": "chain"
           },
           {
             "target": "chèque",
@@ -4275,38 +4101,24 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "réseau",
-            "en": "net"
+            "en": "network"
           },
           {
             "target": "taire",
             "en": "keep oneself concealed"
           },
           {
-            "target": "enfuir",
-            "en": "run away"
+            "target": "inquiet",
+            "en": "anxious"
           },
           {
             "target": "profiter",
             "en": "profit"
           },
           {
-            "target": "billet",
-            "en": "bill"
-          },
-          {
             "target": "crâne",
             "en": "skull"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u40",
-        "title": "Common words 976–1000",
-        "subtitle": "The 976–1000 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "jaloux",
             "en": "jealous"
@@ -4317,7 +4129,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "arrestation",
-            "en": "apprehension"
+            "en": "arrest"
           },
           {
             "target": "laver",
@@ -4325,7 +4137,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "caisse",
-            "en": "cashier's stand"
+            "en": "money box"
           },
           {
             "target": "Russe",
@@ -4333,7 +4145,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "promesse",
-            "en": "affirmation"
+            "en": "promise"
           },
           {
             "target": "sucre",
@@ -4345,7 +4157,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "réputation",
-            "en": "fame"
+            "en": "glory"
           },
           {
             "target": "étudier",
@@ -4353,15 +4165,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "trompe",
-            "en": "proboscis"
-          },
-          {
-            "target": "chute",
-            "en": "fall"
+            "en": "trunk"
           },
           {
             "target": "plainte",
-            "en": "accusal"
+            "en": "charge"
           },
           {
             "target": "sorcière",
@@ -4372,24 +4180,30 @@ export const sections: SectionBlueprint[] = [
             "en": "California"
           },
           {
-            "target": "tenue",
-            "en": "platform"
-          },
-          {
             "target": "journaliste",
-            "en": "journalist"
+            "en": "female journalist"
           },
           {
             "target": "chouette",
             "en": "owl"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u39",
+        "title": "Common words 951–975",
+        "subtitle": "The 951–975 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "geste",
             "en": "gesture"
           },
           {
             "target": "poitrine",
-            "en": "bosom"
+            "en": "chest"
           },
           {
             "target": "aventure",
@@ -4406,17 +4220,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "uniforme",
             "en": "uniform"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u41",
-        "title": "Common words 1001–1025",
-        "subtitle": "The 1001–1025 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "soupe",
             "en": "soup"
@@ -4427,11 +4231,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "prêtre",
-            "en": "clergyman"
+            "en": "priest"
           },
           {
             "target": "corde",
-            "en": "cord"
+            "en": "rope"
           },
           {
             "target": "somme",
@@ -4450,32 +4254,24 @@ export const sections: SectionBlueprint[] = [
             "en": "resume"
           },
           {
-            "target": "complet",
-            "en": "costume"
-          },
-          {
             "target": "crème",
             "en": "cream"
           },
           {
             "target": "couloir",
-            "en": "corridor"
+            "en": "passage"
           },
           {
             "target": "horreur",
-            "en": "abhorrence"
+            "en": "horror"
           },
           {
             "target": "propriété",
-            "en": "estate"
+            "en": "property"
           },
           {
             "target": "matériel",
             "en": "material"
-          },
-          {
-            "target": "foule",
-            "en": "crush"
           },
           {
             "target": "réaction",
@@ -4487,7 +4283,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "manteau",
-            "en": "cloak"
+            "en": "coat"
           },
           {
             "target": "pis",
@@ -4495,12 +4291,22 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "conseiller",
-            "en": "advise"
+            "en": "counsel"
           },
           {
             "target": "studio",
-            "en": "atelier"
-          },
+            "en": "workshop"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u40",
+        "title": "Common words 976–1000",
+        "subtitle": "The 976–1000 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "lapin",
             "en": "rabbit"
@@ -4514,50 +4320,40 @@ export const sections: SectionBlueprint[] = [
             "en": "fight"
           },
           {
-            "target": "boutique",
-            "en": "shop"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u42",
-        "title": "Common words 1026–1050",
-        "subtitle": "The 1026–1050 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🗣️",
-        "vocab": [
-          {
             "target": "fiancée",
             "en": "bride"
           },
           {
             "target": "remonter",
-            "en": "strech"
-          },
-          {
-            "target": "incendie",
-            "en": "conflagration"
+            "en": "wind up"
           },
           {
             "target": "ascenseur",
-            "en": "elevator"
+            "en": "lift"
+          },
+          {
+            "target": "mars",
+            "en": "March"
           },
           {
             "target": "abri",
-            "en": "asylum"
+            "en": "place of refuge"
           },
           {
             "target": "répéter",
             "en": "repeat"
           },
           {
+            "target": "pardonner",
+            "en": "forgive"
+          },
+          {
             "target": "cadavre",
-            "en": "cadaver"
+            "en": "corpse"
           },
           {
             "target": "front",
-            "en": "battlefront"
+            "en": "forehead"
           },
           {
             "target": "traîner",
@@ -4573,7 +4369,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "déclaration",
-            "en": "declaration"
+            "en": "statement"
           },
           {
             "target": "frontière",
@@ -4585,7 +4381,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "tenter",
-            "en": "entice"
+            "en": "tempt"
           },
           {
             "target": "cérémonie",
@@ -4600,70 +4396,70 @@ export const sections: SectionBlueprint[] = [
             "en": "bike"
           },
           {
+            "target": "réaliser",
+            "en": "act out"
+          },
+          {
             "target": "poupée",
             "en": "doll"
           },
           {
-            "target": "navire",
-            "en": "ship"
-          },
-          {
             "target": "remplacer",
             "en": "replace"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u41",
+        "title": "Common words 1001–1025",
+        "subtitle": "The 1001–1025 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "prisonnier",
             "en": "prisoner"
           },
           {
             "target": "ménage",
-            "en": "houskeeping"
+            "en": "housework"
           },
           {
             "target": "bouton",
-            "en": "pimple"
+            "en": "button"
           },
           {
             "target": "acteur",
             "en": "actor"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u43",
-        "title": "Common words 1051–1075",
-        "subtitle": "The 1051–1075 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "✍️",
-        "vocab": [
+          },
           {
             "target": "mardi",
             "en": "Tuesday"
           },
           {
             "target": "lourd",
-            "en": "burdensome"
+            "en": "heavy"
           },
           {
             "target": "soudain",
-            "en": "abrupt"
+            "en": "sudden"
+          },
+          {
+            "target": "véhicule",
+            "en": "vehicle"
           },
           {
             "target": "estomac",
             "en": "stomach"
           },
           {
-            "target": "tâche",
-            "en": "job"
-          },
-          {
             "target": "réserve",
-            "en": "box-room"
+            "en": "storage room"
           },
           {
             "target": "brûler",
-            "en": "glow"
+            "en": "glow with heat"
           },
           {
             "target": "chou",
@@ -4687,15 +4483,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "affreux",
-            "en": "repellent"
+            "en": "terrible"
           },
           {
             "target": "enterrement",
-            "en": "burial"
+            "en": "funeral"
           },
           {
             "target": "inconnu",
-            "en": "anonymous writer"
+            "en": "stranger"
           },
           {
             "target": "venger",
@@ -4719,11 +4515,25 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "ballon",
-            "en": "balloon"
-          },
+            "en": "soccer ball"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u42",
+        "title": "Common words 1026–1050",
+        "subtitle": "The 1026–1050 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "attirer",
             "en": "attract"
+          },
+          {
+            "target": "récompense",
+            "en": "prize"
           },
           {
             "target": "loup",
@@ -4736,20 +4546,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "accompagner",
             "en": "accompany"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u44",
-        "title": "Common words 1076–1100",
-        "subtitle": "The 1076–1100 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "limite",
-            "en": "boundary"
+            "en": "limit"
           },
           {
             "target": "panique",
@@ -4785,7 +4585,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "casier",
-            "en": "pigeonhole"
+            "en": "locker"
           },
           {
             "target": "roman",
@@ -4809,27 +4609,37 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "identifier",
-            "en": "distinguish"
+            "en": "identify"
           },
           {
             "target": "célibataire",
-            "en": "single"
+            "en": "unmarried woman"
           },
           {
             "target": "annoncer",
-            "en": "advertise"
+            "en": "give notice"
           },
           {
             "target": "fleur",
-            "en": "bloom"
+            "en": "flower"
           },
           {
             "target": "palais",
             "en": "palace"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u43",
+        "title": "Common words 1051–1075",
+        "subtitle": "The 1051–1075 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "tromper",
-            "en": "commit adultery"
+            "en": "be unfaithful to"
           },
           {
             "target": "jeudi",
@@ -4841,22 +4651,12 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "affronter",
-            "en": "confront"
+            "en": "stand up to"
           },
           {
             "target": "élève",
             "en": "pupil"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u45",
-        "title": "Common words 1101–1125",
-        "subtitle": "The 1101–1125 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🍽️",
-        "vocab": [
+          },
           {
             "target": "pêche",
             "en": "peach"
@@ -4870,8 +4670,12 @@ export const sections: SectionBlueprint[] = [
             "en": "cutlery"
           },
           {
+            "target": "extraordinaire",
+            "en": "extraordinary"
+          },
+          {
             "target": "malheur",
-            "en": "adversity"
+            "en": "bad luck"
           },
           {
             "target": "royaume",
@@ -4879,7 +4683,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "porc",
-            "en": "pork"
+            "en": "pig"
           },
           {
             "target": "vingt",
@@ -4899,23 +4703,27 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "singe",
-            "en": "ape"
+            "en": "monkey"
           },
           {
             "target": "colle",
-            "en": "adhesive"
+            "en": "glue"
           },
           {
             "target": "central",
-            "en": "exchange"
+            "en": "power station"
           },
           {
             "target": "naturel",
-            "en": "congenital"
+            "en": "natural"
           },
           {
             "target": "étape",
-            "en": "stadium"
+            "en": "stage"
+          },
+          {
+            "target": "davantage",
+            "en": "more"
           },
           {
             "target": "collier",
@@ -4923,15 +4731,25 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "rayon",
-            "en": "shelf"
+            "en": "ray"
           },
           {
             "target": "gâcher",
-            "en": "botch"
-          },
+            "en": "screw up"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u44",
+        "title": "Common words 1076–1100",
+        "subtitle": "The 1076–1100 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "placard",
-            "en": "cupboard"
+            "en": "notice"
           },
           {
             "target": "soif",
@@ -4946,6 +4764,10 @@ export const sections: SectionBlueprint[] = [
             "en": "creature"
           },
           {
+            "target": "monnaie",
+            "en": "change"
+          },
+          {
             "target": "voisin",
             "en": "neighbour"
           },
@@ -4955,18 +4777,8 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "lentement",
-            "en": "leasurely"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u46",
-        "title": "Common words 1126–1150",
-        "subtitle": "The 1126–1150 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🏙️",
-        "vocab": [
+            "en": "slowly"
+          },
           {
             "target": "classique",
             "en": "classic"
@@ -4989,15 +4801,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "port",
-            "en": "postage"
+            "en": "harbor"
           },
           {
             "target": "tension",
             "en": "voltage"
-          },
-          {
-            "target": "qualité",
-            "en": "property"
           },
           {
             "target": "vierge",
@@ -5006,10 +4814,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "secteur",
             "en": "sector"
-          },
-          {
-            "target": "pot",
-            "en": "jug"
           },
           {
             "target": "contacter",
@@ -5021,7 +4825,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "jugement",
-            "en": "adjudication"
+            "en": "trial"
           },
           {
             "target": "courageux",
@@ -5033,16 +4837,26 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "désir",
-            "en": "desire"
+            "en": "want"
           },
           {
             "target": "condition",
-            "en": "stipulation"
+            "en": "terms"
           },
           {
             "target": "courrier",
-            "en": "courier"
-          },
+            "en": "piece of mail"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u45",
+        "title": "Common words 1101–1125",
+        "subtitle": "The 1101–1125 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "volant",
             "en": "steering-wheel"
@@ -5061,37 +4875,31 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "pile",
-            "en": "stack"
+            "en": "battery"
           },
           {
             "target": "Japonais",
             "en": "Japanese"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u47",
-        "title": "Common words 1151–1175",
-        "subtitle": "The 1151–1175 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🧭",
-        "vocab": [
+          },
           {
             "target": "soigner",
-            "en": "attend"
+            "en": "tend to"
+          },
+          {
+            "target": "remplir",
+            "en": "fill in"
+          },
+          {
+            "target": "avouer",
+            "en": "admit"
           },
           {
             "target": "avantage",
             "en": "advantage"
           },
           {
-            "target": "retenir",
-            "en": "bridle"
-          },
-          {
             "target": "miroir",
-            "en": "looking-glass"
+            "en": "mirror"
           },
           {
             "target": "jaune",
@@ -5103,11 +4911,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "disque",
-            "en": "dial"
+            "en": "record"
           },
           {
             "target": "annuler",
-            "en": "abolish"
+            "en": "cancel"
           },
           {
             "target": "aube",
@@ -5119,19 +4927,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "échec",
-            "en": "abortion"
+            "en": "failure"
           },
           {
             "target": "Mexique",
             "en": "Mexico"
           },
           {
-            "target": "figure",
-            "en": "diagram"
-          },
-          {
             "target": "pointe",
-            "en": "peak"
+            "en": "point"
           },
           {
             "target": "interroger",
@@ -5142,66 +4946,58 @@ export const sections: SectionBlueprint[] = [
             "en": "gravy"
           },
           {
-            "target": "séance",
-            "en": "meeting"
-          },
-          {
             "target": "foot",
             "en": "football"
           },
           {
             "target": "boule",
-            "en": "chunk"
-          },
-          {
-            "target": "égal",
-            "en": "equal"
+            "en": "lump"
           },
           {
             "target": "organiser",
             "en": "organize"
-          },
-          {
-            "target": "œuvre",
-            "en": "task"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u46",
+        "title": "Common words 1126–1150",
+        "subtitle": "The 1126–1150 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "moto",
             "en": "motorcycle"
           },
           {
-            "target": "diriger",
-            "en": "direct"
+            "target": "effort",
+            "en": "attempt"
+          },
+          {
+            "target": "proposition",
+            "en": "presentation"
           },
           {
             "target": "serpent",
             "en": "snake"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u48",
-        "title": "Common words 1176–1200",
-        "subtitle": "The 1176–1200 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "audience",
             "en": "auditory"
           },
           {
             "target": "télévision",
-            "en": "television"
+            "en": "TV"
           },
           {
             "target": "football",
             "en": "soccer"
           },
           {
-            "target": "cochon",
-            "en": "hog"
+            "target": "reconnaître",
+            "en": "research"
           },
           {
             "target": "paire",
@@ -5209,15 +5005,27 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "sauvage",
-            "en": "savage"
+            "en": "wild"
+          },
+          {
+            "target": "domaine",
+            "en": "department"
           },
           {
             "target": "poussière",
             "en": "dust"
           },
           {
+            "target": "visiter",
+            "en": "call on"
+          },
+          {
+            "target": "ajouter",
+            "en": "add"
+          },
+          {
             "target": "séparer",
-            "en": "disintegrate"
+            "en": "separate"
           },
           {
             "target": "valise",
@@ -5229,7 +5037,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "exprès",
-            "en": "deliberately"
+            "en": "on purpose"
           },
           {
             "target": "empereur",
@@ -5238,10 +5046,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "forcer",
             "en": "soften up"
-          },
-          {
-            "target": "printemps",
-            "en": "spring"
           },
           {
             "target": "collègue",
@@ -5262,7 +5066,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "musée",
             "en": "museum"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u47",
+        "title": "Common words 1151–1175",
+        "subtitle": "The 1151–1175 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "refuser",
             "en": "refuse"
@@ -5281,11 +5095,197 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "fièvre",
-            "en": "ague"
+            "en": "fever"
           },
           {
             "target": "raisonnable",
-            "en": "appropriate"
+            "en": "becoming"
+          },
+          {
+            "target": "sensible",
+            "en": "sensitive"
+          },
+          {
+            "target": "déposer",
+            "en": "hand in"
+          },
+          {
+            "target": "chirurgie",
+            "en": "surgery"
+          },
+          {
+            "target": "bagarre",
+            "en": "riot"
+          },
+          {
+            "target": "solide",
+            "en": "firm"
+          },
+          {
+            "target": "cercle",
+            "en": "circle"
+          },
+          {
+            "target": "étudiant",
+            "en": "student"
+          },
+          {
+            "target": "extrêmement",
+            "en": "most"
+          },
+          {
+            "target": "digne",
+            "en": "dignified"
+          },
+          {
+            "target": "cirque",
+            "en": "circus"
+          },
+          {
+            "target": "congé",
+            "en": "spare time"
+          },
+          {
+            "target": "beurre",
+            "en": "butter"
+          },
+          {
+            "target": "entraîner",
+            "en": "bring away"
+          },
+          {
+            "target": "Allemand",
+            "en": "German"
+          },
+          {
+            "target": "Japon",
+            "en": "Japan"
+          },
+          {
+            "target": "épaule",
+            "en": "shoulder"
+          },
+          {
+            "target": "voyant",
+            "en": "light emitting diode"
+          },
+          {
+            "target": "orange",
+            "en": "orange-coloured"
+          },
+          {
+            "target": "ouverture",
+            "en": "opening"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u48",
+        "title": "Common words 1176–1200",
+        "subtitle": "The 1176–1200 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "huile",
+            "en": "oil"
+          },
+          {
+            "target": "parfum",
+            "en": "perfume"
+          },
+          {
+            "target": "fêter",
+            "en": "celebrate"
+          },
+          {
+            "target": "incapable",
+            "en": "incabable"
+          },
+          {
+            "target": "cap",
+            "en": "cape"
+          },
+          {
+            "target": "camarade",
+            "en": "buddy"
+          },
+          {
+            "target": "croix",
+            "en": "cross"
+          },
+          {
+            "target": "large",
+            "en": "wide"
+          },
+          {
+            "target": "détail",
+            "en": "detail"
+          },
+          {
+            "target": "adaptation",
+            "en": "adjustment"
+          },
+          {
+            "target": "brave",
+            "en": "gallant"
+          },
+          {
+            "target": "guérir",
+            "en": "care for"
+          },
+          {
+            "target": "territoire",
+            "en": "territory"
+          },
+          {
+            "target": "adorer",
+            "en": "worship"
+          },
+          {
+            "target": "scénario",
+            "en": "script"
+          },
+          {
+            "target": "emprunter",
+            "en": "borrow"
+          },
+          {
+            "target": "supérieur",
+            "en": "upper"
+          },
+          {
+            "target": "précieux",
+            "en": "pricey"
+          },
+          {
+            "target": "cave",
+            "en": "basement"
+          },
+          {
+            "target": "objectif",
+            "en": "objective"
+          },
+          {
+            "target": "panne",
+            "en": "breakdown"
+          },
+          {
+            "target": "renvoyer",
+            "en": "chase away"
+          },
+          {
+            "target": "Allemagne",
+            "en": "Germany"
+          },
+          {
+            "target": "loyer",
+            "en": "rent money"
+          },
+          {
+            "target": "plateau",
+            "en": "tray"
           }
         ]
       }
