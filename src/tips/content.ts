@@ -234,6 +234,196 @@ const TIPS: Record<string, Tip[]> = {
       examples: [{ target: "þú", en: "you (thoo)" }],
     },
   ],
+  // French — ordered beginner→A2 grammar progression.
+  fr: [
+    {
+      title: "Nouns have gender",
+      body: "Every French noun is masculine (le) or feminine (la) — both mean \"the\". There's rarely a rule, so learn the article WITH the noun: not \"livre\" but \"le livre\".",
+      examples: [
+        { target: "le livre", en: "the book (m.)" },
+        { target: "la table", en: "the table (f.)" },
+      ],
+    },
+    {
+      title: "a / an: un & une",
+      body: "\"A/an\" is un for masculine nouns, une for feminine. Plurals use les (the) and des (some).",
+      examples: [
+        { target: "un homme", en: "a man" },
+        { target: "une femme", en: "a woman" },
+      ],
+    },
+    {
+      title: "to be: être",
+      body: "être (to be) is irregular and essential:\n\n• je suis, tu es, il/elle est\n• nous sommes, vous êtes, ils/elles sont",
+      examples: [
+        { target: "Je suis fatigué", en: "I am tired" },
+        { target: "Nous sommes ici", en: "We are here" },
+      ],
+    },
+    {
+      title: "to have: avoir",
+      body: "avoir (to have):\n\n• j'ai, tu as, il/elle a\n• nous avons, vous avez, ils/elles ont\n\nFrench uses avoir for age: J'ai vingt ans = \"I'm twenty\" (lit. I have twenty years).",
+      examples: [
+        { target: "J'ai faim", en: "I'm hungry (I have hunger)" },
+        { target: "Tu as raison", en: "You're right" },
+      ],
+    },
+    {
+      title: "Present tense: -er verbs",
+      body: "Most verbs end in -er. Drop -er and add: -e, -es, -e, -ons, -ez, -ent. The -e/-es/-ent endings are silent, so je parle, tu parles, ils parlent all sound the same.",
+      examples: [
+        { target: "je parle", en: "I speak" },
+        { target: "nous parlons", en: "we speak" },
+      ],
+    },
+    {
+      title: "Saying no: ne … pas",
+      body: "Negation wraps the verb in two parts: ne + verb + pas. In speech the ne is often dropped, but write both.",
+      examples: [
+        { target: "Je ne sais pas", en: "I don't know" },
+        { target: "Il ne parle pas anglais", en: "He doesn't speak English" },
+      ],
+    },
+    {
+      title: "Asking questions",
+      body: "Three ways, easy to hard: (1) just raise your intonation — Tu viens? (2) put Est-ce que in front — Est-ce que tu viens? (3) invert verb and subject — Viens-tu?",
+      examples: [
+        { target: "Est-ce que tu parles français ?", en: "Do you speak French?" },
+        { target: "Où habites-tu ?", en: "Where do you live?" },
+      ],
+    },
+    {
+      title: "Adjectives agree — and usually follow",
+      body: "Adjectives match the noun in gender/number (often add -e for feminine, -s for plural) and usually come AFTER the noun.",
+      examples: [
+        { target: "une voiture noire", en: "a black car" },
+        { target: "des livres intéressants", en: "interesting books" },
+      ],
+    },
+    {
+      title: "tu vs vous",
+      body: "tu is informal singular (friends, family, kids). vous is formal, and also plural for everyone. When unsure with an adult you don't know, use vous.",
+      examples: [
+        { target: "Comment vas-tu ?", en: "How are you? (informal)" },
+        { target: "Comment allez-vous ?", en: "How are you? (formal/plural)" },
+      ],
+    },
+    {
+      title: "au, du: contractions",
+      body: "à + le = au, à + les = aux, de + le = du, de + les = des. These contractions are required.",
+      examples: [
+        { target: "Je vais au marché", en: "I go to the market" },
+        { target: "la porte du jardin", en: "the garden gate" },
+      ],
+    },
+    {
+      title: "The near future: aller + verb",
+      body: "Say what's about to happen with aller (to go) + an infinitive — just like English \"going to\".",
+      examples: [
+        { target: "Je vais manger", en: "I'm going to eat" },
+        { target: "On va voir", en: "We'll see" },
+      ],
+    },
+    {
+      title: "The past: passé composé",
+      body: "Everyday past = avoir (or être for movement/change) + a past participle. -er verbs make their participle in -é.",
+      examples: [
+        { target: "J'ai mangé", en: "I ate" },
+        { target: "Elle est partie", en: "She left" },
+      ],
+    },
+  ],
+  // Italian — ordered beginner→A2 grammar progression.
+  it: [
+    {
+      title: "Gender & articles",
+      body: "Nouns ending in -o are usually masculine (il), -a usually feminine (la). Learn the article with the noun. (il becomes lo before s+consonant or z, and l' before a vowel.)",
+      examples: [
+        { target: "il gatto", en: "the cat (m.)" },
+        { target: "la casa", en: "the house (f.)" },
+      ],
+    },
+    {
+      title: "a / an: un, uno, una",
+      body: "un for most masculine nouns, uno before s+consonant/z, una for feminine (un' before a feminine vowel).",
+      examples: [
+        { target: "un libro", en: "a book" },
+        { target: "una mela", en: "an apple" },
+      ],
+    },
+    {
+      title: "to be: essere",
+      body: "essere (to be):\n\n• io sono, tu sei, lui/lei è\n• noi siamo, voi siete, loro sono",
+      examples: [
+        { target: "Sono stanco", en: "I'm tired" },
+        { target: "Siamo qui", en: "We're here" },
+      ],
+    },
+    {
+      title: "to have: avere",
+      body: "avere (to have):\n\n• io ho, tu hai, lui/lei ha\n• noi abbiamo, voi avete, loro hanno\n\nThe h is silent. Italian uses avere for age: Ho vent'anni = \"I'm twenty\".",
+      examples: [
+        { target: "Ho fame", en: "I'm hungry (I have hunger)" },
+        { target: "Hai ragione", en: "You're right" },
+      ],
+    },
+    {
+      title: "You can drop the subject",
+      body: "The verb ending already shows who's doing it, so Italians usually omit io/tu/lui. \"Parlo italiano\" already means \"I speak Italian\".",
+      examples: [
+        { target: "Parlo italiano", en: "I speak Italian" },
+        { target: "Dove abiti?", en: "Where do you live?" },
+      ],
+    },
+    {
+      title: "Present tense: -are verbs",
+      body: "Drop -are and add: -o, -i, -a, -iamo, -ate, -ano. (parlare → parlo, parli, parla, parliamo, parlate, parlano.)",
+      examples: [
+        { target: "parlo", en: "I speak" },
+        { target: "parliamo", en: "we speak" },
+      ],
+    },
+    {
+      title: "Saying no: non",
+      body: "Just put non directly before the verb. Double negatives are normal and correct in Italian.",
+      examples: [
+        { target: "Non capisco", en: "I don't understand" },
+        { target: "Non c'è niente", en: "There's nothing" },
+      ],
+    },
+    {
+      title: "Adjectives agree — and usually follow",
+      body: "Adjectives match gender and number (-o/-a/-i/-e) and usually come after the noun.",
+      examples: [
+        { target: "una macchina rossa", en: "a red car" },
+        { target: "i libri italiani", en: "the Italian books" },
+      ],
+    },
+    {
+      title: "there is / there are: c'è, ci sono",
+      body: "c'è = there is (one thing), ci sono = there are (more than one).",
+      examples: [
+        { target: "C'è un problema", en: "There's a problem" },
+        { target: "Ci sono molte persone", en: "There are many people" },
+      ],
+    },
+    {
+      title: "tu vs Lei",
+      body: "tu is informal. For politeness with someone you don't know, use Lei (literally \"she\", capitalized) with the he/she verb form.",
+      examples: [
+        { target: "Come stai?", en: "How are you? (informal)" },
+        { target: "Come sta?", en: "How are you? (formal)" },
+      ],
+    },
+    {
+      title: "The past: passato prossimo",
+      body: "Everyday past = avere (or essere for movement/change) + past participle (-are → -ato). With essere, the participle agrees: lei è andata.",
+      examples: [
+        { target: "Ho mangiato", en: "I ate" },
+        { target: "Siamo andati", en: "We went" },
+      ],
+    },
+  ],
 };
 
 export function getTips(code: string): Tip[] {

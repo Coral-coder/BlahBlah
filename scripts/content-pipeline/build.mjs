@@ -248,8 +248,8 @@ function emitLangFile(lang, vocab) {
   }
   const section = {
     id: `${lang.code}-gen-frequency`,
-    title: "Most common words",
-    subtitle: "High-frequency vocabulary, built from open data",
+    title: "Vocabulary builder",
+    subtitle: "Optional extra vocabulary — the taught units are your main path",
     units,
   };
   const header =

@@ -24,6 +24,27 @@ export const chineseBlueprint: CourseBlueprint = {
           cefr: "A1",
           color: "#E2483D",
           icon: "👋",
+          teach: [
+            {
+              title: "Characters & pinyin",
+              body:
+                "Chinese is written with characters (汉字), where each character is one syllable and usually one unit of meaning. You don't read them phonetically — you learn them.\n\nTo help, every character here shows pinyin: its sound written in our alphabet. Read the pinyin to say it; recognize the character with repetition. 你好 = nǐ hǎo = \"hello\".",
+              examples: [
+                { target: "你", en: "you", pinyin: "nǐ" },
+                { target: "好", en: "good", pinyin: "hǎo" },
+                { target: "你好", en: "hello", pinyin: "nǐ hǎo" },
+              ],
+            },
+            {
+              title: "The four tones",
+              body:
+                "Mandarin is tonal: the pitch of a syllable changes its meaning. Pinyin marks four tones (plus a neutral one) with accents over the vowel:\n\n• mā (ā) — high & flat\n• má (á) — rising, like a question\n• mǎ (ǎ) — dip down then up\n• mà (à) — sharp falling\n\nSame \"ma\", four meanings (mother, hemp, horse, scold). Copy the audio closely.",
+              examples: [
+                { target: "妈", en: "mother", pinyin: "mā" },
+                { target: "马", en: "horse", pinyin: "mǎ" },
+              ],
+            },
+          ],
           vocab: [
             { target: "你", en: "you", pinyin: "nǐ" },
             { target: "好", en: "good", pinyin: "hǎo" },
