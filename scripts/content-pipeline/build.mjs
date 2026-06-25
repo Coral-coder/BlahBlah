@@ -102,15 +102,23 @@ export function cleanGloss(raw, target) {
   g = g.split(/[,;/|]/)[0]; // first sense only
   g = g.replace(/\s+/g, " ").trim();
   g = g.replace(/^["'“”‘’]+|["'“”‘’]+$/g, "").trim();
+  g = g.replace(/^(the|a|an)\s+/i, "").trim(); // drop a leading English article
   if (!g) return null;
   if (g.length < 2) return null; // drop single-letter glosses (e.g. "E")
   if (g.length > 32) return null;
   if (/\d/.test(g)) return null;
   if (!/^[a-zA-Z][a-zA-Z '-]*$/.test(g)) return null; // English-looking only
   if (g.toLowerCase() === target.toLowerCase()) return null;
-  if (g.split(" ").length > 3) return null;
+  if (g.split(" ").length > 2) return null; // single words / tight 2-word glosses only
   return g;
 }
+
+// English function words that shouldn't drive sense selection (so "throughout the
+// day" isn't preferred over "day" just because it contains "the").
+const STOPWORDS = new Set([
+  "the", "a", "an", "to", "be", "of", "in", "on", "at", "for", "and", "or",
+  "with", "by", "as", "is", "are", "it", "that", "this", "from", "into",
+]);
 
 // Resolve the FreeDict TEI (source) download URL for a pair via the public DB.
 async function freedictTeiUrl(pair) {
@@ -271,18 +279,30 @@ async function buildLang(lang, enRank) {
   console.log(`\n=== ${lang.code} (${lang.name}) ===`);
   const [dict, freq] = await Promise.all([loadDictionary(lang.dict), loadFrequency(lang.freq)]);
   console.log(`  dict entries: ${dict.size}, frequency words: ${freq.length}`);
-  // Among a word's candidate senses, pick the one whose English word(s) are most
-  // common — that's almost always the everyday meaning, not a technical/rare one.
-  const enRankOf = (g) => {
+  // Choose the best sense: prefer a single common word over a phrase (FreeDict is
+  // full of idiom entries like "throughout the day"), then rank by how common the
+  // content word is (ignoring stopwords so "the/be/a" don't skew it).
+  const contentRankOf = (g) => {
     let best = Infinity;
     for (const w of g.toLowerCase().split(/\s+/)) {
+      if (STOPWORDS.has(w)) continue;
       const r = enRank.get(w);
       if (r != null && r < best) best = r;
     }
     return best;
   };
+  const scoreGloss = (g) => {
+    const words = g.split(/\s+/).length;
+    return { words, rank: contentRankOf(g) };
+  };
   const pickGloss = (glosses) =>
-    glosses.slice().sort((a, b) => enRankOf(a) - enRankOf(b))[0];
+    glosses
+      .slice()
+      .sort((a, b) => {
+        const sa = scoreGloss(a);
+        const sb = scoreGloss(b);
+        return sa.words - sb.words || sa.rank - sb.rank; // fewer words, then more common
+      })[0];
 
   const vocab = [];
   const usedEn = new Set();
