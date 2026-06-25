@@ -1768,6 +1768,3526 @@ export const sections: SectionBlueprint[] = [
             "en": "hunger"
           }
         ]
+      },
+      {
+        "id": "it-gen-u17",
+        "title": "Common words 401–425",
+        "subtitle": "The 401–425 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "programma",
+            "en": "program"
+          },
+          {
+            "target": "nonna",
+            "en": "grandmother"
+          },
+          {
+            "target": "posizione",
+            "en": "arrangement"
+          },
+          {
+            "target": "compagnia",
+            "en": "company"
+          },
+          {
+            "target": "proposito",
+            "en": "design"
+          },
+          {
+            "target": "chiuso",
+            "en": "closed"
+          },
+          {
+            "target": "terribile",
+            "en": "awful"
+          },
+          {
+            "target": "ritardo",
+            "en": "delay"
+          },
+          {
+            "target": "attento",
+            "en": "attentive"
+          },
+          {
+            "target": "impossibile",
+            "en": "absurd"
+          },
+          {
+            "target": "cioè",
+            "en": "that is"
+          },
+          {
+            "target": "studio",
+            "en": "study"
+          },
+          {
+            "target": "arma",
+            "en": "weapon"
+          },
+          {
+            "target": "intorno",
+            "en": "neighbourhood"
+          },
+          {
+            "target": "dolce",
+            "en": "sweet"
+          },
+          {
+            "target": "cervello",
+            "en": "brain"
+          },
+          {
+            "target": "coraggio",
+            "en": "fortitude"
+          },
+          {
+            "target": "interessante",
+            "en": "interesting"
+          },
+          {
+            "target": "peccato",
+            "en": "sin"
+          },
+          {
+            "target": "aereo",
+            "en": "aerial"
+          },
+          {
+            "target": "rubato",
+            "en": "appropriated"
+          },
+          {
+            "target": "base",
+            "en": "basement"
+          },
+          {
+            "target": "sette",
+            "en": "seven"
+          },
+          {
+            "target": "compleanno",
+            "en": "birthday"
+          },
+          {
+            "target": "cliente",
+            "en": "customer"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u18",
+        "title": "Common words 426–450",
+        "subtitle": "The 426–450 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "appartamento",
+            "en": "flat"
+          },
+          {
+            "target": "pranzo",
+            "en": "lunch"
+          },
+          {
+            "target": "denaro",
+            "en": "money"
+          },
+          {
+            "target": "riuscito",
+            "en": "successful"
+          },
+          {
+            "target": "continuare",
+            "en": "carry on"
+          },
+          {
+            "target": "nero",
+            "en": "black"
+          },
+          {
+            "target": "vestito",
+            "en": "clothed"
+          },
+          {
+            "target": "carta",
+            "en": "paper"
+          },
+          {
+            "target": "iniziare",
+            "en": "begin"
+          },
+          {
+            "target": "otto",
+            "en": "eight"
+          },
+          {
+            "target": "conosciuto",
+            "en": "known"
+          },
+          {
+            "target": "zona",
+            "en": "zone"
+          },
+          {
+            "target": "negozio",
+            "en": "store"
+          },
+          {
+            "target": "partita",
+            "en": "asleep"
+          },
+          {
+            "target": "spazio",
+            "en": "space"
+          },
+          {
+            "target": "notizia",
+            "en": "item"
+          },
+          {
+            "target": "linea",
+            "en": "line"
+          },
+          {
+            "target": "poliziotto",
+            "en": "policeman"
+          },
+          {
+            "target": "scappare",
+            "en": "escape"
+          },
+          {
+            "target": "fronte",
+            "en": "forehead"
+          },
+          {
+            "target": "vinto",
+            "en": "beaten"
+          },
+          {
+            "target": "tranquillo",
+            "en": "calm"
+          },
+          {
+            "target": "silenzio",
+            "en": "silence"
+          },
+          {
+            "target": "simile",
+            "en": "equal"
+          },
+          {
+            "target": "santo",
+            "en": "holy"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u19",
+        "title": "Common words 451–475",
+        "subtitle": "The 451–475 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "ricerca",
+            "en": "research"
+          },
+          {
+            "target": "pena",
+            "en": "pain"
+          },
+          {
+            "target": "scoprire",
+            "en": "denude"
+          },
+          {
+            "target": "luogo",
+            "en": "place"
+          },
+          {
+            "target": "lettera",
+            "en": "letter"
+          },
+          {
+            "target": "salvare",
+            "en": "defend"
+          },
+          {
+            "target": "canzone",
+            "en": "song"
+          },
+          {
+            "target": "pubblico",
+            "en": "public"
+          },
+          {
+            "target": "corso",
+            "en": "Corsican"
+          },
+          {
+            "target": "regalo",
+            "en": "gift"
+          },
+          {
+            "target": "stamattina",
+            "en": "this morning"
+          },
+          {
+            "target": "missione",
+            "en": "mission"
+          },
+          {
+            "target": "salute",
+            "en": "health"
+          },
+          {
+            "target": "scelto",
+            "en": "chosen"
+          },
+          {
+            "target": "contatto",
+            "en": "contact"
+          },
+          {
+            "target": "pericolo",
+            "en": "danger"
+          },
+          {
+            "target": "entro",
+            "en": "by"
+          },
+          {
+            "target": "freddo",
+            "en": "cold"
+          },
+          {
+            "target": "triste",
+            "en": "sad"
+          },
+          {
+            "target": "promesso",
+            "en": "offered"
+          },
+          {
+            "target": "esercito",
+            "en": "army"
+          },
+          {
+            "target": "dunque",
+            "en": "so"
+          },
+          {
+            "target": "guardia",
+            "en": "guard"
+          },
+          {
+            "target": "casino",
+            "en": "brothel"
+          },
+          {
+            "target": "buonanotte",
+            "en": "good night"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u20",
+        "title": "Common words 476–500",
+        "subtitle": "The 476–500 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "caccia",
+            "en": "shoot"
+          },
+          {
+            "target": "certamente",
+            "en": "certainly"
+          },
+          {
+            "target": "ballo",
+            "en": "dance"
+          },
+          {
+            "target": "birra",
+            "en": "beer"
+          },
+          {
+            "target": "ovunque",
+            "en": "everywhere"
+          },
+          {
+            "target": "governo",
+            "en": "government"
+          },
+          {
+            "target": "oro",
+            "en": "gold"
+          },
+          {
+            "target": "duro",
+            "en": "resistant"
+          },
+          {
+            "target": "cucina",
+            "en": "cooker"
+          },
+          {
+            "target": "anima",
+            "en": "animus"
+          },
+          {
+            "target": "forma",
+            "en": "form"
+          },
+          {
+            "target": "tornata",
+            "en": "round"
+          },
+          {
+            "target": "esempio",
+            "en": "example"
+          },
+          {
+            "target": "droga",
+            "en": "drug"
+          },
+          {
+            "target": "possibilità",
+            "en": "possibility"
+          },
+          {
+            "target": "necessario",
+            "en": "necessary"
+          },
+          {
+            "target": "borsa",
+            "en": "bag"
+          },
+          {
+            "target": "nonno",
+            "en": "grandfather"
+          },
+          {
+            "target": "piena",
+            "en": "flood"
+          },
+          {
+            "target": "attacco",
+            "en": "attack"
+          },
+          {
+            "target": "reale",
+            "en": "kingly"
+          },
+          {
+            "target": "comprare",
+            "en": "buy"
+          },
+          {
+            "target": "inferno",
+            "en": "hell"
+          },
+          {
+            "target": "regina",
+            "en": "queen"
+          },
+          {
+            "target": "braccio",
+            "en": "arm"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u21",
+        "title": "Common words 501–525",
+        "subtitle": "The 501–525 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "crimine",
+            "en": "crime"
+          },
+          {
+            "target": "chiesa",
+            "en": "church"
+          },
+          {
+            "target": "tenente",
+            "en": "lieutenant"
+          },
+          {
+            "target": "scrivere",
+            "en": "write"
+          },
+          {
+            "target": "paziente",
+            "en": "patient"
+          },
+          {
+            "target": "livello",
+            "en": "level"
+          },
+          {
+            "target": "mentito",
+            "en": "deceptive"
+          },
+          {
+            "target": "viva",
+            "en": "long live"
+          },
+          {
+            "target": "spettacolo",
+            "en": "scene"
+          },
+          {
+            "target": "visita",
+            "en": "visit"
+          },
+          {
+            "target": "sinistra",
+            "en": "left"
+          },
+          {
+            "target": "mare",
+            "en": "sea"
+          },
+          {
+            "target": "direttore",
+            "en": "editor"
+          },
+          {
+            "target": "intelligente",
+            "en": "intelligent"
+          },
+          {
+            "target": "classe",
+            "en": "class"
+          },
+          {
+            "target": "bianco",
+            "en": "white"
+          },
+          {
+            "target": "tavolo",
+            "en": "table"
+          },
+          {
+            "target": "stagione",
+            "en": "season"
+          },
+          {
+            "target": "dannazione",
+            "en": "damnation"
+          },
+          {
+            "target": "cavallo",
+            "en": "horse"
+          },
+          {
+            "target": "sergente",
+            "en": "sergeant"
+          },
+          {
+            "target": "incinta",
+            "en": "pregnant"
+          },
+          {
+            "target": "rotto",
+            "en": "broken"
+          },
+          {
+            "target": "episodio",
+            "en": "episode"
+          },
+          {
+            "target": "rispondere",
+            "en": "answer"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u22",
+        "title": "Common words 526–550",
+        "subtitle": "The 526–550 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "contento",
+            "en": "pleased"
+          },
+          {
+            "target": "conoscere",
+            "en": "recognise"
+          },
+          {
+            "target": "inglese",
+            "en": "English"
+          },
+          {
+            "target": "volo",
+            "en": "flight"
+          },
+          {
+            "target": "differenza",
+            "en": "difference"
+          },
+          {
+            "target": "codice",
+            "en": "code"
+          },
+          {
+            "target": "lato",
+            "en": "broad"
+          },
+          {
+            "target": "farsi",
+            "en": "acquire"
+          },
+          {
+            "target": "trovata",
+            "en": "brainwave"
+          },
+          {
+            "target": "carne",
+            "en": "flesh"
+          },
+          {
+            "target": "lavorato",
+            "en": "carved"
+          },
+          {
+            "target": "umano",
+            "en": "compassionate"
+          },
+          {
+            "target": "caldo",
+            "en": "warm"
+          },
+          {
+            "target": "pelle",
+            "en": "skin"
+          },
+          {
+            "target": "leggere",
+            "en": "read"
+          },
+          {
+            "target": "pomeriggio",
+            "en": "afternoon"
+          },
+          {
+            "target": "giudice",
+            "en": "judge"
+          },
+          {
+            "target": "mostro",
+            "en": "monster"
+          },
+          {
+            "target": "destra",
+            "en": "dexter"
+          },
+          {
+            "target": "Luna",
+            "en": "Moon"
+          },
+          {
+            "target": "pericoloso",
+            "en": "dangerous"
+          },
+          {
+            "target": "affare",
+            "en": "bargain"
+          },
+          {
+            "target": "vino",
+            "en": "wine"
+          },
+          {
+            "target": "presente",
+            "en": "presence"
+          },
+          {
+            "target": "arrivederci",
+            "en": "goodbye"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u23",
+        "title": "Common words 551–575",
+        "subtitle": "The 551–575 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "caffè",
+            "en": "coffee"
+          },
+          {
+            "target": "barca",
+            "en": "boat"
+          },
+          {
+            "target": "maledizione",
+            "en": "damn"
+          },
+          {
+            "target": "lezione",
+            "en": "lesson"
+          },
+          {
+            "target": "intero",
+            "en": "complete"
+          },
+          {
+            "target": "partire",
+            "en": "depart"
+          },
+          {
+            "target": "nord",
+            "en": "north"
+          },
+          {
+            "target": "perciò",
+            "en": "therefore"
+          },
+          {
+            "target": "data",
+            "en": "date"
+          },
+          {
+            "target": "sposato",
+            "en": "married"
+          },
+          {
+            "target": "sembrare",
+            "en": "seem"
+          },
+          {
+            "target": "treno",
+            "en": "train"
+          },
+          {
+            "target": "radio",
+            "en": "radius"
+          },
+          {
+            "target": "comune",
+            "en": "common"
+          },
+          {
+            "target": "cattivo",
+            "en": "bad"
+          },
+          {
+            "target": "responsabile",
+            "en": "conscientious"
+          },
+          {
+            "target": "farcela",
+            "en": "can"
+          },
+          {
+            "target": "bomba",
+            "en": "bomb"
+          },
+          {
+            "target": "periodo",
+            "en": "period"
+          },
+          {
+            "target": "energia",
+            "en": "energy"
+          },
+          {
+            "target": "segno",
+            "en": "scratch"
+          },
+          {
+            "target": "mangiato",
+            "en": "eaten"
+          },
+          {
+            "target": "accidenti",
+            "en": "curse"
+          },
+          {
+            "target": "speranza",
+            "en": "hope"
+          },
+          {
+            "target": "rosso",
+            "en": "gules"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u24",
+        "title": "Common words 576–600",
+        "subtitle": "The 576–600 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "soprattutto",
+            "en": "above all"
+          },
+          {
+            "target": "operazione",
+            "en": "operation"
+          },
+          {
+            "target": "zia",
+            "en": "aunt"
+          },
+          {
+            "target": "gamba",
+            "en": "leg"
+          },
+          {
+            "target": "biglietto",
+            "en": "ticket"
+          },
+          {
+            "target": "ufficiale",
+            "en": "authorized"
+          },
+          {
+            "target": "vincere",
+            "en": "win"
+          },
+          {
+            "target": "pressione",
+            "en": "pressure"
+          },
+          {
+            "target": "seguito",
+            "en": "entourage"
+          },
+          {
+            "target": "nascosto",
+            "en": "concealed"
+          },
+          {
+            "target": "maestro",
+            "en": "teacher"
+          },
+          {
+            "target": "benvenuto",
+            "en": "greeting"
+          },
+          {
+            "target": "offerta",
+            "en": "offer"
+          },
+          {
+            "target": "vite",
+            "en": "vine"
+          },
+          {
+            "target": "scherzo",
+            "en": "jest"
+          },
+          {
+            "target": "finta",
+            "en": "pretence"
+          },
+          {
+            "target": "testimone",
+            "en": "witness"
+          },
+          {
+            "target": "banca",
+            "en": "bank"
+          },
+          {
+            "target": "aprire",
+            "en": "open"
+          },
+          {
+            "target": "indirizzo",
+            "en": "address"
+          },
+          {
+            "target": "tale",
+            "en": "such"
+          },
+          {
+            "target": "ottenere",
+            "en": "derive"
+          },
+          {
+            "target": "esperienza",
+            "en": "experience"
+          },
+          {
+            "target": "portata",
+            "en": "capacity"
+          },
+          {
+            "target": "messa",
+            "en": "Mass"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u25",
+        "title": "Common words 601–625",
+        "subtitle": "The 601–625 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "piangere",
+            "en": "cry"
+          },
+          {
+            "target": "scorso",
+            "en": "last"
+          },
+          {
+            "target": "sud",
+            "en": "south"
+          },
+          {
+            "target": "pianeta",
+            "en": "chasuble"
+          },
+          {
+            "target": "inoltre",
+            "en": "also"
+          },
+          {
+            "target": "serie",
+            "en": "division"
+          },
+          {
+            "target": "guida",
+            "en": "runner"
+          },
+          {
+            "target": "prezzo",
+            "en": "price"
+          },
+          {
+            "target": "arrabbiato",
+            "en": "implacable"
+          },
+          {
+            "target": "orribile",
+            "en": "horrible"
+          },
+          {
+            "target": "enorme",
+            "en": "enormous"
+          },
+          {
+            "target": "passaggio",
+            "en": "passage"
+          },
+          {
+            "target": "imparare",
+            "en": "learn"
+          },
+          {
+            "target": "danno",
+            "en": "loss"
+          },
+          {
+            "target": "naturalmente",
+            "en": "naturally"
+          },
+          {
+            "target": "colpevole",
+            "en": "guilty"
+          },
+          {
+            "target": "mossa",
+            "en": "gesture"
+          },
+          {
+            "target": "finestra",
+            "en": "window"
+          },
+          {
+            "target": "destino",
+            "en": "consignee"
+          },
+          {
+            "target": "saltare",
+            "en": "jump"
+          },
+          {
+            "target": "correre",
+            "en": "run"
+          },
+          {
+            "target": "edificio",
+            "en": "building"
+          },
+          {
+            "target": "colazione",
+            "en": "breakfast"
+          },
+          {
+            "target": "collo",
+            "en": "neck"
+          },
+          {
+            "target": "difesa",
+            "en": "defence"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u26",
+        "title": "Common words 626–650",
+        "subtitle": "The 626–650 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "fiducia",
+            "en": "confidence"
+          },
+          {
+            "target": "ristorante",
+            "en": "restaurant"
+          },
+          {
+            "target": "laboratorio",
+            "en": "lab"
+          },
+          {
+            "target": "scegliere",
+            "en": "choose"
+          },
+          {
+            "target": "comando",
+            "en": "authority"
+          },
+          {
+            "target": "arte",
+            "en": "art"
+          },
+          {
+            "target": "discorso",
+            "en": "debate"
+          },
+          {
+            "target": "nove",
+            "en": "nine"
+          },
+          {
+            "target": "segnale",
+            "en": "signal"
+          },
+          {
+            "target": "fortunato",
+            "en": "fortunate"
+          },
+          {
+            "target": "carriera",
+            "en": "affirmation"
+          },
+          {
+            "target": "muro",
+            "en": "wall"
+          },
+          {
+            "target": "tranne",
+            "en": "except"
+          },
+          {
+            "target": "bob",
+            "en": "bobsleigh"
+          },
+          {
+            "target": "proteggere",
+            "en": "protect"
+          },
+          {
+            "target": "dubbio",
+            "en": "doubt"
+          },
+          {
+            "target": "stazione",
+            "en": "station"
+          },
+          {
+            "target": "emergenza",
+            "en": "act"
+          },
+          {
+            "target": "giustizia",
+            "en": "justice"
+          },
+          {
+            "target": "immediatamente",
+            "en": "immediately"
+          },
+          {
+            "target": "odore",
+            "en": "odour"
+          },
+          {
+            "target": "contrario",
+            "en": "adverse"
+          },
+          {
+            "target": "terzo",
+            "en": "third"
+          },
+          {
+            "target": "preoccupare",
+            "en": "concern"
+          },
+          {
+            "target": "battaglia",
+            "en": "battle"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u27",
+        "title": "Common words 651–675",
+        "subtitle": "The 651–675 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "sceriffo",
+            "en": "sheriff"
+          },
+          {
+            "target": "evitare",
+            "en": "avoid"
+          },
+          {
+            "target": "seduto",
+            "en": "seated"
+          },
+          {
+            "target": "bianca",
+            "en": "immaculate"
+          },
+          {
+            "target": "lingua",
+            "en": "tongue"
+          },
+          {
+            "target": "dipartimento",
+            "en": "department"
+          },
+          {
+            "target": "controllato",
+            "en": "controlled"
+          },
+          {
+            "target": "Massimo",
+            "en": "Max"
+          },
+          {
+            "target": "praticamente",
+            "en": "practically"
+          },
+          {
+            "target": "riunione",
+            "en": "assembly"
+          },
+          {
+            "target": "rumore",
+            "en": "noise"
+          },
+          {
+            "target": "torta",
+            "en": "gateau"
+          },
+          {
+            "target": "eroe",
+            "en": "hero"
+          },
+          {
+            "target": "turno",
+            "en": "duty"
+          },
+          {
+            "target": "Londra",
+            "en": "London"
+          },
+          {
+            "target": "ovvio",
+            "en": "natural"
+          },
+          {
+            "target": "coppia",
+            "en": "couple"
+          },
+          {
+            "target": "ridere",
+            "en": "laugh"
+          },
+          {
+            "target": "pausa",
+            "en": "breather"
+          },
+          {
+            "target": "grave",
+            "en": "deep"
+          },
+          {
+            "target": "memoria",
+            "en": "essay"
+          },
+          {
+            "target": "naso",
+            "en": "nose"
+          },
+          {
+            "target": "nemico",
+            "en": "enemy"
+          },
+          {
+            "target": "chiudere",
+            "en": "close"
+          },
+          {
+            "target": "colonnello",
+            "en": "colonel"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u28",
+        "title": "Common words 676–700",
+        "subtitle": "The 676–700 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "palla",
+            "en": "ball"
+          },
+          {
+            "target": "costa",
+            "en": "coast"
+          },
+          {
+            "target": "laggiù",
+            "en": "over there"
+          },
+          {
+            "target": "scatola",
+            "en": "box"
+          },
+          {
+            "target": "albero",
+            "en": "tree"
+          },
+          {
+            "target": "razza",
+            "en": "race"
+          },
+          {
+            "target": "anello",
+            "en": "ring"
+          },
+          {
+            "target": "piede",
+            "en": "foot"
+          },
+          {
+            "target": "ferita",
+            "en": "injury"
+          },
+          {
+            "target": "ferito",
+            "en": "bruised"
+          },
+          {
+            "target": "preoccupato",
+            "en": "anxious"
+          },
+          {
+            "target": "arresto",
+            "en": "detention"
+          },
+          {
+            "target": "averla",
+            "en": "snike"
+          },
+          {
+            "target": "soldato",
+            "en": "soldier"
+          },
+          {
+            "target": "natura",
+            "en": "nature"
+          },
+          {
+            "target": "inutile",
+            "en": "useless"
+          },
+          {
+            "target": "colore",
+            "en": "colour"
+          },
+          {
+            "target": "basso",
+            "en": "low"
+          },
+          {
+            "target": "anzi",
+            "en": "actually"
+          },
+          {
+            "target": "preferito",
+            "en": "bookmark"
+          },
+          {
+            "target": "utile",
+            "en": "useful"
+          },
+          {
+            "target": "Parigi",
+            "en": "Paris"
+          },
+          {
+            "target": "ascoltare",
+            "en": "listen"
+          },
+          {
+            "target": "decidere",
+            "en": "decide"
+          },
+          {
+            "target": "professore",
+            "en": "know-it-all"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u29",
+        "title": "Common words 701–725",
+        "subtitle": "The 701–725 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "fidanzato",
+            "en": "boyfriend"
+          },
+          {
+            "target": "sensazione",
+            "en": "sensation"
+          },
+          {
+            "target": "legale",
+            "en": "lawful"
+          },
+          {
+            "target": "compito",
+            "en": "congenial"
+          },
+          {
+            "target": "corte",
+            "en": "court"
+          },
+          {
+            "target": "pesce",
+            "en": "fish"
+          },
+          {
+            "target": "obiettivo",
+            "en": "objective"
+          },
+          {
+            "target": "incontrare",
+            "en": "be confronted with"
+          },
+          {
+            "target": "accesso",
+            "en": "access"
+          },
+          {
+            "target": "breve",
+            "en": "brief"
+          },
+          {
+            "target": "risolvere",
+            "en": "annul"
+          },
+          {
+            "target": "isola",
+            "en": "island"
+          },
+          {
+            "target": "affrontare",
+            "en": "brave"
+          },
+          {
+            "target": "Anna",
+            "en": "Anne"
+          },
+          {
+            "target": "bordo",
+            "en": "border"
+          },
+          {
+            "target": "sbaglio",
+            "en": "mistake"
+          },
+          {
+            "target": "verde",
+            "en": "green"
+          },
+          {
+            "target": "improvviso",
+            "en": "impromptu"
+          },
+          {
+            "target": "fianco",
+            "en": "side"
+          },
+          {
+            "target": "accettare",
+            "en": "accept"
+          },
+          {
+            "target": "metà",
+            "en": "half"
+          },
+          {
+            "target": "continuo",
+            "en": "continuum"
+          },
+          {
+            "target": "peso",
+            "en": "weight"
+          },
+          {
+            "target": "stile",
+            "en": "lifestyle"
+          },
+          {
+            "target": "entrata",
+            "en": "entrance"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u30",
+        "title": "Common words 726–750",
+        "subtitle": "The 726–750 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "soluzione",
+            "en": "solution"
+          },
+          {
+            "target": "Maria",
+            "en": "Mary"
+          },
+          {
+            "target": "contratto",
+            "en": "contracted"
+          },
+          {
+            "target": "fermare",
+            "en": "fix"
+          },
+          {
+            "target": "meraviglioso",
+            "en": "wonderful"
+          },
+          {
+            "target": "guidare",
+            "en": "drive"
+          },
+          {
+            "target": "mandare",
+            "en": "send"
+          },
+          {
+            "target": "sveglia",
+            "en": "reveille"
+          },
+          {
+            "target": "ultimamente",
+            "en": "lately"
+          },
+          {
+            "target": "creato",
+            "en": "creation"
+          },
+          {
+            "target": "innocente",
+            "en": "blameless"
+          },
+          {
+            "target": "scopo",
+            "en": "aim"
+          },
+          {
+            "target": "coltello",
+            "en": "knife"
+          },
+          {
+            "target": "magia",
+            "en": "magic"
+          },
+          {
+            "target": "effetto",
+            "en": "effect"
+          },
+          {
+            "target": "procuratore",
+            "en": "attorney-in-fact"
+          },
+          {
+            "target": "ricordare",
+            "en": "remember"
+          },
+          {
+            "target": "vendere",
+            "en": "sell"
+          },
+          {
+            "target": "centrale",
+            "en": "central"
+          },
+          {
+            "target": "azione",
+            "en": "share"
+          },
+          {
+            "target": "principe",
+            "en": "prince"
+          },
+          {
+            "target": "cadavere",
+            "en": "corpse"
+          },
+          {
+            "target": "nipote",
+            "en": "grandson"
+          },
+          {
+            "target": "riuscita",
+            "en": "success"
+          },
+          {
+            "target": "stampa",
+            "en": "press"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u31",
+        "title": "Common words 751–775",
+        "subtitle": "The 751–775 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "assistente",
+            "en": "assistant"
+          },
+          {
+            "target": "debole",
+            "en": "weak"
+          },
+          {
+            "target": "ridicolo",
+            "en": "ridiculous"
+          },
+          {
+            "target": "grandioso",
+            "en": "grand"
+          },
+          {
+            "target": "americano",
+            "en": "American"
+          },
+          {
+            "target": "francese",
+            "en": "French"
+          },
+          {
+            "target": "taxi",
+            "en": "cab"
+          },
+          {
+            "target": "creare",
+            "en": "create"
+          },
+          {
+            "target": "peggiore",
+            "en": "inferior"
+          },
+          {
+            "target": "angolo",
+            "en": "angle"
+          },
+          {
+            "target": "latte",
+            "en": "milk"
+          },
+          {
+            "target": "buio",
+            "en": "dark"
+          },
+          {
+            "target": "malattia",
+            "en": "disease"
+          },
+          {
+            "target": "gatto",
+            "en": "cat"
+          },
+          {
+            "target": "estate",
+            "en": "summer"
+          },
+          {
+            "target": "scomparsa",
+            "en": "demise"
+          },
+          {
+            "target": "fiume",
+            "en": "river"
+          },
+          {
+            "target": "schiena",
+            "en": "crest"
+          },
+          {
+            "target": "sindaco",
+            "en": "mayor"
+          },
+          {
+            "target": "nonostante",
+            "en": "although"
+          },
+          {
+            "target": "reso",
+            "en": "rhesus"
+          },
+          {
+            "target": "campagna",
+            "en": "countryside"
+          },
+          {
+            "target": "seguire",
+            "en": "follow"
+          },
+          {
+            "target": "coglione",
+            "en": "fool"
+          },
+          {
+            "target": "chiaramente",
+            "en": "clearly"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u32",
+        "title": "Common words 776–800",
+        "subtitle": "The 776–800 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "capace",
+            "en": "capacious"
+          },
+          {
+            "target": "distrutto",
+            "en": "destroyed"
+          },
+          {
+            "target": "importanza",
+            "en": "consequence"
+          },
+          {
+            "target": "stanco",
+            "en": "tired"
+          },
+          {
+            "target": "mantenere",
+            "en": "keep"
+          },
+          {
+            "target": "richiesta",
+            "en": "request"
+          },
+          {
+            "target": "parecchio",
+            "en": "several"
+          },
+          {
+            "target": "principale",
+            "en": "main"
+          },
+          {
+            "target": "faccenda",
+            "en": "affair"
+          },
+          {
+            "target": "vento",
+            "en": "wind"
+          },
+          {
+            "target": "immaginare",
+            "en": "conceive"
+          },
+          {
+            "target": "dimenticare",
+            "en": "forget"
+          },
+          {
+            "target": "matto",
+            "en": "mad"
+          },
+          {
+            "target": "convinto",
+            "en": "confirmed"
+          },
+          {
+            "target": "rovinato",
+            "en": "damaged"
+          },
+          {
+            "target": "campione",
+            "en": "champion"
+          },
+          {
+            "target": "buonasera",
+            "en": "good evening"
+          },
+          {
+            "target": "decisamente",
+            "en": "decidedly"
+          },
+          {
+            "target": "mercato",
+            "en": "market"
+          },
+          {
+            "target": "salire",
+            "en": "ascend"
+          },
+          {
+            "target": "spiegare",
+            "en": "lay out"
+          },
+          {
+            "target": "principessa",
+            "en": "princess"
+          },
+          {
+            "target": "bellezza",
+            "en": "beauty"
+          },
+          {
+            "target": "buco",
+            "en": "hole"
+          },
+          {
+            "target": "conversazione",
+            "en": "conversation"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u33",
+        "title": "Common words 801–825",
+        "subtitle": "The 801–825 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "attesa",
+            "en": "expectation"
+          },
+          {
+            "target": "pensiero",
+            "en": "thought"
+          },
+          {
+            "target": "ponte",
+            "en": "bridge"
+          },
+          {
+            "target": "malato",
+            "en": "ill"
+          },
+          {
+            "target": "sedia",
+            "en": "chair"
+          },
+          {
+            "target": "finale",
+            "en": "final"
+          },
+          {
+            "target": "sistemare",
+            "en": "to arrange"
+          },
+          {
+            "target": "succedere",
+            "en": "happen"
+          },
+          {
+            "target": "ghiaccio",
+            "en": "icy"
+          },
+          {
+            "target": "bottiglia",
+            "en": "bottle"
+          },
+          {
+            "target": "fottuto",
+            "en": "bloody"
+          },
+          {
+            "target": "tiro",
+            "en": "draught"
+          },
+          {
+            "target": "cadere",
+            "en": "fall"
+          },
+          {
+            "target": "sguardo",
+            "en": "eye"
+          },
+          {
+            "target": "milione",
+            "en": "million"
+          },
+          {
+            "target": "camminare",
+            "en": "walk"
+          },
+          {
+            "target": "pratica",
+            "en": "activity"
+          },
+          {
+            "target": "villaggio",
+            "en": "village"
+          },
+          {
+            "target": "fantasma",
+            "en": "ghost"
+          },
+          {
+            "target": "ispettore",
+            "en": "assessor"
+          },
+          {
+            "target": "teoria",
+            "en": "theory"
+          },
+          {
+            "target": "dovere",
+            "en": "must"
+          },
+          {
+            "target": "camion",
+            "en": "truck"
+          },
+          {
+            "target": "parco",
+            "en": "careful"
+          },
+          {
+            "target": "palazzo",
+            "en": "palace"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u34",
+        "title": "Common words 826–850",
+        "subtitle": "The 826–850 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "troia",
+            "en": "sow"
+          },
+          {
+            "target": "purtroppo",
+            "en": "unfortunately"
+          },
+          {
+            "target": "area",
+            "en": "ground"
+          },
+          {
+            "target": "accusa",
+            "en": "charge"
+          },
+          {
+            "target": "direttamente",
+            "en": "direct"
+          },
+          {
+            "target": "cento",
+            "en": "hundred"
+          },
+          {
+            "target": "seriamente",
+            "en": "seriously"
+          },
+          {
+            "target": "pista",
+            "en": "track"
+          },
+          {
+            "target": "terza",
+            "en": "three bars"
+          },
+          {
+            "target": "angelo",
+            "en": "angel"
+          },
+          {
+            "target": "tradurre",
+            "en": "translate"
+          },
+          {
+            "target": "altezza",
+            "en": "height"
+          },
+          {
+            "target": "minaccia",
+            "en": "menace"
+          },
+          {
+            "target": "età",
+            "en": "age"
+          },
+          {
+            "target": "nazionale",
+            "en": "national"
+          },
+          {
+            "target": "genio",
+            "en": "genius"
+          },
+          {
+            "target": "tetto",
+            "en": "roof"
+          },
+          {
+            "target": "stella",
+            "en": "star"
+          },
+          {
+            "target": "politica",
+            "en": "politics"
+          },
+          {
+            "target": "suono",
+            "en": "sound"
+          },
+          {
+            "target": "copertura",
+            "en": "covering"
+          },
+          {
+            "target": "vissuto",
+            "en": "experienced"
+          },
+          {
+            "target": "Cancro",
+            "en": "Cancer"
+          },
+          {
+            "target": "Numeri",
+            "en": "Numbers"
+          },
+          {
+            "target": "compagno",
+            "en": "partner"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u35",
+        "title": "Common words 851–875",
+        "subtitle": "The 851–875 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "merito",
+            "en": "merit"
+          },
+          {
+            "target": "società",
+            "en": "society"
+          },
+          {
+            "target": "spada",
+            "en": "sword"
+          },
+          {
+            "target": "scendere",
+            "en": "go down"
+          },
+          {
+            "target": "perfettamente",
+            "en": "perfectly"
+          },
+          {
+            "target": "bicchiere",
+            "en": "glass"
+          },
+          {
+            "target": "autobus",
+            "en": "bus"
+          },
+          {
+            "target": "vuoto",
+            "en": "empty"
+          },
+          {
+            "target": "animale",
+            "en": "animal"
+          },
+          {
+            "target": "sabato",
+            "en": "Saturday"
+          },
+          {
+            "target": "pollo",
+            "en": "chicken"
+          },
+          {
+            "target": "spiaggia",
+            "en": "beach"
+          },
+          {
+            "target": "ordinato",
+            "en": "methodical"
+          },
+          {
+            "target": "rotta",
+            "en": "course"
+          },
+          {
+            "target": "telefonata",
+            "en": "phone call"
+          },
+          {
+            "target": "completo",
+            "en": "absolute"
+          },
+          {
+            "target": "liceo",
+            "en": "high school"
+          },
+          {
+            "target": "rosa",
+            "en": "pink"
+          },
+          {
+            "target": "doccia",
+            "en": "shower"
+          },
+          {
+            "target": "stanca",
+            "en": "exhausted"
+          },
+          {
+            "target": "arrestato",
+            "en": "statant"
+          },
+          {
+            "target": "venduto",
+            "en": "corrupt"
+          },
+          {
+            "target": "orologio",
+            "en": "clock"
+          },
+          {
+            "target": "erba",
+            "en": "grass"
+          },
+          {
+            "target": "alice",
+            "en": "anchovy"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u36",
+        "title": "Common words 876–900",
+        "subtitle": "The 876–900 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "maledetto",
+            "en": "horrific"
+          },
+          {
+            "target": "magnifico",
+            "en": "generous"
+          },
+          {
+            "target": "universo",
+            "en": "universe"
+          },
+          {
+            "target": "esame",
+            "en": "examination"
+          },
+          {
+            "target": "quartiere",
+            "en": "quarter"
+          },
+          {
+            "target": "sposa",
+            "en": "spouse"
+          },
+          {
+            "target": "partito",
+            "en": "party per pale"
+          },
+          {
+            "target": "cappello",
+            "en": "hat"
+          },
+          {
+            "target": "pagina",
+            "en": "page"
+          },
+          {
+            "target": "mostra",
+            "en": "exhibition hall"
+          },
+          {
+            "target": "giardino",
+            "en": "garden"
+          },
+          {
+            "target": "taglio",
+            "en": "haircut"
+          },
+          {
+            "target": "velocemente",
+            "en": "quickly"
+          },
+          {
+            "target": "potente",
+            "en": "powerful"
+          },
+          {
+            "target": "rabbia",
+            "en": "anger"
+          },
+          {
+            "target": "toccare",
+            "en": "touch"
+          },
+          {
+            "target": "collega",
+            "en": "colleague"
+          },
+          {
+            "target": "vittoria",
+            "en": "victory"
+          },
+          {
+            "target": "giornale",
+            "en": "journal"
+          },
+          {
+            "target": "talento",
+            "en": "talent"
+          },
+          {
+            "target": "spaventato",
+            "en": "frightened"
+          },
+          {
+            "target": "naturale",
+            "en": "proper"
+          },
+          {
+            "target": "girare",
+            "en": "revolve"
+          },
+          {
+            "target": "corrente",
+            "en": "flowing"
+          },
+          {
+            "target": "libertà",
+            "en": "freedom"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u37",
+        "title": "Common words 901–925",
+        "subtitle": "The 901–925 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "rubare",
+            "en": "steal"
+          },
+          {
+            "target": "doppio",
+            "en": "double"
+          },
+          {
+            "target": "immagine",
+            "en": "image"
+          },
+          {
+            "target": "allarme",
+            "en": "alarm"
+          },
+          {
+            "target": "padrone",
+            "en": "owner"
+          },
+          {
+            "target": "sveglio",
+            "en": "awake"
+          },
+          {
+            "target": "preparato",
+            "en": "competent"
+          },
+          {
+            "target": "direzione",
+            "en": "direction"
+          },
+          {
+            "target": "dito",
+            "en": "finger"
+          },
+          {
+            "target": "vendetta",
+            "en": "revenge"
+          },
+          {
+            "target": "cantare",
+            "en": "sing"
+          },
+          {
+            "target": "distruggere",
+            "en": "demolish"
+          },
+          {
+            "target": "funzionare",
+            "en": "function"
+          },
+          {
+            "target": "invitato",
+            "en": "guest"
+          },
+          {
+            "target": "regola",
+            "en": "rule"
+          },
+          {
+            "target": "ruolo",
+            "en": "position"
+          },
+          {
+            "target": "mattino",
+            "en": "morning"
+          },
+          {
+            "target": "funerale",
+            "en": "funeral"
+          },
+          {
+            "target": "ministro",
+            "en": "Board"
+          },
+          {
+            "target": "venti",
+            "en": "twenty"
+          },
+          {
+            "target": "domenica",
+            "en": "Sunday"
+          },
+          {
+            "target": "spia",
+            "en": "spy"
+          },
+          {
+            "target": "dritto",
+            "en": "crafty"
+          },
+          {
+            "target": "atto",
+            "en": "apt"
+          },
+          {
+            "target": "discutere",
+            "en": "discuss"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u38",
+        "title": "Common words 926–950",
+        "subtitle": "The 926–950 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "mentire",
+            "en": "lie"
+          },
+          {
+            "target": "vacanza",
+            "en": "holiday"
+          },
+          {
+            "target": "medicina",
+            "en": "medicine"
+          },
+          {
+            "target": "informazione",
+            "en": "information"
+          },
+          {
+            "target": "sposare",
+            "en": "marry"
+          },
+          {
+            "target": "est",
+            "en": "east"
+          },
+          {
+            "target": "accaduto",
+            "en": "event"
+          },
+          {
+            "target": "violenza",
+            "en": "violence"
+          },
+          {
+            "target": "crescere",
+            "en": "grow"
+          },
+          {
+            "target": "cugino",
+            "en": "cousin"
+          },
+          {
+            "target": "trappola",
+            "en": "pit"
+          },
+          {
+            "target": "criminale",
+            "en": "criminal"
+          },
+          {
+            "target": "giacca",
+            "en": "jacket"
+          },
+          {
+            "target": "commesso",
+            "en": "committed"
+          },
+          {
+            "target": "pugno",
+            "en": "fist"
+          },
+          {
+            "target": "opinione",
+            "en": "opinion"
+          },
+          {
+            "target": "interesse",
+            "en": "interest"
+          },
+          {
+            "target": "Francia",
+            "en": "France"
+          },
+          {
+            "target": "Roma",
+            "en": "Rome"
+          },
+          {
+            "target": "carico",
+            "en": "burdened"
+          },
+          {
+            "target": "fastidio",
+            "en": "trouble"
+          },
+          {
+            "target": "premio",
+            "en": "premium"
+          },
+          {
+            "target": "sopravvivere",
+            "en": "survive"
+          },
+          {
+            "target": "battuta",
+            "en": "frequented"
+          },
+          {
+            "target": "cella",
+            "en": "cell"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u39",
+        "title": "Common words 951–975",
+        "subtitle": "The 951–975 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "membro",
+            "en": "member"
+          },
+          {
+            "target": "lupo",
+            "en": "wolf"
+          },
+          {
+            "target": "lotta",
+            "en": "fight"
+          },
+          {
+            "target": "moto",
+            "en": "motorbike"
+          },
+          {
+            "target": "amicizia",
+            "en": "friendship"
+          },
+          {
+            "target": "protezione",
+            "en": "protection"
+          },
+          {
+            "target": "disturbo",
+            "en": "annoyance"
+          },
+          {
+            "target": "pane",
+            "en": "bread"
+          },
+          {
+            "target": "pesante",
+            "en": "heavy"
+          },
+          {
+            "target": "aeroporto",
+            "en": "airport"
+          },
+          {
+            "target": "gloria",
+            "en": "fame"
+          },
+          {
+            "target": "terapia",
+            "en": "therapy"
+          },
+          {
+            "target": "disastro",
+            "en": "calamity"
+          },
+          {
+            "target": "tirato",
+            "en": "affected"
+          },
+          {
+            "target": "preparare",
+            "en": "prepare"
+          },
+          {
+            "target": "costruire",
+            "en": "build"
+          },
+          {
+            "target": "rete",
+            "en": "net"
+          },
+          {
+            "target": "puzza",
+            "en": "reek"
+          },
+          {
+            "target": "gola",
+            "en": "throat"
+          },
+          {
+            "target": "fumo",
+            "en": "smoke"
+          },
+          {
+            "target": "crisi",
+            "en": "crisis"
+          },
+          {
+            "target": "raggiungere",
+            "en": "reach"
+          },
+          {
+            "target": "nervoso",
+            "en": "excitable"
+          },
+          {
+            "target": "traccia",
+            "en": "evidence"
+          },
+          {
+            "target": "Inghilterra",
+            "en": "England"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u40",
+        "title": "Common words 976–1000",
+        "subtitle": "The 976–1000 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "albergo",
+            "en": "hotel"
+          },
+          {
+            "target": "polvere",
+            "en": "dust"
+          },
+          {
+            "target": "gioia",
+            "en": "joy"
+          },
+          {
+            "target": "fucile",
+            "en": "gun"
+          },
+          {
+            "target": "maniera",
+            "en": "way"
+          },
+          {
+            "target": "sessuale",
+            "en": "sexual"
+          },
+          {
+            "target": "tentativo",
+            "en": "effort"
+          },
+          {
+            "target": "trucco",
+            "en": "crook"
+          },
+          {
+            "target": "nascondere",
+            "en": "disguise"
+          },
+          {
+            "target": "ambulanza",
+            "en": "ambulance"
+          },
+          {
+            "target": "superiore",
+            "en": "above"
+          },
+          {
+            "target": "volare",
+            "en": "fly"
+          },
+          {
+            "target": "mancato",
+            "en": "abortive"
+          },
+          {
+            "target": "perdono",
+            "en": "absolution"
+          },
+          {
+            "target": "ospite",
+            "en": "host"
+          },
+          {
+            "target": "recente",
+            "en": "recent"
+          },
+          {
+            "target": "pizza",
+            "en": "bore"
+          },
+          {
+            "target": "amato",
+            "en": "beloved"
+          },
+          {
+            "target": "movimento",
+            "en": "exercise"
+          },
+          {
+            "target": "regno",
+            "en": "kingdom"
+          },
+          {
+            "target": "stomaco",
+            "en": "stomach"
+          },
+          {
+            "target": "licenziato",
+            "en": "discharged"
+          },
+          {
+            "target": "tirare",
+            "en": "pull"
+          },
+          {
+            "target": "analisi",
+            "en": "analysis"
+          },
+          {
+            "target": "muoversi",
+            "en": "move"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u41",
+        "title": "Common words 1001–1025",
+        "subtitle": "The 1001–1025 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "promessa",
+            "en": "pledge"
+          },
+          {
+            "target": "dannato",
+            "en": "damnable"
+          },
+          {
+            "target": "abbandonato",
+            "en": "abandoned"
+          },
+          {
+            "target": "facilmente",
+            "en": "easily"
+          },
+          {
+            "target": "sospettato",
+            "en": "suspect"
+          },
+          {
+            "target": "cinese",
+            "en": "Chinese"
+          },
+          {
+            "target": "imbarazzante",
+            "en": "awkward"
+          },
+          {
+            "target": "fonte",
+            "en": "spring"
+          },
+          {
+            "target": "divano",
+            "en": "couch"
+          },
+          {
+            "target": "amante",
+            "en": "amator"
+          },
+          {
+            "target": "risultato",
+            "en": "result"
+          },
+          {
+            "target": "bloccato",
+            "en": "arrested"
+          },
+          {
+            "target": "scrivania",
+            "en": "desk"
+          },
+          {
+            "target": "pavimento",
+            "en": "floor"
+          },
+          {
+            "target": "famoso",
+            "en": "famous"
+          },
+          {
+            "target": "traffico",
+            "en": "traffic"
+          },
+          {
+            "target": "prestito",
+            "en": "loan"
+          },
+          {
+            "target": "sorriso",
+            "en": "smile"
+          },
+          {
+            "target": "proiettile",
+            "en": "bullet"
+          },
+          {
+            "target": "motore",
+            "en": "driving"
+          },
+          {
+            "target": "specialmente",
+            "en": "especially"
+          },
+          {
+            "target": "ingresso",
+            "en": "admittance"
+          },
+          {
+            "target": "fido",
+            "en": "faithful"
+          },
+          {
+            "target": "folle",
+            "en": "demented"
+          },
+          {
+            "target": "proposta",
+            "en": "proposition"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u42",
+        "title": "Common words 1026–1050",
+        "subtitle": "The 1026–1050 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "tuttavia",
+            "en": "however"
+          },
+          {
+            "target": "affascinante",
+            "en": "fascinating"
+          },
+          {
+            "target": "banda",
+            "en": "broadside"
+          },
+          {
+            "target": "esplosione",
+            "en": "blow-up"
+          },
+          {
+            "target": "calcio",
+            "en": "calcium"
+          },
+          {
+            "target": "lago",
+            "en": "lake"
+          },
+          {
+            "target": "ascolto",
+            "en": "listening"
+          },
+          {
+            "target": "teatro",
+            "en": "theatre"
+          },
+          {
+            "target": "ladro",
+            "en": "thief"
+          },
+          {
+            "target": "pioggia",
+            "en": "rain"
+          },
+          {
+            "target": "debito",
+            "en": "debt"
+          },
+          {
+            "target": "pietra",
+            "en": "stone"
+          },
+          {
+            "target": "uccello",
+            "en": "bird"
+          },
+          {
+            "target": "sito",
+            "en": "located"
+          },
+          {
+            "target": "maiale",
+            "en": "pig"
+          },
+          {
+            "target": "parcheggio",
+            "en": "parking"
+          },
+          {
+            "target": "camicia",
+            "en": "shirt"
+          },
+          {
+            "target": "comportamento",
+            "en": "actions"
+          },
+          {
+            "target": "montagna",
+            "en": "mountain"
+          },
+          {
+            "target": "respirare",
+            "en": "breathe"
+          },
+          {
+            "target": "costruito",
+            "en": "assembled"
+          },
+          {
+            "target": "formaggio",
+            "en": "cheese"
+          },
+          {
+            "target": "sparo",
+            "en": "shot"
+          },
+          {
+            "target": "assunto",
+            "en": "assumption"
+          },
+          {
+            "target": "diretta",
+            "en": "aimed"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u43",
+        "title": "Common words 1051–1075",
+        "subtitle": "The 1051–1075 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "spazzatura",
+            "en": "trash"
+          },
+          {
+            "target": "divorzio",
+            "en": "divorce"
+          },
+          {
+            "target": "tagliato",
+            "en": "shortened"
+          },
+          {
+            "target": "tazza",
+            "en": "cup"
+          },
+          {
+            "target": "agenzia",
+            "en": "bureau"
+          },
+          {
+            "target": "volto",
+            "en": "three-quarter face"
+          },
+          {
+            "target": "intervento",
+            "en": "attendance"
+          },
+          {
+            "target": "mucchio",
+            "en": "heap"
+          },
+          {
+            "target": "permettere",
+            "en": "allow"
+          },
+          {
+            "target": "soccorso",
+            "en": "aid"
+          },
+          {
+            "target": "respiro",
+            "en": "break"
+          },
+          {
+            "target": "giuria",
+            "en": "jury"
+          },
+          {
+            "target": "modello",
+            "en": "model"
+          },
+          {
+            "target": "panico",
+            "en": "Panic"
+          },
+          {
+            "target": "ombra",
+            "en": "shadow"
+          },
+          {
+            "target": "piscina",
+            "en": "swimming pool"
+          },
+          {
+            "target": "marina",
+            "en": "navy"
+          },
+          {
+            "target": "portate",
+            "en": "adroit"
+          },
+          {
+            "target": "pensione",
+            "en": "pension"
+          },
+          {
+            "target": "copia",
+            "en": "copy"
+          },
+          {
+            "target": "pilota",
+            "en": "pilot"
+          },
+          {
+            "target": "sorveglianza",
+            "en": "supervision"
+          },
+          {
+            "target": "dichiarazione",
+            "en": "affidavit"
+          },
+          {
+            "target": "costretto",
+            "en": "compelled"
+          },
+          {
+            "target": "limite",
+            "en": "boundary"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u44",
+        "title": "Common words 1076–1100",
+        "subtitle": "The 1076–1100 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "affitto",
+            "en": "rental"
+          },
+          {
+            "target": "evento",
+            "en": "case"
+          },
+          {
+            "target": "bugiardo",
+            "en": "deceitful"
+          },
+          {
+            "target": "governatore",
+            "en": "governor"
+          },
+          {
+            "target": "moda",
+            "en": "fashion"
+          },
+          {
+            "target": "petto",
+            "en": "chest"
+          },
+          {
+            "target": "impressione",
+            "en": "feeling"
+          },
+          {
+            "target": "strega",
+            "en": "hag"
+          },
+          {
+            "target": "Coso",
+            "en": "thingamy"
+          },
+          {
+            "target": "terreno",
+            "en": "Boden"
+          },
+          {
+            "target": "neve",
+            "en": "snow"
+          },
+          {
+            "target": "impegnato",
+            "en": "pawned"
+          },
+          {
+            "target": "gelato",
+            "en": "frozen"
+          },
+          {
+            "target": "lentamente",
+            "en": "slowly"
+          },
+          {
+            "target": "vergogna",
+            "en": "shame"
+          },
+          {
+            "target": "adorabile",
+            "en": "adorable"
+          },
+          {
+            "target": "castello",
+            "en": "castle"
+          },
+          {
+            "target": "organizzato",
+            "en": "established"
+          },
+          {
+            "target": "malapena",
+            "en": "hardly"
+          },
+          {
+            "target": "nota",
+            "en": "bill"
+          },
+          {
+            "target": "maschio",
+            "en": "male"
+          },
+          {
+            "target": "festeggiare",
+            "en": "celebrate"
+          },
+          {
+            "target": "indovinare",
+            "en": "guess"
+          },
+          {
+            "target": "attaccato",
+            "en": "attached"
+          },
+          {
+            "target": "togliere",
+            "en": "take away"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u45",
+        "title": "Common words 1101–1125",
+        "subtitle": "The 1101–1125 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "sporco",
+            "en": "dirty"
+          },
+          {
+            "target": "miracolo",
+            "en": "miracle"
+          },
+          {
+            "target": "vicenda",
+            "en": "in turns"
+          },
+          {
+            "target": "divertimento",
+            "en": "amusement"
+          },
+          {
+            "target": "volere",
+            "en": "will"
+          },
+          {
+            "target": "anticipo",
+            "en": "advance"
+          },
+          {
+            "target": "rapina",
+            "en": "mugging"
+          },
+          {
+            "target": "nazione",
+            "en": "nation"
+          },
+          {
+            "target": "artista",
+            "en": "artist"
+          },
+          {
+            "target": "alba",
+            "en": "dawn"
+          },
+          {
+            "target": "telecamera",
+            "en": "camera"
+          },
+          {
+            "target": "fase",
+            "en": "phase"
+          },
+          {
+            "target": "abito",
+            "en": "dress"
+          },
+          {
+            "target": "suicidio",
+            "en": "suicide"
+          },
+          {
+            "target": "ginocchio",
+            "en": "knee"
+          },
+          {
+            "target": "galera",
+            "en": "galley"
+          },
+          {
+            "target": "familiare",
+            "en": "station wagon"
+          },
+          {
+            "target": "interessato",
+            "en": "interested"
+          },
+          {
+            "target": "positivo",
+            "en": "concrete"
+          },
+          {
+            "target": "sparire",
+            "en": "disappear"
+          },
+          {
+            "target": "invito",
+            "en": "invitation"
+          },
+          {
+            "target": "onesto",
+            "en": "honest"
+          },
+          {
+            "target": "fuggire",
+            "en": "flee"
+          },
+          {
+            "target": "università",
+            "en": "university"
+          },
+          {
+            "target": "bosco",
+            "en": "wood"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u46",
+        "title": "Common words 1126–1150",
+        "subtitle": "The 1126–1150 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "sale",
+            "en": "salt"
+          },
+          {
+            "target": "ovest",
+            "en": "west"
+          },
+          {
+            "target": "personalmente",
+            "en": "personally"
+          },
+          {
+            "target": "magazzino",
+            "en": "department store"
+          },
+          {
+            "target": "commissione",
+            "en": "committal"
+          },
+          {
+            "target": "vantaggio",
+            "en": "emolumentum"
+          },
+          {
+            "target": "mezzanotte",
+            "en": "midnight"
+          },
+          {
+            "target": "morale",
+            "en": "moral"
+          },
+          {
+            "target": "fallito",
+            "en": "good-for-nothing"
+          },
+          {
+            "target": "esperto",
+            "en": "expert"
+          },
+          {
+            "target": "onda",
+            "en": "ripple"
+          },
+          {
+            "target": "firmare",
+            "en": "sign"
+          },
+          {
+            "target": "totalmente",
+            "en": "altogether"
+          },
+          {
+            "target": "incubo",
+            "en": "nightmare"
+          },
+          {
+            "target": "fattoria",
+            "en": "farm"
+          },
+          {
+            "target": "senatore",
+            "en": "senator"
+          },
+          {
+            "target": "tasca",
+            "en": "pocket"
+          },
+          {
+            "target": "secolo",
+            "en": "century"
+          },
+          {
+            "target": "corridoio",
+            "en": "corridor"
+          },
+          {
+            "target": "bersaglio",
+            "en": "target"
+          },
+          {
+            "target": "superare",
+            "en": "cross"
+          },
+          {
+            "target": "eccellente",
+            "en": "delicious"
+          },
+          {
+            "target": "sopportare",
+            "en": "support"
+          },
+          {
+            "target": "sparito",
+            "en": "disappeared"
+          },
+          {
+            "target": "riposo",
+            "en": "repose"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u47",
+        "title": "Common words 1151–1175",
+        "subtitle": "The 1151–1175 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "esterno",
+            "en": "external"
+          },
+          {
+            "target": "concerto",
+            "en": "concert"
+          },
+          {
+            "target": "clinica",
+            "en": "clinicial"
+          },
+          {
+            "target": "maestà",
+            "en": "grandeur"
+          },
+          {
+            "target": "tecnologia",
+            "en": "technology"
+          },
+          {
+            "target": "firma",
+            "en": "signature"
+          },
+          {
+            "target": "riposare",
+            "en": "be buried"
+          },
+          {
+            "target": "furto",
+            "en": "theft"
+          },
+          {
+            "target": "vendita",
+            "en": "sale"
+          },
+          {
+            "target": "carcere",
+            "en": "jail"
+          },
+          {
+            "target": "tomba",
+            "en": "tomb"
+          },
+          {
+            "target": "legame",
+            "en": "tie"
+          },
+          {
+            "target": "mostrare",
+            "en": "show"
+          },
+          {
+            "target": "mancanza",
+            "en": "defect"
+          },
+          {
+            "target": "materiale",
+            "en": "bodily"
+          },
+          {
+            "target": "superato",
+            "en": "obsolete"
+          },
+          {
+            "target": "passeggiata",
+            "en": "stroll"
+          },
+          {
+            "target": "impazzire",
+            "en": "go mad"
+          },
+          {
+            "target": "opportunità",
+            "en": "advisability"
+          },
+          {
+            "target": "follia",
+            "en": "folly"
+          },
+          {
+            "target": "attività",
+            "en": "activeness"
+          },
+          {
+            "target": "unità",
+            "en": "singularity"
+          },
+          {
+            "target": "supporto",
+            "en": "backing"
+          },
+          {
+            "target": "giornalista",
+            "en": "journalist"
+          },
+          {
+            "target": "scala",
+            "en": "stairway"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u48",
+        "title": "Common words 1176–1200",
+        "subtitle": "The 1176–1200 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "scienza",
+            "en": "discipline"
+          },
+          {
+            "target": "costume",
+            "en": "custom"
+          },
+          {
+            "target": "passione",
+            "en": "addiction"
+          },
+          {
+            "target": "coscienza",
+            "en": "consciousness"
+          },
+          {
+            "target": "discussione",
+            "en": "argument"
+          },
+          {
+            "target": "profilo",
+            "en": "description"
+          },
+          {
+            "target": "prete",
+            "en": "pastor"
+          },
+          {
+            "target": "sinceramente",
+            "en": "candidly"
+          },
+          {
+            "target": "Elena",
+            "en": "Helen"
+          },
+          {
+            "target": "gusto",
+            "en": "taste"
+          },
+          {
+            "target": "Europa",
+            "en": "Europe"
+          },
+          {
+            "target": "esca",
+            "en": "bait"
+          },
+          {
+            "target": "assicurazione",
+            "en": "assurance"
+          },
+          {
+            "target": "foresta",
+            "en": "forest"
+          },
+          {
+            "target": "mappa",
+            "en": "map"
+          },
+          {
+            "target": "palco",
+            "en": "platform"
+          },
+          {
+            "target": "lieto",
+            "en": "delighted"
+          },
+          {
+            "target": "confuso",
+            "en": "hidden"
+          },
+          {
+            "target": "filo",
+            "en": "thread"
+          },
+          {
+            "target": "trattato",
+            "en": "processed"
+          },
+          {
+            "target": "fabbrica",
+            "en": "factory"
+          },
+          {
+            "target": "federale",
+            "en": "federal"
+          },
+          {
+            "target": "cieco",
+            "en": "blind"
+          },
+          {
+            "target": "responsabilità",
+            "en": "responsibility"
+          },
+          {
+            "target": "Messico",
+            "en": "Mexico"
+          }
+        ]
       }
     ]
   }

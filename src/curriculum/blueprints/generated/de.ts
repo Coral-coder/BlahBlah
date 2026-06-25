@@ -1768,6 +1768,3526 @@ export const sections: SectionBlueprint[] = [
             "en": "whom"
           }
         ]
+      },
+      {
+        "id": "de-gen-u17",
+        "title": "Common words 401–425",
+        "subtitle": "The 401–425 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "König",
+            "en": "king"
+          },
+          {
+            "target": "danach",
+            "en": "after it"
+          },
+          {
+            "target": "funktioniert",
+            "en": "gone"
+          },
+          {
+            "target": "Lernen",
+            "en": "learning"
+          },
+          {
+            "target": "nennen",
+            "en": "clepe"
+          },
+          {
+            "target": "Feuer",
+            "en": "mettle"
+          },
+          {
+            "target": "Laufen",
+            "en": "operation"
+          },
+          {
+            "target": "völlig",
+            "en": "altogether"
+          },
+          {
+            "target": "Stelle",
+            "en": "position of employment"
+          },
+          {
+            "target": "Kumpel",
+            "en": "teammate"
+          },
+          {
+            "target": "verlieren",
+            "en": "lose the game"
+          },
+          {
+            "target": "Probleme",
+            "en": "problems"
+          },
+          {
+            "target": "Kaffee",
+            "en": "coffee"
+          },
+          {
+            "target": "Luft",
+            "en": "elbow room"
+          },
+          {
+            "target": "ziehen",
+            "en": "wrench"
+          },
+          {
+            "target": "Verschwinden",
+            "en": "dying-out"
+          },
+          {
+            "target": "aufhören",
+            "en": "knock off"
+          },
+          {
+            "target": "Suche",
+            "en": "search"
+          },
+          {
+            "target": "Buch",
+            "en": "book"
+          },
+          {
+            "target": "krank",
+            "en": "ill"
+          },
+          {
+            "target": "jedes",
+            "en": "anything"
+          },
+          {
+            "target": "Wert",
+            "en": "worth"
+          },
+          {
+            "target": "froh",
+            "en": "joyous"
+          },
+          {
+            "target": "Versuche",
+            "en": "experiments"
+          },
+          {
+            "target": "Straße",
+            "en": "avenue"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u18",
+        "title": "Common words 426–450",
+        "subtitle": "The 426–450 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "Heiraten",
+            "en": "marrying"
+          },
+          {
+            "target": "super",
+            "en": "great"
+          },
+          {
+            "target": "Gutes",
+            "en": "good"
+          },
+          {
+            "target": "Onkel",
+            "en": "uncle"
+          },
+          {
+            "target": "total",
+            "en": "utter"
+          },
+          {
+            "target": "gebracht",
+            "en": "televised"
+          },
+          {
+            "target": "Party",
+            "en": "bash"
+          },
+          {
+            "target": "erklären",
+            "en": "explain"
+          },
+          {
+            "target": "spielt",
+            "en": "gambles"
+          },
+          {
+            "target": "Wahl",
+            "en": "ballot"
+          },
+          {
+            "target": "damals",
+            "en": "on that occasion"
+          },
+          {
+            "target": "tagen",
+            "en": "be in session"
+          },
+          {
+            "target": "leicht",
+            "en": "light"
+          },
+          {
+            "target": "nachdem",
+            "en": "after"
+          },
+          {
+            "target": "gegangen",
+            "en": "joined"
+          },
+          {
+            "target": "Gefühl",
+            "en": "hunch"
+          },
+          {
+            "target": "Kaufen",
+            "en": "buying"
+          },
+          {
+            "target": "Typen",
+            "en": "types"
+          },
+          {
+            "target": "interessiert",
+            "en": "bright-eyed"
+          },
+          {
+            "target": "Halte",
+            "en": "stopping points"
+          },
+          {
+            "target": "hält",
+            "en": "deems"
+          },
+          {
+            "target": "irgendwo",
+            "en": "somewhere"
+          },
+          {
+            "target": "Stück",
+            "en": "chapter"
+          },
+          {
+            "target": "genauso",
+            "en": "just the same"
+          },
+          {
+            "target": "genommen",
+            "en": "taken"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u19",
+        "title": "Common words 451–475",
+        "subtitle": "The 451–475 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "Zukunft",
+            "en": "future"
+          },
+          {
+            "target": "weniger",
+            "en": "less"
+          },
+          {
+            "target": "cool",
+            "en": "fierce"
+          },
+          {
+            "target": "Licht",
+            "en": "lighting"
+          },
+          {
+            "target": "getroffen",
+            "en": "on target"
+          },
+          {
+            "target": "Himmel",
+            "en": "canopy"
+          },
+          {
+            "target": "Nachricht",
+            "en": "tidings"
+          },
+          {
+            "target": "drüben",
+            "en": "over here"
+          },
+          {
+            "target": "passt",
+            "en": "is suitable"
+          },
+          {
+            "target": "Laut",
+            "en": "ejaculation"
+          },
+          {
+            "target": "angerufen",
+            "en": "appealed"
+          },
+          {
+            "target": "Sitzen",
+            "en": "sitting"
+          },
+          {
+            "target": "daß",
+            "en": "that"
+          },
+          {
+            "target": "Erde",
+            "en": "Earth"
+          },
+          {
+            "target": "Schlüssel",
+            "en": "code"
+          },
+          {
+            "target": "Rest",
+            "en": "tail"
+          },
+          {
+            "target": "passieren",
+            "en": "happen"
+          },
+          {
+            "target": "eher",
+            "en": "rather"
+          },
+          {
+            "target": "gefragt",
+            "en": "sought"
+          },
+          {
+            "target": "Gefängnis",
+            "en": "imprisonment"
+          },
+          {
+            "target": "Opfer",
+            "en": "dweeb"
+          },
+          {
+            "target": "Körper",
+            "en": "body"
+          },
+          {
+            "target": "Mist",
+            "en": "refuse"
+          },
+          {
+            "target": "Schreiben",
+            "en": "letter"
+          },
+          {
+            "target": "gesprochen",
+            "en": "conversational"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u20",
+        "title": "Common words 476–500",
+        "subtitle": "The 476–500 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "Versuch",
+            "en": "experiment"
+          },
+          {
+            "target": "Vorstellen",
+            "en": "showcasing"
+          },
+          {
+            "target": "wovon",
+            "en": "whereof"
+          },
+          {
+            "target": "Herren",
+            "en": "taskmasters"
+          },
+          {
+            "target": "Sex",
+            "en": "sexual intercourse"
+          },
+          {
+            "target": "Waffen",
+            "en": "armament"
+          },
+          {
+            "target": "Wohnung",
+            "en": "flat"
+          },
+          {
+            "target": "Weh",
+            "en": "ache"
+          },
+          {
+            "target": "heißen",
+            "en": "mean"
+          },
+          {
+            "target": "Krankenhaus",
+            "en": "hospital"
+          },
+          {
+            "target": "Millionen",
+            "en": "millions"
+          },
+          {
+            "target": "Klasse",
+            "en": "grade"
+          },
+          {
+            "target": "hart",
+            "en": "draconian"
+          },
+          {
+            "target": "Sinn",
+            "en": "meaning"
+          },
+          {
+            "target": "außerdem",
+            "en": "in addition"
+          },
+          {
+            "target": "verletzt",
+            "en": "broken"
+          },
+          {
+            "target": "ändern",
+            "en": "modify"
+          },
+          {
+            "target": "erfahren",
+            "en": "hear"
+          },
+          {
+            "target": "Tragen",
+            "en": "stretchers"
+          },
+          {
+            "target": "wenigstens",
+            "en": "at least"
+          },
+          {
+            "target": "vorsichtig",
+            "en": "safe"
+          },
+          {
+            "target": "Stolz",
+            "en": "ego"
+          },
+          {
+            "target": "stark",
+            "en": "good at"
+          },
+          {
+            "target": "fällt",
+            "en": "drops"
+          },
+          {
+            "target": "besonders",
+            "en": "individual"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u21",
+        "title": "Common words 501–525",
+        "subtitle": "The 501–525 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "Schöne",
+            "en": "beauty"
+          },
+          {
+            "target": "schicken",
+            "en": "send"
+          },
+          {
+            "target": "Person",
+            "en": "character"
+          },
+          {
+            "target": "Schätze",
+            "en": "treasures"
+          },
+          {
+            "target": "solange",
+            "en": "so long as"
+          },
+          {
+            "target": "länger",
+            "en": "longish"
+          },
+          {
+            "target": "großartig",
+            "en": "excellent"
+          },
+          {
+            "target": "anrufen",
+            "en": "appeal"
+          },
+          {
+            "target": "Stand",
+            "en": "profession"
+          },
+          {
+            "target": "Fühlen",
+            "en": "feeling"
+          },
+          {
+            "target": "erwartet",
+            "en": "waited for"
+          },
+          {
+            "target": "Boden",
+            "en": "soil"
+          },
+          {
+            "target": "Boss",
+            "en": "top dog"
+          },
+          {
+            "target": "Stimme",
+            "en": "part"
+          },
+          {
+            "target": "still",
+            "en": "hushed"
+          },
+          {
+            "target": "Sicherheit",
+            "en": "certitude"
+          },
+          {
+            "target": "Mund",
+            "en": "mouth"
+          },
+          {
+            "target": "kämpfen",
+            "en": "fight"
+          },
+          {
+            "target": "Lachen",
+            "en": "pools"
+          },
+          {
+            "target": "Zeug",
+            "en": "equipment"
+          },
+          {
+            "target": "lustig",
+            "en": "frolicsome"
+          },
+          {
+            "target": "sollst",
+            "en": "shalt"
+          },
+          {
+            "target": "schlimm",
+            "en": "bad"
+          },
+          {
+            "target": "unglaublich",
+            "en": "staggering"
+          },
+          {
+            "target": "Laden",
+            "en": "chests"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u22",
+        "title": "Common words 526–550",
+        "subtitle": "The 526–550 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "Führen",
+            "en": "conduct"
+          },
+          {
+            "target": "gestorben",
+            "en": "dead"
+          },
+          {
+            "target": "Schauen",
+            "en": "fairs"
+          },
+          {
+            "target": "Lesen",
+            "en": "picking"
+          },
+          {
+            "target": "Mörder",
+            "en": "murderer"
+          },
+          {
+            "target": "ähm",
+            "en": "um"
+          },
+          {
+            "target": "Geschehen",
+            "en": "events"
+          },
+          {
+            "target": "Geschäft",
+            "en": "business"
+          },
+          {
+            "target": "Idiot",
+            "en": "dumbass"
+          },
+          {
+            "target": "Verzeihung",
+            "en": "forgiveness"
+          },
+          {
+            "target": "Fliegen",
+            "en": "mayflies"
+          },
+          {
+            "target": "Team",
+            "en": "panel"
+          },
+          {
+            "target": "Schluss",
+            "en": "closure"
+          },
+          {
+            "target": "Schneller",
+            "en": "hank"
+          },
+          {
+            "target": "verdient",
+            "en": "deserved"
+          },
+          {
+            "target": "umgebracht",
+            "en": "liquidated"
+          },
+          {
+            "target": "Perfekt",
+            "en": "present perfect tense"
+          },
+          {
+            "target": "versprochen",
+            "en": "expected"
+          },
+          {
+            "target": "Handy",
+            "en": "mobile phone"
+          },
+          {
+            "target": "hinten",
+            "en": "aft"
+          },
+          {
+            "target": "Monate",
+            "en": "months"
+          },
+          {
+            "target": "acht",
+            "en": "eight"
+          },
+          {
+            "target": "Fallen",
+            "en": "drop"
+          },
+          {
+            "target": "Rufe",
+            "en": "telephone calls"
+          },
+          {
+            "target": "nötig",
+            "en": "required"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u23",
+        "title": "Common words 551–575",
+        "subtitle": "The 551–575 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "Mord",
+            "en": "murder"
+          },
+          {
+            "target": "unmöglich",
+            "en": "outrageous"
+          },
+          {
+            "target": "tatsächlich",
+            "en": "actual"
+          },
+          {
+            "target": "Folgen",
+            "en": "implication"
+          },
+          {
+            "target": "Bitten",
+            "en": "requests"
+          },
+          {
+            "target": "Behalten",
+            "en": "memory retention"
+          },
+          {
+            "target": "Nähe",
+            "en": "vicinity"
+          },
+          {
+            "target": "verdammte",
+            "en": "condemned"
+          },
+          {
+            "target": "plötzlich",
+            "en": "with a rush"
+          },
+          {
+            "target": "Tisch",
+            "en": "table"
+          },
+          {
+            "target": "Michael",
+            "en": "Mikhail"
+          },
+          {
+            "target": "hörte",
+            "en": "listened"
+          },
+          {
+            "target": "jemals",
+            "en": "ever"
+          },
+          {
+            "target": "Liegen",
+            "en": "recumbency"
+          },
+          {
+            "target": "Verkaufen",
+            "en": "selling"
+          },
+          {
+            "target": "gefährlich",
+            "en": "dangerous"
+          },
+          {
+            "target": "anfangen",
+            "en": "tee off"
+          },
+          {
+            "target": "hilft",
+            "en": "befriends"
+          },
+          {
+            "target": "Meister",
+            "en": "professional"
+          },
+          {
+            "target": "Antwort",
+            "en": "answer"
+          },
+          {
+            "target": "geschickt",
+            "en": "agile"
+          },
+          {
+            "target": "obwohl",
+            "en": "although"
+          },
+          {
+            "target": "Sieben",
+            "en": "seven"
+          },
+          {
+            "target": "komisch",
+            "en": "droll"
+          },
+          {
+            "target": "gewinnen",
+            "en": "clinch a win"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u24",
+        "title": "Common words 576–600",
+        "subtitle": "The 576–600 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "bezahlt",
+            "en": "funded"
+          },
+          {
+            "target": "voller",
+            "en": "drunker"
+          },
+          {
+            "target": "unterwegs",
+            "en": "in transit"
+          },
+          {
+            "target": "dumm",
+            "en": "annoying"
+          },
+          {
+            "target": "Ärger",
+            "en": "anger"
+          },
+          {
+            "target": "George",
+            "en": "Georgian"
+          },
+          {
+            "target": "neu",
+            "en": "recent"
+          },
+          {
+            "target": "Bezahlen",
+            "en": "payment"
+          },
+          {
+            "target": "dagegen",
+            "en": "against it"
+          },
+          {
+            "target": "Leiche",
+            "en": "dead body"
+          },
+          {
+            "target": "Auge",
+            "en": "eye"
+          },
+          {
+            "target": "Arschloch",
+            "en": "shithead"
+          },
+          {
+            "target": "verheiratet",
+            "en": "coupled"
+          },
+          {
+            "target": "gerettet",
+            "en": "saved from harm"
+          },
+          {
+            "target": "Agent",
+            "en": "secret service agent"
+          },
+          {
+            "target": "Traum",
+            "en": "dream"
+          },
+          {
+            "target": "Entscheidung",
+            "en": "decision"
+          },
+          {
+            "target": "schlimmer",
+            "en": "more fatal"
+          },
+          {
+            "target": "Regeln",
+            "en": "rules"
+          },
+          {
+            "target": "Fenster",
+            "en": "box"
+          },
+          {
+            "target": "ständig",
+            "en": "persistent"
+          },
+          {
+            "target": "Gefahr",
+            "en": "threat"
+          },
+          {
+            "target": "Augenblick",
+            "en": "moment"
+          },
+          {
+            "target": "Bescheid",
+            "en": "administrative notice"
+          },
+          {
+            "target": "Gedanken",
+            "en": "thoughts"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u25",
+        "title": "Common words 601–625",
+        "subtitle": "The 601–625 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "Ziel",
+            "en": "bourn"
+          },
+          {
+            "target": "benutzt",
+            "en": "used"
+          },
+          {
+            "target": "Bewegung",
+            "en": "moving"
+          },
+          {
+            "target": "wünschte",
+            "en": "wanted"
+          },
+          {
+            "target": "Worte",
+            "en": "words"
+          },
+          {
+            "target": "welcher",
+            "en": "which"
+          },
+          {
+            "target": "Zahlen",
+            "en": "numbers"
+          },
+          {
+            "target": "Anfang",
+            "en": "commencement"
+          },
+          {
+            "target": "Legen",
+            "en": "placement"
+          },
+          {
+            "target": "Anwalt",
+            "en": "procurator"
+          },
+          {
+            "target": "offen",
+            "en": "open-minded"
+          },
+          {
+            "target": "Schönen",
+            "en": "belles"
+          },
+          {
+            "target": "Arme",
+            "en": "arms"
+          },
+          {
+            "target": "Bier",
+            "en": "beer"
+          },
+          {
+            "target": "Partner",
+            "en": "mate"
+          },
+          {
+            "target": "klein",
+            "en": "small"
+          },
+          {
+            "target": "Klappe",
+            "en": "clapperboard"
+          },
+          {
+            "target": "süß",
+            "en": "mellow"
+          },
+          {
+            "target": "herum",
+            "en": "around"
+          },
+          {
+            "target": "Finger",
+            "en": "spring finger"
+          },
+          {
+            "target": "Ehe",
+            "en": "marriage"
+          },
+          {
+            "target": "Rolle",
+            "en": "role"
+          },
+          {
+            "target": "Gleiche",
+            "en": "like"
+          },
+          {
+            "target": "Monat",
+            "en": "month"
+          },
+          {
+            "target": "Hochzeit",
+            "en": "heyday"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u26",
+        "title": "Common words 626–650",
+        "subtitle": "The 626–650 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "führt",
+            "en": "guides"
+          },
+          {
+            "target": "wach",
+            "en": "awake"
+          },
+          {
+            "target": "wozu",
+            "en": "for what reason"
+          },
+          {
+            "target": "Arm",
+            "en": "arm in arm"
+          },
+          {
+            "target": "geschrieben",
+            "en": "written in"
+          },
+          {
+            "target": "Chef",
+            "en": "chief"
+          },
+          {
+            "target": "Informationen",
+            "en": "information"
+          },
+          {
+            "target": "erledigt",
+            "en": "finished"
+          },
+          {
+            "target": "hoffentlich",
+            "en": "I hope so"
+          },
+          {
+            "target": "fühlt",
+            "en": "senses"
+          },
+          {
+            "target": "Tanzen",
+            "en": "dancing"
+          },
+          {
+            "target": "Ansehen",
+            "en": "good reputation"
+          },
+          {
+            "target": "Zuhause",
+            "en": "home"
+          },
+          {
+            "target": "wunderbar",
+            "en": "prodigious"
+          },
+          {
+            "target": "Reise",
+            "en": "journey"
+          },
+          {
+            "target": "gewonnen",
+            "en": "obtained"
+          },
+          {
+            "target": "Dame",
+            "en": "lady"
+          },
+          {
+            "target": "irgendwann",
+            "en": "sometime"
+          },
+          {
+            "target": "steckt",
+            "en": "puts"
+          },
+          {
+            "target": "jedenfalls",
+            "en": "anyhow"
+          },
+          {
+            "target": "schreit",
+            "en": "bawls"
+          },
+          {
+            "target": "nennt",
+            "en": "terms"
+          },
+          {
+            "target": "heiß",
+            "en": "hot"
+          },
+          {
+            "target": "kalt",
+            "en": "cold"
+          },
+          {
+            "target": "Weile",
+            "en": "while"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u27",
+        "title": "Common words 651–675",
+        "subtitle": "The 651–675 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "bisher",
+            "en": "until now"
+          },
+          {
+            "target": "Minute",
+            "en": "last-minute"
+          },
+          {
+            "target": "unbedingt",
+            "en": "unconditionally"
+          },
+          {
+            "target": "Zug",
+            "en": "strain"
+          },
+          {
+            "target": "Sekunden",
+            "en": "seconds"
+          },
+          {
+            "target": "wofür",
+            "en": "for what"
+          },
+          {
+            "target": "Beweise",
+            "en": "proof"
+          },
+          {
+            "target": "aller",
+            "en": "all"
+          },
+          {
+            "target": "Seele",
+            "en": "barrel bore"
+          },
+          {
+            "target": "Schießen",
+            "en": "fire"
+          },
+          {
+            "target": "müde",
+            "en": "tame"
+          },
+          {
+            "target": "dauert",
+            "en": "lasts"
+          },
+          {
+            "target": "gelernt",
+            "en": "skilled"
+          },
+          {
+            "target": "Sucht",
+            "en": "addiction"
+          },
+          {
+            "target": "bekannt",
+            "en": "known"
+          },
+          {
+            "target": "Weitere",
+            "en": "further details"
+          },
+          {
+            "target": "Unfall",
+            "en": "accident"
+          },
+          {
+            "target": "Kontrolle",
+            "en": "control"
+          },
+          {
+            "target": "Beispiel",
+            "en": "example"
+          },
+          {
+            "target": "dasselbe",
+            "en": "the same"
+          },
+          {
+            "target": "Herzen",
+            "en": "hearts"
+          },
+          {
+            "target": "Schlagen",
+            "en": "fell"
+          },
+          {
+            "target": "wütend",
+            "en": "furious"
+          },
+          {
+            "target": "Weise",
+            "en": "way"
+          },
+          {
+            "target": "Damen",
+            "en": "ladies"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u28",
+        "title": "Common words 676–700",
+        "subtitle": "The 676–700 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "darin",
+            "en": "therein"
+          },
+          {
+            "target": "holt",
+            "en": "gets"
+          },
+          {
+            "target": "Vorsicht",
+            "en": "caution"
+          },
+          {
+            "target": "beweisen",
+            "en": "prove"
+          },
+          {
+            "target": "gehabt",
+            "en": "held"
+          },
+          {
+            "target": "zumindest",
+            "en": "at a"
+          },
+          {
+            "target": "vermisst",
+            "en": "missed in action"
+          },
+          {
+            "target": "hübsch",
+            "en": "handsome"
+          },
+          {
+            "target": "Verbindung",
+            "en": "bedfellows"
+          },
+          {
+            "target": "Tief",
+            "en": "depression"
+          },
+          {
+            "target": "Richtung",
+            "en": "line"
+          },
+          {
+            "target": "Lage",
+            "en": "layer"
+          },
+          {
+            "target": "Kraft",
+            "en": "clout"
+          },
+          {
+            "target": "normal",
+            "en": "standard"
+          },
+          {
+            "target": "Lauf",
+            "en": "launder"
+          },
+          {
+            "target": "Ehre",
+            "en": "kudos"
+          },
+          {
+            "target": "Geschenk",
+            "en": "present"
+          },
+          {
+            "target": "Bar",
+            "en": "nightclub"
+          },
+          {
+            "target": "Tasche",
+            "en": "recess"
+          },
+          {
+            "target": "gelesen",
+            "en": "harvested"
+          },
+          {
+            "target": "gekauft",
+            "en": "bought"
+          },
+          {
+            "target": "gestohlen",
+            "en": "stolen"
+          },
+          {
+            "target": "Hunger",
+            "en": "hungriness"
+          },
+          {
+            "target": "Lügen",
+            "en": "lies"
+          },
+          {
+            "target": "Beziehung",
+            "en": "relation"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u29",
+        "title": "Common words 701–725",
+        "subtitle": "The 701–725 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "gearbeitet",
+            "en": "worked"
+          },
+          {
+            "target": "Preis",
+            "en": "award"
+          },
+          {
+            "target": "Witz",
+            "en": "esprit"
+          },
+          {
+            "target": "meinte",
+            "en": "reckoned"
+          },
+          {
+            "target": "Liste",
+            "en": "laundry list"
+          },
+          {
+            "target": "Geist",
+            "en": "spirit"
+          },
+          {
+            "target": "neben",
+            "en": "by"
+          },
+          {
+            "target": "gesucht",
+            "en": "prospected"
+          },
+          {
+            "target": "Firma",
+            "en": "company"
+          },
+          {
+            "target": "Süße",
+            "en": "lusciousness"
+          },
+          {
+            "target": "Rücken",
+            "en": "book spine"
+          },
+          {
+            "target": "schrecklich",
+            "en": "abominable"
+          },
+          {
+            "target": "verliebt",
+            "en": "fallen in love"
+          },
+          {
+            "target": "Öffnen",
+            "en": "opening"
+          },
+          {
+            "target": "redet",
+            "en": "discourses"
+          },
+          {
+            "target": "Boot",
+            "en": "boat"
+          },
+          {
+            "target": "seltsam",
+            "en": "extraordinary"
+          },
+          {
+            "target": "versteckt",
+            "en": "oblique"
+          },
+          {
+            "target": "erwischt",
+            "en": "caught"
+          },
+          {
+            "target": "verkauft",
+            "en": "purveyed"
+          },
+          {
+            "target": "Tante",
+            "en": "aunt"
+          },
+          {
+            "target": "erwarten",
+            "en": "anticipate"
+          },
+          {
+            "target": "Pferd",
+            "en": "horse"
+          },
+          {
+            "target": "Wunder",
+            "en": "wonder"
+          },
+          {
+            "target": "sauer",
+            "en": "sour"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u30",
+        "title": "Common words 726–750",
+        "subtitle": "The 726–750 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "vermutlich",
+            "en": "supposed"
+          },
+          {
+            "target": "Näher",
+            "en": "sewing worker"
+          },
+          {
+            "target": "Major",
+            "en": "Wing Commander"
+          },
+          {
+            "target": "jung",
+            "en": "young"
+          },
+          {
+            "target": "Majestät",
+            "en": "majesty"
+          },
+          {
+            "target": "Aussehen",
+            "en": "appearance"
+          },
+          {
+            "target": "links",
+            "en": "left"
+          },
+          {
+            "target": "beschützen",
+            "en": "shelter"
+          },
+          {
+            "target": "geboren",
+            "en": "born"
+          },
+          {
+            "target": "Erreichen",
+            "en": "achievement"
+          },
+          {
+            "target": "Punkt",
+            "en": "dot"
+          },
+          {
+            "target": "Kirche",
+            "en": "church service"
+          },
+          {
+            "target": "verraten",
+            "en": "blabbed"
+          },
+          {
+            "target": "selber",
+            "en": "oneself"
+          },
+          {
+            "target": "Befehl",
+            "en": "order"
+          },
+          {
+            "target": "fährt",
+            "en": "operates"
+          },
+          {
+            "target": "zieht",
+            "en": "wrenches"
+          },
+          {
+            "target": "Geburtstag",
+            "en": "birthday"
+          },
+          {
+            "target": "Haut",
+            "en": "skin"
+          },
+          {
+            "target": "Wette",
+            "en": "bet"
+          },
+          {
+            "target": "Reich",
+            "en": "empire"
+          },
+          {
+            "target": "Sekunde",
+            "en": "second"
+          },
+          {
+            "target": "geredet",
+            "en": "discoursed"
+          },
+          {
+            "target": "James",
+            "en": "Jim"
+          },
+          {
+            "target": "eigene",
+            "en": "own"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u31",
+        "title": "Common words 751–775",
+        "subtitle": "The 751–775 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "Zeiten",
+            "en": "times"
+          },
+          {
+            "target": "traurig",
+            "en": "sorrowful"
+          },
+          {
+            "target": "Anruf",
+            "en": "challenge"
+          },
+          {
+            "target": "Nachrichten",
+            "en": "news"
+          },
+          {
+            "target": "Frieden",
+            "en": "peace"
+          },
+          {
+            "target": "Karte",
+            "en": "pass"
+          },
+          {
+            "target": "Güte",
+            "en": "kindness"
+          },
+          {
+            "target": "diesmal",
+            "en": "this time"
+          },
+          {
+            "target": "schade",
+            "en": "What a pity"
+          },
+          {
+            "target": "persönlich",
+            "en": "personal"
+          },
+          {
+            "target": "Kriege",
+            "en": "wars"
+          },
+          {
+            "target": "Bleibe",
+            "en": "domicile"
+          },
+          {
+            "target": "verändert",
+            "en": "modified"
+          },
+          {
+            "target": "Sonne",
+            "en": "sun"
+          },
+          {
+            "target": "nämlich",
+            "en": "namely"
+          },
+          {
+            "target": "ruft",
+            "en": "hoots"
+          },
+          {
+            "target": "Professor",
+            "en": "wonk"
+          },
+          {
+            "target": "Gericht",
+            "en": "court"
+          },
+          {
+            "target": "Nase",
+            "en": "nose"
+          },
+          {
+            "target": "ewig",
+            "en": "perpetual"
+          },
+          {
+            "target": "Singen",
+            "en": "singing"
+          },
+          {
+            "target": "Bank",
+            "en": "settle"
+          },
+          {
+            "target": "beschäftigt",
+            "en": "absorbed"
+          },
+          {
+            "target": "Computer",
+            "en": "pen computer"
+          },
+          {
+            "target": "Toten",
+            "en": "fatalities"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u32",
+        "title": "Common words 776–800",
+        "subtitle": "The 776–800 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "Weihnachten",
+            "en": "Christmas"
+          },
+          {
+            "target": "offensichtlich",
+            "en": "perfectly clear"
+          },
+          {
+            "target": "naja",
+            "en": "well"
+          },
+          {
+            "target": "Gefühle",
+            "en": "sentiments"
+          },
+          {
+            "target": "Fuß",
+            "en": "base"
+          },
+          {
+            "target": "Überraschung",
+            "en": "surprise"
+          },
+          {
+            "target": "Geheimnis",
+            "en": "secret"
+          },
+          {
+            "target": "Kontakt",
+            "en": "contact"
+          },
+          {
+            "target": "Gold",
+            "en": "solid gold jewellery"
+          },
+          {
+            "target": "Drogen",
+            "en": "addictive substances"
+          },
+          {
+            "target": "Regierung",
+            "en": "government"
+          },
+          {
+            "target": "Wein",
+            "en": "wine"
+          },
+          {
+            "target": "ermordet",
+            "en": "murderred"
+          },
+          {
+            "target": "Fotos",
+            "en": "pictures"
+          },
+          {
+            "target": "entfernt",
+            "en": "taken off"
+          },
+          {
+            "target": "geschlafen",
+            "en": "slept"
+          },
+          {
+            "target": "manche",
+            "en": "some"
+          },
+          {
+            "target": "erledigen",
+            "en": "finish"
+          },
+          {
+            "target": "Gegenüber",
+            "en": "neighbours opposite"
+          },
+          {
+            "target": "Lust",
+            "en": "zest"
+          },
+          {
+            "target": "wunderschön",
+            "en": "wonderful"
+          },
+          {
+            "target": "witzig",
+            "en": "witty"
+          },
+          {
+            "target": "zerstört",
+            "en": "ruined"
+          },
+          {
+            "target": "übrigens",
+            "en": "incidentally"
+          },
+          {
+            "target": "namens",
+            "en": "named"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u33",
+        "title": "Common words 801–825",
+        "subtitle": "The 801–825 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "zeigt",
+            "en": "evidences"
+          },
+          {
+            "target": "geliebt",
+            "en": "beloved"
+          },
+          {
+            "target": "gehören",
+            "en": "appertain"
+          },
+          {
+            "target": "brachte",
+            "en": "conveyed"
+          },
+          {
+            "target": "Blick",
+            "en": "sight"
+          },
+          {
+            "target": "Besuch",
+            "en": "visit"
+          },
+          {
+            "target": "Haare",
+            "en": "hair"
+          },
+          {
+            "target": "Antworten",
+            "en": "answers"
+          },
+          {
+            "target": "Präsident",
+            "en": "president"
+          },
+          {
+            "target": "Hoffnung",
+            "en": "hope"
+          },
+          {
+            "target": "Stecken",
+            "en": "stick"
+          },
+          {
+            "target": "interessant",
+            "en": "intriguing"
+          },
+          {
+            "target": "entscheiden",
+            "en": "decide"
+          },
+          {
+            "target": "miteinander",
+            "en": "with each other"
+          },
+          {
+            "target": "meint",
+            "en": "reckons"
+          },
+          {
+            "target": "Wohnen",
+            "en": "living"
+          },
+          {
+            "target": "Möglichkeit",
+            "en": "recourse"
+          },
+          {
+            "target": "kaputt",
+            "en": "whacked"
+          },
+          {
+            "target": "Flugzeug",
+            "en": "aeroplane"
+          },
+          {
+            "target": "Vergangenheit",
+            "en": "past"
+          },
+          {
+            "target": "Zweite",
+            "en": "runner-up"
+          },
+          {
+            "target": "Armee",
+            "en": "army"
+          },
+          {
+            "target": "Jim",
+            "en": "James"
+          },
+          {
+            "target": "Tee",
+            "en": "tea"
+          },
+          {
+            "target": "entweder",
+            "en": "either"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u34",
+        "title": "Common words 826–850",
+        "subtitle": "The 826–850 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "Aufhalten",
+            "en": "detention"
+          },
+          {
+            "target": "stellt",
+            "en": "provides"
+          },
+          {
+            "target": "überrascht",
+            "en": "overtaken"
+          },
+          {
+            "target": "sauber",
+            "en": "shiny"
+          },
+          {
+            "target": "Mark",
+            "en": "pulp"
+          },
+          {
+            "target": "Untertitel",
+            "en": "subhead"
+          },
+          {
+            "target": "setzt",
+            "en": "places"
+          },
+          {
+            "target": "nervös",
+            "en": "flustered"
+          },
+          {
+            "target": "Gesellschaft",
+            "en": "society"
+          },
+          {
+            "target": "Verstecken",
+            "en": "hiding"
+          },
+          {
+            "target": "schuldig",
+            "en": "guilty"
+          },
+          {
+            "target": "Hals",
+            "en": "neck"
+          },
+          {
+            "target": "Schützen",
+            "en": "archers"
+          },
+          {
+            "target": "passen",
+            "en": "fit the bill"
+          },
+          {
+            "target": "Überleben",
+            "en": "survival"
+          },
+          {
+            "target": "Erhalten",
+            "en": "receipt"
+          },
+          {
+            "target": "teilen",
+            "en": "partition"
+          },
+          {
+            "target": "Gebäude",
+            "en": "building"
+          },
+          {
+            "target": "Schicksal",
+            "en": "fortune"
+          },
+          {
+            "target": "Zeichen",
+            "en": "sign"
+          },
+          {
+            "target": "Richter",
+            "en": "judge"
+          },
+          {
+            "target": "besorgt",
+            "en": "anxious"
+          },
+          {
+            "target": "Küche",
+            "en": "kitchen"
+          },
+          {
+            "target": "Vergnügen",
+            "en": "joy"
+          },
+          {
+            "target": "Königin",
+            "en": "queen consort"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u35",
+        "title": "Common words 851–875",
+        "subtitle": "The 851–875 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "Soldaten",
+            "en": "soldiers"
+          },
+          {
+            "target": "Feiern",
+            "en": "celebrations"
+          },
+          {
+            "target": "Situation",
+            "en": "a no-win situation"
+          },
+          {
+            "target": "gelassen",
+            "en": "equanimous"
+          },
+          {
+            "target": "allerdings",
+            "en": "indeed"
+          },
+          {
+            "target": "soweit",
+            "en": "as far as"
+          },
+          {
+            "target": "Gefahren",
+            "en": "threats"
+          },
+          {
+            "target": "Verstand",
+            "en": "common sense"
+          },
+          {
+            "target": "Bord",
+            "en": "board"
+          },
+          {
+            "target": "angefangen",
+            "en": "taken to"
+          },
+          {
+            "target": "Lee",
+            "en": "lee side"
+          },
+          {
+            "target": "Bob",
+            "en": "bobsleigh"
+          },
+          {
+            "target": "Rat",
+            "en": "advice"
+          },
+          {
+            "target": "worauf",
+            "en": "whereupon"
+          },
+          {
+            "target": "gebeten",
+            "en": "asked"
+          },
+          {
+            "target": "Kamera",
+            "en": "still camera"
+          },
+          {
+            "target": "Achtung",
+            "en": "regard"
+          },
+          {
+            "target": "Schuhe",
+            "en": "footwear"
+          },
+          {
+            "target": "Glückwunsch",
+            "en": "congratulations"
+          },
+          {
+            "target": "statt",
+            "en": "instead of"
+          },
+          {
+            "target": "übernehmen",
+            "en": "import data"
+          },
+          {
+            "target": "Gegend",
+            "en": "district"
+          },
+          {
+            "target": "Wald",
+            "en": "wood"
+          },
+          {
+            "target": "Erkennen",
+            "en": "recognition"
+          },
+          {
+            "target": "Glas",
+            "en": "spectacles glass"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u36",
+        "title": "Common words 876–900",
+        "subtitle": "The 876–900 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "verantwortlich",
+            "en": "answerable"
+          },
+          {
+            "target": "stöhnt",
+            "en": "moans"
+          },
+          {
+            "target": "herein",
+            "en": "in"
+          },
+          {
+            "target": "Kleid",
+            "en": "livery"
+          },
+          {
+            "target": "zerstören",
+            "en": "ruin"
+          },
+          {
+            "target": "jawohl",
+            "en": "that's right"
+          },
+          {
+            "target": "gegessen",
+            "en": "eaten"
+          },
+          {
+            "target": "Abendessen",
+            "en": "supper"
+          },
+          {
+            "target": "Gesetz",
+            "en": "law"
+          },
+          {
+            "target": "gemeinsam",
+            "en": "common"
+          },
+          {
+            "target": "geholfen",
+            "en": "helped"
+          },
+          {
+            "target": "Schritt",
+            "en": "crotch"
+          },
+          {
+            "target": "Nahe",
+            "en": "medium close shot"
+          },
+          {
+            "target": "Band",
+            "en": "ribbon"
+          },
+          {
+            "target": "ungefähr",
+            "en": "approximately"
+          },
+          {
+            "target": "Aufgabe",
+            "en": "job"
+          },
+          {
+            "target": "Neun",
+            "en": "nine"
+          },
+          {
+            "target": "furchtbar",
+            "en": "dire"
+          },
+          {
+            "target": "drinnen",
+            "en": "indoors"
+          },
+          {
+            "target": "Amerika",
+            "en": "America"
+          },
+          {
+            "target": "übrig",
+            "en": "spare"
+          },
+          {
+            "target": "Spur",
+            "en": "traffic lane"
+          },
+          {
+            "target": "Melden",
+            "en": "saltbushes"
+          },
+          {
+            "target": "werfen",
+            "en": "fawn"
+          },
+          {
+            "target": "erinnert",
+            "en": "been evocative"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u37",
+        "title": "Common words 901–925",
+        "subtitle": "The 901–925 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "erschossen",
+            "en": "be worn out"
+          },
+          {
+            "target": "verzeihen",
+            "en": "condone"
+          },
+          {
+            "target": "Schwein",
+            "en": "pig"
+          },
+          {
+            "target": "Monster",
+            "en": "monsters"
+          },
+          {
+            "target": "entschieden",
+            "en": "emphatic"
+          },
+          {
+            "target": "Brauch",
+            "en": "convention"
+          },
+          {
+            "target": "vorne",
+            "en": "at the front"
+          },
+          {
+            "target": "Schlampe",
+            "en": "floozie"
+          },
+          {
+            "target": "schöner",
+            "en": "more beautiful"
+          },
+          {
+            "target": "Adresse",
+            "en": "address"
+          },
+          {
+            "target": "Unsinn",
+            "en": "nonsense"
+          },
+          {
+            "target": "Messer",
+            "en": "knife"
+          },
+          {
+            "target": "gesund",
+            "en": "healthy"
+          },
+          {
+            "target": "Respekt",
+            "en": "respect"
+          },
+          {
+            "target": "pro",
+            "en": "per"
+          },
+          {
+            "target": "Leisten",
+            "en": "guide rails"
+          },
+          {
+            "target": "davor",
+            "en": "in front"
+          },
+          {
+            "target": "Ball",
+            "en": "low"
+          },
+          {
+            "target": "mitnehmen",
+            "en": "carry along"
+          },
+          {
+            "target": "Schwierigkeiten",
+            "en": "bother"
+          },
+          {
+            "target": "Hälfte",
+            "en": "half"
+          },
+          {
+            "target": "Planeten",
+            "en": "planets"
+          },
+          {
+            "target": "schwanger",
+            "en": "pregnant"
+          },
+          {
+            "target": "Gruppe",
+            "en": "bank"
+          },
+          {
+            "target": "verhaftet",
+            "en": "arrested"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u38",
+        "title": "Common words 926–950",
+        "subtitle": "The 926–950 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "Deal",
+            "en": "business deal"
+          },
+          {
+            "target": "versteht",
+            "en": "comprehends"
+          },
+          {
+            "target": "Drehen",
+            "en": "jiggering"
+          },
+          {
+            "target": "Eis",
+            "en": "E sharp"
+          },
+          {
+            "target": "danken",
+            "en": "say thanks"
+          },
+          {
+            "target": "Erfolg",
+            "en": "success"
+          },
+          {
+            "target": "Schließen",
+            "en": "hasps"
+          },
+          {
+            "target": "besorgen",
+            "en": "see to"
+          },
+          {
+            "target": "Wochenende",
+            "en": "weekend"
+          },
+          {
+            "target": "Stimmen",
+            "en": "voices"
+          },
+          {
+            "target": "Witze",
+            "en": "gags"
+          },
+          {
+            "target": "Beine",
+            "en": "legs"
+          },
+          {
+            "target": "Verbrechen",
+            "en": "foul play"
+          },
+          {
+            "target": "Bericht",
+            "en": "report"
+          },
+          {
+            "target": "nachts",
+            "en": "at night"
+          },
+          {
+            "target": "Prinzessin",
+            "en": "princess"
+          },
+          {
+            "target": "Schmerz",
+            "en": "grief"
+          },
+          {
+            "target": "klingelt",
+            "en": "rings the bell"
+          },
+          {
+            "target": "Position",
+            "en": "function"
+          },
+          {
+            "target": "gleichen",
+            "en": "equal"
+          },
+          {
+            "target": "Fernsehen",
+            "en": "television"
+          },
+          {
+            "target": "schließlich",
+            "en": "in the end"
+          },
+          {
+            "target": "gefangen",
+            "en": "fielded"
+          },
+          {
+            "target": "Schätzchen",
+            "en": "sweetie"
+          },
+          {
+            "target": "schwierig",
+            "en": "awkward"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u39",
+        "title": "Common words 951–975",
+        "subtitle": "The 951–975 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "Angebot",
+            "en": "offer"
+          },
+          {
+            "target": "nah",
+            "en": "near"
+          },
+          {
+            "target": "gewartet",
+            "en": "waited"
+          },
+          {
+            "target": "Ring",
+            "en": "annulus"
+          },
+          {
+            "target": "Rennen",
+            "en": "heat"
+          },
+          {
+            "target": "Lied",
+            "en": "song"
+          },
+          {
+            "target": "Eier",
+            "en": "eggs"
+          },
+          {
+            "target": "fantastisch",
+            "en": "fantastical"
+          },
+          {
+            "target": "hielt",
+            "en": "deemed"
+          },
+          {
+            "target": "Falle",
+            "en": "decoy"
+          },
+          {
+            "target": "Drink",
+            "en": "tipple"
+          },
+          {
+            "target": "Insel",
+            "en": "island"
+          },
+          {
+            "target": "zufällig",
+            "en": "by hazard"
+          },
+          {
+            "target": "Dorf",
+            "en": "village"
+          },
+          {
+            "target": "bewegt",
+            "en": "moved"
+          },
+          {
+            "target": "Mitten",
+            "en": "middles"
+          },
+          {
+            "target": "Bullen",
+            "en": "cops"
+          },
+          {
+            "target": "Feind",
+            "en": "adversary"
+          },
+          {
+            "target": "einverstanden",
+            "en": "fair enough"
+          },
+          {
+            "target": "neuer",
+            "en": "newer"
+          },
+          {
+            "target": "Bauen",
+            "en": "constructing"
+          },
+          {
+            "target": "trägt",
+            "en": "bears"
+          },
+          {
+            "target": "hängen",
+            "en": "hang"
+          },
+          {
+            "target": "deren",
+            "en": "whose"
+          },
+          {
+            "target": "verpasst",
+            "en": "slipped"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u40",
+        "title": "Common words 976–1000",
+        "subtitle": "The 976–1000 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "Unternehmen",
+            "en": "concern"
+          },
+          {
+            "target": "Träume",
+            "en": "dreams"
+          },
+          {
+            "target": "kostet",
+            "en": "tastes"
+          },
+          {
+            "target": "Spiele",
+            "en": "games"
+          },
+          {
+            "target": "entlang",
+            "en": "along"
+          },
+          {
+            "target": "Versprechen",
+            "en": "promise"
+          },
+          {
+            "target": "Tiere",
+            "en": "animals"
+          },
+          {
+            "target": "Freiheit",
+            "en": "liberty"
+          },
+          {
+            "target": "verdienen",
+            "en": "earn"
+          },
+          {
+            "target": "unterhalten",
+            "en": "regale"
+          },
+          {
+            "target": "eingeladen",
+            "en": "invited"
+          },
+          {
+            "target": "Schaden",
+            "en": "impairment"
+          },
+          {
+            "target": "beenden",
+            "en": "finalise"
+          },
+          {
+            "target": "geändert",
+            "en": "changed"
+          },
+          {
+            "target": "lächerlich",
+            "en": "laughable"
+          },
+          {
+            "target": "geschlagen",
+            "en": "washed"
+          },
+          {
+            "target": "beginnt",
+            "en": "starts"
+          },
+          {
+            "target": "Ehren",
+            "en": "honours"
+          },
+          {
+            "target": "größte",
+            "en": "major"
+          },
+          {
+            "target": "Energie",
+            "en": "energy"
+          },
+          {
+            "target": "Fleisch",
+            "en": "meat"
+          },
+          {
+            "target": "Besonderes",
+            "en": "special feature"
+          },
+          {
+            "target": "besteht",
+            "en": "insists"
+          },
+          {
+            "target": "reichen",
+            "en": "last out"
+          },
+          {
+            "target": "Zeitung",
+            "en": "newspaper"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u41",
+        "title": "Common words 1001–1025",
+        "subtitle": "The 1001–1025 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "worum",
+            "en": "about what"
+          },
+          {
+            "target": "nachgedacht",
+            "en": "thought about"
+          },
+          {
+            "target": "betrunken",
+            "en": "drunk"
+          },
+          {
+            "target": "Patienten",
+            "en": "patients"
+          },
+          {
+            "target": "Gespräch",
+            "en": "interview"
+          },
+          {
+            "target": "Leiden",
+            "en": "sorrow"
+          },
+          {
+            "target": "Taxi",
+            "en": "taxicab"
+          },
+          {
+            "target": "See",
+            "en": "inland lake"
+          },
+          {
+            "target": "Unterschied",
+            "en": "contrast"
+          },
+          {
+            "target": "Wind",
+            "en": "blast"
+          },
+          {
+            "target": "schreien",
+            "en": "holler"
+          },
+          {
+            "target": "Wand",
+            "en": "indoor wall"
+          },
+          {
+            "target": "Bus",
+            "en": "jitney"
+          },
+          {
+            "target": "Angriff",
+            "en": "aggression"
+          },
+          {
+            "target": "Verhalten",
+            "en": "manner"
+          },
+          {
+            "target": "Loch",
+            "en": "drill hole"
+          },
+          {
+            "target": "Interesse",
+            "en": "care"
+          },
+          {
+            "target": "treten",
+            "en": "step"
+          },
+          {
+            "target": "Quatsch",
+            "en": "rubbish"
+          },
+          {
+            "target": "Polizist",
+            "en": "police officer"
+          },
+          {
+            "target": "Blumen",
+            "en": "flowers"
+          },
+          {
+            "target": "Flasche",
+            "en": "bottle"
+          },
+          {
+            "target": "rief",
+            "en": "hooted"
+          },
+          {
+            "target": "Schuss",
+            "en": "shoot"
+          },
+          {
+            "target": "Fassen",
+            "en": "bite"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u42",
+        "title": "Common words 1026–1050",
+        "subtitle": "The 1026–1050 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "Meer",
+            "en": "sea"
+          },
+          {
+            "target": "Bein",
+            "en": "leg"
+          },
+          {
+            "target": "verbringen",
+            "en": "spend"
+          },
+          {
+            "target": "Bücher",
+            "en": "books"
+          },
+          {
+            "target": "blöd",
+            "en": "silly"
+          },
+          {
+            "target": "Frühstück",
+            "en": "breakfast"
+          },
+          {
+            "target": "Meter",
+            "en": "metre"
+          },
+          {
+            "target": "aufpassen",
+            "en": "attend"
+          },
+          {
+            "target": "Engel",
+            "en": "angel"
+          },
+          {
+            "target": "offenbar",
+            "en": "confessedly"
+          },
+          {
+            "target": "Gelegenheit",
+            "en": "occasion"
+          },
+          {
+            "target": "Fang",
+            "en": "take"
+          },
+          {
+            "target": "Lüge",
+            "en": "lie"
+          },
+          {
+            "target": "Ohren",
+            "en": "ears"
+          },
+          {
+            "target": "Brechen",
+            "en": "breakage"
+          },
+          {
+            "target": "Brüder",
+            "en": "brothers"
+          },
+          {
+            "target": "Zeitpunkt",
+            "en": "date"
+          },
+          {
+            "target": "Ecke",
+            "en": "corner kick"
+          },
+          {
+            "target": "Brücke",
+            "en": "jigger"
+          },
+          {
+            "target": "Druck",
+            "en": "buffeting"
+          },
+          {
+            "target": "mitgebracht",
+            "en": "brought"
+          },
+          {
+            "target": "seufzt",
+            "en": "sighs"
+          },
+          {
+            "target": "Date",
+            "en": "rendezvous"
+          },
+          {
+            "target": "Haufen",
+            "en": "cluster"
+          },
+          {
+            "target": "Oma",
+            "en": "grandma"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u43",
+        "title": "Common words 1051–1075",
+        "subtitle": "The 1051–1075 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "leer",
+            "en": "blank"
+          },
+          {
+            "target": "entkommen",
+            "en": "eluded"
+          },
+          {
+            "target": "Weißen",
+            "en": "limewash"
+          },
+          {
+            "target": "Lösung",
+            "en": "separation"
+          },
+          {
+            "target": "Pause",
+            "en": "time-out"
+          },
+          {
+            "target": "Irre",
+            "en": "madman"
+          },
+          {
+            "target": "gestellt",
+            "en": "provided"
+          },
+          {
+            "target": "Keller",
+            "en": "cellar"
+          },
+          {
+            "target": "gebrochen",
+            "en": "disowned"
+          },
+          {
+            "target": "Weinen",
+            "en": "crying"
+          },
+          {
+            "target": "Nutzen",
+            "en": "cutout"
+          },
+          {
+            "target": "wünschen",
+            "en": "wish"
+          },
+          {
+            "target": "Verantwortung",
+            "en": "responsibility"
+          },
+          {
+            "target": "Schloss",
+            "en": "palace"
+          },
+          {
+            "target": "Hut",
+            "en": "stiff hat"
+          },
+          {
+            "target": "Lächeln",
+            "en": "smile"
+          },
+          {
+            "target": "Grad",
+            "en": "degree"
+          },
+          {
+            "target": "mitkommen",
+            "en": "tag along"
+          },
+          {
+            "target": "gemeint",
+            "en": "referred to"
+          },
+          {
+            "target": "ernsthaft",
+            "en": "serious"
+          },
+          {
+            "target": "gebaut",
+            "en": "constructed"
+          },
+          {
+            "target": "Bombe",
+            "en": "bomb"
+          },
+          {
+            "target": "hasst",
+            "en": "abhors"
+          },
+          {
+            "target": "Kosten",
+            "en": "outlay"
+          },
+          {
+            "target": "Operation",
+            "en": "false-flag operation"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u44",
+        "title": "Common words 1076–1100",
+        "subtitle": "The 1076–1100 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "Befehle",
+            "en": "orders"
+          },
+          {
+            "target": "Schmerzen",
+            "en": "pain"
+          },
+          {
+            "target": "erklärt",
+            "en": "professed"
+          },
+          {
+            "target": "Dach",
+            "en": "roof"
+          },
+          {
+            "target": "Folge",
+            "en": "succession"
+          },
+          {
+            "target": "Schwarze",
+            "en": "black"
+          },
+          {
+            "target": "dankbar",
+            "en": "grateful"
+          },
+          {
+            "target": "Gehirn",
+            "en": "brain"
+          },
+          {
+            "target": "Mut",
+            "en": "courage"
+          },
+          {
+            "target": "Heilige",
+            "en": "saint"
+          },
+          {
+            "target": "Tier",
+            "en": "animal"
+          },
+          {
+            "target": "System",
+            "en": "stave"
+          },
+          {
+            "target": "Wahnsinn",
+            "en": "madness"
+          },
+          {
+            "target": "geschlossen",
+            "en": "jointless"
+          },
+          {
+            "target": "Hintern",
+            "en": "buttock"
+          },
+          {
+            "target": "Thema",
+            "en": "issue"
+          },
+          {
+            "target": "fiel",
+            "en": "dropped"
+          },
+          {
+            "target": "gehalten",
+            "en": "kennelled"
+          },
+          {
+            "target": "Urlaub",
+            "en": "leave"
+          },
+          {
+            "target": "Steig",
+            "en": "via ferrata"
+          },
+          {
+            "target": "überprüfen",
+            "en": "check"
+          },
+          {
+            "target": "Baum",
+            "en": "tree"
+          },
+          {
+            "target": "funktionieren",
+            "en": "go"
+          },
+          {
+            "target": "anscheinend",
+            "en": "apparently"
+          },
+          {
+            "target": "Lehrer",
+            "en": "teacher"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u45",
+        "title": "Common words 1101–1125",
+        "subtitle": "The 1101–1125 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "Nachmittag",
+            "en": "afternoon"
+          },
+          {
+            "target": "Risiko",
+            "en": "hazard"
+          },
+          {
+            "target": "Knast",
+            "en": "jug"
+          },
+          {
+            "target": "entschuldigt",
+            "en": "excused"
+          },
+          {
+            "target": "daraus",
+            "en": "out of it"
+          },
+          {
+            "target": "Fräulein",
+            "en": "Miss"
+          },
+          {
+            "target": "prima",
+            "en": "hunky-dory"
+          },
+          {
+            "target": "Gewalt",
+            "en": "power"
+          },
+          {
+            "target": "Nachdenken",
+            "en": "thinking"
+          },
+          {
+            "target": "Tor",
+            "en": "fool"
+          },
+          {
+            "target": "Erfahrung",
+            "en": "experience"
+          },
+          {
+            "target": "Pläne",
+            "en": "layouts"
+          },
+          {
+            "target": "jagen",
+            "en": "hound"
+          },
+          {
+            "target": "Katze",
+            "en": "cat"
+          },
+          {
+            "target": "Runde",
+            "en": "round"
+          },
+          {
+            "target": "Deutsche",
+            "en": "Hun"
+          },
+          {
+            "target": "Taten",
+            "en": "doings"
+          },
+          {
+            "target": "dringend",
+            "en": "insisting on"
+          },
+          {
+            "target": "Großvater",
+            "en": "granddad"
+          },
+          {
+            "target": "Sommer",
+            "en": "summer"
+          },
+          {
+            "target": "hinterlassen",
+            "en": "leave behind"
+          },
+          {
+            "target": "Gewissen",
+            "en": "conscience"
+          },
+          {
+            "target": "getrunken",
+            "en": "suckled"
+          },
+          {
+            "target": "Luke",
+            "en": "hatch"
+          },
+          {
+            "target": "Kunden",
+            "en": "customers"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u46",
+        "title": "Common words 1126–1150",
+        "subtitle": "The 1126–1150 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "Kate",
+            "en": "croft"
+          },
+          {
+            "target": "Zeugen",
+            "en": "witnesses"
+          },
+          {
+            "target": "geplant",
+            "en": "designed"
+          },
+          {
+            "target": "erreicht",
+            "en": "approached"
+          },
+          {
+            "target": "stören",
+            "en": "jam"
+          },
+          {
+            "target": "Stein",
+            "en": "stone"
+          },
+          {
+            "target": "Atmen",
+            "en": "respiration"
+          },
+          {
+            "target": "Hose",
+            "en": "trousers"
+          },
+          {
+            "target": "Weiße",
+            "en": "whiteness"
+          },
+          {
+            "target": "größer",
+            "en": "bigger"
+          },
+          {
+            "target": "schickt",
+            "en": "sends"
+          },
+          {
+            "target": "City",
+            "en": "city centre"
+          },
+          {
+            "target": "Prinz",
+            "en": "prince"
+          },
+          {
+            "target": "behandelt",
+            "en": "handled"
+          },
+          {
+            "target": "Tote",
+            "en": "deceased"
+          },
+          {
+            "target": "Überlegen",
+            "en": "consideration"
+          },
+          {
+            "target": "Karten",
+            "en": "passes"
+          },
+          {
+            "target": "Restaurant",
+            "en": "eating house"
+          },
+          {
+            "target": "Natur",
+            "en": "nature"
+          },
+          {
+            "target": "Streit",
+            "en": "contestation"
+          },
+          {
+            "target": "küssen",
+            "en": "kiss"
+          },
+          {
+            "target": "sprich",
+            "en": "wit"
+          },
+          {
+            "target": "längst",
+            "en": "long ago"
+          },
+          {
+            "target": "fängt",
+            "en": "traps"
+          },
+          {
+            "target": "erlaubt",
+            "en": "allowed for"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u47",
+        "title": "Common words 1151–1175",
+        "subtitle": "The 1151–1175 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "Bad",
+            "en": "swim"
+          },
+          {
+            "target": "Kugel",
+            "en": "ball"
+          },
+          {
+            "target": "normalerweise",
+            "en": "customarily"
+          },
+          {
+            "target": "Schwarzen",
+            "en": "blacks"
+          },
+          {
+            "target": "Flug",
+            "en": "flight"
+          },
+          {
+            "target": "beruhigen",
+            "en": "cheer"
+          },
+          {
+            "target": "Dan",
+            "en": "Danian"
+          },
+          {
+            "target": "einiges",
+            "en": "several things"
+          },
+          {
+            "target": "entdeckt",
+            "en": "discovered"
+          },
+          {
+            "target": "morgens",
+            "en": "in the morning"
+          },
+          {
+            "target": "schlechter",
+            "en": "worse"
+          },
+          {
+            "target": "gelogen",
+            "en": "lied"
+          },
+          {
+            "target": "verfolgt",
+            "en": "observed"
+          },
+          {
+            "target": "Louis",
+            "en": "procurer"
+          },
+          {
+            "target": "Schwert",
+            "en": "sword"
+          },
+          {
+            "target": "Hunde",
+            "en": "mine cars"
+          },
+          {
+            "target": "Steigen",
+            "en": "crates"
+          },
+          {
+            "target": "verdammter",
+            "en": "more condemned"
+          },
+          {
+            "target": "riecht",
+            "en": "smacks"
+          },
+          {
+            "target": "Labor",
+            "en": "lab"
+          },
+          {
+            "target": "Fisch",
+            "en": "fish"
+          },
+          {
+            "target": "Füße",
+            "en": "feet"
+          },
+          {
+            "target": "Erschießen",
+            "en": "shooting"
+          },
+          {
+            "target": "Kuchen",
+            "en": "cake"
+          },
+          {
+            "target": "versuchte",
+            "en": "tempted"
+          }
+        ]
+      },
+      {
+        "id": "de-gen-u48",
+        "title": "Common words 1176–1200",
+        "subtitle": "The 1176–1200 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "Zustand",
+            "en": "trim"
+          },
+          {
+            "target": "Wunsch",
+            "en": "request"
+          },
+          {
+            "target": "Gäste",
+            "en": "guests"
+          },
+          {
+            "target": "erwähnt",
+            "en": "mentioned"
+          },
+          {
+            "target": "Farbe",
+            "en": "paint"
+          },
+          {
+            "target": "einigen",
+            "en": "unify"
+          },
+          {
+            "target": "Zufall",
+            "en": "tyche"
+          },
+          {
+            "target": "Garten",
+            "en": "garden"
+          },
+          {
+            "target": "Autos",
+            "en": "cars"
+          },
+          {
+            "target": "fair",
+            "en": "decent"
+          },
+          {
+            "target": "vertraut",
+            "en": "credited"
+          },
+          {
+            "target": "Kurs",
+            "en": "share price"
+          },
+          {
+            "target": "wirkt",
+            "en": "takes effect"
+          },
+          {
+            "target": "Idioten",
+            "en": "dumbasses"
+          },
+          {
+            "target": "netter",
+            "en": "neater"
+          },
+          {
+            "target": "angegriffen",
+            "en": "affected"
+          },
+          {
+            "target": "Geschichten",
+            "en": "tales"
+          },
+          {
+            "target": "wahnsinnig",
+            "en": "frenzied"
+          },
+          {
+            "target": "Aufgeben",
+            "en": "dispatch"
+          },
+          {
+            "target": "entführt",
+            "en": "kidnapped"
+          },
+          {
+            "target": "geschossen",
+            "en": "loosed off"
+          },
+          {
+            "target": "Lager",
+            "en": "lair"
+          },
+          {
+            "target": "besprechen",
+            "en": "talk about"
+          },
+          {
+            "target": "Reihe",
+            "en": "array"
+          },
+          {
+            "target": "Vogel",
+            "en": "bird"
+          }
+        ]
       }
     ]
   }
