@@ -169,13 +169,14 @@ async function loadDictionary(pair) {
       const q = block.match(/<quote[^>]*>([\s\S]*?)<\/quote>/);
       if (q) trans.push(q[1]);
     }
+    // Keep ALL clean candidate senses; the best one is chosen later by English
+    // word frequency (so "Tag" → "day", not "tag"; "Klar" → "clear", not "egg-white").
+    const glosses = [];
     for (const t of trans) {
-      const gloss = cleanGloss(t, orth);
-      if (gloss) {
-        map.set(key, { orth, gloss });
-        break;
-      }
+      const g = cleanGloss(t, orth);
+      if (g && !glosses.includes(g)) glosses.push(g);
     }
+    if (glosses.length) map.set(key, { orth, glosses });
   }
   return map;
 }
@@ -264,10 +265,23 @@ function emitBarrel(builtCodes) {
   writeFileSync(join(OUT_DIR, "index.ts"), body);
 }
 
-async function buildLang(lang) {
+async function buildLang(lang, enRank) {
   console.log(`\n=== ${lang.code} (${lang.name}) ===`);
   const [dict, freq] = await Promise.all([loadDictionary(lang.dict), loadFrequency(lang.freq)]);
   console.log(`  dict entries: ${dict.size}, frequency words: ${freq.length}`);
+  // Among a word's candidate senses, pick the one whose English word(s) are most
+  // common — that's almost always the everyday meaning, not a technical/rare one.
+  const enRankOf = (g) => {
+    let best = Infinity;
+    for (const w of g.toLowerCase().split(/\s+/)) {
+      const r = enRank.get(w);
+      if (r != null && r < best) best = r;
+    }
+    return best;
+  };
+  const pickGloss = (glosses) =>
+    glosses.slice().sort((a, b) => enRankOf(a) - enRankOf(b))[0];
+
   const vocab = [];
   const usedEn = new Set();
   const usedTarget = new Set();
@@ -278,11 +292,13 @@ async function buildLang(lang) {
     if (hit.orth.length < 3) continue; // skip short function words
     const targetKey = hit.orth.toLowerCase();
     if (usedTarget.has(targetKey)) continue;
-    const enKey = hit.gloss.toLowerCase();
+    const gloss = pickGloss(hit.glosses);
+    if (!gloss) continue;
+    const enKey = gloss.toLowerCase();
     if (usedEn.has(enKey)) continue; // keep meanings distinct & varied
     usedTarget.add(targetKey);
     usedEn.add(enKey);
-    vocab.push({ target: hit.orth, en: hit.gloss });
+    vocab.push({ target: hit.orth, en: gloss });
   }
   console.log(`  built vocab: ${vocab.length}`);
   if (vocab.length < UNIT_SIZE) throw new Error(`Too few words for ${lang.code} (${vocab.length})`);
@@ -293,10 +309,14 @@ async function buildLang(lang) {
 
 async function main() {
   const targets = LANGS.filter((l) => ONLY.length === 0 || ONLY.includes(l.code));
+  // English word-frequency ranking, used to pick the everyday sense of each word.
+  const enFreq = await loadFrequency("en");
+  const enRank = new Map(enFreq.map((w, i) => [w, i]));
+  console.log(`English frequency rank loaded: ${enRank.size} words`);
   const built = [];
   for (const lang of targets) {
     try {
-      built.push(await buildLang(lang));
+      built.push(await buildLang(lang, enRank));
     } catch (e) {
       console.error(`  !! skipped ${lang.code}: ${e.message}`);
     }
