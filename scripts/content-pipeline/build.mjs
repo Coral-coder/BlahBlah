@@ -156,7 +156,6 @@ async function loadDictionary(pair) {
     const orth = decodeEntities(orthM[1].replace(/<[^>]+>/g, "").trim());
     if (!orth) continue;
     const key = orth.toLowerCase();
-    if (map.has(key)) continue;
     // translation quotes inside <cit type="trans"> blocks
     const trans = [];
     const citRe = /<cit\b[^>]*type="trans"[^>]*>([\s\S]*?)<\/cit>/g;
@@ -169,14 +168,17 @@ async function loadDictionary(pair) {
       const q = block.match(/<quote[^>]*>([\s\S]*?)<\/quote>/);
       if (q) trans.push(q[1]);
     }
-    // Keep ALL clean candidate senses; the best one is chosen later by English
-    // word frequency (so "Tag" → "day", not "tag"; "Klar" → "clear", not "egg-white").
-    const glosses = [];
+    // MERGE senses across every entry that shares this headword. FreeDict often
+    // has several entries for one word (e.g. "Tag" = day, and "Tag" = tech tag);
+    // collecting ALL of them lets the frequency ranker pick the everyday sense
+    // ("day"), instead of whichever entry happened to come first in the file.
+    const existing = map.get(key);
+    const glosses = existing ? existing.glosses : [];
     for (const t of trans) {
       const g = cleanGloss(t, orth);
       if (g && !glosses.includes(g)) glosses.push(g);
     }
-    if (glosses.length) map.set(key, { orth, glosses });
+    if (glosses.length) map.set(key, { orth: existing ? existing.orth : orth, glosses });
   }
   return map;
 }
