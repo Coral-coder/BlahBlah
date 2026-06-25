@@ -5,7 +5,7 @@ import { ActivityIndicator, Pressable, StyleSheet, Text, TextInput, View } from 
 import type { Exercise } from "@/curriculum/types";
 import { normalize, shuffle } from "@/lesson/engine";
 import { accentChars } from "@/lib/accents";
-import { glossWord } from "@/lib/glossary";
+import { glossWord, romanizeWord } from "@/lib/glossary";
 import { getSpeechLocale, speak, speakSlow } from "@/lib/speech";
 import { playSfx } from "@/lib/sfx";
 import { theme } from "@/theme";
@@ -400,6 +400,7 @@ function WordbankView({
               style={styles.tileSmall}
             >
               <Text style={styles.tileText}>{w}</Text>
+              {romanizeWord(w) ? <Text style={styles.tileSub}>{romanizeWord(w)}</Text> : null}
             </Pressable>
           );
         })}
@@ -421,6 +422,11 @@ function WordbankView({
               <Text style={[styles.tileText, isUsed && { color: "transparent" }]}>
                 {b.word}
               </Text>
+              {romanizeWord(b.word) ? (
+                <Text style={[styles.tileSub, isUsed && { color: "transparent" }]}>
+                  {romanizeWord(b.word)}
+                </Text>
+              ) : null}
             </Pressable>
           );
         })}
@@ -847,6 +853,7 @@ const styles = StyleSheet.create({
   },
   tileGhost: { backgroundColor: theme.colors.surfaceAlt, borderColor: theme.colors.surfaceAlt },
   tileText: { color: theme.colors.text, fontSize: 18, fontWeight: "600" },
+  tileSub: { color: theme.colors.textMuted, fontSize: 12, marginTop: 3, textAlign: "center" },
   answerLine: {
     flexDirection: "row",
     flexWrap: "wrap",
