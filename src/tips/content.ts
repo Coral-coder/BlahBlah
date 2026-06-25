@@ -8,10 +8,21 @@ export interface Tip {
 }
 
 const TIPS: Record<string, Tip[]> = {
+  // German — an ordered grammar progression. Each note opens one of the early
+  // units (in order), so the course teaches grammar step by step, not as a
+  // side reference. Beginner → A2.
   de: [
     {
+      title: "Every noun is capitalized",
+      body: "Before anything else: in German ALL nouns are written with a capital letter, not just names. Hund (dog), Stadt (city), Liebe (love) — always uppercase. This actually helps you spot the nouns in a sentence.",
+      examples: [
+        { target: "der Hund", en: "the dog" },
+        { target: "die Stadt", en: "the city" },
+      ],
+    },
+    {
       title: "Three genders & their articles",
-      body: "German nouns are der (masculine), die (feminine), or das (neuter). Always learn the article WITH the noun — there's no reliable shortcut.",
+      body: "German nouns are der (masculine), die (feminine), or das (neuter) — all meaning \"the\". There's no reliable rule for which is which, so always learn the article TOGETHER with the noun: not \"Tisch\" but \"der Tisch\".",
       examples: [
         { target: "der Mann", en: "the man" },
         { target: "die Frau", en: "the woman" },
@@ -19,26 +30,118 @@ const TIPS: Record<string, Tip[]> = {
       ],
     },
     {
-      title: "Verb goes second",
-      body: "In a normal statement the conjugated verb is always the 2nd element — even if something else comes first.",
+      title: "a / an: ein & eine",
+      body: "\"A/an\" is ein for der- and das-words, and eine for die-words. So it mirrors the gender you learned with the noun.",
+      examples: [
+        { target: "ein Mann", en: "a man" },
+        { target: "eine Frau", en: "a woman" },
+        { target: "ein Kind", en: "a child" },
+      ],
+    },
+    {
+      title: "I am, you are: sein",
+      body: "sein (to be) is irregular and everywhere — memorize it:\n\n• ich bin — I am\n• du bist — you are\n• er/sie/es ist — he/she/it is\n• wir sind — we are\n• ihr seid — you (plural) are\n• sie/Sie sind — they / you (formal) are",
+      examples: [
+        { target: "Ich bin müde", en: "I am tired" },
+        { target: "Wir sind hier", en: "We are here" },
+      ],
+    },
+    {
+      title: "I have: haben",
+      body: "The other essential verb, haben (to have):\n\n• ich habe, du hast, er/sie/es hat\n• wir haben, ihr habt, sie/Sie haben",
+      examples: [
+        { target: "Ich habe Zeit", en: "I have time" },
+        { target: "Hast du Hunger?", en: "Are you hungry? (lit. have you hunger)" },
+      ],
+    },
+    {
+      title: "Present tense: regular verbs",
+      body: "Take the stem (drop -en) and add the ending:\n\n• ich -e, du -st, er/sie/es -t\n• wir -en, ihr -t, sie/Sie -en\n\nGerman has no \"am ...-ing\": ich spiele means both \"I play\" and \"I am playing\".",
+      examples: [
+        { target: "ich spiele", en: "I play / I'm playing" },
+        { target: "du spielst", en: "you play" },
+        { target: "wir spielen", en: "we play" },
+      ],
+    },
+    {
+      title: "The verb goes second",
+      body: "In a normal statement the conjugated verb is always the SECOND element — even when something else comes first, the verb stays in slot 2 and the subject moves after it.",
       examples: [
         { target: "Ich trinke heute Kaffee", en: "I drink coffee today" },
-        { target: "Heute trinke ich Kaffee", en: "Today I drink coffee" },
+        { target: "Heute trinke ich Kaffee", en: "Today drink I coffee" },
+      ],
+    },
+    {
+      title: "Asking questions",
+      body: "Yes/no questions: put the verb FIRST. Information questions: start with a question word (wer who, was what, wo where, wann when, warum why, wie how), then the verb.",
+      examples: [
+        { target: "Trinkst du Kaffee?", en: "Do you drink coffee?" },
+        { target: "Wo wohnst du?", en: "Where do you live?" },
+      ],
+    },
+    {
+      title: "Saying no: nicht & kein",
+      body: "Use nicht to negate a verb or whole idea. Use kein/keine to say \"no / not a\" before a noun (it's the negative of ein).",
+      examples: [
+        { target: "Ich verstehe nicht", en: "I don't understand" },
+        { target: "Ich habe keine Zeit", en: "I have no time" },
       ],
     },
     {
       title: "The accusative case",
-      body: "The direct object changes 'der' → 'den' (masculine only). Feminine/neuter/plural stay the same.",
-      examples: [{ target: "Ich sehe den Mann", en: "I see the man" }],
+      body: "When a der-word is the direct object (the thing being acted on), der → den and ein → einen. Feminine, neuter and plural articles don't change. This is why \"the man\" can be der Mann OR den Mann.",
+      examples: [
+        { target: "Der Mann ist hier", en: "The man is here (subject)" },
+        { target: "Ich sehe den Mann", en: "I see the man (object)" },
+      ],
     },
     {
-      title: "Capitalize every noun",
-      body: "All nouns are capitalized in German, not just names. Hund, Stadt, Liebe — always uppercase.",
+      title: "Possessives: mein, dein…",
+      body: "mein (my), dein (your), sein (his), ihr (her), unser (our), euer (your pl.), ihr/Ihr (their/your formal). They take the same endings as ein/eine.",
+      examples: [
+        { target: "mein Bruder", en: "my brother" },
+        { target: "meine Schwester", en: "my sister" },
+      ],
     },
     {
-      title: "Subordinate clauses kick the verb to the end",
-      body: "After weil, dass, wenn… the verb jumps to the end of the clause.",
-      examples: [{ target: "Ich bleibe, weil es regnet", en: "I'm staying because it's raining" }],
+      title: "Modal verbs send the action to the end",
+      body: "With können (can), wollen (want), müssen (must), the modal is conjugated in slot 2 and the OTHER verb goes to the very end in its plain -en form.",
+      examples: [
+        { target: "Ich kann Deutsch sprechen", en: "I can speak German" },
+        { target: "Wir müssen jetzt gehen", en: "We must go now" },
+      ],
+    },
+    {
+      title: "Separable verbs",
+      body: "Many verbs have a prefix that detaches and jumps to the end of the sentence: aufstehen (to get up) → ich stehe um sieben auf. Look for that stranded prefix at the end!",
+      examples: [
+        { target: "Ich stehe früh auf", en: "I get up early" },
+        { target: "Der Zug kommt an", en: "The train arrives" },
+      ],
+    },
+    {
+      title: "The dative case",
+      body: "The indirect object (the receiver) takes the dative: der/das → dem, die → der, plural → den (+n). It also follows mit, zu, von, bei, aus, nach.",
+      examples: [
+        { target: "Ich gebe dem Kind den Ball", en: "I give the child the ball" },
+        { target: "Ich fahre mit dem Bus", en: "I go by bus" },
+      ],
+    },
+    {
+      title: "Subordinate clauses send the verb to the end",
+      body: "After weil (because), dass (that), wenn (if/when), ob (whether), the conjugated verb moves to the very end of that clause.",
+      examples: [
+        { target: "Ich bleibe, weil es regnet", en: "I'm staying because it's raining" },
+        { target: "Ich weiß, dass du Recht hast", en: "I know that you're right" },
+      ],
+    },
+    {
+      title: "Talking about the past: the perfect",
+      body: "Everyday past = haben (or sein for motion) + a past participle at the end. Many participles look like ge-…-t (regular) or ge-…-en (strong).",
+      examples: [
+        { target: "Ich habe Kaffee getrunken", en: "I drank coffee" },
+        { target: "Wir sind nach Berlin gefahren", en: "We went to Berlin" },
+      ],
     },
   ],
   es: [
