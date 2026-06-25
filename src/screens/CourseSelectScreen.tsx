@@ -2,6 +2,7 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { getCourseSummaries } from "@/curriculum";
+import { ensureCourse } from "@/lib/remoteContent";
 import { useNav } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
 import { theme } from "@/theme";
@@ -12,6 +13,9 @@ export function CourseSelectScreen() {
   const { setCurrentCourse, courseProgress, state } = useProgress();
 
   function pick(code: string) {
+    // Fetch + cache this language's chapter (bundled content covers it instantly;
+    // the OTA chapter upgrades it in place when it arrives).
+    void ensureCourse(code);
     setCurrentCourse(code);
     const placed = courseProgress(code).placed;
     if (placed) nav.reset("shell");

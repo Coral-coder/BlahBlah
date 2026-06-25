@@ -107,10 +107,36 @@ export function setActiveBlueprints(blueprints: CourseBlueprint[]): boolean {
   return true;
 }
 
+/** Replace a single course's blueprint (per-course OTA chapter); rebuilds lazily. */
+export function setCourseBlueprint(bp: CourseBlueprint): boolean {
+  try {
+    generateCourse(bp); // validate
+  } catch {
+    return false;
+  }
+  const idx = activeBlueprints.findIndex((b) => b.code === bp.code);
+  activeBlueprints =
+    idx >= 0
+      ? activeBlueprints.map((b) => (b.code === bp.code ? bp : b))
+      : [...activeBlueprints, bp];
+  courseCache.delete(bp.code);
+  listeners.forEach((fn) => fn());
+  return true;
+}
+
 /** Reset back to the content bundled in the binary. */
 export function resetToBundledContent(): void {
   activeBlueprints = BLUEPRINTS;
   courseCache.clear();
+  manifestSummaries = null;
+  listeners.forEach((fn) => fn());
+}
+
+// The course picker prefers the OTA manifest (so it reflects the latest catalog
+// without downloading any course); falls back to whatever blueprints are loaded.
+let manifestSummaries: CourseSummary[] | null = null;
+export function setManifestSummaries(summaries: CourseSummary[] | null): void {
+  manifestSummaries = summaries && summaries.length ? summaries : null;
   listeners.forEach((fn) => fn());
 }
 
@@ -135,6 +161,7 @@ export interface CourseSummary {
   lessons: number;
 }
 export function getCourseSummaries(): CourseSummary[] {
+  if (manifestSummaries) return manifestSummaries;
   return activeBlueprints.map((bp) => ({
     code: bp.code,
     name: bp.name,

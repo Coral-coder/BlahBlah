@@ -48,20 +48,20 @@ jobs:
       - name: Validate course content (gate)
         run: npm run validate:content
 
-      - name: Build content bundle
-        run: node scripts/buildContentBundle.run.js content-bundle.json "${GITHUB_SHA}"
+      - name: Build content (manifest + per-course chapters)
+        run: node scripts/buildContentBundle.run.js dist-content "${GITHUB_SHA}"
 
       - name: Publish to the "content" release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          # Create the release once; thereafter just replace the asset in place.
+          # Create the release once; thereafter just replace the assets in place.
           if ! gh release view content >/dev/null 2>&1; then
             gh release create content \
               --title "Live content bundle" \
-              --notes "Over-the-air course content. Auto-updated by CI; do not delete." \
+              --notes "Over-the-air course content (manifest + per-course chapters). Auto-updated by CI; do not delete." \
               --latest=false
           fi
-          gh release upload content content-bundle.json --clobber
-          echo "Published content-bundle.json (version ${GITHUB_SHA})."
+          gh release upload content dist-content/*.json --clobber
+          echo "Published content manifest + per-course chapters (version ${GITHUB_SHA})."

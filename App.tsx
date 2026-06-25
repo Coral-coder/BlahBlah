@@ -25,7 +25,7 @@ import { StoryScreen } from "@/screens/StoryScreen";
 import { TraceScreen } from "@/screens/TraceScreen";
 import { WordsScreen } from "@/screens/WordsScreen";
 import { onContentChange } from "@/curriculum";
-import { initRemoteContent, refreshRemoteContent } from "@/lib/remoteContent";
+import { ensureCourse, initRemoteContent, refreshManifest } from "@/lib/remoteContent";
 import { setSfxEnabled } from "@/lib/sfx";
 import { setNeuralEnabled } from "@/lib/speech";
 import { NavProvider, useNav } from "@/navigation";
@@ -180,19 +180,25 @@ function Root() {
   const { ready, state } = useProgress();
   const [, bumpContent] = useState(0);
   useEffect(() => {
-    // Re-render the tree whenever an over-the-air content bundle swaps the active
-    // courses, then kick off the cached-then-network content load.
+    // Re-render whenever OTA content swaps a course, then load the small manifest
+    // (cached-then-network). Per-course chapters are fetched on demand below.
     const unsub = onContentChange(() => bumpContent((n) => n + 1));
     void initRemoteContent();
-    // Re-check for new content every time the app returns to the foreground.
+    // Refresh the manifest each time the app returns to the foreground.
     const sub = AppState.addEventListener("change", (s) => {
-      if (s === "active") void refreshRemoteContent();
+      if (s === "active") void refreshManifest();
     });
     return () => {
       unsub();
       sub.remove();
     };
   }, []);
+  useEffect(() => {
+    // Download (and cache) the chapter for the language the user is in. If there's
+    // no current language yet, the picker runs off the manifest and a chapter is
+    // fetched when one is opened.
+    if (state.currentCourse) void ensureCourse(state.currentCourse);
+  }, [state.currentCourse]);
   useEffect(() => {
     setNeuralEnabled(!!state.settings.neuralVoices);
   }, [state.settings.neuralVoices]);

@@ -1,94 +1,132 @@
 import RNBlobUtil from "react-native-blob-util";
 
-import { CONTENT_SCHEMA, setActiveBlueprints } from "@/curriculum";
+import {
+  CONTENT_SCHEMA,
+  setCourseBlueprint,
+  setManifestSummaries,
+  type CourseSummary,
+} from "@/curriculum";
 import type { CourseBlueprint } from "@/curriculum/generate";
 import { setActiveVoices } from "@/lib/voiceModels";
 import type { VoiceModel } from "@/lib/voiceCatalog";
 
-// Over-the-air content: the app ships with content baked into the binary, but on
-// launch it also pulls the latest content bundle from this public repo's GitHub
-// Releases (CDN-backed, no auth). That lets lessons be edited/added — even whole
-// languages — without a new app build. The bundle is cached to disk so it's
-// available instantly on the next cold start and offline.
+// Over-the-air content, split into chapters:
 //
-// Safety: a schema number gates the bundle. If the bundle's schema doesn't match
-// what this build understands, it's ignored and the bundled content is used —
-// so a bundle authored for a newer engine can never break an older install.
+//   • content-manifest.json  — tiny: course list + lesson counts + voice catalog.
+//     Fetched on launch/foreground so the picker is always current. (~3 KB)
+//   • course-<code>.json     — one language's full blueprint, fetched only when
+//     that language is opened, then cached to disk. (~tens–hundreds of KB)
+//
+// The app always ships with full content baked into the binary, so everything
+// works offline / on first run and a failed fetch never leaves the app empty —
+// OTA only ever *upgrades* a course in place. A schema number gates everything.
 
-interface ContentBundle {
+interface Manifest {
   schema: number;
-  /** Opaque version (git sha / timestamp) used to skip redundant re-applies. */
   version: string;
-  courses: CourseBlueprint[];
-  /** Voice catalog (which natural voices exist, their settings + download base). */
   voices?: VoiceModel[];
   voicesBaseUrl?: string;
+  courses: CourseSummary[];
 }
 
-const BUNDLE_URL =
-  "https://github.com/Coral-coder/BlahBlah/releases/download/content/content-bundle.json";
-const CACHE_PATH = `${RNBlobUtil.fs.dirs.DocumentDir}/content-bundle.json`;
+const RELEASE = "https://github.com/Coral-coder/BlahBlah/releases/download/content";
+const DIR = `${RNBlobUtil.fs.dirs.DocumentDir}/content`;
+const manifestCache = `${DIR}/content-manifest.json`;
+const courseCache = (code: string) => `${DIR}/course-${code}.json`;
 
-let appliedVersion: string | null = null;
+let manifestVersion: string | null = null;
+const appliedCourseVersion: Record<string, string> = {};
 
-function isValidBundle(b: unknown): b is ContentBundle {
-  if (!b || typeof b !== "object") return false;
-  const x = b as Partial<ContentBundle>;
-  return (
-    typeof x.schema === "number" &&
-    Array.isArray(x.courses) &&
-    x.courses.every(
-      (c) => c && typeof (c as CourseBlueprint).code === "string" && Array.isArray((c as CourseBlueprint).sections),
-    )
-  );
+async function readJson(path: string): Promise<any | null> {
+  try {
+    if (!(await RNBlobUtil.fs.exists(path))) return null;
+    return JSON.parse(await RNBlobUtil.fs.readFile(path, "utf8"));
+  } catch {
+    return null;
+  }
+}
+async function writeJson(path: string, text: string): Promise<void> {
+  try {
+    await RNBlobUtil.fs.mkdir(DIR).catch(() => {});
+    await RNBlobUtil.fs.writeFile(path, text, "utf8");
+  } catch {
+    // ignore
+  }
+}
+async function fetchText(url: string): Promise<string | null> {
+  try {
+    const res = await fetch(url, { headers: { "Cache-Control": "no-cache" } });
+    if (!res.ok) return null;
+    return await res.text();
+  } catch {
+    return null;
+  }
 }
 
-function applyBundle(b: ContentBundle): boolean {
-  if (b.schema !== CONTENT_SCHEMA) return false;
-  if (b.version && b.version === appliedVersion) return false;
-  if (setActiveBlueprints(b.courses)) {
-    // Languages carry their own voice config in the bundle, so a new language's
-    // natural voice works without an app build.
-    setActiveVoices(b.voices, b.voicesBaseUrl);
-    appliedVersion = b.version ?? null;
+function applyManifest(m: unknown): boolean {
+  if (!m || typeof m !== "object") return false;
+  const x = m as Manifest;
+  if (x.schema !== CONTENT_SCHEMA || !Array.isArray(x.courses)) return false;
+  setActiveVoices(x.voices, x.voicesBaseUrl);
+  setManifestSummaries(x.courses);
+  manifestVersion = x.version ?? null;
+  return true;
+}
+
+function applyCourse(payload: unknown): string | null {
+  if (!payload || typeof payload !== "object") return null;
+  const x = payload as { schema: number; version: string; course: CourseBlueprint };
+  if (x.schema !== CONTENT_SCHEMA || !x.course || typeof x.course.code !== "string") return null;
+  if (!setCourseBlueprint(x.course)) return null;
+  appliedCourseVersion[x.course.code] = x.version ?? "";
+  return x.course.code;
+}
+
+/** Launch: apply cached manifest instantly, then refresh it from the network. */
+export async function initRemoteContent(): Promise<void> {
+  const cached = await readJson(manifestCache);
+  if (cached) applyManifest(cached);
+  await refreshManifest();
+}
+
+/** Re-fetch just the small manifest (cheap; safe to call on every foreground). */
+export async function refreshManifest(): Promise<boolean> {
+  const text = await fetchText(`${RELEASE}/content-manifest.json`);
+  if (!text) return false;
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(text);
+  } catch {
+    return false;
+  }
+  if (applyManifest(parsed)) {
+    await writeJson(manifestCache, text);
     return true;
   }
   return false;
 }
 
-/** Apply the disk-cached bundle (fast path on cold start). Returns true if applied. */
-export async function loadCachedContent(): Promise<boolean> {
+/**
+ * Ensure a language's content is loaded: apply the cached chapter immediately
+ * (instant), then fetch the latest in the background. Call this when a course is
+ * opened — it's cheap if already current. The bundled blueprint remains the
+ * fallback, so this only upgrades.
+ */
+export async function ensureCourse(code: string): Promise<void> {
+  const cached = await readJson(courseCache(code));
+  if (cached) applyCourse(cached);
+  const text = await fetchText(`${RELEASE}/course-${code}.json`);
+  if (!text) return;
+  let parsed: unknown;
   try {
-    if (!(await RNBlobUtil.fs.exists(CACHE_PATH))) return false;
-    const raw = await RNBlobUtil.fs.readFile(CACHE_PATH, "utf8");
-    const parsed = JSON.parse(raw);
-    if (!isValidBundle(parsed)) return false;
-    return applyBundle(parsed);
+    parsed = JSON.parse(text);
   } catch {
-    return false;
+    return;
   }
-}
-
-/** Fetch the latest bundle, apply it if newer, and cache it. Returns true if applied. */
-export async function refreshRemoteContent(): Promise<boolean> {
-  try {
-    const res = await fetch(BUNDLE_URL, { headers: { "Cache-Control": "no-cache" } });
-    if (!res.ok) return false;
-    const text = await res.text();
-    const parsed = JSON.parse(text);
-    if (!isValidBundle(parsed)) return false;
-    const applied = applyBundle(parsed);
-    if (applied) {
-      await RNBlobUtil.fs.writeFile(CACHE_PATH, text, "utf8").catch(() => {});
-    }
-    return applied;
-  } catch {
-    return false;
+  // Skip re-applying an unchanged chapter (avoids needless lesson rebuilds).
+  const v = (parsed as any)?.version;
+  if (v && appliedCourseVersion[code] === v) return;
+  if (applyCourse(parsed)) {
+    await writeJson(courseCache(code), text);
   }
-}
-
-/** Cold-start sequence: cached first (instant), then network refresh. */
-export async function initRemoteContent(): Promise<void> {
-  await loadCachedContent();
-  await refreshRemoteContent();
 }

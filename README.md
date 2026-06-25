@@ -138,6 +138,12 @@ Running changelog of features dreamed up on this branch (newest first).
   quota), so a delete/reinstall restores your data. iOS iCloud persistence is the
   next step (needs the iCloud capability enabled on the App ID).
 
+- **Chaptered OTA** — content is split into a tiny `content-manifest.json` (course
+  list + counts + voices, fetched on launch) and per-language `course-<code>.json`
+  chapters fetched only when a language is opened, then cached. Opening a language
+  downloads just that chapter (~tens–hundreds of KB) instead of every course at
+  once. The binary's bundled content is the always-safe fallback.
+
 - **Over-the-air content** — the app ships with content baked in, but on launch it
   also pulls a `content-bundle.json` (all course blueprints) from this public
   repo's GitHub Releases, caches it to disk, and regenerates courses live. Lessons
