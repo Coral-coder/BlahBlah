@@ -1,8 +1,7 @@
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { getCourses } from "@/curriculum";
-import { flattenCourse } from "@/curriculum/types";
+import { getCourseSummaries } from "@/curriculum";
 import { useNav } from "@/navigation";
 import { useProgress } from "@/state/ProgressContext";
 import { theme } from "@/theme";
@@ -26,8 +25,7 @@ export function CourseSelectScreen() {
         <Text style={styles.subtitle}>Structured courses that guide you lesson by lesson.</Text>
       </View>
       <ScrollView contentContainerStyle={{ paddingVertical: theme.spacing(2), gap: 14 }}>
-        {getCourses().map((course) => {
-          const lessons = flattenCourse(course).length;
+        {getCourseSummaries().map((course) => {
           const cp = courseProgress(course.code);
           const done = Object.keys(cp.completed).length;
           return (
@@ -37,7 +35,7 @@ export function CourseSelectScreen() {
                 <Text style={styles.name}>{course.name}</Text>
                 <Text style={styles.endonym}>{course.endonym}</Text>
                 <Text style={styles.meta}>
-                  {course.sections.length} sections · {lessons} lessons
+                  {course.sections} sections · {course.lessons} lessons
                   {done > 0 ? ` · ${done} done` : ""}
                 </Text>
               </View>

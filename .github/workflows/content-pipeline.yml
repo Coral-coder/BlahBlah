@@ -21,7 +21,7 @@ on:
       max_words:
         description: "Max words per language"
         required: false
-        default: "1200"
+        default: "4800"
 
 concurrency:
   group: content-pipeline
@@ -51,7 +51,7 @@ jobs:
 
       - name: Build generated content
         env:
-          MAX_WORDS: ${{ github.event.inputs.max_words || '1200' }}
+          MAX_WORDS: ${{ github.event.inputs.max_words || '4800' }}
         run: node scripts/content-pipeline/build.mjs
 
       - name: Validate course content (gate)

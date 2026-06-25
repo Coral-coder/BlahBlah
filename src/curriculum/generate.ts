@@ -362,6 +362,27 @@ function reviewLesson(
   return { id, title: "Practice", exercises: pad(ex, pool, r) };
 }
 
+// Cheap lesson count for a unit WITHOUT building any exercises — must mirror the
+// lesson-producing loop in buildUnit. Used by the course picker so it can show
+// counts without generating every course at startup.
+export function unitLessonCount(vocabLen: number): number {
+  let lessons = 0;
+  let known = 0;
+  for (let i = 0; i < vocabLen; i += NEW_PER_LESSON) {
+    const batch = Math.min(NEW_PER_LESSON, vocabLen - i);
+    lessons++; // teach lesson
+    known += batch;
+    if (known >= NEW_PER_LESSON * 2 && (i / NEW_PER_LESSON) % 3 === 2) lessons++; // review
+  }
+  return lessons + END_REVIEWS;
+}
+
+export function courseLessonCount(bp: CourseBlueprint): number {
+  let n = 0;
+  for (const s of bp.sections) for (const u of s.units) n += unitLessonCount(u.vocab.length);
+  return n;
+}
+
 function buildUnit(bp: UnitBlueprint): Unit {
   const r = rng(hashString(bp.id));
   const vocab = bp.vocab;

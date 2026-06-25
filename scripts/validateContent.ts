@@ -2,8 +2,10 @@
 // Content integrity checker for every generated course. Run via `npm run
 // validate:content` (here, through a Babel require-hook) and in CI. The goal:
 // as content scales to thousands of items, we never ship a broken exercise.
-import { COURSES } from "@/curriculum";
+import { getCourses } from "@/curriculum";
 import { flattenCourse, type Exercise } from "@/curriculum/types";
+
+const COURSES = getCourses();
 
 export interface Problem {
   course: string;

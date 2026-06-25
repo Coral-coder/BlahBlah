@@ -27,7 +27,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = fileURLToPath(new URL("../../", import.meta.url));
 const OUT_DIR = join(ROOT, "src/curriculum/blueprints/generated");
-const MAX_WORDS = Number(process.env.MAX_WORDS || 1200);
+const MAX_WORDS = Number(process.env.MAX_WORDS || 4800);
 const UNIT_SIZE = Number(process.env.UNIT_SIZE || 25);
 // Skip the very top of the frequency list: those are function words (articles,
 // pronouns, common prepositions) that are already in the hand-authored basics

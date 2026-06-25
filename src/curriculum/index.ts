@@ -1,5 +1,5 @@
 import type { Course } from "@/curriculum/types";
-import { generateCourse, type CourseBlueprint } from "@/curriculum/generate";
+import { generateCourse, courseLessonCount, type CourseBlueprint } from "@/curriculum/generate";
 import { germanBlueprint } from "@/curriculum/blueprints/de";
 import { germanThemeSections } from "@/curriculum/blueprints/de_themes";
 import { chineseBlueprint } from "@/curriculum/blueprints/zh";
@@ -78,17 +78,12 @@ export const BLUEPRINTS: CourseBlueprint[] = [
 // binary), so old installs never crash on content authored for a newer engine.
 export const CONTENT_SCHEMA = 1;
 
-function buildCourses(blueprints: CourseBlueprint[]): Course[] {
-  return blueprints.map(generateCourse);
-}
-
-// The courses bundled in the binary — always available offline / on first run.
-const bundledCourses: Course[] = buildCourses(BLUEPRINTS);
-
-// The active course set. Starts as the bundled one and is swapped in-place when
-// a newer over-the-air bundle loads (see src/lib/remoteContent.ts). getCourse()
-// stays synchronous for all the screens that call it during render.
-let activeCourses: Course[] = bundledCourses;
+// The active blueprint set. Starts as the bundled one and is swapped when a newer
+// over-the-air bundle loads (see src/lib/remoteContent.ts). Courses are generated
+// LAZILY (per-course, cached) so launching the app never expands every course's
+// lessons up front — important as the vocabulary grows into the thousands.
+let activeBlueprints: CourseBlueprint[] = BLUEPRINTS;
+const courseCache = new Map<string, Course>();
 
 type Listener = () => void;
 const listeners = new Set<Listener>();
@@ -98,32 +93,59 @@ export function onContentChange(fn: Listener): () => void {
   return () => listeners.delete(fn);
 }
 
-/** Replace the active courses from an OTA blueprint set; notifies subscribers. */
+/** Replace the active blueprints from an OTA bundle; clears the cache + notifies. */
 export function setActiveBlueprints(blueprints: CourseBlueprint[]): boolean {
+  if (!Array.isArray(blueprints) || !blueprints.length) return false;
   try {
-    const next = buildCourses(blueprints);
-    if (!next.length) return false;
-    activeCourses = next;
-    listeners.forEach((fn) => fn());
-    return true;
+    generateCourse(blueprints[0]); // validate the bundle is usable
   } catch {
     return false; // bad bundle: keep whatever was active
   }
+  activeBlueprints = blueprints;
+  courseCache.clear();
+  listeners.forEach((fn) => fn());
+  return true;
 }
 
 /** Reset back to the content bundled in the binary. */
 export function resetToBundledContent(): void {
-  activeCourses = bundledCourses;
+  activeBlueprints = BLUEPRINTS;
+  courseCache.clear();
   listeners.forEach((fn) => fn());
 }
 
-export function getCourses(): Course[] {
-  return activeCourses;
+/** Generate (and cache) a single course on demand. */
+export function getCourse(code: string): Course | undefined {
+  const cached = courseCache.get(code);
+  if (cached) return cached;
+  const bp = activeBlueprints.find((b) => b.code === code);
+  if (!bp) return undefined;
+  const course = generateCourse(bp);
+  courseCache.set(code, course);
+  return course;
 }
 
-/** Backwards-compatible alias; prefer getCourses() so OTA swaps are picked up. */
-export const COURSES: Course[] = bundledCourses;
+/** Lightweight course list for the picker — no exercise generation. */
+export interface CourseSummary {
+  code: string;
+  name: string;
+  endonym: string;
+  flag: string;
+  sections: number;
+  lessons: number;
+}
+export function getCourseSummaries(): CourseSummary[] {
+  return activeBlueprints.map((bp) => ({
+    code: bp.code,
+    name: bp.name,
+    endonym: bp.endonym,
+    flag: bp.flag,
+    sections: bp.sections.length,
+    lessons: courseLessonCount(bp),
+  }));
+}
 
-export function getCourse(code: string): Course | undefined {
-  return activeCourses.find((c) => c.code === code);
+/** Build every course (eager). For tooling/validation — avoid in app hot paths. */
+export function getCourses(): Course[] {
+  return activeBlueprints.map((bp) => getCourse(bp.code)!);
 }
