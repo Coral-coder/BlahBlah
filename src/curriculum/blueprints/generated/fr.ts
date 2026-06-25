@@ -5288,6 +5288,15846 @@ export const sections: SectionBlueprint[] = [
             "en": "tray"
           }
         ]
+      },
+      {
+        "id": "fr-gen-u49",
+        "title": "Common words 1201–1225",
+        "subtitle": "The 1201–1225 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "mai",
+            "en": "May"
+          },
+          {
+            "target": "humour",
+            "en": "humor"
+          },
+          {
+            "target": "moche",
+            "en": "ugly"
+          },
+          {
+            "target": "race",
+            "en": "breed"
+          },
+          {
+            "target": "trafic",
+            "en": "traffic"
+          },
+          {
+            "target": "cabine",
+            "en": "cabin"
+          },
+          {
+            "target": "populaire",
+            "en": "popular"
+          },
+          {
+            "target": "nager",
+            "en": "swim"
+          },
+          {
+            "target": "électrique",
+            "en": "electric"
+          },
+          {
+            "target": "furieux",
+            "en": "furious"
+          },
+          {
+            "target": "traître",
+            "en": "treacherous"
+          },
+          {
+            "target": "Juif",
+            "en": "Jew"
+          },
+          {
+            "target": "péché",
+            "en": "sin"
+          },
+          {
+            "target": "remise",
+            "en": "delivery"
+          },
+          {
+            "target": "sexuel",
+            "en": "sexual"
+          },
+          {
+            "target": "enregistrement",
+            "en": "recording"
+          },
+          {
+            "target": "agression",
+            "en": "aggression"
+          },
+          {
+            "target": "employé",
+            "en": "employee"
+          },
+          {
+            "target": "participer",
+            "en": "take part"
+          },
+          {
+            "target": "neveu",
+            "en": "nephew"
+          },
+          {
+            "target": "activité",
+            "en": "making"
+          },
+          {
+            "target": "coucou",
+            "en": "cuckoo"
+          },
+          {
+            "target": "température",
+            "en": "temperature"
+          },
+          {
+            "target": "bourse",
+            "en": "stock exchange"
+          },
+          {
+            "target": "poubelle",
+            "en": "garbage can"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u50",
+        "title": "Common words 1226–1250",
+        "subtitle": "The 1226–1250 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "viol",
+            "en": "rape"
+          },
+          {
+            "target": "pouls",
+            "en": "pulse"
+          },
+          {
+            "target": "autorité",
+            "en": "authority"
+          },
+          {
+            "target": "échelle",
+            "en": "scale"
+          },
+          {
+            "target": "tribu",
+            "en": "tribe"
+          },
+          {
+            "target": "accueil",
+            "en": "reception desk"
+          },
+          {
+            "target": "absurde",
+            "en": "absurd"
+          },
+          {
+            "target": "rattraper",
+            "en": "earn back"
+          },
+          {
+            "target": "réception",
+            "en": "reception room"
+          },
+          {
+            "target": "mercredi",
+            "en": "Wednesday"
+          },
+          {
+            "target": "ivre",
+            "en": "drunk"
+          },
+          {
+            "target": "témoigner",
+            "en": "bear witness of"
+          },
+          {
+            "target": "poudre",
+            "en": "powder"
+          },
+          {
+            "target": "tarte",
+            "en": "pie"
+          },
+          {
+            "target": "hauteur",
+            "en": "height"
+          },
+          {
+            "target": "culture",
+            "en": "cultivation"
+          },
+          {
+            "target": "pénis",
+            "en": "penis"
+          },
+          {
+            "target": "déçu",
+            "en": "cheated"
+          },
+          {
+            "target": "ministère",
+            "en": "ministry"
+          },
+          {
+            "target": "effrayant",
+            "en": "frightening"
+          },
+          {
+            "target": "Diane",
+            "en": "Diana"
+          },
+          {
+            "target": "actrice",
+            "en": "actress"
+          },
+          {
+            "target": "pisser",
+            "en": "urinate"
+          },
+          {
+            "target": "causer",
+            "en": "give rise to"
+          },
+          {
+            "target": "oxygène",
+            "en": "oxygen"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u51",
+        "title": "Common words 1251–1275",
+        "subtitle": "The 1251–1275 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "salade",
+            "en": "salad"
+          },
+          {
+            "target": "flotte",
+            "en": "fleet"
+          },
+          {
+            "target": "rage",
+            "en": "rabies"
+          },
+          {
+            "target": "amiral",
+            "en": "admiral"
+          },
+          {
+            "target": "guide",
+            "en": "leader"
+          },
+          {
+            "target": "comte",
+            "en": "count"
+          },
+          {
+            "target": "fauteuil",
+            "en": "armchair"
+          },
+          {
+            "target": "apprécier",
+            "en": "think well of"
+          },
+          {
+            "target": "auteur",
+            "en": "writer"
+          },
+          {
+            "target": "espion",
+            "en": "spy"
+          },
+          {
+            "target": "serment",
+            "en": "oath"
+          },
+          {
+            "target": "foie",
+            "en": "liver"
+          },
+          {
+            "target": "vague",
+            "en": "wave"
+          },
+          {
+            "target": "laboratoire",
+            "en": "laboratory"
+          },
+          {
+            "target": "naturellement",
+            "en": "of course"
+          },
+          {
+            "target": "Floride",
+            "en": "Florida"
+          },
+          {
+            "target": "charme",
+            "en": "grace"
+          },
+          {
+            "target": "adjoint",
+            "en": "assistant"
+          },
+          {
+            "target": "paraître",
+            "en": "appear to be"
+          },
+          {
+            "target": "efficace",
+            "en": "effective"
+          },
+          {
+            "target": "diplôme",
+            "en": "diploma"
+          },
+          {
+            "target": "ennuyeux",
+            "en": "boring"
+          },
+          {
+            "target": "électricité",
+            "en": "electricity"
+          },
+          {
+            "target": "ignorer",
+            "en": "ignore"
+          },
+          {
+            "target": "révolution",
+            "en": "revolution"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u52",
+        "title": "Common words 1276–1300",
+        "subtitle": "The 1276–1300 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "barbe",
+            "en": "beard"
+          },
+          {
+            "target": "commerce",
+            "en": "business"
+          },
+          {
+            "target": "parent",
+            "en": "relative"
+          },
+          {
+            "target": "commissariat",
+            "en": "police-station"
+          },
+          {
+            "target": "tuyau",
+            "en": "channel"
+          },
+          {
+            "target": "actuellement",
+            "en": "these days"
+          },
+          {
+            "target": "bol",
+            "en": "bowl"
+          },
+          {
+            "target": "dette",
+            "en": "debt"
+          },
+          {
+            "target": "plastique",
+            "en": "plastic"
+          },
+          {
+            "target": "éteindre",
+            "en": "put out"
+          },
+          {
+            "target": "dégoûtant",
+            "en": "disgusting"
+          },
+          {
+            "target": "nucléaire",
+            "en": "nuclear"
+          },
+          {
+            "target": "Russie",
+            "en": "Russia"
+          },
+          {
+            "target": "Espagnol",
+            "en": "Spaniard"
+          },
+          {
+            "target": "régime",
+            "en": "regime"
+          },
+          {
+            "target": "aïe",
+            "en": "ow"
+          },
+          {
+            "target": "sain",
+            "en": "well"
+          },
+          {
+            "target": "fidèle",
+            "en": "faithful"
+          },
+          {
+            "target": "cimetière",
+            "en": "cemetery"
+          },
+          {
+            "target": "couler",
+            "en": "flow"
+          },
+          {
+            "target": "fierté",
+            "en": "pride"
+          },
+          {
+            "target": "congrès",
+            "en": "congress"
+          },
+          {
+            "target": "métro",
+            "en": "underground"
+          },
+          {
+            "target": "processus",
+            "en": "process"
+          },
+          {
+            "target": "caractère",
+            "en": "nature"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u53",
+        "title": "Common words 1301–1325",
+        "subtitle": "The 1301–1325 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "intelligence",
+            "en": "wisdom"
+          },
+          {
+            "target": "résister",
+            "en": "resist"
+          },
+          {
+            "target": "douze",
+            "en": "twelve"
+          },
+          {
+            "target": "plaindre",
+            "en": "have compassion on"
+          },
+          {
+            "target": "exprimer",
+            "en": "express"
+          },
+          {
+            "target": "survie",
+            "en": "survival"
+          },
+          {
+            "target": "esclave",
+            "en": "slave"
+          },
+          {
+            "target": "septembre",
+            "en": "September"
+          },
+          {
+            "target": "particulièrement",
+            "en": "apart"
+          },
+          {
+            "target": "stratégie",
+            "en": "strategy"
+          },
+          {
+            "target": "chasseur",
+            "en": "hunter"
+          },
+          {
+            "target": "guitare",
+            "en": "guitar"
+          },
+          {
+            "target": "attaché",
+            "en": "devoted"
+          },
+          {
+            "target": "améliorer",
+            "en": "improve"
+          },
+          {
+            "target": "escalier",
+            "en": "stairs"
+          },
+          {
+            "target": "chirurgien",
+            "en": "surgeon"
+          },
+          {
+            "target": "quatrième",
+            "en": "fourth"
+          },
+          {
+            "target": "accent",
+            "en": "accent mark"
+          },
+          {
+            "target": "commandement",
+            "en": "board of directors"
+          },
+          {
+            "target": "lampe",
+            "en": "lamp"
+          },
+          {
+            "target": "crever",
+            "en": "burst"
+          },
+          {
+            "target": "grandir",
+            "en": "grow"
+          },
+          {
+            "target": "passant",
+            "en": "passer by"
+          },
+          {
+            "target": "dessin",
+            "en": "design"
+          },
+          {
+            "target": "généreux",
+            "en": "generous"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u54",
+        "title": "Common words 1326–1350",
+        "subtitle": "The 1326–1350 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "manuel",
+            "en": "manual"
+          },
+          {
+            "target": "officiel",
+            "en": "official"
+          },
+          {
+            "target": "reconnaissance",
+            "en": "boy scout"
+          },
+          {
+            "target": "appétit",
+            "en": "appetite"
+          },
+          {
+            "target": "découverte",
+            "en": "discovery"
+          },
+          {
+            "target": "câble",
+            "en": "cable"
+          },
+          {
+            "target": "phrase",
+            "en": "sentence"
+          },
+          {
+            "target": "disponible",
+            "en": "available"
+          },
+          {
+            "target": "cuisiner",
+            "en": "cook"
+          },
+          {
+            "target": "dépêche",
+            "en": "dispatch"
+          },
+          {
+            "target": "assister",
+            "en": "be present"
+          },
+          {
+            "target": "mortel",
+            "en": "deadly"
+          },
+          {
+            "target": "Indien",
+            "en": "American Indian"
+          },
+          {
+            "target": "stylo",
+            "en": "fountain pen"
+          },
+          {
+            "target": "riz",
+            "en": "rice"
+          },
+          {
+            "target": "désastre",
+            "en": "catastrophe"
+          },
+          {
+            "target": "métal",
+            "en": "metal"
+          },
+          {
+            "target": "Italie",
+            "en": "Italy"
+          },
+          {
+            "target": "Etats-Unis",
+            "en": "USA"
+          },
+          {
+            "target": "drapeau",
+            "en": "flag"
+          },
+          {
+            "target": "plaire",
+            "en": "please"
+          },
+          {
+            "target": "noix",
+            "en": "nut"
+          },
+          {
+            "target": "Inde",
+            "en": "India"
+          },
+          {
+            "target": "serviette",
+            "en": "towel"
+          },
+          {
+            "target": "méthode",
+            "en": "method"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u55",
+        "title": "Common words 1351–1375",
+        "subtitle": "The 1351–1375 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "autopsie",
+            "en": "autopsy"
+          },
+          {
+            "target": "Italien",
+            "en": "Italian"
+          },
+          {
+            "target": "quoique",
+            "en": "though"
+          },
+          {
+            "target": "passeport",
+            "en": "passport"
+          },
+          {
+            "target": "pomme",
+            "en": "apple"
+          },
+          {
+            "target": "environnement",
+            "en": "environment"
+          },
+          {
+            "target": "bâton",
+            "en": "stick"
+          },
+          {
+            "target": "bail",
+            "en": "lease"
+          },
+          {
+            "target": "reconnaissant",
+            "en": "thankful"
+          },
+          {
+            "target": "otage",
+            "en": "hostage"
+          },
+          {
+            "target": "héroïne",
+            "en": "heroin"
+          },
+          {
+            "target": "tendance",
+            "en": "tendency"
+          },
+          {
+            "target": "rupture",
+            "en": "interruption"
+          },
+          {
+            "target": "batterie",
+            "en": "percussion section"
+          },
+          {
+            "target": "enseigne",
+            "en": "shield"
+          },
+          {
+            "target": "héritage",
+            "en": "inheritance"
+          },
+          {
+            "target": "positif",
+            "en": "positive"
+          },
+          {
+            "target": "cousine",
+            "en": "cousin"
+          },
+          {
+            "target": "génération",
+            "en": "generation"
+          },
+          {
+            "target": "bâtard",
+            "en": "bastard"
+          },
+          {
+            "target": "torture",
+            "en": "torment"
+          },
+          {
+            "target": "creuser",
+            "en": "hollow out"
+          },
+          {
+            "target": "effacer",
+            "en": "wipe off"
+          },
+          {
+            "target": "événement",
+            "en": "event"
+          },
+          {
+            "target": "collège",
+            "en": "high school"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u56",
+        "title": "Common words 1376–1400",
+        "subtitle": "The 1376–1400 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "ténèbres",
+            "en": "darkness"
+          },
+          {
+            "target": "dent",
+            "en": "tooth"
+          },
+          {
+            "target": "moderne",
+            "en": "modern"
+          },
+          {
+            "target": "pétrole",
+            "en": "petroleum"
+          },
+          {
+            "target": "arracher",
+            "en": "eradicate"
+          },
+          {
+            "target": "sincère",
+            "en": "sincere"
+          },
+          {
+            "target": "timide",
+            "en": "afraid"
+          },
+          {
+            "target": "chevalier",
+            "en": "knight"
+          },
+          {
+            "target": "ordures",
+            "en": "rubbish"
+          },
+          {
+            "target": "volontaire",
+            "en": "willing"
+          },
+          {
+            "target": "vomir",
+            "en": "throw up"
+          },
+          {
+            "target": "scandale",
+            "en": "scandal"
+          },
+          {
+            "target": "mélange",
+            "en": "mixture"
+          },
+          {
+            "target": "déménager",
+            "en": "move house"
+          },
+          {
+            "target": "César",
+            "en": "Caesar"
+          },
+          {
+            "target": "chaos",
+            "en": "tangle"
+          },
+          {
+            "target": "résistance",
+            "en": "resistance"
+          },
+          {
+            "target": "veuve",
+            "en": "widow"
+          },
+          {
+            "target": "dernièrement",
+            "en": "lately"
+          },
+          {
+            "target": "Espagne",
+            "en": "Spain"
+          },
+          {
+            "target": "net",
+            "en": "clear"
+          },
+          {
+            "target": "juillet",
+            "en": "July"
+          },
+          {
+            "target": "capacité",
+            "en": "ability"
+          },
+          {
+            "target": "baisser",
+            "en": "go down"
+          },
+          {
+            "target": "pasteur",
+            "en": "shepherd"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u57",
+        "title": "Common words 1401–1425",
+        "subtitle": "The 1401–1425 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "sel",
+            "en": "salt"
+          },
+          {
+            "target": "maintenir",
+            "en": "go on"
+          },
+          {
+            "target": "stable",
+            "en": "steady"
+          },
+          {
+            "target": "abattre",
+            "en": "dig up"
+          },
+          {
+            "target": "littéralement",
+            "en": "verbatim"
+          },
+          {
+            "target": "panneau",
+            "en": "board"
+          },
+          {
+            "target": "tragédie",
+            "en": "tragedy"
+          },
+          {
+            "target": "serveur",
+            "en": "waiter"
+          },
+          {
+            "target": "marge",
+            "en": "margin"
+          },
+          {
+            "target": "prière",
+            "en": "prayer"
+          },
+          {
+            "target": "confirmer",
+            "en": "confirm"
+          },
+          {
+            "target": "séjour",
+            "en": "stay"
+          },
+          {
+            "target": "ambassadeur",
+            "en": "ambassador"
+          },
+          {
+            "target": "craindre",
+            "en": "be afraid of"
+          },
+          {
+            "target": "poing",
+            "en": "fist"
+          },
+          {
+            "target": "chapitre",
+            "en": "chapter"
+          },
+          {
+            "target": "four",
+            "en": "oven"
+          },
+          {
+            "target": "quinze",
+            "en": "fifteen"
+          },
+          {
+            "target": "regretter",
+            "en": "repent of"
+          },
+          {
+            "target": "avril",
+            "en": "April"
+          },
+          {
+            "target": "boue",
+            "en": "mud"
+          },
+          {
+            "target": "principe",
+            "en": "principle"
+          },
+          {
+            "target": "essentiel",
+            "en": "essential"
+          },
+          {
+            "target": "brise",
+            "en": "breeze"
+          },
+          {
+            "target": "règlement",
+            "en": "full payment"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u58",
+        "title": "Common words 1426–1450",
+        "subtitle": "The 1426–1450 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "symbole",
+            "en": "symbol"
+          },
+          {
+            "target": "marin",
+            "en": "of the sea"
+          },
+          {
+            "target": "revanche",
+            "en": "revenge"
+          },
+          {
+            "target": "rarement",
+            "en": "seldom"
+          },
+          {
+            "target": "rembourser",
+            "en": "repay"
+          },
+          {
+            "target": "luxe",
+            "en": "luxury"
+          },
+          {
+            "target": "vallée",
+            "en": "valley"
+          },
+          {
+            "target": "transport",
+            "en": "transportation"
+          },
+          {
+            "target": "franc",
+            "en": "Frankish"
+          },
+          {
+            "target": "plante",
+            "en": "plant"
+          },
+          {
+            "target": "acier",
+            "en": "steel"
+          },
+          {
+            "target": "subir",
+            "en": "live to see"
+          },
+          {
+            "target": "branche",
+            "en": "section"
+          },
+          {
+            "target": "engagement",
+            "en": "commitment"
+          },
+          {
+            "target": "révéler",
+            "en": "reveal"
+          },
+          {
+            "target": "lame",
+            "en": "blade"
+          },
+          {
+            "target": "cuir",
+            "en": "leather"
+          },
+          {
+            "target": "goutte",
+            "en": "drop"
+          },
+          {
+            "target": "autoroute",
+            "en": "motor road"
+          },
+          {
+            "target": "accuser",
+            "en": "accuse"
+          },
+          {
+            "target": "deuil",
+            "en": "mourning"
+          },
+          {
+            "target": "prime",
+            "en": "bonus"
+          },
+          {
+            "target": "hélas",
+            "en": "alas"
+          },
+          {
+            "target": "sec",
+            "en": "dry"
+          },
+          {
+            "target": "aile",
+            "en": "wing"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u59",
+        "title": "Common words 1451–1475",
+        "subtitle": "The 1451–1475 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "protocole",
+            "en": "minutes"
+          },
+          {
+            "target": "chatte",
+            "en": "female cat"
+          },
+          {
+            "target": "poignée",
+            "en": "handle"
+          },
+          {
+            "target": "roue",
+            "en": "wheel"
+          },
+          {
+            "target": "boucle",
+            "en": "loop"
+          },
+          {
+            "target": "légitime",
+            "en": "legal"
+          },
+          {
+            "target": "trente",
+            "en": "thirty"
+          },
+          {
+            "target": "serveuse",
+            "en": "waitress"
+          },
+          {
+            "target": "conflit",
+            "en": "conflict"
+          },
+          {
+            "target": "badge",
+            "en": "identity card"
+          },
+          {
+            "target": "pension",
+            "en": "boarding house"
+          },
+          {
+            "target": "chagrin",
+            "en": "grief"
+          },
+          {
+            "target": "réduire",
+            "en": "reduce"
+          },
+          {
+            "target": "candidat",
+            "en": "candidate"
+          },
+          {
+            "target": "munitions",
+            "en": "ammunition"
+          },
+          {
+            "target": "cercueil",
+            "en": "coffin"
+          },
+          {
+            "target": "enquêter",
+            "en": "hold an inquiry"
+          },
+          {
+            "target": "asile",
+            "en": "asylum"
+          },
+          {
+            "target": "louer",
+            "en": "hire"
+          },
+          {
+            "target": "tarder",
+            "en": "be late"
+          },
+          {
+            "target": "administration",
+            "en": "management"
+          },
+          {
+            "target": "hop",
+            "en": "gee-up"
+          },
+          {
+            "target": "juin",
+            "en": "June"
+          },
+          {
+            "target": "colline",
+            "en": "hill"
+          },
+          {
+            "target": "octobre",
+            "en": "October"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u60",
+        "title": "Common words 1476–1500",
+        "subtitle": "The 1476–1500 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "renoncer",
+            "en": "give up"
+          },
+          {
+            "target": "république",
+            "en": "republic"
+          },
+          {
+            "target": "domicile",
+            "en": "home"
+          },
+          {
+            "target": "médaille",
+            "en": "medal"
+          },
+          {
+            "target": "texte",
+            "en": "text"
+          },
+          {
+            "target": "blé",
+            "en": "wheat"
+          },
+          {
+            "target": "suprême",
+            "en": "supreme"
+          },
+          {
+            "target": "décrire",
+            "en": "describe"
+          },
+          {
+            "target": "enveloppe",
+            "en": "envelope"
+          },
+          {
+            "target": "manche",
+            "en": "sleeve"
+          },
+          {
+            "target": "auquel",
+            "en": "whom"
+          },
+          {
+            "target": "cadre",
+            "en": "frame"
+          },
+          {
+            "target": "enseigner",
+            "en": "teach"
+          },
+          {
+            "target": "maquillage",
+            "en": "make up"
+          },
+          {
+            "target": "restant",
+            "en": "left over"
+          },
+          {
+            "target": "gris",
+            "en": "grey"
+          },
+          {
+            "target": "piquer",
+            "en": "pick"
+          },
+          {
+            "target": "canard",
+            "en": "duck"
+          },
+          {
+            "target": "quantité",
+            "en": "quantity"
+          },
+          {
+            "target": "punir",
+            "en": "punish"
+          },
+          {
+            "target": "énerver",
+            "en": "irritate"
+          },
+          {
+            "target": "ingénieur",
+            "en": "engineer"
+          },
+          {
+            "target": "pape",
+            "en": "pope"
+          },
+          {
+            "target": "pouce",
+            "en": "thumb"
+          },
+          {
+            "target": "faiblesse",
+            "en": "weakness"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u61",
+        "title": "Common words 1501–1525",
+        "subtitle": "The 1501–1525 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "remarquable",
+            "en": "remarkable"
+          },
+          {
+            "target": "malentendu",
+            "en": "misunderstanding"
+          },
+          {
+            "target": "élément",
+            "en": "element"
+          },
+          {
+            "target": "vaincre",
+            "en": "win over"
+          },
+          {
+            "target": "mêler",
+            "en": "mix"
+          },
+          {
+            "target": "estime",
+            "en": "regard"
+          },
+          {
+            "target": "silencieux",
+            "en": "silent"
+          },
+          {
+            "target": "avertir",
+            "en": "warn"
+          },
+          {
+            "target": "tournage",
+            "en": "film set"
+          },
+          {
+            "target": "requin",
+            "en": "shark"
+          },
+          {
+            "target": "conscient",
+            "en": "aware"
+          },
+          {
+            "target": "panier",
+            "en": "basket"
+          },
+          {
+            "target": "compromis",
+            "en": "accommodation"
+          },
+          {
+            "target": "coûter",
+            "en": "cost"
+          },
+          {
+            "target": "revue",
+            "en": "magazine"
+          },
+          {
+            "target": "ruiner",
+            "en": "ruin"
+          },
+          {
+            "target": "avaler",
+            "en": "swallow"
+          },
+          {
+            "target": "nièce",
+            "en": "niece"
+          },
+          {
+            "target": "Française",
+            "en": "Frenchwoman"
+          },
+          {
+            "target": "douzaine",
+            "en": "dozen"
+          },
+          {
+            "target": "trouble",
+            "en": "indistinct"
+          },
+          {
+            "target": "rapporter",
+            "en": "give an account"
+          },
+          {
+            "target": "intéresser",
+            "en": "interest"
+          },
+          {
+            "target": "sourd",
+            "en": "deaf"
+          },
+          {
+            "target": "industrie",
+            "en": "industry"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u62",
+        "title": "Common words 1526–1550",
+        "subtitle": "The 1526–1550 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "soudainement",
+            "en": "suddenly"
+          },
+          {
+            "target": "linge",
+            "en": "cloth"
+          },
+          {
+            "target": "fragile",
+            "en": "brittle"
+          },
+          {
+            "target": "obéir",
+            "en": "obey"
+          },
+          {
+            "target": "curiosité",
+            "en": "curiosity"
+          },
+          {
+            "target": "balancer",
+            "en": "rock"
+          },
+          {
+            "target": "demeure",
+            "en": "residence"
+          },
+          {
+            "target": "ambiance",
+            "en": "mood"
+          },
+          {
+            "target": "ramasser",
+            "en": "pile up"
+          },
+          {
+            "target": "débat",
+            "en": "debate"
+          },
+          {
+            "target": "confortable",
+            "en": "comfortable"
+          },
+          {
+            "target": "navette",
+            "en": "shuttle"
+          },
+          {
+            "target": "jumeaux",
+            "en": "twins"
+          },
+          {
+            "target": "genou",
+            "en": "knee"
+          },
+          {
+            "target": "mystérieux",
+            "en": "mysterious"
+          },
+          {
+            "target": "tragique",
+            "en": "tragic"
+          },
+          {
+            "target": "Moscou",
+            "en": "Moscow"
+          },
+          {
+            "target": "royal",
+            "en": "regal"
+          },
+          {
+            "target": "exposition",
+            "en": "exhibition"
+          },
+          {
+            "target": "nid",
+            "en": "nest"
+          },
+          {
+            "target": "atelier",
+            "en": "studio"
+          },
+          {
+            "target": "novembre",
+            "en": "November"
+          },
+          {
+            "target": "dépression",
+            "en": "depression"
+          },
+          {
+            "target": "quelconque",
+            "en": "some kind of"
+          },
+          {
+            "target": "endormir",
+            "en": "put to sleep"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u63",
+        "title": "Common words 1551–1575",
+        "subtitle": "The 1551–1575 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "échanger",
+            "en": "swap"
+          },
+          {
+            "target": "fillette",
+            "en": "little girl"
+          },
+          {
+            "target": "punition",
+            "en": "punishment"
+          },
+          {
+            "target": "accrocher",
+            "en": "hitch on"
+          },
+          {
+            "target": "chaussure",
+            "en": "shoe"
+          },
+          {
+            "target": "tiroir",
+            "en": "drawer"
+          },
+          {
+            "target": "grève",
+            "en": "strike"
+          },
+          {
+            "target": "culotte",
+            "en": "short pants"
+          },
+          {
+            "target": "Tigre",
+            "en": "Tigris"
+          },
+          {
+            "target": "chariot",
+            "en": "cart"
+          },
+          {
+            "target": "aiguille",
+            "en": "needle"
+          },
+          {
+            "target": "Suisse",
+            "en": "Switzerland"
+          },
+          {
+            "target": "fournir",
+            "en": "deliver"
+          },
+          {
+            "target": "sperme",
+            "en": "sperm"
+          },
+          {
+            "target": "jouet",
+            "en": "toy"
+          },
+          {
+            "target": "citoyen",
+            "en": "citizen"
+          },
+          {
+            "target": "plafond",
+            "en": "ceiling"
+          },
+          {
+            "target": "signaler",
+            "en": "draw attention"
+          },
+          {
+            "target": "poème",
+            "en": "poem"
+          },
+          {
+            "target": "confier",
+            "en": "have confidence in"
+          },
+          {
+            "target": "ligue",
+            "en": "connection"
+          },
+          {
+            "target": "Irlandais",
+            "en": "Irishman"
+          },
+          {
+            "target": "défaut",
+            "en": "damage"
+          },
+          {
+            "target": "anonyme",
+            "en": "without a name"
+          },
+          {
+            "target": "ambassade",
+            "en": "embassy"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u64",
+        "title": "Common words 1576–1600",
+        "subtitle": "The 1576–1600 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "adversaire",
+            "en": "opponent"
+          },
+          {
+            "target": "automne",
+            "en": "autumn"
+          },
+          {
+            "target": "économie",
+            "en": "economy"
+          },
+          {
+            "target": "feuille",
+            "en": "sheet"
+          },
+          {
+            "target": "colonne",
+            "en": "column"
+          },
+          {
+            "target": "dépenser",
+            "en": "pay out"
+          },
+          {
+            "target": "parier",
+            "en": "bet"
+          },
+          {
+            "target": "acide",
+            "en": "acid"
+          },
+          {
+            "target": "constamment",
+            "en": "constantly"
+          },
+          {
+            "target": "fixe",
+            "en": "fixed"
+          },
+          {
+            "target": "dignité",
+            "en": "dignity"
+          },
+          {
+            "target": "marteau",
+            "en": "hammer"
+          },
+          {
+            "target": "accorder",
+            "en": "tune"
+          },
+          {
+            "target": "atterrir",
+            "en": "land"
+          },
+          {
+            "target": "dentiste",
+            "en": "dentist"
+          },
+          {
+            "target": "civil",
+            "en": "civilian"
+          },
+          {
+            "target": "profit",
+            "en": "gain"
+          },
+          {
+            "target": "base-ball",
+            "en": "baseball"
+          },
+          {
+            "target": "diamant",
+            "en": "diamond"
+          },
+          {
+            "target": "antenne",
+            "en": "aerial"
+          },
+          {
+            "target": "Satan",
+            "en": "Lucifer"
+          },
+          {
+            "target": "Antoine",
+            "en": "Antony"
+          },
+          {
+            "target": "guère",
+            "en": "hardly"
+          },
+          {
+            "target": "provoquer",
+            "en": "provoke"
+          },
+          {
+            "target": "formule",
+            "en": "formula"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u65",
+        "title": "Common words 1601–1625",
+        "subtitle": "The 1601–1625 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "sobre",
+            "en": "sober"
+          },
+          {
+            "target": "merveille",
+            "en": "wonder"
+          },
+          {
+            "target": "péter",
+            "en": "fart"
+          },
+          {
+            "target": "désordre",
+            "en": "confusion"
+          },
+          {
+            "target": "discret",
+            "en": "discrete"
+          },
+          {
+            "target": "petit-fils",
+            "en": "grandson"
+          },
+          {
+            "target": "photographe",
+            "en": "photographer"
+          },
+          {
+            "target": "disputer",
+            "en": "question"
+          },
+          {
+            "target": "are",
+            "en": "square decametre"
+          },
+          {
+            "target": "intense",
+            "en": "acute"
+          },
+          {
+            "target": "août",
+            "en": "August"
+          },
+          {
+            "target": "verdict",
+            "en": "adjudication"
+          },
+          {
+            "target": "grillé",
+            "en": "roasted"
+          },
+          {
+            "target": "décembre",
+            "en": "December"
+          },
+          {
+            "target": "fiançailles",
+            "en": "engagement"
+          },
+          {
+            "target": "glisser",
+            "en": "slip"
+          },
+          {
+            "target": "émotion",
+            "en": "emotion"
+          },
+          {
+            "target": "longueur",
+            "en": "length"
+          },
+          {
+            "target": "lutter",
+            "en": "struggle"
+          },
+          {
+            "target": "monseigneur",
+            "en": "monsignor"
+          },
+          {
+            "target": "contenu",
+            "en": "contents"
+          },
+          {
+            "target": "ennui",
+            "en": "boredom"
+          },
+          {
+            "target": "Corée",
+            "en": "Korea"
+          },
+          {
+            "target": "Britannique",
+            "en": "Briton"
+          },
+          {
+            "target": "poésie",
+            "en": "poetry"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u66",
+        "title": "Common words 1626–1650",
+        "subtitle": "The 1626–1650 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "tabac",
+            "en": "tobacconist's shop"
+          },
+          {
+            "target": "hôte",
+            "en": "guest"
+          },
+          {
+            "target": "représentant",
+            "en": "agent"
+          },
+          {
+            "target": "voile",
+            "en": "sail"
+          },
+          {
+            "target": "misère",
+            "en": "misery"
+          },
+          {
+            "target": "inverse",
+            "en": "reverse"
+          },
+          {
+            "target": "coller",
+            "en": "paste up"
+          },
+          {
+            "target": "grotte",
+            "en": "cave"
+          },
+          {
+            "target": "Irak",
+            "en": "Iraq"
+          },
+          {
+            "target": "orchestre",
+            "en": "orchestra"
+          },
+          {
+            "target": "sorcier",
+            "en": "wizard"
+          },
+          {
+            "target": "lent",
+            "en": "slow"
+          },
+          {
+            "target": "nuage",
+            "en": "cloud"
+          },
+          {
+            "target": "trahir",
+            "en": "betray"
+          },
+          {
+            "target": "reporter",
+            "en": "transport"
+          },
+          {
+            "target": "développement",
+            "en": "growth"
+          },
+          {
+            "target": "détester",
+            "en": "dislike"
+          },
+          {
+            "target": "descente",
+            "en": "descent"
+          },
+          {
+            "target": "marchandise",
+            "en": "merchandise"
+          },
+          {
+            "target": "confus",
+            "en": "jumbled up"
+          },
+          {
+            "target": "savon",
+            "en": "soap"
+          },
+          {
+            "target": "terreur",
+            "en": "reign of terror"
+          },
+          {
+            "target": "janvier",
+            "en": "January"
+          },
+          {
+            "target": "cheville",
+            "en": "ankle"
+          },
+          {
+            "target": "galerie",
+            "en": "gallery"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u67",
+        "title": "Common words 1651–1675",
+        "subtitle": "The 1651–1675 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "cristal",
+            "en": "crystal"
+          },
+          {
+            "target": "temporaire",
+            "en": "temporary"
+          },
+          {
+            "target": "spécialement",
+            "en": "particularly"
+          },
+          {
+            "target": "attacher",
+            "en": "tie up"
+          },
+          {
+            "target": "taupe",
+            "en": "mole"
+          },
+          {
+            "target": "majorité",
+            "en": "majority"
+          },
+          {
+            "target": "surprendre",
+            "en": "surprise"
+          },
+          {
+            "target": "noyer",
+            "en": "drown"
+          },
+          {
+            "target": "Jacques",
+            "en": "Jacob"
+          },
+          {
+            "target": "syndicat",
+            "en": "syndicate"
+          },
+          {
+            "target": "éternel",
+            "en": "eternal"
+          },
+          {
+            "target": "fée",
+            "en": "fairy"
+          },
+          {
+            "target": "vif",
+            "en": "alert"
+          },
+          {
+            "target": "dégager",
+            "en": "flow down"
+          },
+          {
+            "target": "boucher",
+            "en": "plug up"
+          },
+          {
+            "target": "statut",
+            "en": "regulations"
+          },
+          {
+            "target": "carton",
+            "en": "cardboard"
+          },
+          {
+            "target": "extrême",
+            "en": "extremity"
+          },
+          {
+            "target": "requête",
+            "en": "effort"
+          },
+          {
+            "target": "citron",
+            "en": "lemon"
+          },
+          {
+            "target": "chantier",
+            "en": "building site"
+          },
+          {
+            "target": "quai",
+            "en": "platform"
+          },
+          {
+            "target": "maïs",
+            "en": "Indian corn"
+          },
+          {
+            "target": "orbite",
+            "en": "orbit"
+          },
+          {
+            "target": "pénible",
+            "en": "miserable"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u68",
+        "title": "Common words 1676–1700",
+        "subtitle": "The 1676–1700 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "oreiller",
+            "en": "pillow"
+          },
+          {
+            "target": "éclair",
+            "en": "flash of lightning"
+          },
+          {
+            "target": "tactique",
+            "en": "tactics"
+          },
+          {
+            "target": "allergique",
+            "en": "allergic"
+          },
+          {
+            "target": "cicatrice",
+            "en": "scar"
+          },
+          {
+            "target": "tonnerre",
+            "en": "thunder"
+          },
+          {
+            "target": "grange",
+            "en": "barn"
+          },
+          {
+            "target": "degré",
+            "en": "grade"
+          },
+          {
+            "target": "flamme",
+            "en": "flame"
+          },
+          {
+            "target": "amateur",
+            "en": "fancier"
+          },
+          {
+            "target": "ralentir",
+            "en": "moderate"
+          },
+          {
+            "target": "solaire",
+            "en": "solar"
+          },
+          {
+            "target": "banc",
+            "en": "bench"
+          },
+          {
+            "target": "démarrer",
+            "en": "start off"
+          },
+          {
+            "target": "confession",
+            "en": "admission"
+          },
+          {
+            "target": "académie",
+            "en": "academy"
+          },
+          {
+            "target": "inventer",
+            "en": "invent"
+          },
+          {
+            "target": "barman",
+            "en": "bartender"
+          },
+          {
+            "target": "carnet",
+            "en": "book of vouchers"
+          },
+          {
+            "target": "nier",
+            "en": "deny"
+          },
+          {
+            "target": "sonner",
+            "en": "ring the bell"
+          },
+          {
+            "target": "pompe",
+            "en": "pump"
+          },
+          {
+            "target": "présentation",
+            "en": "entry"
+          },
+          {
+            "target": "saluer",
+            "en": "greet"
+          },
+          {
+            "target": "joint",
+            "en": "seam"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u69",
+        "title": "Common words 1701–1725",
+        "subtitle": "The 1701–1725 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "grippe",
+            "en": "grip"
+          },
+          {
+            "target": "chiffre",
+            "en": "figure"
+          },
+          {
+            "target": "hurler",
+            "en": "howl"
+          },
+          {
+            "target": "psychiatre",
+            "en": "psychiatrist"
+          },
+          {
+            "target": "pendre",
+            "en": "hang"
+          },
+          {
+            "target": "mordre",
+            "en": "bite"
+          },
+          {
+            "target": "brosse",
+            "en": "brush"
+          },
+          {
+            "target": "craquer",
+            "en": "crack"
+          },
+          {
+            "target": "pyjama",
+            "en": "pyjamas"
+          },
+          {
+            "target": "hommage",
+            "en": "homage"
+          },
+          {
+            "target": "ordonnance",
+            "en": "recipe"
+          },
+          {
+            "target": "habituer",
+            "en": "accustom"
+          },
+          {
+            "target": "fondation",
+            "en": "foundation"
+          },
+          {
+            "target": "consulter",
+            "en": "consult"
+          },
+          {
+            "target": "concierge",
+            "en": "caretaker"
+          },
+          {
+            "target": "réunir",
+            "en": "meet"
+          },
+          {
+            "target": "ronde",
+            "en": "round"
+          },
+          {
+            "target": "alcoolique",
+            "en": "alcoholic"
+          },
+          {
+            "target": "sous-marin",
+            "en": "submarine"
+          },
+          {
+            "target": "standard",
+            "en": "normal"
+          },
+          {
+            "target": "souper",
+            "en": "evening meal"
+          },
+          {
+            "target": "éléphant",
+            "en": "elephant"
+          },
+          {
+            "target": "considérer",
+            "en": "take into account"
+          },
+          {
+            "target": "coiffure",
+            "en": "hairstyle"
+          },
+          {
+            "target": "botte",
+            "en": "boot"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u70",
+        "title": "Common words 1726–1750",
+        "subtitle": "The 1726–1750 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "député",
+            "en": "deputy"
+          },
+          {
+            "target": "barrière",
+            "en": "fence"
+          },
+          {
+            "target": "disposition",
+            "en": "arrangement"
+          },
+          {
+            "target": "papillon",
+            "en": "butterfly"
+          },
+          {
+            "target": "grille",
+            "en": "grid"
+          },
+          {
+            "target": "poète",
+            "en": "poet"
+          },
+          {
+            "target": "col",
+            "en": "mountain pass"
+          },
+          {
+            "target": "attentivement",
+            "en": "attentively"
+          },
+          {
+            "target": "poignet",
+            "en": "wrist"
+          },
+          {
+            "target": "montant",
+            "en": "amount"
+          },
+          {
+            "target": "toile",
+            "en": "linen"
+          },
+          {
+            "target": "parrain",
+            "en": "godfather"
+          },
+          {
+            "target": "honorable",
+            "en": "decent"
+          },
+          {
+            "target": "facteur",
+            "en": "postman"
+          },
+          {
+            "target": "onze",
+            "en": "eleven"
+          },
+          {
+            "target": "conclure",
+            "en": "gather"
+          },
+          {
+            "target": "analyser",
+            "en": "analyse"
+          },
+          {
+            "target": "pâle",
+            "en": "pale"
+          },
+          {
+            "target": "fixer",
+            "en": "make fast"
+          },
+          {
+            "target": "poli",
+            "en": "smooth"
+          },
+          {
+            "target": "Pacifique",
+            "en": "Pacific Ocean"
+          },
+          {
+            "target": "conte",
+            "en": "fairy tale"
+          },
+          {
+            "target": "compagnon",
+            "en": "partner"
+          },
+          {
+            "target": "pharmacie",
+            "en": "chemist's shop"
+          },
+          {
+            "target": "âgé",
+            "en": "aged"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u71",
+        "title": "Common words 1751–1775",
+        "subtitle": "The 1751–1775 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "chanteur",
+            "en": "singer"
+          },
+          {
+            "target": "rançon",
+            "en": "ransom"
+          },
+          {
+            "target": "nounou",
+            "en": "nanny"
+          },
+          {
+            "target": "automatique",
+            "en": "automatic"
+          },
+          {
+            "target": "gant",
+            "en": "glove"
+          },
+          {
+            "target": "sénat",
+            "en": "senate"
+          },
+          {
+            "target": "individu",
+            "en": "guy"
+          },
+          {
+            "target": "ado",
+            "en": "youth"
+          },
+          {
+            "target": "rapprocher",
+            "en": "bring near to"
+          },
+          {
+            "target": "assassiner",
+            "en": "murder"
+          },
+          {
+            "target": "brouillard",
+            "en": "fog"
+          },
+          {
+            "target": "cinquante",
+            "en": "fifty"
+          },
+          {
+            "target": "trottoir",
+            "en": "sidewalk"
+          },
+          {
+            "target": "pilule",
+            "en": "pill"
+          },
+          {
+            "target": "Arabe",
+            "en": "Arabian woman"
+          },
+          {
+            "target": "encre",
+            "en": "ink"
+          },
+          {
+            "target": "foudre",
+            "en": "lightning bolt"
+          },
+          {
+            "target": "marchand",
+            "en": "salesman"
+          },
+          {
+            "target": "sueur",
+            "en": "sweat"
+          },
+          {
+            "target": "impliquer",
+            "en": "imply"
+          },
+          {
+            "target": "satisfaire",
+            "en": "meet with"
+          },
+          {
+            "target": "plonger",
+            "en": "dive"
+          },
+          {
+            "target": "vagin",
+            "en": "vagina"
+          },
+          {
+            "target": "typique",
+            "en": "typical"
+          },
+          {
+            "target": "sucer",
+            "en": "suck"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u72",
+        "title": "Common words 1776–1800",
+        "subtitle": "The 1776–1800 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "habiter",
+            "en": "live"
+          },
+          {
+            "target": "allonger",
+            "en": "lengthen"
+          },
+          {
+            "target": "veine",
+            "en": "inspiration"
+          },
+          {
+            "target": "ennuyer",
+            "en": "bore"
+          },
+          {
+            "target": "fusée",
+            "en": "rocket"
+          },
+          {
+            "target": "désespoir",
+            "en": "despair"
+          },
+          {
+            "target": "auberge",
+            "en": "inn"
+          },
+          {
+            "target": "soie",
+            "en": "silk"
+          },
+          {
+            "target": "chèvre",
+            "en": "nanny goat"
+          },
+          {
+            "target": "hache",
+            "en": "axe"
+          },
+          {
+            "target": "mont",
+            "en": "mountain"
+          },
+          {
+            "target": "Australie",
+            "en": "Australia"
+          },
+          {
+            "target": "appât",
+            "en": "attraction"
+          },
+          {
+            "target": "âne",
+            "en": "ass"
+          },
+          {
+            "target": "oeuf",
+            "en": "egg"
+          },
+          {
+            "target": "secondaire",
+            "en": "secondary"
+          },
+          {
+            "target": "chauve",
+            "en": "bald"
+          },
+          {
+            "target": "rideau",
+            "en": "curtain"
+          },
+          {
+            "target": "février",
+            "en": "February"
+          },
+          {
+            "target": "repousser",
+            "en": "disapprove of"
+          },
+          {
+            "target": "exécuter",
+            "en": "execute"
+          },
+          {
+            "target": "agneau",
+            "en": "lamb"
+          },
+          {
+            "target": "dimension",
+            "en": "measurement"
+          },
+          {
+            "target": "raser",
+            "en": "shave"
+          },
+          {
+            "target": "cheminée",
+            "en": "fireplace"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u73",
+        "title": "Common words 1801–1825",
+        "subtitle": "The 1801–1825 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "distraire",
+            "en": "distract"
+          },
+          {
+            "target": "profondeur",
+            "en": "depth"
+          },
+          {
+            "target": "grain",
+            "en": "pip"
+          },
+          {
+            "target": "grenier",
+            "en": "attic"
+          },
+          {
+            "target": "char",
+            "en": "tank"
+          },
+          {
+            "target": "infiniment",
+            "en": "ad infinitum"
+          },
+          {
+            "target": "aigle",
+            "en": "eagle"
+          },
+          {
+            "target": "matelas",
+            "en": "mattress"
+          },
+          {
+            "target": "proie",
+            "en": "prey"
+          },
+          {
+            "target": "prévoir",
+            "en": "forecast"
+          },
+          {
+            "target": "vachement",
+            "en": "damned"
+          },
+          {
+            "target": "stand",
+            "en": "shed"
+          },
+          {
+            "target": "représenter",
+            "en": "act for"
+          },
+          {
+            "target": "araignée",
+            "en": "spider"
+          },
+          {
+            "target": "colonie",
+            "en": "colony"
+          },
+          {
+            "target": "renard",
+            "en": "fox"
+          },
+          {
+            "target": "exister",
+            "en": "exist"
+          },
+          {
+            "target": "Israël",
+            "en": "Israel"
+          },
+          {
+            "target": "Brésil",
+            "en": "Brazil"
+          },
+          {
+            "target": "colis",
+            "en": "luggage"
+          },
+          {
+            "target": "grimper",
+            "en": "climb"
+          },
+          {
+            "target": "dessiner",
+            "en": "draw"
+          },
+          {
+            "target": "casquette",
+            "en": "cap"
+          },
+          {
+            "target": "purée",
+            "en": "mess"
+          },
+          {
+            "target": "prétexte",
+            "en": "pretext"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u74",
+        "title": "Common words 1826–1850",
+        "subtitle": "The 1826–1850 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "impasse",
+            "en": "dead-end street"
+          },
+          {
+            "target": "modeste",
+            "en": "modest"
+          },
+          {
+            "target": "vœu",
+            "en": "wish"
+          },
+          {
+            "target": "arc",
+            "en": "bow"
+          },
+          {
+            "target": "taureau",
+            "en": "bull"
+          },
+          {
+            "target": "selle",
+            "en": "saddle"
+          },
+          {
+            "target": "banane",
+            "en": "banana"
+          },
+          {
+            "target": "commune",
+            "en": "community"
+          },
+          {
+            "target": "fédération",
+            "en": "federation"
+          },
+          {
+            "target": "comparer",
+            "en": "compare"
+          },
+          {
+            "target": "conviction",
+            "en": "belief"
+          },
+          {
+            "target": "rein",
+            "en": "kidney"
+          },
+          {
+            "target": "favori",
+            "en": "favorite"
+          },
+          {
+            "target": "religieux",
+            "en": "religious"
+          },
+          {
+            "target": "ciseaux",
+            "en": "scissors"
+          },
+          {
+            "target": "attentat",
+            "en": "assault"
+          },
+          {
+            "target": "renverser",
+            "en": "turn over"
+          },
+          {
+            "target": "balai",
+            "en": "broom"
+          },
+          {
+            "target": "béton",
+            "en": "concrete"
+          },
+          {
+            "target": "fumier",
+            "en": "manure"
+          },
+          {
+            "target": "tortue",
+            "en": "tortoise"
+          },
+          {
+            "target": "nage",
+            "en": "swimming"
+          },
+          {
+            "target": "valable",
+            "en": "acceptable"
+          },
+          {
+            "target": "lessive",
+            "en": "lye"
+          },
+          {
+            "target": "escorte",
+            "en": "train"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u75",
+        "title": "Common words 1851–1875",
+        "subtitle": "The 1851–1875 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "fondre",
+            "en": "cast"
+          },
+          {
+            "target": "outre",
+            "en": "goatskin"
+          },
+          {
+            "target": "démonstration",
+            "en": "display"
+          },
+          {
+            "target": "rasoir",
+            "en": "razor"
+          },
+          {
+            "target": "mineur",
+            "en": "minor"
+          },
+          {
+            "target": "jupe",
+            "en": "skirt"
+          },
+          {
+            "target": "plancher",
+            "en": "floor"
+          },
+          {
+            "target": "épargner",
+            "en": "save"
+          },
+          {
+            "target": "troupeau",
+            "en": "herd"
+          },
+          {
+            "target": "télégramme",
+            "en": "telegram"
+          },
+          {
+            "target": "menacer",
+            "en": "threaten"
+          },
+          {
+            "target": "inscrire",
+            "en": "enter"
+          },
+          {
+            "target": "jambon",
+            "en": "ham"
+          },
+          {
+            "target": "tiers",
+            "en": "third"
+          },
+          {
+            "target": "hypothèse",
+            "en": "hypothesis"
+          },
+          {
+            "target": "cigare",
+            "en": "cigar"
+          },
+          {
+            "target": "serrure",
+            "en": "lock"
+          },
+          {
+            "target": "marron",
+            "en": "chestnut"
+          },
+          {
+            "target": "coiffeur",
+            "en": "barber"
+          },
+          {
+            "target": "marais",
+            "en": "swamp"
+          },
+          {
+            "target": "armoire",
+            "en": "closet"
+          },
+          {
+            "target": "vertu",
+            "en": "virtue"
+          },
+          {
+            "target": "récolte",
+            "en": "harvest"
+          },
+          {
+            "target": "balcon",
+            "en": "balcony"
+          },
+          {
+            "target": "primaire",
+            "en": "elementary"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u76",
+        "title": "Common words 1876–1900",
+        "subtitle": "The 1876–1900 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "baie",
+            "en": "bay"
+          },
+          {
+            "target": "gilet",
+            "en": "vest"
+          },
+          {
+            "target": "Mexicain",
+            "en": "Mexican"
+          },
+          {
+            "target": "trajectoire",
+            "en": "trajectory"
+          },
+          {
+            "target": "mental",
+            "en": "lively"
+          },
+          {
+            "target": "messager",
+            "en": "courier"
+          },
+          {
+            "target": "crochet",
+            "en": "hook"
+          },
+          {
+            "target": "naître",
+            "en": "be born"
+          },
+          {
+            "target": "rude",
+            "en": "harsh"
+          },
+          {
+            "target": "baby-sitter",
+            "en": "babysitter"
+          },
+          {
+            "target": "préparation",
+            "en": "preparation"
+          },
+          {
+            "target": "passager",
+            "en": "passenger"
+          },
+          {
+            "target": "authentique",
+            "en": "authentic"
+          },
+          {
+            "target": "jumelles",
+            "en": "binoculars"
+          },
+          {
+            "target": "raide",
+            "en": "stiff"
+          },
+          {
+            "target": "privilège",
+            "en": "privilege"
+          },
+          {
+            "target": "sévère",
+            "en": "severe"
+          },
+          {
+            "target": "investir",
+            "en": "invest"
+          },
+          {
+            "target": "Grec",
+            "en": "Greek"
+          },
+          {
+            "target": "philosophie",
+            "en": "philosophy"
+          },
+          {
+            "target": "peintre",
+            "en": "painter"
+          },
+          {
+            "target": "pourboire",
+            "en": "tip"
+          },
+          {
+            "target": "pelle",
+            "en": "shovel"
+          },
+          {
+            "target": "rebelle",
+            "en": "rebellious"
+          },
+          {
+            "target": "morphine",
+            "en": "morphia"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u77",
+        "title": "Common words 1901–1925",
+        "subtitle": "The 1901–1925 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "grenouille",
+            "en": "frog"
+          },
+          {
+            "target": "violon",
+            "en": "violin"
+          },
+          {
+            "target": "montage",
+            "en": "fitting up"
+          },
+          {
+            "target": "offenser",
+            "en": "abuse"
+          },
+          {
+            "target": "charbon",
+            "en": "coal"
+          },
+          {
+            "target": "armure",
+            "en": "armour"
+          },
+          {
+            "target": "divin",
+            "en": "divine"
+          },
+          {
+            "target": "ver",
+            "en": "worm"
+          },
+          {
+            "target": "puzzle",
+            "en": "riddle"
+          },
+          {
+            "target": "humide",
+            "en": "moist"
+          },
+          {
+            "target": "régulièrement",
+            "en": "regularly"
+          },
+          {
+            "target": "alentours",
+            "en": "surroundings"
+          },
+          {
+            "target": "vaste",
+            "en": "vast"
+          },
+          {
+            "target": "voisinage",
+            "en": "neighbourhood"
+          },
+          {
+            "target": "paille",
+            "en": "straw"
+          },
+          {
+            "target": "moine",
+            "en": "monk"
+          },
+          {
+            "target": "calendrier",
+            "en": "calendar"
+          },
+          {
+            "target": "chimie",
+            "en": "chemistry"
+          },
+          {
+            "target": "phénomène",
+            "en": "phenomenon"
+          },
+          {
+            "target": "fermier",
+            "en": "farmer"
+          },
+          {
+            "target": "vapeur",
+            "en": "steam"
+          },
+          {
+            "target": "pigeon",
+            "en": "dove"
+          },
+          {
+            "target": "agenda",
+            "en": "appointment book"
+          },
+          {
+            "target": "recours",
+            "en": "use"
+          },
+          {
+            "target": "habituel",
+            "en": "used to"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u78",
+        "title": "Common words 1926–1950",
+        "subtitle": "The 1926–1950 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "perruque",
+            "en": "wig"
+          },
+          {
+            "target": "pompier",
+            "en": "fireman"
+          },
+          {
+            "target": "débarquer",
+            "en": "disembark"
+          },
+          {
+            "target": "calcul",
+            "en": "calculation"
+          },
+          {
+            "target": "achat",
+            "en": "purchase"
+          },
+          {
+            "target": "mousse",
+            "en": "moss"
+          },
+          {
+            "target": "supprimer",
+            "en": "get rid of"
+          },
+          {
+            "target": "chauffer",
+            "en": "heat"
+          },
+          {
+            "target": "photographie",
+            "en": "photography"
+          },
+          {
+            "target": "étouffer",
+            "en": "choke"
+          },
+          {
+            "target": "comporter",
+            "en": "consist of"
+          },
+          {
+            "target": "pénétrer",
+            "en": "penetrate"
+          },
+          {
+            "target": "gelée",
+            "en": "freezing cold"
+          },
+          {
+            "target": "ironie",
+            "en": "irony"
+          },
+          {
+            "target": "plume",
+            "en": "feather"
+          },
+          {
+            "target": "atout",
+            "en": "trump"
+          },
+          {
+            "target": "féliciter",
+            "en": "congratulate"
+          },
+          {
+            "target": "Chili",
+            "en": "Chile"
+          },
+          {
+            "target": "imposer",
+            "en": "put on"
+          },
+          {
+            "target": "mèche",
+            "en": "fuse"
+          },
+          {
+            "target": "musicien",
+            "en": "musician"
+          },
+          {
+            "target": "confort",
+            "en": "comfort"
+          },
+          {
+            "target": "adapter",
+            "en": "score"
+          },
+          {
+            "target": "saucisse",
+            "en": "sausage"
+          },
+          {
+            "target": "bouquin",
+            "en": "buck"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u79",
+        "title": "Common words 1951–1975",
+        "subtitle": "The 1951–1975 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "actif",
+            "en": "in action"
+          },
+          {
+            "target": "prononcer",
+            "en": "pronounce"
+          },
+          {
+            "target": "minuscule",
+            "en": "lower case letter"
+          },
+          {
+            "target": "mentionner",
+            "en": "mention"
+          },
+          {
+            "target": "baleine",
+            "en": "whale"
+          },
+          {
+            "target": "gérant",
+            "en": "manager"
+          },
+          {
+            "target": "fraternité",
+            "en": "brotherhood"
+          },
+          {
+            "target": "conséquence",
+            "en": "consequence"
+          },
+          {
+            "target": "autel",
+            "en": "altar"
+          },
+          {
+            "target": "chanteuse",
+            "en": "female singer"
+          },
+          {
+            "target": "rime",
+            "en": "rhyme"
+          },
+          {
+            "target": "sida",
+            "en": "AIDS"
+          },
+          {
+            "target": "littérature",
+            "en": "literature"
+          },
+          {
+            "target": "piqûre",
+            "en": "prick"
+          },
+          {
+            "target": "acheteur",
+            "en": "client"
+          },
+          {
+            "target": "apparaître",
+            "en": "appear"
+          },
+          {
+            "target": "seau",
+            "en": "bucket"
+          },
+          {
+            "target": "enthousiasme",
+            "en": "enthusiasm"
+          },
+          {
+            "target": "écho",
+            "en": "echo"
+          },
+          {
+            "target": "obliger",
+            "en": "force"
+          },
+          {
+            "target": "coton",
+            "en": "cotton"
+          },
+          {
+            "target": "alternative",
+            "en": "option"
+          },
+          {
+            "target": "crayon",
+            "en": "pencil"
+          },
+          {
+            "target": "bonbon",
+            "en": "bon-bon"
+          },
+          {
+            "target": "nuire",
+            "en": "harm"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u80",
+        "title": "Common words 1976–2000",
+        "subtitle": "The 1976–2000 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "Hélène",
+            "en": "Helen"
+          },
+          {
+            "target": "tonne",
+            "en": "metric tonne"
+          },
+          {
+            "target": "chrétien",
+            "en": "Christian"
+          },
+          {
+            "target": "sapin",
+            "en": "fir"
+          },
+          {
+            "target": "Grenade",
+            "en": "Grenada"
+          },
+          {
+            "target": "gestion",
+            "en": "way of handing"
+          },
+          {
+            "target": "menton",
+            "en": "chin"
+          },
+          {
+            "target": "prudence",
+            "en": "discretion"
+          },
+          {
+            "target": "réacteur",
+            "en": "jet engine"
+          },
+          {
+            "target": "apparition",
+            "en": "ghost"
+          },
+          {
+            "target": "assemblée",
+            "en": "assembly"
+          },
+          {
+            "target": "régiment",
+            "en": "regiment"
+          },
+          {
+            "target": "mériter",
+            "en": "be worthy of"
+          },
+          {
+            "target": "repasser",
+            "en": "iron clothes"
+          },
+          {
+            "target": "bœuf",
+            "en": "bovine animal"
+          },
+          {
+            "target": "soulager",
+            "en": "facilitate"
+          },
+          {
+            "target": "distrait",
+            "en": "careless"
+          },
+          {
+            "target": "déchirer",
+            "en": "tear"
+          },
+          {
+            "target": "torche",
+            "en": "torch"
+          },
+          {
+            "target": "supplémentaire",
+            "en": "one more"
+          },
+          {
+            "target": "mécanique",
+            "en": "mechanics"
+          },
+          {
+            "target": "reins",
+            "en": "loin"
+          },
+          {
+            "target": "contenir",
+            "en": "include"
+          },
+          {
+            "target": "ouragan",
+            "en": "hurricane"
+          },
+          {
+            "target": "mou",
+            "en": "soft"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u81",
+        "title": "Common words 2001–2025",
+        "subtitle": "The 2001–2025 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "catégorie",
+            "en": "category"
+          },
+          {
+            "target": "ruban",
+            "en": "ribbon"
+          },
+          {
+            "target": "buffet",
+            "en": "pantry"
+          },
+          {
+            "target": "Romain",
+            "en": "Roman"
+          },
+          {
+            "target": "garantir",
+            "en": "protect"
+          },
+          {
+            "target": "bougie",
+            "en": "candle"
+          },
+          {
+            "target": "terrorisme",
+            "en": "terrorism"
+          },
+          {
+            "target": "migraine",
+            "en": "headache"
+          },
+          {
+            "target": "coude",
+            "en": "elbow"
+          },
+          {
+            "target": "artifice",
+            "en": "trick"
+          },
+          {
+            "target": "Allemande",
+            "en": "German woman"
+          },
+          {
+            "target": "aspirine",
+            "en": "aspirin"
+          },
+          {
+            "target": "accidentellement",
+            "en": "by accident"
+          },
+          {
+            "target": "chargement",
+            "en": "load"
+          },
+          {
+            "target": "richesse",
+            "en": "wealth"
+          },
+          {
+            "target": "bilan",
+            "en": "statement of account"
+          },
+          {
+            "target": "architecte",
+            "en": "architect"
+          },
+          {
+            "target": "mater",
+            "en": "bring down"
+          },
+          {
+            "target": "femelle",
+            "en": "female"
+          },
+          {
+            "target": "démolir",
+            "en": "take down"
+          },
+          {
+            "target": "fouet",
+            "en": "whip"
+          },
+          {
+            "target": "artère",
+            "en": "artery"
+          },
+          {
+            "target": "arbitre",
+            "en": "referee"
+          },
+          {
+            "target": "lécher",
+            "en": "lick"
+          },
+          {
+            "target": "affecté",
+            "en": "affected"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u82",
+        "title": "Common words 2026–2050",
+        "subtitle": "The 2026–2050 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "certitude",
+            "en": "certainty"
+          },
+          {
+            "target": "décor",
+            "en": "decoration"
+          },
+          {
+            "target": "gai",
+            "en": "gay"
+          },
+          {
+            "target": "noter",
+            "en": "write down"
+          },
+          {
+            "target": "cracher",
+            "en": "spit"
+          },
+          {
+            "target": "mouchoir",
+            "en": "handkerchief"
+          },
+          {
+            "target": "agressif",
+            "en": "aggressive"
+          },
+          {
+            "target": "modifier",
+            "en": "modify"
+          },
+          {
+            "target": "nerf",
+            "en": "nerve"
+          },
+          {
+            "target": "accoucher",
+            "en": "be in labour"
+          },
+          {
+            "target": "mètre",
+            "en": "metre"
+          },
+          {
+            "target": "éclat",
+            "en": "splinter"
+          },
+          {
+            "target": "falaise",
+            "en": "cliff"
+          },
+          {
+            "target": "croiser",
+            "en": "cut accross"
+          },
+          {
+            "target": "clou",
+            "en": "nail"
+          },
+          {
+            "target": "remplaçant",
+            "en": "replacement person"
+          },
+          {
+            "target": "tremble",
+            "en": "aspen"
+          },
+          {
+            "target": "argument",
+            "en": "plea"
+          },
+          {
+            "target": "sirop",
+            "en": "syrup"
+          },
+          {
+            "target": "ruelle",
+            "en": "lane"
+          },
+          {
+            "target": "nain",
+            "en": "dwarf"
+          },
+          {
+            "target": "largement",
+            "en": "widely"
+          },
+          {
+            "target": "rampe",
+            "en": "railing"
+          },
+          {
+            "target": "accélérer",
+            "en": "pick up"
+          },
+          {
+            "target": "nuque",
+            "en": "nape"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u83",
+        "title": "Common words 2051–2075",
+        "subtitle": "The 2051–2075 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "doubler",
+            "en": "pass"
+          },
+          {
+            "target": "aérien",
+            "en": "overhead"
+          },
+          {
+            "target": "fortement",
+            "en": "strongly"
+          },
+          {
+            "target": "hypocrite",
+            "en": "hypocritical"
+          },
+          {
+            "target": "paysage",
+            "en": "landscape"
+          },
+          {
+            "target": "Mexico",
+            "en": "Mexico City"
+          },
+          {
+            "target": "lin",
+            "en": "flax"
+          },
+          {
+            "target": "rancune",
+            "en": "grudge"
+          },
+          {
+            "target": "dépense",
+            "en": "expenses"
+          },
+          {
+            "target": "haïr",
+            "en": "hate"
+          },
+          {
+            "target": "banlieue",
+            "en": "suburb"
+          },
+          {
+            "target": "corriger",
+            "en": "correct"
+          },
+          {
+            "target": "cuillère",
+            "en": "spoon"
+          },
+          {
+            "target": "insigne",
+            "en": "badge"
+          },
+          {
+            "target": "visiteur",
+            "en": "visitor"
+          },
+          {
+            "target": "caserne",
+            "en": "barracks"
+          },
+          {
+            "target": "mythe",
+            "en": "myth"
+          },
+          {
+            "target": "sonnette",
+            "en": "little bell"
+          },
+          {
+            "target": "muet",
+            "en": "dumb"
+          },
+          {
+            "target": "prophète",
+            "en": "prophet"
+          },
+          {
+            "target": "obligation",
+            "en": "duty"
+          },
+          {
+            "target": "milan",
+            "en": "kite"
+          },
+          {
+            "target": "pelouse",
+            "en": "lawn"
+          },
+          {
+            "target": "flûte",
+            "en": "flute"
+          },
+          {
+            "target": "pourrir",
+            "en": "rot"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u84",
+        "title": "Common words 2076–2100",
+        "subtitle": "The 2076–2100 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "combattant",
+            "en": "fighter"
+          },
+          {
+            "target": "organisme",
+            "en": "administrative body"
+          },
+          {
+            "target": "Indienne",
+            "en": "Indian woman"
+          },
+          {
+            "target": "mouton",
+            "en": "sheep"
+          },
+          {
+            "target": "excès",
+            "en": "excess"
+          },
+          {
+            "target": "pois",
+            "en": "pea"
+          },
+          {
+            "target": "slip",
+            "en": "underpants"
+          },
+          {
+            "target": "mesurer",
+            "en": "measure"
+          },
+          {
+            "target": "Pâques",
+            "en": "Easter"
+          },
+          {
+            "target": "continent",
+            "en": "mainland"
+          },
+          {
+            "target": "pâte",
+            "en": "dough"
+          },
+          {
+            "target": "bijou",
+            "en": "jewel"
+          },
+          {
+            "target": "psychologie",
+            "en": "psychology"
+          },
+          {
+            "target": "secouer",
+            "en": "shake"
+          },
+          {
+            "target": "milliard",
+            "en": "thousand million"
+          },
+          {
+            "target": "cognac",
+            "en": "brandy"
+          },
+          {
+            "target": "racine",
+            "en": "root"
+          },
+          {
+            "target": "jurer",
+            "en": "swear"
+          },
+          {
+            "target": "piloter",
+            "en": "steer"
+          },
+          {
+            "target": "éponge",
+            "en": "sponge"
+          },
+          {
+            "target": "mâchoire",
+            "en": "jaw"
+          },
+          {
+            "target": "percer",
+            "en": "drill"
+          },
+          {
+            "target": "adrénaline",
+            "en": "adrenaline"
+          },
+          {
+            "target": "viser",
+            "en": "intend"
+          },
+          {
+            "target": "thon",
+            "en": "tuna"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u85",
+        "title": "Common words 2101–2125",
+        "subtitle": "The 2101–2125 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "rhum",
+            "en": "rum"
+          },
+          {
+            "target": "Nouvelle-Orléans",
+            "en": "New Orleans"
+          },
+          {
+            "target": "réduction",
+            "en": "discount"
+          },
+          {
+            "target": "carbone",
+            "en": "carbon"
+          },
+          {
+            "target": "fidélité",
+            "en": "adherence"
+          },
+          {
+            "target": "triomphe",
+            "en": "triumph"
+          },
+          {
+            "target": "trait",
+            "en": "feature"
+          },
+          {
+            "target": "horaire",
+            "en": "schedule"
+          },
+          {
+            "target": "dépit",
+            "en": "frustration"
+          },
+          {
+            "target": "coque",
+            "en": "shell"
+          },
+          {
+            "target": "aimant",
+            "en": "affectionate"
+          },
+          {
+            "target": "protecteur",
+            "en": "patron"
+          },
+          {
+            "target": "conquérir",
+            "en": "conquer"
+          },
+          {
+            "target": "More",
+            "en": "Moor"
+          },
+          {
+            "target": "recommandé",
+            "en": "registered"
+          },
+          {
+            "target": "défunt",
+            "en": "deceased"
+          },
+          {
+            "target": "rassurer",
+            "en": "calm"
+          },
+          {
+            "target": "vieillard",
+            "en": "old man"
+          },
+          {
+            "target": "brun",
+            "en": "black"
+          },
+          {
+            "target": "infini",
+            "en": "everlasting"
+          },
+          {
+            "target": "bouchée",
+            "en": "mouthfull"
+          },
+          {
+            "target": "chauffage",
+            "en": "heating"
+          },
+          {
+            "target": "couvent",
+            "en": "monastery"
+          },
+          {
+            "target": "nœud",
+            "en": "knot"
+          },
+          {
+            "target": "porteur",
+            "en": "porter"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u86",
+        "title": "Common words 2126–2150",
+        "subtitle": "The 2126–2150 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "humilier",
+            "en": "abase"
+          },
+          {
+            "target": "semer",
+            "en": "sow"
+          },
+          {
+            "target": "Alexandre",
+            "en": "Alexander"
+          },
+          {
+            "target": "suggérer",
+            "en": "suggest"
+          },
+          {
+            "target": "biscuit",
+            "en": "cookie"
+          },
+          {
+            "target": "loterie",
+            "en": "lottery"
+          },
+          {
+            "target": "immédiat",
+            "en": "immediate"
+          },
+          {
+            "target": "têtu",
+            "en": "stubborn"
+          },
+          {
+            "target": "griller",
+            "en": "toast"
+          },
+          {
+            "target": "générosité",
+            "en": "generosity"
+          },
+          {
+            "target": "soumettre",
+            "en": "submit"
+          },
+          {
+            "target": "déception",
+            "en": "disappointment"
+          },
+          {
+            "target": "séminaire",
+            "en": "seminar"
+          },
+          {
+            "target": "coq",
+            "en": "cock"
+          },
+          {
+            "target": "fourrure",
+            "en": "fur piece"
+          },
+          {
+            "target": "fût",
+            "en": "drum"
+          },
+          {
+            "target": "terrasse",
+            "en": "terrace"
+          },
+          {
+            "target": "menthe",
+            "en": "mint"
+          },
+          {
+            "target": "climat",
+            "en": "climate"
+          },
+          {
+            "target": "verser",
+            "en": "pour out"
+          },
+          {
+            "target": "secte",
+            "en": "sect"
+          },
+          {
+            "target": "insecte",
+            "en": "bug"
+          },
+          {
+            "target": "sentence",
+            "en": "verdict"
+          },
+          {
+            "target": "reproche",
+            "en": "reproach"
+          },
+          {
+            "target": "boucler",
+            "en": "gird"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u87",
+        "title": "Common words 2151–2175",
+        "subtitle": "The 2151–2175 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "sinistre",
+            "en": "accident"
+          },
+          {
+            "target": "plaider",
+            "en": "plead"
+          },
+          {
+            "target": "appliquer",
+            "en": "make use of"
+          },
+          {
+            "target": "brèche",
+            "en": "breach"
+          },
+          {
+            "target": "harmonie",
+            "en": "harmony"
+          },
+          {
+            "target": "insister",
+            "en": "insist"
+          },
+          {
+            "target": "hostile",
+            "en": "adverse"
+          },
+          {
+            "target": "Asie",
+            "en": "Asia"
+          },
+          {
+            "target": "amical",
+            "en": "friendly"
+          },
+          {
+            "target": "quarante",
+            "en": "forty"
+          },
+          {
+            "target": "presser",
+            "en": "speed up"
+          },
+          {
+            "target": "indépendant",
+            "en": "independant"
+          },
+          {
+            "target": "servante",
+            "en": "maid"
+          },
+          {
+            "target": "jadis",
+            "en": "in the past"
+          },
+          {
+            "target": "rôti",
+            "en": "roast meat"
+          },
+          {
+            "target": "anormal",
+            "en": "abnormal"
+          },
+          {
+            "target": "étendre",
+            "en": "strech out"
+          },
+          {
+            "target": "Irlande",
+            "en": "Ireland"
+          },
+          {
+            "target": "cire",
+            "en": "wax"
+          },
+          {
+            "target": "lier",
+            "en": "tie on"
+          },
+          {
+            "target": "centime",
+            "en": "cent"
+          },
+          {
+            "target": "librairie",
+            "en": "bookstore"
+          },
+          {
+            "target": "Venise",
+            "en": "Venice"
+          },
+          {
+            "target": "foin",
+            "en": "hay"
+          },
+          {
+            "target": "Bouddha",
+            "en": "Buddha"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u88",
+        "title": "Common words 2176–2200",
+        "subtitle": "The 2176–2200 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "culte",
+            "en": "cult"
+          },
+          {
+            "target": "évier",
+            "en": "sink"
+          },
+          {
+            "target": "ouvrier",
+            "en": "working man"
+          },
+          {
+            "target": "moulin",
+            "en": "mill"
+          },
+          {
+            "target": "plier",
+            "en": "fold"
+          },
+          {
+            "target": "raisin",
+            "en": "grape"
+          },
+          {
+            "target": "massacrer",
+            "en": "massacre"
+          },
+          {
+            "target": "citer",
+            "en": "quote"
+          },
+          {
+            "target": "lard",
+            "en": "bacon"
+          },
+          {
+            "target": "suffire",
+            "en": "suffice"
+          },
+          {
+            "target": "banquier",
+            "en": "bank manager"
+          },
+          {
+            "target": "évaluer",
+            "en": "rate"
+          },
+          {
+            "target": "marée",
+            "en": "tide"
+          },
+          {
+            "target": "tranche",
+            "en": "slice"
+          },
+          {
+            "target": "valoir",
+            "en": "be worth"
+          },
+          {
+            "target": "Asiatique",
+            "en": "Asian woman"
+          },
+          {
+            "target": "comble",
+            "en": "top"
+          },
+          {
+            "target": "écureuil",
+            "en": "squirrel"
+          },
+          {
+            "target": "scie",
+            "en": "saw"
+          },
+          {
+            "target": "sympathie",
+            "en": "sympathy"
+          },
+          {
+            "target": "atomique",
+            "en": "atomic"
+          },
+          {
+            "target": "briquet",
+            "en": "cigarette lighter"
+          },
+          {
+            "target": "Japonaise",
+            "en": "Japanese woman"
+          },
+          {
+            "target": "achever",
+            "en": "finish off"
+          },
+          {
+            "target": "parapluie",
+            "en": "umbrella"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u89",
+        "title": "Common words 2201–2225",
+        "subtitle": "The 2201–2225 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "franchise",
+            "en": "frankness"
+          },
+          {
+            "target": "teint",
+            "en": "complexion"
+          },
+          {
+            "target": "bulle",
+            "en": "bubble"
+          },
+          {
+            "target": "jouir",
+            "en": "delight in"
+          },
+          {
+            "target": "poumon",
+            "en": "lung"
+          },
+          {
+            "target": "tailleur",
+            "en": "tailor"
+          },
+          {
+            "target": "intrigue",
+            "en": "plot"
+          },
+          {
+            "target": "impoli",
+            "en": "rude"
+          },
+          {
+            "target": "confiture",
+            "en": "jam"
+          },
+          {
+            "target": "saumon",
+            "en": "salmon"
+          },
+          {
+            "target": "exercer",
+            "en": "exercise"
+          },
+          {
+            "target": "distribuer",
+            "en": "deal"
+          },
+          {
+            "target": "inattendu",
+            "en": "abrupt"
+          },
+          {
+            "target": "briller",
+            "en": "shine"
+          },
+          {
+            "target": "affirmatif",
+            "en": "affirmative"
+          },
+          {
+            "target": "convenable",
+            "en": "of use"
+          },
+          {
+            "target": "artillerie",
+            "en": "artillery"
+          },
+          {
+            "target": "maladroit",
+            "en": "awkward"
+          },
+          {
+            "target": "salive",
+            "en": "saliva"
+          },
+          {
+            "target": "cuivre",
+            "en": "copper"
+          },
+          {
+            "target": "peigne",
+            "en": "comb"
+          },
+          {
+            "target": "plombier",
+            "en": "plumber"
+          },
+          {
+            "target": "passionnant",
+            "en": "exciting"
+          },
+          {
+            "target": "baigner",
+            "en": "bathe"
+          },
+          {
+            "target": "villageois",
+            "en": "villager"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u90",
+        "title": "Common words 2226–2250",
+        "subtitle": "The 2226–2250 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "soutien-gorge",
+            "en": "bra"
+          },
+          {
+            "target": "détourner",
+            "en": "turn away"
+          },
+          {
+            "target": "clin",
+            "en": "wink"
+          },
+          {
+            "target": "vestiaire",
+            "en": "cloakroom"
+          },
+          {
+            "target": "graine",
+            "en": "seed"
+          },
+          {
+            "target": "participe",
+            "en": "participle"
+          },
+          {
+            "target": "ail",
+            "en": "garlic"
+          },
+          {
+            "target": "itinéraire",
+            "en": "route"
+          },
+          {
+            "target": "millier",
+            "en": "thousand"
+          },
+          {
+            "target": "distraction",
+            "en": "absence of mind"
+          },
+          {
+            "target": "exploiter",
+            "en": "exploit"
+          },
+          {
+            "target": "répandre",
+            "en": "give utterance to"
+          },
+          {
+            "target": "devise",
+            "en": "currency"
+          },
+          {
+            "target": "admirer",
+            "en": "admire"
+          },
+          {
+            "target": "moutarde",
+            "en": "mustard"
+          },
+          {
+            "target": "bâtir",
+            "en": "build"
+          },
+          {
+            "target": "jardinier",
+            "en": "gardener"
+          },
+          {
+            "target": "tricher",
+            "en": "do something crooked"
+          },
+          {
+            "target": "fourchette",
+            "en": "fork"
+          },
+          {
+            "target": "ambitieux",
+            "en": "ambitious"
+          },
+          {
+            "target": "Italienne",
+            "en": "Italian woman"
+          },
+          {
+            "target": "Grèce",
+            "en": "Greece"
+          },
+          {
+            "target": "faucon",
+            "en": "falcon"
+          },
+          {
+            "target": "barrer",
+            "en": "cross out"
+          },
+          {
+            "target": "utérus",
+            "en": "womb"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u91",
+        "title": "Common words 2251–2275",
+        "subtitle": "The 2251–2275 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "cerf",
+            "en": "deer"
+          },
+          {
+            "target": "astronaute",
+            "en": "astronaut"
+          },
+          {
+            "target": "unir",
+            "en": "join"
+          },
+          {
+            "target": "identique",
+            "en": "same"
+          },
+          {
+            "target": "ignoré",
+            "en": "unknown"
+          },
+          {
+            "target": "bouc",
+            "en": "he-goat"
+          },
+          {
+            "target": "aire",
+            "en": "area"
+          },
+          {
+            "target": "citation",
+            "en": "quotation"
+          },
+          {
+            "target": "thèse",
+            "en": "essay"
+          },
+          {
+            "target": "perle",
+            "en": "pearl"
+          },
+          {
+            "target": "enseignement",
+            "en": "education"
+          },
+          {
+            "target": "bavarder",
+            "en": "chatter"
+          },
+          {
+            "target": "envoi",
+            "en": "parcel"
+          },
+          {
+            "target": "absolu",
+            "en": "absolute"
+          },
+          {
+            "target": "lecteur",
+            "en": "reader"
+          },
+          {
+            "target": "entrevue",
+            "en": "interview"
+          },
+          {
+            "target": "reflet",
+            "en": "reflection"
+          },
+          {
+            "target": "rabbin",
+            "en": "rabbi"
+          },
+          {
+            "target": "permanent",
+            "en": "constant"
+          },
+          {
+            "target": "terrestre",
+            "en": "earthly"
+          },
+          {
+            "target": "phare",
+            "en": "lighthouse"
+          },
+          {
+            "target": "homard",
+            "en": "lobster"
+          },
+          {
+            "target": "baguette",
+            "en": "french loaf"
+          },
+          {
+            "target": "ampoule",
+            "en": "bulb"
+          },
+          {
+            "target": "psychologue",
+            "en": "psychologist"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u92",
+        "title": "Common words 2276–2300",
+        "subtitle": "The 2276–2300 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "rafraîchir",
+            "en": "refresh"
+          },
+          {
+            "target": "obligatoire",
+            "en": "compulsory"
+          },
+          {
+            "target": "persuader",
+            "en": "persuade"
+          },
+          {
+            "target": "gorille",
+            "en": "gorilla"
+          },
+          {
+            "target": "bourreau",
+            "en": "executioner"
+          },
+          {
+            "target": "neutre",
+            "en": "neutral"
+          },
+          {
+            "target": "sifflet",
+            "en": "whistle"
+          },
+          {
+            "target": "abandon",
+            "en": "surrender"
+          },
+          {
+            "target": "approbation",
+            "en": "approval"
+          },
+          {
+            "target": "veau",
+            "en": "calf"
+          },
+          {
+            "target": "voyageur",
+            "en": "traveller"
+          },
+          {
+            "target": "adolescent",
+            "en": "young man"
+          },
+          {
+            "target": "banal",
+            "en": "dismal"
+          },
+          {
+            "target": "mélodie",
+            "en": "air"
+          },
+          {
+            "target": "Egypte",
+            "en": "Egypt"
+          },
+          {
+            "target": "wagon",
+            "en": "coach"
+          },
+          {
+            "target": "vétérinaire",
+            "en": "veterinary surgeon"
+          },
+          {
+            "target": "fréquenter",
+            "en": "visit regularly"
+          },
+          {
+            "target": "immobile",
+            "en": "motionless"
+          },
+          {
+            "target": "critiquer",
+            "en": "criticize"
+          },
+          {
+            "target": "interdiction",
+            "en": "ban"
+          },
+          {
+            "target": "batteur",
+            "en": "drummer"
+          },
+          {
+            "target": "isoler",
+            "en": "isolate"
+          },
+          {
+            "target": "laine",
+            "en": "wool"
+          },
+          {
+            "target": "détour",
+            "en": "detour"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u93",
+        "title": "Common words 2301–2325",
+        "subtitle": "The 2301–2325 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "manifestation",
+            "en": "demonstration"
+          },
+          {
+            "target": "schéma",
+            "en": "model"
+          },
+          {
+            "target": "traduire",
+            "en": "translate"
+          },
+          {
+            "target": "élan",
+            "en": "moose"
+          },
+          {
+            "target": "tentation",
+            "en": "temptation"
+          },
+          {
+            "target": "seize",
+            "en": "sixteen"
+          },
+          {
+            "target": "pédale",
+            "en": "pedal"
+          },
+          {
+            "target": "gène",
+            "en": "gene"
+          },
+          {
+            "target": "cerise",
+            "en": "cherry"
+          },
+          {
+            "target": "orphelin",
+            "en": "orphan"
+          },
+          {
+            "target": "interprète",
+            "en": "interpreter"
+          },
+          {
+            "target": "athlète",
+            "en": "athlete"
+          },
+          {
+            "target": "occupation",
+            "en": "activity"
+          },
+          {
+            "target": "crabe",
+            "en": "crab"
+          },
+          {
+            "target": "caoutchouc",
+            "en": "rubber"
+          },
+          {
+            "target": "Jérusalem",
+            "en": "Jerusalem"
+          },
+          {
+            "target": "frotter",
+            "en": "rub"
+          },
+          {
+            "target": "détacher",
+            "en": "untie"
+          },
+          {
+            "target": "pêcheur",
+            "en": "fisherman"
+          },
+          {
+            "target": "gratter",
+            "en": "scratch"
+          },
+          {
+            "target": "saisie",
+            "en": "seizure"
+          },
+          {
+            "target": "Pologne",
+            "en": "Poland"
+          },
+          {
+            "target": "cafard",
+            "en": "cockroach"
+          },
+          {
+            "target": "parlement",
+            "en": "parliament"
+          },
+          {
+            "target": "ivresse",
+            "en": "drunkenness"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u94",
+        "title": "Common words 2326–2350",
+        "subtitle": "The 2326–2350 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "réserver",
+            "en": "reserve"
+          },
+          {
+            "target": "vitrine",
+            "en": "show window"
+          },
+          {
+            "target": "tomate",
+            "en": "tomato"
+          },
+          {
+            "target": "bruyant",
+            "en": "noisy"
+          },
+          {
+            "target": "trembler",
+            "en": "tremble"
+          },
+          {
+            "target": "affirmer",
+            "en": "say yes"
+          },
+          {
+            "target": "nécessité",
+            "en": "necessity"
+          },
+          {
+            "target": "biologie",
+            "en": "biology"
+          },
+          {
+            "target": "Iran",
+            "en": "Persia"
+          },
+          {
+            "target": "gêner",
+            "en": "trouble"
+          },
+          {
+            "target": "dortoir",
+            "en": "sleeping-accommodation"
+          },
+          {
+            "target": "volcan",
+            "en": "volcano"
+          },
+          {
+            "target": "squelette",
+            "en": "skeleton"
+          },
+          {
+            "target": "rouleau",
+            "en": "roll"
+          },
+          {
+            "target": "brique",
+            "en": "brick"
+          },
+          {
+            "target": "recommandation",
+            "en": "warning"
+          },
+          {
+            "target": "peluche",
+            "en": "fluffy animal"
+          },
+          {
+            "target": "évêque",
+            "en": "bishop"
+          },
+          {
+            "target": "hanche",
+            "en": "hip"
+          },
+          {
+            "target": "consacrer",
+            "en": "dedicate"
+          },
+          {
+            "target": "intact",
+            "en": "in good condition"
+          },
+          {
+            "target": "divers",
+            "en": "various"
+          },
+          {
+            "target": "gaspiller",
+            "en": "waste"
+          },
+          {
+            "target": "noyau",
+            "en": "pit"
+          },
+          {
+            "target": "déshabiller",
+            "en": "undress"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u95",
+        "title": "Common words 2351–2375",
+        "subtitle": "The 2351–2375 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "révolte",
+            "en": "rebellion"
+          },
+          {
+            "target": "parcourir",
+            "en": "go through"
+          },
+          {
+            "target": "caleçon",
+            "en": "panties"
+          },
+          {
+            "target": "solde",
+            "en": "balance"
+          },
+          {
+            "target": "avortement",
+            "en": "abortion"
+          },
+          {
+            "target": "faculté",
+            "en": "faculty"
+          },
+          {
+            "target": "amer",
+            "en": "bitter"
+          },
+          {
+            "target": "talon",
+            "en": "heel"
+          },
+          {
+            "target": "bouchon",
+            "en": "electric plug"
+          },
+          {
+            "target": "Coréen",
+            "en": "Korean"
+          },
+          {
+            "target": "abeille",
+            "en": "bee"
+          },
+          {
+            "target": "embarras",
+            "en": "embarrassment"
+          },
+          {
+            "target": "lézard",
+            "en": "lizard"
+          },
+          {
+            "target": "poivre",
+            "en": "pepper"
+          },
+          {
+            "target": "lointain",
+            "en": "far"
+          },
+          {
+            "target": "dominer",
+            "en": "exceed"
+          },
+          {
+            "target": "anxiété",
+            "en": "anxiety"
+          },
+          {
+            "target": "flirter",
+            "en": "flirt"
+          },
+          {
+            "target": "connecter",
+            "en": "plug in"
+          },
+          {
+            "target": "orgasme",
+            "en": "orgasm"
+          },
+          {
+            "target": "autobus",
+            "en": "bus"
+          },
+          {
+            "target": "orteil",
+            "en": "toe"
+          },
+          {
+            "target": "hystérique",
+            "en": "hysterical"
+          },
+          {
+            "target": "comparaison",
+            "en": "comparison"
+          },
+          {
+            "target": "ragoût",
+            "en": "stew"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u96",
+        "title": "Common words 2376–2400",
+        "subtitle": "The 2376–2400 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "imiter",
+            "en": "imitate"
+          },
+          {
+            "target": "envahir",
+            "en": "invade"
+          },
+          {
+            "target": "cahier",
+            "en": "notebook"
+          },
+          {
+            "target": "agitation",
+            "en": "commotion"
+          },
+          {
+            "target": "arc-en-ciel",
+            "en": "rainbow"
+          },
+          {
+            "target": "étagère",
+            "en": "shelf"
+          },
+          {
+            "target": "concerné",
+            "en": "in question"
+          },
+          {
+            "target": "étincelle",
+            "en": "spark"
+          },
+          {
+            "target": "treize",
+            "en": "thirteen"
+          },
+          {
+            "target": "annuaire",
+            "en": "address list"
+          },
+          {
+            "target": "axe",
+            "en": "axis"
+          },
+          {
+            "target": "animé",
+            "en": "busy"
+          },
+          {
+            "target": "réconforter",
+            "en": "encourage"
+          },
+          {
+            "target": "audacieux",
+            "en": "bold"
+          },
+          {
+            "target": "barque",
+            "en": "boat"
+          },
+          {
+            "target": "réviser",
+            "en": "revise"
+          },
+          {
+            "target": "autoriser",
+            "en": "authorize"
+          },
+          {
+            "target": "étroit",
+            "en": "narrow"
+          },
+          {
+            "target": "pinces",
+            "en": "tongs"
+          },
+          {
+            "target": "Suédois",
+            "en": "Swede"
+          },
+          {
+            "target": "seuil",
+            "en": "threshold"
+          },
+          {
+            "target": "robinet",
+            "en": "tap"
+          },
+          {
+            "target": "frein",
+            "en": "brake"
+          },
+          {
+            "target": "hésiter",
+            "en": "hesitate"
+          },
+          {
+            "target": "débattre",
+            "en": "stir up"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u97",
+        "title": "Common words 2401–2425",
+        "subtitle": "The 2401–2425 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "adolescente",
+            "en": "young woman"
+          },
+          {
+            "target": "descendant",
+            "en": "successor"
+          },
+          {
+            "target": "baptême",
+            "en": "baptism"
+          },
+          {
+            "target": "Graal",
+            "en": "Holy Grail"
+          },
+          {
+            "target": "oie",
+            "en": "goose"
+          },
+          {
+            "target": "défiler",
+            "en": "string"
+          },
+          {
+            "target": "chauve-souris",
+            "en": "bat"
+          },
+          {
+            "target": "ruisseau",
+            "en": "stream"
+          },
+          {
+            "target": "filtre",
+            "en": "filter"
+          },
+          {
+            "target": "cuisse",
+            "en": "thigh"
+          },
+          {
+            "target": "levier",
+            "en": "crowbar"
+          },
+          {
+            "target": "dévorer",
+            "en": "eat up"
+          },
+          {
+            "target": "cynique",
+            "en": "cynical"
+          },
+          {
+            "target": "pin",
+            "en": "pine"
+          },
+          {
+            "target": "clope",
+            "en": "fag"
+          },
+          {
+            "target": "écurie",
+            "en": "stable"
+          },
+          {
+            "target": "ancre",
+            "en": "anchor"
+          },
+          {
+            "target": "marbre",
+            "en": "marble"
+          },
+          {
+            "target": "Suède",
+            "en": "Sweden"
+          },
+          {
+            "target": "corbeau",
+            "en": "crow"
+          },
+          {
+            "target": "aveu",
+            "en": "confession"
+          },
+          {
+            "target": "habile",
+            "en": "clever"
+          },
+          {
+            "target": "pourcentage",
+            "en": "percent"
+          },
+          {
+            "target": "Turc",
+            "en": "Turk"
+          },
+          {
+            "target": "négligence",
+            "en": "negligence"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u98",
+        "title": "Common words 2426–2450",
+        "subtitle": "The 2426–2450 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "organe",
+            "en": "organ"
+          },
+          {
+            "target": "politesse",
+            "en": "politeness"
+          },
+          {
+            "target": "aviation",
+            "en": "aeronautics"
+          },
+          {
+            "target": "cale",
+            "en": "wedge"
+          },
+          {
+            "target": "étang",
+            "en": "pond"
+          },
+          {
+            "target": "Mexicaine",
+            "en": "Mexican woman"
+          },
+          {
+            "target": "fonder",
+            "en": "found"
+          },
+          {
+            "target": "distinguer",
+            "en": "distinguish"
+          },
+          {
+            "target": "locataire",
+            "en": "tenant"
+          },
+          {
+            "target": "dynamique",
+            "en": "dynamic"
+          },
+          {
+            "target": "flacon",
+            "en": "small bottle"
+          },
+          {
+            "target": "crotte",
+            "en": "dropping"
+          },
+          {
+            "target": "couture",
+            "en": "needlework"
+          },
+          {
+            "target": "cantine",
+            "en": "canteen"
+          },
+          {
+            "target": "quatorze",
+            "en": "fourteen"
+          },
+          {
+            "target": "Moïse",
+            "en": "Moses"
+          },
+          {
+            "target": "balistique",
+            "en": "ballistics"
+          },
+          {
+            "target": "audace",
+            "en": "audacity"
+          },
+          {
+            "target": "Columbia",
+            "en": "Columbia River"
+          },
+          {
+            "target": "autrui",
+            "en": "another man"
+          },
+          {
+            "target": "inspecter",
+            "en": "inspect"
+          },
+          {
+            "target": "fraise",
+            "en": "strawberry"
+          },
+          {
+            "target": "Vénus",
+            "en": "Evening Star"
+          },
+          {
+            "target": "lèvre",
+            "en": "lip"
+          },
+          {
+            "target": "naviguer",
+            "en": "navigate"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u99",
+        "title": "Common words 2451–2475",
+        "subtitle": "The 2451–2475 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "tendresse",
+            "en": "tenderness"
+          },
+          {
+            "target": "adapté",
+            "en": "adapted"
+          },
+          {
+            "target": "tyran",
+            "en": "tyrant"
+          },
+          {
+            "target": "mécanicien",
+            "en": "mechanic"
+          },
+          {
+            "target": "ciment",
+            "en": "cement"
+          },
+          {
+            "target": "aspirateur",
+            "en": "vacuum cleaner"
+          },
+          {
+            "target": "difficilement",
+            "en": "not easily"
+          },
+          {
+            "target": "annulation",
+            "en": "abolition"
+          },
+          {
+            "target": "hausse",
+            "en": "rise"
+          },
+          {
+            "target": "circuler",
+            "en": "be about"
+          },
+          {
+            "target": "coudre",
+            "en": "sew"
+          },
+          {
+            "target": "réciproque",
+            "en": "mutual"
+          },
+          {
+            "target": "pente",
+            "en": "slope"
+          },
+          {
+            "target": "annuel",
+            "en": "annual"
+          },
+          {
+            "target": "parallèle",
+            "en": "parallel"
+          },
+          {
+            "target": "kilomètre",
+            "en": "kilometre"
+          },
+          {
+            "target": "comète",
+            "en": "comet"
+          },
+          {
+            "target": "emprunt",
+            "en": "act of borrowing"
+          },
+          {
+            "target": "bouillir",
+            "en": "boil"
+          },
+          {
+            "target": "anesthésie",
+            "en": "anaesthesia"
+          },
+          {
+            "target": "yaourt",
+            "en": "yoghurt"
+          },
+          {
+            "target": "coussin",
+            "en": "cushion"
+          },
+          {
+            "target": "fureur",
+            "en": "rage"
+          },
+          {
+            "target": "Jupiter",
+            "en": "Jove"
+          },
+          {
+            "target": "perroquet",
+            "en": "parrot"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u100",
+        "title": "Common words 2476–2500",
+        "subtitle": "The 2476–2500 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "corne",
+            "en": "horn"
+          },
+          {
+            "target": "attirant",
+            "en": "attractive"
+          },
+          {
+            "target": "hygiène",
+            "en": "hygiene"
+          },
+          {
+            "target": "sentier",
+            "en": "path"
+          },
+          {
+            "target": "Cendrillon",
+            "en": "Cinderella"
+          },
+          {
+            "target": "tampon",
+            "en": "bumper"
+          },
+          {
+            "target": "pyramide",
+            "en": "pyramid"
+          },
+          {
+            "target": "définir",
+            "en": "determine"
+          },
+          {
+            "target": "fléau",
+            "en": "calamity"
+          },
+          {
+            "target": "équivalent",
+            "en": "equivalent"
+          },
+          {
+            "target": "adultère",
+            "en": "adultery"
+          },
+          {
+            "target": "grandiose",
+            "en": "grand"
+          },
+          {
+            "target": "agonie",
+            "en": "death throes"
+          },
+          {
+            "target": "manquant",
+            "en": "missing"
+          },
+          {
+            "target": "motion",
+            "en": "resolution"
+          },
+          {
+            "target": "chaussette",
+            "en": "sock"
+          },
+          {
+            "target": "réjouir",
+            "en": "make glad"
+          },
+          {
+            "target": "venin",
+            "en": "poison"
+          },
+          {
+            "target": "consulat",
+            "en": "consulate"
+          },
+          {
+            "target": "atlantique",
+            "en": "Atlantic"
+          },
+          {
+            "target": "oubli",
+            "en": "forgetfulness"
+          },
+          {
+            "target": "foncer",
+            "en": "darken"
+          },
+          {
+            "target": "tracteur",
+            "en": "tractor"
+          },
+          {
+            "target": "recruter",
+            "en": "recruit"
+          },
+          {
+            "target": "mosquée",
+            "en": "mosque"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u101",
+        "title": "Common words 2501–2525",
+        "subtitle": "The 2501–2525 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "croûte",
+            "en": "crust"
+          },
+          {
+            "target": "bavard",
+            "en": "chatterbox"
+          },
+          {
+            "target": "prévisible",
+            "en": "foreseeable"
+          },
+          {
+            "target": "poêle",
+            "en": "frying pan"
+          },
+          {
+            "target": "gendre",
+            "en": "son-in-law"
+          },
+          {
+            "target": "évoluer",
+            "en": "develop"
+          },
+          {
+            "target": "jumeau",
+            "en": "twin"
+          },
+          {
+            "target": "crapaud",
+            "en": "toad"
+          },
+          {
+            "target": "avorter",
+            "en": "abort"
+          },
+          {
+            "target": "habit",
+            "en": "article of dress"
+          },
+          {
+            "target": "Jésus-Christ",
+            "en": "Jesus Christ"
+          },
+          {
+            "target": "velours",
+            "en": "velvet"
+          },
+          {
+            "target": "arsenal",
+            "en": "armoury"
+          },
+          {
+            "target": "banni",
+            "en": "exiled"
+          },
+          {
+            "target": "subtil",
+            "en": "subtle"
+          },
+          {
+            "target": "imprimer",
+            "en": "print"
+          },
+          {
+            "target": "murmure",
+            "en": "murmur"
+          },
+          {
+            "target": "agresser",
+            "en": "commit aggression"
+          },
+          {
+            "target": "éventuellement",
+            "en": "if necessary"
+          },
+          {
+            "target": "Vatican",
+            "en": "the Vatican"
+          },
+          {
+            "target": "attentif",
+            "en": "attentive"
+          },
+          {
+            "target": "refroidir",
+            "en": "cool down"
+          },
+          {
+            "target": "claquer",
+            "en": "click"
+          },
+          {
+            "target": "cascade",
+            "en": "waterfall"
+          },
+          {
+            "target": "Espagnole",
+            "en": "Spanish woman"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u102",
+        "title": "Common words 2526–2550",
+        "subtitle": "The 2526–2550 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "industriel",
+            "en": "industrialist"
+          },
+          {
+            "target": "inférieur",
+            "en": "subordinate"
+          },
+          {
+            "target": "vernis",
+            "en": "glaze"
+          },
+          {
+            "target": "Argentine",
+            "en": "Argentina"
+          },
+          {
+            "target": "Dominique",
+            "en": "Dominica"
+          },
+          {
+            "target": "propagande",
+            "en": "publicity"
+          },
+          {
+            "target": "interpréter",
+            "en": "interpret"
+          },
+          {
+            "target": "carotte",
+            "en": "carrot"
+          },
+          {
+            "target": "étalon",
+            "en": "stallion"
+          },
+          {
+            "target": "manège",
+            "en": "riding school"
+          },
+          {
+            "target": "strict",
+            "en": "tight"
+          },
+          {
+            "target": "confondre",
+            "en": "puzzle"
+          },
+          {
+            "target": "pincer",
+            "en": "pinch"
+          },
+          {
+            "target": "Hollandais",
+            "en": "Dutchman"
+          },
+          {
+            "target": "carreau",
+            "en": "tile"
+          },
+          {
+            "target": "mathématiques",
+            "en": "mathematics"
+          },
+          {
+            "target": "ingrat",
+            "en": "ungrateful"
+          },
+          {
+            "target": "maestro",
+            "en": "master"
+          },
+          {
+            "target": "supplément",
+            "en": "adjunct"
+          },
+          {
+            "target": "précipiter",
+            "en": "cast off"
+          },
+          {
+            "target": "savant",
+            "en": "scientist"
+          },
+          {
+            "target": "interdire",
+            "en": "forbid"
+          },
+          {
+            "target": "antique",
+            "en": "ancient"
+          },
+          {
+            "target": "ramper",
+            "en": "crawl"
+          },
+          {
+            "target": "golfe",
+            "en": "gulf"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u103",
+        "title": "Common words 2551–2575",
+        "subtitle": "The 2551–2575 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "Danois",
+            "en": "Dane"
+          },
+          {
+            "target": "héroïque",
+            "en": "heroic"
+          },
+          {
+            "target": "tarif",
+            "en": "price list"
+          },
+          {
+            "target": "mystique",
+            "en": "mystical"
+          },
+          {
+            "target": "mouiller",
+            "en": "wet"
+          },
+          {
+            "target": "dévouement",
+            "en": "attachement"
+          },
+          {
+            "target": "cueillir",
+            "en": "tear off"
+          },
+          {
+            "target": "Mercure",
+            "en": "Mercury"
+          },
+          {
+            "target": "concevoir",
+            "en": "conceive"
+          },
+          {
+            "target": "allergie",
+            "en": "allergy"
+          },
+          {
+            "target": "pencher",
+            "en": "stoop"
+          },
+          {
+            "target": "diffuser",
+            "en": "spread"
+          },
+          {
+            "target": "tailler",
+            "en": "cut off"
+          },
+          {
+            "target": "champignon",
+            "en": "mushroom"
+          },
+          {
+            "target": "interrupteur",
+            "en": "switch"
+          },
+          {
+            "target": "clavier",
+            "en": "keyboard"
+          },
+          {
+            "target": "trompette",
+            "en": "trumpet"
+          },
+          {
+            "target": "Canadien",
+            "en": "Canadian"
+          },
+          {
+            "target": "détroit",
+            "en": "strait"
+          },
+          {
+            "target": "foulard",
+            "en": "scarf"
+          },
+          {
+            "target": "paroisse",
+            "en": "parish"
+          },
+          {
+            "target": "balise",
+            "en": "buoy"
+          },
+          {
+            "target": "pellicule",
+            "en": "film"
+          },
+          {
+            "target": "apprentissage",
+            "en": "learning"
+          },
+          {
+            "target": "baver",
+            "en": "salivate"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u104",
+        "title": "Common words 2576–2600",
+        "subtitle": "The 2576–2600 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "Lorraine",
+            "en": "Lothringen"
+          },
+          {
+            "target": "combler",
+            "en": "flood"
+          },
+          {
+            "target": "asthme",
+            "en": "shortness of breath"
+          },
+          {
+            "target": "hymne",
+            "en": "anthem"
+          },
+          {
+            "target": "érotique",
+            "en": "erotic"
+          },
+          {
+            "target": "olivier",
+            "en": "olive-tree"
+          },
+          {
+            "target": "abîmé",
+            "en": "spoilt"
+          },
+          {
+            "target": "Mackenzie",
+            "en": "Mackenzie River"
+          },
+          {
+            "target": "dauphin",
+            "en": "dolphin"
+          },
+          {
+            "target": "Hercule",
+            "en": "Hercules"
+          },
+          {
+            "target": "chameau",
+            "en": "camel"
+          },
+          {
+            "target": "appartenir",
+            "en": "belong to"
+          },
+          {
+            "target": "grue",
+            "en": "crane"
+          },
+          {
+            "target": "allumette",
+            "en": "match"
+          },
+          {
+            "target": "Marseille",
+            "en": "Marseilles"
+          },
+          {
+            "target": "chêne",
+            "en": "oak"
+          },
+          {
+            "target": "violette",
+            "en": "violet"
+          },
+          {
+            "target": "accélérateur",
+            "en": "accelerator pedal"
+          },
+          {
+            "target": "barbare",
+            "en": "barbarian"
+          },
+          {
+            "target": "pare-brise",
+            "en": "windscreen"
+          },
+          {
+            "target": "cacahuète",
+            "en": "peanut"
+          },
+          {
+            "target": "ouïe",
+            "en": "hearing"
+          },
+          {
+            "target": "compenser",
+            "en": "compensate"
+          },
+          {
+            "target": "commando",
+            "en": "detachment"
+          },
+          {
+            "target": "castor",
+            "en": "beaver"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u105",
+        "title": "Common words 2601–2625",
+        "subtitle": "The 2601–2625 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "Genève",
+            "en": "Geneva"
+          },
+          {
+            "target": "vêtement",
+            "en": "item of clothing"
+          },
+          {
+            "target": "acompte",
+            "en": "down payment"
+          },
+          {
+            "target": "hiérarchie",
+            "en": "hierarchy"
+          },
+          {
+            "target": "égout",
+            "en": "sewer"
+          },
+          {
+            "target": "Géorgie",
+            "en": "Georgia"
+          },
+          {
+            "target": "fantaisie",
+            "en": "fantasy"
+          },
+          {
+            "target": "décharger",
+            "en": "unload"
+          },
+          {
+            "target": "sonore",
+            "en": "loud"
+          },
+          {
+            "target": "frisson",
+            "en": "vibration"
+          },
+          {
+            "target": "orient",
+            "en": "east"
+          },
+          {
+            "target": "crête",
+            "en": "mountain ridge"
+          },
+          {
+            "target": "geler",
+            "en": "freeze"
+          },
+          {
+            "target": "hypnose",
+            "en": "hypnotic trance"
+          },
+          {
+            "target": "définitif",
+            "en": "definite"
+          },
+          {
+            "target": "boussole",
+            "en": "compass"
+          },
+          {
+            "target": "ballade",
+            "en": "ballad"
+          },
+          {
+            "target": "vinaigre",
+            "en": "vinegar"
+          },
+          {
+            "target": "démocrate",
+            "en": "democrat"
+          },
+          {
+            "target": "patriote",
+            "en": "patriot"
+          },
+          {
+            "target": "poire",
+            "en": "pear"
+          },
+          {
+            "target": "souverain",
+            "en": "of paramount importance"
+          },
+          {
+            "target": "notaire",
+            "en": "notary"
+          },
+          {
+            "target": "compartiment",
+            "en": "compartment"
+          },
+          {
+            "target": "copier",
+            "en": "copy"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u106",
+        "title": "Common words 2626–2650",
+        "subtitle": "The 2626–2650 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "congélateur",
+            "en": "freezer"
+          },
+          {
+            "target": "bandeau",
+            "en": "tape"
+          },
+          {
+            "target": "oignon",
+            "en": "onion"
+          },
+          {
+            "target": "brusquement",
+            "en": "abruptly"
+          },
+          {
+            "target": "brebis",
+            "en": "ewe"
+          },
+          {
+            "target": "résumer",
+            "en": "abstract"
+          },
+          {
+            "target": "Porto",
+            "en": "Oporto"
+          },
+          {
+            "target": "boulangerie",
+            "en": "bakery"
+          },
+          {
+            "target": "pâtisserie",
+            "en": "confectioner's shop"
+          },
+          {
+            "target": "prairie",
+            "en": "meadow"
+          },
+          {
+            "target": "vanité",
+            "en": "vanity"
+          },
+          {
+            "target": "agriculture",
+            "en": "farming"
+          },
+          {
+            "target": "colombe",
+            "en": "pigeon"
+          },
+          {
+            "target": "ému",
+            "en": "seized with emotion"
+          },
+          {
+            "target": "crapule",
+            "en": "villain"
+          },
+          {
+            "target": "biche",
+            "en": "doe"
+          },
+          {
+            "target": "moule",
+            "en": "mussel"
+          },
+          {
+            "target": "Churchill",
+            "en": "Churchill River"
+          },
+          {
+            "target": "manœuvre",
+            "en": "maneuver"
+          },
+          {
+            "target": "souterrain",
+            "en": "tunnel"
+          },
+          {
+            "target": "souple",
+            "en": "flexible"
+          },
+          {
+            "target": "inconvénient",
+            "en": "disadvantage"
+          },
+          {
+            "target": "fisc",
+            "en": "tax office"
+          },
+          {
+            "target": "sincérité",
+            "en": "sincerity"
+          },
+          {
+            "target": "résident",
+            "en": "resident"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u107",
+        "title": "Common words 2651–2675",
+        "subtitle": "The 2651–2675 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "Colombie",
+            "en": "Colombia"
+          },
+          {
+            "target": "randonnée",
+            "en": "sightseeing trip"
+          },
+          {
+            "target": "courbe",
+            "en": "bent"
+          },
+          {
+            "target": "ruche",
+            "en": "beehive"
+          },
+          {
+            "target": "ananas",
+            "en": "pineapple"
+          },
+          {
+            "target": "tourisme",
+            "en": "tourism"
+          },
+          {
+            "target": "manie",
+            "en": "addiction"
+          },
+          {
+            "target": "improviser",
+            "en": "ad-lib"
+          },
+          {
+            "target": "hybride",
+            "en": "hybrid"
+          },
+          {
+            "target": "rédiger",
+            "en": "edit"
+          },
+          {
+            "target": "Turquie",
+            "en": "Turkey"
+          },
+          {
+            "target": "diarrhée",
+            "en": "diarrhoea"
+          },
+          {
+            "target": "décorer",
+            "en": "decorate"
+          },
+          {
+            "target": "constater",
+            "en": "take note"
+          },
+          {
+            "target": "flotter",
+            "en": "float"
+          },
+          {
+            "target": "radical",
+            "en": "fundamental"
+          },
+          {
+            "target": "automatiquement",
+            "en": "automatically"
+          },
+          {
+            "target": "réconcilier",
+            "en": "reconcile"
+          },
+          {
+            "target": "épingle",
+            "en": "pin"
+          },
+          {
+            "target": "canaille",
+            "en": "scoundrel"
+          },
+          {
+            "target": "Bruxelles",
+            "en": "Brussels"
+          },
+          {
+            "target": "Thaïlande",
+            "en": "Thailand"
+          },
+          {
+            "target": "réfrigérateur",
+            "en": "refrigerator"
+          },
+          {
+            "target": "dorée",
+            "en": "John Dory"
+          },
+          {
+            "target": "applaudir",
+            "en": "clap"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u108",
+        "title": "Common words 2676–2700",
+        "subtitle": "The 2676–2700 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "vocabulaire",
+            "en": "vocabulary"
+          },
+          {
+            "target": "bourgeois",
+            "en": "middleclass citizen"
+          },
+          {
+            "target": "proverbe",
+            "en": "proverb"
+          },
+          {
+            "target": "duper",
+            "en": "dupe"
+          },
+          {
+            "target": "cathédrale",
+            "en": "cathedral"
+          },
+          {
+            "target": "silhouette",
+            "en": "outline"
+          },
+          {
+            "target": "valve",
+            "en": "air-valve"
+          },
+          {
+            "target": "dentifrice",
+            "en": "toothpaste"
+          },
+          {
+            "target": "rédaction",
+            "en": "editorial office"
+          },
+          {
+            "target": "infanterie",
+            "en": "infantry"
+          },
+          {
+            "target": "tablier",
+            "en": "apron"
+          },
+          {
+            "target": "tournevis",
+            "en": "screwdriver"
+          },
+          {
+            "target": "analyste",
+            "en": "analytical chemist"
+          },
+          {
+            "target": "masser",
+            "en": "massage"
+          },
+          {
+            "target": "brochure",
+            "en": "pamphlet"
+          },
+          {
+            "target": "dix-huit",
+            "en": "eighteen"
+          },
+          {
+            "target": "Danemark",
+            "en": "Denmark"
+          },
+          {
+            "target": "voyante",
+            "en": "clairvoyant"
+          },
+          {
+            "target": "matelot",
+            "en": "sailor"
+          },
+          {
+            "target": "peser",
+            "en": "weigh"
+          },
+          {
+            "target": "Africain",
+            "en": "African"
+          },
+          {
+            "target": "pie",
+            "en": "magpie"
+          },
+          {
+            "target": "gonfler",
+            "en": "swell"
+          },
+          {
+            "target": "douane",
+            "en": "customs"
+          },
+          {
+            "target": "boucherie",
+            "en": "butcher's shop"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u109",
+        "title": "Common words 2701–2725",
+        "subtitle": "The 2701–2725 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "exterminer",
+            "en": "wipe out"
+          },
+          {
+            "target": "chemisier",
+            "en": "blouse"
+          },
+          {
+            "target": "vis-à-vis",
+            "en": "with reference to"
+          },
+          {
+            "target": "correspondre",
+            "en": "fit together"
+          },
+          {
+            "target": "notamment",
+            "en": "in particular"
+          },
+          {
+            "target": "tonneau",
+            "en": "barrel"
+          },
+          {
+            "target": "argile",
+            "en": "clay"
+          },
+          {
+            "target": "bâbord",
+            "en": "port side"
+          },
+          {
+            "target": "carrefour",
+            "en": "crossroads"
+          },
+          {
+            "target": "remerciement",
+            "en": "thanks"
+          },
+          {
+            "target": "infirme",
+            "en": "disabled person"
+          },
+          {
+            "target": "alerter",
+            "en": "raise the alarm"
+          },
+          {
+            "target": "loupe",
+            "en": "magnifying glass"
+          },
+          {
+            "target": "soixante",
+            "en": "sixty"
+          },
+          {
+            "target": "Pékin",
+            "en": "Peking"
+          },
+          {
+            "target": "spécimen",
+            "en": "sample"
+          },
+          {
+            "target": "Hollande",
+            "en": "Holland"
+          },
+          {
+            "target": "grossir",
+            "en": "get fat"
+          },
+          {
+            "target": "recommander",
+            "en": "recommend"
+          },
+          {
+            "target": "Grecque",
+            "en": "Greek woman"
+          },
+          {
+            "target": "compliquer",
+            "en": "complicate"
+          },
+          {
+            "target": "remplacement",
+            "en": "replacement"
+          },
+          {
+            "target": "Portugais",
+            "en": "Portuguese"
+          },
+          {
+            "target": "actualité",
+            "en": "topic"
+          },
+          {
+            "target": "Belgique",
+            "en": "Belgium"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u110",
+        "title": "Common words 2726–2750",
+        "subtitle": "The 2726–2750 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "Autriche",
+            "en": "Austria"
+          },
+          {
+            "target": "Bretagne",
+            "en": "Brittany"
+          },
+          {
+            "target": "hypothèque",
+            "en": "mortgage"
+          },
+          {
+            "target": "taxe",
+            "en": "tax"
+          },
+          {
+            "target": "convertir",
+            "en": "convert"
+          },
+          {
+            "target": "Québec",
+            "en": "Quebec"
+          },
+          {
+            "target": "digérer",
+            "en": "digest"
+          },
+          {
+            "target": "nombril",
+            "en": "navel"
+          },
+          {
+            "target": "favorable",
+            "en": "favourable"
+          },
+          {
+            "target": "adolescence",
+            "en": "puberty"
+          },
+          {
+            "target": "oser",
+            "en": "be bold"
+          },
+          {
+            "target": "Vulcain",
+            "en": "Vulcan"
+          },
+          {
+            "target": "anatomie",
+            "en": "anatomy"
+          },
+          {
+            "target": "Achille",
+            "en": "Achilles"
+          },
+          {
+            "target": "sceptique",
+            "en": "skeptical"
+          },
+          {
+            "target": "agiter",
+            "en": "wave about"
+          },
+          {
+            "target": "Troie",
+            "en": "Troy"
+          },
+          {
+            "target": "manifester",
+            "en": "show"
+          },
+          {
+            "target": "légume",
+            "en": "vegetable"
+          },
+          {
+            "target": "étui",
+            "en": "case"
+          },
+          {
+            "target": "dictionnaire",
+            "en": "dictionary"
+          },
+          {
+            "target": "institutrice",
+            "en": "teacher"
+          },
+          {
+            "target": "constant",
+            "en": "permanent"
+          },
+          {
+            "target": "hydrogène",
+            "en": "hydrogen"
+          },
+          {
+            "target": "litre",
+            "en": "liter"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u111",
+        "title": "Common words 2751–2775",
+        "subtitle": "The 2751–2775 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "Messie",
+            "en": "Messiah"
+          },
+          {
+            "target": "chœur",
+            "en": "chorus"
+          },
+          {
+            "target": "balayer",
+            "en": "sweep"
+          },
+          {
+            "target": "cygne",
+            "en": "swan"
+          },
+          {
+            "target": "orgie",
+            "en": "orgy"
+          },
+          {
+            "target": "tempe",
+            "en": "temple"
+          },
+          {
+            "target": "Jamaïque",
+            "en": "Jamaica"
+          },
+          {
+            "target": "sondage",
+            "en": "survey"
+          },
+          {
+            "target": "promouvoir",
+            "en": "advance"
+          },
+          {
+            "target": "Barcelone",
+            "en": "Barcelona"
+          },
+          {
+            "target": "mâcher",
+            "en": "chew"
+          },
+          {
+            "target": "rivaliser",
+            "en": "compete"
+          },
+          {
+            "target": "piment",
+            "en": "chili"
+          },
+          {
+            "target": "Ecosse",
+            "en": "Scotland"
+          },
+          {
+            "target": "spirale",
+            "en": "spiral"
+          },
+          {
+            "target": "abattoir",
+            "en": "slaughterhouse"
+          },
+          {
+            "target": "vigueur",
+            "en": "spirit"
+          },
+          {
+            "target": "orthographe",
+            "en": "spelling"
+          },
+          {
+            "target": "introduction",
+            "en": "preface"
+          },
+          {
+            "target": "exiger",
+            "en": "demand"
+          },
+          {
+            "target": "pépin",
+            "en": "grain"
+          },
+          {
+            "target": "Capitole",
+            "en": "Capitol"
+          },
+          {
+            "target": "chiffon",
+            "en": "scrap"
+          },
+          {
+            "target": "baronne",
+            "en": "baroness"
+          },
+          {
+            "target": "aléatoire",
+            "en": "uncertain"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u112",
+        "title": "Common words 2776–2800",
+        "subtitle": "The 2776–2800 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "rez-de-chaussée",
+            "en": "ground-floor"
+          },
+          {
+            "target": "Européen",
+            "en": "European"
+          },
+          {
+            "target": "psychiatrie",
+            "en": "psychiatry"
+          },
+          {
+            "target": "solidarité",
+            "en": "solidarity"
+          },
+          {
+            "target": "diminuer",
+            "en": "decline"
+          },
+          {
+            "target": "intellectuel",
+            "en": "mental"
+          },
+          {
+            "target": "dix-sept",
+            "en": "seventeen"
+          },
+          {
+            "target": "sanglier",
+            "en": "wild boar"
+          },
+          {
+            "target": "intestin",
+            "en": "intestine"
+          },
+          {
+            "target": "ravitaillement",
+            "en": "supply"
+          },
+          {
+            "target": "aurore",
+            "en": "red of dawn"
+          },
+          {
+            "target": "radeau",
+            "en": "raft"
+          },
+          {
+            "target": "paume",
+            "en": "palm"
+          },
+          {
+            "target": "noce",
+            "en": "debauchery"
+          },
+          {
+            "target": "saveur",
+            "en": "flavour"
+          },
+          {
+            "target": "casserole",
+            "en": "saucepan"
+          },
+          {
+            "target": "approuver",
+            "en": "approve"
+          },
+          {
+            "target": "aspirer",
+            "en": "aspire to"
+          },
+          {
+            "target": "alchimie",
+            "en": "alchemy"
+          },
+          {
+            "target": "injecter",
+            "en": "inject"
+          },
+          {
+            "target": "Ulysse",
+            "en": "Ulysses"
+          },
+          {
+            "target": "admirateur",
+            "en": "admirer"
+          },
+          {
+            "target": "Grande-Bretagne",
+            "en": "Great Britain"
+          },
+          {
+            "target": "autoritaire",
+            "en": "authorative"
+          },
+          {
+            "target": "cyanure",
+            "en": "cyanide"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u113",
+        "title": "Common words 2801–2825",
+        "subtitle": "The 2801–2825 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "charlatan",
+            "en": "quack"
+          },
+          {
+            "target": "baptiste",
+            "en": "baptist"
+          },
+          {
+            "target": "bavardage",
+            "en": "chat"
+          },
+          {
+            "target": "errer",
+            "en": "wander"
+          },
+          {
+            "target": "superficiel",
+            "en": "shallow"
+          },
+          {
+            "target": "aggraver",
+            "en": "blow up"
+          },
+          {
+            "target": "ajuster",
+            "en": "accomodate"
+          },
+          {
+            "target": "distinction",
+            "en": "renown"
+          },
+          {
+            "target": "user",
+            "en": "wear out"
+          },
+          {
+            "target": "verrouiller",
+            "en": "bolt"
+          },
+          {
+            "target": "maquereau",
+            "en": "mackerel"
+          },
+          {
+            "target": "sucette",
+            "en": "dummy"
+          },
+          {
+            "target": "épuisant",
+            "en": "exhausting"
+          },
+          {
+            "target": "Norvège",
+            "en": "Norway"
+          },
+          {
+            "target": "frire",
+            "en": "fry"
+          },
+          {
+            "target": "élastique",
+            "en": "elastic"
+          },
+          {
+            "target": "meuble",
+            "en": "piece of furniture"
+          },
+          {
+            "target": "crevette",
+            "en": "prawn"
+          },
+          {
+            "target": "psychique",
+            "en": "psychic"
+          },
+          {
+            "target": "avide",
+            "en": "eager"
+          },
+          {
+            "target": "Arabie",
+            "en": "Arabia"
+          },
+          {
+            "target": "télécharger",
+            "en": "download"
+          },
+          {
+            "target": "pou",
+            "en": "louse"
+          },
+          {
+            "target": "flottant",
+            "en": "fluttering"
+          },
+          {
+            "target": "lanterne",
+            "en": "lantern"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u114",
+        "title": "Common words 2826–2850",
+        "subtitle": "The 2826–2850 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "Athènes",
+            "en": "Athens"
+          },
+          {
+            "target": "nostalgie",
+            "en": "nostalgia"
+          },
+          {
+            "target": "léopard",
+            "en": "leopard"
+          },
+          {
+            "target": "agaçant",
+            "en": "very annoying"
+          },
+          {
+            "target": "tranchant",
+            "en": "sharp"
+          },
+          {
+            "target": "amulette",
+            "en": "charm"
+          },
+          {
+            "target": "liquider",
+            "en": "liquidate"
+          },
+          {
+            "target": "tremper",
+            "en": "temper"
+          },
+          {
+            "target": "substitut",
+            "en": "substitute"
+          },
+          {
+            "target": "tribune",
+            "en": "speaker's platform"
+          },
+          {
+            "target": "platine",
+            "en": "platinum"
+          },
+          {
+            "target": "Pérou",
+            "en": "Peru"
+          },
+          {
+            "target": "immoral",
+            "en": "nasty"
+          },
+          {
+            "target": "Sicile",
+            "en": "Sicily"
+          },
+          {
+            "target": "ravisseur",
+            "en": "robber"
+          },
+          {
+            "target": "songer",
+            "en": "think to oneself"
+          },
+          {
+            "target": "Sibérie",
+            "en": "Siberia"
+          },
+          {
+            "target": "forgeron",
+            "en": "smith"
+          },
+          {
+            "target": "râler",
+            "en": "growl"
+          },
+          {
+            "target": "éduquer",
+            "en": "bring up"
+          },
+          {
+            "target": "contribuer",
+            "en": "contribute"
+          },
+          {
+            "target": "enrichir",
+            "en": "make richer"
+          },
+          {
+            "target": "anus",
+            "en": "arse"
+          },
+          {
+            "target": "bile",
+            "en": "gall"
+          },
+          {
+            "target": "adhésif",
+            "en": "adhesive"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u115",
+        "title": "Common words 2851–2875",
+        "subtitle": "The 2851–2875 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "protester",
+            "en": "protest"
+          },
+          {
+            "target": "splendeur",
+            "en": "pomp"
+          },
+          {
+            "target": "violoncelle",
+            "en": "cello"
+          },
+          {
+            "target": "radiateur",
+            "en": "radiator"
+          },
+          {
+            "target": "griffe",
+            "en": "claw"
+          },
+          {
+            "target": "séisme",
+            "en": "earthquake"
+          },
+          {
+            "target": "sortilège",
+            "en": "sorcery"
+          },
+          {
+            "target": "pieux",
+            "en": "pious"
+          },
+          {
+            "target": "poilu",
+            "en": "hairy"
+          },
+          {
+            "target": "ravin",
+            "en": "ravine"
+          },
+          {
+            "target": "retraité",
+            "en": "retired person"
+          },
+          {
+            "target": "mendiant",
+            "en": "beggar"
+          },
+          {
+            "target": "bactérie",
+            "en": "bacterium"
+          },
+          {
+            "target": "abondance",
+            "en": "plenty"
+          },
+          {
+            "target": "cendrier",
+            "en": "ashtray"
+          },
+          {
+            "target": "ulcère",
+            "en": "sore"
+          },
+          {
+            "target": "dictateur",
+            "en": "dictator"
+          },
+          {
+            "target": "réciter",
+            "en": "recite"
+          },
+          {
+            "target": "affreusement",
+            "en": "awfully"
+          },
+          {
+            "target": "Syrie",
+            "en": "Syria"
+          },
+          {
+            "target": "Gênes",
+            "en": "Genoa"
+          },
+          {
+            "target": "optimisme",
+            "en": "optimism"
+          },
+          {
+            "target": "cupidité",
+            "en": "greed"
+          },
+          {
+            "target": "variété",
+            "en": "variety entertainment"
+          },
+          {
+            "target": "pioche",
+            "en": "pick-axe"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u116",
+        "title": "Common words 2876–2900",
+        "subtitle": "The 2876–2900 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "naufrage",
+            "en": "shipwreck"
+          },
+          {
+            "target": "biberon",
+            "en": "baby's bottle"
+          },
+          {
+            "target": "accessible",
+            "en": "obtainable"
+          },
+          {
+            "target": "Islande",
+            "en": "Iceland"
+          },
+          {
+            "target": "absorber",
+            "en": "sip"
+          },
+          {
+            "target": "afficher",
+            "en": "post up"
+          },
+          {
+            "target": "habitant",
+            "en": "inhabitant"
+          },
+          {
+            "target": "prestige",
+            "en": "glamour"
+          },
+          {
+            "target": "circonstance",
+            "en": "circumstance"
+          },
+          {
+            "target": "assembler",
+            "en": "take along"
+          },
+          {
+            "target": "synthétique",
+            "en": "synthetic"
+          },
+          {
+            "target": "barbu",
+            "en": "bearded"
+          },
+          {
+            "target": "prématuré",
+            "en": "unripe"
+          },
+          {
+            "target": "cobaye",
+            "en": "guinea-pig"
+          },
+          {
+            "target": "Irlandaise",
+            "en": "Iriswoman"
+          },
+          {
+            "target": "attaquant",
+            "en": "attacker"
+          },
+          {
+            "target": "orge",
+            "en": "barley"
+          },
+          {
+            "target": "récompenser",
+            "en": "reward"
+          },
+          {
+            "target": "pointu",
+            "en": "pointed"
+          },
+          {
+            "target": "Cubain",
+            "en": "Cuban"
+          },
+          {
+            "target": "tabouret",
+            "en": "stool"
+          },
+          {
+            "target": "astéroïde",
+            "en": "asteroid"
+          },
+          {
+            "target": "fréquent",
+            "en": "frequent"
+          },
+          {
+            "target": "avoine",
+            "en": "oats"
+          },
+          {
+            "target": "caille",
+            "en": "quail"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u117",
+        "title": "Common words 2901–2925",
+        "subtitle": "The 2901–2925 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "gland",
+            "en": "acorn"
+          },
+          {
+            "target": "anarchie",
+            "en": "anarchy"
+          },
+          {
+            "target": "consigne",
+            "en": "left luggage"
+          },
+          {
+            "target": "gymnastique",
+            "en": "gymnastics"
+          },
+          {
+            "target": "tordre",
+            "en": "twist"
+          },
+          {
+            "target": "répertoire",
+            "en": "repertoire"
+          },
+          {
+            "target": "caprice",
+            "en": "whim"
+          },
+          {
+            "target": "rationnel",
+            "en": "rational"
+          },
+          {
+            "target": "invoquer",
+            "en": "appeal to"
+          },
+          {
+            "target": "ancêtre",
+            "en": "forefather"
+          },
+          {
+            "target": "Singapour",
+            "en": "Singapore"
+          },
+          {
+            "target": "modestie",
+            "en": "modesty"
+          },
+          {
+            "target": "hystérie",
+            "en": "hysteria"
+          },
+          {
+            "target": "ivoire",
+            "en": "ivory"
+          },
+          {
+            "target": "rentable",
+            "en": "profitable"
+          },
+          {
+            "target": "hériter",
+            "en": "inherit"
+          },
+          {
+            "target": "sacoche",
+            "en": "wallet"
+          },
+          {
+            "target": "mécontent",
+            "en": "dissatisfied"
+          },
+          {
+            "target": "Maroc",
+            "en": "Morocco"
+          },
+          {
+            "target": "Coran",
+            "en": "Koran"
+          },
+          {
+            "target": "glissant",
+            "en": "slippery"
+          },
+          {
+            "target": "adorée",
+            "en": "adored one"
+          },
+          {
+            "target": "Copenhague",
+            "en": "Copenhagen"
+          },
+          {
+            "target": "azote",
+            "en": "nitrogen"
+          },
+          {
+            "target": "boiteux",
+            "en": "lame"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u118",
+        "title": "Common words 2926–2950",
+        "subtitle": "The 2926–2950 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "obéissance",
+            "en": "manageability"
+          },
+          {
+            "target": "exagérer",
+            "en": "exagerate"
+          },
+          {
+            "target": "Australien",
+            "en": "Australian"
+          },
+          {
+            "target": "veuf",
+            "en": "widower"
+          },
+          {
+            "target": "passif",
+            "en": "passive"
+          },
+          {
+            "target": "renouveler",
+            "en": "renew"
+          },
+          {
+            "target": "savourer",
+            "en": "relish"
+          },
+          {
+            "target": "Galles",
+            "en": "Wales"
+          },
+          {
+            "target": "indifférent",
+            "en": "indifferent"
+          },
+          {
+            "target": "spectateur",
+            "en": "spectator"
+          },
+          {
+            "target": "rossignol",
+            "en": "nightingale"
+          },
+          {
+            "target": "Nil",
+            "en": "Nile"
+          },
+          {
+            "target": "kiosque",
+            "en": "stand"
+          },
+          {
+            "target": "courtois",
+            "en": "polite"
+          },
+          {
+            "target": "accessoire",
+            "en": "accessory"
+          },
+          {
+            "target": "anticiper",
+            "en": "think ahead"
+          },
+          {
+            "target": "zèle",
+            "en": "zeal"
+          },
+          {
+            "target": "Philippines",
+            "en": "Philippine Islands"
+          },
+          {
+            "target": "intervalle",
+            "en": "interval"
+          },
+          {
+            "target": "banquette",
+            "en": "small bench"
+          },
+          {
+            "target": "poutre",
+            "en": "beam"
+          },
+          {
+            "target": "mélancolique",
+            "en": "melancholy"
+          },
+          {
+            "target": "bison",
+            "en": "buffalo"
+          },
+          {
+            "target": "Varsovie",
+            "en": "Warsaw"
+          },
+          {
+            "target": "minorité",
+            "en": "minority"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u119",
+        "title": "Common words 2951–2975",
+        "subtitle": "The 2951–2975 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "balançoire",
+            "en": "swing"
+          },
+          {
+            "target": "pharmacien",
+            "en": "chemist"
+          },
+          {
+            "target": "consommer",
+            "en": "use up"
+          },
+          {
+            "target": "imprimante",
+            "en": "printer"
+          },
+          {
+            "target": "dentelle",
+            "en": "lace"
+          },
+          {
+            "target": "épine",
+            "en": "spine"
+          },
+          {
+            "target": "cirer",
+            "en": "polish"
+          },
+          {
+            "target": "prestation",
+            "en": "benefit"
+          },
+          {
+            "target": "merle",
+            "en": "blackbird"
+          },
+          {
+            "target": "Hongrois",
+            "en": "Hungarian"
+          },
+          {
+            "target": "Canadienne",
+            "en": "Canadian woman"
+          },
+          {
+            "target": "contempler",
+            "en": "look at"
+          },
+          {
+            "target": "archevêque",
+            "en": "archbishop"
+          },
+          {
+            "target": "mythologie",
+            "en": "mythology"
+          },
+          {
+            "target": "ménager",
+            "en": "regret"
+          },
+          {
+            "target": "vautour",
+            "en": "vulture"
+          },
+          {
+            "target": "terminus",
+            "en": "terminal"
+          },
+          {
+            "target": "Apache",
+            "en": "hood"
+          },
+          {
+            "target": "tige",
+            "en": "stem"
+          },
+          {
+            "target": "Ukraine",
+            "en": "the Ukraine"
+          },
+          {
+            "target": "abonnement",
+            "en": "subscription"
+          },
+          {
+            "target": "procuration",
+            "en": "power of attorney"
+          },
+          {
+            "target": "Thaï",
+            "en": "Thai"
+          },
+          {
+            "target": "dépendre",
+            "en": "depend"
+          },
+          {
+            "target": "corrompre",
+            "en": "bribe"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u120",
+        "title": "Common words 2976–3000",
+        "subtitle": "The 2976–3000 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "potable",
+            "en": "drinkable"
+          },
+          {
+            "target": "cultivé",
+            "en": "learned"
+          },
+          {
+            "target": "Hambourg",
+            "en": "Hamburg"
+          },
+          {
+            "target": "hernie",
+            "en": "hernia"
+          },
+          {
+            "target": "craie",
+            "en": "chalk"
+          },
+          {
+            "target": "démarrage",
+            "en": "moving off"
+          },
+          {
+            "target": "Cléopâtre",
+            "en": "Cleopatra"
+          },
+          {
+            "target": "moustique",
+            "en": "mosquito"
+          },
+          {
+            "target": "prélever",
+            "en": "take away"
+          },
+          {
+            "target": "délice",
+            "en": "delight"
+          },
+          {
+            "target": "bobine",
+            "en": "coil"
+          },
+          {
+            "target": "fanatique",
+            "en": "fanatical"
+          },
+          {
+            "target": "anonymat",
+            "en": "anonymity"
+          },
+          {
+            "target": "ride",
+            "en": "wrinkle"
+          },
+          {
+            "target": "Congo",
+            "en": "Zaire"
+          },
+          {
+            "target": "arctique",
+            "en": "Arctic"
+          },
+          {
+            "target": "conforme",
+            "en": "fitting"
+          },
+          {
+            "target": "Antarctique",
+            "en": "Antarctic"
+          },
+          {
+            "target": "décolleté",
+            "en": "cleavage"
+          },
+          {
+            "target": "piller",
+            "en": "rob"
+          },
+          {
+            "target": "Bermudes",
+            "en": "Bermudas"
+          },
+          {
+            "target": "semelle",
+            "en": "inner sole"
+          },
+          {
+            "target": "imperméable",
+            "en": "raincoat"
+          },
+          {
+            "target": "jardinage",
+            "en": "gardening"
+          },
+          {
+            "target": "lâcheté",
+            "en": "cowardice"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u121",
+        "title": "Common words 3001–3025",
+        "subtitle": "The 3001–3025 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "martyre",
+            "en": "female martyr"
+          },
+          {
+            "target": "Brésilien",
+            "en": "Brazilian"
+          },
+          {
+            "target": "girafe",
+            "en": "giraffe"
+          },
+          {
+            "target": "bombarder",
+            "en": "bombard"
+          },
+          {
+            "target": "Belge",
+            "en": "Belgian woman"
+          },
+          {
+            "target": "basique",
+            "en": "basic"
+          },
+          {
+            "target": "bénir",
+            "en": "bless"
+          },
+          {
+            "target": "lavande",
+            "en": "lavender"
+          },
+          {
+            "target": "attribuer",
+            "en": "assign"
+          },
+          {
+            "target": "lièvre",
+            "en": "hare"
+          },
+          {
+            "target": "fourmi",
+            "en": "ant"
+          },
+          {
+            "target": "rebondir",
+            "en": "rebound"
+          },
+          {
+            "target": "conformément",
+            "en": "in accordance with"
+          },
+          {
+            "target": "corail",
+            "en": "coral"
+          },
+          {
+            "target": "phénix",
+            "en": "phoenix"
+          },
+          {
+            "target": "apéritif",
+            "en": "peg"
+          },
+          {
+            "target": "Pakistanais",
+            "en": "Pakistani"
+          },
+          {
+            "target": "promoteur",
+            "en": "instigator"
+          },
+          {
+            "target": "agissant",
+            "en": "active"
+          },
+          {
+            "target": "gémir",
+            "en": "groan"
+          },
+          {
+            "target": "relire",
+            "en": "read over again"
+          },
+          {
+            "target": "Noé",
+            "en": "Noah"
+          },
+          {
+            "target": "expédier",
+            "en": "send off"
+          },
+          {
+            "target": "indulgent",
+            "en": "merciful"
+          },
+          {
+            "target": "sage-femme",
+            "en": "midwife"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u122",
+        "title": "Common words 3026–3050",
+        "subtitle": "The 3026–3050 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "rougir",
+            "en": "blush"
+          },
+          {
+            "target": "carpe",
+            "en": "carp"
+          },
+          {
+            "target": "coiffeuse",
+            "en": "female hairdresser"
+          },
+          {
+            "target": "érable",
+            "en": "maple"
+          },
+          {
+            "target": "cuve",
+            "en": "tub"
+          },
+          {
+            "target": "fiole",
+            "en": "phial"
+          },
+          {
+            "target": "adjudant",
+            "en": "adjutant"
+          },
+          {
+            "target": "abriter",
+            "en": "put up"
+          },
+          {
+            "target": "soufre",
+            "en": "sulphur"
+          },
+          {
+            "target": "mobilier",
+            "en": "mobile"
+          },
+          {
+            "target": "pinceau",
+            "en": "paintbrush"
+          },
+          {
+            "target": "boulanger",
+            "en": "baker"
+          },
+          {
+            "target": "sagement",
+            "en": "with wisdom"
+          },
+          {
+            "target": "épice",
+            "en": "spice"
+          },
+          {
+            "target": "dense",
+            "en": "thick"
+          },
+          {
+            "target": "hurlement",
+            "en": "howling"
+          },
+          {
+            "target": "bambou",
+            "en": "bamboo"
+          },
+          {
+            "target": "Lisbonne",
+            "en": "Lisbon"
+          },
+          {
+            "target": "entamer",
+            "en": "break into"
+          },
+          {
+            "target": "autonome",
+            "en": "autonomous"
+          },
+          {
+            "target": "truite",
+            "en": "trout"
+          },
+          {
+            "target": "Palestine",
+            "en": "Palestinian"
+          },
+          {
+            "target": "cafetière",
+            "en": "coffee-pot"
+          },
+          {
+            "target": "odorat",
+            "en": "sense of smell"
+          },
+          {
+            "target": "convenir",
+            "en": "be appropriate"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u123",
+        "title": "Common words 3051–3075",
+        "subtitle": "The 3051–3075 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "aventurer",
+            "en": "dare"
+          },
+          {
+            "target": "tiède",
+            "en": "lukewarm"
+          },
+          {
+            "target": "rouille",
+            "en": "rust"
+          },
+          {
+            "target": "débit",
+            "en": "debit"
+          },
+          {
+            "target": "cohérent",
+            "en": "connected"
+          },
+          {
+            "target": "paisiblement",
+            "en": "quietly"
+          },
+          {
+            "target": "inciter",
+            "en": "spur on"
+          },
+          {
+            "target": "géographie",
+            "en": "geography"
+          },
+          {
+            "target": "Haïti",
+            "en": "Haiti"
+          },
+          {
+            "target": "cidre",
+            "en": "cider"
+          },
+          {
+            "target": "soucoupe",
+            "en": "saucer"
+          },
+          {
+            "target": "plaine",
+            "en": "plain"
+          },
+          {
+            "target": "qualifier",
+            "en": "qualify"
+          },
+          {
+            "target": "cendre",
+            "en": "ash"
+          },
+          {
+            "target": "mendier",
+            "en": "beg"
+          },
+          {
+            "target": "fesse",
+            "en": "buttock"
+          },
+          {
+            "target": "mathématique",
+            "en": "mathematical"
+          },
+          {
+            "target": "Cupidon",
+            "en": "Cupid"
+          },
+          {
+            "target": "cornichon",
+            "en": "gerkin"
+          },
+          {
+            "target": "appendicite",
+            "en": "appendicitis"
+          },
+          {
+            "target": "orthodoxe",
+            "en": "orthodox"
+          },
+          {
+            "target": "prescrire",
+            "en": "prescribe"
+          },
+          {
+            "target": "alcoolisme",
+            "en": "alcoholism"
+          },
+          {
+            "target": "moineau",
+            "en": "sparrow"
+          },
+          {
+            "target": "Hongrie",
+            "en": "Hungary"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u124",
+        "title": "Common words 3076–3100",
+        "subtitle": "The 3076–3100 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "dicter",
+            "en": "inspire"
+          },
+          {
+            "target": "infecter",
+            "en": "infect"
+          },
+          {
+            "target": "remorque",
+            "en": "trailer"
+          },
+          {
+            "target": "gourmand",
+            "en": "greedy"
+          },
+          {
+            "target": "souligner",
+            "en": "accent"
+          },
+          {
+            "target": "missionnaire",
+            "en": "missionary"
+          },
+          {
+            "target": "paradoxe",
+            "en": "paradox"
+          },
+          {
+            "target": "véreux",
+            "en": "unsound"
+          },
+          {
+            "target": "appliqué",
+            "en": "hardworking"
+          },
+          {
+            "target": "pourpre",
+            "en": "purple"
+          },
+          {
+            "target": "sceller",
+            "en": "seal"
+          },
+          {
+            "target": "Méduse",
+            "en": "Medusa"
+          },
+          {
+            "target": "apogée",
+            "en": "acme"
+          },
+          {
+            "target": "étonner",
+            "en": "amaze"
+          },
+          {
+            "target": "verger",
+            "en": "orchard"
+          },
+          {
+            "target": "commerçant",
+            "en": "merchant"
+          },
+          {
+            "target": "attachement",
+            "en": "attachment"
+          },
+          {
+            "target": "périr",
+            "en": "perish"
+          },
+          {
+            "target": "avidité",
+            "en": "eagerness"
+          },
+          {
+            "target": "rhinocéros",
+            "en": "rhino"
+          },
+          {
+            "target": "déployer",
+            "en": "spread out"
+          },
+          {
+            "target": "héroïsme",
+            "en": "heroism"
+          },
+          {
+            "target": "adoptif",
+            "en": "adopted"
+          },
+          {
+            "target": "réfugier",
+            "en": "take refuge"
+          },
+          {
+            "target": "méfiance",
+            "en": "suspicion"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u125",
+        "title": "Common words 3101–3125",
+        "subtitle": "The 3101–3125 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "goudron",
+            "en": "tar"
+          },
+          {
+            "target": "purifier",
+            "en": "make clean"
+          },
+          {
+            "target": "bélier",
+            "en": "ram"
+          },
+          {
+            "target": "anguille",
+            "en": "eel"
+          },
+          {
+            "target": "spontané",
+            "en": "spontaneous"
+          },
+          {
+            "target": "tôle",
+            "en": "tin plate"
+          },
+          {
+            "target": "poussette",
+            "en": "push chair"
+          },
+          {
+            "target": "gendarme",
+            "en": "patrolman"
+          },
+          {
+            "target": "Cachemire",
+            "en": "Kashmir"
+          },
+          {
+            "target": "pessimiste",
+            "en": "pessimist"
+          },
+          {
+            "target": "réfugié",
+            "en": "refugee"
+          },
+          {
+            "target": "gitan",
+            "en": "gypsy"
+          },
+          {
+            "target": "panthère",
+            "en": "panther"
+          },
+          {
+            "target": "Roumanie",
+            "en": "Romania"
+          },
+          {
+            "target": "Colomb",
+            "en": "Columbus"
+          },
+          {
+            "target": "algèbre",
+            "en": "algebra"
+          },
+          {
+            "target": "dérouler",
+            "en": "unravel"
+          },
+          {
+            "target": "somnambule",
+            "en": "sleep walker"
+          },
+          {
+            "target": "nappe",
+            "en": "table-cloth"
+          },
+          {
+            "target": "absurdité",
+            "en": "nonsense"
+          },
+          {
+            "target": "vibrer",
+            "en": "vibrate"
+          },
+          {
+            "target": "virement",
+            "en": "transfer"
+          },
+          {
+            "target": "angélique",
+            "en": "angelica"
+          },
+          {
+            "target": "bascule",
+            "en": "weighing machine"
+          },
+          {
+            "target": "poulailler",
+            "en": "coop"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u126",
+        "title": "Common words 3126–3150",
+        "subtitle": "The 3126–3150 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "Viêt-nam",
+            "en": "Vietnam"
+          },
+          {
+            "target": "bouddhiste",
+            "en": "Buddhist"
+          },
+          {
+            "target": "virgule",
+            "en": "comma"
+          },
+          {
+            "target": "voûte",
+            "en": "vault"
+          },
+          {
+            "target": "saignant",
+            "en": "rare"
+          },
+          {
+            "target": "méfiant",
+            "en": "suspicious"
+          },
+          {
+            "target": "appendice",
+            "en": "addition"
+          },
+          {
+            "target": "avancement",
+            "en": "promotion"
+          },
+          {
+            "target": "Auguste",
+            "en": "Augustus"
+          },
+          {
+            "target": "décourager",
+            "en": "discourage"
+          },
+          {
+            "target": "mât",
+            "en": "mast"
+          },
+          {
+            "target": "morue",
+            "en": "cod"
+          },
+          {
+            "target": "rincer",
+            "en": "rinse"
+          },
+          {
+            "target": "grand-maman",
+            "en": "granny"
+          },
+          {
+            "target": "Soudan",
+            "en": "Sudan"
+          },
+          {
+            "target": "soupçonner",
+            "en": "suspect"
+          },
+          {
+            "target": "torchon",
+            "en": "dust rag"
+          },
+          {
+            "target": "escargot",
+            "en": "snail"
+          },
+          {
+            "target": "marchander",
+            "en": "bargain"
+          },
+          {
+            "target": "Algérie",
+            "en": "Algeria"
+          },
+          {
+            "target": "abbaye",
+            "en": "abbey"
+          },
+          {
+            "target": "utilisateur",
+            "en": "user"
+          },
+          {
+            "target": "épuiser",
+            "en": "tire out"
+          },
+          {
+            "target": "abats",
+            "en": "offal"
+          },
+          {
+            "target": "typiquement",
+            "en": "typically"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u127",
+        "title": "Common words 3151–3175",
+        "subtitle": "The 3151–3175 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "géométrie",
+            "en": "geometry"
+          },
+          {
+            "target": "rosée",
+            "en": "dew"
+          },
+          {
+            "target": "baume",
+            "en": "balm"
+          },
+          {
+            "target": "insuffisant",
+            "en": "in short supply"
+          },
+          {
+            "target": "aérodrome",
+            "en": "airfield"
+          },
+          {
+            "target": "propager",
+            "en": "advertise"
+          },
+          {
+            "target": "trachée",
+            "en": "windpipe"
+          },
+          {
+            "target": "clairon",
+            "en": "bugle"
+          },
+          {
+            "target": "Calvaire",
+            "en": "Calvary"
+          },
+          {
+            "target": "autruche",
+            "en": "ostrich"
+          },
+          {
+            "target": "Francfort",
+            "en": "Frankfort"
+          },
+          {
+            "target": "lentille",
+            "en": "lentil"
+          },
+          {
+            "target": "abaisser",
+            "en": "pull to pieces"
+          },
+          {
+            "target": "affaiblir",
+            "en": "weaken"
+          },
+          {
+            "target": "habileté",
+            "en": "skill"
+          },
+          {
+            "target": "enclin",
+            "en": "inclined"
+          },
+          {
+            "target": "accélération",
+            "en": "acceleration"
+          },
+          {
+            "target": "circulaire",
+            "en": "circular"
+          },
+          {
+            "target": "Fraser",
+            "en": "Fraser River"
+          },
+          {
+            "target": "apitoyer",
+            "en": "excite pity"
+          },
+          {
+            "target": "arthrite",
+            "en": "arthritis"
+          },
+          {
+            "target": "atome",
+            "en": "atom"
+          },
+          {
+            "target": "aquatique",
+            "en": "of water"
+          },
+          {
+            "target": "Mahomet",
+            "en": "Muhammad"
+          },
+          {
+            "target": "cacao",
+            "en": "cocoa"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u128",
+        "title": "Common words 3176–3200",
+        "subtitle": "The 3176–3200 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "athée",
+            "en": "atheist"
+          },
+          {
+            "target": "poseur",
+            "en": "attitudinizer"
+          },
+          {
+            "target": "crêpe",
+            "en": "pancake"
+          },
+          {
+            "target": "filiale",
+            "en": "branch"
+          },
+          {
+            "target": "administratif",
+            "en": "administrative"
+          },
+          {
+            "target": "gâter",
+            "en": "spoil"
+          },
+          {
+            "target": "aumônier",
+            "en": "army chaplain"
+          },
+          {
+            "target": "Babylone",
+            "en": "Babylon"
+          },
+          {
+            "target": "administrer",
+            "en": "manage"
+          },
+          {
+            "target": "accomplissement",
+            "en": "accomplishment"
+          },
+          {
+            "target": "Benoît",
+            "en": "Ben"
+          },
+          {
+            "target": "opportun",
+            "en": "handy"
+          },
+          {
+            "target": "ramer",
+            "en": "row"
+          },
+          {
+            "target": "chenille",
+            "en": "caterpillar"
+          },
+          {
+            "target": "piétiner",
+            "en": "trample on"
+          },
+          {
+            "target": "ronger",
+            "en": "nibble"
+          },
+          {
+            "target": "arrière-plan",
+            "en": "background"
+          },
+          {
+            "target": "digitale",
+            "en": "foxglove"
+          },
+          {
+            "target": "bûche",
+            "en": "chunk of wood"
+          },
+          {
+            "target": "négliger",
+            "en": "neglect"
+          },
+          {
+            "target": "docile",
+            "en": "obedient"
+          },
+          {
+            "target": "gouvernail",
+            "en": "helm"
+          },
+          {
+            "target": "surgir",
+            "en": "get up"
+          },
+          {
+            "target": "hélice",
+            "en": "propeller"
+          },
+          {
+            "target": "pieuvre",
+            "en": "octopus"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u129",
+        "title": "Common words 3201–3225",
+        "subtitle": "The 3201–3225 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "vignoble",
+            "en": "vine"
+          },
+          {
+            "target": "régaler",
+            "en": "treat"
+          },
+          {
+            "target": "taquiner",
+            "en": "tease"
+          },
+          {
+            "target": "accordéon",
+            "en": "accordion"
+          },
+          {
+            "target": "épiler",
+            "en": "remove unwanted hair"
+          },
+          {
+            "target": "Saturne",
+            "en": "Saturn"
+          },
+          {
+            "target": "sentinelle",
+            "en": "sentry"
+          },
+          {
+            "target": "dépouiller",
+            "en": "steal"
+          },
+          {
+            "target": "verbe",
+            "en": "verb"
+          },
+          {
+            "target": "rapprochement",
+            "en": "reconcilliation"
+          },
+          {
+            "target": "concombre",
+            "en": "cucumber"
+          },
+          {
+            "target": "aplomb",
+            "en": "self-assurance"
+          },
+          {
+            "target": "graver",
+            "en": "engrave"
+          },
+          {
+            "target": "filon",
+            "en": "vein"
+          },
+          {
+            "target": "Alpes",
+            "en": "Alps"
+          },
+          {
+            "target": "laitue",
+            "en": "lettuce"
+          },
+          {
+            "target": "fusionner",
+            "en": "merge"
+          },
+          {
+            "target": "déborder",
+            "en": "overflow"
+          },
+          {
+            "target": "bannir",
+            "en": "exile"
+          },
+          {
+            "target": "abcès",
+            "en": "abscess"
+          },
+          {
+            "target": "aboutir",
+            "en": "be next to"
+          },
+          {
+            "target": "insinuer",
+            "en": "hint"
+          },
+          {
+            "target": "Serbe",
+            "en": "Serb"
+          },
+          {
+            "target": "Corse",
+            "en": "Corsican woman"
+          },
+          {
+            "target": "prune",
+            "en": "plum"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u130",
+        "title": "Common words 3226–3250",
+        "subtitle": "The 3226–3250 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "prêcher",
+            "en": "preach"
+          },
+          {
+            "target": "Gaule",
+            "en": "Gaul"
+          },
+          {
+            "target": "canari",
+            "en": "canary"
+          },
+          {
+            "target": "continuellement",
+            "en": "all the time"
+          },
+          {
+            "target": "magot",
+            "en": "load of money"
+          },
+          {
+            "target": "radis",
+            "en": "radish"
+          },
+          {
+            "target": "propreté",
+            "en": "purity"
+          },
+          {
+            "target": "amadouer",
+            "en": "flatter"
+          },
+          {
+            "target": "châle",
+            "en": "shawl"
+          },
+          {
+            "target": "magnétoscope",
+            "en": "video recorder"
+          },
+          {
+            "target": "trébucher",
+            "en": "stumble"
+          },
+          {
+            "target": "ballerine",
+            "en": "ballet girl"
+          },
+          {
+            "target": "amnistie",
+            "en": "act of grace"
+          },
+          {
+            "target": "dix-neuf",
+            "en": "nineteen"
+          },
+          {
+            "target": "hélium",
+            "en": "helium"
+          },
+          {
+            "target": "convenablement",
+            "en": "properly"
+          },
+          {
+            "target": "thermomètre",
+            "en": "thermometer"
+          },
+          {
+            "target": "enchaîner",
+            "en": "link up"
+          },
+          {
+            "target": "titane",
+            "en": "titanium"
+          },
+          {
+            "target": "préférer",
+            "en": "prefer"
+          },
+          {
+            "target": "grammaire",
+            "en": "grammar"
+          },
+          {
+            "target": "gramme",
+            "en": "gram"
+          },
+          {
+            "target": "amputer",
+            "en": "amputate"
+          },
+          {
+            "target": "sabot",
+            "en": "hoof"
+          },
+          {
+            "target": "amazone",
+            "en": "Amazon"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u131",
+        "title": "Common words 3251–3275",
+        "subtitle": "The 3251–3275 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "Tchèque",
+            "en": "Czech woman"
+          },
+          {
+            "target": "anticorps",
+            "en": "antibody"
+          },
+          {
+            "target": "hydraulique",
+            "en": "hydraulic"
+          },
+          {
+            "target": "pseudonyme",
+            "en": "pseudonym"
+          },
+          {
+            "target": "chuchoter",
+            "en": "whisper"
+          },
+          {
+            "target": "observatoire",
+            "en": "observatory"
+          },
+          {
+            "target": "Nouvelle-Zélande",
+            "en": "New Zealand"
+          },
+          {
+            "target": "glande",
+            "en": "gland"
+          },
+          {
+            "target": "zèbre",
+            "en": "zebra"
+          },
+          {
+            "target": "pourvoir",
+            "en": "provide"
+          },
+          {
+            "target": "gui",
+            "en": "mistletoe"
+          },
+          {
+            "target": "chandail",
+            "en": "pullover sweater"
+          },
+          {
+            "target": "baptiser",
+            "en": "baptize"
+          },
+          {
+            "target": "affirmation",
+            "en": "assent"
+          },
+          {
+            "target": "confisquer",
+            "en": "confiscate"
+          },
+          {
+            "target": "avare",
+            "en": "stingy"
+          },
+          {
+            "target": "narcisse",
+            "en": "narcissus"
+          },
+          {
+            "target": "Olympe",
+            "en": "Olympus"
+          },
+          {
+            "target": "patin",
+            "en": "skate"
+          },
+          {
+            "target": "autonomie",
+            "en": "autonomy"
+          },
+          {
+            "target": "Méditerranée",
+            "en": "Mediterranean"
+          },
+          {
+            "target": "implorer",
+            "en": "beseech"
+          },
+          {
+            "target": "ensoleillé",
+            "en": "of the sun"
+          },
+          {
+            "target": "Turque",
+            "en": "Turkish woman"
+          },
+          {
+            "target": "récif",
+            "en": "reef"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u132",
+        "title": "Common words 3276–3300",
+        "subtitle": "The 3276–3300 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "bretelles",
+            "en": "braces"
+          },
+          {
+            "target": "broyer",
+            "en": "crush"
+          },
+          {
+            "target": "cruche",
+            "en": "pitcher"
+          },
+          {
+            "target": "moisi",
+            "en": "musty"
+          },
+          {
+            "target": "aisé",
+            "en": "in easy circumstances"
+          },
+          {
+            "target": "couronner",
+            "en": "crown"
+          },
+          {
+            "target": "grappe",
+            "en": "bunch"
+          },
+          {
+            "target": "mortier",
+            "en": "mortar"
+          },
+          {
+            "target": "descendance",
+            "en": "offspring"
+          },
+          {
+            "target": "Bosnie",
+            "en": "Bosnia"
+          },
+          {
+            "target": "chacal",
+            "en": "jackal"
+          },
+          {
+            "target": "sangsue",
+            "en": "leech"
+          },
+          {
+            "target": "astronomie",
+            "en": "astronomy"
+          },
+          {
+            "target": "Mecque",
+            "en": "Mecca"
+          },
+          {
+            "target": "gracieux",
+            "en": "graceful"
+          },
+          {
+            "target": "réclamation",
+            "en": "complaint"
+          },
+          {
+            "target": "tousser",
+            "en": "cough"
+          },
+          {
+            "target": "péniche",
+            "en": "barge"
+          },
+          {
+            "target": "protéine",
+            "en": "protein"
+          },
+          {
+            "target": "Toussaint",
+            "en": "All Hallows"
+          },
+          {
+            "target": "pavé",
+            "en": "pavement"
+          },
+          {
+            "target": "chevaucher",
+            "en": "ride"
+          },
+          {
+            "target": "arcade",
+            "en": "arch"
+          },
+          {
+            "target": "orateur",
+            "en": "orator"
+          },
+          {
+            "target": "tramway",
+            "en": "tram"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u133",
+        "title": "Common words 3301–3325",
+        "subtitle": "The 3301–3325 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "délirer",
+            "en": "be delirious"
+          },
+          {
+            "target": "privilégié",
+            "en": "privileged"
+          },
+          {
+            "target": "Polonaise",
+            "en": "Polish woman"
+          },
+          {
+            "target": "anémie",
+            "en": "anaemia"
+          },
+          {
+            "target": "moisir",
+            "en": "become mouldy"
+          },
+          {
+            "target": "Apollon",
+            "en": "Apollo"
+          },
+          {
+            "target": "dirigeable",
+            "en": "airship"
+          },
+          {
+            "target": "incliner",
+            "en": "be inclined"
+          },
+          {
+            "target": "acoustique",
+            "en": "acoustics"
+          },
+          {
+            "target": "scarabée",
+            "en": "beetle"
+          },
+          {
+            "target": "matériau",
+            "en": "data"
+          },
+          {
+            "target": "mouette",
+            "en": "seagull"
+          },
+          {
+            "target": "imposant",
+            "en": "considerable"
+          },
+          {
+            "target": "gerbe",
+            "en": "sheaf"
+          },
+          {
+            "target": "Pandore",
+            "en": "Pandora"
+          },
+          {
+            "target": "unanime",
+            "en": "unamimous"
+          },
+          {
+            "target": "amabilité",
+            "en": "kindness"
+          },
+          {
+            "target": "synthèse",
+            "en": "summary"
+          },
+          {
+            "target": "Platon",
+            "en": "Plato"
+          },
+          {
+            "target": "ambassadrice",
+            "en": "female ambassador"
+          },
+          {
+            "target": "Liban",
+            "en": "Lebanon"
+          },
+          {
+            "target": "ourse",
+            "en": "she-bear"
+          },
+          {
+            "target": "serein",
+            "en": "serene"
+          },
+          {
+            "target": "paon",
+            "en": "peacock"
+          },
+          {
+            "target": "acquitter",
+            "en": "pay off"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u134",
+        "title": "Common words 3326–3350",
+        "subtitle": "The 3326–3350 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "grêle",
+            "en": "hail"
+          },
+          {
+            "target": "nuance",
+            "en": "shade"
+          },
+          {
+            "target": "chaudron",
+            "en": "kettle"
+          },
+          {
+            "target": "aérer",
+            "en": "air out"
+          },
+          {
+            "target": "entreprendre",
+            "en": "undertake"
+          },
+          {
+            "target": "Pénélope",
+            "en": "Penelope"
+          },
+          {
+            "target": "magnétophone",
+            "en": "tape-recorder"
+          },
+          {
+            "target": "actualités",
+            "en": "news"
+          },
+          {
+            "target": "énergique",
+            "en": "drastic"
+          },
+          {
+            "target": "actionnaire",
+            "en": "shareholder"
+          },
+          {
+            "target": "tricoter",
+            "en": "knit"
+          },
+          {
+            "target": "Albanais",
+            "en": "Albanian"
+          },
+          {
+            "target": "Tamise",
+            "en": "Thames"
+          },
+          {
+            "target": "sonder",
+            "en": "sound out"
+          },
+          {
+            "target": "Bolivie",
+            "en": "Bolivia"
+          },
+          {
+            "target": "encyclopédie",
+            "en": "encyclopaedia"
+          },
+          {
+            "target": "choléra",
+            "en": "cholera"
+          },
+          {
+            "target": "vaniteux",
+            "en": "vain"
+          },
+          {
+            "target": "rangement",
+            "en": "storage space"
+          },
+          {
+            "target": "alphabétique",
+            "en": "alphabetical"
+          },
+          {
+            "target": "subvention",
+            "en": "subsidy"
+          },
+          {
+            "target": "haie",
+            "en": "hedge"
+          },
+          {
+            "target": "académique",
+            "en": "academic"
+          },
+          {
+            "target": "pionnier",
+            "en": "pioneer"
+          },
+          {
+            "target": "avant-bras",
+            "en": "lower-arm"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u135",
+        "title": "Common words 3351–3375",
+        "subtitle": "The 3351–3375 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "adoucir",
+            "en": "ease"
+          },
+          {
+            "target": "manchette",
+            "en": "cuff"
+          },
+          {
+            "target": "jaser",
+            "en": "gossip"
+          },
+          {
+            "target": "azur",
+            "en": "sky blue"
+          },
+          {
+            "target": "framboise",
+            "en": "raspberry"
+          },
+          {
+            "target": "puma",
+            "en": "mountain lion"
+          },
+          {
+            "target": "écume",
+            "en": "foam"
+          },
+          {
+            "target": "lilas",
+            "en": "lilac"
+          },
+          {
+            "target": "jongler",
+            "en": "juggle"
+          },
+          {
+            "target": "rénover",
+            "en": "do up"
+          },
+          {
+            "target": "alliage",
+            "en": "alloy"
+          },
+          {
+            "target": "landau",
+            "en": "pram"
+          },
+          {
+            "target": "couette",
+            "en": "duvet"
+          },
+          {
+            "target": "majestueux",
+            "en": "majestic"
+          },
+          {
+            "target": "crémaillère",
+            "en": "rack and pinion"
+          },
+          {
+            "target": "navet",
+            "en": "turnip"
+          },
+          {
+            "target": "bluffer",
+            "en": "bluff"
+          },
+          {
+            "target": "inné",
+            "en": "native"
+          },
+          {
+            "target": "gothique",
+            "en": "Gothic"
+          },
+          {
+            "target": "arrière-grand-père",
+            "en": "great-grandfather"
+          },
+          {
+            "target": "pittoresque",
+            "en": "picturesque"
+          },
+          {
+            "target": "ponctuel",
+            "en": "on time"
+          },
+          {
+            "target": "mégère",
+            "en": "shrew"
+          },
+          {
+            "target": "Madone",
+            "en": "Madonna"
+          },
+          {
+            "target": "anchois",
+            "en": "anchovy"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u136",
+        "title": "Common words 3376–3400",
+        "subtitle": "The 3376–3400 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "largeur",
+            "en": "width"
+          },
+          {
+            "target": "Pégase",
+            "en": "Pegasus"
+          },
+          {
+            "target": "forger",
+            "en": "forge"
+          },
+          {
+            "target": "déséquilibre",
+            "en": "imbalance"
+          },
+          {
+            "target": "zip",
+            "en": "zipper"
+          },
+          {
+            "target": "solennel",
+            "en": "solemn"
+          },
+          {
+            "target": "Damas",
+            "en": "Damascus"
+          },
+          {
+            "target": "chlore",
+            "en": "chlorine"
+          },
+          {
+            "target": "Perse",
+            "en": "Iran"
+          },
+          {
+            "target": "Gallois",
+            "en": "Welshman"
+          },
+          {
+            "target": "formuler",
+            "en": "formulate"
+          },
+          {
+            "target": "basket-ball",
+            "en": "basketball"
+          },
+          {
+            "target": "toboggan",
+            "en": "slide"
+          },
+          {
+            "target": "métamorphose",
+            "en": "transformation"
+          },
+          {
+            "target": "fusiller",
+            "en": "shoot dead"
+          },
+          {
+            "target": "couturière",
+            "en": "female tailor"
+          },
+          {
+            "target": "ambre",
+            "en": "amber"
+          },
+          {
+            "target": "adéquate",
+            "en": "sufficient"
+          },
+          {
+            "target": "acné",
+            "en": "acne"
+          },
+          {
+            "target": "venimeux",
+            "en": "poisonous"
+          },
+          {
+            "target": "monotone",
+            "en": "monotonous"
+          },
+          {
+            "target": "rafle",
+            "en": "raid"
+          },
+          {
+            "target": "athlétique",
+            "en": "athletic"
+          },
+          {
+            "target": "Cambodge",
+            "en": "Cambodia"
+          },
+          {
+            "target": "trésorier",
+            "en": "cashier"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u137",
+        "title": "Common words 3401–3425",
+        "subtitle": "The 3401–3425 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "socialisme",
+            "en": "socialism"
+          },
+          {
+            "target": "cordonnier",
+            "en": "cobbler"
+          },
+          {
+            "target": "miette",
+            "en": "crumb"
+          },
+          {
+            "target": "noisette",
+            "en": "hazelnut"
+          },
+          {
+            "target": "Indonésie",
+            "en": "Indonesia"
+          },
+          {
+            "target": "anarchiste",
+            "en": "anarchist"
+          },
+          {
+            "target": "mépriser",
+            "en": "despise"
+          },
+          {
+            "target": "tapisserie",
+            "en": "wall covering"
+          },
+          {
+            "target": "Norvégien",
+            "en": "Norwegian"
+          },
+          {
+            "target": "analogie",
+            "en": "analogy"
+          },
+          {
+            "target": "cylindre",
+            "en": "roller"
+          },
+          {
+            "target": "lacet",
+            "en": "shoe-lace"
+          },
+          {
+            "target": "limace",
+            "en": "slug"
+          },
+          {
+            "target": "archéologue",
+            "en": "archaeologist"
+          },
+          {
+            "target": "soude",
+            "en": "sofa"
+          },
+          {
+            "target": "bijoutier",
+            "en": "jeweller"
+          },
+          {
+            "target": "céleri",
+            "en": "celery"
+          },
+          {
+            "target": "aine",
+            "en": "groin"
+          },
+          {
+            "target": "aumône",
+            "en": "charity"
+          },
+          {
+            "target": "Ariane",
+            "en": "Ariadne"
+          },
+          {
+            "target": "tisser",
+            "en": "weave"
+          },
+          {
+            "target": "dialecte",
+            "en": "dialect"
+          },
+          {
+            "target": "chimère",
+            "en": "chimera"
+          },
+          {
+            "target": "maçon",
+            "en": "mason"
+          },
+          {
+            "target": "hareng",
+            "en": "herring"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u138",
+        "title": "Common words 3426–3450",
+        "subtitle": "The 3426–3450 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "Iranien",
+            "en": "Persian"
+          },
+          {
+            "target": "aucunement",
+            "en": "by no means"
+          },
+          {
+            "target": "beaux-parents",
+            "en": "parents-in-law"
+          },
+          {
+            "target": "courriel",
+            "en": "email"
+          },
+          {
+            "target": "triompher",
+            "en": "be proud"
+          },
+          {
+            "target": "minerai",
+            "en": "ore"
+          },
+          {
+            "target": "rayonnement",
+            "en": "influence"
+          },
+          {
+            "target": "amande",
+            "en": "almond"
+          },
+          {
+            "target": "harmonica",
+            "en": "mouth organ"
+          },
+          {
+            "target": "disquette",
+            "en": "diskette"
+          },
+          {
+            "target": "sourcil",
+            "en": "brow"
+          },
+          {
+            "target": "consommateur",
+            "en": "consumer"
+          },
+          {
+            "target": "accoupler",
+            "en": "couple"
+          },
+          {
+            "target": "hygiénique",
+            "en": "hygenic"
+          },
+          {
+            "target": "inceste",
+            "en": "incest"
+          },
+          {
+            "target": "huître",
+            "en": "oyster"
+          },
+          {
+            "target": "mythique",
+            "en": "mythical"
+          },
+          {
+            "target": "larve",
+            "en": "grub"
+          },
+          {
+            "target": "sous-entendu",
+            "en": "implication"
+          },
+          {
+            "target": "Pays-Bas",
+            "en": "the Netherlands"
+          },
+          {
+            "target": "froisser",
+            "en": "crumble"
+          },
+          {
+            "target": "soupirant",
+            "en": "worshipper"
+          },
+          {
+            "target": "alentour",
+            "en": "roundabout"
+          },
+          {
+            "target": "coccinelle",
+            "en": "ladybug"
+          },
+          {
+            "target": "babouin",
+            "en": "baboon"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u139",
+        "title": "Common words 3451–3475",
+        "subtitle": "The 3451–3475 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "Finlande",
+            "en": "Finland"
+          },
+          {
+            "target": "fatalité",
+            "en": "fate"
+          },
+          {
+            "target": "côtoyer",
+            "en": "walk alongside"
+          },
+          {
+            "target": "antécédent",
+            "en": "antecedent"
+          },
+          {
+            "target": "autobiographie",
+            "en": "autobiography"
+          },
+          {
+            "target": "Seine",
+            "en": "Sein"
+          },
+          {
+            "target": "entourer",
+            "en": "surround"
+          },
+          {
+            "target": "engendrer",
+            "en": "generate"
+          },
+          {
+            "target": "fendre",
+            "en": "split"
+          },
+          {
+            "target": "luge",
+            "en": "sled"
+          },
+          {
+            "target": "statistique",
+            "en": "statistics"
+          },
+          {
+            "target": "store",
+            "en": "roller-blind"
+          },
+          {
+            "target": "Catalan",
+            "en": "Catalonian"
+          },
+          {
+            "target": "Malaisie",
+            "en": "Malaysia"
+          },
+          {
+            "target": "scrupule",
+            "en": "scruple"
+          },
+          {
+            "target": "saper",
+            "en": "undermine"
+          },
+          {
+            "target": "aveugler",
+            "en": "dazzle"
+          },
+          {
+            "target": "projectile",
+            "en": "bullet"
+          },
+          {
+            "target": "barbarie",
+            "en": "barbarity"
+          },
+          {
+            "target": "quotidiennement",
+            "en": "daily"
+          },
+          {
+            "target": "alchimiste",
+            "en": "alchemist"
+          },
+          {
+            "target": "raccourcir",
+            "en": "shorten"
+          },
+          {
+            "target": "animer",
+            "en": "animate"
+          },
+          {
+            "target": "torrent",
+            "en": "volley"
+          },
+          {
+            "target": "parente",
+            "en": "female relative"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u140",
+        "title": "Common words 3476–3500",
+        "subtitle": "The 3476–3500 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "duvet",
+            "en": "down"
+          },
+          {
+            "target": "bourdon",
+            "en": "bumblebee"
+          },
+          {
+            "target": "éboueur",
+            "en": "garbage man"
+          },
+          {
+            "target": "compas",
+            "en": "pair of compasses"
+          },
+          {
+            "target": "chaussée",
+            "en": "highway"
+          },
+          {
+            "target": "arbitraire",
+            "en": "arbitrary"
+          },
+          {
+            "target": "Roumain",
+            "en": "Romanian"
+          },
+          {
+            "target": "bossu",
+            "en": "hunchback"
+          },
+          {
+            "target": "maudire",
+            "en": "curse"
+          },
+          {
+            "target": "accroître",
+            "en": "increase"
+          },
+          {
+            "target": "étouffant",
+            "en": "oppressive"
+          },
+          {
+            "target": "magnésium",
+            "en": "magnesium"
+          },
+          {
+            "target": "assimiler",
+            "en": "assimilate"
+          },
+          {
+            "target": "hypnotiser",
+            "en": "hypnotize"
+          },
+          {
+            "target": "ponctualité",
+            "en": "punctuality"
+          },
+          {
+            "target": "phosphore",
+            "en": "phosphorus"
+          },
+          {
+            "target": "frivole",
+            "en": "frivolous"
+          },
+          {
+            "target": "Himalaya",
+            "en": "Himalayas"
+          },
+          {
+            "target": "pamplemousse",
+            "en": "grapefruit"
+          },
+          {
+            "target": "Alexandrie",
+            "en": "Alexandria"
+          },
+          {
+            "target": "pertinence",
+            "en": "relevance"
+          },
+          {
+            "target": "hindou",
+            "en": "Hindu"
+          },
+          {
+            "target": "hérésie",
+            "en": "heresy"
+          },
+          {
+            "target": "prospérer",
+            "en": "be succesful"
+          },
+          {
+            "target": "ébriété",
+            "en": "intoxication"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u141",
+        "title": "Common words 3501–3525",
+        "subtitle": "The 3501–3525 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "accouplement",
+            "en": "joining"
+          },
+          {
+            "target": "dériver",
+            "en": "be adrift"
+          },
+          {
+            "target": "hispanique",
+            "en": "Spanish"
+          },
+          {
+            "target": "Genèse",
+            "en": "Genesis"
+          },
+          {
+            "target": "athlétisme",
+            "en": "athletics"
+          },
+          {
+            "target": "anthropologie",
+            "en": "anthropology"
+          },
+          {
+            "target": "gravier",
+            "en": "gravel"
+          },
+          {
+            "target": "tribut",
+            "en": "tribute"
+          },
+          {
+            "target": "guêpe",
+            "en": "wasp"
+          },
+          {
+            "target": "municipalité",
+            "en": "town council"
+          },
+          {
+            "target": "gîte",
+            "en": "shelter"
+          },
+          {
+            "target": "paralyser",
+            "en": "paralyse"
+          },
+          {
+            "target": "anesthésiste",
+            "en": "anaesthetist"
+          },
+          {
+            "target": "Birmanie",
+            "en": "Burma"
+          },
+          {
+            "target": "antéchrist",
+            "en": "Antichrist"
+          },
+          {
+            "target": "aviateur",
+            "en": "aviator"
+          },
+          {
+            "target": "Aristote",
+            "en": "Aristotle"
+          },
+          {
+            "target": "grouiller",
+            "en": "swarm"
+          },
+          {
+            "target": "rigoureux",
+            "en": "stringent"
+          },
+          {
+            "target": "théière",
+            "en": "teapot"
+          },
+          {
+            "target": "Pluton",
+            "en": "Pluto"
+          },
+          {
+            "target": "éventuel",
+            "en": "contingent"
+          },
+          {
+            "target": "charrue",
+            "en": "plough"
+          },
+          {
+            "target": "Vietnamien",
+            "en": "Vietnamese"
+          },
+          {
+            "target": "mensuel",
+            "en": "monthly"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u142",
+        "title": "Common words 3526–3550",
+        "subtitle": "The 3526–3550 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "abusif",
+            "en": "wrong"
+          },
+          {
+            "target": "filou",
+            "en": "rascal"
+          },
+          {
+            "target": "péninsule",
+            "en": "peninsula"
+          },
+          {
+            "target": "microbe",
+            "en": "germ"
+          },
+          {
+            "target": "archange",
+            "en": "archangel"
+          },
+          {
+            "target": "Rhin",
+            "en": "Rhine"
+          },
+          {
+            "target": "septique",
+            "en": "infected"
+          },
+          {
+            "target": "stupéfait",
+            "en": "taken aback"
+          },
+          {
+            "target": "réfuter",
+            "en": "refute"
+          },
+          {
+            "target": "Somalie",
+            "en": "Somalia"
+          },
+          {
+            "target": "altruiste",
+            "en": "altruist"
+          },
+          {
+            "target": "millimètre",
+            "en": "millimetre"
+          },
+          {
+            "target": "archéologie",
+            "en": "archaeology"
+          },
+          {
+            "target": "recensement",
+            "en": "inventory"
+          },
+          {
+            "target": "cartable",
+            "en": "school bag"
+          },
+          {
+            "target": "équiper",
+            "en": "equip"
+          },
+          {
+            "target": "aristocrate",
+            "en": "aristocrat"
+          },
+          {
+            "target": "éternuer",
+            "en": "sneeze"
+          },
+          {
+            "target": "falsifier",
+            "en": "falsify"
+          },
+          {
+            "target": "brouette",
+            "en": "wheelbarrow"
+          },
+          {
+            "target": "cordialement",
+            "en": "regards"
+          },
+          {
+            "target": "myrtille",
+            "en": "blueberry"
+          },
+          {
+            "target": "persévérer",
+            "en": "pursue one's point"
+          },
+          {
+            "target": "chatouiller",
+            "en": "tickle"
+          },
+          {
+            "target": "faisan",
+            "en": "pheasant"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u143",
+        "title": "Common words 3551–3575",
+        "subtitle": "The 3551–3575 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "chômeur",
+            "en": "unemployed man"
+          },
+          {
+            "target": "Yémen",
+            "en": "Yemen"
+          },
+          {
+            "target": "réfectoire",
+            "en": "dining-room"
+          },
+          {
+            "target": "Mongolie",
+            "en": "Mongolia"
+          },
+          {
+            "target": "bureaucrate",
+            "en": "bureaucrat"
+          },
+          {
+            "target": "bai",
+            "en": "sorrel"
+          },
+          {
+            "target": "Hermès",
+            "en": "Hermes"
+          },
+          {
+            "target": "Libye",
+            "en": "Libya"
+          },
+          {
+            "target": "chrome",
+            "en": "chromium"
+          },
+          {
+            "target": "garniture",
+            "en": "side dish"
+          },
+          {
+            "target": "testicule",
+            "en": "testicle"
+          },
+          {
+            "target": "bazooka",
+            "en": "anti-tank gun"
+          },
+          {
+            "target": "gaufre",
+            "en": "waffle"
+          },
+          {
+            "target": "mulet",
+            "en": "mule"
+          },
+          {
+            "target": "tire-bouchon",
+            "en": "corkscrew"
+          },
+          {
+            "target": "myope",
+            "en": "short-sighted"
+          },
+          {
+            "target": "Colombien",
+            "en": "Colombian"
+          },
+          {
+            "target": "asperge",
+            "en": "asparagus"
+          },
+          {
+            "target": "drainer",
+            "en": "drain"
+          },
+          {
+            "target": "alto",
+            "en": "contralto voice"
+          },
+          {
+            "target": "seigle",
+            "en": "rye"
+          },
+          {
+            "target": "vacciner",
+            "en": "vaccinate"
+          },
+          {
+            "target": "brochette",
+            "en": "shish kebab"
+          },
+          {
+            "target": "imparfait",
+            "en": "imperfect"
+          },
+          {
+            "target": "Groenland",
+            "en": "Greenland"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u144",
+        "title": "Common words 3576–3600",
+        "subtitle": "The 3576–3600 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "vertèbre",
+            "en": "vertebra"
+          },
+          {
+            "target": "jaillir",
+            "en": "spurt out"
+          },
+          {
+            "target": "résine",
+            "en": "resin"
+          },
+          {
+            "target": "Alger",
+            "en": "Algiers"
+          },
+          {
+            "target": "absinthe",
+            "en": "absinth"
+          },
+          {
+            "target": "géographique",
+            "en": "geographic"
+          },
+          {
+            "target": "télégraphe",
+            "en": "telegraph"
+          },
+          {
+            "target": "allaiter",
+            "en": "suckle"
+          },
+          {
+            "target": "majuscule",
+            "en": "capital letter"
+          },
+          {
+            "target": "souder",
+            "en": "solder"
+          },
+          {
+            "target": "pavot",
+            "en": "poppy"
+          },
+          {
+            "target": "hippopotame",
+            "en": "hippo"
+          },
+          {
+            "target": "épier",
+            "en": "spy on"
+          },
+          {
+            "target": "Californien",
+            "en": "Californian"
+          },
+          {
+            "target": "menuisier",
+            "en": "carpenter"
+          },
+          {
+            "target": "chevreuil",
+            "en": "roe"
+          },
+          {
+            "target": "carafe",
+            "en": "jug"
+          },
+          {
+            "target": "teinte",
+            "en": "colour"
+          },
+          {
+            "target": "filleul",
+            "en": "godson"
+          },
+          {
+            "target": "abonné",
+            "en": "subscriber"
+          },
+          {
+            "target": "assureur",
+            "en": "insurer"
+          },
+          {
+            "target": "angine",
+            "en": "angina"
+          },
+          {
+            "target": "illuminer",
+            "en": "enlighten"
+          },
+          {
+            "target": "inédit",
+            "en": "original"
+          },
+          {
+            "target": "accréditation",
+            "en": "accreditation"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u145",
+        "title": "Common words 3601–3625",
+        "subtitle": "The 3601–3625 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "Caïn",
+            "en": "Cain"
+          },
+          {
+            "target": "piéton",
+            "en": "pedestrian"
+          },
+          {
+            "target": "mûrir",
+            "en": "ripen"
+          },
+          {
+            "target": "ébullition",
+            "en": "boiling point"
+          },
+          {
+            "target": "Chypre",
+            "en": "Cyprus"
+          },
+          {
+            "target": "aubergiste",
+            "en": "host"
+          },
+          {
+            "target": "Australienne",
+            "en": "Australian woman"
+          },
+          {
+            "target": "arrondir",
+            "en": "round off"
+          },
+          {
+            "target": "réprimer",
+            "en": "hold back"
+          },
+          {
+            "target": "côtelette",
+            "en": "cutlet"
+          },
+          {
+            "target": "Argentin",
+            "en": "Argentine"
+          },
+          {
+            "target": "comploter",
+            "en": "set a trap"
+          },
+          {
+            "target": "revendication",
+            "en": "claim"
+          },
+          {
+            "target": "néon",
+            "en": "neon"
+          },
+          {
+            "target": "solidaire",
+            "en": "standing together"
+          },
+          {
+            "target": "morne",
+            "en": "gloomy"
+          },
+          {
+            "target": "piaf",
+            "en": "little bird"
+          },
+          {
+            "target": "dictée",
+            "en": "dictation"
+          },
+          {
+            "target": "soustraire",
+            "en": "subtract"
+          },
+          {
+            "target": "lampadaire",
+            "en": "lamp-post"
+          },
+          {
+            "target": "baïonnette",
+            "en": "bayonet"
+          },
+          {
+            "target": "pompette",
+            "en": "tipsy"
+          },
+          {
+            "target": "louve",
+            "en": "she-wolf"
+          },
+          {
+            "target": "Séville",
+            "en": "Seville"
+          },
+          {
+            "target": "guillemets",
+            "en": "quotation marks"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u146",
+        "title": "Common words 3626–3650",
+        "subtitle": "The 3626–3650 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "coquillage",
+            "en": "shellfish"
+          },
+          {
+            "target": "suie",
+            "en": "soot"
+          },
+          {
+            "target": "négociant",
+            "en": "businessman"
+          },
+          {
+            "target": "refléter",
+            "en": "reflect"
+          },
+          {
+            "target": "potiron",
+            "en": "pumpkin"
+          },
+          {
+            "target": "complément",
+            "en": "supplement"
+          },
+          {
+            "target": "cigogne",
+            "en": "stork"
+          },
+          {
+            "target": "géologue",
+            "en": "geologist"
+          },
+          {
+            "target": "teindre",
+            "en": "dye"
+          },
+          {
+            "target": "vicaire",
+            "en": "vicar"
+          },
+          {
+            "target": "sauge",
+            "en": "sage"
+          },
+          {
+            "target": "importer",
+            "en": "import"
+          },
+          {
+            "target": "iode",
+            "en": "iodine"
+          },
+          {
+            "target": "astronome",
+            "en": "astronomer"
+          },
+          {
+            "target": "astrologie",
+            "en": "astrology"
+          },
+          {
+            "target": "Jordanie",
+            "en": "Jordan"
+          },
+          {
+            "target": "sauterelle",
+            "en": "grasshopper"
+          },
+          {
+            "target": "ronfler",
+            "en": "snore"
+          },
+          {
+            "target": "textile",
+            "en": "fabric"
+          },
+          {
+            "target": "acrobate",
+            "en": "acrobat"
+          },
+          {
+            "target": "destinataire",
+            "en": "recipient"
+          },
+          {
+            "target": "saule",
+            "en": "willow"
+          },
+          {
+            "target": "éloquent",
+            "en": "eloquent"
+          },
+          {
+            "target": "canalisation",
+            "en": "pipe"
+          },
+          {
+            "target": "zapper",
+            "en": "zap"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u147",
+        "title": "Common words 3651–3675",
+        "subtitle": "The 3651–3675 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "persil",
+            "en": "parsley"
+          },
+          {
+            "target": "cerisier",
+            "en": "cherry-tree"
+          },
+          {
+            "target": "Guinée",
+            "en": "Guinea"
+          },
+          {
+            "target": "corniche",
+            "en": "coast road"
+          },
+          {
+            "target": "râteau",
+            "en": "rake"
+          },
+          {
+            "target": "embellir",
+            "en": "embellish"
+          },
+          {
+            "target": "hyène",
+            "en": "hyaena"
+          },
+          {
+            "target": "accompagnement",
+            "en": "escort"
+          },
+          {
+            "target": "antibiotique",
+            "en": "antibiotic"
+          },
+          {
+            "target": "Albanie",
+            "en": "Albania"
+          },
+          {
+            "target": "Croatie",
+            "en": "Croatia"
+          },
+          {
+            "target": "Sparte",
+            "en": "Sparta"
+          },
+          {
+            "target": "banderole",
+            "en": "wrapper"
+          },
+          {
+            "target": "asphalte",
+            "en": "asphalt"
+          },
+          {
+            "target": "Manille",
+            "en": "Manila"
+          },
+          {
+            "target": "Valence",
+            "en": "Valencia"
+          },
+          {
+            "target": "acquittement",
+            "en": "acquittal"
+          },
+          {
+            "target": "chaux",
+            "en": "lime"
+          },
+          {
+            "target": "batifoler",
+            "en": "frolic"
+          },
+          {
+            "target": "Parisien",
+            "en": "Parisian"
+          },
+          {
+            "target": "maillet",
+            "en": "mallet"
+          },
+          {
+            "target": "articulation",
+            "en": "joint"
+          },
+          {
+            "target": "étain",
+            "en": "tin"
+          },
+          {
+            "target": "basilic",
+            "en": "basil"
+          },
+          {
+            "target": "porte-clés",
+            "en": "key ring"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u148",
+        "title": "Common words 3676–3700",
+        "subtitle": "The 3676–3700 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "prostituer",
+            "en": "prostitute"
+          },
+          {
+            "target": "auditeur",
+            "en": "listener"
+          },
+          {
+            "target": "Autrichien",
+            "en": "Austrian"
+          },
+          {
+            "target": "Agathe",
+            "en": "Agatha"
+          },
+          {
+            "target": "abattage",
+            "en": "courage"
+          },
+          {
+            "target": "ablation",
+            "en": "removal"
+          },
+          {
+            "target": "Bengale",
+            "en": "Bengal"
+          },
+          {
+            "target": "Ukrainien",
+            "en": "Ukrainian"
+          },
+          {
+            "target": "Serbie",
+            "en": "Serbia"
+          },
+          {
+            "target": "libraire",
+            "en": "bookseller"
+          },
+          {
+            "target": "courageusement",
+            "en": "bravely"
+          },
+          {
+            "target": "Irakien",
+            "en": "Iraqi"
+          },
+          {
+            "target": "parader",
+            "en": "parade"
+          },
+          {
+            "target": "avarice",
+            "en": "stinginess"
+          },
+          {
+            "target": "fervent",
+            "en": "full of zeal"
+          },
+          {
+            "target": "charcuterie",
+            "en": "pork butchers shop"
+          },
+          {
+            "target": "géologie",
+            "en": "geology"
+          },
+          {
+            "target": "apôtre",
+            "en": "apostle"
+          },
+          {
+            "target": "anthropologue",
+            "en": "anthropologist"
+          },
+          {
+            "target": "agréablement",
+            "en": "comfortably"
+          },
+          {
+            "target": "gnome",
+            "en": "goblin"
+          },
+          {
+            "target": "lest",
+            "en": "ballast"
+          },
+          {
+            "target": "micro-onde",
+            "en": "microwave"
+          },
+          {
+            "target": "Arménien",
+            "en": "Armenian"
+          },
+          {
+            "target": "inerte",
+            "en": "inert"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u149",
+        "title": "Common words 3701–3725",
+        "subtitle": "The 3701–3725 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "avantageux",
+            "en": "advantageous"
+          },
+          {
+            "target": "présider",
+            "en": "preside"
+          },
+          {
+            "target": "belette",
+            "en": "weasel"
+          },
+          {
+            "target": "artilleur",
+            "en": "gunner"
+          },
+          {
+            "target": "Capricorne",
+            "en": "Capricorn"
+          },
+          {
+            "target": "abricot",
+            "en": "apricot"
+          },
+          {
+            "target": "tique",
+            "en": "tick"
+          },
+          {
+            "target": "trotter",
+            "en": "trot"
+          },
+          {
+            "target": "bastille",
+            "en": "fortress"
+          },
+          {
+            "target": "soixante-dix",
+            "en": "seventy"
+          },
+          {
+            "target": "abordable",
+            "en": "reasonable"
+          },
+          {
+            "target": "aristocratie",
+            "en": "aristocracy"
+          },
+          {
+            "target": "bagarreur",
+            "en": "truculent"
+          },
+          {
+            "target": "aberration",
+            "en": "madness"
+          },
+          {
+            "target": "nuisible",
+            "en": "harmful"
+          },
+          {
+            "target": "polémique",
+            "en": "controversy"
+          },
+          {
+            "target": "enrouler",
+            "en": "roll up"
+          },
+          {
+            "target": "Tchécoslovaquie",
+            "en": "Czechoslovakia"
+          },
+          {
+            "target": "mousquet",
+            "en": "musket"
+          },
+          {
+            "target": "apesanteur",
+            "en": "weightlessness"
+          },
+          {
+            "target": "autisme",
+            "en": "autism"
+          },
+          {
+            "target": "Orphée",
+            "en": "Orpheus"
+          },
+          {
+            "target": "pesanteur",
+            "en": "gravity"
+          },
+          {
+            "target": "tutoyer",
+            "en": "thee and thou"
+          },
+          {
+            "target": "courroie",
+            "en": "strap"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u150",
+        "title": "Common words 3726–3750",
+        "subtitle": "The 3726–3750 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "Minerve",
+            "en": "Minerva"
+          },
+          {
+            "target": "certifier",
+            "en": "assure"
+          },
+          {
+            "target": "panorama",
+            "en": "view"
+          },
+          {
+            "target": "palme",
+            "en": "palm frond"
+          },
+          {
+            "target": "pantoufle",
+            "en": "slipper"
+          },
+          {
+            "target": "illustrer",
+            "en": "illustrate"
+          },
+          {
+            "target": "libellule",
+            "en": "dragonfly"
+          },
+          {
+            "target": "granit",
+            "en": "granite"
+          },
+          {
+            "target": "contracter",
+            "en": "make a contract"
+          },
+          {
+            "target": "froideur",
+            "en": "coldness"
+          },
+          {
+            "target": "préjugé",
+            "en": "prejudice"
+          },
+          {
+            "target": "mammifère",
+            "en": "mammal"
+          },
+          {
+            "target": "entonnoir",
+            "en": "funnel"
+          },
+          {
+            "target": "exactitude",
+            "en": "precision"
+          },
+          {
+            "target": "Yougoslavie",
+            "en": "Yugoslavia"
+          },
+          {
+            "target": "rapt",
+            "en": "kidnapping"
+          },
+          {
+            "target": "pommier",
+            "en": "apple-tree"
+          },
+          {
+            "target": "Cassandre",
+            "en": "Cassandra"
+          },
+          {
+            "target": "Népal",
+            "en": "Nepal"
+          },
+          {
+            "target": "apprivoiser",
+            "en": "tame"
+          },
+          {
+            "target": "perçant",
+            "en": "snappy"
+          },
+          {
+            "target": "sauteur",
+            "en": "jumping competitor"
+          },
+          {
+            "target": "douzième",
+            "en": "twelfth"
+          },
+          {
+            "target": "alouette",
+            "en": "lark"
+          },
+          {
+            "target": "frégate",
+            "en": "frigate"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u151",
+        "title": "Common words 3751–3775",
+        "subtitle": "The 3751–3775 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "volage",
+            "en": "fickle"
+          },
+          {
+            "target": "albatros",
+            "en": "albatross"
+          },
+          {
+            "target": "Cornouailles",
+            "en": "Cornwall"
+          },
+          {
+            "target": "Ecossais",
+            "en": "Scot"
+          },
+          {
+            "target": "abolir",
+            "en": "abolish"
+          },
+          {
+            "target": "admiratrice",
+            "en": "female admirer"
+          },
+          {
+            "target": "silex",
+            "en": "flint"
+          },
+          {
+            "target": "Bethléem",
+            "en": "Bethlehem"
+          },
+          {
+            "target": "ruminer",
+            "en": "chew the cud"
+          },
+          {
+            "target": "aubergine",
+            "en": "egg-plant"
+          },
+          {
+            "target": "Libanais",
+            "en": "Lebanese"
+          },
+          {
+            "target": "barde",
+            "en": "bard"
+          },
+          {
+            "target": "cil",
+            "en": "eyelash"
+          },
+          {
+            "target": "prononciation",
+            "en": "pronunciation"
+          },
+          {
+            "target": "Palestinien",
+            "en": "Palestine"
+          },
+          {
+            "target": "Bulgare",
+            "en": "Bulgarian"
+          },
+          {
+            "target": "Tanger",
+            "en": "Tangier"
+          },
+          {
+            "target": "mamelon",
+            "en": "nipple"
+          },
+          {
+            "target": "aiguiser",
+            "en": "sharpen"
+          },
+          {
+            "target": "arrière-grand-mère",
+            "en": "great-grandmother"
+          },
+          {
+            "target": "Sicilien",
+            "en": "Sicilian"
+          },
+          {
+            "target": "baser",
+            "en": "base"
+          },
+          {
+            "target": "ammoniaque",
+            "en": "ammonia"
+          },
+          {
+            "target": "inaugurer",
+            "en": "inaugurate"
+          },
+          {
+            "target": "asthmatique",
+            "en": "asthmatic"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u152",
+        "title": "Common words 3776–3800",
+        "subtitle": "The 3776–3800 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "répartir",
+            "en": "distribute"
+          },
+          {
+            "target": "greffer",
+            "en": "transplant"
+          },
+          {
+            "target": "ambigu",
+            "en": "ambiguous"
+          },
+          {
+            "target": "rassis",
+            "en": "stale"
+          },
+          {
+            "target": "déléguer",
+            "en": "delegate"
+          },
+          {
+            "target": "arithmétique",
+            "en": "arithmetic"
+          },
+          {
+            "target": "bifteck",
+            "en": "steak"
+          },
+          {
+            "target": "quartz",
+            "en": "rock-crystal"
+          },
+          {
+            "target": "auditoire",
+            "en": "audience"
+          },
+          {
+            "target": "débardeur",
+            "en": "tank top"
+          },
+          {
+            "target": "adonis",
+            "en": "pheasant's eye"
+          },
+          {
+            "target": "aisselle",
+            "en": "armpit"
+          },
+          {
+            "target": "Marocain",
+            "en": "Moroccan"
+          },
+          {
+            "target": "Prusse",
+            "en": "Prussia"
+          },
+          {
+            "target": "afflux",
+            "en": "rush"
+          },
+          {
+            "target": "cornemuse",
+            "en": "bagpipe"
+          },
+          {
+            "target": "aveuglement",
+            "en": "blindly"
+          },
+          {
+            "target": "pélican",
+            "en": "pelican"
+          },
+          {
+            "target": "fantasque",
+            "en": "whimsical"
+          },
+          {
+            "target": "angulaire",
+            "en": "angular"
+          },
+          {
+            "target": "hérisson",
+            "en": "hedgehog"
+          },
+          {
+            "target": "Transylvanie",
+            "en": "Transylvania"
+          },
+          {
+            "target": "accidenté",
+            "en": "bumpy"
+          },
+          {
+            "target": "Saint-Pétersbourg",
+            "en": "Saint Petersburg"
+          },
+          {
+            "target": "Castille",
+            "en": "Castile"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u153",
+        "title": "Common words 3801–3825",
+        "subtitle": "The 3801–3825 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "bouddhisme",
+            "en": "Buddhism"
+          },
+          {
+            "target": "Aryen",
+            "en": "Aryan"
+          },
+          {
+            "target": "Anvers",
+            "en": "Antwerp"
+          },
+          {
+            "target": "dorloter",
+            "en": "pet"
+          },
+          {
+            "target": "végétalien",
+            "en": "vegan"
+          },
+          {
+            "target": "chaudement",
+            "en": "warmly"
+          },
+          {
+            "target": "incalculable",
+            "en": "countless"
+          },
+          {
+            "target": "altruisme",
+            "en": "altruism"
+          },
+          {
+            "target": "varier",
+            "en": "vary"
+          },
+          {
+            "target": "concordance",
+            "en": "responsibility"
+          },
+          {
+            "target": "rhubarbe",
+            "en": "rhubarb"
+          },
+          {
+            "target": "psaume",
+            "en": "psalm"
+          },
+          {
+            "target": "braver",
+            "en": "defy"
+          },
+          {
+            "target": "proclamer",
+            "en": "issue"
+          },
+          {
+            "target": "Frise",
+            "en": "Friesland"
+          },
+          {
+            "target": "verrue",
+            "en": "wart"
+          },
+          {
+            "target": "Croate",
+            "en": "Croat"
+          },
+          {
+            "target": "minéral",
+            "en": "mineral"
+          },
+          {
+            "target": "auréole",
+            "en": "halo"
+          },
+          {
+            "target": "babiole",
+            "en": "trifle"
+          },
+          {
+            "target": "treizième",
+            "en": "thirteenth"
+          },
+          {
+            "target": "Londonien",
+            "en": "Londoner"
+          },
+          {
+            "target": "affliction",
+            "en": "sadness"
+          },
+          {
+            "target": "acajou",
+            "en": "mahogany"
+          },
+          {
+            "target": "affluent",
+            "en": "tributary"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u154",
+        "title": "Common words 3826–3850",
+        "subtitle": "The 3826–3850 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "osseux",
+            "en": "bony"
+          },
+          {
+            "target": "Luxembourg",
+            "en": "Luxemburg"
+          },
+          {
+            "target": "astral",
+            "en": "of a star"
+          },
+          {
+            "target": "almanach",
+            "en": "almanac"
+          },
+          {
+            "target": "Bavière",
+            "en": "Bavaria"
+          },
+          {
+            "target": "surdoué",
+            "en": "gifted"
+          },
+          {
+            "target": "Douvres",
+            "en": "Dover"
+          },
+          {
+            "target": "Barbade",
+            "en": "Barbados"
+          },
+          {
+            "target": "fourmilière",
+            "en": "ant hill"
+          },
+          {
+            "target": "astronomique",
+            "en": "astronomical"
+          },
+          {
+            "target": "Normand",
+            "en": "Norman"
+          },
+          {
+            "target": "intendance",
+            "en": "stewardship"
+          },
+          {
+            "target": "adjectif",
+            "en": "adjective"
+          },
+          {
+            "target": "rythmique",
+            "en": "rhythmic"
+          },
+          {
+            "target": "manœuvrer",
+            "en": "manoeuvre"
+          },
+          {
+            "target": "ciseau",
+            "en": "chisel"
+          },
+          {
+            "target": "antisémite",
+            "en": "anti-Semite"
+          },
+          {
+            "target": "antigel",
+            "en": "antifreeze"
+          },
+          {
+            "target": "diète",
+            "en": "diet"
+          },
+          {
+            "target": "galette",
+            "en": "flat cake"
+          },
+          {
+            "target": "nymphe",
+            "en": "nymph"
+          },
+          {
+            "target": "calmar",
+            "en": "squid"
+          },
+          {
+            "target": "terrer",
+            "en": "earth up"
+          },
+          {
+            "target": "soyeux",
+            "en": "of silk"
+          },
+          {
+            "target": "betterave",
+            "en": "beet"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u155",
+        "title": "Common words 3851–3875",
+        "subtitle": "The 3851–3875 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "Pâris",
+            "en": "Paris"
+          },
+          {
+            "target": "hardi",
+            "en": "daring"
+          },
+          {
+            "target": "Pakistanaise",
+            "en": "Pakistani woman"
+          },
+          {
+            "target": "cintre",
+            "en": "clothes hanger"
+          },
+          {
+            "target": "Hongroise",
+            "en": "Hungarian woman"
+          },
+          {
+            "target": "ravage",
+            "en": "destruction"
+          },
+          {
+            "target": "voiler",
+            "en": "veil"
+          },
+          {
+            "target": "Mandchourie",
+            "en": "Manchuria"
+          },
+          {
+            "target": "ombrelle",
+            "en": "parasol"
+          },
+          {
+            "target": "barricader",
+            "en": "barricade"
+          },
+          {
+            "target": "artichaut",
+            "en": "artichoke"
+          },
+          {
+            "target": "reformer",
+            "en": "reform"
+          },
+          {
+            "target": "archéologique",
+            "en": "archaeological"
+          },
+          {
+            "target": "stupidement",
+            "en": "stupidly"
+          },
+          {
+            "target": "Syrien",
+            "en": "Syrian"
+          },
+          {
+            "target": "atteler",
+            "en": "harness"
+          },
+          {
+            "target": "Crète",
+            "en": "Crete"
+          },
+          {
+            "target": "couver",
+            "en": "sit"
+          },
+          {
+            "target": "Edimbourg",
+            "en": "Edinburgh"
+          },
+          {
+            "target": "cèdre",
+            "en": "cedar"
+          },
+          {
+            "target": "Homère",
+            "en": "Homer"
+          },
+          {
+            "target": "horloger",
+            "en": "watchmaker"
+          },
+          {
+            "target": "onzième",
+            "en": "eleventh"
+          },
+          {
+            "target": "aérosol",
+            "en": "aerosol"
+          },
+          {
+            "target": "poirier",
+            "en": "pear-tree"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u156",
+        "title": "Common words 3876–3900",
+        "subtitle": "The 3876–3900 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "astre",
+            "en": "heavenly body"
+          },
+          {
+            "target": "géologique",
+            "en": "geological"
+          },
+          {
+            "target": "broder",
+            "en": "embroider"
+          },
+          {
+            "target": "consentir",
+            "en": "agree"
+          },
+          {
+            "target": "vraisemblable",
+            "en": "likely"
+          },
+          {
+            "target": "Cicéron",
+            "en": "Cicero"
+          },
+          {
+            "target": "Slave",
+            "en": "Slav"
+          },
+          {
+            "target": "acrobaties",
+            "en": "acrobatics"
+          },
+          {
+            "target": "Tibère",
+            "en": "Tiberius"
+          },
+          {
+            "target": "figue",
+            "en": "fig"
+          },
+          {
+            "target": "affranchi",
+            "en": "stamped"
+          },
+          {
+            "target": "astrologue",
+            "en": "astrologer"
+          },
+          {
+            "target": "poireau",
+            "en": "leek"
+          },
+          {
+            "target": "électron",
+            "en": "electron"
+          },
+          {
+            "target": "antilope",
+            "en": "antelope"
+          },
+          {
+            "target": "Malte",
+            "en": "Malta"
+          },
+          {
+            "target": "paupière",
+            "en": "eyelid"
+          },
+          {
+            "target": "Hippocrate",
+            "en": "Hippocrates"
+          },
+          {
+            "target": "frissonner",
+            "en": "shiver"
+          },
+          {
+            "target": "hameau",
+            "en": "hamlet"
+          },
+          {
+            "target": "aliéné",
+            "en": "lunatic"
+          },
+          {
+            "target": "meunier",
+            "en": "miller"
+          },
+          {
+            "target": "galoper",
+            "en": "gallop"
+          },
+          {
+            "target": "mandarine",
+            "en": "tangerine"
+          },
+          {
+            "target": "algue",
+            "en": "seaweed"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u157",
+        "title": "Common words 3901–3925",
+        "subtitle": "The 3901–3925 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "aérodynamique",
+            "en": "aerodynamic"
+          },
+          {
+            "target": "clamer",
+            "en": "yell"
+          },
+          {
+            "target": "Islandais",
+            "en": "Icelander"
+          },
+          {
+            "target": "Norvégienne",
+            "en": "Norwegian woman"
+          },
+          {
+            "target": "oblique",
+            "en": "slanting"
+          },
+          {
+            "target": "finlandais",
+            "en": "Finnish"
+          },
+          {
+            "target": "aztèque",
+            "en": "Aztec"
+          },
+          {
+            "target": "bâtonnet",
+            "en": "little stick"
+          },
+          {
+            "target": "agripper",
+            "en": "grab"
+          },
+          {
+            "target": "soupirer",
+            "en": "long for"
+          },
+          {
+            "target": "Extrême-Orient",
+            "en": "Far East"
+          },
+          {
+            "target": "berce",
+            "en": "cow parsnip"
+          },
+          {
+            "target": "aviron",
+            "en": "oar"
+          },
+          {
+            "target": "ornement",
+            "en": "robes of office"
+          },
+          {
+            "target": "Lierre",
+            "en": "Lyra"
+          },
+          {
+            "target": "grincer",
+            "en": "creak"
+          },
+          {
+            "target": "concis",
+            "en": "concise"
+          },
+          {
+            "target": "acétone",
+            "en": "acetone"
+          },
+          {
+            "target": "perdrix",
+            "en": "partridge"
+          },
+          {
+            "target": "laurier",
+            "en": "laurel"
+          },
+          {
+            "target": "rameau",
+            "en": "twig"
+          },
+          {
+            "target": "pupitre",
+            "en": "school desk"
+          },
+          {
+            "target": "affranchir",
+            "en": "put on stamps"
+          },
+          {
+            "target": "omoplate",
+            "en": "shoulder blade"
+          },
+          {
+            "target": "abondamment",
+            "en": "in detail"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u158",
+        "title": "Common words 3926–3950",
+        "subtitle": "The 3926–3950 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "affinité",
+            "en": "affinity"
+          },
+          {
+            "target": "apocalyptique",
+            "en": "apocalyptic"
+          },
+          {
+            "target": "rauque",
+            "en": "hoarse"
+          },
+          {
+            "target": "vingtième",
+            "en": "twentieth"
+          },
+          {
+            "target": "Zélande",
+            "en": "Zealand"
+          },
+          {
+            "target": "impérialisme",
+            "en": "imperialism"
+          },
+          {
+            "target": "obtus",
+            "en": "dull"
+          },
+          {
+            "target": "advenir",
+            "en": "take place"
+          },
+          {
+            "target": "taie",
+            "en": "pillowcase"
+          },
+          {
+            "target": "Sagittaire",
+            "en": "Sagittarius"
+          },
+          {
+            "target": "concerner",
+            "en": "concern"
+          },
+          {
+            "target": "nageoire",
+            "en": "fin"
+          },
+          {
+            "target": "Macédoine",
+            "en": "Macedonia"
+          },
+          {
+            "target": "aplati",
+            "en": "flat"
+          },
+          {
+            "target": "Némésis",
+            "en": "Nemesis"
+          },
+          {
+            "target": "anémique",
+            "en": "anaemic"
+          },
+          {
+            "target": "rapper",
+            "en": "rap"
+          },
+          {
+            "target": "pinson",
+            "en": "chaffinch"
+          },
+          {
+            "target": "Ethiopie",
+            "en": "Ethiopia"
+          },
+          {
+            "target": "Ukrainienne",
+            "en": "Ukrainian woman"
+          },
+          {
+            "target": "Portugaise",
+            "en": "Portuguese woman"
+          },
+          {
+            "target": "dénonciation",
+            "en": "accusation"
+          },
+          {
+            "target": "harmonieux",
+            "en": "harmonious"
+          },
+          {
+            "target": "candide",
+            "en": "guileless"
+          },
+          {
+            "target": "pétale",
+            "en": "petal"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u159",
+        "title": "Common words 3951–3975",
+        "subtitle": "The 3951–3975 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "liège",
+            "en": "cork"
+          },
+          {
+            "target": "Dunkerque",
+            "en": "Dunkirk"
+          },
+          {
+            "target": "parenthèse",
+            "en": "brace"
+          },
+          {
+            "target": "laiton",
+            "en": "brass"
+          },
+          {
+            "target": "Jéricho",
+            "en": "Jericho"
+          },
+          {
+            "target": "commutateur",
+            "en": "commutator"
+          },
+          {
+            "target": "Gange",
+            "en": "Ganges"
+          },
+          {
+            "target": "aconit",
+            "en": "aconite"
+          },
+          {
+            "target": "actionner",
+            "en": "drive"
+          },
+          {
+            "target": "délabré",
+            "en": "decrepit"
+          },
+          {
+            "target": "Tanzanie",
+            "en": "Tanzania"
+          },
+          {
+            "target": "luth",
+            "en": "lute"
+          },
+          {
+            "target": "Afghane",
+            "en": "Afghan woman"
+          },
+          {
+            "target": "brushing",
+            "en": "blow dry"
+          },
+          {
+            "target": "Tibétain",
+            "en": "Tibetan"
+          },
+          {
+            "target": "subordonné",
+            "en": "dependent"
+          },
+          {
+            "target": "Flamand",
+            "en": "Flemming"
+          },
+          {
+            "target": "censurer",
+            "en": "censor"
+          },
+          {
+            "target": "pygmée",
+            "en": "pigmy"
+          },
+          {
+            "target": "abolition",
+            "en": "abrogation"
+          },
+          {
+            "target": "chou-fleur",
+            "en": "cauliflower"
+          },
+          {
+            "target": "lagune",
+            "en": "lagoon"
+          },
+          {
+            "target": "antiseptique",
+            "en": "antiseptic"
+          },
+          {
+            "target": "Crimée",
+            "en": "Crimea"
+          },
+          {
+            "target": "consigner",
+            "en": "put in detention"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u160",
+        "title": "Common words 3976–4000",
+        "subtitle": "The 3976–4000 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "sautiller",
+            "en": "hop"
+          },
+          {
+            "target": "accusateur",
+            "en": "accuser"
+          },
+          {
+            "target": "Zoulou",
+            "en": "Zulu"
+          },
+          {
+            "target": "clameur",
+            "en": "scream"
+          },
+          {
+            "target": "lucarne",
+            "en": "skylight"
+          },
+          {
+            "target": "bouleversement",
+            "en": "disruption"
+          },
+          {
+            "target": "Philippin",
+            "en": "Filipino"
+          },
+          {
+            "target": "antichambre",
+            "en": "waiting room"
+          },
+          {
+            "target": "emission",
+            "en": "broadcast"
+          },
+          {
+            "target": "Nankin",
+            "en": "Nanking"
+          },
+          {
+            "target": "alpiniste",
+            "en": "mountain climber"
+          },
+          {
+            "target": "aqueduc",
+            "en": "aqueduct"
+          },
+          {
+            "target": "baryton",
+            "en": "baritone"
+          },
+          {
+            "target": "basilique",
+            "en": "basilica"
+          },
+          {
+            "target": "effleurer",
+            "en": "touch lightly"
+          },
+          {
+            "target": "Josué",
+            "en": "Joshua"
+          },
+          {
+            "target": "acuité",
+            "en": "sharpness"
+          },
+          {
+            "target": "oranger",
+            "en": "orange-tree"
+          },
+          {
+            "target": "Verseau",
+            "en": "Aquarius"
+          },
+          {
+            "target": "vivacité",
+            "en": "liveliness"
+          },
+          {
+            "target": "roter",
+            "en": "burp"
+          },
+          {
+            "target": "archiduc",
+            "en": "archduke"
+          },
+          {
+            "target": "salutation",
+            "en": "greeting"
+          },
+          {
+            "target": "anagramme",
+            "en": "anagram"
+          },
+          {
+            "target": "volupté",
+            "en": "sexual pleasure"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u161",
+        "title": "Common words 4001–4025",
+        "subtitle": "The 4001–4025 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "Kurde",
+            "en": "Kurd"
+          },
+          {
+            "target": "bardot",
+            "en": "hinny"
+          },
+          {
+            "target": "Scandinave",
+            "en": "Scandinavian woman"
+          },
+          {
+            "target": "charpente",
+            "en": "framework"
+          },
+          {
+            "target": "courber",
+            "en": "bend"
+          },
+          {
+            "target": "Yukon",
+            "en": "Yukon River"
+          },
+          {
+            "target": "tutorat",
+            "en": "pastorial care"
+          },
+          {
+            "target": "rosier",
+            "en": "rosebush"
+          },
+          {
+            "target": "feuilleter",
+            "en": "leaf through"
+          },
+          {
+            "target": "Gédéon",
+            "en": "Gideon"
+          },
+          {
+            "target": "pulpe",
+            "en": "pulp"
+          },
+          {
+            "target": "apathie",
+            "en": "apathy"
+          },
+          {
+            "target": "moignon",
+            "en": "stump"
+          },
+          {
+            "target": "simulacre",
+            "en": "mockery"
+          },
+          {
+            "target": "Cracovie",
+            "en": "Cracow"
+          },
+          {
+            "target": "xérès",
+            "en": "sherry"
+          },
+          {
+            "target": "mangeable",
+            "en": "edible"
+          },
+          {
+            "target": "grillon",
+            "en": "cricket"
+          },
+          {
+            "target": "cuillerée",
+            "en": "spoonfull"
+          },
+          {
+            "target": "chaperonner",
+            "en": "squire"
+          },
+          {
+            "target": "patauger",
+            "en": "wade"
+          },
+          {
+            "target": "jarretière",
+            "en": "garter"
+          },
+          {
+            "target": "purin",
+            "en": "liquid manure"
+          },
+          {
+            "target": "ventiler",
+            "en": "ventilate"
+          },
+          {
+            "target": "apothéose",
+            "en": "apotheosis"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u162",
+        "title": "Common words 4026–4050",
+        "subtitle": "The 4026–4050 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "loir",
+            "en": "dormouse"
+          },
+          {
+            "target": "baromètre",
+            "en": "barometer"
+          },
+          {
+            "target": "différer",
+            "en": "be different"
+          },
+          {
+            "target": "Philippine",
+            "en": "Philippine woman"
+          },
+          {
+            "target": "analphabète",
+            "en": "illiterate"
+          },
+          {
+            "target": "rosser",
+            "en": "thresh"
+          },
+          {
+            "target": "mite",
+            "en": "moth"
+          },
+          {
+            "target": "Cerbère",
+            "en": "Cerberus"
+          },
+          {
+            "target": "ultérieurement",
+            "en": "later"
+          },
+          {
+            "target": "verrat",
+            "en": "boar"
+          },
+          {
+            "target": "harmonique",
+            "en": "overtone"
+          },
+          {
+            "target": "hermine",
+            "en": "ermin"
+          },
+          {
+            "target": "Bohémien",
+            "en": "Bohemian"
+          },
+          {
+            "target": "rond-point",
+            "en": "traffic circle"
+          },
+          {
+            "target": "conciliant",
+            "en": "manageable"
+          },
+          {
+            "target": "triangulaire",
+            "en": "triangular"
+          },
+          {
+            "target": "Sicilienne",
+            "en": "Sicilian woman"
+          },
+          {
+            "target": "Damoclès",
+            "en": "Damocles"
+          },
+          {
+            "target": "givre",
+            "en": "frost"
+          },
+          {
+            "target": "autodidacte",
+            "en": "self-taught man"
+          },
+          {
+            "target": "bouleau",
+            "en": "birch"
+          },
+          {
+            "target": "phonographe",
+            "en": "cylinder phonograph"
+          },
+          {
+            "target": "alcôve",
+            "en": "recess"
+          },
+          {
+            "target": "Archimède",
+            "en": "Archimedes"
+          },
+          {
+            "target": "antisocial",
+            "en": "unsocial"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u163",
+        "title": "Common words 4051–4075",
+        "subtitle": "The 4051–4075 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "ricaner",
+            "en": "sneer"
+          },
+          {
+            "target": "Terre-Neuve",
+            "en": "Newfoundland"
+          },
+          {
+            "target": "assiduité",
+            "en": "diligence"
+          },
+          {
+            "target": "ambroisie",
+            "en": "ambrosia"
+          },
+          {
+            "target": "Iranienne",
+            "en": "Iranian woman"
+          },
+          {
+            "target": "acidité",
+            "en": "acidity"
+          },
+          {
+            "target": "camionette",
+            "en": "van"
+          },
+          {
+            "target": "archipel",
+            "en": "archipelago"
+          },
+          {
+            "target": "obscurcir",
+            "en": "obscure"
+          },
+          {
+            "target": "hausser",
+            "en": "inflate"
+          },
+          {
+            "target": "Algérien",
+            "en": "Algerian"
+          },
+          {
+            "target": "Indochine",
+            "en": "Indo-China"
+          },
+          {
+            "target": "glousser",
+            "en": "chuckle"
+          },
+          {
+            "target": "acclamer",
+            "en": "applaud"
+          },
+          {
+            "target": "Saint-Sylvestre",
+            "en": "New Year's Eve"
+          },
+          {
+            "target": "pitance",
+            "en": "fare"
+          },
+          {
+            "target": "protagoniste",
+            "en": "protagonist"
+          },
+          {
+            "target": "râpe",
+            "en": "grater"
+          },
+          {
+            "target": "rectangle",
+            "en": "square"
+          },
+          {
+            "target": "dénudé",
+            "en": "naked"
+          },
+          {
+            "target": "glorifier",
+            "en": "praise"
+          },
+          {
+            "target": "sillon",
+            "en": "slot"
+          },
+          {
+            "target": "Majorque",
+            "en": "Majorca"
+          },
+          {
+            "target": "faucille",
+            "en": "sickle"
+          },
+          {
+            "target": "agoniser",
+            "en": "be near death"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u164",
+        "title": "Common words 4076–4100",
+        "subtitle": "The 4076–4100 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "Vietnamienne",
+            "en": "Vietnamese woman"
+          },
+          {
+            "target": "dominateur",
+            "en": "ruler"
+          },
+          {
+            "target": "sanglot",
+            "en": "hiccup"
+          },
+          {
+            "target": "exceller",
+            "en": "excel"
+          },
+          {
+            "target": "ponctuation",
+            "en": "punctuation"
+          },
+          {
+            "target": "enceint",
+            "en": "pregnant"
+          },
+          {
+            "target": "pessimisme",
+            "en": "pessimism"
+          },
+          {
+            "target": "moudre",
+            "en": "grind"
+          },
+          {
+            "target": "absorbant",
+            "en": "absorbent"
+          },
+          {
+            "target": "roseau",
+            "en": "reed"
+          },
+          {
+            "target": "Andalousie",
+            "en": "Andalusia"
+          },
+          {
+            "target": "désoler",
+            "en": "grieve"
+          },
+          {
+            "target": "charnière",
+            "en": "hinge"
+          },
+          {
+            "target": "analogique",
+            "en": "analogous"
+          },
+          {
+            "target": "Roumaine",
+            "en": "Romanian woman"
+          },
+          {
+            "target": "belladone",
+            "en": "belladonna"
+          },
+          {
+            "target": "abreuvoir",
+            "en": "bar"
+          },
+          {
+            "target": "arlequin",
+            "en": "buffoon"
+          },
+          {
+            "target": "brochet",
+            "en": "pike"
+          },
+          {
+            "target": "aphasie",
+            "en": "aphasia"
+          },
+          {
+            "target": "Byzance",
+            "en": "Byzantium"
+          },
+          {
+            "target": "rayonner",
+            "en": "radiate"
+          },
+          {
+            "target": "calomnier",
+            "en": "slander"
+          },
+          {
+            "target": "hydravion",
+            "en": "seaplane"
+          },
+          {
+            "target": "Arménienne",
+            "en": "Armenian woman"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u165",
+        "title": "Common words 4101–4125",
+        "subtitle": "The 4101–4125 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "voyelle",
+            "en": "vowel"
+          },
+          {
+            "target": "conjoncture",
+            "en": "circumstances"
+          },
+          {
+            "target": "fermoir",
+            "en": "hooks and eyes"
+          },
+          {
+            "target": "Sardaigne",
+            "en": "Sardinia"
+          },
+          {
+            "target": "usurper",
+            "en": "usurp"
+          },
+          {
+            "target": "Dominicain",
+            "en": "Dominican"
+          },
+          {
+            "target": "abnégation",
+            "en": "abnegation"
+          },
+          {
+            "target": "cotisation",
+            "en": "dues"
+          },
+          {
+            "target": "Chilien",
+            "en": "Chilean"
+          },
+          {
+            "target": "Slovaquie",
+            "en": "Slovakia"
+          },
+          {
+            "target": "quatre-vingts",
+            "en": "eighty"
+          },
+          {
+            "target": "bêche",
+            "en": "spade"
+          },
+          {
+            "target": "noircir",
+            "en": "blacken"
+          },
+          {
+            "target": "Sénégal",
+            "en": "Senegal"
+          },
+          {
+            "target": "omettre",
+            "en": "leave out"
+          },
+          {
+            "target": "subsister",
+            "en": "survive"
+          },
+          {
+            "target": "Celte",
+            "en": "Celt"
+          },
+          {
+            "target": "fougère",
+            "en": "fern"
+          },
+          {
+            "target": "muselière",
+            "en": "muzzle"
+          },
+          {
+            "target": "accompagnateur",
+            "en": "companion"
+          },
+          {
+            "target": "cyprès",
+            "en": "cypres"
+          },
+          {
+            "target": "asymétrique",
+            "en": "asymmetrical"
+          },
+          {
+            "target": "tungstène",
+            "en": "tungsten"
+          },
+          {
+            "target": "apoplexie",
+            "en": "stroke of apoplexy"
+          },
+          {
+            "target": "abattant",
+            "en": "valve"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u166",
+        "title": "Common words 4126–4150",
+        "subtitle": "The 4126–4150 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "automate",
+            "en": "automoton"
+          },
+          {
+            "target": "pissenlit",
+            "en": "dandelion"
+          },
+          {
+            "target": "Catalogne",
+            "en": "Catalonia"
+          },
+          {
+            "target": "Appalaches",
+            "en": "Appalachian Mountains"
+          },
+          {
+            "target": "lévrier",
+            "en": "greyhound"
+          },
+          {
+            "target": "Œdipe",
+            "en": "Oedipus"
+          },
+          {
+            "target": "atrophie",
+            "en": "atrophy"
+          },
+          {
+            "target": "cigale",
+            "en": "cicada"
+          },
+          {
+            "target": "thym",
+            "en": "thyme"
+          },
+          {
+            "target": "abat-jour",
+            "en": "lamp-shade"
+          },
+          {
+            "target": "sourd-muet",
+            "en": "deaf and dumb"
+          },
+          {
+            "target": "immerger",
+            "en": "immerse"
+          },
+          {
+            "target": "dogme",
+            "en": "dogma"
+          },
+          {
+            "target": "Lituanie",
+            "en": "Lithuania"
+          },
+          {
+            "target": "quatre-vingt-dix",
+            "en": "ninety"
+          },
+          {
+            "target": "renarde",
+            "en": "vixen"
+          },
+          {
+            "target": "primeur",
+            "en": "newness"
+          },
+          {
+            "target": "bégayer",
+            "en": "stutter"
+          },
+          {
+            "target": "mercerie",
+            "en": "habberashery"
+          },
+          {
+            "target": "nord-coréen",
+            "en": "North Korean"
+          },
+          {
+            "target": "poinçon",
+            "en": "awl"
+          },
+          {
+            "target": "vaciller",
+            "en": "flare up"
+          },
+          {
+            "target": "climatisé",
+            "en": "air conditioned"
+          },
+          {
+            "target": "Elbe",
+            "en": "Elba"
+          },
+          {
+            "target": "Texane",
+            "en": "Texan woman"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u167",
+        "title": "Common words 4151–4175",
+        "subtitle": "The 4151–4175 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "strident",
+            "en": "shrill"
+          },
+          {
+            "target": "Corinthe",
+            "en": "Corinth"
+          },
+          {
+            "target": "Sud-Africain",
+            "en": "South African"
+          },
+          {
+            "target": "Scandinavie",
+            "en": "Scandinavia"
+          },
+          {
+            "target": "merlan",
+            "en": "whiting"
+          },
+          {
+            "target": "promeneur",
+            "en": "walker"
+          },
+          {
+            "target": "agrafer",
+            "en": "clasp"
+          },
+          {
+            "target": "muguet",
+            "en": "lily-of-the-valley"
+          },
+          {
+            "target": "germer",
+            "en": "germinate"
+          },
+          {
+            "target": "apathique",
+            "en": "apathetic"
+          },
+          {
+            "target": "Tchad",
+            "en": "Chad"
+          },
+          {
+            "target": "psychisme",
+            "en": "psyche"
+          },
+          {
+            "target": "chardon",
+            "en": "thisle"
+          },
+          {
+            "target": "alinéa",
+            "en": "paragraph"
+          },
+          {
+            "target": "cochonnet",
+            "en": "piglet"
+          },
+          {
+            "target": "pâlir",
+            "en": "fade"
+          },
+          {
+            "target": "archiviste",
+            "en": "archivist"
+          },
+          {
+            "target": "Nouvelle-Guinée",
+            "en": "New Guinea"
+          },
+          {
+            "target": "renouvelable",
+            "en": "renewable"
+          },
+          {
+            "target": "houx",
+            "en": "holly"
+          },
+          {
+            "target": "bruyère",
+            "en": "heath"
+          },
+          {
+            "target": "alterner",
+            "en": "alternate"
+          },
+          {
+            "target": "myrrhe",
+            "en": "myrrh"
+          },
+          {
+            "target": "additionner",
+            "en": "add up"
+          },
+          {
+            "target": "dorer",
+            "en": "gild"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u168",
+        "title": "Common words 4176–4200",
+        "subtitle": "The 4176–4200 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "tresser",
+            "en": "braid"
+          },
+          {
+            "target": "raifort",
+            "en": "horseradish"
+          },
+          {
+            "target": "celtique",
+            "en": "Celtic"
+          },
+          {
+            "target": "Lettonie",
+            "en": "Latvia"
+          },
+          {
+            "target": "manne",
+            "en": "manna"
+          },
+          {
+            "target": "abondant",
+            "en": "abundant"
+          },
+          {
+            "target": "amphore",
+            "en": "amphora"
+          },
+          {
+            "target": "Caucase",
+            "en": "Caucasus"
+          },
+          {
+            "target": "arbuste",
+            "en": "bush"
+          },
+          {
+            "target": "armateur",
+            "en": "ship owner"
+          },
+          {
+            "target": "gaélique",
+            "en": "Gaelic language"
+          },
+          {
+            "target": "précédement",
+            "en": "before"
+          },
+          {
+            "target": "cautionner",
+            "en": "warrant"
+          },
+          {
+            "target": "austérité",
+            "en": "severity"
+          },
+          {
+            "target": "Soudanais",
+            "en": "Sudanese"
+          },
+          {
+            "target": "dégeler",
+            "en": "melt"
+          },
+          {
+            "target": "Moldavie",
+            "en": "Moldavia"
+          },
+          {
+            "target": "sureau",
+            "en": "elder"
+          },
+          {
+            "target": "meubler",
+            "en": "furnish"
+          },
+          {
+            "target": "tenailles",
+            "en": "pair of pincers"
+          },
+          {
+            "target": "alpinisme",
+            "en": "mountaineering"
+          },
+          {
+            "target": "orme",
+            "en": "elm"
+          },
+          {
+            "target": "Egyptien",
+            "en": "Egyptian"
+          },
+          {
+            "target": "benzène",
+            "en": "benzene"
+          },
+          {
+            "target": "duché",
+            "en": "duchy"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u169",
+        "title": "Common words 4201–4225",
+        "subtitle": "The 4201–4225 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "amphibie",
+            "en": "amphibian"
+          },
+          {
+            "target": "Hanovre",
+            "en": "Hanover"
+          },
+          {
+            "target": "mysticisme",
+            "en": "mysticism"
+          },
+          {
+            "target": "gambader",
+            "en": "frolic about"
+          },
+          {
+            "target": "Maltais",
+            "en": "Maltese"
+          },
+          {
+            "target": "édredon",
+            "en": "eiderdown"
+          },
+          {
+            "target": "recommandable",
+            "en": "recommendable"
+          },
+          {
+            "target": "rouspéter",
+            "en": "oppose"
+          },
+          {
+            "target": "solvable",
+            "en": "solvent"
+          },
+          {
+            "target": "Bâle",
+            "en": "Basel"
+          },
+          {
+            "target": "Togo",
+            "en": "Togoland"
+          },
+          {
+            "target": "étal",
+            "en": "stall"
+          },
+          {
+            "target": "semoule",
+            "en": "semolina"
+          },
+          {
+            "target": "autobiographique",
+            "en": "autobiographical"
+          },
+          {
+            "target": "Prussien",
+            "en": "Prussian"
+          },
+          {
+            "target": "laïque",
+            "en": "lay"
+          },
+          {
+            "target": "Napolitain",
+            "en": "Neapolitan"
+          },
+          {
+            "target": "Yougoslave",
+            "en": "Yugoslav woman"
+          },
+          {
+            "target": "césium",
+            "en": "caesium"
+          },
+          {
+            "target": "Thaïlandaise",
+            "en": "Thai woman"
+          },
+          {
+            "target": "Machiavel",
+            "en": "Machiavelli"
+          },
+          {
+            "target": "oscillateur",
+            "en": "oscillator"
+          },
+          {
+            "target": "sandale",
+            "en": "sandal"
+          },
+          {
+            "target": "surplombant",
+            "en": "superior"
+          },
+          {
+            "target": "écrevisse",
+            "en": "crayfish"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u170",
+        "title": "Common words 4226–4250",
+        "subtitle": "The 4226–4250 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "envoyeur",
+            "en": "sender"
+          },
+          {
+            "target": "admiratif",
+            "en": "admiring"
+          },
+          {
+            "target": "figuier",
+            "en": "fig-tree"
+          },
+          {
+            "target": "sectionner",
+            "en": "dissect"
+          },
+          {
+            "target": "bafouer",
+            "en": "make fun of"
+          },
+          {
+            "target": "pervenche",
+            "en": "periwinkle"
+          },
+          {
+            "target": "ensorceler",
+            "en": "bewitch"
+          },
+          {
+            "target": "frauder",
+            "en": "swindle"
+          },
+          {
+            "target": "désobéissant",
+            "en": "disobedient"
+          },
+          {
+            "target": "Bavarois",
+            "en": "Bavarian"
+          },
+          {
+            "target": "automobiliste",
+            "en": "motorist"
+          },
+          {
+            "target": "héron",
+            "en": "heron"
+          },
+          {
+            "target": "préfixe",
+            "en": "prefix"
+          },
+          {
+            "target": "arrière-garde",
+            "en": "rear"
+          },
+          {
+            "target": "myosotis",
+            "en": "forget-me-not"
+          },
+          {
+            "target": "décéder",
+            "en": "march off"
+          },
+          {
+            "target": "déféquer",
+            "en": "defecate"
+          },
+          {
+            "target": "Flandre",
+            "en": "Flanders"
+          },
+          {
+            "target": "diluer",
+            "en": "adulterate"
+          },
+          {
+            "target": "Proche-Orient",
+            "en": "Middle East"
+          },
+          {
+            "target": "Tibre",
+            "en": "Tiber"
+          },
+          {
+            "target": "abrupt",
+            "en": "steep"
+          },
+          {
+            "target": "entrecôte",
+            "en": "rib steak"
+          },
+          {
+            "target": "abbesse",
+            "en": "abbess"
+          },
+          {
+            "target": "ciboulette",
+            "en": "chive"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u171",
+        "title": "Common words 4251–4275",
+        "subtitle": "The 4251–4275 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "Mathusalem",
+            "en": "Methuselah"
+          },
+          {
+            "target": "germanique",
+            "en": "Germanic"
+          },
+          {
+            "target": "Reims",
+            "en": "Rheims"
+          },
+          {
+            "target": "ignominie",
+            "en": "ignominious situation"
+          },
+          {
+            "target": "abstention",
+            "en": "abstinence"
+          },
+          {
+            "target": "Ptolémée",
+            "en": "Ptolemy"
+          },
+          {
+            "target": "baccalauréat",
+            "en": "leaving certificate"
+          },
+          {
+            "target": "encoche",
+            "en": "notch"
+          },
+          {
+            "target": "résulter",
+            "en": "result"
+          },
+          {
+            "target": "Nigérian",
+            "en": "Nigerian"
+          },
+          {
+            "target": "facultatif",
+            "en": "optional"
+          },
+          {
+            "target": "hirsute",
+            "en": "standing on end"
+          },
+          {
+            "target": "Indonésien",
+            "en": "Indonesian"
+          },
+          {
+            "target": "astérisque",
+            "en": "asterisk"
+          },
+          {
+            "target": "Cameroun",
+            "en": "Cameroon"
+          },
+          {
+            "target": "bosniaque",
+            "en": "Bosnian"
+          },
+          {
+            "target": "Slovaque",
+            "en": "Slovak woman"
+          },
+          {
+            "target": "Cérès",
+            "en": "Ceres"
+          },
+          {
+            "target": "Ceylan",
+            "en": "Ceylon"
+          },
+          {
+            "target": "florin",
+            "en": "guilder"
+          },
+          {
+            "target": "Oural",
+            "en": "Ural"
+          },
+          {
+            "target": "remaniement",
+            "en": "modification"
+          },
+          {
+            "target": "fluor",
+            "en": "fluorine"
+          },
+          {
+            "target": "allégorie",
+            "en": "allegory"
+          },
+          {
+            "target": "sud-américain",
+            "en": "South American"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u172",
+        "title": "Common words 4276–4300",
+        "subtitle": "The 4276–4300 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "Géorgien",
+            "en": "Georgian"
+          },
+          {
+            "target": "peuplier",
+            "en": "poplar"
+          },
+          {
+            "target": "amibe",
+            "en": "amoeba"
+          },
+          {
+            "target": "Saxe",
+            "en": "Saxony"
+          },
+          {
+            "target": "Polynésie",
+            "en": "Polynesia"
+          },
+          {
+            "target": "architectural",
+            "en": "architectonic"
+          },
+          {
+            "target": "mésange",
+            "en": "tit"
+          },
+          {
+            "target": "Arménie",
+            "en": "Armenia"
+          },
+          {
+            "target": "Viennois",
+            "en": "Viennese"
+          },
+          {
+            "target": "chèvrefeuille",
+            "en": "honeysuckle"
+          },
+          {
+            "target": "antisémitisme",
+            "en": "anti-Semitism"
+          },
+          {
+            "target": "Morphée",
+            "en": "Morpheus"
+          },
+          {
+            "target": "arrimer",
+            "en": "stow"
+          },
+          {
+            "target": "igname",
+            "en": "yam"
+          },
+          {
+            "target": "assouplir",
+            "en": "make supple"
+          },
+          {
+            "target": "anthologie",
+            "en": "anthology"
+          },
+          {
+            "target": "Antioche",
+            "en": "Antioch"
+          },
+          {
+            "target": "agoraphobie",
+            "en": "agoraphobia"
+          },
+          {
+            "target": "aquarelle",
+            "en": "water-colour"
+          },
+          {
+            "target": "Estonie",
+            "en": "Estonia"
+          },
+          {
+            "target": "badinage",
+            "en": "joke"
+          },
+          {
+            "target": "oisif",
+            "en": "idle"
+          },
+          {
+            "target": "tourbe",
+            "en": "peat"
+          },
+          {
+            "target": "excrément",
+            "en": "dung"
+          },
+          {
+            "target": "Néo-Zélandais",
+            "en": "New Zealander"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u173",
+        "title": "Common words 4301–4325",
+        "subtitle": "The 4301–4325 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "quatorzième",
+            "en": "fourteenth"
+          },
+          {
+            "target": "héraut",
+            "en": "herald"
+          },
+          {
+            "target": "bâiller",
+            "en": "yawn"
+          },
+          {
+            "target": "chicaner",
+            "en": "carp at"
+          },
+          {
+            "target": "ronronner",
+            "en": "buzz"
+          },
+          {
+            "target": "Rameaux",
+            "en": "Palm Sunday"
+          },
+          {
+            "target": "roucouler",
+            "en": "coo"
+          },
+          {
+            "target": "fève",
+            "en": "broad bean"
+          },
+          {
+            "target": "attendrissant",
+            "en": "moving"
+          },
+          {
+            "target": "Berlinois",
+            "en": "Berliner"
+          },
+          {
+            "target": "nacre",
+            "en": "mother of pearl"
+          },
+          {
+            "target": "œillet",
+            "en": "carnation"
+          },
+          {
+            "target": "tilleul",
+            "en": "linden-tree"
+          },
+          {
+            "target": "assainir",
+            "en": "cure"
+          },
+          {
+            "target": "anatomique",
+            "en": "anatomical"
+          },
+          {
+            "target": "azimut",
+            "en": "azimuth"
+          },
+          {
+            "target": "balalaïka",
+            "en": "balalaika"
+          },
+          {
+            "target": "Gand",
+            "en": "Ghent"
+          },
+          {
+            "target": "tourterelle",
+            "en": "turtle-dove"
+          },
+          {
+            "target": "alpaga",
+            "en": "alpaca"
+          },
+          {
+            "target": "acrobatique",
+            "en": "acrobatic"
+          },
+          {
+            "target": "adjacent",
+            "en": "nearby"
+          },
+          {
+            "target": "infuser",
+            "en": "brew"
+          },
+          {
+            "target": "lieue",
+            "en": "league"
+          },
+          {
+            "target": "Pentecôte",
+            "en": "Pentecost"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u174",
+        "title": "Common words 4326–4350",
+        "subtitle": "The 4326–4350 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "adhérents",
+            "en": "party members"
+          },
+          {
+            "target": "bruine",
+            "en": "drizzling rain"
+          },
+          {
+            "target": "Bolivien",
+            "en": "Bolivian"
+          },
+          {
+            "target": "Bédouin",
+            "en": "Bedouin"
+          },
+          {
+            "target": "acétate",
+            "en": "acetate"
+          },
+          {
+            "target": "herse",
+            "en": "harrow"
+          },
+          {
+            "target": "strophe",
+            "en": "stanza"
+          },
+          {
+            "target": "Papou",
+            "en": "Papuan"
+          },
+          {
+            "target": "aristocratique",
+            "en": "aristocratic"
+          },
+          {
+            "target": "courgette",
+            "en": "zucchini"
+          },
+          {
+            "target": "chrysanthème",
+            "en": "chrysanthemum"
+          },
+          {
+            "target": "Carpates",
+            "en": "Carpathian mountains"
+          },
+          {
+            "target": "bourrasque",
+            "en": "squall"
+          },
+          {
+            "target": "bâtisseur",
+            "en": "builder"
+          },
+          {
+            "target": "Viennoise",
+            "en": "Viennese woman"
+          },
+          {
+            "target": "attrister",
+            "en": "distress"
+          },
+          {
+            "target": "esturgeon",
+            "en": "sturgeon"
+          },
+          {
+            "target": "rhumatisme",
+            "en": "rheumatism"
+          },
+          {
+            "target": "multicolore",
+            "en": "multicoloured"
+          },
+          {
+            "target": "Bohême",
+            "en": "Bohemia"
+          },
+          {
+            "target": "haleter",
+            "en": "pant"
+          },
+          {
+            "target": "aéronef",
+            "en": "aircraft"
+          },
+          {
+            "target": "précéder",
+            "en": "precede"
+          },
+          {
+            "target": "prolétaire",
+            "en": "proletarian"
+          },
+          {
+            "target": "bas-ventre",
+            "en": "abdomen"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u175",
+        "title": "Common words 4351–4375",
+        "subtitle": "The 4351–4375 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "apiculteur",
+            "en": "apiarist"
+          },
+          {
+            "target": "agnostique",
+            "en": "agnostic"
+          },
+          {
+            "target": "couleuvre",
+            "en": "viper"
+          },
+          {
+            "target": "Mésopotamie",
+            "en": "Mesopotamia"
+          },
+          {
+            "target": "Libyen",
+            "en": "Libyan"
+          },
+          {
+            "target": "truelle",
+            "en": "trowel"
+          },
+          {
+            "target": "Birman",
+            "en": "Burmese"
+          },
+          {
+            "target": "baldaquin",
+            "en": "canopy"
+          },
+          {
+            "target": "goéland",
+            "en": "gull"
+          },
+          {
+            "target": "loucher",
+            "en": "look askance"
+          },
+          {
+            "target": "préface",
+            "en": "foreword"
+          },
+          {
+            "target": "arrosoir",
+            "en": "watering-can"
+          },
+          {
+            "target": "anémone",
+            "en": "anemone"
+          },
+          {
+            "target": "améthyste",
+            "en": "amethyst"
+          },
+          {
+            "target": "amphétamine",
+            "en": "amphetamine"
+          },
+          {
+            "target": "Bosphore",
+            "en": "Bosporus"
+          },
+          {
+            "target": "amygdale",
+            "en": "tonsil"
+          },
+          {
+            "target": "Malais",
+            "en": "Malay"
+          },
+          {
+            "target": "Tchécoslovaque",
+            "en": "Czechoslovak"
+          },
+          {
+            "target": "hêtre",
+            "en": "beech"
+          },
+          {
+            "target": "dépité",
+            "en": "frustrated"
+          },
+          {
+            "target": "grive",
+            "en": "thrush"
+          },
+          {
+            "target": "roulure",
+            "en": "slut"
+          },
+          {
+            "target": "accommodant",
+            "en": "accommodating"
+          },
+          {
+            "target": "obséder",
+            "en": "obsess"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u176",
+        "title": "Common words 4376–4400",
+        "subtitle": "The 4376–4400 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "Messine",
+            "en": "Messina"
+          },
+          {
+            "target": "napperon",
+            "en": "doily"
+          },
+          {
+            "target": "maniable",
+            "en": "easy to handle"
+          },
+          {
+            "target": "pâquerette",
+            "en": "daisy"
+          },
+          {
+            "target": "Méphistophélès",
+            "en": "Mephistopheles"
+          },
+          {
+            "target": "auge",
+            "en": "trough"
+          },
+          {
+            "target": "Slovénie",
+            "en": "Slovenia"
+          },
+          {
+            "target": "Finnois",
+            "en": "Finn"
+          },
+          {
+            "target": "opticien",
+            "en": "optician"
+          },
+          {
+            "target": "acétylène",
+            "en": "acetylene"
+          },
+          {
+            "target": "Caton",
+            "en": "Cato"
+          },
+          {
+            "target": "Antillais",
+            "en": "Antillian"
+          },
+          {
+            "target": "Athénien",
+            "en": "Athenian"
+          },
+          {
+            "target": "boulier",
+            "en": "abacus"
+          },
+          {
+            "target": "athéisme",
+            "en": "atheism"
+          },
+          {
+            "target": "géranium",
+            "en": "geranium"
+          },
+          {
+            "target": "apposer",
+            "en": "put onto"
+          },
+          {
+            "target": "Nord-Américain",
+            "en": "North American"
+          },
+          {
+            "target": "barboter",
+            "en": "lap"
+          },
+          {
+            "target": "adoucissant",
+            "en": "softener"
+          },
+          {
+            "target": "intriguer",
+            "en": "intrigue"
+          },
+          {
+            "target": "apologie",
+            "en": "apology"
+          },
+          {
+            "target": "miauler",
+            "en": "mew"
+          },
+          {
+            "target": "hébraïque",
+            "en": "Jewish"
+          },
+          {
+            "target": "pintade",
+            "en": "guinea-fowl"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u177",
+        "title": "Common words 4401–4425",
+        "subtitle": "The 4401–4425 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "gencive",
+            "en": "gum"
+          },
+          {
+            "target": "Barbe-Bleue",
+            "en": "Bluebeard"
+          },
+          {
+            "target": "épinard",
+            "en": "spinach"
+          },
+          {
+            "target": "Ostende",
+            "en": "Ostend"
+          },
+          {
+            "target": "Libéria",
+            "en": "Liberia"
+          },
+          {
+            "target": "marte",
+            "en": "marten"
+          },
+          {
+            "target": "ponceuse",
+            "en": "sanding machine"
+          },
+          {
+            "target": "cancaner",
+            "en": "spread a rumour"
+          },
+          {
+            "target": "airain",
+            "en": "bronze"
+          },
+          {
+            "target": "apprêter",
+            "en": "finish"
+          },
+          {
+            "target": "aiguiller",
+            "en": "commute"
+          },
+          {
+            "target": "bleuet",
+            "en": "cornflower"
+          },
+          {
+            "target": "coing",
+            "en": "quince"
+          },
+          {
+            "target": "mûrier",
+            "en": "mulberry-tree"
+          },
+          {
+            "target": "Monténégro",
+            "en": "Montenegro"
+          },
+          {
+            "target": "sibérien",
+            "en": "Siberian"
+          },
+          {
+            "target": "Lituanien",
+            "en": "Lithuanian"
+          },
+          {
+            "target": "Saint-Nicolas",
+            "en": "Saint Nicholas"
+          },
+          {
+            "target": "tonnelle",
+            "en": "arbor"
+          },
+          {
+            "target": "Junon",
+            "en": "Juno"
+          },
+          {
+            "target": "Nigérien",
+            "en": "Nigerien"
+          },
+          {
+            "target": "additionnel",
+            "en": "additional"
+          },
+          {
+            "target": "Protée",
+            "en": "Proteus"
+          },
+          {
+            "target": "chiendent",
+            "en": "couch-grass"
+          },
+          {
+            "target": "apostolique",
+            "en": "apostolic"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u178",
+        "title": "Common words 4426–4450",
+        "subtitle": "The 4426–4450 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "Andorre",
+            "en": "Andorra"
+          },
+          {
+            "target": "marsouin",
+            "en": "porpoise"
+          },
+          {
+            "target": "pronom",
+            "en": "pronoun"
+          },
+          {
+            "target": "acuponcture",
+            "en": "acupuncture"
+          },
+          {
+            "target": "alpin",
+            "en": "alpine"
+          },
+          {
+            "target": "Zambie",
+            "en": "Zambia"
+          },
+          {
+            "target": "arcane",
+            "en": "secret"
+          },
+          {
+            "target": "Boer",
+            "en": "Afrikaner"
+          },
+          {
+            "target": "verlan",
+            "en": "back-slang"
+          },
+          {
+            "target": "Moscovite",
+            "en": "Muscovite"
+          },
+          {
+            "target": "végéter",
+            "en": "vegetate"
+          },
+          {
+            "target": "xénon",
+            "en": "xenon"
+          },
+          {
+            "target": "baryum",
+            "en": "barium"
+          },
+          {
+            "target": "barbue",
+            "en": "rhombus"
+          },
+          {
+            "target": "Guatémaltèque",
+            "en": "Guatemalan"
+          },
+          {
+            "target": "osciller",
+            "en": "oscillate"
+          },
+          {
+            "target": "rouget",
+            "en": "mullet"
+          },
+          {
+            "target": "garnir",
+            "en": "fit out"
+          },
+          {
+            "target": "attribut",
+            "en": "attribute"
+          },
+          {
+            "target": "ortie",
+            "en": "nettle"
+          },
+          {
+            "target": "pétrir",
+            "en": "knead"
+          },
+          {
+            "target": "Somalien",
+            "en": "Somali"
+          },
+          {
+            "target": "râper",
+            "en": "grate"
+          },
+          {
+            "target": "béryllium",
+            "en": "beryllium"
+          },
+          {
+            "target": "Lapon",
+            "en": "Lapp"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u179",
+        "title": "Common words 4451–4475",
+        "subtitle": "The 4451–4475 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "Troyen",
+            "en": "Trojan"
+          },
+          {
+            "target": "groseille",
+            "en": "red currant"
+          },
+          {
+            "target": "Deutéronome",
+            "en": "Deuteronomy"
+          },
+          {
+            "target": "Néerlandaise",
+            "en": "Dutch woman"
+          },
+          {
+            "target": "saturer",
+            "en": "saturate"
+          },
+          {
+            "target": "arrière-petit-fils",
+            "en": "greatgrandson"
+          },
+          {
+            "target": "amoindrir",
+            "en": "decrease"
+          },
+          {
+            "target": "barquette",
+            "en": "little boat"
+          },
+          {
+            "target": "Tantale",
+            "en": "Tantalus"
+          },
+          {
+            "target": "gnou",
+            "en": "wildebeest"
+          },
+          {
+            "target": "abdication",
+            "en": "abandonment"
+          },
+          {
+            "target": "Rhodésie",
+            "en": "Rhodesia"
+          },
+          {
+            "target": "Iliade",
+            "en": "Iliad"
+          },
+          {
+            "target": "fusain",
+            "en": "charcoal"
+          },
+          {
+            "target": "Indonésienne",
+            "en": "Indonesian woman"
+          },
+          {
+            "target": "aigreur",
+            "en": "tartness"
+          },
+          {
+            "target": "Letton",
+            "en": "Latvian"
+          },
+          {
+            "target": "rembourrer",
+            "en": "stuff"
+          },
+          {
+            "target": "Delphes",
+            "en": "Delphi"
+          },
+          {
+            "target": "modiste",
+            "en": "milliner"
+          },
+          {
+            "target": "stagner",
+            "en": "stagnate"
+          },
+          {
+            "target": "aloès",
+            "en": "aloe"
+          },
+          {
+            "target": "Laponie",
+            "en": "Lapland"
+          },
+          {
+            "target": "ouate",
+            "en": "wadding"
+          },
+          {
+            "target": "Calabre",
+            "en": "Calabria"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u180",
+        "title": "Common words 4476–4500",
+        "subtitle": "The 4476–4500 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "Euphrate",
+            "en": "Euphrates"
+          },
+          {
+            "target": "Djibouti",
+            "en": "Jibuti"
+          },
+          {
+            "target": "anecdotique",
+            "en": "anecdotal"
+          },
+          {
+            "target": "bananier",
+            "en": "banana plant"
+          },
+          {
+            "target": "lambris",
+            "en": "panel"
+          },
+          {
+            "target": "buller",
+            "en": "laze around"
+          },
+          {
+            "target": "successivement",
+            "en": "in turn"
+          },
+          {
+            "target": "Charybde",
+            "en": "Charybdis"
+          },
+          {
+            "target": "raffiner",
+            "en": "refine"
+          },
+          {
+            "target": "marronnier",
+            "en": "chestnut-tree"
+          },
+          {
+            "target": "hémorroïde",
+            "en": "pile"
+          },
+          {
+            "target": "houe",
+            "en": "hoe"
+          },
+          {
+            "target": "apiculture",
+            "en": "bee-keeping"
+          },
+          {
+            "target": "antithèse",
+            "en": "antithesis"
+          },
+          {
+            "target": "ânesse",
+            "en": "she-ass"
+          },
+          {
+            "target": "démanger",
+            "en": "itch"
+          },
+          {
+            "target": "Finlandaise",
+            "en": "Finnish woman"
+          },
+          {
+            "target": "Yéménite",
+            "en": "Yemeni woman"
+          },
+          {
+            "target": "Galice",
+            "en": "Galicia"
+          },
+          {
+            "target": "laïc",
+            "en": "layman"
+          },
+          {
+            "target": "Samarie",
+            "en": "Samaria"
+          },
+          {
+            "target": "Tage",
+            "en": "Tagus"
+          },
+          {
+            "target": "Nouvelle-Ecosse",
+            "en": "Nova Scotia"
+          },
+          {
+            "target": "assertion",
+            "en": "contention"
+          },
+          {
+            "target": "odorant",
+            "en": "sweet smelling"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u181",
+        "title": "Common words 4501–4525",
+        "subtitle": "The 4501–4525 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "bailler",
+            "en": "give"
+          },
+          {
+            "target": "épicéa",
+            "en": "spruce"
+          },
+          {
+            "target": "Khmer",
+            "en": "Cambodian"
+          },
+          {
+            "target": "byzantin",
+            "en": "Byzantine"
+          },
+          {
+            "target": "babylonien",
+            "en": "Babylonian"
+          },
+          {
+            "target": "fécond",
+            "en": "fertile"
+          },
+          {
+            "target": "Poméranie",
+            "en": "Pomerania"
+          },
+          {
+            "target": "Rhône",
+            "en": "Rhone"
+          },
+          {
+            "target": "basalte",
+            "en": "basalt"
+          },
+          {
+            "target": "soustraction",
+            "en": "subtraction"
+          },
+          {
+            "target": "Malines",
+            "en": "Mechlin"
+          },
+          {
+            "target": "allitération",
+            "en": "alliteration"
+          },
+          {
+            "target": "Sainte-Hélène",
+            "en": "Saint Helena"
+          },
+          {
+            "target": "tamiser",
+            "en": "sift"
+          },
+          {
+            "target": "Abyssinie",
+            "en": "Abyssinia"
+          },
+          {
+            "target": "piailler",
+            "en": "twitter"
+          },
+          {
+            "target": "Colombie-Britannique",
+            "en": "British Columbia"
+          },
+          {
+            "target": "Diogène",
+            "en": "Diogenes"
+          },
+          {
+            "target": "hanneton",
+            "en": "june bug"
+          },
+          {
+            "target": "adverbe",
+            "en": "adverb"
+          },
+          {
+            "target": "démissioner",
+            "en": "quit"
+          },
+          {
+            "target": "Mariannes",
+            "en": "Mariana Islands"
+          },
+          {
+            "target": "plinthe",
+            "en": "skirting board"
+          },
+          {
+            "target": "Malaisien",
+            "en": "Malaysian"
+          },
+          {
+            "target": "Achéron",
+            "en": "Acheron"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u182",
+        "title": "Common words 4526–4550",
+        "subtitle": "The 4526–4550 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "mandchou",
+            "en": "Manchurian"
+          },
+          {
+            "target": "poitrail",
+            "en": "breast"
+          },
+          {
+            "target": "Barthélemy",
+            "en": "Bartolomew"
+          },
+          {
+            "target": "colimaçon",
+            "en": "commercial-at sign"
+          },
+          {
+            "target": "expansif",
+            "en": "outgoing"
+          },
+          {
+            "target": "perce-neige",
+            "en": "snowdrop"
+          },
+          {
+            "target": "bégueule",
+            "en": "prude"
+          },
+          {
+            "target": "Cambodgienne",
+            "en": "Cambodian woman"
+          },
+          {
+            "target": "Livourne",
+            "en": "Leghorn"
+          },
+          {
+            "target": "Mycènes",
+            "en": "Mycenae"
+          },
+          {
+            "target": "flêche",
+            "en": "arrow"
+          },
+          {
+            "target": "baroud",
+            "en": "scuffle"
+          },
+          {
+            "target": "assouplissant",
+            "en": "fabric softener"
+          },
+          {
+            "target": "imposable",
+            "en": "liable for taxation"
+          },
+          {
+            "target": "émaner",
+            "en": "well up"
+          },
+          {
+            "target": "névralgie",
+            "en": "neuralgia"
+          },
+          {
+            "target": "annuellement",
+            "en": "yearly"
+          },
+          {
+            "target": "malard",
+            "en": "drake"
+          },
+          {
+            "target": "amarante",
+            "en": "amaranthus"
+          },
+          {
+            "target": "Castillan",
+            "en": "Castilian"
+          },
+          {
+            "target": "accordéoniste",
+            "en": "accordionist"
+          },
+          {
+            "target": "Moravie",
+            "en": "Moravia"
+          },
+          {
+            "target": "débarcadère",
+            "en": "pier"
+          },
+          {
+            "target": "Polynésien",
+            "en": "Polynesian"
+          },
+          {
+            "target": "venaison",
+            "en": "venison"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u183",
+        "title": "Common words 4551–4575",
+        "subtitle": "The 4551–4575 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "✍️",
+        "vocab": [
+          {
+            "target": "Assomption",
+            "en": "Assumption"
+          },
+          {
+            "target": "alcalin",
+            "en": "alkaline"
+          },
+          {
+            "target": "tâtonner",
+            "en": "grope around"
+          },
+          {
+            "target": "Hébrides",
+            "en": "Western Islands"
+          },
+          {
+            "target": "Nabuchodonosor",
+            "en": "Nebuchadnezzar"
+          },
+          {
+            "target": "trempage",
+            "en": "soaking"
+          },
+          {
+            "target": "Cordoue",
+            "en": "Cordova"
+          },
+          {
+            "target": "Andalou",
+            "en": "Andalusian"
+          },
+          {
+            "target": "accompagnatrice",
+            "en": "chaperon"
+          },
+          {
+            "target": "cormoran",
+            "en": "cormorant"
+          },
+          {
+            "target": "avent",
+            "en": "advent"
+          },
+          {
+            "target": "Sarde",
+            "en": "Sardinian"
+          },
+          {
+            "target": "Panaméen",
+            "en": "Panamanian"
+          },
+          {
+            "target": "aromatique",
+            "en": "nutty"
+          },
+          {
+            "target": "indigner",
+            "en": "annoy"
+          },
+          {
+            "target": "chagriner",
+            "en": "worry"
+          },
+          {
+            "target": "kinésithérapie",
+            "en": "physiotherapy"
+          },
+          {
+            "target": "accouchée",
+            "en": "lying-in woman"
+          },
+          {
+            "target": "agrégation",
+            "en": "aggregation"
+          },
+          {
+            "target": "Turkménistan",
+            "en": "Turkmenistan"
+          },
+          {
+            "target": "sapeur",
+            "en": "sapper"
+          },
+          {
+            "target": "Alep",
+            "en": "Aleppo"
+          },
+          {
+            "target": "abolitionniste",
+            "en": "abolitionist"
+          },
+          {
+            "target": "Sémite",
+            "en": "Semite"
+          },
+          {
+            "target": "Valachie",
+            "en": "Wallachia"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u184",
+        "title": "Common words 4576–4600",
+        "subtitle": "The 4576–4600 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "consonne",
+            "en": "consonant"
+          },
+          {
+            "target": "vertébral",
+            "en": "vertibrate"
+          },
+          {
+            "target": "séditieux",
+            "en": "inflammatory"
+          },
+          {
+            "target": "Javanais",
+            "en": "Javanese"
+          },
+          {
+            "target": "Escaut",
+            "en": "Scheldt"
+          },
+          {
+            "target": "hawaiien",
+            "en": "Hawaiian language"
+          },
+          {
+            "target": "Westphalie",
+            "en": "Westphalia"
+          },
+          {
+            "target": "académicien",
+            "en": "academician"
+          },
+          {
+            "target": "lombric",
+            "en": "earthworm"
+          },
+          {
+            "target": "Jordanien",
+            "en": "Jordanian"
+          },
+          {
+            "target": "chômeuse",
+            "en": "unemployed woman"
+          },
+          {
+            "target": "timbre-poste",
+            "en": "stamp"
+          },
+          {
+            "target": "adoratrice",
+            "en": "female adorer"
+          },
+          {
+            "target": "guerroyer",
+            "en": "make war"
+          },
+          {
+            "target": "exulter",
+            "en": "rejoice"
+          },
+          {
+            "target": "bailli",
+            "en": "taskmaster"
+          },
+          {
+            "target": "abjurer",
+            "en": "swear off"
+          },
+          {
+            "target": "hurluberlu",
+            "en": "madman"
+          },
+          {
+            "target": "agronome",
+            "en": "agriculturist"
+          },
+          {
+            "target": "Sénégalais",
+            "en": "Senegalese"
+          },
+          {
+            "target": "autarcie",
+            "en": "self-sufficiency"
+          },
+          {
+            "target": "allégorique",
+            "en": "allegoric"
+          },
+          {
+            "target": "antimoine",
+            "en": "antimony"
+          },
+          {
+            "target": "empêtrer",
+            "en": "implicate"
+          },
+          {
+            "target": "apostat",
+            "en": "apostate"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u185",
+        "title": "Common words 4601–4625",
+        "subtitle": "The 4601–4625 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🍽️",
+        "vocab": [
+          {
+            "target": "capucine",
+            "en": "nasturtium"
+          },
+          {
+            "target": "anachronisme",
+            "en": "anachronism"
+          },
+          {
+            "target": "axiome",
+            "en": "axiom"
+          },
+          {
+            "target": "Birmane",
+            "en": "Burmese woman"
+          },
+          {
+            "target": "rapiécer",
+            "en": "patch up"
+          },
+          {
+            "target": "Mauritanie",
+            "en": "Mauritania"
+          },
+          {
+            "target": "aiglon",
+            "en": "eaglet"
+          },
+          {
+            "target": "crève-cœur",
+            "en": "affliction"
+          },
+          {
+            "target": "exempter",
+            "en": "except"
+          },
+          {
+            "target": "prôner",
+            "en": "advocate"
+          },
+          {
+            "target": "glycine",
+            "en": "wisteria"
+          },
+          {
+            "target": "baronnie",
+            "en": "barony"
+          },
+          {
+            "target": "prétexter",
+            "en": "pretend"
+          },
+          {
+            "target": "hennir",
+            "en": "whinny"
+          },
+          {
+            "target": "Moldave",
+            "en": "Moldavian"
+          },
+          {
+            "target": "artériosclérose",
+            "en": "arteriosclerosis"
+          },
+          {
+            "target": "respectif",
+            "en": "respective"
+          },
+          {
+            "target": "fruitier",
+            "en": "fruit-tree"
+          },
+          {
+            "target": "Armorique",
+            "en": "Armorica"
+          },
+          {
+            "target": "préposition",
+            "en": "preposition"
+          },
+          {
+            "target": "Baléares",
+            "en": "Balearic Islands"
+          },
+          {
+            "target": "agronomie",
+            "en": "agriculture"
+          },
+          {
+            "target": "agrégat",
+            "en": "aggregate"
+          },
+          {
+            "target": "stuc",
+            "en": "plaster"
+          },
+          {
+            "target": "avorteur",
+            "en": "abortionist"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u186",
+        "title": "Common words 4626–4650",
+        "subtitle": "The 4626–4650 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "Assyrie",
+            "en": "Assyria"
+          },
+          {
+            "target": "abécédaire",
+            "en": "ABC book"
+          },
+          {
+            "target": "alun",
+            "en": "alum"
+          },
+          {
+            "target": "Alsacien",
+            "en": "Alsatian"
+          },
+          {
+            "target": "Océanie",
+            "en": "Oceania"
+          },
+          {
+            "target": "Arcadie",
+            "en": "Arcadia"
+          },
+          {
+            "target": "Lituanienne",
+            "en": "Lithuanian woman"
+          },
+          {
+            "target": "Rhénanie",
+            "en": "Rhineland"
+          },
+          {
+            "target": "moyeu",
+            "en": "hub"
+          },
+          {
+            "target": "Albe",
+            "en": "Alva"
+          },
+          {
+            "target": "Annonciation",
+            "en": "Lady Day"
+          },
+          {
+            "target": "porte-fenêtre",
+            "en": "french windows"
+          },
+          {
+            "target": "espéranto",
+            "en": "Esperanto"
+          },
+          {
+            "target": "jacinthe",
+            "en": "hyacinth"
+          },
+          {
+            "target": "exhorter",
+            "en": "scold"
+          },
+          {
+            "target": "ibérique",
+            "en": "Iberian"
+          },
+          {
+            "target": "Leyde",
+            "en": "Leyden"
+          },
+          {
+            "target": "Ethiopien",
+            "en": "Ethiopian"
+          },
+          {
+            "target": "ordinairement",
+            "en": "usually"
+          },
+          {
+            "target": "bêler",
+            "en": "bleat"
+          },
+          {
+            "target": "accoucheur",
+            "en": "obstetrician"
+          },
+          {
+            "target": "Libérien",
+            "en": "Liberian"
+          },
+          {
+            "target": "primevère",
+            "en": "primrose"
+          },
+          {
+            "target": "azalée",
+            "en": "azalea"
+          },
+          {
+            "target": "abrasif",
+            "en": "abrasive"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u187",
+        "title": "Common words 4651–4675",
+        "subtitle": "The 4651–4675 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🧭",
+        "vocab": [
+          {
+            "target": "Andalouse",
+            "en": "Andalusian woman"
+          },
+          {
+            "target": "autistique",
+            "en": "autistic"
+          },
+          {
+            "target": "Groenlandais",
+            "en": "Greenlander"
+          },
+          {
+            "target": "arrière-petite-fille",
+            "en": "greatgranddaughter"
+          },
+          {
+            "target": "Chandeleur",
+            "en": "Candlemas"
+          },
+          {
+            "target": "accréditer",
+            "en": "accredit"
+          },
+          {
+            "target": "échalote",
+            "en": "shallot"
+          },
+          {
+            "target": "Estonien",
+            "en": "Estonian"
+          },
+          {
+            "target": "bardane",
+            "en": "burr"
+          },
+          {
+            "target": "abaissement",
+            "en": "decay"
+          },
+          {
+            "target": "arum",
+            "en": "arum lily"
+          },
+          {
+            "target": "chardonneret",
+            "en": "goldfinch"
+          },
+          {
+            "target": "barbarisme",
+            "en": "barbarism"
+          },
+          {
+            "target": "autocratie",
+            "en": "absolute power"
+          },
+          {
+            "target": "taon",
+            "en": "hornet"
+          },
+          {
+            "target": "alcali",
+            "en": "alkali"
+          },
+          {
+            "target": "Angolais",
+            "en": "Angolese"
+          },
+          {
+            "target": "adjudication",
+            "en": "tender"
+          },
+          {
+            "target": "Forêt-Noire",
+            "en": "Black Forest"
+          },
+          {
+            "target": "receptionniste",
+            "en": "receptionist"
+          },
+          {
+            "target": "Vistule",
+            "en": "Vistula"
+          },
+          {
+            "target": "servage",
+            "en": "servitude"
+          },
+          {
+            "target": "mélèze",
+            "en": "larch"
+          },
+          {
+            "target": "logarithme",
+            "en": "logarithm"
+          },
+          {
+            "target": "acclimatation",
+            "en": "acclimatization"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u188",
+        "title": "Common words 4676–4700",
+        "subtitle": "The 4676–4700 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "💬",
+        "vocab": [
+          {
+            "target": "Asturies",
+            "en": "Asturias"
+          },
+          {
+            "target": "Balinais",
+            "en": "Balinese"
+          },
+          {
+            "target": "bourratif",
+            "en": "stodgy"
+          },
+          {
+            "target": "anarchisme",
+            "en": "anarchism"
+          },
+          {
+            "target": "conjecturer",
+            "en": "conjecture"
+          },
+          {
+            "target": "meurtrir",
+            "en": "bruise"
+          },
+          {
+            "target": "Carthaginois",
+            "en": "Carthaginian"
+          },
+          {
+            "target": "doucereux",
+            "en": "bland"
+          },
+          {
+            "target": "apocryphe",
+            "en": "apocryphal"
+          },
+          {
+            "target": "bredouiller",
+            "en": "mumble"
+          },
+          {
+            "target": "Népalais",
+            "en": "Nepalese"
+          },
+          {
+            "target": "bas-relief",
+            "en": "low relief"
+          },
+          {
+            "target": "déclasser",
+            "en": "downgrade"
+          },
+          {
+            "target": "dyspepsie",
+            "en": "indigestion"
+          },
+          {
+            "target": "estomaqué",
+            "en": "flabbergasted"
+          },
+          {
+            "target": "aggloméré",
+            "en": "agglomerate"
+          },
+          {
+            "target": "Persane",
+            "en": "Persian woman"
+          },
+          {
+            "target": "palan",
+            "en": "hoist"
+          },
+          {
+            "target": "octet",
+            "en": "byte"
+          },
+          {
+            "target": "Nimègue",
+            "en": "Nimwegen"
+          },
+          {
+            "target": "aérateur",
+            "en": "electric fan"
+          },
+          {
+            "target": "rucher",
+            "en": "apiary"
+          },
+          {
+            "target": "abusivement",
+            "en": "by mistake"
+          },
+          {
+            "target": "infinitif",
+            "en": "infinitive"
+          },
+          {
+            "target": "oiseau-mouche",
+            "en": "hummingbird"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u189",
+        "title": "Common words 4701–4725",
+        "subtitle": "The 4701–4725 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🎓",
+        "vocab": [
+          {
+            "target": "arabique",
+            "en": "Arabic"
+          },
+          {
+            "target": "huppe",
+            "en": "hoopoo"
+          },
+          {
+            "target": "Assyrien",
+            "en": "Assyrian"
+          },
+          {
+            "target": "galicien",
+            "en": "Galician"
+          },
+          {
+            "target": "ébouriffer",
+            "en": "tousle"
+          },
+          {
+            "target": "atavisme",
+            "en": "atavism"
+          },
+          {
+            "target": "pestilentiel",
+            "en": "fumy"
+          },
+          {
+            "target": "onduleur",
+            "en": "uninterruptable power supply"
+          },
+          {
+            "target": "Bantou",
+            "en": "Bantu"
+          },
+          {
+            "target": "bakélite",
+            "en": "bakelite"
+          },
+          {
+            "target": "sapeur-pompier",
+            "en": "firefighter"
+          },
+          {
+            "target": "Wisigoth",
+            "en": "Visigoth"
+          },
+          {
+            "target": "liber",
+            "en": "bast"
+          },
+          {
+            "target": "algébrique",
+            "en": "algebraic"
+          },
+          {
+            "target": "mugir",
+            "en": "roar"
+          },
+          {
+            "target": "écœurer",
+            "en": "nauseate"
+          },
+          {
+            "target": "apostolat",
+            "en": "apostolate"
+          },
+          {
+            "target": "pistil",
+            "en": "pestle"
+          },
+          {
+            "target": "byte",
+            "en": "octet"
+          },
+          {
+            "target": "corinthien",
+            "en": "Corinthian"
+          },
+          {
+            "target": "Epiphanie",
+            "en": "Epiphany"
+          },
+          {
+            "target": "Dardanelles",
+            "en": "Hellespont"
+          },
+          {
+            "target": "légerement",
+            "en": "a little"
+          },
+          {
+            "target": "Coblence",
+            "en": "Koblenz"
+          },
+          {
+            "target": "galoche",
+            "en": "galosh"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u190",
+        "title": "Common words 4726–4750",
+        "subtitle": "The 4726–4750 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "ardant",
+            "en": "ablaze"
+          },
+          {
+            "target": "taille-haie",
+            "en": "hedge clippers"
+          },
+          {
+            "target": "géographe",
+            "en": "geographer"
+          },
+          {
+            "target": "balte",
+            "en": "Baltic"
+          },
+          {
+            "target": "Chypriote",
+            "en": "Cyprian woman"
+          },
+          {
+            "target": "Saint-Marin",
+            "en": "San Marino"
+          },
+          {
+            "target": "croasser",
+            "en": "croak"
+          },
+          {
+            "target": "Macédonien",
+            "en": "Macedonian"
+          },
+          {
+            "target": "Slovène",
+            "en": "Slovenian"
+          },
+          {
+            "target": "brunir",
+            "en": "get a tan"
+          },
+          {
+            "target": "sarcler",
+            "en": "weed out"
+          },
+          {
+            "target": "bégonia",
+            "en": "begonia"
+          },
+          {
+            "target": "Estonienne",
+            "en": "Estonian woman"
+          },
+          {
+            "target": "Orcades",
+            "en": "Orkney Islands"
+          },
+          {
+            "target": "dévoyer",
+            "en": "seduce"
+          },
+          {
+            "target": "anatomiste",
+            "en": "anatomist"
+          },
+          {
+            "target": "myxomatose",
+            "en": "myxomatosis"
+          },
+          {
+            "target": "feldspath",
+            "en": "feldspar"
+          },
+          {
+            "target": "wallon",
+            "en": "Walloon"
+          },
+          {
+            "target": "rhododendron",
+            "en": "Alpenrose"
+          },
+          {
+            "target": "kilogramme",
+            "en": "kilo"
+          },
+          {
+            "target": "abonder",
+            "en": "abound"
+          },
+          {
+            "target": "miniscule",
+            "en": "tiny"
+          },
+          {
+            "target": "Apennins",
+            "en": "Apennines"
+          },
+          {
+            "target": "Laotien",
+            "en": "Laotian"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u191",
+        "title": "Common words 4751–4775",
+        "subtitle": "The 4751–4775 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "schah",
+            "en": "shah"
+          },
+          {
+            "target": "recevabilité",
+            "en": "susceptibility"
+          },
+          {
+            "target": "consister",
+            "en": "consist"
+          },
+          {
+            "target": "aérostat",
+            "en": "balloon"
+          },
+          {
+            "target": "Nouveau-Brunswick",
+            "en": "New Brunswick"
+          },
+          {
+            "target": "bougnoul",
+            "en": "nigger"
+          },
+          {
+            "target": "aulne",
+            "en": "alder"
+          },
+          {
+            "target": "perclus",
+            "en": "paralyzed"
+          },
+          {
+            "target": "aliter",
+            "en": "become bed bound"
+          },
+          {
+            "target": "suffixe",
+            "en": "extension"
+          },
+          {
+            "target": "dorure",
+            "en": "guilding"
+          },
+          {
+            "target": "Erythrée",
+            "en": "Eritrea"
+          },
+          {
+            "target": "Hondurien",
+            "en": "Honduran"
+          },
+          {
+            "target": "autocratique",
+            "en": "autocratic"
+          },
+          {
+            "target": "achillée",
+            "en": "yarrow"
+          },
+          {
+            "target": "Moluques",
+            "en": "Moluccas"
+          },
+          {
+            "target": "Addis-Abeba",
+            "en": "Addis Ababa"
+          },
+          {
+            "target": "dorique",
+            "en": "Dorian"
+          },
+          {
+            "target": "Tatare",
+            "en": "Tartar"
+          },
+          {
+            "target": "Dalmatie",
+            "en": "Dalmatia"
+          },
+          {
+            "target": "Ecossaise",
+            "en": "Scotswoman"
+          },
+          {
+            "target": "destiner",
+            "en": "ordain"
+          },
+          {
+            "target": "télécopie",
+            "en": "fax"
+          },
+          {
+            "target": "micromètre",
+            "en": "micrometre"
+          },
+          {
+            "target": "experimenté",
+            "en": "expert"
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u192",
+        "title": "Common words 4776–4800",
+        "subtitle": "The 4776–4800 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "Andrinople",
+            "en": "Adrianople"
+          },
+          {
+            "target": "baratter",
+            "en": "churn"
+          },
+          {
+            "target": "banian",
+            "en": "banyan"
+          },
+          {
+            "target": "jarretelle",
+            "en": "suspender"
+          },
+          {
+            "target": "Attique",
+            "en": "Attica"
+          },
+          {
+            "target": "Bessarabie",
+            "en": "Bessarabia"
+          },
+          {
+            "target": "soixantième",
+            "en": "sixtieth"
+          },
+          {
+            "target": "aphorisme",
+            "en": "aphorism"
+          },
+          {
+            "target": "eau-forte",
+            "en": "etching"
+          },
+          {
+            "target": "aéronaute",
+            "en": "aeronaut"
+          },
+          {
+            "target": "absolutisme",
+            "en": "absolutism"
+          },
+          {
+            "target": "aiglefin",
+            "en": "haddock"
+          },
+          {
+            "target": "acarien",
+            "en": "mite"
+          },
+          {
+            "target": "glaïeul",
+            "en": "gladiolus"
+          },
+          {
+            "target": "mandat-poste",
+            "en": "money order"
+          },
+          {
+            "target": "amok",
+            "en": "amuck"
+          },
+          {
+            "target": "Frison",
+            "en": "Frisian"
+          },
+          {
+            "target": "autocrate",
+            "en": "absolute ruler"
+          },
+          {
+            "target": "Wallonie",
+            "en": "Wallonia"
+          },
+          {
+            "target": "Etrusque",
+            "en": "Etruscan"
+          },
+          {
+            "target": "Nemrod",
+            "en": "Nimrod"
+          },
+          {
+            "target": "Laurentides",
+            "en": "Laurentian Mountains"
+          },
+          {
+            "target": "Enée",
+            "en": "Aeneas"
+          },
+          {
+            "target": "agronomique",
+            "en": "agricultural"
+          },
+          {
+            "target": "abricotier",
+            "en": "apricot-tree"
+          }
+        ]
       }
     ]
   }
