@@ -95,13 +95,12 @@ function sample<T>(arr: readonly T[], n: number, r: () => number): T[] {
 // ----------------------------------------------------------------------------
 // Exercise builders
 // ----------------------------------------------------------------------------
-// Lessons are dense: each one teaches a batch of new words, then practices them
-// with varied exercises and a little spaced review of earlier words — rather than
-// one word per lesson with endless repeat drills.
-const NEW_PER_LESSON = 7; // new words introduced per lesson
-const MAX_EX_PER_LESSON = 20; // cap so a lesson stays focused but deep
-const REVIEW_PER_LESSON = 3; // spaced-review touches of earlier words per lesson
-const END_REVIEWS = 2; // cumulative review lessons appended per unit
+// Lessons introduce just a FEW new words but are filled out with heavy spaced
+// repetition: earlier words are pulled in at random so each word recurs many
+// times, spread randomly across later lessons (the core of durable memory).
+const NEW_PER_LESSON = 3; // only 2–3 new words per lesson
+const MAX_EX_PER_LESSON = 16; // filled mostly with random review of earlier words
+const END_REVIEWS = 3; // cumulative review lessons appended per unit
 
 function words(sentence: string): string[] {
   return sentence.split(" ").filter(Boolean);
@@ -319,10 +318,13 @@ function teachLesson(
   }
   if (sents[2]) ex.push(mkListenSentence(sents[2], pool, r));
   if (sents[3]) ex.push(mkType(sents[3]));
-  // 5) Spaced review of earlier words (never the just-taught batch).
+  // 5) Fill the rest of the lesson with heavy spaced review: earlier words pulled
+  //    in at random (varied exercise types) so every word recurs across many
+  //    later lessons. This is where most of the repetition lives.
   if (known.length) {
-    sample(known, REVIEW_PER_LESSON, r).forEach((w, i) => {
-      if (ex.length < MAX_EX_PER_LESSON) ex.push(practiceForWord(w, pool, i + 1, r));
+    const want = MAX_EX_PER_LESSON - ex.length;
+    sample(known, Math.max(0, want), r).forEach((w, i) => {
+      if (ex.length < MAX_EX_PER_LESSON) ex.push(practiceForWord(w, pool, i, r));
     });
   }
 
