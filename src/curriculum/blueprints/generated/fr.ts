@@ -107,7 +107,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "personne",
-            "en": "nobody"
+            "en": "person"
           },
           {
             "target": "père",
@@ -483,7 +483,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "ensemble",
-            "en": "set"
+            "en": "together"
           },
           {
             "target": "nouveau",
@@ -1453,7 +1453,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Noir",
-            "en": "Negro"
+            "en": "black"
           },
           {
             "target": "avocat",
@@ -1603,7 +1603,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "autour",
-            "en": "goshawk"
+            "en": "roundabout"
           },
           {
             "target": "fond",
@@ -1827,7 +1827,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "poste",
-            "en": "post"
+            "en": "position"
           },
           {
             "target": "con",
@@ -2087,7 +2087,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "amoureux",
-            "en": "loving"
+            "en": "lover"
           },
           {
             "target": "drogue",
@@ -2352,6 +2352,10 @@ export const sections: SectionBlueprint[] = [
             "en": "wall"
           },
           {
+            "target": "bande",
+            "en": "set"
+          },
+          {
             "target": "ridicule",
             "en": "ridiculous"
           },
@@ -2365,7 +2369,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Anglais",
-            "en": "Englishman"
+            "en": "English"
           },
           {
             "target": "reine",
@@ -2422,10 +2426,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "tante",
             "en": "aunt"
-          },
-          {
-            "target": "excuser",
-            "en": "excuse"
           }
         ]
       },
@@ -2437,6 +2437,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "✍️",
         "vocab": [
+          {
+            "target": "excuser",
+            "en": "excuse"
+          },
           {
             "target": "magasin",
             "en": "store"
@@ -2490,6 +2494,10 @@ export const sections: SectionBlueprint[] = [
             "en": "when"
           },
           {
+            "target": "présenter",
+            "en": "present with"
+          },
+          {
             "target": "importance",
             "en": "size"
           },
@@ -2528,14 +2536,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "discuter",
             "en": "discuss"
-          },
-          {
-            "target": "rose",
-            "en": "pink"
-          },
-          {
-            "target": "vis",
-            "en": "screw"
           }
         ]
       },
@@ -2547,6 +2547,18 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "🌍",
         "vocab": [
+          {
+            "target": "nul",
+            "en": "nobody"
+          },
+          {
+            "target": "rose",
+            "en": "pink"
+          },
+          {
+            "target": "vis",
+            "en": "screw"
+          },
           {
             "target": "parole",
             "en": "speech"
@@ -2616,10 +2628,6 @@ export const sections: SectionBlueprint[] = [
             "en": "short"
           },
           {
-            "target": "offrir",
-            "en": "present with"
-          },
-          {
             "target": "bain",
             "en": "bath"
           },
@@ -2638,14 +2646,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "réfléchir",
             "en": "reflect on"
-          },
-          {
-            "target": "chanter",
-            "en": "sing"
-          },
-          {
-            "target": "lâche",
-            "en": "low"
           }
         ]
       },
@@ -2657,6 +2657,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "🍽️",
         "vocab": [
+          {
+            "target": "chanter",
+            "en": "sing"
+          },
+          {
+            "target": "lâche",
+            "en": "low"
+          },
           {
             "target": "mademoiselle",
             "en": "Miss"
@@ -2748,14 +2756,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "parmi",
             "en": "in"
-          },
-          {
-            "target": "couple",
-            "en": "married people"
-          },
-          {
-            "target": "permis",
-            "en": "permission"
           }
         ]
       },
@@ -2767,6 +2767,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "🏙️",
         "vocab": [
+          {
+            "target": "couple",
+            "en": "married people"
+          },
+          {
+            "target": "permis",
+            "en": "permission"
+          },
           {
             "target": "différence",
             "en": "difference"
@@ -2858,14 +2866,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "frais",
             "en": "fresh"
-          },
-          {
-            "target": "soldat",
-            "en": "soldier"
-          },
-          {
-            "target": "couleur",
-            "en": "paint"
           }
         ]
       },
@@ -2877,6 +2877,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "🧭",
         "vocab": [
+          {
+            "target": "soldat",
+            "en": "soldier"
+          },
+          {
+            "target": "couleur",
+            "en": "paint"
+          },
           {
             "target": "bouger",
             "en": "move"
@@ -2951,7 +2959,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Français",
-            "en": "Frenchman"
+            "en": "French"
           },
           {
             "target": "princesse",
@@ -2968,14 +2976,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "adieu",
             "en": "bye"
-          },
-          {
-            "target": "costume",
-            "en": "suit"
-          },
-          {
-            "target": "entreprise",
-            "en": "enterprise"
           }
         ]
       },
@@ -2987,6 +2987,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "💬",
         "vocab": [
+          {
+            "target": "costume",
+            "en": "suit"
+          },
+          {
+            "target": "entreprise",
+            "en": "enterprise"
+          },
           {
             "target": "utile",
             "en": "useful"
@@ -3078,14 +3086,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ange",
             "en": "angel"
-          },
-          {
-            "target": "agir",
-            "en": "have effect"
-          },
-          {
-            "target": "imbécile",
-            "en": "fool"
           }
         ]
       },
@@ -3097,6 +3097,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "🎓",
         "vocab": [
+          {
+            "target": "agir",
+            "en": "have effect"
+          },
+          {
+            "target": "imbécile",
+            "en": "fool"
+          },
           {
             "target": "cinéma",
             "en": "cinema"
@@ -3188,14 +3196,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "échapper",
             "en": "escape"
-          },
-          {
-            "target": "réel",
-            "en": "real"
-          },
-          {
-            "target": "couverture",
-            "en": "cover"
           }
         ]
       },
@@ -3207,6 +3207,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "⭐",
         "vocab": [
+          {
+            "target": "réel",
+            "en": "real"
+          },
+          {
+            "target": "couverture",
+            "en": "cover"
+          },
           {
             "target": "article",
             "en": "commodity"
@@ -3298,14 +3306,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "viande",
             "en": "meat"
-          },
-          {
-            "target": "piège",
-            "en": "trap"
-          },
-          {
-            "target": "trésor",
-            "en": "treasure"
           }
         ]
       },
@@ -3318,6 +3318,14 @@ export const sections: SectionBlueprint[] = [
         "icon": "📚",
         "vocab": [
           {
+            "target": "piège",
+            "en": "trap"
+          },
+          {
+            "target": "trésor",
+            "en": "treasure"
+          },
+          {
             "target": "perte",
             "en": "loss"
           },
@@ -3328,10 +3336,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "retraite",
             "en": "retirement"
-          },
-          {
-            "target": "étranger",
-            "en": "alien"
           },
           {
             "target": "poulet",
@@ -3412,10 +3416,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "note",
             "en": "bill"
-          },
-          {
-            "target": "doigt",
-            "en": "finger"
           }
         ]
       },
@@ -3427,6 +3427,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "🗣️",
         "vocab": [
+          {
+            "target": "doigt",
+            "en": "finger"
+          },
           {
             "target": "mensonge",
             "en": "lie"
@@ -3522,10 +3526,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "supporter",
             "en": "endure"
-          },
-          {
-            "target": "infirmière",
-            "en": "nurse"
           }
         ]
       },
@@ -3537,6 +3537,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "✍️",
         "vocab": [
+          {
+            "target": "infirmière",
+            "en": "nurse"
+          },
           {
             "target": "métier",
             "en": "trade"
@@ -3632,10 +3636,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "virer",
             "en": "endorse"
-          },
-          {
-            "target": "permettre",
-            "en": "allow"
           }
         ]
       },
@@ -3647,6 +3647,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "🌍",
         "vocab": [
+          {
+            "target": "permettre",
+            "en": "allow"
+          },
           {
             "target": "pluie",
             "en": "rain"
@@ -3742,10 +3746,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "évident",
             "en": "obvious"
-          },
-          {
-            "target": "distance",
-            "en": "offset"
           }
         ]
       },
@@ -3757,6 +3757,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "🍽️",
         "vocab": [
+          {
+            "target": "distance",
+            "en": "offset"
+          },
           {
             "target": "titre",
             "en": "heading"
@@ -3787,7 +3791,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "logique",
-            "en": "logical"
+            "en": "logic"
           },
           {
             "target": "montagne",
@@ -3852,10 +3856,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "nombreux",
             "en": "many"
-          },
-          {
-            "target": "physique",
-            "en": "physics"
           }
         ]
       },
@@ -3867,6 +3867,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "🏙️",
         "vocab": [
+          {
+            "target": "physique",
+            "en": "physics"
+          },
           {
             "target": "crier",
             "en": "cry out"
@@ -3962,10 +3966,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "puce",
             "en": "flea"
-          },
-          {
-            "target": "canon",
-            "en": "cannon"
           }
         ]
       },
@@ -3977,6 +3977,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "🧭",
         "vocab": [
+          {
+            "target": "canon",
+            "en": "cannon"
+          },
           {
             "target": "liquide",
             "en": "liquid"
@@ -4072,10 +4076,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "inviter",
             "en": "invite"
-          },
-          {
-            "target": "élevé",
-            "en": "well mannered"
           }
         ]
       },
@@ -4087,6 +4087,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "💬",
         "vocab": [
+          {
+            "target": "élevé",
+            "en": "well mannered"
+          },
           {
             "target": "chair",
             "en": "flesh"
@@ -4182,10 +4186,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "journaliste",
             "en": "female journalist"
-          },
-          {
-            "target": "chouette",
-            "en": "owl"
           }
         ]
       },
@@ -4197,6 +4197,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "🎓",
         "vocab": [
+          {
+            "target": "chouette",
+            "en": "owl"
+          },
           {
             "target": "geste",
             "en": "gesture"
@@ -4239,7 +4243,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "somme",
-            "en": "nap"
+            "en": "amount"
           },
           {
             "target": "conférence",
@@ -4291,11 +4295,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "conseiller",
-            "en": "counsel"
-          },
-          {
-            "target": "studio",
-            "en": "workshop"
+            "en": "leader"
           }
         ]
       },
@@ -4307,6 +4307,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "⭐",
         "vocab": [
+          {
+            "target": "studio",
+            "en": "workshop"
+          },
           {
             "target": "lapin",
             "en": "rabbit"
@@ -4402,10 +4406,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "poupée",
             "en": "doll"
-          },
-          {
-            "target": "remplacer",
-            "en": "replace"
           }
         ]
       },
@@ -4417,6 +4417,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "📚",
         "vocab": [
+          {
+            "target": "remplacer",
+            "en": "replace"
+          },
           {
             "target": "prisonnier",
             "en": "prisoner"
@@ -4512,10 +4516,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "whisky",
             "en": "whiskey"
-          },
-          {
-            "target": "ballon",
-            "en": "soccer ball"
           }
         ]
       },
@@ -4528,6 +4528,10 @@ export const sections: SectionBlueprint[] = [
         "icon": "🗣️",
         "vocab": [
           {
+            "target": "ballon",
+            "en": "soccer ball"
+          },
+          {
             "target": "attirer",
             "en": "attract"
           },
@@ -4538,10 +4542,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "loup",
             "en": "wolf"
-          },
-          {
-            "target": "personnage",
-            "en": "person"
           },
           {
             "target": "accompagner",
@@ -4796,20 +4796,12 @@ export const sections: SectionBlueprint[] = [
             "en": "mystery"
           },
           {
-            "target": "maîtresse",
-            "en": "lover"
-          },
-          {
             "target": "port",
             "en": "harbor"
           },
           {
             "target": "tension",
             "en": "voltage"
-          },
-          {
-            "target": "vierge",
-            "en": "virgin"
           },
           {
             "target": "secteur",
@@ -4846,6 +4838,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "courrier",
             "en": "piece of mail"
+          },
+          {
+            "target": "volant",
+            "en": "steering-wheel"
+          },
+          {
+            "target": "Anne",
+            "en": "Ann"
           }
         ]
       },
@@ -4857,14 +4857,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "🍽️",
         "vocab": [
-          {
-            "target": "volant",
-            "en": "steering-wheel"
-          },
-          {
-            "target": "Anne",
-            "en": "Ann"
-          },
           {
             "target": "tasse",
             "en": "cup"
@@ -4879,7 +4871,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Japonais",
-            "en": "Japanese"
+            "en": "Japanese language"
           },
           {
             "target": "soigner",
@@ -4956,6 +4948,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "organiser",
             "en": "organize"
+          },
+          {
+            "target": "moto",
+            "en": "motorcycle"
+          },
+          {
+            "target": "effort",
+            "en": "attempt"
           }
         ]
       },
@@ -4967,14 +4967,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "🏙️",
         "vocab": [
-          {
-            "target": "moto",
-            "en": "motorcycle"
-          },
-          {
-            "target": "effort",
-            "en": "attempt"
-          },
           {
             "target": "proposition",
             "en": "presentation"
@@ -5066,6 +5058,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "musée",
             "en": "museum"
+          },
+          {
+            "target": "refuser",
+            "en": "refuse"
+          },
+          {
+            "target": "pensée",
+            "en": "thought"
           }
         ]
       },
@@ -5077,14 +5077,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "🧭",
         "vocab": [
-          {
-            "target": "refuser",
-            "en": "refuse"
-          },
-          {
-            "target": "pensée",
-            "en": "thought"
-          },
           {
             "target": "sable",
             "en": "sand"
@@ -5176,6 +5168,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ouverture",
             "en": "opening"
+          },
+          {
+            "target": "huile",
+            "en": "oil"
+          },
+          {
+            "target": "parfum",
+            "en": "perfume"
           }
         ]
       },
@@ -5187,14 +5187,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "💬",
         "vocab": [
-          {
-            "target": "huile",
-            "en": "oil"
-          },
-          {
-            "target": "parfum",
-            "en": "perfume"
-          },
           {
             "target": "fêter",
             "en": "celebrate"
@@ -5286,6 +5278,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "plateau",
             "en": "tray"
+          },
+          {
+            "target": "mai",
+            "en": "May"
+          },
+          {
+            "target": "humour",
+            "en": "humor"
           }
         ]
       },
@@ -5297,14 +5297,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "🎓",
         "vocab": [
-          {
-            "target": "mai",
-            "en": "May"
-          },
-          {
-            "target": "humour",
-            "en": "humor"
-          },
           {
             "target": "moche",
             "en": "ugly"
@@ -5370,6 +5362,10 @@ export const sections: SectionBlueprint[] = [
             "en": "employee"
           },
           {
+            "target": "Angle",
+            "en": "Englishman"
+          },
+          {
             "target": "participer",
             "en": "take part"
           },
@@ -5396,6 +5392,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "poubelle",
             "en": "garbage can"
+          },
+          {
+            "target": "viol",
+            "en": "rape"
           }
         ]
       },
@@ -5407,10 +5407,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "⭐",
         "vocab": [
-          {
-            "target": "viol",
-            "en": "rape"
-          },
           {
             "target": "pouls",
             "en": "pulse"
@@ -5506,6 +5502,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "oxygène",
             "en": "oxygen"
+          },
+          {
+            "target": "salade",
+            "en": "salad"
           }
         ]
       },
@@ -5518,10 +5518,6 @@ export const sections: SectionBlueprint[] = [
         "icon": "📚",
         "vocab": [
           {
-            "target": "salade",
-            "en": "salad"
-          },
-          {
             "target": "flotte",
             "en": "fleet"
           },
@@ -5532,10 +5528,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "amiral",
             "en": "admiral"
-          },
-          {
-            "target": "guide",
-            "en": "leader"
           },
           {
             "target": "comte",
@@ -5567,7 +5559,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "vague",
-            "en": "wave"
+            "en": "loose"
           },
           {
             "target": "laboratoire",
@@ -5616,6 +5608,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "révolution",
             "en": "revolution"
+          },
+          {
+            "target": "barbe",
+            "en": "beard"
+          },
+          {
+            "target": "commerce",
+            "en": "business"
           }
         ]
       },
@@ -5627,14 +5627,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "🗣️",
         "vocab": [
-          {
-            "target": "barbe",
-            "en": "beard"
-          },
-          {
-            "target": "commerce",
-            "en": "business"
-          },
           {
             "target": "parent",
             "en": "relative"
@@ -5681,7 +5673,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Espagnol",
-            "en": "Spaniard"
+            "en": "Spanish language"
           },
           {
             "target": "régime",
@@ -5726,6 +5718,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "caractère",
             "en": "nature"
+          },
+          {
+            "target": "intelligence",
+            "en": "wisdom"
+          },
+          {
+            "target": "résister",
+            "en": "resist"
           }
         ]
       },
@@ -5737,14 +5737,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "✍️",
         "vocab": [
-          {
-            "target": "intelligence",
-            "en": "wisdom"
-          },
-          {
-            "target": "résister",
-            "en": "resist"
-          },
           {
             "target": "douze",
             "en": "twelve"
@@ -5836,6 +5828,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "généreux",
             "en": "generous"
+          },
+          {
+            "target": "manuel",
+            "en": "manual"
+          },
+          {
+            "target": "officiel",
+            "en": "official"
           }
         ]
       },
@@ -5847,14 +5847,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "🌍",
         "vocab": [
-          {
-            "target": "manuel",
-            "en": "manual"
-          },
-          {
-            "target": "officiel",
-            "en": "official"
-          },
           {
             "target": "reconnaissance",
             "en": "boy scout"
@@ -5946,6 +5938,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "méthode",
             "en": "method"
+          },
+          {
+            "target": "autopsie",
+            "en": "autopsy"
+          },
+          {
+            "target": "Italien",
+            "en": "Italian"
           }
         ]
       },
@@ -5957,14 +5957,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "🍽️",
         "vocab": [
-          {
-            "target": "autopsie",
-            "en": "autopsy"
-          },
-          {
-            "target": "Italien",
-            "en": "Italian"
-          },
           {
             "target": "quoique",
             "en": "though"
@@ -6056,6 +6048,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "collège",
             "en": "high school"
+          },
+          {
+            "target": "ténèbres",
+            "en": "darkness"
+          },
+          {
+            "target": "dent",
+            "en": "tooth"
           }
         ]
       },
@@ -6067,14 +6067,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "🏙️",
         "vocab": [
-          {
-            "target": "ténèbres",
-            "en": "darkness"
-          },
-          {
-            "target": "dent",
-            "en": "tooth"
-          },
           {
             "target": "moderne",
             "en": "modern"
@@ -6166,6 +6158,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pasteur",
             "en": "shepherd"
+          },
+          {
+            "target": "sel",
+            "en": "salt"
+          },
+          {
+            "target": "maintenir",
+            "en": "go on"
           }
         ]
       },
@@ -6177,14 +6177,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "🧭",
         "vocab": [
-          {
-            "target": "sel",
-            "en": "salt"
-          },
-          {
-            "target": "maintenir",
-            "en": "go on"
-          },
           {
             "target": "stable",
             "en": "steady"
@@ -6276,6 +6268,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "règlement",
             "en": "full payment"
+          },
+          {
+            "target": "symbole",
+            "en": "symbol"
+          },
+          {
+            "target": "marin",
+            "en": "of the sea"
           }
         ]
       },
@@ -6287,14 +6287,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "💬",
         "vocab": [
-          {
-            "target": "symbole",
-            "en": "symbol"
-          },
-          {
-            "target": "marin",
-            "en": "of the sea"
-          },
           {
             "target": "revanche",
             "en": "revenge"
@@ -6321,7 +6313,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "franc",
-            "en": "Frankish"
+            "en": "frank"
           },
           {
             "target": "plante",
@@ -6386,6 +6378,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "aile",
             "en": "wing"
+          },
+          {
+            "target": "protocole",
+            "en": "minutes"
+          },
+          {
+            "target": "chatte",
+            "en": "female cat"
           }
         ]
       },
@@ -6397,14 +6397,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "🎓",
         "vocab": [
-          {
-            "target": "protocole",
-            "en": "minutes"
-          },
-          {
-            "target": "chatte",
-            "en": "female cat"
-          },
           {
             "target": "poignée",
             "en": "handle"
@@ -6496,6 +6488,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "octobre",
             "en": "October"
+          },
+          {
+            "target": "renoncer",
+            "en": "give up"
+          },
+          {
+            "target": "république",
+            "en": "republic"
           }
         ]
       },
@@ -6507,14 +6507,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "⭐",
         "vocab": [
-          {
-            "target": "renoncer",
-            "en": "give up"
-          },
-          {
-            "target": "république",
-            "en": "republic"
-          },
           {
             "target": "domicile",
             "en": "home"
@@ -6606,6 +6598,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "faiblesse",
             "en": "weakness"
+          },
+          {
+            "target": "remarquable",
+            "en": "remarkable"
+          },
+          {
+            "target": "malentendu",
+            "en": "misunderstanding"
           }
         ]
       },
@@ -6617,14 +6617,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "📚",
         "vocab": [
-          {
-            "target": "remarquable",
-            "en": "remarkable"
-          },
-          {
-            "target": "malentendu",
-            "en": "misunderstanding"
-          },
           {
             "target": "élément",
             "en": "element"
@@ -6716,6 +6708,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "industrie",
             "en": "industry"
+          },
+          {
+            "target": "soudainement",
+            "en": "suddenly"
+          },
+          {
+            "target": "linge",
+            "en": "cloth"
           }
         ]
       },
@@ -6727,14 +6727,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "🗣️",
         "vocab": [
-          {
-            "target": "soudainement",
-            "en": "suddenly"
-          },
-          {
-            "target": "linge",
-            "en": "cloth"
-          },
           {
             "target": "fragile",
             "en": "brittle"
@@ -6826,6 +6818,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "endormir",
             "en": "put to sleep"
+          },
+          {
+            "target": "échanger",
+            "en": "swap"
+          },
+          {
+            "target": "fillette",
+            "en": "little girl"
           }
         ]
       },
@@ -6837,14 +6837,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "✍️",
         "vocab": [
-          {
-            "target": "échanger",
-            "en": "swap"
-          },
-          {
-            "target": "fillette",
-            "en": "little girl"
-          },
           {
             "target": "punition",
             "en": "punishment"
@@ -6871,7 +6863,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Tigre",
-            "en": "Tigris"
+            "en": "tiger"
           },
           {
             "target": "chariot",
@@ -6923,7 +6915,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Irlandais",
-            "en": "Irishman"
+            "en": "Irish"
           },
           {
             "target": "défaut",
@@ -6936,6 +6928,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ambassade",
             "en": "embassy"
+          },
+          {
+            "target": "adversaire",
+            "en": "opponent"
+          },
+          {
+            "target": "automne",
+            "en": "autumn"
           }
         ]
       },
@@ -6947,14 +6947,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "🌍",
         "vocab": [
-          {
-            "target": "adversaire",
-            "en": "opponent"
-          },
-          {
-            "target": "automne",
-            "en": "autumn"
-          },
           {
             "target": "économie",
             "en": "economy"
@@ -7046,6 +7038,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "formule",
             "en": "formula"
+          },
+          {
+            "target": "sobre",
+            "en": "sober"
+          },
+          {
+            "target": "merveille",
+            "en": "wonder"
           }
         ]
       },
@@ -7057,14 +7057,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "🍽️",
         "vocab": [
-          {
-            "target": "sobre",
-            "en": "sober"
-          },
-          {
-            "target": "merveille",
-            "en": "wonder"
-          },
           {
             "target": "péter",
             "en": "fart"
@@ -7151,11 +7143,19 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Britannique",
-            "en": "Briton"
+            "en": "British"
           },
           {
             "target": "poésie",
             "en": "poetry"
+          },
+          {
+            "target": "tabac",
+            "en": "tobacconist's shop"
+          },
+          {
+            "target": "hôte",
+            "en": "guest"
           }
         ]
       },
@@ -7167,14 +7167,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "🏙️",
         "vocab": [
-          {
-            "target": "tabac",
-            "en": "tobacconist's shop"
-          },
-          {
-            "target": "hôte",
-            "en": "guest"
-          },
           {
             "target": "représentant",
             "en": "agent"
@@ -7266,6 +7258,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "galerie",
             "en": "gallery"
+          },
+          {
+            "target": "cristal",
+            "en": "crystal"
+          },
+          {
+            "target": "temporaire",
+            "en": "temporary"
           }
         ]
       },
@@ -7277,14 +7277,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "🧭",
         "vocab": [
-          {
-            "target": "cristal",
-            "en": "crystal"
-          },
-          {
-            "target": "temporaire",
-            "en": "temporary"
-          },
           {
             "target": "spécialement",
             "en": "particularly"
@@ -7347,7 +7339,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "extrême",
-            "en": "extremity"
+            "en": "extreme"
           },
           {
             "target": "requête",
@@ -7376,6 +7368,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pénible",
             "en": "miserable"
+          },
+          {
+            "target": "oreiller",
+            "en": "pillow"
+          },
+          {
+            "target": "éclair",
+            "en": "flash of lightning"
           }
         ]
       },
@@ -7387,14 +7387,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "💬",
         "vocab": [
-          {
-            "target": "oreiller",
-            "en": "pillow"
-          },
-          {
-            "target": "éclair",
-            "en": "flash of lightning"
-          },
           {
             "target": "tactique",
             "en": "tactics"
@@ -7486,6 +7478,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "joint",
             "en": "seam"
+          },
+          {
+            "target": "grippe",
+            "en": "grip"
+          },
+          {
+            "target": "chiffre",
+            "en": "figure"
           }
         ]
       },
@@ -7497,14 +7497,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "🎓",
         "vocab": [
-          {
-            "target": "grippe",
-            "en": "grip"
-          },
-          {
-            "target": "chiffre",
-            "en": "figure"
-          },
           {
             "target": "hurler",
             "en": "howl"
@@ -7562,6 +7554,10 @@ export const sections: SectionBlueprint[] = [
             "en": "meet"
           },
           {
+            "target": "établi",
+            "en": "generally known"
+          },
+          {
             "target": "ronde",
             "en": "round"
           },
@@ -7596,6 +7592,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "botte",
             "en": "boot"
+          },
+          {
+            "target": "député",
+            "en": "deputy"
           }
         ]
       },
@@ -7607,10 +7607,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "⭐",
         "vocab": [
-          {
-            "target": "député",
-            "en": "deputy"
-          },
           {
             "target": "barrière",
             "en": "fence"
@@ -7642,10 +7638,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "poignet",
             "en": "wrist"
-          },
-          {
-            "target": "montant",
-            "en": "amount"
           },
           {
             "target": "toile",
@@ -7706,6 +7698,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "âgé",
             "en": "aged"
+          },
+          {
+            "target": "chanteur",
+            "en": "singer"
+          },
+          {
+            "target": "rançon",
+            "en": "ransom"
           }
         ]
       },
@@ -7717,14 +7717,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "📚",
         "vocab": [
-          {
-            "target": "chanteur",
-            "en": "singer"
-          },
-          {
-            "target": "rançon",
-            "en": "ransom"
-          },
           {
             "target": "nounou",
             "en": "nanny"
@@ -7816,6 +7808,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sucer",
             "en": "suck"
+          },
+          {
+            "target": "habiter",
+            "en": "live"
+          },
+          {
+            "target": "allonger",
+            "en": "lengthen"
           }
         ]
       },
@@ -7827,14 +7827,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "🗣️",
         "vocab": [
-          {
-            "target": "habiter",
-            "en": "live"
-          },
-          {
-            "target": "allonger",
-            "en": "lengthen"
-          },
           {
             "target": "veine",
             "en": "inspiration"
@@ -7926,6 +7918,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "cheminée",
             "en": "fireplace"
+          },
+          {
+            "target": "distraire",
+            "en": "distract"
+          },
+          {
+            "target": "profondeur",
+            "en": "depth"
           }
         ]
       },
@@ -7937,14 +7937,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "✍️",
         "vocab": [
-          {
-            "target": "distraire",
-            "en": "distract"
-          },
-          {
-            "target": "profondeur",
-            "en": "depth"
-          },
           {
             "target": "grain",
             "en": "pip"
@@ -7984,6 +7976,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "stand",
             "en": "shed"
+          },
+          {
+            "target": "nègre",
+            "en": "Negro"
           },
           {
             "target": "représenter",
@@ -8036,6 +8032,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "prétexte",
             "en": "pretext"
+          },
+          {
+            "target": "impasse",
+            "en": "dead-end street"
           }
         ]
       },
@@ -8048,16 +8048,16 @@ export const sections: SectionBlueprint[] = [
         "icon": "🌍",
         "vocab": [
           {
-            "target": "impasse",
-            "en": "dead-end street"
-          },
-          {
             "target": "modeste",
             "en": "modest"
           },
           {
             "target": "vœu",
             "en": "wish"
+          },
+          {
+            "target": "opposé",
+            "en": "alien"
           },
           {
             "target": "arc",
@@ -8163,7 +8163,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "outre",
-            "en": "goatskin"
+            "en": "across"
           },
           {
             "target": "démonstration",
@@ -8455,7 +8455,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "fermier",
-            "en": "farmer"
+            "en": "free range"
           },
           {
             "target": "vapeur",
@@ -9299,7 +9299,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "aimant",
-            "en": "affectionate"
+            "en": "magnet"
           },
           {
             "target": "protecteur",
@@ -9330,10 +9330,6 @@ export const sections: SectionBlueprint[] = [
             "en": "old man"
           },
           {
-            "target": "brun",
-            "en": "black"
-          },
-          {
             "target": "infini",
             "en": "everlasting"
           },
@@ -9356,6 +9352,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "porteur",
             "en": "porter"
+          },
+          {
+            "target": "humilier",
+            "en": "abase"
           }
         ]
       },
@@ -9367,10 +9367,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "🏙️",
         "vocab": [
-          {
-            "target": "humilier",
-            "en": "abase"
-          },
           {
             "target": "semer",
             "en": "sow"
@@ -9466,6 +9462,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "boucler",
             "en": "gird"
+          },
+          {
+            "target": "sinistre",
+            "en": "accident"
           }
         ]
       },
@@ -9477,10 +9477,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "🧭",
         "vocab": [
-          {
-            "target": "sinistre",
-            "en": "accident"
-          },
           {
             "target": "plaider",
             "en": "plead"
@@ -9576,6 +9572,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Bouddha",
             "en": "Buddha"
+          },
+          {
+            "target": "culte",
+            "en": "cult"
           }
         ]
       },
@@ -9588,16 +9588,16 @@ export const sections: SectionBlueprint[] = [
         "icon": "💬",
         "vocab": [
           {
-            "target": "culte",
-            "en": "cult"
-          },
-          {
             "target": "évier",
             "en": "sink"
           },
           {
             "target": "ouvrier",
             "en": "working man"
+          },
+          {
+            "target": "onde",
+            "en": "wave"
           },
           {
             "target": "moulin",
@@ -10142,6 +10142,10 @@ export const sections: SectionBlueprint[] = [
             "en": "demonstration"
           },
           {
+            "target": "pieu",
+            "en": "post"
+          },
+          {
             "target": "schéma",
             "en": "model"
           },
@@ -10232,10 +10236,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "parlement",
             "en": "parliament"
-          },
-          {
-            "target": "ivresse",
-            "en": "drunkenness"
           }
         ]
       },
@@ -10247,6 +10247,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "🌍",
         "vocab": [
+          {
+            "target": "ivresse",
+            "en": "drunkenness"
+          },
           {
             "target": "réserver",
             "en": "reserve"
@@ -10342,10 +10346,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "noyau",
             "en": "pit"
-          },
-          {
-            "target": "déshabiller",
-            "en": "undress"
           }
         ]
       },
@@ -10357,6 +10357,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "🍽️",
         "vocab": [
+          {
+            "target": "déshabiller",
+            "en": "undress"
+          },
           {
             "target": "révolte",
             "en": "rebellion"
@@ -10452,10 +10456,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "comparaison",
             "en": "comparison"
-          },
-          {
-            "target": "ragoût",
-            "en": "stew"
           }
         ]
       },
@@ -10467,6 +10467,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "🏙️",
         "vocab": [
+          {
+            "target": "ragoût",
+            "en": "stew"
+          },
+          {
+            "target": "paysan",
+            "en": "farmer"
+          },
           {
             "target": "imiter",
             "en": "imitate"
@@ -10545,7 +10553,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Suédois",
-            "en": "Swede"
+            "en": "Swedish"
           },
           {
             "target": "seuil",
@@ -10558,14 +10566,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "frein",
             "en": "brake"
-          },
-          {
-            "target": "hésiter",
-            "en": "hesitate"
-          },
-          {
-            "target": "débattre",
-            "en": "stir up"
           }
         ]
       },
@@ -10577,6 +10577,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "🧭",
         "vocab": [
+          {
+            "target": "hésiter",
+            "en": "hesitate"
+          },
+          {
+            "target": "débattre",
+            "en": "stir up"
+          },
           {
             "target": "adolescente",
             "en": "young woman"
@@ -10668,14 +10676,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pourcentage",
             "en": "percent"
-          },
-          {
-            "target": "Turc",
-            "en": "Turk"
-          },
-          {
-            "target": "négligence",
-            "en": "negligence"
           }
         ]
       },
@@ -10687,6 +10687,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "💬",
         "vocab": [
+          {
+            "target": "Turc",
+            "en": "Turk"
+          },
+          {
+            "target": "négligence",
+            "en": "negligence"
+          },
           {
             "target": "organe",
             "en": "organ"
@@ -10778,14 +10786,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Vénus",
             "en": "Evening Star"
-          },
-          {
-            "target": "lèvre",
-            "en": "lip"
-          },
-          {
-            "target": "naviguer",
-            "en": "navigate"
           }
         ]
       },
@@ -10797,6 +10797,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "🎓",
         "vocab": [
+          {
+            "target": "lèvre",
+            "en": "lip"
+          },
+          {
+            "target": "naviguer",
+            "en": "navigate"
+          },
           {
             "target": "tendresse",
             "en": "tenderness"
@@ -10888,14 +10896,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "fureur",
             "en": "rage"
-          },
-          {
-            "target": "Jupiter",
-            "en": "Jove"
-          },
-          {
-            "target": "perroquet",
-            "en": "parrot"
           }
         ]
       },
@@ -10907,6 +10907,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "⭐",
         "vocab": [
+          {
+            "target": "Jupiter",
+            "en": "Jove"
+          },
+          {
+            "target": "perroquet",
+            "en": "parrot"
+          },
           {
             "target": "corne",
             "en": "horn"
@@ -10998,14 +11006,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "tracteur",
             "en": "tractor"
-          },
-          {
-            "target": "recruter",
-            "en": "recruit"
-          },
-          {
-            "target": "mosquée",
-            "en": "mosque"
           }
         ]
       },
@@ -11017,6 +11017,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "📚",
         "vocab": [
+          {
+            "target": "recruter",
+            "en": "recruit"
+          },
+          {
+            "target": "mosquée",
+            "en": "mosque"
+          },
           {
             "target": "croûte",
             "en": "crust"
@@ -11108,14 +11116,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "claquer",
             "en": "click"
-          },
-          {
-            "target": "cascade",
-            "en": "waterfall"
-          },
-          {
-            "target": "Espagnole",
-            "en": "Spanish woman"
           }
         ]
       },
@@ -11128,8 +11128,16 @@ export const sections: SectionBlueprint[] = [
         "icon": "🗣️",
         "vocab": [
           {
+            "target": "cascade",
+            "en": "waterfall"
+          },
+          {
+            "target": "Espagnole",
+            "en": "Spanish woman"
+          },
+          {
             "target": "industriel",
-            "en": "industrialist"
+            "en": "industrial"
           },
           {
             "target": "inférieur",
@@ -11218,14 +11226,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "antique",
             "en": "ancient"
-          },
-          {
-            "target": "ramper",
-            "en": "crawl"
-          },
-          {
-            "target": "golfe",
-            "en": "gulf"
           }
         ]
       },
@@ -11237,6 +11237,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "✍️",
         "vocab": [
+          {
+            "target": "ramper",
+            "en": "crawl"
+          },
+          {
+            "target": "golfe",
+            "en": "gulf"
+          },
           {
             "target": "Danois",
             "en": "Dane"
@@ -11328,14 +11336,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pellicule",
             "en": "film"
-          },
-          {
-            "target": "apprentissage",
-            "en": "learning"
-          },
-          {
-            "target": "baver",
-            "en": "salivate"
           }
         ]
       },
@@ -11347,6 +11347,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "🌍",
         "vocab": [
+          {
+            "target": "apprentissage",
+            "en": "learning"
+          },
+          {
+            "target": "baver",
+            "en": "salivate"
+          },
           {
             "target": "Lorraine",
             "en": "Lothringen"
@@ -11438,14 +11446,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "compenser",
             "en": "compensate"
-          },
-          {
-            "target": "commando",
-            "en": "detachment"
-          },
-          {
-            "target": "castor",
-            "en": "beaver"
           }
         ]
       },
@@ -11457,6 +11457,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "🍽️",
         "vocab": [
+          {
+            "target": "commando",
+            "en": "detachment"
+          },
+          {
+            "target": "castor",
+            "en": "beaver"
+          },
           {
             "target": "Genève",
             "en": "Geneva"
@@ -11548,14 +11556,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "notaire",
             "en": "notary"
-          },
-          {
-            "target": "compartiment",
-            "en": "compartment"
-          },
-          {
-            "target": "copier",
-            "en": "copy"
           }
         ]
       },
@@ -11567,6 +11567,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "🏙️",
         "vocab": [
+          {
+            "target": "compartiment",
+            "en": "compartment"
+          },
+          {
+            "target": "copier",
+            "en": "copy"
+          },
           {
             "target": "congélateur",
             "en": "freezer"
@@ -11658,14 +11666,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "fisc",
             "en": "tax office"
-          },
-          {
-            "target": "sincérité",
-            "en": "sincerity"
-          },
-          {
-            "target": "résident",
-            "en": "resident"
           }
         ]
       },
@@ -11677,6 +11677,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "🧭",
         "vocab": [
+          {
+            "target": "sincérité",
+            "en": "sincerity"
+          },
+          {
+            "target": "résident",
+            "en": "resident"
+          },
           {
             "target": "Colombie",
             "en": "Colombia"
@@ -11768,14 +11776,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "réfrigérateur",
             "en": "refrigerator"
-          },
-          {
-            "target": "dorée",
-            "en": "John Dory"
-          },
-          {
-            "target": "applaudir",
-            "en": "clap"
           }
         ]
       },
@@ -11787,6 +11787,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "💬",
         "vocab": [
+          {
+            "target": "dorée",
+            "en": "John Dory"
+          },
+          {
+            "target": "applaudir",
+            "en": "clap"
+          },
           {
             "target": "vocabulaire",
             "en": "vocabulary"
@@ -11878,14 +11886,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "gonfler",
             "en": "swell"
-          },
-          {
-            "target": "douane",
-            "en": "customs"
-          },
-          {
-            "target": "boucherie",
-            "en": "butcher's shop"
           }
         ]
       },
@@ -11897,6 +11897,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "🎓",
         "vocab": [
+          {
+            "target": "douane",
+            "en": "customs"
+          },
+          {
+            "target": "boucherie",
+            "en": "butcher's shop"
+          },
           {
             "target": "exterminer",
             "en": "wipe out"
@@ -11987,15 +11995,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Portugais",
-            "en": "Portuguese"
-          },
-          {
-            "target": "actualité",
-            "en": "topic"
-          },
-          {
-            "target": "Belgique",
-            "en": "Belgium"
+            "en": "Portuguese language"
           }
         ]
       },
@@ -12007,6 +12007,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "⭐",
         "vocab": [
+          {
+            "target": "actualité",
+            "en": "topic"
+          },
+          {
+            "target": "Belgique",
+            "en": "Belgium"
+          },
           {
             "target": "Autriche",
             "en": "Austria"
@@ -12098,14 +12106,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "constant",
             "en": "permanent"
-          },
-          {
-            "target": "hydrogène",
-            "en": "hydrogen"
-          },
-          {
-            "target": "litre",
-            "en": "liter"
           }
         ]
       },
@@ -12117,6 +12117,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "📚",
         "vocab": [
+          {
+            "target": "hydrogène",
+            "en": "hydrogen"
+          },
+          {
+            "target": "litre",
+            "en": "liter"
+          },
           {
             "target": "Messie",
             "en": "Messiah"
@@ -12208,14 +12216,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "chiffon",
             "en": "scrap"
-          },
-          {
-            "target": "baronne",
-            "en": "baroness"
-          },
-          {
-            "target": "aléatoire",
-            "en": "uncertain"
           }
         ]
       },
@@ -12227,6 +12227,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "🗣️",
         "vocab": [
+          {
+            "target": "baronne",
+            "en": "baroness"
+          },
+          {
+            "target": "aléatoire",
+            "en": "uncertain"
+          },
           {
             "target": "rez-de-chaussée",
             "en": "ground-floor"
@@ -12318,14 +12326,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Grande-Bretagne",
             "en": "Great Britain"
-          },
-          {
-            "target": "autoritaire",
-            "en": "authorative"
-          },
-          {
-            "target": "cyanure",
-            "en": "cyanide"
           }
         ]
       },
@@ -12337,6 +12337,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "✍️",
         "vocab": [
+          {
+            "target": "autoritaire",
+            "en": "authorative"
+          },
+          {
+            "target": "cyanure",
+            "en": "cyanide"
+          },
           {
             "target": "charlatan",
             "en": "quack"
@@ -12428,14 +12436,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pou",
             "en": "louse"
-          },
-          {
-            "target": "flottant",
-            "en": "fluttering"
-          },
-          {
-            "target": "lanterne",
-            "en": "lantern"
           }
         ]
       },
@@ -12447,6 +12447,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "🌍",
         "vocab": [
+          {
+            "target": "flottant",
+            "en": "fluttering"
+          },
+          {
+            "target": "lanterne",
+            "en": "lantern"
+          },
           {
             "target": "Athènes",
             "en": "Athens"
@@ -12538,14 +12546,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "anus",
             "en": "arse"
-          },
-          {
-            "target": "bile",
-            "en": "gall"
-          },
-          {
-            "target": "adhésif",
-            "en": "adhesive"
           }
         ]
       },
@@ -12557,6 +12557,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "🍽️",
         "vocab": [
+          {
+            "target": "bile",
+            "en": "gall"
+          },
+          {
+            "target": "adhésif",
+            "en": "adhesive"
+          },
           {
             "target": "protester",
             "en": "protest"
@@ -12648,14 +12656,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "cupidité",
             "en": "greed"
-          },
-          {
-            "target": "variété",
-            "en": "variety entertainment"
-          },
-          {
-            "target": "pioche",
-            "en": "pick-axe"
           }
         ]
       },
@@ -12667,6 +12667,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "🏙️",
         "vocab": [
+          {
+            "target": "variété",
+            "en": "variety entertainment"
+          },
+          {
+            "target": "pioche",
+            "en": "pick-axe"
+          },
           {
             "target": "naufrage",
             "en": "shipwreck"
@@ -12758,14 +12766,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "fréquent",
             "en": "frequent"
-          },
-          {
-            "target": "avoine",
-            "en": "oats"
-          },
-          {
-            "target": "caille",
-            "en": "quail"
           }
         ]
       },
@@ -12777,6 +12777,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "🧭",
         "vocab": [
+          {
+            "target": "avoine",
+            "en": "oats"
+          },
+          {
+            "target": "caille",
+            "en": "quail"
+          },
           {
             "target": "gland",
             "en": "acorn"
@@ -12868,14 +12876,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Copenhague",
             "en": "Copenhagen"
-          },
-          {
-            "target": "azote",
-            "en": "nitrogen"
-          },
-          {
-            "target": "boiteux",
-            "en": "lame"
           }
         ]
       },
@@ -12887,6 +12887,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "💬",
         "vocab": [
+          {
+            "target": "azote",
+            "en": "nitrogen"
+          },
+          {
+            "target": "boiteux",
+            "en": "lame"
+          },
           {
             "target": "obéissance",
             "en": "manageability"
@@ -12944,10 +12952,6 @@ export const sections: SectionBlueprint[] = [
             "en": "polite"
           },
           {
-            "target": "accessoire",
-            "en": "accessory"
-          },
-          {
             "target": "anticiper",
             "en": "think ahead"
           },
@@ -12982,10 +12986,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Varsovie",
             "en": "Warsaw"
-          },
-          {
-            "target": "minorité",
-            "en": "minority"
           }
         ]
       },
@@ -12997,6 +12997,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "🎓",
         "vocab": [
+          {
+            "target": "minorité",
+            "en": "minority"
+          },
           {
             "target": "balançoire",
             "en": "swing"
@@ -13092,10 +13096,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "dépendre",
             "en": "depend"
-          },
-          {
-            "target": "corrompre",
-            "en": "bribe"
           }
         ]
       },
@@ -13107,6 +13107,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "⭐",
         "vocab": [
+          {
+            "target": "corrompre",
+            "en": "bribe"
+          },
           {
             "target": "potable",
             "en": "drinkable"
@@ -13148,6 +13152,10 @@ export const sections: SectionBlueprint[] = [
             "en": "delight"
           },
           {
+            "target": "Hébreu",
+            "en": "Hebrew language"
+          },
+          {
             "target": "bobine",
             "en": "coil"
           },
@@ -13181,7 +13189,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "décolleté",
-            "en": "cleavage"
+            "en": "low cut"
           },
           {
             "target": "piller",
@@ -13198,14 +13206,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "imperméable",
             "en": "raincoat"
-          },
-          {
-            "target": "jardinage",
-            "en": "gardening"
-          },
-          {
-            "target": "lâcheté",
-            "en": "cowardice"
           }
         ]
       },
@@ -13217,6 +13217,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "📚",
         "vocab": [
+          {
+            "target": "jardinage",
+            "en": "gardening"
+          },
+          {
+            "target": "lâcheté",
+            "en": "cowardice"
+          },
           {
             "target": "martyre",
             "en": "female martyr"
@@ -13308,14 +13316,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "expédier",
             "en": "send off"
-          },
-          {
-            "target": "indulgent",
-            "en": "merciful"
-          },
-          {
-            "target": "sage-femme",
-            "en": "midwife"
           }
         ]
       },
@@ -13327,6 +13327,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "🗣️",
         "vocab": [
+          {
+            "target": "indulgent",
+            "en": "merciful"
+          },
+          {
+            "target": "sage-femme",
+            "en": "midwife"
+          },
           {
             "target": "rougir",
             "en": "blush"
@@ -13418,14 +13426,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "cafetière",
             "en": "coffee-pot"
-          },
-          {
-            "target": "odorat",
-            "en": "sense of smell"
-          },
-          {
-            "target": "convenir",
-            "en": "be appropriate"
           }
         ]
       },
@@ -13437,6 +13437,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "✍️",
         "vocab": [
+          {
+            "target": "odorat",
+            "en": "sense of smell"
+          },
+          {
+            "target": "convenir",
+            "en": "be appropriate"
+          },
           {
             "target": "aventurer",
             "en": "dare"
@@ -13528,14 +13536,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "alcoolisme",
             "en": "alcoholism"
-          },
-          {
-            "target": "moineau",
-            "en": "sparrow"
-          },
-          {
-            "target": "Hongrie",
-            "en": "Hungary"
           }
         ]
       },
@@ -13547,6 +13547,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "🌍",
         "vocab": [
+          {
+            "target": "moineau",
+            "en": "sparrow"
+          },
+          {
+            "target": "Hongrie",
+            "en": "Hungary"
+          },
           {
             "target": "dicter",
             "en": "inspire"
@@ -13593,7 +13601,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Méduse",
-            "en": "Medusa"
+            "en": "jellyfish"
           },
           {
             "target": "apogée",
@@ -13638,14 +13646,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "adoptif",
             "en": "adopted"
-          },
-          {
-            "target": "réfugier",
-            "en": "take refuge"
-          },
-          {
-            "target": "méfiance",
-            "en": "suspicion"
           }
         ]
       },
@@ -13657,6 +13657,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "🍽️",
         "vocab": [
+          {
+            "target": "réfugier",
+            "en": "take refuge"
+          },
+          {
+            "target": "méfiance",
+            "en": "suspicion"
+          },
           {
             "target": "goudron",
             "en": "tar"
@@ -13748,14 +13756,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "angélique",
             "en": "angelica"
-          },
-          {
-            "target": "bascule",
-            "en": "weighing machine"
-          },
-          {
-            "target": "poulailler",
-            "en": "coop"
           }
         ]
       },
@@ -13767,6 +13767,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "🏙️",
         "vocab": [
+          {
+            "target": "bascule",
+            "en": "weighing machine"
+          },
+          {
+            "target": "poulailler",
+            "en": "coop"
+          },
           {
             "target": "Viêt-nam",
             "en": "Vietnam"
@@ -13858,14 +13866,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "épuiser",
             "en": "tire out"
-          },
-          {
-            "target": "abats",
-            "en": "offal"
-          },
-          {
-            "target": "typiquement",
-            "en": "typically"
           }
         ]
       },
@@ -13877,6 +13877,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "🧭",
         "vocab": [
+          {
+            "target": "abats",
+            "en": "offal"
+          },
+          {
+            "target": "typiquement",
+            "en": "typically"
+          },
           {
             "target": "géométrie",
             "en": "geometry"
@@ -13968,14 +13976,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "aquatique",
             "en": "of water"
-          },
-          {
-            "target": "Mahomet",
-            "en": "Muhammad"
-          },
-          {
-            "target": "cacao",
-            "en": "cocoa"
           }
         ]
       },
@@ -13987,6 +13987,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "💬",
         "vocab": [
+          {
+            "target": "Mahomet",
+            "en": "Muhammad"
+          },
+          {
+            "target": "cacao",
+            "en": "cocoa"
+          },
           {
             "target": "athée",
             "en": "atheist"
@@ -14078,14 +14086,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "surgir",
             "en": "get up"
-          },
-          {
-            "target": "hélice",
-            "en": "propeller"
-          },
-          {
-            "target": "pieuvre",
-            "en": "octopus"
           }
         ]
       },
@@ -14097,6 +14097,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "🎓",
         "vocab": [
+          {
+            "target": "hélice",
+            "en": "propeller"
+          },
+          {
+            "target": "pieuvre",
+            "en": "octopus"
+          },
           {
             "target": "vignoble",
             "en": "vine"
@@ -14187,15 +14195,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Serbe",
-            "en": "Serb"
-          },
-          {
-            "target": "Corse",
-            "en": "Corsican woman"
-          },
-          {
-            "target": "prune",
-            "en": "plum"
+            "en": "Serbian"
           }
         ]
       },
@@ -14208,12 +14208,16 @@ export const sections: SectionBlueprint[] = [
         "icon": "⭐",
         "vocab": [
           {
-            "target": "prêcher",
-            "en": "preach"
+            "target": "Corse",
+            "en": "Corsican woman"
           },
           {
-            "target": "Gaule",
-            "en": "Gaul"
+            "target": "prune",
+            "en": "plum"
+          },
+          {
+            "target": "prêcher",
+            "en": "preach"
           },
           {
             "target": "canari",
@@ -14302,10 +14306,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sabot",
             "en": "hoof"
-          },
-          {
-            "target": "amazone",
-            "en": "Amazon"
           }
         ]
       },
@@ -14317,6 +14317,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "📚",
         "vocab": [
+          {
+            "target": "amazone",
+            "en": "Amazon"
+          },
           {
             "target": "Tchèque",
             "en": "Czech woman"
@@ -14412,10 +14416,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Turque",
             "en": "Turkish woman"
-          },
-          {
-            "target": "récif",
-            "en": "reef"
           }
         ]
       },
@@ -14427,6 +14427,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "🗣️",
         "vocab": [
+          {
+            "target": "récif",
+            "en": "reef"
+          },
           {
             "target": "bretelles",
             "en": "braces"
@@ -14522,10 +14526,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "orateur",
             "en": "orator"
-          },
-          {
-            "target": "tramway",
-            "en": "tram"
           }
         ]
       },
@@ -14537,6 +14537,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "✍️",
         "vocab": [
+          {
+            "target": "tramway",
+            "en": "tram"
+          },
           {
             "target": "délirer",
             "en": "be delirious"
@@ -14632,10 +14636,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "paon",
             "en": "peacock"
-          },
-          {
-            "target": "acquitter",
-            "en": "pay off"
           }
         ]
       },
@@ -14647,6 +14647,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "🌍",
         "vocab": [
+          {
+            "target": "acquitter",
+            "en": "pay off"
+          },
           {
             "target": "grêle",
             "en": "hail"
@@ -14742,10 +14746,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pionnier",
             "en": "pioneer"
-          },
-          {
-            "target": "avant-bras",
-            "en": "lower-arm"
           }
         ]
       },
@@ -14757,6 +14757,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "🍽️",
         "vocab": [
+          {
+            "target": "avant-bras",
+            "en": "lower-arm"
+          },
           {
             "target": "adoucir",
             "en": "ease"
@@ -14852,10 +14856,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Madone",
             "en": "Madonna"
-          },
-          {
-            "target": "anchois",
-            "en": "anchovy"
           }
         ]
       },
@@ -14867,6 +14867,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "🏙️",
         "vocab": [
+          {
+            "target": "anchois",
+            "en": "anchovy"
+          },
           {
             "target": "largeur",
             "en": "width"
@@ -14905,7 +14909,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Gallois",
-            "en": "Welshman"
+            "en": "Welsh"
           },
           {
             "target": "formuler",
@@ -14962,10 +14966,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Cambodge",
             "en": "Cambodia"
-          },
-          {
-            "target": "trésorier",
-            "en": "cashier"
           }
         ]
       },
@@ -14977,6 +14977,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "🧭",
         "vocab": [
+          {
+            "target": "trésorier",
+            "en": "cashier"
+          },
           {
             "target": "socialisme",
             "en": "socialism"
@@ -15000,6 +15004,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "anarchiste",
             "en": "anarchist"
+          },
+          {
+            "target": "Gaulois",
+            "en": "Gaul"
           },
           {
             "target": "mépriser",
@@ -15068,14 +15076,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "chimère",
             "en": "chimera"
-          },
-          {
-            "target": "maçon",
-            "en": "mason"
-          },
-          {
-            "target": "hareng",
-            "en": "herring"
           }
         ]
       },
@@ -15087,6 +15087,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "💬",
         "vocab": [
+          {
+            "target": "maçon",
+            "en": "mason"
+          },
+          {
+            "target": "hareng",
+            "en": "herring"
+          },
           {
             "target": "Iranien",
             "en": "Persian"
@@ -15176,16 +15184,8 @@ export const sections: SectionBlueprint[] = [
             "en": "worshipper"
           },
           {
-            "target": "alentour",
-            "en": "roundabout"
-          },
-          {
             "target": "coccinelle",
             "en": "ladybug"
-          },
-          {
-            "target": "babouin",
-            "en": "baboon"
           }
         ]
       },
@@ -15197,6 +15197,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "🎓",
         "vocab": [
+          {
+            "target": "babouin",
+            "en": "baboon"
+          },
           {
             "target": "Finlande",
             "en": "Finland"
@@ -15292,10 +15296,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "torrent",
             "en": "volley"
-          },
-          {
-            "target": "parente",
-            "en": "female relative"
           }
         ]
       },
@@ -15307,6 +15307,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "⭐",
         "vocab": [
+          {
+            "target": "parente",
+            "en": "female relative"
+          },
           {
             "target": "duvet",
             "en": "down"
@@ -15402,10 +15406,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "prospérer",
             "en": "be succesful"
-          },
-          {
-            "target": "ébriété",
-            "en": "intoxication"
           }
         ]
       },
@@ -15417,6 +15417,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "📚",
         "vocab": [
+          {
+            "target": "ébriété",
+            "en": "intoxication"
+          },
           {
             "target": "accouplement",
             "en": "joining"
@@ -15512,10 +15516,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Vietnamien",
             "en": "Vietnamese"
-          },
-          {
-            "target": "mensuel",
-            "en": "monthly"
           }
         ]
       },
@@ -15527,6 +15527,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "🗣️",
         "vocab": [
+          {
+            "target": "mensuel",
+            "en": "monthly"
+          },
           {
             "target": "abusif",
             "en": "wrong"
@@ -15569,7 +15573,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "altruiste",
-            "en": "altruist"
+            "en": "altruistic"
           },
           {
             "target": "millimètre",
@@ -15622,10 +15626,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "chatouiller",
             "en": "tickle"
-          },
-          {
-            "target": "faisan",
-            "en": "pheasant"
           }
         ]
       },
@@ -15637,6 +15637,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "✍️",
         "vocab": [
+          {
+            "target": "faisan",
+            "en": "pheasant"
+          },
           {
             "target": "chômeur",
             "en": "unemployed man"
@@ -15732,10 +15736,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "imparfait",
             "en": "imperfect"
-          },
-          {
-            "target": "Groenland",
-            "en": "Greenland"
           }
         ]
       },
@@ -15747,6 +15747,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "🌍",
         "vocab": [
+          {
+            "target": "Groenland",
+            "en": "Greenland"
+          },
           {
             "target": "vertèbre",
             "en": "vertebra"
@@ -15842,10 +15846,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "inédit",
             "en": "original"
-          },
-          {
-            "target": "accréditation",
-            "en": "accreditation"
           }
         ]
       },
@@ -15857,6 +15857,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "🍽️",
         "vocab": [
+          {
+            "target": "accréditation",
+            "en": "accreditation"
+          },
           {
             "target": "Caïn",
             "en": "Cain"
@@ -15952,10 +15956,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Séville",
             "en": "Seville"
-          },
-          {
-            "target": "guillemets",
-            "en": "quotation marks"
           }
         ]
       },
@@ -15967,6 +15967,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "🏙️",
         "vocab": [
+          {
+            "target": "guillemets",
+            "en": "quotation marks"
+          },
           {
             "target": "coquillage",
             "en": "shellfish"
@@ -16062,10 +16066,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "canalisation",
             "en": "pipe"
-          },
-          {
-            "target": "zapper",
-            "en": "zap"
           }
         ]
       },
@@ -16077,6 +16077,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "🧭",
         "vocab": [
+          {
+            "target": "zapper",
+            "en": "zap"
+          },
           {
             "target": "persil",
             "en": "parsley"
@@ -16172,10 +16176,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "basilic",
             "en": "basil"
-          },
-          {
-            "target": "porte-clés",
-            "en": "key ring"
           }
         ]
       },
@@ -16187,6 +16187,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "💬",
         "vocab": [
+          {
+            "target": "porte-clés",
+            "en": "key ring"
+          },
           {
             "target": "prostituer",
             "en": "prostitute"
@@ -16282,10 +16286,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Arménien",
             "en": "Armenian"
-          },
-          {
-            "target": "inerte",
-            "en": "inert"
           }
         ]
       },
@@ -16297,6 +16297,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "🎓",
         "vocab": [
+          {
+            "target": "inerte",
+            "en": "inert"
+          },
           {
             "target": "avantageux",
             "en": "advantageous"
@@ -16386,16 +16390,12 @@ export const sections: SectionBlueprint[] = [
             "en": "Orpheus"
           },
           {
+            "target": "Néerlandais",
+            "en": "Dutch language"
+          },
+          {
             "target": "pesanteur",
             "en": "gravity"
-          },
-          {
-            "target": "tutoyer",
-            "en": "thee and thou"
-          },
-          {
-            "target": "courroie",
-            "en": "strap"
           }
         ]
       },
@@ -16407,6 +16407,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "⭐",
         "vocab": [
+          {
+            "target": "tutoyer",
+            "en": "thee and thou"
+          },
+          {
+            "target": "courroie",
+            "en": "strap"
+          },
           {
             "target": "Minerve",
             "en": "Minerva"
@@ -16498,14 +16506,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "douzième",
             "en": "twelfth"
-          },
-          {
-            "target": "alouette",
-            "en": "lark"
-          },
-          {
-            "target": "frégate",
-            "en": "frigate"
           }
         ]
       },
@@ -16517,6 +16517,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "📚",
         "vocab": [
+          {
+            "target": "alouette",
+            "en": "lark"
+          },
+          {
+            "target": "frégate",
+            "en": "frigate"
+          },
           {
             "target": "volage",
             "en": "fickle"
@@ -16608,14 +16616,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ammoniaque",
             "en": "ammonia"
-          },
-          {
-            "target": "inaugurer",
-            "en": "inaugurate"
-          },
-          {
-            "target": "asthmatique",
-            "en": "asthmatic"
           }
         ]
       },
@@ -16627,6 +16627,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "🗣️",
         "vocab": [
+          {
+            "target": "inaugurer",
+            "en": "inaugurate"
+          },
+          {
+            "target": "asthmatique",
+            "en": "asthmatic"
+          },
           {
             "target": "répartir",
             "en": "distribute"
@@ -16718,14 +16726,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "accidenté",
             "en": "bumpy"
-          },
-          {
-            "target": "Saint-Pétersbourg",
-            "en": "Saint Petersburg"
-          },
-          {
-            "target": "Castille",
-            "en": "Castile"
           }
         ]
       },
@@ -16737,6 +16737,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "✍️",
         "vocab": [
+          {
+            "target": "Saint-Pétersbourg",
+            "en": "Saint Petersburg"
+          },
+          {
+            "target": "Castille",
+            "en": "Castile"
+          },
           {
             "target": "bouddhisme",
             "en": "Buddhism"
@@ -16803,7 +16811,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Croate",
-            "en": "Croat"
+            "en": "Croatian"
           },
           {
             "target": "minéral",
@@ -16828,14 +16836,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "affliction",
             "en": "sadness"
-          },
-          {
-            "target": "acajou",
-            "en": "mahogany"
-          },
-          {
-            "target": "affluent",
-            "en": "tributary"
           }
         ]
       },
@@ -16847,6 +16847,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "🌍",
         "vocab": [
+          {
+            "target": "acajou",
+            "en": "mahogany"
+          },
+          {
+            "target": "affluent",
+            "en": "tributary"
+          },
           {
             "target": "osseux",
             "en": "bony"
@@ -16938,14 +16946,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "terrer",
             "en": "earth up"
-          },
-          {
-            "target": "soyeux",
-            "en": "of silk"
-          },
-          {
-            "target": "betterave",
-            "en": "beet"
           }
         ]
       },
@@ -16957,6 +16957,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "🍽️",
         "vocab": [
+          {
+            "target": "soyeux",
+            "en": "of silk"
+          },
+          {
+            "target": "betterave",
+            "en": "beet"
+          },
           {
             "target": "Pâris",
             "en": "Paris"
@@ -17048,14 +17056,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "onzième",
             "en": "eleventh"
-          },
-          {
-            "target": "aérosol",
-            "en": "aerosol"
-          },
-          {
-            "target": "poirier",
-            "en": "pear-tree"
           }
         ]
       },
@@ -17067,6 +17067,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "🏙️",
         "vocab": [
+          {
+            "target": "aérosol",
+            "en": "aerosol"
+          },
+          {
+            "target": "poirier",
+            "en": "pear-tree"
+          },
           {
             "target": "astre",
             "en": "heavenly body"
@@ -17093,7 +17101,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Slave",
-            "en": "Slav"
+            "en": "Slavic"
           },
           {
             "target": "acrobaties",
@@ -17158,14 +17166,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "galoper",
             "en": "gallop"
-          },
-          {
-            "target": "mandarine",
-            "en": "tangerine"
-          },
-          {
-            "target": "algue",
-            "en": "seaweed"
           }
         ]
       },
@@ -17178,6 +17178,14 @@ export const sections: SectionBlueprint[] = [
         "icon": "🧭",
         "vocab": [
           {
+            "target": "mandarine",
+            "en": "tangerine"
+          },
+          {
+            "target": "algue",
+            "en": "seaweed"
+          },
+          {
             "target": "aérodynamique",
             "en": "aerodynamic"
           },
@@ -17187,7 +17195,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Islandais",
-            "en": "Icelander"
+            "en": "Icelandic"
           },
           {
             "target": "Norvégienne",
@@ -17235,7 +17243,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Lierre",
-            "en": "Lyra"
+            "en": "ivy"
           },
           {
             "target": "grincer",
@@ -17268,14 +17276,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "affranchir",
             "en": "put on stamps"
-          },
-          {
-            "target": "omoplate",
-            "en": "shoulder blade"
-          },
-          {
-            "target": "abondamment",
-            "en": "in detail"
           }
         ]
       },
@@ -17287,6 +17287,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "💬",
         "vocab": [
+          {
+            "target": "omoplate",
+            "en": "shoulder blade"
+          },
+          {
+            "target": "abondamment",
+            "en": "in detail"
+          },
           {
             "target": "affinité",
             "en": "affinity"
@@ -17378,14 +17386,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "harmonieux",
             "en": "harmonious"
-          },
-          {
-            "target": "candide",
-            "en": "guileless"
-          },
-          {
-            "target": "pétale",
-            "en": "petal"
           }
         ]
       },
@@ -17397,6 +17397,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "🎓",
         "vocab": [
+          {
+            "target": "candide",
+            "en": "guileless"
+          },
+          {
+            "target": "pétale",
+            "en": "petal"
+          },
           {
             "target": "liège",
             "en": "cork"
@@ -17488,14 +17496,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "antiseptique",
             "en": "antiseptic"
-          },
-          {
-            "target": "Crimée",
-            "en": "Crimea"
-          },
-          {
-            "target": "consigner",
-            "en": "put in detention"
           }
         ]
       },
@@ -17507,6 +17507,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "⭐",
         "vocab": [
+          {
+            "target": "Crimée",
+            "en": "Crimea"
+          },
+          {
+            "target": "consigner",
+            "en": "put in detention"
+          },
           {
             "target": "sautiller",
             "en": "hop"
@@ -17598,14 +17606,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "salutation",
             "en": "greeting"
-          },
-          {
-            "target": "anagramme",
-            "en": "anagram"
-          },
-          {
-            "target": "volupté",
-            "en": "sexual pleasure"
           }
         ]
       },
@@ -17618,8 +17618,16 @@ export const sections: SectionBlueprint[] = [
         "icon": "📚",
         "vocab": [
           {
+            "target": "anagramme",
+            "en": "anagram"
+          },
+          {
+            "target": "volupté",
+            "en": "sexual pleasure"
+          },
+          {
             "target": "Kurde",
-            "en": "Kurd"
+            "en": "Kurdish"
           },
           {
             "target": "bardot",
@@ -17708,14 +17716,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "purin",
             "en": "liquid manure"
-          },
-          {
-            "target": "ventiler",
-            "en": "ventilate"
-          },
-          {
-            "target": "apothéose",
-            "en": "apotheosis"
           }
         ]
       },
@@ -17727,6 +17727,14 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "🗣️",
         "vocab": [
+          {
+            "target": "ventiler",
+            "en": "ventilate"
+          },
+          {
+            "target": "apothéose",
+            "en": "apotheosis"
+          },
           {
             "target": "loir",
             "en": "dormouse"
@@ -17766,10 +17774,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "verrat",
             "en": "boar"
-          },
-          {
-            "target": "harmonique",
-            "en": "overtone"
           },
           {
             "target": "hermine",
@@ -17822,10 +17826,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Archimède",
             "en": "Archimedes"
-          },
-          {
-            "target": "antisocial",
-            "en": "unsocial"
           }
         ]
       },
@@ -17837,6 +17837,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "✍️",
         "vocab": [
+          {
+            "target": "antisocial",
+            "en": "unsocial"
+          },
           {
             "target": "ricaner",
             "en": "sneer"
@@ -17932,10 +17936,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "faucille",
             "en": "sickle"
-          },
-          {
-            "target": "agoniser",
-            "en": "be near death"
           }
         ]
       },
@@ -17947,6 +17947,10 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "🌍",
         "vocab": [
+          {
+            "target": "agoniser",
+            "en": "be near death"
+          },
           {
             "target": "Vietnamienne",
             "en": "Vietnamese woman"
@@ -17966,10 +17970,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ponctuation",
             "en": "punctuation"
-          },
-          {
-            "target": "enceint",
-            "en": "pregnant"
           },
           {
             "target": "pessimisme",
@@ -18123,7 +18123,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Celte",
-            "en": "Celt"
+            "en": "Celtic"
           },
           {
             "target": "fougère",
@@ -18396,10 +18396,6 @@ export const sections: SectionBlueprint[] = [
             "en": "horseradish"
           },
           {
-            "target": "celtique",
-            "en": "Celtic"
-          },
-          {
             "target": "Lettonie",
             "en": "Latvia"
           },
@@ -18486,6 +18482,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "duché",
             "en": "duchy"
+          },
+          {
+            "target": "amphibie",
+            "en": "amphibian"
           }
         ]
       },
@@ -18497,10 +18497,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "🎓",
         "vocab": [
-          {
-            "target": "amphibie",
-            "en": "amphibian"
-          },
           {
             "target": "Hanovre",
             "en": "Hanover"
@@ -18596,6 +18592,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "écrevisse",
             "en": "crayfish"
+          },
+          {
+            "target": "envoyeur",
+            "en": "sender"
           }
         ]
       },
@@ -18607,10 +18607,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "⭐",
         "vocab": [
-          {
-            "target": "envoyeur",
-            "en": "sender"
-          },
           {
             "target": "admiratif",
             "en": "admiring"
@@ -18706,6 +18702,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ciboulette",
             "en": "chive"
+          },
+          {
+            "target": "Mathusalem",
+            "en": "Methuselah"
           }
         ]
       },
@@ -18717,10 +18717,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "📚",
         "vocab": [
-          {
-            "target": "Mathusalem",
-            "en": "Methuselah"
-          },
           {
             "target": "germanique",
             "en": "Germanic"
@@ -18816,6 +18812,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sud-américain",
             "en": "South American"
+          },
+          {
+            "target": "Géorgien",
+            "en": "Georgian"
           }
         ]
       },
@@ -18827,10 +18827,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "🗣️",
         "vocab": [
-          {
-            "target": "Géorgien",
-            "en": "Georgian"
-          },
           {
             "target": "peuplier",
             "en": "poplar"
@@ -18858,10 +18854,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Arménie",
             "en": "Armenia"
-          },
-          {
-            "target": "Viennois",
-            "en": "Viennese"
           },
           {
             "target": "chèvrefeuille",
@@ -18926,6 +18918,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Néo-Zélandais",
             "en": "New Zealander"
+          },
+          {
+            "target": "quatorzième",
+            "en": "fourteenth"
+          },
+          {
+            "target": "héraut",
+            "en": "herald"
           }
         ]
       },
@@ -18937,14 +18937,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "✍️",
         "vocab": [
-          {
-            "target": "quatorzième",
-            "en": "fourteenth"
-          },
-          {
-            "target": "héraut",
-            "en": "herald"
-          },
           {
             "target": "bâiller",
             "en": "yawn"
@@ -19036,6 +19028,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Pentecôte",
             "en": "Pentecost"
+          },
+          {
+            "target": "adhérents",
+            "en": "party members"
+          },
+          {
+            "target": "bruine",
+            "en": "drizzling rain"
           }
         ]
       },
@@ -19047,14 +19047,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "🌍",
         "vocab": [
-          {
-            "target": "adhérents",
-            "en": "party members"
-          },
-          {
-            "target": "bruine",
-            "en": "drizzling rain"
-          },
           {
             "target": "Bolivien",
             "en": "Bolivian"
@@ -19146,6 +19138,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "bas-ventre",
             "en": "abdomen"
+          },
+          {
+            "target": "apiculteur",
+            "en": "apiarist"
+          },
+          {
+            "target": "agnostique",
+            "en": "agnostic"
           }
         ]
       },
@@ -19157,14 +19157,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "🍽️",
         "vocab": [
-          {
-            "target": "apiculteur",
-            "en": "apiarist"
-          },
-          {
-            "target": "agnostique",
-            "en": "agnostic"
-          },
           {
             "target": "couleuvre",
             "en": "viper"
@@ -19256,6 +19248,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "obséder",
             "en": "obsess"
+          },
+          {
+            "target": "Messine",
+            "en": "Messina"
+          },
+          {
+            "target": "napperon",
+            "en": "doily"
           }
         ]
       },
@@ -19267,14 +19267,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "🏙️",
         "vocab": [
-          {
-            "target": "Messine",
-            "en": "Messina"
-          },
-          {
-            "target": "napperon",
-            "en": "doily"
-          },
           {
             "target": "maniable",
             "en": "easy to handle"
@@ -19366,6 +19358,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pintade",
             "en": "guinea-fowl"
+          },
+          {
+            "target": "gencive",
+            "en": "gum"
+          },
+          {
+            "target": "Barbe-Bleue",
+            "en": "Bluebeard"
           }
         ]
       },
@@ -19377,14 +19377,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "🧭",
         "vocab": [
-          {
-            "target": "gencive",
-            "en": "gum"
-          },
-          {
-            "target": "Barbe-Bleue",
-            "en": "Bluebeard"
-          },
           {
             "target": "épinard",
             "en": "spinach"
@@ -19476,6 +19468,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "apostolique",
             "en": "apostolic"
+          },
+          {
+            "target": "Andorre",
+            "en": "Andorra"
+          },
+          {
+            "target": "marsouin",
+            "en": "porpoise"
           }
         ]
       },
@@ -19487,14 +19487,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "💬",
         "vocab": [
-          {
-            "target": "Andorre",
-            "en": "Andorra"
-          },
-          {
-            "target": "marsouin",
-            "en": "porpoise"
-          },
           {
             "target": "pronom",
             "en": "pronoun"
@@ -19586,6 +19578,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Lapon",
             "en": "Lapp"
+          },
+          {
+            "target": "Troyen",
+            "en": "Trojan"
+          },
+          {
+            "target": "groseille",
+            "en": "red currant"
           }
         ]
       },
@@ -19597,14 +19597,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "🎓",
         "vocab": [
-          {
-            "target": "Troyen",
-            "en": "Trojan"
-          },
-          {
-            "target": "groseille",
-            "en": "red currant"
-          },
           {
             "target": "Deutéronome",
             "en": "Deuteronomy"
@@ -19678,6 +19670,10 @@ export const sections: SectionBlueprint[] = [
             "en": "milliner"
           },
           {
+            "target": "virginal",
+            "en": "virgin"
+          },
+          {
             "target": "stagner",
             "en": "stagnate"
           },
@@ -19696,6 +19692,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Calabre",
             "en": "Calabria"
+          },
+          {
+            "target": "Euphrate",
+            "en": "Euphrates"
           }
         ]
       },
@@ -19707,10 +19707,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "⭐",
         "vocab": [
-          {
-            "target": "Euphrate",
-            "en": "Euphrates"
-          },
           {
             "target": "Djibouti",
             "en": "Jibuti"
@@ -19806,6 +19802,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "odorant",
             "en": "sweet smelling"
+          },
+          {
+            "target": "bailler",
+            "en": "give"
           }
         ]
       },
@@ -19817,10 +19817,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "📚",
         "vocab": [
-          {
-            "target": "bailler",
-            "en": "give"
-          },
           {
             "target": "épicéa",
             "en": "spruce"
@@ -19916,6 +19912,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Achéron",
             "en": "Acheron"
+          },
+          {
+            "target": "mandchou",
+            "en": "Manchurian"
           }
         ]
       },
@@ -19927,10 +19927,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "🗣️",
         "vocab": [
-          {
-            "target": "mandchou",
-            "en": "Manchurian"
-          },
           {
             "target": "poitrail",
             "en": "breast"
@@ -20026,6 +20022,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "venaison",
             "en": "venison"
+          },
+          {
+            "target": "Assomption",
+            "en": "Assumption"
           }
         ]
       },
@@ -20037,10 +20037,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "✍️",
         "vocab": [
-          {
-            "target": "Assomption",
-            "en": "Assumption"
-          },
           {
             "target": "alcalin",
             "en": "alkaline"
@@ -20136,6 +20132,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Valachie",
             "en": "Wallachia"
+          },
+          {
+            "target": "consonne",
+            "en": "consonant"
           }
         ]
       },
@@ -20147,10 +20147,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "🌍",
         "vocab": [
-          {
-            "target": "consonne",
-            "en": "consonant"
-          },
           {
             "target": "vertébral",
             "en": "vertibrate"
@@ -20246,6 +20242,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "apostat",
             "en": "apostate"
+          },
+          {
+            "target": "capucine",
+            "en": "nasturtium"
           }
         ]
       },
@@ -20257,10 +20257,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "🍽️",
         "vocab": [
-          {
-            "target": "capucine",
-            "en": "nasturtium"
-          },
           {
             "target": "anachronisme",
             "en": "anachronism"
@@ -20326,10 +20322,6 @@ export const sections: SectionBlueprint[] = [
             "en": "respective"
           },
           {
-            "target": "fruitier",
-            "en": "fruit-tree"
-          },
-          {
             "target": "Armorique",
             "en": "Armorica"
           },
@@ -20356,6 +20348,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "avorteur",
             "en": "abortionist"
+          },
+          {
+            "target": "Assyrie",
+            "en": "Assyria"
+          },
+          {
+            "target": "abécédaire",
+            "en": "ABC book"
           }
         ]
       },
@@ -20367,14 +20367,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "🏙️",
         "vocab": [
-          {
-            "target": "Assyrie",
-            "en": "Assyria"
-          },
-          {
-            "target": "abécédaire",
-            "en": "ABC book"
-          },
           {
             "target": "alun",
             "en": "alum"
@@ -20466,6 +20458,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "abrasif",
             "en": "abrasive"
+          },
+          {
+            "target": "Andalouse",
+            "en": "Andalusian woman"
+          },
+          {
+            "target": "autistique",
+            "en": "autistic"
           }
         ]
       },
@@ -20477,18 +20477,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "🧭",
         "vocab": [
-          {
-            "target": "Andalouse",
-            "en": "Andalusian woman"
-          },
-          {
-            "target": "autistique",
-            "en": "autistic"
-          },
-          {
-            "target": "Groenlandais",
-            "en": "Greenlander"
-          },
           {
             "target": "arrière-petite-fille",
             "en": "greatgranddaughter"
@@ -20543,7 +20531,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Angolais",
-            "en": "Angolese"
+            "en": "Angolan"
           },
           {
             "target": "adjudication",
@@ -20576,17 +20564,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "acclimatation",
             "en": "acclimatization"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u188",
-        "title": "Common words 4676–4700",
-        "subtitle": "The 4676–4700 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "Asturies",
             "en": "Asturias"
@@ -20598,7 +20576,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "bourratif",
             "en": "stodgy"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u188",
+        "title": "Common words 4676–4700",
+        "subtitle": "The 4676–4700 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "anarchisme",
             "en": "anarchism"
@@ -20686,17 +20674,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "oiseau-mouche",
             "en": "hummingbird"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u189",
-        "title": "Common words 4701–4725",
-        "subtitle": "The 4701–4725 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "arabique",
             "en": "Arabic"
@@ -20708,7 +20686,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Assyrien",
             "en": "Assyrian"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u189",
+        "title": "Common words 4701–4725",
+        "subtitle": "The 4701–4725 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "galicien",
             "en": "Galician"
@@ -20796,17 +20784,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "galoche",
             "en": "galosh"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u190",
-        "title": "Common words 4726–4750",
-        "subtitle": "The 4726–4750 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "ardant",
             "en": "ablaze"
@@ -20818,7 +20796,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "géographe",
             "en": "geographer"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u190",
+        "title": "Common words 4726–4750",
+        "subtitle": "The 4726–4750 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "balte",
             "en": "Baltic"
@@ -20906,17 +20894,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Laotien",
             "en": "Laotian"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u191",
-        "title": "Common words 4751–4775",
-        "subtitle": "The 4751–4775 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "schah",
             "en": "shah"
@@ -20928,7 +20906,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "consister",
             "en": "consist"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u191",
+        "title": "Common words 4751–4775",
+        "subtitle": "The 4751–4775 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "aérostat",
             "en": "balloon"
@@ -21016,17 +21004,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "experimenté",
             "en": "expert"
-          }
-        ]
-      },
-      {
-        "id": "fr-gen-u192",
-        "title": "Common words 4776–4800",
-        "subtitle": "The 4776–4800 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🗣️",
-        "vocab": [
+          },
           {
             "target": "Andrinople",
             "en": "Adrianople"
@@ -21038,7 +21016,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "banian",
             "en": "banyan"
-          },
+          }
+        ]
+      },
+      {
+        "id": "fr-gen-u192",
+        "title": "Common words 4776–4800",
+        "subtitle": "The 4776–4800 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "jarretelle",
             "en": "suspender"
@@ -21126,6 +21114,18 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "abricotier",
             "en": "apricot-tree"
+          },
+          {
+            "target": "Nicaraguayen",
+            "en": "Nicaraguan"
+          },
+          {
+            "target": "Chaldéen",
+            "en": "Chaldean"
+          },
+          {
+            "target": "métairie",
+            "en": "small holding"
           }
         ]
       }

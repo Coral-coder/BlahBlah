@@ -5021,7 +5021,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Colonia",
-            "en": "Cologne"
+            "en": "colony"
           },
           {
             "target": "cabra",
@@ -5889,7 +5889,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Ginebra",
-            "en": "Geneva"
+            "en": "gin"
           },
           {
             "target": "agotado",
