@@ -121,6 +121,13 @@ fastlane/                Fastfile (lane :beta) + tester notes
 
 Running changelog of features dreamed up on this branch (newest first).
 
+- **Deeper lessons** — the generator was reworked from one-word-per-lesson (very
+  repetitive) to dense batches: each lesson teaches ~7 new words, practises each
+  with a rotating exercise type, applies them in sentences, and weaves in spaced
+  review. Far less repetition and ~4× fewer total exercises generated (better
+  startup), while teaching the same vocabulary. Vocab budget per language raised
+  accordingly.
+
 - **Voices in the OTA bundle** — the natural-voice catalog (which voices exist,
   their settings and download source) now travels inside the content bundle, so a
   new language ships with its voice config over-the-air, no app build. The app

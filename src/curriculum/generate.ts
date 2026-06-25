@@ -95,9 +95,13 @@ function sample<T>(arr: readonly T[], n: number, r: () => number): T[] {
 // ----------------------------------------------------------------------------
 // Exercise builders
 // ----------------------------------------------------------------------------
-const NEW_PER_INTRO = 1; // one new word per "new words" lesson — fine-grained
-const END_REVIEWS = 6; // cumulative review lessons appended per unit
-const CUMULATIVE_EVERY = 4; // insert an extra mixed review every N new words
+// Lessons are dense: each one teaches a batch of new words, then practices them
+// with varied exercises and a little spaced review of earlier words — rather than
+// one word per lesson with endless repeat drills.
+const NEW_PER_LESSON = 7; // new words introduced per lesson
+const MAX_EX_PER_LESSON = 20; // cap so a lesson stays focused but deep
+const REVIEW_PER_LESSON = 3; // spaced-review touches of earlier words per lesson
+const END_REVIEWS = 2; // cumulative review lessons appended per unit
 
 function words(sentence: string): string[] {
   return sentence.split(" ").filter(Boolean);
@@ -269,29 +273,68 @@ function pad(ex: Exercise[], pool: VocabItem[], r: () => number): Exercise[] {
   const extras = sample(pool, 6, r);
   let i = 0;
   while (ex.length < 3 && i < extras.length) ex.push(mkSpeakWord(extras[i++]));
-  return ex.slice(0, 8);
+  return ex.slice(0, MAX_EX_PER_LESSON);
 }
 
-function introLesson(
+// A varied per-word practice exercise — rotated by index so a batch of new words
+// isn't drilled the same way five times in a row (select → listen → speak).
+function practiceForWord(word: VocabItem, pool: VocabItem[], i: number, r: () => number): Exercise {
+  const mode = i % 3;
+  if (mode === 0 && pool.length >= 4) return mkSelect(word, pool, r);
+  if (mode === 1) return mkListenWord(word, pool, r);
+  return mkSpeakWord(word);
+}
+
+// A dense lesson: teach a batch of new words, practise each once (varied), use
+// them in sentences where possible, then lightly review earlier words.
+function teachLesson(
   id: string,
-  word: VocabItem,
+  newWords: VocabItem[],
   known: VocabItem[],
+  sentences: SentenceItem[],
+  vocabTargets: Set<string>,
   r: () => number,
 ): Lesson {
-  const pool = uniqByTarget([word, ...known]);
-  const ex: Exercise[] = [mkCard(word), mkSpeakWord(word), mkListenWord(word, pool, r)];
-  if (pool.length >= 2) ex.push(mkMatch(pool, r));
-  if (pool.length >= 4) ex.push(mkSelect(word, pool, r));
-  // light spaced review of an earlier word
-  if (known.length >= 2) sample(known, 1, r).forEach((o) => ex.push(mkSelect(o, pool, r)));
+  const pool = uniqByTarget([...newWords, ...known]);
+  const knownTargets = new Set([...known, ...newWords].map((v) => v.target));
+  const ex: Exercise[] = [];
+
+  // 1) Teach: an intro card for each new word.
+  for (const w of newWords) ex.push(mkCard(w));
+  // 2) Bind the batch together with a matching exercise.
+  if (pool.length >= 3) {
+    ex.push(mkMatch(uniqByTarget([...newWords, ...sample(known, 2, r)]), r));
+  }
+  // 3) Practise each new word once, with a rotating exercise type.
+  newWords.forEach((w, i) => ex.push(practiceForWord(w, pool, i, r)));
+  // 4) Apply in sentences the learner can fully build from words seen so far.
+  const usable = sentences.filter((s) =>
+    words(s.target).every((w) => !vocabTargets.has(w) || knownTargets.has(w)),
+  );
+  const sents = sample(usable.length ? usable : sentences, 4, r);
+  if (sents[0]) ex.push(mkWordbank(sents[0], pool, r));
+  if (sents[1]) {
+    const f = mkFill(sents[1], pool, vocabTargets, r);
+    if (f) ex.push(f);
+  }
+  if (sents[2]) ex.push(mkListenSentence(sents[2], pool, r));
+  if (sents[3]) ex.push(mkType(sents[3]));
+  // 5) Spaced review of earlier words (never the just-taught batch).
+  if (known.length) {
+    sample(known, REVIEW_PER_LESSON, r).forEach((w, i) => {
+      if (ex.length < MAX_EX_PER_LESSON) ex.push(practiceForWord(w, pool, i + 1, r));
+    });
+  }
+
   return {
     id,
-    title: "New word",
+    title: newWords.length > 1 ? `${newWords.length} new words` : "New word",
     exercises: pad(ex, pool, r),
-    vocab: [{ target: word.target, en: word.en, pinyin: word.pinyin }],
+    vocab: newWords.map((v) => ({ target: v.target, en: v.en, pinyin: v.pinyin })),
   };
 }
 
+// A cumulative review lesson: no new words, mixed exercises over everything.
 function reviewLesson(
   id: string,
   pool: VocabItem[],
@@ -300,7 +343,7 @@ function reviewLesson(
   r: () => number,
 ): Lesson {
   const ex: Exercise[] = [];
-  if (pool.length >= 2) ex.push(mkMatch(sample(pool, 5, r), r));
+  if (pool.length >= 3) ex.push(mkMatch(sample(pool, 5, r), r));
   const sents = sample(sentences, 5, r);
   if (sents[0]) ex.push(mkWordbank(sents[0], pool, r));
   if (sents[1]) {
@@ -309,14 +352,11 @@ function reviewLesson(
   }
   if (sents[2]) ex.push(mkListenSentence(sents[2], pool, r));
   if (sents[3]) ex.push(mkSpeakSentence(sents[3]));
-  // Typed production: write the sentence from scratch (great for recall/spelling).
-  const typeSent = sents[4] ?? sents[0];
-  if (typeSent) ex.push(mkType(typeSent));
-  for (const v of sample(pool, 6, r)) {
-    if (ex.length >= 8) break;
-    if (pool.length >= 4 && r() > 0.5) ex.push(mkSelect(v, pool, r));
-    else ex.push(mkSpeakWord(v));
-  }
+  if (sents[4]) ex.push(mkType(sents[4]));
+  sample(pool, 8, r).forEach((v, i) => {
+    if (ex.length >= MAX_EX_PER_LESSON) return;
+    ex.push(practiceForWord(v, pool, i, r));
+  });
   return { id, title: "Practice", exercises: pad(ex, pool, r) };
 }
 
@@ -329,22 +369,18 @@ function buildUnit(bp: UnitBlueprint): Unit {
   const known: VocabItem[] = [];
   let lessonNo = 1;
 
-  for (let i = 0; i < vocab.length; i += NEW_PER_INTRO) {
-    const word = vocab[i];
+  // Teach the unit in dense batches of new words.
+  for (let i = 0; i < vocab.length; i += NEW_PER_LESSON) {
+    const batch = vocab.slice(i, i + NEW_PER_LESSON);
     const priorKnown = [...known];
-    known.push(word);
-    lessons.push(introLesson(`${bp.id}-l${lessonNo++}`, word, priorKnown, r));
-    // sentences whose every (in-vocab) word is already known
-    const avail = sentences.filter((s) =>
-      words(s.target).every((w) => !vocabTargets.has(w) || known.some((k) => k.target === w)),
-    );
     lessons.push(
-      reviewLesson(`${bp.id}-l${lessonNo++}`, [...known], avail.length ? avail : sentences, vocabTargets, r),
+      teachLesson(`${bp.id}-l${lessonNo++}`, batch, priorKnown, sentences, vocabTargets, r),
     );
-    // periodic cumulative review mixing everything learned so far
-    if ((i + 1) % CUMULATIVE_EVERY === 0 && known.length >= 4) {
+    known.push(...batch);
+    // A consolidation review after every few batches, once enough is known.
+    if (known.length >= NEW_PER_LESSON * 2 && (i / NEW_PER_LESSON) % 3 === 2) {
       lessons.push(
-        reviewLesson(`${bp.id}-l${lessonNo++}`, [...known], avail.length ? avail : sentences, vocabTargets, r),
+        reviewLesson(`${bp.id}-l${lessonNo++}`, [...known], sentences, vocabTargets, r),
       );
     }
   }
