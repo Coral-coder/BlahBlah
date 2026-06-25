@@ -435,10 +435,26 @@ function buildUnit(bp: UnitBlueprint, speech: boolean): Unit {
   };
 }
 
+// Language prefixes whose speech can actually be RECOGNIZED on-device (iOS
+// SFSpeechRecognizer / Android). Note this is different from text-to-speech:
+// Icelandic has a TTS voice but no speech recognizer, so we must not generate
+// speak exercises for it (they can't be scored). Constructed languages have no
+// locale at all. Keep this an allowlist so we only ask people to speak when the
+// device can grade it.
+const SPEECH_INPUT_LOCALES = new Set([
+  "en", "de", "es", "fr", "it", "pt", "nl", "sv", "da", "nb", "no", "fi",
+  "pl", "tr", "ru", "uk", "cs", "sk", "hr", "hu", "ro", "el", "ca",
+  "zh", "yue", "ja", "ko", "th", "id", "ms", "vi", "ar", "he", "hi",
+]);
+function speechSupported(locale?: string): boolean {
+  if (!locale) return false;
+  return SPEECH_INPUT_LOCALES.has(locale.toLowerCase().split("-")[0]);
+}
+
 export function generateCourse(bp: CourseBlueprint): Course {
-  // Constructed languages (Elvish/Klingon/Dragon) have no speech-recognition
-  // locale, so don't generate speak exercises the recognizer can't score.
-  const speech = !!bp.speechLocale;
+  // Only generate speak exercises when the device can recognize this language.
+  // (Constructed languages have no locale; Icelandic has TTS but no recognizer.)
+  const speech = speechSupported(bp.speechLocale);
   const sections: Section[] = bp.sections.map((s) => ({
     id: s.id,
     title: s.title,
