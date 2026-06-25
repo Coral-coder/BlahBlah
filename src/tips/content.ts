@@ -144,32 +144,108 @@ const TIPS: Record<string, Tip[]> = {
       ],
     },
   ],
+  // Spanish — ordered beginner→A2 grammar progression.
   es: [
     {
+      title: "Nouns have gender",
+      body: "Most nouns ending in -o are masculine (el), most ending in -a are feminine (la) — both mean \"the\". Learn the article with the noun.",
+      examples: [
+        { target: "el gato", en: "the cat (m.)" },
+        { target: "la casa", en: "the house (f.)" },
+      ],
+    },
+    {
+      title: "a / an: un & una",
+      body: "un for masculine nouns, una for feminine. Plurals: los/las (the) and unos/unas (some).",
+      examples: [
+        { target: "un libro", en: "a book" },
+        { target: "una mesa", en: "a table" },
+      ],
+    },
+    {
+      title: "to be: ser",
+      body: "ser (to be) for identity and traits:\n\n• yo soy, tú eres, él/ella es\n• nosotros somos, vosotros sois, ellos son",
+      examples: [
+        { target: "Soy estudiante", en: "I am a student" },
+        { target: "Somos amigos", en: "We are friends" },
+      ],
+    },
+    {
       title: "ser vs estar",
-      body: "Both mean 'to be'. Use ser for identity/permanent traits, estar for location and temporary states/feelings.",
+      body: "Both mean \"to be\". Use ser for identity/permanent traits; use estar for location and temporary states/feelings.",
       examples: [
         { target: "Soy alto", en: "I am tall (trait)" },
         { target: "Estoy cansado", en: "I am tired (state)" },
       ],
     },
     {
-      title: "Nouns have gender",
-      body: "Most -o words are masculine (el), most -a words feminine (la). Adjectives must agree.",
+      title: "to have: tener",
+      body: "tener (to have): tengo, tienes, tiene, tenemos, tenéis, tienen. Spanish uses it for age: Tengo veinte años = \"I'm twenty\".",
       examples: [
-        { target: "el gato negro", en: "the black cat" },
-        { target: "la casa blanca", en: "the white house" },
+        { target: "Tengo hambre", en: "I'm hungry (I have hunger)" },
+        { target: "¿Tienes tiempo?", en: "Do you have time?" },
       ],
     },
     {
-      title: "Upside-down ¿ and ¡",
-      body: "Questions and exclamations open with an inverted mark: ¿…? and ¡…!",
-      examples: [{ target: "¿Cómo estás?", en: "How are you?" }],
+      title: "Present tense: -ar verbs",
+      body: "Drop -ar and add: -o, -as, -a, -amos, -áis, -an. (hablar → hablo, hablas, habla, hablamos, habláis, hablan.)",
+      examples: [
+        { target: "hablo", en: "I speak" },
+        { target: "hablamos", en: "we speak" },
+      ],
     },
     {
       title: "You usually drop the subject",
-      body: "The verb ending already shows who's doing it, so 'yo', 'tú' etc. are often omitted.",
+      body: "The verb ending already shows who's doing it, so yo, tú, él are usually left out. \"Hablo español\" already means \"I speak Spanish\".",
       examples: [{ target: "Hablo español", en: "I speak Spanish" }],
+    },
+    {
+      title: "Saying no",
+      body: "Just put no before the verb. Double negatives are normal: No tengo nada = \"I don't have anything\".",
+      examples: [
+        { target: "No entiendo", en: "I don't understand" },
+        { target: "No hay problema", en: "No problem" },
+      ],
+    },
+    {
+      title: "Questions: ¿ … ? and ¡ … !",
+      body: "Questions and exclamations open with an inverted mark: ¿…? and ¡…!. Word order can stay the same — intonation (and the marks) do the work.",
+      examples: [
+        { target: "¿Cómo estás?", en: "How are you?" },
+        { target: "¿Hablas inglés?", en: "Do you speak English?" },
+      ],
+    },
+    {
+      title: "Adjectives agree — and usually follow",
+      body: "Adjectives match the noun in gender and number, and usually come AFTER it.",
+      examples: [
+        { target: "el gato negro", en: "the black cat" },
+        { target: "las casas blancas", en: "the white houses" },
+      ],
+    },
+    {
+      title: "tú vs usted",
+      body: "tú is informal. usted is formal (and takes the he/she verb form). Use usted with strangers and elders to be respectful.",
+      examples: [
+        { target: "¿Cómo estás?", en: "How are you? (informal)" },
+        { target: "¿Cómo está usted?", en: "How are you? (formal)" },
+      ],
+    },
+    {
+      title: "The near future: ir a + verb",
+      body: "Say what's about to happen with ir (to go) + a + infinitive — like English \"going to\". voy, vas, va, vamos, vais, van.",
+      examples: [
+        { target: "Voy a comer", en: "I'm going to eat" },
+        { target: "Vamos a ver", en: "We'll see" },
+      ],
+    },
+    {
+      title: "me gusta works backwards",
+      body: "\"To like\" is built like \"is pleasing to me\": me gusta + singular, me gustan + plural. The thing liked is the subject.",
+      examples: [
+        { target: "Me gusta el café", en: "I like coffee" },
+        { target: "Me gustan los gatos", en: "I like cats" },
+      ],
     },
   ],
   zh: [
