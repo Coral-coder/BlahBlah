@@ -71,7 +71,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "tempo",
-            "en": "in time"
+            "en": "time"
           },
           {
             "target": "credo",
@@ -83,7 +83,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "quanto",
-            "en": "how many"
+            "en": "quantum"
           },
           {
             "target": "parte",
@@ -145,7 +145,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "posto",
-            "en": "set in"
+            "en": "place"
           },
           {
             "target": "nessuno",
@@ -189,7 +189,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "tra",
-            "en": "in"
+            "en": "between"
           },
           {
             "target": "già",
@@ -250,10 +250,6 @@ export const sections: SectionBlueprint[] = [
             "en": "type"
           },
           {
-            "target": "prego",
-            "en": "don't mention it"
-          },
-          {
             "target": "appena",
             "en": "just"
           },
@@ -287,7 +283,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "dentro",
-            "en": "into"
+            "en": "inside"
           },
           {
             "target": "trovato",
@@ -295,7 +291,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "caso",
-            "en": "by chance"
+            "en": "chance"
           },
           {
             "target": "forza",
@@ -323,11 +319,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "stare",
-            "en": "be"
+            "en": "stay"
           },
           {
             "target": "insieme",
-            "en": "along with"
+            "en": "communally"
           },
           {
             "target": "faccia",
@@ -336,6 +332,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ragazza",
             "en": "girl"
+          },
+          {
+            "target": "subito",
+            "en": "immediately after"
           }
         ]
       },
@@ -347,10 +347,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "🌍",
         "vocab": [
-          {
-            "target": "subito",
-            "en": "at once"
-          },
           {
             "target": "famiglia",
             "en": "family"
@@ -429,7 +425,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "secondo",
-            "en": "according to"
+            "en": "other"
           },
           {
             "target": "venire",
@@ -441,11 +437,15 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "mentre",
-            "en": "as"
+            "en": "while"
           },
           {
             "target": "letto",
             "en": "bed"
+          },
+          {
+            "target": "fino",
+            "en": "exquisite"
           }
         ]
       },
@@ -457,10 +457,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF4B4B",
         "icon": "🍽️",
         "vocab": [
-          {
-            "target": "fino",
-            "en": "as far as"
-          },
           {
             "target": "fine",
             "en": "end"
@@ -527,7 +523,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "tornare",
-            "en": "come back to"
+            "en": "return"
           },
           {
             "target": "primo",
@@ -556,6 +552,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pensato",
             "en": "conceived"
+          },
+          {
+            "target": "anno",
+            "en": "year"
           }
         ]
       },
@@ -567,10 +567,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#2B70C9",
         "icon": "🏙️",
         "vocab": [
-          {
-            "target": "anno",
-            "en": "year"
-          },
           {
             "target": "diavolo",
             "en": "devil"
@@ -589,7 +585,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "punto",
-            "en": "all dressed up"
+            "en": "point"
           },
           {
             "target": "andata",
@@ -666,6 +662,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "scuola",
             "en": "school"
+          },
+          {
+            "target": "indietro",
+            "en": "back"
           }
         ]
       },
@@ -677,10 +677,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FFC800",
         "icon": "🧭",
         "vocab": [
-          {
-            "target": "indietro",
-            "en": "back"
-          },
           {
             "target": "sangue",
             "en": "blood"
@@ -776,6 +772,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "corpo",
             "en": "body"
+          },
+          {
+            "target": "sentire",
+            "en": "feel"
           }
         ]
       },
@@ -787,10 +787,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#00CD9C",
         "icon": "💬",
         "vocab": [
-          {
-            "target": "sentire",
-            "en": "feel"
-          },
           {
             "target": "foto",
             "en": "photo"
@@ -809,7 +805,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "sacco",
-            "en": "punching bag"
+            "en": "loads"
           },
           {
             "target": "stia",
@@ -886,6 +882,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "vivere",
             "en": "live"
+          },
+          {
+            "target": "vista",
+            "en": "view"
           }
         ]
       },
@@ -897,10 +897,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "🎓",
         "vocab": [
-          {
-            "target": "vista",
-            "en": "view"
-          },
           {
             "target": "prova",
             "en": "experiment"
@@ -996,6 +992,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "entrambi",
             "en": "both"
+          },
+          {
+            "target": "passare",
+            "en": "pass"
           }
         ]
       },
@@ -1007,10 +1007,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "⭐",
         "vocab": [
-          {
-            "target": "passare",
-            "en": "pass"
-          },
           {
             "target": "cena",
             "en": "dinner"
@@ -1106,6 +1102,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "attenzione",
             "en": "attention"
+          },
+          {
+            "target": "situazione",
+            "en": "situation"
           }
         ]
       },
@@ -1117,10 +1117,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "📚",
         "vocab": [
-          {
-            "target": "situazione",
-            "en": "situation"
-          },
           {
             "target": "omicidio",
             "en": "homicide"
@@ -1163,7 +1159,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "musica",
-            "en": "piece of music"
+            "en": "music"
           },
           {
             "target": "libro",
@@ -1216,6 +1212,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "deciso",
             "en": "clean"
+          },
+          {
+            "target": "messaggio",
+            "en": "message"
           }
         ]
       },
@@ -1227,10 +1227,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "🗣️",
         "vocab": [
-          {
-            "target": "messaggio",
-            "en": "message"
-          },
           {
             "target": "dormire",
             "en": "sleep"
@@ -1292,8 +1288,12 @@ export const sections: SectionBlueprint[] = [
             "en": "light"
           },
           {
+            "target": "fra",
+            "en": "among"
+          },
+          {
             "target": "provare",
-            "en": "to hit on"
+            "en": "try"
           },
           {
             "target": "minuto",
@@ -1387,7 +1387,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "oltre",
-            "en": "as well as"
+            "en": "above"
           },
           {
             "target": "semplice",
@@ -1415,7 +1415,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "giocare",
-            "en": "have backlash"
+            "en": "play"
           },
           {
             "target": "ordine",
@@ -1501,7 +1501,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "grado",
-            "en": "be able to"
+            "en": "grade"
           },
           {
             "target": "nave",
@@ -1517,7 +1517,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "pezzo",
-            "en": "for a while"
+            "en": "piece"
           },
           {
             "target": "segreto",
@@ -1571,7 +1571,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "tenere",
-            "en": "keep an eye"
+            "en": "hold"
           },
           {
             "target": "pazzo",
@@ -1744,10 +1744,6 @@ export const sections: SectionBlueprint[] = [
             "en": "arrangement"
           },
           {
-            "target": "rimanere",
-            "en": "stay"
-          },
-          {
             "target": "compagnia",
             "en": "company"
           },
@@ -1766,6 +1762,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "attento",
             "en": "attentive"
+          },
+          {
+            "target": "fallo",
+            "en": "error"
           }
         ]
       },
@@ -1777,10 +1777,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#58CC02",
         "icon": "🧭",
         "vocab": [
-          {
-            "target": "fallo",
-            "en": "error"
-          },
           {
             "target": "impossibile",
             "en": "absurd"
@@ -1876,6 +1872,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "iniziare",
             "en": "begin"
+          },
+          {
+            "target": "otto",
+            "en": "eight"
           }
         ]
       },
@@ -1887,10 +1887,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#1CB0F6",
         "icon": "💬",
         "vocab": [
-          {
-            "target": "otto",
-            "en": "eight"
-          },
           {
             "target": "conosciuto",
             "en": "known"
@@ -1960,16 +1956,12 @@ export const sections: SectionBlueprint[] = [
             "en": "discover"
           },
           {
-            "target": "luogo",
-            "en": "place"
-          },
-          {
             "target": "lettera",
             "en": "letter"
           },
           {
             "target": "salvare",
-            "en": "bail out"
+            "en": "defend"
           },
           {
             "target": "canzone",
@@ -1986,6 +1978,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "stamattina",
             "en": "this morning"
+          },
+          {
+            "target": "missione",
+            "en": "mission"
+          },
+          {
+            "target": "salute",
+            "en": "health"
           }
         ]
       },
@@ -1997,14 +1997,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#CE82FF",
         "icon": "🎓",
         "vocab": [
-          {
-            "target": "missione",
-            "en": "mission"
-          },
-          {
-            "target": "salute",
-            "en": "health"
-          },
           {
             "target": "scelto",
             "en": "chosen"
@@ -2078,6 +2070,10 @@ export const sections: SectionBlueprint[] = [
             "en": "government"
           },
           {
+            "target": "oro",
+            "en": "gold"
+          },
+          {
             "target": "duro",
             "en": "hard"
           },
@@ -2096,6 +2092,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "esempio",
             "en": "example"
+          },
+          {
+            "target": "droga",
+            "en": "drug"
           }
         ]
       },
@@ -2107,14 +2107,6 @@ export const sections: SectionBlueprint[] = [
         "color": "#FF9600",
         "icon": "⭐",
         "vocab": [
-          {
-            "target": "occasione",
-            "en": "chance"
-          },
-          {
-            "target": "droga",
-            "en": "drug"
-          },
           {
             "target": "possibilità",
             "en": "possibility"
@@ -2138,10 +2130,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "attacco",
             "en": "attack"
-          },
-          {
-            "target": "affatto",
-            "en": "at all"
           },
           {
             "target": "reale",
@@ -2206,17 +2194,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "mare",
             "en": "sea"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u21",
-        "title": "Common words 501–525",
-        "subtitle": "The 501–525 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "direttore",
             "en": "editor"
@@ -2228,7 +2206,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "classe",
             "en": "class"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u21",
+        "title": "Common words 501–525",
+        "subtitle": "The 501–525 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "bianco",
             "en": "white"
@@ -2316,6 +2304,18 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "leggere",
             "en": "read"
+          },
+          {
+            "target": "pomeriggio",
+            "en": "afternoon"
+          },
+          {
+            "target": "giudice",
+            "en": "judge"
+          },
+          {
+            "target": "mostro",
+            "en": "monster"
           }
         ]
       },
@@ -2328,24 +2328,12 @@ export const sections: SectionBlueprint[] = [
         "icon": "🗣️",
         "vocab": [
           {
-            "target": "pomeriggio",
-            "en": "afternoon"
-          },
-          {
-            "target": "giudice",
-            "en": "judge"
-          },
-          {
-            "target": "mostro",
-            "en": "monster"
-          },
-          {
             "target": "destra",
             "en": "dexter"
           },
           {
             "target": "Luna",
-            "en": "full moon"
+            "en": "Moon"
           },
           {
             "target": "pericoloso",
@@ -2426,17 +2414,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "responsabile",
             "en": "accountable"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u23",
-        "title": "Common words 551–575",
-        "subtitle": "The 551–575 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "✍️",
-        "vocab": [
+          },
           {
             "target": "farcela",
             "en": "can"
@@ -2448,7 +2426,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "periodo",
             "en": "period"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u23",
+        "title": "Common words 551–575",
+        "subtitle": "The 551–575 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "energia",
             "en": "energy"
@@ -2475,7 +2463,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "soprattutto",
-            "en": "above all"
+            "en": "especially"
           },
           {
             "target": "operazione",
@@ -2503,7 +2491,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "pressione",
-            "en": "blood pressure"
+            "en": "pressure"
           },
           {
             "target": "seguito",
@@ -2536,6 +2524,18 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "finta",
             "en": "dummy"
+          },
+          {
+            "target": "testimone",
+            "en": "witness"
+          },
+          {
+            "target": "banca",
+            "en": "bank"
+          },
+          {
+            "target": "aprire",
+            "en": "open"
           }
         ]
       },
@@ -2548,20 +2548,12 @@ export const sections: SectionBlueprint[] = [
         "icon": "🌍",
         "vocab": [
           {
-            "target": "testimone",
-            "en": "witness"
-          },
-          {
-            "target": "banca",
-            "en": "bank"
-          },
-          {
-            "target": "aprire",
-            "en": "open"
-          },
-          {
             "target": "indirizzo",
             "en": "address"
+          },
+          {
+            "target": "tale",
+            "en": "someone"
           },
           {
             "target": "ottenere",
@@ -2604,10 +2596,6 @@ export const sections: SectionBlueprint[] = [
             "en": "horrible"
           },
           {
-            "target": "ritorno",
-            "en": "return"
-          },
-          {
             "target": "enorme",
             "en": "enormous"
           },
@@ -2646,17 +2634,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "correre",
             "en": "run"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u25",
-        "title": "Common words 601–625",
-        "subtitle": "The 601–625 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "🍽️",
-        "vocab": [
+          },
           {
             "target": "edificio",
             "en": "building"
@@ -2668,7 +2646,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "collo",
             "en": "neck"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u25",
+        "title": "Common words 601–625",
+        "subtitle": "The 601–625 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "difesa",
             "en": "defence"
@@ -2756,17 +2744,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "odore",
             "en": "odour"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u26",
-        "title": "Common words 626–650",
-        "subtitle": "The 626–650 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "contrario",
             "en": "opposite"
@@ -2778,7 +2756,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "preoccupare",
             "en": "concern"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u26",
+        "title": "Common words 626–650",
+        "subtitle": "The 626–650 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "battaglia",
             "en": "battle"
@@ -2866,17 +2854,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "nemico",
             "en": "enemy"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u27",
-        "title": "Common words 651–675",
-        "subtitle": "The 651–675 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🧭",
-        "vocab": [
+          },
           {
             "target": "colonnello",
             "en": "colonel"
@@ -2888,7 +2866,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "costa",
             "en": "coast"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u27",
+        "title": "Common words 651–675",
+        "subtitle": "The 651–675 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "laggiù",
             "en": "over there"
@@ -2976,17 +2964,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "decidere",
             "en": "decide"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u28",
-        "title": "Common words 676–700",
-        "subtitle": "The 676–700 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "professore",
             "en": "know-it-all"
@@ -2998,7 +2976,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sensazione",
             "en": "sensation"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u28",
+        "title": "Common words 676–700",
+        "subtitle": "The 676–700 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "corte",
             "en": "court"
@@ -3013,11 +3001,11 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "incontrare",
-            "en": "be confronted with"
+            "en": "meet"
           },
           {
             "target": "conta",
-            "en": "counting-out game"
+            "en": "count"
           },
           {
             "target": "accesso",
@@ -3034,10 +3022,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "isola",
             "en": "island"
-          },
-          {
-            "target": "affrontare",
-            "en": "deal with"
           },
           {
             "target": "Anna",
@@ -3065,7 +3049,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "metà",
-            "en": "better half"
+            "en": "half"
           },
           {
             "target": "continuo",
@@ -3086,17 +3070,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Maria",
             "en": "Mary"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u29",
-        "title": "Common words 701–725",
-        "subtitle": "The 701–725 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "contratto",
             "en": "contracted"
@@ -3112,14 +3086,24 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "guidare",
             "en": "drive"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u29",
+        "title": "Common words 701–725",
+        "subtitle": "The 701–725 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "mandare",
             "en": "send"
           },
           {
             "target": "sveglia",
-            "en": "early call"
+            "en": "reveille"
           },
           {
             "target": "ultimamente",
@@ -3196,17 +3180,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "debole",
             "en": "weak"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u30",
-        "title": "Common words 726–750",
-        "subtitle": "The 726–750 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "ridicolo",
             "en": "ridiculous"
@@ -3222,7 +3196,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "francese",
             "en": "French"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u30",
+        "title": "Common words 726–750",
+        "subtitle": "The 726–750 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "taxi",
             "en": "cab"
@@ -3306,17 +3290,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "stanco",
             "en": "tired"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u31",
-        "title": "Common words 751–775",
-        "subtitle": "The 751–775 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "mantenere",
             "en": "keep"
@@ -3332,7 +3306,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "principale",
             "en": "boss"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u31",
+        "title": "Common words 751–775",
+        "subtitle": "The 751–775 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "faccenda",
             "en": "affair"
@@ -3351,7 +3335,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "matto",
-            "en": "freak out"
+            "en": "mad"
           },
           {
             "target": "convinto",
@@ -3379,7 +3363,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "spiegare",
-            "en": "lay out"
+            "en": "explain"
           },
           {
             "target": "principessa",
@@ -3415,18 +3399,8 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "malato",
-            "en": "sick person"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u32",
-        "title": "Common words 776–800",
-        "subtitle": "The 776–800 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🗣️",
-        "vocab": [
+            "en": "ill"
+          },
           {
             "target": "sedia",
             "en": "chair"
@@ -3442,7 +3416,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "succedere",
             "en": "happen"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u32",
+        "title": "Common words 776–800",
+        "subtitle": "The 776–800 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "ghiaccio",
             "en": "ice"
@@ -3526,17 +3510,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "cento",
             "en": "hundred"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u33",
-        "title": "Common words 801–825",
-        "subtitle": "The 801–825 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "✍️",
-        "vocab": [
+          },
           {
             "target": "seriamente",
             "en": "seriously"
@@ -3552,7 +3526,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "angelo",
             "en": "angel"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u33",
+        "title": "Common words 801–825",
+        "subtitle": "The 801–825 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "tradurre",
             "en": "translate"
@@ -3567,7 +3551,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "nazionale",
-            "en": "national team"
+            "en": "national"
           },
           {
             "target": "genio",
@@ -3636,17 +3620,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "vuoto",
             "en": "empty"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u34",
-        "title": "Common words 826–850",
-        "subtitle": "The 826–850 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "animale",
             "en": "animal"
@@ -3662,6 +3636,20 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "spiaggia",
             "en": "beach"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u34",
+        "title": "Common words 826–850",
+        "subtitle": "The 826–850 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🌍",
+        "vocab": [
+          {
+            "target": "ordinato",
+            "en": "methodical"
           },
           {
             "target": "telefonata",
@@ -3732,10 +3720,6 @@ export const sections: SectionBlueprint[] = [
             "en": "spouse"
           },
           {
-            "target": "partito",
-            "en": "party per pale"
-          },
-          {
             "target": "cappello",
             "en": "hat"
           },
@@ -3745,18 +3729,8 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "mostra",
-            "en": "exhibition hall"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u35",
-        "title": "Common words 851–875",
-        "subtitle": "The 851–875 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🍽️",
-        "vocab": [
+            "en": "exposition"
+          },
           {
             "target": "giardino",
             "en": "garden"
@@ -3772,7 +3746,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "potente",
             "en": "powerful"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u35",
+        "title": "Common words 851–875",
+        "subtitle": "The 851–875 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "rabbia",
             "en": "anger"
@@ -3847,7 +3831,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "direzione",
-            "en": "administrative department"
+            "en": "direction"
           },
           {
             "target": "dito",
@@ -3856,17 +3840,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "vendetta",
             "en": "revenge"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u36",
-        "title": "Common words 876–900",
-        "subtitle": "The 876–900 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "cantare",
             "en": "sing"
@@ -3882,7 +3856,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "invitato",
             "en": "guest"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u36",
+        "title": "Common words 876–900",
+        "subtitle": "The 876–900 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "regola",
             "en": "rule"
@@ -3960,23 +3944,9 @@ export const sections: SectionBlueprint[] = [
             "en": "grow"
           },
           {
-            "target": "suonare",
-            "en": "play"
-          },
-          {
             "target": "cugino",
             "en": "cousin"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u37",
-        "title": "Common words 901–925",
-        "subtitle": "The 901–925 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🧭",
-        "vocab": [
+          },
           {
             "target": "trappola",
             "en": "trap"
@@ -3996,7 +3966,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pugno",
             "en": "fist"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u37",
+        "title": "Common words 901–925",
+        "subtitle": "The 901–925 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "opinione",
             "en": "opinion"
@@ -4076,17 +4056,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pesante",
             "en": "heavy"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u38",
-        "title": "Common words 926–950",
-        "subtitle": "The 926–950 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "aeroporto",
             "en": "airport"
@@ -4106,7 +4076,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "tirato",
             "en": "affected"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u38",
+        "title": "Common words 926–950",
+        "subtitle": "The 926–950 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "sedere",
             "en": "sit"
@@ -4186,17 +4166,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "trucco",
             "en": "makeup"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u39",
-        "title": "Common words 951–975",
-        "subtitle": "The 951–975 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "nascondere",
             "en": "hide"
@@ -4216,7 +4186,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "mancato",
             "en": "failed"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u39",
+        "title": "Common words 951–975",
+        "subtitle": "The 951–975 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "perdono",
             "en": "absolution"
@@ -4296,17 +4276,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "risultato",
             "en": "result"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u40",
-        "title": "Common words 976–1000",
-        "subtitle": "The 976–1000 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "bloccato",
             "en": "arrested"
@@ -4326,7 +4296,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "traffico",
             "en": "traffic"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u40",
+        "title": "Common words 976–1000",
+        "subtitle": "The 976–1000 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "prestito",
             "en": "loan"
@@ -4342,10 +4322,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "motore",
             "en": "driving"
-          },
-          {
-            "target": "specialmente",
-            "en": "especially"
           },
           {
             "target": "ingresso",
@@ -4406,17 +4382,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pietra",
             "en": "stone"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u41",
-        "title": "Common words 1001–1025",
-        "subtitle": "The 1001–1025 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "uccello",
             "en": "bird"
@@ -4440,7 +4406,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "comportamento",
             "en": "attitude"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u41",
+        "title": "Common words 1001–1025",
+        "subtitle": "The 1001–1025 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "montagna",
             "en": "mountain"
@@ -4490,10 +4466,6 @@ export const sections: SectionBlueprint[] = [
             "en": "agency"
           },
           {
-            "target": "volto",
-            "en": "three-quarter face"
-          },
-          {
             "target": "mucchio",
             "en": "heap"
           },
@@ -4516,17 +4488,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "panico",
             "en": "Panic"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u42",
-        "title": "Common words 1026–1050",
-        "subtitle": "The 1026–1050 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🗣️",
-        "vocab": [
+          },
           {
             "target": "ombra",
             "en": "shadow"
@@ -4541,7 +4503,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "pensione",
-            "en": "boarding house"
+            "en": "pension"
           },
           {
             "target": "copia",
@@ -4554,7 +4516,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sorveglianza",
             "en": "supervision"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u42",
+        "title": "Common words 1026–1050",
+        "subtitle": "The 1026–1050 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "dichiarazione",
             "en": "affidavit"
@@ -4613,7 +4585,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "gelato",
-            "en": "ice cream"
+            "en": "frozen"
           },
           {
             "target": "lentamente",
@@ -4626,17 +4598,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "adorabile",
             "en": "adorable"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u43",
-        "title": "Common words 1051–1075",
-        "subtitle": "The 1051–1075 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "✍️",
-        "vocab": [
+          },
           {
             "target": "castello",
             "en": "castle"
@@ -4664,14 +4626,24 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "indovinare",
             "en": "guess"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u43",
+        "title": "Common words 1051–1075",
+        "subtitle": "The 1051–1075 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "attaccato",
             "en": "attached"
           },
           {
             "target": "togliere",
-            "en": "take away"
+            "en": "remove"
           },
           {
             "target": "sporco",
@@ -4680,10 +4652,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "miracolo",
             "en": "miracle"
-          },
-          {
-            "target": "vicenda",
-            "en": "in turns"
           },
           {
             "target": "divertimento",
@@ -4735,18 +4703,8 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "familiare",
-            "en": "station wagon"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u44",
-        "title": "Common words 1076–1100",
-        "subtitle": "The 1076–1100 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "🌍",
-        "vocab": [
+            "en": "familiar"
+          },
           {
             "target": "interessato",
             "en": "interested"
@@ -4778,7 +4736,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ovest",
             "en": "west"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u44",
+        "title": "Common words 1076–1100",
+        "subtitle": "The 1076–1100 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "personalmente",
             "en": "personally"
@@ -4846,17 +4814,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "corridoio",
             "en": "corridor"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u45",
-        "title": "Common words 1101–1125",
-        "subtitle": "The 1101–1125 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🍽️",
-        "vocab": [
+          },
           {
             "target": "superare",
             "en": "cross"
@@ -4888,7 +4846,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "clinica",
             "en": "clinicial"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u45",
+        "title": "Common words 1101–1125",
+        "subtitle": "The 1101–1125 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "maestà",
             "en": "majesty"
@@ -4900,10 +4868,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "firma",
             "en": "signature"
-          },
-          {
-            "target": "riposare",
-            "en": "be buried"
           },
           {
             "target": "furto",
@@ -4956,17 +4920,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "follia",
             "en": "folly"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u46",
-        "title": "Common words 1126–1150",
-        "subtitle": "The 1126–1150 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "attività",
             "en": "activity"
@@ -5002,7 +4956,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "discussione",
             "en": "argument"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u46",
+        "title": "Common words 1126–1150",
+        "subtitle": "The 1126–1150 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "profilo",
             "en": "description"
@@ -5066,17 +5030,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "federale",
             "en": "federal"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u47",
-        "title": "Common words 1151–1175",
-        "subtitle": "The 1151–1175 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🧭",
-        "vocab": [
+          },
           {
             "target": "cieco",
             "en": "blind"
@@ -5112,14 +5066,20 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sincero",
             "en": "frank"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u47",
+        "title": "Common words 1151–1175",
+        "subtitle": "The 1151–1175 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "ammettere",
             "en": "acknowledge"
-          },
-          {
-            "target": "retta",
-            "en": "straight line"
           },
           {
             "target": "tempesta",
@@ -5176,17 +5136,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ricevere",
             "en": "receive"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u48",
-        "title": "Common words 1176–1200",
-        "subtitle": "The 1176–1200 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "inventato",
             "en": "fabricated"
@@ -5226,7 +5176,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "spiegazione",
             "en": "account"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u48",
+        "title": "Common words 1176–1200",
+        "subtitle": "The 1176–1200 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "disposto",
             "en": "willing"
@@ -5277,7 +5237,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "punizione",
-            "en": "free kick"
+            "en": "punishment"
           },
           {
             "target": "organizzare",
@@ -5286,17 +5246,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "uccelli",
             "en": "birds"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u49",
-        "title": "Common words 1201–1225",
-        "subtitle": "The 1201–1225 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "fico",
             "en": "cool"
@@ -5336,7 +5286,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "piacevole",
             "en": "enjoyable"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u49",
+        "title": "Common words 1201–1225",
+        "subtitle": "The 1201–1225 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "oceano",
             "en": "ocean"
@@ -5396,17 +5356,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "proprietà",
             "en": "dominion"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u50",
-        "title": "Common words 1226–1250",
-        "subtitle": "The 1226–1250 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "salvo",
             "en": "save"
@@ -5421,7 +5371,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "ricominciare",
-            "en": "begin again"
+            "en": "recommence"
           },
           {
             "target": "inverno",
@@ -5446,7 +5396,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "frase",
             "en": "sentence"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u50",
+        "title": "Common words 1226–1250",
+        "subtitle": "The 1226–1250 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "esplodere",
             "en": "blow up"
@@ -5506,17 +5466,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "raggio",
             "en": "ray"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u51",
-        "title": "Common words 1251–1275",
-        "subtitle": "The 1251–1275 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "resistenza",
             "en": "resistance"
@@ -5556,7 +5506,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sfida",
             "en": "challenge"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u51",
+        "title": "Common words 1251–1275",
+        "subtitle": "The 1251–1275 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "porno",
             "en": "porn"
@@ -5590,10 +5550,6 @@ export const sections: SectionBlueprint[] = [
             "en": "Eve"
           },
           {
-            "target": "figura",
-            "en": "coat card"
-          },
-          {
             "target": "deserto",
             "en": "desert"
           },
@@ -5616,17 +5572,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "fingere",
             "en": "feign"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u52",
-        "title": "Common words 1276–1300",
-        "subtitle": "The 1276–1300 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "🗣️",
-        "vocab": [
+          },
           {
             "target": "lassù",
             "en": "up above"
@@ -5641,7 +5587,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "becco",
-            "en": "billy goat"
+            "en": "beak"
           },
           {
             "target": "delitto",
@@ -5670,7 +5616,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "professionista",
             "en": "practitioner"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u52",
+        "title": "Common words 1276–1300",
+        "subtitle": "The 1276–1300 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "Cina",
             "en": "China"
@@ -5726,17 +5682,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "urgente",
             "en": "compelling"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u53",
-        "title": "Common words 1301–1325",
-        "subtitle": "The 1301–1325 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "✍️",
-        "vocab": [
+          },
           {
             "target": "improvvisamente",
             "en": "suddenly"
@@ -5762,10 +5708,6 @@ export const sections: SectionBlueprint[] = [
             "en": "velocity"
           },
           {
-            "target": "orario",
-            "en": "time"
-          },
-          {
             "target": "commissario",
             "en": "commissioner"
           },
@@ -5784,7 +5726,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "miele",
             "en": "honey"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u53",
+        "title": "Common words 1301–1325",
+        "subtitle": "The 1301–1325 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "romantico",
             "en": "Romantic"
@@ -5836,17 +5788,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "eroina",
             "en": "heroin"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u54",
-        "title": "Common words 1326–1350",
-        "subtitle": "The 1326–1350 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "oscuro",
             "en": "obscure"
@@ -5885,11 +5827,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "richiesto",
-            "en": "in demand"
-          },
-          {
-            "target": "disposizione",
-            "en": "direction"
+            "en": "needed"
           },
           {
             "target": "bassa",
@@ -5898,7 +5836,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "territorio",
             "en": "territory"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u54",
+        "title": "Common words 1326–1350",
+        "subtitle": "The 1326–1350 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "raccogliere",
             "en": "collect"
@@ -5946,17 +5894,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "uniforme",
             "en": "uniform"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u55",
-        "title": "Common words 1351–1375",
-        "subtitle": "The 1351–1375 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🍽️",
-        "vocab": [
+          },
           {
             "target": "barba",
             "en": "beard"
@@ -6008,7 +5946,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "corto",
             "en": "short"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u55",
+        "title": "Common words 1351–1375",
+        "subtitle": "The 1351–1375 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "commerciale",
             "en": "commercial"
@@ -6056,17 +6004,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "succo",
             "en": "juice"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u56",
-        "title": "Common words 1376–1400",
-        "subtitle": "The 1376–1400 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "cintura",
             "en": "belt"
@@ -6118,7 +6056,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "fisico",
             "en": "physical"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u56",
+        "title": "Common words 1376–1400",
+        "subtitle": "The 1376–1400 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "divisione",
             "en": "division"
@@ -6166,17 +6114,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "gabbia",
             "en": "cage"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u57",
-        "title": "Common words 1401–1425",
-        "subtitle": "The 1401–1425 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "🧭",
-        "vocab": [
+          },
           {
             "target": "avventura",
             "en": "adventure"
@@ -6228,7 +6166,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "notare",
             "en": "note"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u57",
+        "title": "Common words 1401–1425",
+        "subtitle": "The 1401–1425 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "giapponese",
             "en": "Japanese"
@@ -6251,7 +6199,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "curioso",
-            "en": "bizarre strange"
+            "en": "busybody"
           },
           {
             "target": "girato",
@@ -6276,17 +6224,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "denuncia",
             "en": "condemnation"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u58",
-        "title": "Common words 1426–1450",
-        "subtitle": "The 1426–1450 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "picchiato",
             "en": "nuts"
@@ -6338,7 +6276,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "femminile",
             "en": "female"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u58",
+        "title": "Common words 1426–1450",
+        "subtitle": "The 1426–1450 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "alzare",
             "en": "raise"
@@ -6368,10 +6316,6 @@ export const sections: SectionBlueprint[] = [
             "en": "Bible"
           },
           {
-            "target": "conte",
-            "en": "count"
-          },
-          {
             "target": "perdonare",
             "en": "absolve"
           },
@@ -6386,17 +6330,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "cavaliere",
             "en": "knight"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u59",
-        "title": "Common words 1451–1475",
-        "subtitle": "The 1451–1475 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "aula",
             "en": "chamber"
@@ -6452,7 +6386,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "impegnata",
             "en": "booked"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u59",
+        "title": "Common words 1451–1475",
+        "subtitle": "The 1451–1475 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "confermato",
             "en": "confirmed"
@@ -6496,20 +6440,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "atmosfera",
             "en": "atmosphere"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u60",
-        "title": "Common words 1476–1500",
-        "subtitle": "The 1476–1500 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "volante",
-            "en": "steering wheel"
+            "en": "volant"
           },
           {
             "target": "cancellato",
@@ -6553,7 +6487,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "ruota",
-            "en": "baby box"
+            "en": "wheel"
           },
           {
             "target": "spiegato",
@@ -6562,7 +6496,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "rifiuto",
             "en": "garbage"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u60",
+        "title": "Common words 1476–1500",
+        "subtitle": "The 1476–1500 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "battito",
             "en": "beat"
@@ -6606,17 +6550,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "trauma",
             "en": "injury"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u61",
-        "title": "Common words 1501–1525",
-        "subtitle": "The 1501–1525 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "migliorare",
             "en": "heal"
@@ -6628,10 +6562,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pagano",
             "en": "pagan"
-          },
-          {
-            "target": "sentirsi",
-            "en": "be in touch"
           },
           {
             "target": "identità",
@@ -6670,17 +6600,23 @@ export const sections: SectionBlueprint[] = [
             "en": "cart"
           },
           {
-            "target": "riportare",
-            "en": "bring again"
-          },
-          {
             "target": "fiore",
             "en": "cream"
           },
           {
             "target": "gomma",
             "en": "rubber"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u61",
+        "title": "Common words 1501–1525",
+        "subtitle": "The 1501–1525 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "tatuaggio",
             "en": "tattoo"
@@ -6702,10 +6638,6 @@ export const sections: SectionBlueprint[] = [
             "en": "paty"
           },
           {
-            "target": "villa",
-            "en": "large country house"
-          },
-          {
             "target": "stupro",
             "en": "rape"
           },
@@ -6716,17 +6648,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "cuori",
             "en": "hearts"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u62",
-        "title": "Common words 1526–1550",
-        "subtitle": "The 1526–1550 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🗣️",
-        "vocab": [
+          },
           {
             "target": "testimonianza",
             "en": "testimony"
@@ -6794,7 +6716,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "chirurgo",
             "en": "surgeon"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u62",
+        "title": "Common words 1526–1550",
+        "subtitle": "The 1526–1550 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "istituto",
             "en": "college"
@@ -6826,17 +6758,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "cappotto",
             "en": "coat"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u63",
-        "title": "Common words 1551–1575",
-        "subtitle": "The 1551–1575 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "✍️",
-        "vocab": [
+          },
           {
             "target": "caos",
             "en": "chaos"
@@ -6904,7 +6826,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "violento",
             "en": "aggressive"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u63",
+        "title": "Common words 1551–1575",
+        "subtitle": "The 1551–1575 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "isolato",
             "en": "isolated"
@@ -6936,17 +6868,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "comunicazione",
             "en": "communication"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u64",
-        "title": "Common words 1576–1600",
-        "subtitle": "The 1576–1600 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "insalata",
             "en": "salad"
@@ -7014,7 +6936,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "stipendio",
             "en": "earnings"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u64",
+        "title": "Common words 1576–1600",
+        "subtitle": "The 1576–1600 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "spento",
             "en": "dampened"
@@ -7040,23 +6972,17 @@ export const sections: SectionBlueprint[] = [
             "en": "nuclear"
           },
           {
+            "target": "acceso",
+            "en": "lit"
+          },
+          {
             "target": "sparatoria",
             "en": "shooting"
           },
           {
             "target": "verro",
             "en": "boar"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u65",
-        "title": "Common words 1601–1625",
-        "subtitle": "The 1601–1625 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "🍽️",
-        "vocab": [
+          },
           {
             "target": "dettaglio",
             "en": "detail"
@@ -7120,7 +7046,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pastore",
             "en": "shepherd"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u65",
+        "title": "Common words 1601–1625",
+        "subtitle": "The 1601–1625 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "misura",
             "en": "size"
@@ -7156,20 +7092,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "movente",
             "en": "issuing"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u66",
-        "title": "Common words 1626–1650",
-        "subtitle": "The 1626–1650 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🏙️",
-        "vocab": [
-          {
-            "target": "difendere",
-            "en": "defend"
           },
           {
             "target": "speso",
@@ -7192,10 +7114,6 @@ export const sections: SectionBlueprint[] = [
             "en": "failure"
           },
           {
-            "target": "temere",
-            "en": "be afraid of"
-          },
-          {
             "target": "interrogatorio",
             "en": "interrogation"
           },
@@ -7205,7 +7123,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "curare",
-            "en": "look after"
+            "en": "cure"
           },
           {
             "target": "ragionevole",
@@ -7238,7 +7156,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ostaggio",
             "en": "hostage"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u66",
+        "title": "Common words 1626–1650",
+        "subtitle": "The 1626–1650 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "asta",
             "en": "pole"
@@ -7261,22 +7189,12 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "vomitare",
-            "en": "wash ashore"
+            "en": "puke"
           },
           {
             "target": "emorragia",
             "en": "haemorrhage"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u67",
-        "title": "Common words 1651–1675",
-        "subtitle": "The 1651–1675 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🧭",
-        "vocab": [
+          },
           {
             "target": "protocollo",
             "en": "log"
@@ -7303,7 +7221,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "educazione",
-            "en": "education manners"
+            "en": "comitas"
           },
           {
             "target": "rivoluzione",
@@ -7312,10 +7230,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "grilletto",
             "en": "tongue"
-          },
-          {
-            "target": "tensione",
-            "en": "pressure"
           },
           {
             "target": "rilasciato",
@@ -7352,7 +7266,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "onde",
             "en": "hence"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u67",
+        "title": "Common words 1651–1675",
+        "subtitle": "The 1651–1675 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "alzato",
             "en": "enhanced"
@@ -7376,17 +7300,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "rottura",
             "en": "drag"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u68",
-        "title": "Common words 1676–1700",
-        "subtitle": "The 1676–1700 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "ansia",
             "en": "anxiety"
@@ -7410,6 +7324,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "portafoglio",
             "en": "portfolio"
+          },
+          {
+            "target": "siccome",
+            "en": "as"
           },
           {
             "target": "comunità",
@@ -7458,7 +7376,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "religione",
             "en": "religion"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u68",
+        "title": "Common words 1676–1700",
+        "subtitle": "The 1676–1700 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "promozione",
             "en": "promotion"
@@ -7486,17 +7414,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "regalato",
             "en": "dirt-cheap"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u69",
-        "title": "Common words 1701–1725",
-        "subtitle": "The 1701–1725 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "Gemelli",
             "en": "Gemini"
@@ -7528,10 +7446,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "undici",
             "en": "eleven"
-          },
-          {
-            "target": "accendere",
-            "en": "turn on"
           },
           {
             "target": "consigliere",
@@ -7571,8 +7485,18 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "sfortuna",
-            "en": "bad luck"
-          },
+            "en": "misfortune"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u69",
+        "title": "Common words 1701–1725",
+        "subtitle": "The 1701–1725 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "tentare",
             "en": "attempt"
@@ -7596,20 +7520,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "impronta",
             "en": "imprint"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u70",
-        "title": "Common words 1726–1750",
-        "subtitle": "The 1726–1750 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "⭐",
-        "vocab": [
-          {
-            "target": "rientrare",
-            "en": "go back in"
           },
           {
             "target": "congresso",
@@ -7686,7 +7596,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "luglio",
             "en": "July"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u70",
+        "title": "Common words 1726–1750",
+        "subtitle": "The 1726–1750 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "candidato",
             "en": "candidate"
@@ -7706,17 +7626,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "appello",
             "en": "attendance"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u71",
-        "title": "Common words 1751–1775",
-        "subtitle": "The 1751–1775 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "dozzina",
             "en": "dozen"
@@ -7796,7 +7706,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sede",
             "en": "branch"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u71",
+        "title": "Common words 1751–1775",
+        "subtitle": "The 1751–1775 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "dipendenti",
             "en": "depending"
@@ -7816,17 +7736,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "estero",
             "en": "foreigners"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u72",
-        "title": "Common words 1776–1800",
-        "subtitle": "The 1776–1800 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🗣️",
-        "vocab": [
+          },
           {
             "target": "collina",
             "en": "hill"
@@ -7906,7 +7816,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "valle",
             "en": "valley"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u72",
+        "title": "Common words 1776–1800",
+        "subtitle": "The 1776–1800 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "stufo",
             "en": "fed up"
@@ -7926,17 +7846,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sviluppo",
             "en": "development"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u73",
-        "title": "Common words 1801–1825",
-        "subtitle": "The 1801–1825 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "✍️",
-        "vocab": [
+          },
           {
             "target": "bara",
             "en": "coffin"
@@ -8016,7 +7926,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "portatile",
             "en": "laptop"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u73",
+        "title": "Common words 1801–1825",
+        "subtitle": "The 1801–1825 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "guerriero",
             "en": "bellicose"
@@ -8036,17 +7956,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pagamento",
             "en": "payment"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u74",
-        "title": "Common words 1826–1850",
-        "subtitle": "The 1826–1850 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "coinvolgere",
             "en": "involve"
@@ -8057,7 +7967,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "esecuzione",
-            "en": "carrying out"
+            "en": "execution"
           },
           {
             "target": "guadagno",
@@ -8097,7 +8007,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "recupero",
-            "en": "extra time"
+            "en": "recovery"
           },
           {
             "target": "videocamera",
@@ -8126,7 +8036,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "drogato",
             "en": "laced"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u74",
+        "title": "Common words 1826–1850",
+        "subtitle": "The 1826–1850 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "intelligenza",
             "en": "intelligence"
@@ -8137,7 +8057,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "spacciatore",
-            "en": "peddler of lies"
+            "en": "dealer"
           },
           {
             "target": "impressionante",
@@ -8146,17 +8066,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "solare",
             "en": "clear"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u75",
-        "title": "Common words 1851–1875",
-        "subtitle": "The 1851–1875 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🍽️",
-        "vocab": [
+          },
           {
             "target": "norma",
             "en": "regulation"
@@ -8199,7 +8109,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "passera",
-            "en": "common reed bunting"
+            "en": "beaver"
           },
           {
             "target": "laurea",
@@ -8236,7 +8146,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "nascere",
             "en": "bud"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u75",
+        "title": "Common words 1851–1875",
+        "subtitle": "The 1851–1875 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "lesbica",
             "en": "dyke"
@@ -8256,17 +8176,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "circo",
             "en": "circus"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u76",
-        "title": "Common words 1876–1900",
-        "subtitle": "The 1876–1900 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "spedito",
             "en": "quick"
@@ -8346,7 +8256,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "interrotto",
             "en": "blocked"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u76",
+        "title": "Common words 1876–1900",
+        "subtitle": "The 1876–1900 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "straniero",
             "en": "alien"
@@ -8366,17 +8286,11 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "scandalo",
             "en": "scandal"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u77",
-        "title": "Common words 1901–1925",
-        "subtitle": "The 1901–1925 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🧭",
-        "vocab": [
+          },
+          {
+            "target": "occuparsi",
+            "en": "be"
+          },
           {
             "target": "mazza",
             "en": "club"
@@ -8452,14 +8366,20 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "tacchino",
             "en": "turkey"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u77",
+        "title": "Common words 1901–1925",
+        "subtitle": "The 1901–1925 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "aumentare",
             "en": "augment"
-          },
-          {
-            "target": "risparmiare",
-            "en": "put by"
           },
           {
             "target": "umorismo",
@@ -8476,17 +8396,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "attrezzatura",
             "en": "rigging"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u78",
-        "title": "Common words 1926–1950",
-        "subtitle": "The 1926–1950 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "sprecare",
             "en": "waste"
@@ -8514,10 +8424,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "preoccupazione",
             "en": "worry"
-          },
-          {
-            "target": "ripresa",
-            "en": "recovery"
           },
           {
             "target": "supermercato",
@@ -8570,7 +8476,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "rivelato",
             "en": "revealed"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u78",
+        "title": "Common words 1926–1950",
+        "subtitle": "The 1926–1950 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "collaborazione",
             "en": "collaboration"
@@ -8586,17 +8502,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sindrome",
             "en": "syndrome"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u79",
-        "title": "Common words 1951–1975",
-        "subtitle": "The 1951–1975 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "costoso",
             "en": "expensive"
@@ -8674,17 +8580,23 @@ export const sections: SectionBlueprint[] = [
             "en": "needs"
           },
           {
-            "target": "guarire",
-            "en": "get well"
-          },
-          {
             "target": "crescendo",
             "en": "excalation"
           },
           {
             "target": "ingegnere",
             "en": "engineer"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u79",
+        "title": "Common words 1951–1975",
+        "subtitle": "The 1951–1975 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "realizzare",
             "en": "realize"
@@ -8696,17 +8608,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Carlo",
             "en": "Charles"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u80",
-        "title": "Common words 1976–2000",
-        "subtitle": "The 1976–2000 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "giungla",
             "en": "jungle"
@@ -8761,7 +8663,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "riempire",
-            "en": "fill up"
+            "en": "fill"
           },
           {
             "target": "recentemente",
@@ -8794,7 +8696,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Cesare",
             "en": "Caesar"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u80",
+        "title": "Common words 1976–2000",
+        "subtitle": "The 1976–2000 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "anziano",
             "en": "senior"
@@ -8806,17 +8718,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "perfezione",
             "en": "perfection"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u81",
-        "title": "Common words 2001–2025",
-        "subtitle": "The 2001–2025 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "carburante",
             "en": "fuel"
@@ -8904,7 +8806,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "esaminare",
             "en": "scrutinize"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u81",
+        "title": "Common words 2001–2025",
+        "subtitle": "The 2001–2025 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "sentenza",
             "en": "saying"
@@ -8916,17 +8828,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "vomito",
             "en": "vomit"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u82",
-        "title": "Common words 2026–2050",
-        "subtitle": "The 2026–2050 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🗣️",
-        "vocab": [
+          },
           {
             "target": "collaborare",
             "en": "collaborate"
@@ -8949,7 +8851,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "svolta",
-            "en": "turning point"
+            "en": "developed"
           },
           {
             "target": "fossa",
@@ -9014,7 +8916,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pulsante",
             "en": "button"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u82",
+        "title": "Common words 2026–2050",
+        "subtitle": "The 2026–2050 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "certificato",
             "en": "certificate"
@@ -9026,17 +8938,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "porre",
             "en": "put"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u83",
-        "title": "Common words 2051–2075",
-        "subtitle": "The 2051–2075 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "✍️",
-        "vocab": [
+          },
           {
             "target": "monaco",
             "en": "monk"
@@ -9052,10 +8954,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "attivo",
             "en": "active"
-          },
-          {
-            "target": "ritirare",
-            "en": "call back"
           },
           {
             "target": "agosto",
@@ -9128,7 +9026,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "concorso",
             "en": "contest"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u83",
+        "title": "Common words 2051–2075",
+        "subtitle": "The 2051–2075 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "leggermente",
             "en": "lightly"
@@ -9136,17 +9044,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "fermarsi",
             "en": "stop"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u84",
-        "title": "Common words 2076–2100",
-        "subtitle": "The 2076–2100 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "sconfiggere",
             "en": "defeat"
@@ -9238,7 +9136,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "comprendere",
             "en": "include"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u84",
+        "title": "Common words 2076–2100",
+        "subtitle": "The 2076–2100 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "martedì",
             "en": "Tuesday"
@@ -9246,17 +9154,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "bruno",
             "en": "brunet"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u85",
-        "title": "Common words 2101–2125",
-        "subtitle": "The 2101–2125 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🍽️",
-        "vocab": [
+          },
           {
             "target": "vena",
             "en": "vein"
@@ -9342,31 +9240,27 @@ export const sections: SectionBlueprint[] = [
             "en": "flow"
           },
           {
-            "target": "musicale",
-            "en": "music"
-          },
-          {
             "target": "quantità",
             "en": "quantity"
           },
           {
             "target": "foglio",
             "en": "sheet"
-          },
-          {
-            "target": "votare",
-            "en": "vote"
           }
         ]
       },
       {
-        "id": "it-gen-u86",
-        "title": "Common words 2126–2150",
-        "subtitle": "The 2126–2150 most frequent words",
+        "id": "it-gen-u85",
+        "title": "Common words 2101–2125",
+        "subtitle": "The 2101–2125 most frequent words",
         "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🏙️",
+        "color": "#FF4B4B",
+        "icon": "🍽️",
         "vocab": [
+          {
+            "target": "votare",
+            "en": "vote"
+          },
           {
             "target": "sedersi",
             "en": "to sit"
@@ -9377,7 +9271,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "rimettere",
-            "en": "be sick"
+            "en": "forgive"
           },
           {
             "target": "fornito",
@@ -9462,21 +9356,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "letale",
             "en": "lethal"
-          },
-          {
-            "target": "arrogante",
-            "en": "arrogant"
           }
         ]
       },
       {
-        "id": "it-gen-u87",
-        "title": "Common words 2151–2175",
-        "subtitle": "The 2151–2175 most frequent words",
+        "id": "it-gen-u86",
+        "title": "Common words 2126–2150",
+        "subtitle": "The 2126–2150 most frequent words",
         "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🧭",
+        "color": "#2B70C9",
+        "icon": "🏙️",
         "vocab": [
+          {
+            "target": "arrogante",
+            "en": "arrogant"
+          },
           {
             "target": "unirsi",
             "en": "get together"
@@ -9495,7 +9389,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "sindacato",
-            "en": "trade union"
+            "en": "consortium"
           },
           {
             "target": "spedizione",
@@ -9503,7 +9397,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "multa",
-            "en": "financial fine"
+            "en": "penalty"
           },
           {
             "target": "solitudine",
@@ -9555,7 +9449,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "volontario",
-            "en": "voluntary worker"
+            "en": "intentional"
           },
           {
             "target": "ginnastica",
@@ -9572,21 +9466,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pipì",
             "en": "wee"
-          },
-          {
-            "target": "pisciare",
-            "en": "piss"
           }
         ]
       },
       {
-        "id": "it-gen-u88",
-        "title": "Common words 2176–2200",
-        "subtitle": "The 2176–2200 most frequent words",
+        "id": "it-gen-u87",
+        "title": "Common words 2151–2175",
+        "subtitle": "The 2151–2175 most frequent words",
         "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "💬",
+        "color": "#FFC800",
+        "icon": "🧭",
         "vocab": [
+          {
+            "target": "pisciare",
+            "en": "piss"
+          },
           {
             "target": "colonna",
             "en": "column"
@@ -9630,10 +9524,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "assistito",
             "en": "beneficiary"
-          },
-          {
-            "target": "restituire",
-            "en": "bring back to"
           },
           {
             "target": "delicato",
@@ -9690,12 +9580,12 @@ export const sections: SectionBlueprint[] = [
         ]
       },
       {
-        "id": "it-gen-u89",
-        "title": "Common words 2201–2225",
-        "subtitle": "The 2201–2225 most frequent words",
+        "id": "it-gen-u88",
+        "title": "Common words 2176–2200",
+        "subtitle": "The 2176–2200 most frequent words",
         "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "🎓",
+        "color": "#00CD9C",
+        "icon": "💬",
         "vocab": [
           {
             "target": "rimandare",
@@ -9800,12 +9690,12 @@ export const sections: SectionBlueprint[] = [
         ]
       },
       {
-        "id": "it-gen-u90",
-        "title": "Common words 2226–2250",
-        "subtitle": "The 2226–2250 most frequent words",
+        "id": "it-gen-u89",
+        "title": "Common words 2201–2225",
+        "subtitle": "The 2201–2225 most frequent words",
         "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "⭐",
+        "color": "#58CC02",
+        "icon": "🎓",
         "vocab": [
           {
             "target": "orbita",
@@ -9892,31 +9782,13 @@ export const sections: SectionBlueprint[] = [
             "en": "betray"
           },
           {
-            "target": "dramma",
-            "en": "dramatic play"
-          },
-          {
             "target": "serratura",
             "en": "lock"
           },
           {
-            "target": "attentato",
-            "en": "assassination attempt"
-          },
-          {
             "target": "candela",
             "en": "candle"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u91",
-        "title": "Common words 2251–2275",
-        "subtitle": "The 2251–2275 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "concentrato",
             "en": "concentrated"
@@ -9924,7 +9796,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "bancone",
             "en": "countertop"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u90",
+        "title": "Common words 2226–2250",
+        "subtitle": "The 2226–2250 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "verbale",
             "en": "oral"
@@ -10016,17 +9898,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "apparentemente",
             "en": "apparently"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u92",
-        "title": "Common words 2276–2300",
-        "subtitle": "The 2276–2300 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "🗣️",
-        "vocab": [
+          },
           {
             "target": "illusione",
             "en": "delusion"
@@ -10034,14 +9906,20 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "conquistare",
             "en": "conquer"
-          },
-          {
-            "target": "eccetera",
-            "en": "and so forth"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u91",
+        "title": "Common words 2251–2275",
+        "subtitle": "The 2251–2275 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "agitato",
-            "en": "manic patient"
+            "en": "excited"
           },
           {
             "target": "grigio",
@@ -10126,17 +10004,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "peggiorare",
             "en": "make worse"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u93",
-        "title": "Common words 2301–2325",
-        "subtitle": "The 2301–2325 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "✍️",
-        "vocab": [
+          },
           {
             "target": "salita",
             "en": "ascent"
@@ -10148,7 +10016,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "femminuccia",
             "en": "sissy"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u92",
+        "title": "Common words 2276–2300",
+        "subtitle": "The 2276–2300 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "precisione",
             "en": "exactitude"
@@ -10170,16 +10048,8 @@ export const sections: SectionBlueprint[] = [
             "en": "prepared"
           },
           {
-            "target": "ritrovare",
-            "en": "find again"
-          },
-          {
             "target": "silenzioso",
             "en": "quiet"
-          },
-          {
-            "target": "affinché",
-            "en": "in order that"
           },
           {
             "target": "impari",
@@ -10191,7 +10061,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "sfruttare",
-            "en": "draw on"
+            "en": "exploit"
           },
           {
             "target": "dimostrazione",
@@ -10236,24 +10106,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "garanzia",
             "en": "guarantee"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u94",
-        "title": "Common words 2326–2350",
-        "subtitle": "The 2326–2350 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "ragno",
             "en": "spider"
           },
           {
             "target": "atterrare",
-            "en": "strike down"
+            "en": "land"
           },
           {
             "target": "legalmente",
@@ -10266,7 +10126,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "omicida",
             "en": "killer"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u93",
+        "title": "Common words 2301–2325",
+        "subtitle": "The 2301–2325 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "massacro",
             "en": "massacre"
@@ -10301,7 +10171,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "esagerare",
-            "en": "go overboard"
+            "en": "exaggerate"
           },
           {
             "target": "reagire",
@@ -10346,17 +10216,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "precisamente",
             "en": "accurately"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u95",
-        "title": "Common words 2351–2375",
-        "subtitle": "The 2351–2375 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🍽️",
-        "vocab": [
+          },
           {
             "target": "carbone",
             "en": "coal"
@@ -10376,7 +10236,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "posa",
             "en": "exposure"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u94",
+        "title": "Common words 2326–2350",
+        "subtitle": "The 2326–2350 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "settimo",
             "en": "seventh"
@@ -10430,10 +10300,6 @@ export const sections: SectionBlueprint[] = [
             "en": "invasion"
           },
           {
-            "target": "attualmente",
-            "en": "at the moment"
-          },
-          {
             "target": "impedito",
             "en": "barred"
           },
@@ -10456,17 +10322,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "altamente",
             "en": "highly"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u96",
-        "title": "Common words 2376–2400",
-        "subtitle": "The 2376–2400 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "peste",
             "en": "plague"
@@ -10490,7 +10346,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "cemento",
             "en": "cement"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u95",
+        "title": "Common words 2351–2375",
+        "subtitle": "The 2351–2375 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "finanziario",
             "en": "financial"
@@ -10525,7 +10391,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "alimentare",
-            "en": "eating food"
+            "en": "feed"
           },
           {
             "target": "mancia",
@@ -10552,10 +10418,6 @@ export const sections: SectionBlueprint[] = [
             "en": "bench"
           },
           {
-            "target": "accompagnato",
-            "en": "between"
-          },
-          {
             "target": "contadino",
             "en": "farmer"
           },
@@ -10563,20 +10425,6 @@ export const sections: SectionBlueprint[] = [
             "target": "fondazione",
             "en": "foundation"
           },
-          {
-            "target": "missile",
-            "en": "suitable for throwing"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u97",
-        "title": "Common words 2401–2425",
-        "subtitle": "The 2401–2425 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "🧭",
-        "vocab": [
           {
             "target": "mito",
             "en": "commonplace"
@@ -10607,8 +10455,18 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "rilasciare",
-            "en": "leave again"
-          },
+            "en": "grant"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u96",
+        "title": "Common words 2376–2400",
+        "subtitle": "The 2376–2400 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "Ceneri",
             "en": "Ash Wednesday"
@@ -10662,10 +10520,6 @@ export const sections: SectionBlueprint[] = [
             "en": "inevitably"
           },
           {
-            "target": "squillo",
-            "en": "call girl"
-          },
-          {
             "target": "piccante",
             "en": "hot"
           },
@@ -10676,17 +10530,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "alloggio",
             "en": "accommodation"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u98",
-        "title": "Common words 2426–2450",
-        "subtitle": "The 2426–2450 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "poltrona",
             "en": "armchair"
@@ -10722,7 +10566,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "riservata",
             "en": "reserved"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u97",
+        "title": "Common words 2401–2425",
+        "subtitle": "The 2401–2425 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "Svizzera",
             "en": "Switzerland"
@@ -10764,10 +10618,6 @@ export const sections: SectionBlueprint[] = [
             "en": "initial"
           },
           {
-            "target": "eletto",
-            "en": "newly elected person"
-          },
-          {
             "target": "emotivo",
             "en": "emotional"
           },
@@ -10786,17 +10636,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "dirigere",
             "en": "manage"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u99",
-        "title": "Common words 2451–2475",
-        "subtitle": "The 2451–2475 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "maglione",
             "en": "sweater"
@@ -10811,7 +10651,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "cedere",
-            "en": "cave in"
+            "en": "react"
           },
           {
             "target": "iscritto",
@@ -10836,7 +10676,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "accompagnare",
             "en": "accompany"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u98",
+        "title": "Common words 2426–2450",
+        "subtitle": "The 2426–2450 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "seme",
             "en": "seed"
@@ -10896,20 +10746,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "esposizione",
             "en": "display"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u100",
-        "title": "Common words 2476–2500",
-        "subtitle": "The 2476–2500 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "⭐",
-        "vocab": [
-          {
-            "target": "scomparire",
-            "en": "pass away"
           },
           {
             "target": "depresso",
@@ -10950,7 +10786,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ognuna",
             "en": "everyone"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u99",
+        "title": "Common words 2451–2475",
+        "subtitle": "The 2451–2475 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "sorso",
             "en": "sip"
@@ -10966,10 +10812,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "confraternita",
             "en": "brotherhood"
-          },
-          {
-            "target": "semestre",
-            "en": "half"
           },
           {
             "target": "mosso",
@@ -10993,7 +10835,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "addestrato",
-            "en": "on the dexter"
+            "en": "trained"
           },
           {
             "target": "estremo",
@@ -11006,17 +10848,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "spiacevole",
             "en": "unpleasant"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u101",
-        "title": "Common words 2501–2525",
-        "subtitle": "The 2501–2525 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "afferrato",
             "en": "got"
@@ -11064,7 +10896,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "manica",
             "en": "sleeve"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u100",
+        "title": "Common words 2476–2500",
+        "subtitle": "The 2476–2500 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "critica",
             "en": "analysis"
@@ -11116,17 +10958,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "legna",
             "en": "firewood"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u102",
-        "title": "Common words 2526–2550",
-        "subtitle": "The 2526–2550 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🗣️",
-        "vocab": [
+          },
           {
             "target": "operativo",
             "en": "operating"
@@ -11174,7 +11006,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "quaranta",
             "en": "forty"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u101",
+        "title": "Common words 2501–2525",
+        "subtitle": "The 2501–2525 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "cantiere",
             "en": "dockyard"
@@ -11226,17 +11068,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "interruzione",
             "en": "interruption"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u103",
-        "title": "Common words 2551–2575",
-        "subtitle": "The 2551–2575 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "✍️",
-        "vocab": [
+          },
           {
             "target": "arancia",
             "en": "orange"
@@ -11259,7 +11091,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "mina",
-            "en": "land mine"
+            "en": "lead"
           },
           {
             "target": "onnipotente",
@@ -11284,7 +11116,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "caserma",
             "en": "barrack"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u102",
+        "title": "Common words 2526–2550",
+        "subtitle": "The 2526–2550 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "attrazione",
             "en": "attraction"
@@ -11299,11 +11141,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "maleducato",
-            "en": "ill-bred person"
-          },
-          {
-            "target": "tenersi",
-            "en": "hold"
+            "en": "ill-bred"
           },
           {
             "target": "steso",
@@ -11336,17 +11174,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "risonanza",
             "en": "resonance"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u104",
-        "title": "Common words 2576–2600",
-        "subtitle": "The 2576–2600 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "Pietro",
             "en": "Peter"
@@ -11398,7 +11226,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "cera",
             "en": "wax"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u103",
+        "title": "Common words 2551–2575",
+        "subtitle": "The 2551–2575 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "divino",
             "en": "divine"
@@ -11433,7 +11271,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "competere",
-            "en": "be due"
+            "en": "compete"
           },
           {
             "target": "preparazione",
@@ -11446,17 +11284,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "editore",
             "en": "publisher"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u105",
-        "title": "Common words 2601–2625",
-        "subtitle": "The 2601–2625 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "🍽️",
-        "vocab": [
+          },
           {
             "target": "provocare",
             "en": "produce"
@@ -11508,7 +11336,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "brutale",
             "en": "brutal"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u104",
+        "title": "Common words 2576–2600",
+        "subtitle": "The 2576–2600 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "baracca",
             "en": "hut"
@@ -11556,17 +11394,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "seppellire",
             "en": "bury"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u106",
-        "title": "Common words 2626–2650",
-        "subtitle": "The 2626–2650 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "pepe",
             "en": "pepper"
@@ -11618,7 +11446,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "architetto",
             "en": "architect"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u105",
+        "title": "Common words 2601–2625",
+        "subtitle": "The 2601–2625 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "deprimente",
             "en": "demoralizing"
@@ -11666,17 +11504,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "yogurt",
             "en": "yoghurt"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u107",
-        "title": "Common words 2651–2675",
-        "subtitle": "The 2651–2675 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🧭",
-        "vocab": [
+          },
           {
             "target": "furioso",
             "en": "furious"
@@ -11722,20 +11550,26 @@ export const sections: SectionBlueprint[] = [
             "en": "awaken"
           },
           {
-            "target": "piombo",
-            "en": "lead"
-          },
-          {
-            "target": "procura",
-            "en": "power of attorney"
-          },
-          {
             "target": "allegro",
             "en": "cheerful"
           },
           {
             "target": "irrilevante",
             "en": "insignificant"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u106",
+        "title": "Common words 2626–2650",
+        "subtitle": "The 2626–2650 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🏙️",
+        "vocab": [
+          {
+            "target": "tosto",
+            "en": "at once"
           },
           {
             "target": "immortale",
@@ -11776,17 +11610,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "neonato",
             "en": "infant"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u108",
-        "title": "Common words 2676–2700",
-        "subtitle": "The 2676–2700 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "passero",
             "en": "sparrow"
@@ -11802,10 +11626,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "adrenalina",
             "en": "adrenaline"
-          },
-          {
-            "target": "capsula",
-            "en": "seed ball"
           },
           {
             "target": "automatico",
@@ -11846,7 +11666,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "marmellata",
             "en": "jam"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u107",
+        "title": "Common words 2651–2675",
+        "subtitle": "The 2651–2675 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "miliardo",
             "en": "billion"
@@ -11886,17 +11716,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "diciotto",
             "en": "eighteen"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u109",
-        "title": "Common words 2701–2725",
-        "subtitle": "The 2701–2725 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "unire",
             "en": "unite"
@@ -11956,7 +11776,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "bacino",
             "en": "basin"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u108",
+        "title": "Common words 2676–2700",
+        "subtitle": "The 2676–2700 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "sfondo",
             "en": "backdrop"
@@ -11996,17 +11826,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sella",
             "en": "gap"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u110",
-        "title": "Common words 2726–2750",
-        "subtitle": "The 2726–2750 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "zecca",
             "en": "tick"
@@ -12018,10 +11838,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "autentico",
             "en": "authentic"
-          },
-          {
-            "target": "trascorrere",
-            "en": "glance through"
           },
           {
             "target": "pompino",
@@ -12070,7 +11886,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "cucchiaio",
             "en": "spoon"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u109",
+        "title": "Common words 2701–2725",
+        "subtitle": "The 2701–2725 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "parrucca",
             "en": "wig"
@@ -12106,17 +11932,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "vicinato",
             "en": "neighbourhood"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u111",
-        "title": "Common words 2751–2775",
-        "subtitle": "The 2751–2775 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "veterinario",
             "en": "veterinarian"
@@ -12180,7 +11996,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Irlanda",
             "en": "Ireland"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u110",
+        "title": "Common words 2726–2750",
+        "subtitle": "The 2726–2750 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "nazista",
             "en": "Nazi"
@@ -12195,7 +12021,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "rovescia",
-            "en": "in reverse"
+            "en": "lapel"
           },
           {
             "target": "industriale",
@@ -12216,17 +12042,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "fogna",
             "en": "drain"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u112",
-        "title": "Common words 2776–2800",
-        "subtitle": "The 2776–2800 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🗣️",
-        "vocab": [
+          },
           {
             "target": "costituzione",
             "en": "constitution"
@@ -12290,7 +12106,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "anonimo",
             "en": "anonymous"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u111",
+        "title": "Common words 2751–2775",
+        "subtitle": "The 2751–2775 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "audace",
             "en": "insolens"
@@ -12323,20 +12149,6 @@ export const sections: SectionBlueprint[] = [
             "target": "pecora",
             "en": "sheep"
           },
-          {
-            "target": "emozionato",
-            "en": "excited"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u113",
-        "title": "Common words 2801–2825",
-        "subtitle": "The 2801–2825 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "✍️",
-        "vocab": [
           {
             "target": "asino",
             "en": "donkey"
@@ -12379,7 +12191,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "dormitorio",
-            "en": "commuter town"
+            "en": "dorm"
           },
           {
             "target": "buffa",
@@ -12394,10 +12206,6 @@ export const sections: SectionBlueprint[] = [
             "en": "artificial"
           },
           {
-            "target": "determinare",
-            "en": "bring about"
-          },
-          {
             "target": "sciarpa",
             "en": "scarf"
           },
@@ -12407,8 +12215,18 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "colla",
-            "en": "with"
-          },
+            "en": "glue"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u112",
+        "title": "Common words 2776–2800",
+        "subtitle": "The 2776–2800 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "essenza",
             "en": "being"
@@ -12436,17 +12254,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "appassionato",
             "en": "buff"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u114",
-        "title": "Common words 2826–2850",
-        "subtitle": "The 2826–2850 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "evacuazione",
             "en": "evacuation"
@@ -12518,7 +12326,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "superficiale",
             "en": "superficial"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u113",
+        "title": "Common words 2801–2825",
+        "subtitle": "The 2801–2825 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "spavento",
             "en": "fright"
@@ -12546,17 +12364,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "liberazione",
             "en": "liberation"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u115",
-        "title": "Common words 2851–2875",
-        "subtitle": "The 2851–2875 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🍽️",
-        "vocab": [
+          },
           {
             "target": "camper",
             "en": "campervan"
@@ -12628,11 +12436,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "spionaggio",
             "en": "espionage"
-          },
-          {
-            "target": "interpretare",
-            "en": "explain"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u114",
+        "title": "Common words 2826–2850",
+        "subtitle": "The 2826–2850 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "elettronica",
             "en": "electronics"
@@ -12656,17 +12470,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "dama",
             "en": "draughtboard"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u116",
-        "title": "Common words 2876–2900",
-        "subtitle": "The 2876–2900 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "turco",
             "en": "Turkish"
@@ -12742,7 +12546,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "inaugurazione",
             "en": "inauguration"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u115",
+        "title": "Common words 2851–2875",
+        "subtitle": "The 2851–2875 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "guanto",
             "en": "glove"
@@ -12766,17 +12580,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "vulcano",
             "en": "volcano"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u117",
-        "title": "Common words 2901–2925",
-        "subtitle": "The 2901–2925 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🧭",
-        "vocab": [
+          },
           {
             "target": "soffitta",
             "en": "attic"
@@ -12803,7 +12607,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "escludere",
-            "en": "leave out"
+            "en": "exclude"
           },
           {
             "target": "dimora",
@@ -12852,7 +12656,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "facciale",
             "en": "facial"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u116",
+        "title": "Common words 2876–2900",
+        "subtitle": "The 2876–2900 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "allergico",
             "en": "allergic"
@@ -12876,17 +12690,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "capolavoro",
             "en": "masterpiece"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u118",
-        "title": "Common words 2926–2950",
-        "subtitle": "The 2926–2950 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "pubblicare",
             "en": "publish"
@@ -12962,7 +12766,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "cupola",
             "en": "dome"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u117",
+        "title": "Common words 2901–2925",
+        "subtitle": "The 2901–2925 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "distinguere",
             "en": "distinguish"
@@ -12986,17 +12800,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "tonno",
             "en": "tuna"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u119",
-        "title": "Common words 2951–2975",
-        "subtitle": "The 2951–2975 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "valvola",
             "en": "fuse"
@@ -13004,10 +12808,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ricatto",
             "en": "blackmail"
-          },
-          {
-            "target": "godere",
-            "en": "be pleased"
           },
           {
             "target": "vialetto",
@@ -13076,7 +12876,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "legittimo",
             "en": "justifiable"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u118",
+        "title": "Common words 2926–2950",
+        "subtitle": "The 2926–2950 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "Grecia",
             "en": "Greece"
@@ -13096,17 +12906,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "autostima",
             "en": "self-esteem"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u120",
-        "title": "Common words 2976–3000",
-        "subtitle": "The 2976–3000 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "accusare",
             "en": "accuse"
@@ -13186,7 +12986,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pittura",
             "en": "painting"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u119",
+        "title": "Common words 2951–2975",
+        "subtitle": "The 2951–2975 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "dirigente",
             "en": "leading"
@@ -13206,17 +13016,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Svezia",
             "en": "Sweden"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u121",
-        "title": "Common words 3001–3025",
-        "subtitle": "The 3001–3025 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "giovinezza",
             "en": "youth"
@@ -13296,7 +13096,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "coreano",
             "en": "Korean"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u120",
+        "title": "Common words 2976–3000",
+        "subtitle": "The 2976–3000 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "calo",
             "en": "settlement"
@@ -13313,20 +13123,6 @@ export const sections: SectionBlueprint[] = [
             "target": "prenotazione",
             "en": "booking"
           },
-          {
-            "target": "montare",
-            "en": "get on"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u122",
-        "title": "Common words 3026–3050",
-        "subtitle": "The 3026–3050 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🗣️",
-        "vocab": [
           {
             "target": "ombrello",
             "en": "umbrella"
@@ -13410,7 +13206,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "organo",
             "en": "organ"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u121",
+        "title": "Common words 3001–3025",
+        "subtitle": "The 3001–3025 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "arrendersi",
             "en": "capitulate"
@@ -13426,17 +13232,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "matita",
             "en": "pencil"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u123",
-        "title": "Common words 3051–3075",
-        "subtitle": "The 3051–3075 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "✍️",
-        "vocab": [
+          },
           {
             "target": "organismo",
             "en": "organism"
@@ -13478,10 +13274,6 @@ export const sections: SectionBlueprint[] = [
             "en": "celibacy"
           },
           {
-            "target": "empire",
-            "en": "fill"
-          },
-          {
             "target": "maggiordomo",
             "en": "butler"
           },
@@ -13494,16 +13286,12 @@ export const sections: SectionBlueprint[] = [
             "en": "instructor"
           },
           {
-            "target": "congelato",
-            "en": "frozen"
-          },
-          {
             "target": "annunciato",
             "en": "foretold"
           },
           {
             "target": "Venere",
-            "en": "beautiful woman"
+            "en": "Venus"
           },
           {
             "target": "mozione",
@@ -13528,7 +13316,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "svenire",
             "en": "faint"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u122",
+        "title": "Common words 3026–3050",
+        "subtitle": "The 3026–3050 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "bacchetta",
             "en": "rod"
@@ -13536,17 +13334,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sbronza",
             "en": "drunk"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u124",
-        "title": "Common words 3076–3100",
-        "subtitle": "The 3076–3100 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "scoiattolo",
             "en": "squirrel"
@@ -13589,7 +13377,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "ciambella",
-            "en": "rubber ring"
+            "en": "doughnut"
           },
           {
             "target": "ordinanza",
@@ -13638,25 +13426,25 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "urina",
             "en": "urine"
-          },
-          {
-            "target": "indicato",
-            "en": "pointed out"
-          },
-          {
-            "target": "ingegneria",
-            "en": "engineering"
           }
         ]
       },
       {
-        "id": "it-gen-u125",
-        "title": "Common words 3101–3125",
-        "subtitle": "The 3101–3125 most frequent words",
+        "id": "it-gen-u123",
+        "title": "Common words 3051–3075",
+        "subtitle": "The 3051–3075 most frequent words",
         "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🍽️",
+        "color": "#CE82FF",
+        "icon": "✍️",
         "vocab": [
+          {
+            "target": "indicato",
+            "en": "fit"
+          },
+          {
+            "target": "ingegneria",
+            "en": "engineering"
+          },
           {
             "target": "risveglio",
             "en": "awakening"
@@ -13680,10 +13468,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "rabbino",
             "en": "rabbi"
-          },
-          {
-            "target": "scatto",
-            "en": "fit"
           },
           {
             "target": "cacciata",
@@ -13752,21 +13536,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "puzzolente",
             "en": "smelly"
-          },
-          {
-            "target": "abbracciare",
-            "en": "embrace"
           }
         ]
       },
       {
-        "id": "it-gen-u126",
-        "title": "Common words 3126–3150",
-        "subtitle": "The 3126–3150 most frequent words",
+        "id": "it-gen-u124",
+        "title": "Common words 3076–3100",
+        "subtitle": "The 3076–3100 most frequent words",
         "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🏙️",
+        "color": "#FF9600",
+        "icon": "🌍",
         "vocab": [
+          {
+            "target": "abbracciare",
+            "en": "embrace"
+          },
           {
             "target": "tutore",
             "en": "brace"
@@ -13862,21 +13646,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "imprevedibile",
             "en": "unforeseeable"
-          },
-          {
-            "target": "astronauta",
-            "en": "astronaut"
           }
         ]
       },
       {
-        "id": "it-gen-u127",
-        "title": "Common words 3151–3175",
-        "subtitle": "The 3151–3175 most frequent words",
+        "id": "it-gen-u125",
+        "title": "Common words 3101–3125",
+        "subtitle": "The 3101–3125 most frequent words",
         "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🧭",
+        "color": "#FF4B4B",
+        "icon": "🍽️",
         "vocab": [
+          {
+            "target": "astronauta",
+            "en": "astronaut"
+          },
           {
             "target": "messaggero",
             "en": "harbinger"
@@ -13972,21 +13756,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sbornia",
             "en": "bendere"
-          },
-          {
-            "target": "modificare",
-            "en": "alter"
           }
         ]
       },
       {
-        "id": "it-gen-u128",
-        "title": "Common words 3176–3200",
-        "subtitle": "The 3176–3200 most frequent words",
+        "id": "it-gen-u126",
+        "title": "Common words 3126–3150",
+        "subtitle": "The 3126–3150 most frequent words",
         "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "💬",
+        "color": "#2B70C9",
+        "icon": "🏙️",
         "vocab": [
+          {
+            "target": "modificare",
+            "en": "alter"
+          },
           {
             "target": "sequestro",
             "en": "attachment"
@@ -14082,21 +13866,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ribellione",
             "en": "rebellion"
-          },
-          {
-            "target": "budino",
-            "en": "pudding"
           }
         ]
       },
       {
-        "id": "it-gen-u129",
-        "title": "Common words 3201–3225",
-        "subtitle": "The 3201–3225 most frequent words",
+        "id": "it-gen-u127",
+        "title": "Common words 3151–3175",
+        "subtitle": "The 3151–3175 most frequent words",
         "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "🎓",
+        "color": "#FFC800",
+        "icon": "🧭",
         "vocab": [
+          {
+            "target": "budino",
+            "en": "pudding"
+          },
           {
             "target": "scia",
             "en": "wake"
@@ -14120,10 +13904,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "operatore",
             "en": "driver"
-          },
-          {
-            "target": "binario",
-            "en": "track platform"
           },
           {
             "target": "muto",
@@ -14200,12 +13980,12 @@ export const sections: SectionBlueprint[] = [
         ]
       },
       {
-        "id": "it-gen-u130",
-        "title": "Common words 3226–3250",
-        "subtitle": "The 3226–3250 most frequent words",
+        "id": "it-gen-u128",
+        "title": "Common words 3176–3200",
+        "subtitle": "The 3176–3200 most frequent words",
         "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "⭐",
+        "color": "#00CD9C",
+        "icon": "💬",
         "vocab": [
           {
             "target": "rima",
@@ -14214,10 +13994,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Polonia",
             "en": "Poland"
-          },
-          {
-            "target": "raduno",
-            "en": "meet"
           },
           {
             "target": "masticare",
@@ -14306,21 +14082,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "paracadute",
             "en": "parachute"
+          },
+          {
+            "target": "sicario",
+            "en": "hired assassin"
           }
         ]
       },
       {
-        "id": "it-gen-u131",
-        "title": "Common words 3251–3275",
-        "subtitle": "The 3251–3275 most frequent words",
+        "id": "it-gen-u129",
+        "title": "Common words 3201–3225",
+        "subtitle": "The 3201–3225 most frequent words",
         "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "📚",
+        "color": "#58CC02",
+        "icon": "🎓",
         "vocab": [
-          {
-            "target": "sicario",
-            "en": "hired assassin"
-          },
           {
             "target": "ballerino",
             "en": "dancing"
@@ -14416,21 +14192,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "virtù",
             "en": "goodness"
+          },
+          {
+            "target": "cascata",
+            "en": "waterfall"
           }
         ]
       },
       {
-        "id": "it-gen-u132",
-        "title": "Common words 3276–3300",
-        "subtitle": "The 3276–3300 most frequent words",
+        "id": "it-gen-u130",
+        "title": "Common words 3226–3250",
+        "subtitle": "The 3226–3250 most frequent words",
         "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "🗣️",
+        "color": "#1CB0F6",
+        "icon": "⭐",
         "vocab": [
-          {
-            "target": "cascata",
-            "en": "waterfall"
-          },
           {
             "target": "locanda",
             "en": "inn"
@@ -14526,21 +14302,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "atomica",
             "en": "atomic"
+          },
+          {
+            "target": "napoleone",
+            "en": "napoleon"
           }
         ]
       },
       {
-        "id": "it-gen-u133",
-        "title": "Common words 3301–3325",
-        "subtitle": "The 3301–3325 most frequent words",
+        "id": "it-gen-u131",
+        "title": "Common words 3251–3275",
+        "subtitle": "The 3251–3275 most frequent words",
         "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "✍️",
+        "color": "#CE82FF",
+        "icon": "📚",
         "vocab": [
-          {
-            "target": "napoleone",
-            "en": "napoleon"
-          },
           {
             "target": "soia",
             "en": "soya"
@@ -14615,7 +14391,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "console",
-            "en": "video game"
+            "en": "mixing"
           },
           {
             "target": "stagno",
@@ -14636,21 +14412,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "rimorchiare",
             "en": "tow"
+          },
+          {
+            "target": "traiettoria",
+            "en": "trajectory"
           }
         ]
       },
       {
-        "id": "it-gen-u134",
-        "title": "Common words 3326–3350",
-        "subtitle": "The 3326–3350 most frequent words",
+        "id": "it-gen-u132",
+        "title": "Common words 3276–3300",
+        "subtitle": "The 3276–3300 most frequent words",
         "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🌍",
+        "color": "#FF9600",
+        "icon": "🗣️",
         "vocab": [
-          {
-            "target": "traiettoria",
-            "en": "trajectory"
-          },
           {
             "target": "pozione",
             "en": "potion"
@@ -14746,21 +14522,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pannello",
             "en": "panel"
+          },
+          {
+            "target": "aragosta",
+            "en": "lobster"
           }
         ]
       },
       {
-        "id": "it-gen-u135",
-        "title": "Common words 3351–3375",
-        "subtitle": "The 3351–3375 most frequent words",
+        "id": "it-gen-u133",
+        "title": "Common words 3301–3325",
+        "subtitle": "The 3301–3325 most frequent words",
         "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🍽️",
+        "color": "#FF4B4B",
+        "icon": "✍️",
         "vocab": [
-          {
-            "target": "aragosta",
-            "en": "spiny lobster"
-          },
           {
             "target": "vago",
             "en": "vague"
@@ -14819,7 +14595,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "rivivere",
-            "en": "be revived"
+            "en": "live again"
           },
           {
             "target": "forense",
@@ -14856,21 +14632,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "quotidiano",
             "en": "daily"
+          },
+          {
+            "target": "esaurimento",
+            "en": "exhaustion"
           }
         ]
       },
       {
-        "id": "it-gen-u136",
-        "title": "Common words 3376–3400",
-        "subtitle": "The 3376–3400 most frequent words",
+        "id": "it-gen-u134",
+        "title": "Common words 3326–3350",
+        "subtitle": "The 3326–3350 most frequent words",
         "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🏙️",
+        "color": "#2B70C9",
+        "icon": "🌍",
         "vocab": [
-          {
-            "target": "esaurimento",
-            "en": "exhaustion"
-          },
           {
             "target": "coscia",
             "en": "thigh"
@@ -14916,10 +14692,6 @@ export const sections: SectionBlueprint[] = [
             "en": "dirtied"
           },
           {
-            "target": "approfittare",
-            "en": "take advantage"
-          },
-          {
             "target": "Eduardo",
             "en": "Edward"
           },
@@ -14948,10 +14720,6 @@ export const sections: SectionBlueprint[] = [
             "en": "volunteering"
           },
           {
-            "target": "sbarazzarsi",
-            "en": "get rid of"
-          },
-          {
             "target": "balia",
             "en": "mercy"
           },
@@ -14966,17 +14734,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "disarmato",
             "en": "without claws"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u137",
-        "title": "Common words 3401–3425",
-        "subtitle": "The 3401–3425 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "🧭",
-        "vocab": [
+          },
           {
             "target": "vetrina",
             "en": "shop window"
@@ -14988,7 +14746,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "cautela",
             "en": "care wariness"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u135",
+        "title": "Common words 3351–3375",
+        "subtitle": "The 3351–3375 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "inaspettato",
             "en": "sudden"
@@ -14996,10 +14764,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "polizza",
             "en": "insurance"
-          },
-          {
-            "target": "pappagallo",
-            "en": "bed bottle"
           },
           {
             "target": "cappuccino",
@@ -15076,17 +14840,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pentito",
             "en": "compunctious"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u138",
-        "title": "Common words 3426–3450",
-        "subtitle": "The 3426–3450 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "spogliatoio",
             "en": "changing room"
@@ -15102,7 +14856,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "arca",
             "en": "sarcophagus"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u136",
+        "title": "Common words 3376–3400",
+        "subtitle": "The 3376–3400 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "apprendista",
             "en": "apprentice"
@@ -15186,17 +14950,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "concreto",
             "en": "concrete"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u139",
-        "title": "Common words 3451–3475",
-        "subtitle": "The 3451–3475 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "protettore",
             "en": "protecting"
@@ -15212,7 +14966,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "compatibile",
             "en": "compatible"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u137",
+        "title": "Common words 3401–3425",
+        "subtitle": "The 3401–3425 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "confezione",
             "en": "packet"
@@ -15296,17 +15060,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "aspirapolvere",
             "en": "vacuum cleaner"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u140",
-        "title": "Common words 3476–3500",
-        "subtitle": "The 3476–3500 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "calcolato",
             "en": "brinkmanship"
@@ -15322,7 +15076,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "assurdità",
             "en": "absurdity"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u138",
+        "title": "Common words 3426–3450",
+        "subtitle": "The 3426–3450 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "distrarre",
             "en": "distract"
@@ -15406,17 +15170,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "intervallo",
             "en": "interval"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u141",
-        "title": "Common words 3501–3525",
-        "subtitle": "The 3501–3525 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "fondamentali",
             "en": "basic"
@@ -15432,7 +15186,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Norvegia",
             "en": "Norway"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u139",
+        "title": "Common words 3451–3475",
+        "subtitle": "The 3451–3475 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "prevedibile",
             "en": "predictable"
@@ -15516,17 +15280,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "alleluia",
             "en": "hallelujah"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u142",
-        "title": "Common words 3526–3550",
-        "subtitle": "The 3526–3550 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🗣️",
-        "vocab": [
+          },
           {
             "target": "dinosauro",
             "en": "dinosaur"
@@ -15542,7 +15296,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Giovanna",
             "en": "Jean"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u140",
+        "title": "Common words 3476–3500",
+        "subtitle": "The 3476–3500 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "frontale",
             "en": "frontal"
@@ -15626,17 +15390,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "prelevare",
             "en": "get"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u143",
-        "title": "Common words 3551–3575",
-        "subtitle": "The 3551–3575 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "✍️",
-        "vocab": [
+          },
           {
             "target": "semaforo",
             "en": "traffic light"
@@ -15652,7 +15406,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "allergia",
             "en": "allergy"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u141",
+        "title": "Common words 3501–3525",
+        "subtitle": "The 3501–3525 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "travaglio",
             "en": "labour"
@@ -15736,17 +15500,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "orale",
             "en": "verbal"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u144",
-        "title": "Common words 3576–3600",
-        "subtitle": "The 3576–3600 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "farfalle",
             "en": "lepidopterans"
@@ -15762,11 +15516,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "lampadina",
             "en": "bulb"
-          },
-          {
-            "target": "rilevare",
-            "en": "take away again"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u142",
+        "title": "Common words 3526–3550",
+        "subtitle": "The 3526–3550 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "strettamente",
             "en": "closely"
@@ -15798,10 +15558,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "equo",
             "en": "equitable"
-          },
-          {
-            "target": "invecchiare",
-            "en": "grow old"
           },
           {
             "target": "morsa",
@@ -15846,20 +15602,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pipistrello",
             "en": "bat"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u145",
-        "title": "Common words 3601–3625",
-        "subtitle": "The 3601–3625 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "🍽️",
-        "vocab": [
-          {
-            "target": "scalare",
-            "en": "step down"
           },
           {
             "target": "verdura",
@@ -15884,7 +15626,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "mulo",
             "en": "mule"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u143",
+        "title": "Common words 3551–3575",
+        "subtitle": "The 3551–3575 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "polacco",
             "en": "Polish"
@@ -15896,10 +15648,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "inno",
             "en": "anthem"
-          },
-          {
-            "target": "tappa",
-            "en": "haling place"
           },
           {
             "target": "Caterina",
@@ -15956,17 +15704,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Acquario",
             "en": "aquarium"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u146",
-        "title": "Common words 3626–3650",
-        "subtitle": "The 3626–3650 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "menù",
             "en": "menu"
@@ -15998,7 +15736,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "nuca",
             "en": "nape"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u144",
+        "title": "Common words 3576–3600",
+        "subtitle": "The 3576–3600 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "consumato",
             "en": "consumed"
@@ -16044,10 +15792,6 @@ export const sections: SectionBlueprint[] = [
             "en": "agitation"
           },
           {
-            "target": "alimentazione",
-            "en": "feed"
-          },
-          {
             "target": "automaticamente",
             "en": "automatically"
           },
@@ -16066,17 +15810,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "aeroplano",
             "en": "aeroplane"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u147",
-        "title": "Common words 3651–3675",
-        "subtitle": "The 3651–3675 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🧭",
-        "vocab": [
+          },
           {
             "target": "preoccupante",
             "en": "dire"
@@ -16112,7 +15846,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "fabbro",
             "en": "blacksmith"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u145",
+        "title": "Common words 3601–3625",
+        "subtitle": "The 3601–3625 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "distribuire",
             "en": "release"
@@ -16176,24 +15920,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "alleviare",
             "en": "alleviate"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u148",
-        "title": "Common words 3676–3700",
-        "subtitle": "The 3676–3700 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "cucire",
             "en": "sew"
           },
           {
             "target": "taverna",
-            "en": "low tavern"
+            "en": "bistro"
           },
           {
             "target": "santuario",
@@ -16222,7 +15956,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "peperoncino",
             "en": "chilli"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u146",
+        "title": "Common words 3626–3650",
+        "subtitle": "The 3626–3650 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "repubblicano",
             "en": "republican"
@@ -16286,17 +16030,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "insufficienza",
             "en": "inadequacy"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u149",
-        "title": "Common words 3701–3725",
-        "subtitle": "The 3701–3725 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "tirocinio",
             "en": "apprenticeship"
@@ -16311,7 +16045,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "sbarra",
-            "en": "horizontal bar"
+            "en": "barrier"
           },
           {
             "target": "intendere",
@@ -16323,7 +16057,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "decollare",
-            "en": "start up"
+            "en": "behead"
           },
           {
             "target": "ragioniere",
@@ -16332,14 +16066,20 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sperimentale",
             "en": "experimental"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u147",
+        "title": "Common words 3651–3675",
+        "subtitle": "The 3651–3675 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "appendere",
             "en": "hang"
-          },
-          {
-            "target": "carota",
-            "en": "tall story"
           },
           {
             "target": "sottovalutato",
@@ -16383,7 +16123,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "gufo",
-            "en": "eagle owl"
+            "en": "jinx"
           },
           {
             "target": "perverso",
@@ -16396,17 +16136,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "intatto",
             "en": "intact"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u150",
-        "title": "Common words 3726–3750",
-        "subtitle": "The 3726–3750 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "vescica",
             "en": "bladder"
@@ -16446,7 +16176,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "palloncino",
             "en": "balloon"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u148",
+        "title": "Common words 3676–3700",
+        "subtitle": "The 3676–3700 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "algoritmo",
             "en": "algorithm"
@@ -16506,17 +16246,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "rovesciato",
             "en": "reversed"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u151",
-        "title": "Common words 3751–3775",
-        "subtitle": "The 3751–3775 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "equazione",
             "en": "equation"
@@ -16556,7 +16286,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "sanitario",
             "en": "bidet"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u149",
+        "title": "Common words 3701–3725",
+        "subtitle": "The 3701–3725 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "impeccabile",
             "en": "faultless"
@@ -16571,7 +16311,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "coccodrillo",
-            "en": "pre- written obituary"
+            "en": "crocodile"
           },
           {
             "target": "allievo",
@@ -16598,10 +16338,6 @@ export const sections: SectionBlueprint[] = [
             "en": "Stephen"
           },
           {
-            "target": "accogliere",
-            "en": "give hospitaly to"
-          },
-          {
             "target": "imbarco",
             "en": "Boarding"
           },
@@ -16616,17 +16352,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "antenna",
             "en": "yard"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u152",
-        "title": "Common words 3776–3800",
-        "subtitle": "The 3776–3800 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🗣️",
-        "vocab": [
+          },
           {
             "target": "disaccordo",
             "en": "conflict"
@@ -16670,10 +16396,20 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "fungo",
             "en": "mushroom"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u150",
+        "title": "Common words 3726–3750",
+        "subtitle": "The 3726–3750 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "prescrizione",
-            "en": "statute of limitation"
+            "en": "prescription"
           },
           {
             "target": "supporre",
@@ -16696,10 +16432,6 @@ export const sections: SectionBlueprint[] = [
             "en": "mechanics"
           },
           {
-            "target": "ficcanaso",
-            "en": "busybody"
-          },
-          {
             "target": "paralisi",
             "en": "palsy"
           },
@@ -16712,10 +16444,6 @@ export const sections: SectionBlueprint[] = [
             "en": "racism"
           },
           {
-            "target": "tracciare",
-            "en": "map out"
-          },
-          {
             "target": "alterato",
             "en": "abnormal"
           },
@@ -16726,20 +16454,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "bancario",
             "en": "banker"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u153",
-        "title": "Common words 3801–3825",
-        "subtitle": "The 3801–3825 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "✍️",
-        "vocab": [
-          {
-            "target": "mercante",
-            "en": "dealer"
           },
           {
             "target": "elettronico",
@@ -16792,7 +16506,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Danimarca",
             "en": "Denmark"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u151",
+        "title": "Common words 3751–3775",
+        "subtitle": "The 3751–3775 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "sacramento",
             "en": "sacrament"
@@ -16836,17 +16560,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ripugnante",
             "en": "disgusting"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u154",
-        "title": "Common words 3826–3850",
-        "subtitle": "The 3826–3850 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "reddito",
             "en": "income"
@@ -16902,7 +16616,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "passionale",
             "en": "hot-blooded"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u152",
+        "title": "Common words 3776–3800",
+        "subtitle": "The 3776–3800 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "lavanda",
             "en": "washing"
@@ -16928,10 +16652,6 @@ export const sections: SectionBlueprint[] = [
             "en": "distrained"
           },
           {
-            "target": "castigo",
-            "en": "punishment"
-          },
-          {
             "target": "magnetico",
             "en": "magnetic"
           },
@@ -16946,17 +16666,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "brezza",
             "en": "breeze"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u155",
-        "title": "Common words 3851–3875",
-        "subtitle": "The 3851–3875 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🍽️",
-        "vocab": [
+          },
           {
             "target": "soffio",
             "en": "waft"
@@ -17016,7 +16726,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "torrente",
             "en": "stream"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u153",
+        "title": "Common words 3801–3825",
+        "subtitle": "The 3801–3825 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "prestigio",
             "en": "prestige"
@@ -17056,17 +16776,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "squallido",
             "en": "squalid"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u156",
-        "title": "Common words 3876–3900",
-        "subtitle": "The 3876–3900 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "tolleranza",
             "en": "tolerance"
@@ -17126,7 +16836,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "materno",
             "en": "maternal"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u154",
+        "title": "Common words 3826–3850",
+        "subtitle": "The 3826–3850 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "devastante",
             "en": "devastating"
@@ -17161,22 +16881,12 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "clandestino",
-            "en": "illegal immigrant"
+            "en": "clandestine"
           },
           {
             "target": "danese",
             "en": "Danish"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u157",
-        "title": "Common words 3901–3925",
-        "subtitle": "The 3901–3925 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🧭",
-        "vocab": [
+          },
           {
             "target": "falsificato",
             "en": "faked"
@@ -17184,10 +16894,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Pechino",
             "en": "Beijing"
-          },
-          {
-            "target": "innamorarsi",
-            "en": "fall in love"
           },
           {
             "target": "immune",
@@ -17218,10 +16924,6 @@ export const sections: SectionBlueprint[] = [
             "en": "ungrateful"
           },
           {
-            "target": "concedere",
-            "en": "grant"
-          },
-          {
             "target": "sospendere",
             "en": "interrupt"
           },
@@ -17244,7 +16946,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Stoccolma",
             "en": "Stockholm"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u155",
+        "title": "Common words 3851–3875",
+        "subtitle": "The 3851–3875 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "fratellastro",
             "en": "stepbrother"
@@ -17276,17 +16988,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "robusto",
             "en": "brawny"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u158",
-        "title": "Common words 3926–3950",
-        "subtitle": "The 3926–3950 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "brutalmente",
             "en": "brutally"
@@ -17340,10 +17042,6 @@ export const sections: SectionBlueprint[] = [
             "en": "passing"
           },
           {
-            "target": "sopravvento",
-            "en": "take control"
-          },
-          {
             "target": "redenzione",
             "en": "antonement"
           },
@@ -17358,7 +17056,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "infame",
             "en": "infamous"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u156",
+        "title": "Common words 3876–3900",
+        "subtitle": "The 3876–3900 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "ano",
             "en": "anus"
@@ -17386,17 +17094,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ammirevole",
             "en": "admirable"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u159",
-        "title": "Common words 3951–3975",
-        "subtitle": "The 3951–3975 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "espulsione",
             "en": "expulsion"
@@ -17468,7 +17166,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "dinastia",
             "en": "dynasty"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u157",
+        "title": "Common words 3901–3925",
+        "subtitle": "The 3901–3925 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "programmazione",
             "en": "programming"
@@ -17496,17 +17204,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "osservatore",
             "en": "observer"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u160",
-        "title": "Common words 3976–4000",
-        "subtitle": "The 3976–4000 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "gradevole",
             "en": "pleasant"
@@ -17578,7 +17276,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "anteprima",
             "en": "fortaste"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u158",
+        "title": "Common words 3926–3950",
+        "subtitle": "The 3926–3950 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "Siria",
             "en": "Syria"
@@ -17600,23 +17308,9 @@ export const sections: SectionBlueprint[] = [
             "en": "bracelet"
           },
           {
-            "target": "purché",
-            "en": "as long as"
-          },
-          {
             "target": "imprevisto",
             "en": "hitch"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u161",
-        "title": "Common words 4001–4025",
-        "subtitle": "The 4001–4025 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "viale",
             "en": "avenue"
@@ -17631,7 +17325,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "misurare",
-            "en": "try on"
+            "en": "compare"
           },
           {
             "target": "ambulatorio",
@@ -17692,7 +17386,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "costola",
             "en": "rib"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u159",
+        "title": "Common words 3951–3975",
+        "subtitle": "The 3951–3975 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "uranio",
             "en": "uranium"
@@ -17716,20 +17420,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "lottatore",
             "en": "wrestler"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u162",
-        "title": "Common words 4026–4050",
-        "subtitle": "The 4026–4050 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🗣️",
-        "vocab": [
-          {
-            "target": "spargere",
-            "en": "give out"
           },
           {
             "target": "grembiule",
@@ -17781,7 +17471,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "Bilancia",
-            "en": "weighing scale"
+            "en": "Libra"
           },
           {
             "target": "meditazione",
@@ -17806,7 +17496,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Marocco",
             "en": "Morocco"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u160",
+        "title": "Common words 3976–4000",
+        "subtitle": "The 3976–4000 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "eufemismo",
             "en": "euphemism"
@@ -17826,17 +17526,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "motocicletta",
             "en": "motorcycle"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u163",
-        "title": "Common words 4051–4075",
-        "subtitle": "The 4051–4075 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "✍️",
-        "vocab": [
+          },
           {
             "target": "apice",
             "en": "apex"
@@ -17916,7 +17606,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Scorpione",
             "en": "scorpion"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u161",
+        "title": "Common words 4001–4025",
+        "subtitle": "The 4001–4025 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "scoppiato",
             "en": "split"
@@ -17936,17 +17636,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "giochetto",
             "en": "pastime"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u164",
-        "title": "Common words 4076–4100",
-        "subtitle": "The 4076–4100 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "cacciavite",
             "en": "screwdriver"
@@ -18026,7 +17716,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "spezie",
             "en": "spices"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u162",
+        "title": "Common words 4026–4050",
+        "subtitle": "The 4026–4050 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "chirurgico",
             "en": "surgical"
@@ -18046,17 +17746,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "illuminato",
             "en": "enlightened"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u165",
-        "title": "Common words 4101–4125",
-        "subtitle": "The 4101–4125 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🍽️",
-        "vocab": [
+          },
           {
             "target": "ammirazione",
             "en": "admiration"
@@ -18136,7 +17826,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "relativamente",
             "en": "comparatively"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u163",
+        "title": "Common words 4051–4075",
+        "subtitle": "The 4051–4075 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "smalto",
             "en": "enamel"
@@ -18156,17 +17856,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "provvedere",
             "en": "provide"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u166",
-        "title": "Common words 4126–4150",
-        "subtitle": "The 4126–4150 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "empatia",
             "en": "empathy"
@@ -18224,10 +17914,6 @@ export const sections: SectionBlueprint[] = [
             "en": "efficiency"
           },
           {
-            "target": "automatica",
-            "en": "automation science"
-          },
-          {
             "target": "diplomatica",
             "en": "diplomatics"
           },
@@ -18250,7 +17936,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "settimanale",
             "en": "weekly"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u164",
+        "title": "Common words 4076–4100",
+        "subtitle": "The 4076–4100 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "tastiera",
             "en": "fingerboard"
@@ -18266,17 +17962,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "zenzero",
             "en": "ginger"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u167",
-        "title": "Common words 4151–4175",
-        "subtitle": "The 4151–4175 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🧭",
-        "vocab": [
+          },
           {
             "target": "crescente",
             "en": "crescent"
@@ -18360,7 +18046,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "chitarrista",
             "en": "guitarist"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u165",
+        "title": "Common words 4101–4125",
+        "subtitle": "The 4101–4125 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "miscela",
             "en": "mixture"
@@ -18376,17 +18072,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "generare",
             "en": "beget"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u168",
-        "title": "Common words 4176–4200",
-        "subtitle": "The 4176–4200 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "comodino",
             "en": "nightstand"
@@ -18470,7 +18156,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "manomesso",
             "en": "opened"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u166",
+        "title": "Common words 4126–4150",
+        "subtitle": "The 4126–4150 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "acquisizione",
             "en": "acquisition"
@@ -18486,24 +18182,14 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "clientela",
             "en": "clientship"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u169",
-        "title": "Common words 4201–4225",
-        "subtitle": "The 4201–4225 most frequent words",
-        "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "crudeltà",
             "en": "cruelty"
           },
           {
             "target": "riattaccare",
-            "en": "hang up"
+            "en": "restart"
           },
           {
             "target": "panoramica",
@@ -18543,7 +18229,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "svizzero",
-            "en": "Swiss man"
+            "en": "Swiss"
           },
           {
             "target": "rivelarsi",
@@ -18559,7 +18245,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "peluche",
-            "en": "soft toy"
+            "en": "plush"
           },
           {
             "target": "buttafuori",
@@ -18580,14 +18266,24 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "insulina",
             "en": "insulin"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u167",
+        "title": "Common words 4151–4175",
+        "subtitle": "The 4151–4175 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "lussuria",
             "en": "lust"
           },
           {
             "target": "pubblicitario",
-            "en": "advertising agent"
+            "en": "advertising"
           },
           {
             "target": "pesantemente",
@@ -18596,17 +18292,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "catetere",
             "en": "catheter"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u170",
-        "title": "Common words 4226–4250",
-        "subtitle": "The 4226–4250 most frequent words",
-        "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "passatempo",
             "en": "diversion"
@@ -18634,10 +18320,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "plastico",
             "en": "flexible"
-          },
-          {
-            "target": "lacrima",
-            "en": "goutte of tears"
           },
           {
             "target": "crudo",
@@ -18694,7 +18376,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Zelanda",
             "en": "Zeeland"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u168",
+        "title": "Common words 4176–4200",
+        "subtitle": "The 4176–4200 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "abusato",
             "en": "abused"
@@ -18706,17 +18398,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "cosiddetto",
             "en": "so-called"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u171",
-        "title": "Common words 4251–4275",
-        "subtitle": "The 4251–4275 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "📚",
-        "vocab": [
+          },
           {
             "target": "bombardamento",
             "en": "bombardment"
@@ -18726,16 +18408,12 @@ export const sections: SectionBlueprint[] = [
             "en": "investor"
           },
           {
-            "target": "virgola",
-            "en": "point"
-          },
-          {
             "target": "vegetariano",
             "en": "vegetarian"
           },
           {
             "target": "impegnarsi",
-            "en": "become involved"
+            "en": "endeavor"
           },
           {
             "target": "rilassare",
@@ -18808,7 +18486,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "remo",
             "en": "oar"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u169",
+        "title": "Common words 4201–4225",
+        "subtitle": "The 4201–4225 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "reclutamento",
             "en": "recruitment"
@@ -18816,17 +18504,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "china",
             "en": "bent"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u172",
-        "title": "Common words 4276–4300",
-        "subtitle": "The 4276–4300 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "🗣️",
-        "vocab": [
+          },
           {
             "target": "scoreggia",
             "en": "fart"
@@ -18918,25 +18596,25 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "glutine",
             "en": "gluten"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u170",
+        "title": "Common words 4226–4250",
+        "subtitle": "The 4226–4250 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "⭐",
+        "vocab": [
           {
             "target": "giada",
             "en": "jade"
           },
           {
             "target": "adattamento",
-            "en": "film adaptation"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u173",
-        "title": "Common words 4301–4325",
-        "subtitle": "The 4301–4325 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "✍️",
-        "vocab": [
+            "en": "adjustment"
+          },
           {
             "target": "picchio",
             "en": "woodpecker"
@@ -18956,6 +18634,10 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "amuleto",
             "en": "amulet"
+          },
+          {
+            "target": "videogioco",
+            "en": "video game"
           },
           {
             "target": "energetica",
@@ -19024,7 +18706,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "rompiscatole",
             "en": "bother"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u171",
+        "title": "Common words 4251–4275",
+        "subtitle": "The 4251–4275 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "📚",
+        "vocab": [
           {
             "target": "imitare",
             "en": "imitate"
@@ -19036,17 +18728,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "rimpiazzare",
             "en": "replace"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u174",
-        "title": "Common words 4326–4350",
-        "subtitle": "The 4326–4350 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🌍",
-        "vocab": [
+          },
           {
             "target": "minerale",
             "en": "mineral"
@@ -19134,7 +18816,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "occasionale",
             "en": "casual"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u172",
+        "title": "Common words 4276–4300",
+        "subtitle": "The 4276–4300 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "🗣️",
+        "vocab": [
           {
             "target": "dominante",
             "en": "dominant"
@@ -19146,17 +18838,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "puramente",
             "en": "purely"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u175",
-        "title": "Common words 4351–4375",
-        "subtitle": "The 4351–4375 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "🍽️",
-        "vocab": [
+          },
           {
             "target": "aggirare",
             "en": "bypass"
@@ -19195,7 +18877,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "contorno",
-            "en": "side dish"
+            "en": "contourr"
           },
           {
             "target": "cerchia",
@@ -19244,7 +18926,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "crociata",
             "en": "crucial"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u173",
+        "title": "Common words 4301–4325",
+        "subtitle": "The 4301–4325 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "✍️",
+        "vocab": [
           {
             "target": "esplorazione",
             "en": "exploration"
@@ -19256,17 +18948,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "alfabeto",
             "en": "alphabet"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u176",
-        "title": "Common words 4376–4400",
-        "subtitle": "The 4376–4400 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🏙️",
-        "vocab": [
+          },
           {
             "target": "ristrutturazione",
             "en": "renovation"
@@ -19296,16 +18978,12 @@ export const sections: SectionBlueprint[] = [
             "en": "prominent"
           },
           {
-            "target": "levare",
-            "en": "remove"
-          },
-          {
             "target": "assolo",
             "en": "solo"
           },
           {
             "target": "armeria",
-            "en": "gun shop"
+            "en": "armory"
           },
           {
             "target": "valzer",
@@ -19340,10 +19018,6 @@ export const sections: SectionBlueprint[] = [
             "en": "porcelain"
           },
           {
-            "target": "brano",
-            "en": "piece"
-          },
-          {
             "target": "disciplinare",
             "en": "disciplinary"
           },
@@ -19362,21 +19036,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "invadere",
             "en": "invade"
-          },
-          {
-            "target": "decima",
-            "en": "tithe"
           }
         ]
       },
       {
-        "id": "it-gen-u177",
-        "title": "Common words 4401–4425",
-        "subtitle": "The 4401–4425 most frequent words",
+        "id": "it-gen-u174",
+        "title": "Common words 4326–4350",
+        "subtitle": "The 4326–4350 most frequent words",
         "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "🧭",
+        "color": "#2B70C9",
+        "icon": "🌍",
         "vocab": [
+          {
+            "target": "decima",
+            "en": "tithe"
+          },
           {
             "target": "rimorchio",
             "en": "trailer"
@@ -19472,21 +19146,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "ricambiare",
             "en": "repay"
-          },
-          {
-            "target": "sondaggio",
-            "en": "canvassing"
           }
         ]
       },
       {
-        "id": "it-gen-u178",
-        "title": "Common words 4426–4450",
-        "subtitle": "The 4426–4450 most frequent words",
+        "id": "it-gen-u175",
+        "title": "Common words 4351–4375",
+        "subtitle": "The 4351–4375 most frequent words",
         "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "💬",
+        "color": "#FFC800",
+        "icon": "🍽️",
         "vocab": [
+          {
+            "target": "sondaggio",
+            "en": "canvassing"
+          },
           {
             "target": "fiala",
             "en": "vial"
@@ -19510,10 +19184,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "spider",
             "en": "roadster"
-          },
-          {
-            "target": "abituarsi",
-            "en": "get used to"
           },
           {
             "target": "prostata",
@@ -19590,12 +19260,12 @@ export const sections: SectionBlueprint[] = [
         ]
       },
       {
-        "id": "it-gen-u179",
-        "title": "Common words 4451–4475",
-        "subtitle": "The 4451–4475 most frequent words",
+        "id": "it-gen-u176",
+        "title": "Common words 4376–4400",
+        "subtitle": "The 4376–4400 most frequent words",
         "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🎓",
+        "color": "#00CD9C",
+        "icon": "🏙️",
         "vocab": [
           {
             "target": "asfalto",
@@ -19700,12 +19370,12 @@ export const sections: SectionBlueprint[] = [
         ]
       },
       {
-        "id": "it-gen-u180",
-        "title": "Common words 4476–4500",
-        "subtitle": "The 4476–4500 most frequent words",
+        "id": "it-gen-u177",
+        "title": "Common words 4401–4425",
+        "subtitle": "The 4401–4425 most frequent words",
         "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "⭐",
+        "color": "#58CC02",
+        "icon": "🧭",
         "vocab": [
           {
             "target": "cercapersone",
@@ -19810,12 +19480,12 @@ export const sections: SectionBlueprint[] = [
         ]
       },
       {
-        "id": "it-gen-u181",
-        "title": "Common words 4501–4525",
-        "subtitle": "The 4501–4525 most frequent words",
+        "id": "it-gen-u178",
+        "title": "Common words 4426–4450",
+        "subtitle": "The 4426–4450 most frequent words",
         "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "📚",
+        "color": "#1CB0F6",
+        "icon": "💬",
         "vocab": [
           {
             "target": "affilato",
@@ -19920,12 +19590,12 @@ export const sections: SectionBlueprint[] = [
         ]
       },
       {
-        "id": "it-gen-u182",
-        "title": "Common words 4526–4550",
-        "subtitle": "The 4526–4550 most frequent words",
+        "id": "it-gen-u179",
+        "title": "Common words 4451–4475",
+        "subtitle": "The 4451–4475 most frequent words",
         "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "🗣️",
+        "color": "#CE82FF",
+        "icon": "🎓",
         "vocab": [
           {
             "target": "invernale",
@@ -19945,7 +19615,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "anticipare",
-            "en": "arrive early"
+            "en": "anticipate"
           },
           {
             "target": "regale",
@@ -20004,10 +19674,6 @@ export const sections: SectionBlueprint[] = [
             "en": "negation"
           },
           {
-            "target": "precipitare",
-            "en": "be plunged"
-          },
-          {
             "target": "pile",
             "en": "fleece"
           },
@@ -20026,21 +19692,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "atletica",
             "en": "athletics"
+          },
+          {
+            "target": "potassio",
+            "en": "potassium"
           }
         ]
       },
       {
-        "id": "it-gen-u183",
-        "title": "Common words 4551–4575",
-        "subtitle": "The 4551–4575 most frequent words",
+        "id": "it-gen-u180",
+        "title": "Common words 4476–4500",
+        "subtitle": "The 4476–4500 most frequent words",
         "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "✍️",
+        "color": "#FF9600",
+        "icon": "⭐",
         "vocab": [
-          {
-            "target": "potassio",
-            "en": "potassium"
-          },
           {
             "target": "zattera",
             "en": "raft"
@@ -20136,21 +19802,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "moralmente",
             "en": "morally"
+          },
+          {
+            "target": "mittente",
+            "en": "sender"
           }
         ]
       },
       {
-        "id": "it-gen-u184",
-        "title": "Common words 4576–4600",
-        "subtitle": "The 4576–4600 most frequent words",
+        "id": "it-gen-u181",
+        "title": "Common words 4501–4525",
+        "subtitle": "The 4501–4525 most frequent words",
         "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🌍",
+        "color": "#FF4B4B",
+        "icon": "📚",
         "vocab": [
-          {
-            "target": "mittente",
-            "en": "sender"
-          },
           {
             "target": "ovale",
             "en": "oval"
@@ -20229,7 +19895,7 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "ombelico",
-            "en": "nombril point"
+            "en": "navel"
           },
           {
             "target": "indolore",
@@ -20246,21 +19912,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "proverbio",
             "en": "proverb"
+          },
+          {
+            "target": "posato",
+            "en": "sane"
           }
         ]
       },
       {
-        "id": "it-gen-u185",
-        "title": "Common words 4601–4625",
-        "subtitle": "The 4601–4625 most frequent words",
+        "id": "it-gen-u182",
+        "title": "Common words 4526–4550",
+        "subtitle": "The 4526–4550 most frequent words",
         "cefr": "C1",
-        "color": "#58CC02",
-        "icon": "🍽️",
+        "color": "#2B70C9",
+        "icon": "🗣️",
         "vocab": [
-          {
-            "target": "posato",
-            "en": "sane"
-          },
           {
             "target": "becchino",
             "en": "gravedigger"
@@ -20356,21 +20022,21 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "comunismo",
             "en": "communism"
+          },
+          {
+            "target": "sostituzione",
+            "en": "substitution"
           }
         ]
       },
       {
-        "id": "it-gen-u186",
-        "title": "Common words 4626–4650",
-        "subtitle": "The 4626–4650 most frequent words",
+        "id": "it-gen-u183",
+        "title": "Common words 4551–4575",
+        "subtitle": "The 4551–4575 most frequent words",
         "cefr": "C1",
-        "color": "#1CB0F6",
-        "icon": "🏙️",
+        "color": "#FFC800",
+        "icon": "✍️",
         "vocab": [
-          {
-            "target": "sostituzione",
-            "en": "substitution"
-          },
           {
             "target": "improvvisazione",
             "en": "improvisation"
@@ -20452,10 +20118,6 @@ export const sections: SectionBlueprint[] = [
             "en": "avidity"
           },
           {
-            "target": "intenzionale",
-            "en": "intentional"
-          },
-          {
             "target": "assorbire",
             "en": "absorb"
           },
@@ -20465,18 +20127,8 @@ export const sections: SectionBlueprint[] = [
           },
           {
             "target": "salina",
-            "en": "salt mine"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u187",
-        "title": "Common words 4651–4675",
-        "subtitle": "The 4651–4675 most frequent words",
-        "cefr": "C1",
-        "color": "#CE82FF",
-        "icon": "🧭",
-        "vocab": [
+            "en": "saltworks"
+          },
           {
             "target": "tampone",
             "en": "stopgap"
@@ -20484,11 +20136,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "colesterolo",
             "en": "cholesterol"
-          },
-          {
-            "target": "perspicace",
-            "en": "shrewd insightful"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u184",
+        "title": "Common words 4576–4600",
+        "subtitle": "The 4576–4600 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🌍",
+        "vocab": [
           {
             "target": "riflessione",
             "en": "consideration"
@@ -20576,29 +20234,29 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "autostop",
             "en": "hitchhiking"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u188",
-        "title": "Common words 4676–4700",
-        "subtitle": "The 4676–4700 most frequent words",
-        "cefr": "C1",
-        "color": "#FF9600",
-        "icon": "💬",
-        "vocab": [
+          },
           {
             "target": "porgere",
             "en": "declaim"
           },
           {
             "target": "giraffa",
-            "en": "boom microphone"
+            "en": "giraffe"
           },
           {
             "target": "ceramica",
             "en": "pottery"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u185",
+        "title": "Common words 4601–4625",
+        "subtitle": "The 4601–4625 most frequent words",
+        "cefr": "C1",
+        "color": "#58CC02",
+        "icon": "🍽️",
+        "vocab": [
           {
             "target": "indimenticabile",
             "en": "unforgettable"
@@ -20686,17 +20344,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "accelerazione",
             "en": "acceleration"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u189",
-        "title": "Common words 4701–4725",
-        "subtitle": "The 4701–4725 most frequent words",
-        "cefr": "C1",
-        "color": "#FF4B4B",
-        "icon": "🎓",
-        "vocab": [
+          },
           {
             "target": "spillo",
             "en": "pin"
@@ -20708,7 +20356,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "premeditato",
             "en": "premeditated"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u186",
+        "title": "Common words 4626–4650",
+        "subtitle": "The 4626–4650 most frequent words",
+        "cefr": "C1",
+        "color": "#1CB0F6",
+        "icon": "🏙️",
+        "vocab": [
           {
             "target": "blindato",
             "en": "armored"
@@ -20796,17 +20454,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "teoricamente",
             "en": "theoretically"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u190",
-        "title": "Common words 4726–4750",
-        "subtitle": "The 4726–4750 most frequent words",
-        "cefr": "C1",
-        "color": "#2B70C9",
-        "icon": "⭐",
-        "vocab": [
+          },
           {
             "target": "svantaggio",
             "en": "disadvantage"
@@ -20818,7 +20466,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "geografia",
             "en": "geography"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u187",
+        "title": "Common words 4651–4675",
+        "subtitle": "The 4651–4675 most frequent words",
+        "cefr": "C1",
+        "color": "#CE82FF",
+        "icon": "🧭",
+        "vocab": [
           {
             "target": "benefattore",
             "en": "benefactor"
@@ -20906,20 +20564,6 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "inventore",
             "en": "inventive"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u191",
-        "title": "Common words 4751–4775",
-        "subtitle": "The 4751–4775 most frequent words",
-        "cefr": "C1",
-        "color": "#FFC800",
-        "icon": "📚",
-        "vocab": [
-          {
-            "target": "stemma",
-            "en": "coat of arms"
           },
           {
             "target": "metano",
@@ -20932,7 +20576,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "grillo",
             "en": "cricket"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u188",
+        "title": "Common words 4676–4700",
+        "subtitle": "The 4676–4700 most frequent words",
+        "cefr": "C1",
+        "color": "#FF9600",
+        "icon": "💬",
+        "vocab": [
           {
             "target": "dedurre",
             "en": "deduce"
@@ -21016,17 +20670,7 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "fitta",
             "en": "dense"
-          }
-        ]
-      },
-      {
-        "id": "it-gen-u192",
-        "title": "Common words 4776–4800",
-        "subtitle": "The 4776–4800 most frequent words",
-        "cefr": "C1",
-        "color": "#00CD9C",
-        "icon": "🗣️",
-        "vocab": [
+          },
           {
             "target": "ventilatore",
             "en": "mechanical fan"
@@ -21042,7 +20686,17 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "Paola",
             "en": "Paula"
-          },
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u189",
+        "title": "Common words 4701–4725",
+        "subtitle": "The 4701–4725 most frequent words",
+        "cefr": "C1",
+        "color": "#FF4B4B",
+        "icon": "🎓",
+        "vocab": [
           {
             "target": "sfruttamento",
             "en": "exploitation"
@@ -21126,6 +20780,352 @@ export const sections: SectionBlueprint[] = [
           {
             "target": "pediatra",
             "en": "pediatrician"
+          },
+          {
+            "target": "alcolismo",
+            "en": "alcoholism"
+          },
+          {
+            "target": "delegazione",
+            "en": "delegation"
+          },
+          {
+            "target": "mantenimento",
+            "en": "conservation"
+          },
+          {
+            "target": "osceno",
+            "en": "obscene"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u190",
+        "title": "Common words 4726–4750",
+        "subtitle": "The 4726–4750 most frequent words",
+        "cefr": "C1",
+        "color": "#2B70C9",
+        "icon": "⭐",
+        "vocab": [
+          {
+            "target": "ronda",
+            "en": "round"
+          },
+          {
+            "target": "saloon",
+            "en": "porterhouse"
+          },
+          {
+            "target": "scontroso",
+            "en": "cantankerous"
+          },
+          {
+            "target": "incerto",
+            "en": "doubtful"
+          },
+          {
+            "target": "egoismo",
+            "en": "egoism"
+          },
+          {
+            "target": "solidarietà",
+            "en": "solidarity"
+          },
+          {
+            "target": "rigore",
+            "en": "harshness"
+          },
+          {
+            "target": "sperduto",
+            "en": "astray"
+          },
+          {
+            "target": "uguaglianza",
+            "en": "equality"
+          },
+          {
+            "target": "urna",
+            "en": "urn"
+          },
+          {
+            "target": "indistruttibile",
+            "en": "indestructible"
+          },
+          {
+            "target": "umidità",
+            "en": "dampness"
+          },
+          {
+            "target": "acero",
+            "en": "maple"
+          },
+          {
+            "target": "immaturo",
+            "en": "childish"
+          },
+          {
+            "target": "pio",
+            "en": "pious"
+          },
+          {
+            "target": "rovesciare",
+            "en": "spill"
+          },
+          {
+            "target": "colmo",
+            "en": "full"
+          },
+          {
+            "target": "mischiare",
+            "en": "blend"
+          },
+          {
+            "target": "bipolare",
+            "en": "bipolar"
+          },
+          {
+            "target": "ottica",
+            "en": "outlook"
+          },
+          {
+            "target": "icona",
+            "en": "icon"
+          },
+          {
+            "target": "leopardo",
+            "en": "leopard"
+          },
+          {
+            "target": "occultamento",
+            "en": "concealment"
+          },
+          {
+            "target": "rullo",
+            "en": "beating"
+          },
+          {
+            "target": "selezionato",
+            "en": "selected"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u191",
+        "title": "Common words 4751–4775",
+        "subtitle": "The 4751–4775 most frequent words",
+        "cefr": "C1",
+        "color": "#FFC800",
+        "icon": "📚",
+        "vocab": [
+          {
+            "target": "terme",
+            "en": "spa"
+          },
+          {
+            "target": "ematoma",
+            "en": "haematomna"
+          },
+          {
+            "target": "accecato",
+            "en": "blinded"
+          },
+          {
+            "target": "gradualmente",
+            "en": "gradually"
+          },
+          {
+            "target": "clavicola",
+            "en": "clavicle"
+          },
+          {
+            "target": "clinico",
+            "en": "clinical"
+          },
+          {
+            "target": "magicamente",
+            "en": "magically"
+          },
+          {
+            "target": "affogato",
+            "en": "drowned"
+          },
+          {
+            "target": "contaminazione",
+            "en": "contamination"
+          },
+          {
+            "target": "rapa",
+            "en": "turnip"
+          },
+          {
+            "target": "intimidire",
+            "en": "frighten"
+          },
+          {
+            "target": "flagrante",
+            "en": "evident"
+          },
+          {
+            "target": "frodo",
+            "en": "smuggling"
+          },
+          {
+            "target": "deviare",
+            "en": "deflect"
+          },
+          {
+            "target": "Zurigo",
+            "en": "Zurich"
+          },
+          {
+            "target": "alone",
+            "en": "halo"
+          },
+          {
+            "target": "relitto",
+            "en": "wreck"
+          },
+          {
+            "target": "turistico",
+            "en": "tour"
+          },
+          {
+            "target": "prude",
+            "en": "prudish"
+          },
+          {
+            "target": "lira",
+            "en": "lyre"
+          },
+          {
+            "target": "consumare",
+            "en": "consume"
+          },
+          {
+            "target": "esibirsi",
+            "en": "perform"
+          },
+          {
+            "target": "cinematografico",
+            "en": "cinematographic"
+          },
+          {
+            "target": "femminista",
+            "en": "feminist"
+          },
+          {
+            "target": "Giamaica",
+            "en": "Jamaica"
+          }
+        ]
+      },
+      {
+        "id": "it-gen-u192",
+        "title": "Common words 4776–4800",
+        "subtitle": "The 4776–4800 most frequent words",
+        "cefr": "C1",
+        "color": "#00CD9C",
+        "icon": "🗣️",
+        "vocab": [
+          {
+            "target": "narratore",
+            "en": "narrator"
+          },
+          {
+            "target": "stupidità",
+            "en": "stupidity"
+          },
+          {
+            "target": "Vilma",
+            "en": "Wilma"
+          },
+          {
+            "target": "diametro",
+            "en": "diameter"
+          },
+          {
+            "target": "intervenuto",
+            "en": "attending"
+          },
+          {
+            "target": "improvvisato",
+            "en": "ad-libbed"
+          },
+          {
+            "target": "abbronzatura",
+            "en": "suntan"
+          },
+          {
+            "target": "ricorrente",
+            "en": "recurrent"
+          },
+          {
+            "target": "zingaro",
+            "en": "Romany"
+          },
+          {
+            "target": "randagio",
+            "en": "wandering"
+          },
+          {
+            "target": "umiliare",
+            "en": "frivolous"
+          },
+          {
+            "target": "inquinamento",
+            "en": "pollution"
+          },
+          {
+            "target": "carreggiata",
+            "en": "carriageway"
+          },
+          {
+            "target": "sud-ovest",
+            "en": "south-west"
+          },
+          {
+            "target": "sublime",
+            "en": "elevated"
+          },
+          {
+            "target": "cruciverba",
+            "en": "crossword"
+          },
+          {
+            "target": "ostruzione",
+            "en": "clogging"
+          },
+          {
+            "target": "distruttore",
+            "en": "confector"
+          },
+          {
+            "target": "velivolo",
+            "en": "aircraft"
+          },
+          {
+            "target": "incursione",
+            "en": "foray"
+          },
+          {
+            "target": "falcone",
+            "en": "falcon"
+          },
+          {
+            "target": "microchip",
+            "en": "chip"
+          },
+          {
+            "target": "accenno",
+            "en": "hint"
+          },
+          {
+            "target": "biberon",
+            "en": "baby's bottle"
+          },
+          {
+            "target": "vantarsi",
+            "en": "boast"
           }
         ]
       }
