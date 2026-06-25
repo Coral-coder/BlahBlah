@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 import type { Exercise } from "@/curriculum/types";
-import { normalize, shuffle } from "@/lesson/engine";
+import { shuffle, pronunciationDetail, type PronPart } from "@/lesson/engine";
 import { accentChars } from "@/lib/accents";
 import { glossWord, romanizeWord } from "@/lib/glossary";
 import { getSpeechLocale, speak, speakSlow } from "@/lib/speech";
@@ -190,32 +190,11 @@ function CardView({
   );
 }
 
-function levenshtein(a: string, b: string): number {
-  const m = a.length;
-  const n = b.length;
-  if (!m) return n;
-  if (!n) return m;
-  const prev = Array.from({ length: n + 1 }, (_, i) => i);
-  const curr = new Array(n + 1).fill(0);
-  for (let i = 1; i <= m; i++) {
-    curr[0] = i;
-    for (let j = 1; j <= n; j++) {
-      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-      curr[j] = Math.min(prev[j] + 1, curr[j - 1] + 1, prev[j - 1] + cost);
-    }
-    for (let j = 0; j <= n; j++) prev[j] = curr[j];
-  }
-  return prev[n];
-}
-
-/** 0..100 similarity of a spoken transcript to the expected phrase. */
-function pronunciationScore(expected: string, heard: string): number {
-  const e = normalize(expected).replace(/\s+/g, "");
-  const h = normalize(heard).replace(/\s+/g, "");
-  if (!e) return 0;
-  if (e === h) return 100;
-  const dist = levenshtein(e, h);
-  return Math.max(0, Math.round((1 - dist / Math.max(e.length, h.length)) * 100));
+// Green → amber → red by how close a spoken part was to the reference.
+function closenessColor(c: number): string {
+  if (c >= 0.85) return theme.colors.success;
+  if (c >= 0.6) return theme.colors.gold;
+  return theme.colors.danger;
 }
 
 function Speaker({ text, big }: { text: string; big?: boolean }) {
@@ -540,6 +519,9 @@ function TypeView({
           },
         ]}
       />
+      {!revealed && exercise.pinyin ? (
+        <Text style={styles.typeHint}>Tip: you can type the pronunciation (e.g. {exercise.pinyin})</Text>
+      ) : null}
       {!revealed && accents.length > 0 ? (
         <View style={styles.accentBar}>
           {accents.map((c) => (
@@ -664,6 +646,7 @@ function SpeakView({
   const [status, setStatus] = useState<"idle" | "listening" | "done">("idle");
   const [heard, setHeard] = useState<string | null>(null);
   const [score, setScore] = useState<number | null>(null);
+  const [parts, setParts] = useState<PronPart[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   // Latest (cumulative) transcript; scoring happens only when recognition ends,
   // so the learner can say the WHOLE sentence before being graded.
@@ -689,7 +672,9 @@ function SpeakView({
     }
     clearTimers();
     scored.current = true;
-    const sc = pronunciationScore(exercise.text, text);
+    const detail = pronunciationDetail(exercise.text, text, exercise.pinyin);
+    const sc = detail.score;
+    setParts(detail.parts);
     setHeard(text);
     setScore(sc);
     setStatus("done");
@@ -732,6 +717,7 @@ function SpeakView({
     setError(null);
     setHeard(null);
     setScore(null);
+    setParts(null);
     transcript.current = "";
     scored.current = false;
     clearTimers();
@@ -807,7 +793,27 @@ function SpeakView({
       {score != null ? (
         <View style={styles.result}>
           <Text style={[styles.scoreText, { color: scoreColor }]}>{score}%</Text>
-          <Text style={styles.tip}>{tip}</Text>
+          {parts && parts.length ? (
+            <>
+              <View style={styles.pronRow}>
+                {parts.map((p, i) => (
+                  <Text key={i} style={[styles.pronPart, { color: closenessColor(p.closeness) }]}>
+                    {p.label}
+                  </Text>
+                ))}
+              </View>
+              {(() => {
+                const weak = parts.filter((p) => p.closeness < 0.6);
+                return weak.length ? (
+                  <Text style={styles.tip}>Focus on: {weak.map((p) => p.label).join(", ")}</Text>
+                ) : (
+                  <Text style={styles.tip}>{tip}</Text>
+                );
+              })()}
+            </>
+          ) : (
+            <Text style={styles.tip}>{tip}</Text>
+          )}
           {heard ? <Text style={styles.heard}>Heard: “{heard}”</Text> : null}
         </View>
       ) : null}
@@ -910,6 +916,8 @@ const styles = StyleSheet.create({
   tileGhost: { backgroundColor: theme.colors.surfaceAlt, borderColor: theme.colors.surfaceAlt },
   tileText: { color: theme.colors.text, fontSize: 18, fontWeight: "600" },
   tileSub: { color: theme.colors.textMuted, fontSize: 12, marginTop: 3, textAlign: "center" },
+  pronRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 10, marginTop: 6 },
+  pronPart: { fontSize: 22, fontWeight: "800" },
   conceptKicker: { color: theme.colors.primary, fontSize: 13, fontWeight: "800", letterSpacing: 1 },
   conceptTitle: { color: theme.colors.text, fontSize: 24, fontWeight: "900", marginTop: 6 },
   conceptBody: { color: theme.colors.text, fontSize: 17, lineHeight: 25 },
@@ -962,6 +970,7 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     textAlignVertical: "top",
   },
+  typeHint: { color: theme.colors.textMuted, fontSize: 13, marginTop: 8, fontStyle: "italic" },
   accentBar: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginTop: 10 },
   accentKey: {
     minWidth: 40,

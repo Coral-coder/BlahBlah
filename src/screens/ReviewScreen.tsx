@@ -15,7 +15,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Confetti } from "@/components/Confetti";
 import { Button, ProgressBar } from "@/components/ui";
 import { getCourse } from "@/curriculum";
-import { normalize, shuffle } from "@/lesson/engine";
+import { normalize, shuffle, typedAnswerCorrect, pinyinAnswerCorrect } from "@/lesson/engine";
 import { learnedWordsFor, type LearnedWord } from "@/lib/learned";
 import { isDue } from "@/lib/srs";
 import { playSfx } from "@/lib/sfx";
@@ -103,7 +103,13 @@ export function ReviewScreen() {
   function check() {
     Keyboard.dismiss();
     const resp = card.mode === "type" ? typed : pick ?? "";
-    const ok = normalize(resp) === normalize(card.word.target);
+    // Typed answers accept the target script OR its romanization (pinyin); choose
+    // cards still match exactly.
+    const ok =
+      card.mode === "type"
+        ? typedAnswerCorrect(card.word.target, resp) ||
+          (!!card.word.pinyin && pinyinAnswerCorrect(card.word.pinyin, resp))
+        : normalize(resp) === normalize(card.word.target);
     setCorrect(ok);
     setChecked(true);
     playSfx(ok ? "correct" : "wrong");
