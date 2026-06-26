@@ -43,7 +43,46 @@ const LANGS = [
   { code: "es", name: "Spanish", endonym: "Español", flag: "🇪🇸", speechLocale: "es-ES", freq: "es", dict: "spa-eng" },
   { code: "fr", name: "French", endonym: "Français", flag: "🇫🇷", speechLocale: "fr-FR", freq: "fr", dict: "fra-eng" },
   { code: "it", name: "Italian", endonym: "Italiano", flag: "🇮🇹", speechLocale: "it-IT", freq: "it", dict: "ita-eng" },
+  // Japanese needs a reading: we derive romaji from the kana, and only keep words
+  // we can read (so no unreadable tiles). Appends to the hand-authored ja course.
+  { code: "ja", name: "Japanese", endonym: "日本語", flag: "🇯🇵", speechLocale: "ja-JP", freq: "ja", dict: "jpn-eng", reading: true },
 ];
+
+// --- Kana → romaji (for readable Japanese tiles) -----------------------------
+const KANA = {
+  あ:"a",い:"i",う:"u",え:"e",お:"o",か:"ka",き:"ki",く:"ku",け:"ke",こ:"ko",が:"ga",ぎ:"gi",ぐ:"gu",げ:"ge",ご:"go",
+  さ:"sa",し:"shi",す:"su",せ:"se",そ:"so",ざ:"za",じ:"ji",ず:"zu",ぜ:"ze",ぞ:"zo",た:"ta",ち:"chi",つ:"tsu",て:"te",と:"to",
+  だ:"da",ぢ:"ji",づ:"zu",で:"de",ど:"do",な:"na",に:"ni",ぬ:"nu",ね:"ne",の:"no",は:"ha",ひ:"hi",ふ:"fu",へ:"he",ほ:"ho",
+  ば:"ba",び:"bi",ぶ:"bu",べ:"be",ぼ:"bo",ぱ:"pa",ぴ:"pi",ぷ:"pu",ぺ:"pe",ぽ:"po",ま:"ma",み:"mi",む:"mu",め:"me",も:"mo",
+  や:"ya",ゆ:"yu",よ:"yo",ら:"ra",り:"ri",る:"ru",れ:"re",ろ:"ro",わ:"wa",を:"o",ん:"n",
+  きゃ:"kya",きゅ:"kyu",きょ:"kyo",しゃ:"sha",しゅ:"shu",しょ:"sho",ちゃ:"cha",ちゅ:"chu",ちょ:"cho",にゃ:"nya",にゅ:"nyu",にょ:"nyo",
+  ひゃ:"hya",ひゅ:"hyu",ひょ:"hyo",みゃ:"mya",みゅ:"myu",みょ:"myo",りゃ:"rya",りゅ:"ryu",りょ:"ryo",
+  ぎゃ:"gya",ぎゅ:"gyu",ぎょ:"gyo",じゃ:"ja",じゅ:"ju",じょ:"jo",びゃ:"bya",びゅ:"byu",びょ:"byo",ぴゃ:"pya",ぴゅ:"pyu",ぴょ:"pyo",
+};
+// Katakana shares sounds with hiragana — offset the code points to reuse the table.
+function kataToHira(s) {
+  return s.replace(/[ァ-ヶ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60));
+}
+export function kanaToRomaji(input) {
+  const s = kataToHira(input.replace(/ー/g, "")); // drop long-vowel mark
+  let out = "";
+  for (let i = 0; i < s.length; i++) {
+    const two = s.slice(i, i + 2);
+    if (KANA[two]) { out += KANA[two]; i++; continue; }
+    const ch = s[i];
+    if (ch === "っ") { // sokuon: double the next consonant
+      const next = KANA[s.slice(i + 1, i + 3)] || KANA[s[i + 1]];
+      if (next) out += next[0];
+      continue;
+    }
+    if (KANA[ch]) { out += KANA[ch]; continue; }
+    return null; // contains kanji or unknown — no clean reading
+  }
+  return out || null;
+}
+export function isAllKana(s) {
+  return /^[぀-ヿーー]+$/.test(s);
+}
 
 const UNIT_COLORS = ["#58CC02", "#1CB0F6", "#CE82FF", "#FF9600", "#FF4B4B", "#2B70C9", "#FFC800", "#00CD9C"];
 const UNIT_ICONS = ["📚", "🗣️", "✍️", "🌍", "🍽️", "🏙️", "🧭", "💬", "🎓", "⭐"];
@@ -136,7 +175,7 @@ async function freedictTeiUrl(pair) {
 }
 
 // Download + extract the TEI archive, return a Map(lowerHeadword -> {orth, gloss}).
-async function loadDictionary(pair) {
+async function loadDictionary(pair, wantReading) {
   const url = await freedictTeiUrl(pair);
   const buf = await fetchBuffer(url);
   const dir = mkdtempSync(join(tmpdir(), `fd-${pair}-`));
@@ -186,7 +225,17 @@ async function loadDictionary(pair) {
       const g = cleanGloss(t, orth);
       if (g && !glosses.includes(g)) glosses.push(g);
     }
-    if (glosses.length) map.set(key, { orth: existing ? existing.orth : orth, glosses });
+    // For languages that need a reading (Japanese), derive romaji from the kana:
+    // use the headword if it's already kana, else a <pron> reading in the entry.
+    let reading = existing ? existing.reading : undefined;
+    if (wantReading && !reading) {
+      if (isAllKana(orth)) reading = kanaToRomaji(orth);
+      if (!reading) {
+        const pron = block.match(/<pron[^>]*>([\s\S]*?)<\/pron>/);
+        if (pron) reading = kanaToRomaji(decodeEntities(pron[1].replace(/<[^>]+>/g, "").trim()));
+      }
+    }
+    if (glosses.length) map.set(key, { orth: existing ? existing.orth : orth, glosses, reading });
   }
   return map;
 }
@@ -277,7 +326,10 @@ function emitBarrel(builtCodes) {
 
 async function buildLang(lang, enRank) {
   console.log(`\n=== ${lang.code} (${lang.name}) ===`);
-  const [dict, freq] = await Promise.all([loadDictionary(lang.dict), loadFrequency(lang.freq)]);
+  const [dict, freq] = await Promise.all([
+    loadDictionary(lang.dict, lang.reading),
+    loadFrequency(lang.freq),
+  ]);
   console.log(`  dict entries: ${dict.size}, frequency words: ${freq.length}`);
   // Choose the best sense: prefer a single common word over a phrase (FreeDict is
   // full of idiom entries like "throughout the day"), then rank by how common the
@@ -311,7 +363,8 @@ async function buildLang(lang, enRank) {
     if (vocab.length >= MAX_WORDS) break;
     const hit = dict.get(w);
     if (!hit) continue;
-    if (hit.orth.length < 3) continue; // skip short function words
+    if (!lang.reading && hit.orth.length < 3) continue; // skip short Latin function words
+    if (lang.reading && !hit.reading) continue; // reading langs: only keep readable words
     const targetKey = hit.orth.toLowerCase();
     if (usedTarget.has(targetKey)) continue;
     const gloss = pickGloss(hit.glosses);
@@ -320,7 +373,7 @@ async function buildLang(lang, enRank) {
     if (usedEn.has(enKey)) continue; // keep meanings distinct & varied
     usedTarget.add(targetKey);
     usedEn.add(enKey);
-    vocab.push({ target: hit.orth, en: gloss });
+    vocab.push(lang.reading ? { target: hit.orth, en: gloss, pinyin: hit.reading } : { target: hit.orth, en: gloss });
   }
   console.log(`  built vocab: ${vocab.length}`);
   if (vocab.length < UNIT_SIZE) throw new Error(`Too few words for ${lang.code} (${vocab.length})`);
