@@ -4,7 +4,7 @@
 export interface Tip {
   title: string;
   body: string;
-  examples?: { target: string; en: string }[];
+  examples?: { target: string; en: string; pinyin?: string }[];
 }
 
 const TIPS: Record<string, Tip[]> = {
@@ -497,6 +497,45 @@ const TIPS: Record<string, Tip[]> = {
       examples: [
         { target: "Ho mangiato", en: "I ate" },
         { target: "Siamo andati", en: "We went" },
+      ],
+    },
+  ],
+  // Japanese — beginner grammar progression (after the script intro in unit 1).
+  ja: [
+    {
+      title: "Word order: verb goes last",
+      body: "Japanese is Subject–Object–Verb: the verb comes at the END. \"I drink tea\" is literally \"I tea drink\".",
+      examples: [
+        { target: "わたし は おちゃ を のむ", en: "I drink tea (I tea drink)", pinyin: "watashi wa ocha o nomu" },
+      ],
+    },
+    {
+      title: "Particles mark each word's job",
+      body: "Tiny words AFTER a noun show its role: は (wa) marks the topic, を (o) marks the object, が (ga) marks the subject. They're like little labels, so word order is flexible.",
+      examples: [
+        { target: "わたし は", en: "as for me… (topic)", pinyin: "watashi wa" },
+        { target: "みず を", en: "water (object)", pinyin: "mizu o" },
+      ],
+    },
+    {
+      title: "です and ‑masu = polite",
+      body: "End a sentence with です (desu, \"is/are\") or a verb in the ‑masu form to sound polite — the everyday register for strangers. のむ (nomu) → のみます (nomimasu).",
+      examples: [
+        { target: "がくせい です", en: "(I) am a student", pinyin: "gakusei desu" },
+        { target: "みず を のみます", en: "(I) drink water", pinyin: "mizu o nomimasu" },
+      ],
+    },
+    {
+      title: "No articles, no plurals",
+      body: "There's no a/the, and nouns don't change for plural — ねこ (neko) is \"cat\" or \"cats\" depending on context. The subject is also often dropped when it's obvious.",
+      examples: [{ target: "ねこ です", en: "it's a cat / they're cats", pinyin: "neko desu" }],
+    },
+    {
+      title: "Asking: just add か",
+      body: "Turn any statement into a question by adding か (ka) at the end — no word-order change, no question mark needed.",
+      examples: [
+        { target: "がくせい です か", en: "Are you a student?", pinyin: "gakusei desu ka" },
+        { target: "みず を のみます か", en: "Do you drink water?", pinyin: "mizu o nomimasu ka" },
       ],
     },
   ],
