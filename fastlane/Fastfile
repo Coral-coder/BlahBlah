@@ -1,3 +1,6 @@
+require "base64"
+require "tmpdir"
+
 default_platform(:ios)
 
 APP_IDENTIFIER = "com.lightwave.blahblah".freeze
@@ -34,39 +37,40 @@ platform :ios do
       build_number: ENV.fetch("GITHUB_RUN_NUMBER", Time.now.to_i.to_s)
     )
 
-    # Apple caps the number of Distribution certificates. On ephemeral runners
-    # each run would mint a brand-new one (the private key never persists), so we
-    # hit that cap. Revoke the stale Distribution certs first — their private
-    # keys are gone, so they can't sign anything, and revoking does NOT
-    # invalidate builds already on TestFlight.
-    require "spaceship"
-    Spaceship::ConnectAPI.token = Spaceship::ConnectAPI::Token.create(
-      key_id: key_id,
-      issuer_id: issuer_id,
-      filepath: File.expand_path(key_path)
-    )
-    Spaceship::ConnectAPI::Certificate.all.each do |cert|
-      next unless cert.certificate_type.to_s.include?("DISTRIBUTION")
-
-      UI.message("Revoking stale distribution certificate #{cert.id} (#{cert.certificate_type})")
-      begin
-        cert.delete!
-      rescue StandardError => e
-        UI.important("Could not revoke #{cert.id}: #{e.message}")
-      end
+    # IMPORTANT: we must NOT revoke distribution certificates. Revoking the
+    # certificate that signed a build invalidates that build on App Store Connect
+    # (it flips to "Invalid Binary" / ITMS-90035 Invalid Signature). A previous
+    # version revoked all distribution certs every run, which silently invalidated
+    # every prior TestFlight binary. Instead we reuse a persistent distribution
+    # certificate imported from a secret (.p12), and only fall back to minting one
+    # when no secret is provided.
+    #
+    # Preferred: import a persistent distribution cert+key from CI secrets so the
+    # SAME certificate signs every build and is never revoked.
+    cert_p12_b64 = ENV["APPLE_DISTRIBUTION_CERT_P12"]
+    if cert_p12_b64 && !cert_p12_b64.empty?
+      p12_path = File.expand_path("dist-cert.p12", Dir.tmpdir)
+      File.binwrite(p12_path, Base64.decode64(cert_p12_b64))
+      import_certificate(
+        certificate_path: p12_path,
+        certificate_password: ENV.fetch("APPLE_DISTRIBUTION_CERT_PASSWORD", ""),
+        keychain_name: keychain_name,
+        keychain_password: keychain_password
+      )
+      UI.message("Imported persistent distribution certificate from APPLE_DISTRIBUTION_CERT_P12")
+    else
+      # Fallback: mint a distribution certificate for this run (does NOT revoke
+      # others). Note Apple caps distribution certs at 3 — once you hit that,
+      # add the APPLE_DISTRIBUTION_CERT_P12 secret for a stable, reusable cert.
+      UI.important("No APPLE_DISTRIBUTION_CERT_P12 secret set — minting a cert for this run. " \
+                   "Add that secret for stable signing that never invalidates old builds.")
+      get_certificates(
+        api_key: api_key,
+        development: false,
+        keychain_path: keychain_name,
+        keychain_password: keychain_password
+      )
     end
-
-    # We deliberately use MANUAL signing instead of Xcode automatic/cloud
-    # signing: on ephemeral CI runners automatic signing tries to provision an
-    # "Apple Development" certificate tied to the machine and fails to
-    # revoke/recreate it across runs. Instead we mint a Distribution certificate
-    # and an App Store provisioning profile with the API key on each run.
-    get_certificates(
-      api_key: api_key,
-      development: false,
-      keychain_path: keychain_name,
-      keychain_password: keychain_password
-    )
     get_provisioning_profile(
       api_key: api_key,
       app_identifier: APP_IDENTIFIER,
