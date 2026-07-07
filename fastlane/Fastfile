@@ -45,10 +45,24 @@ platform :ios do
     # certificate imported from a secret (.p12), and only fall back to minting one
     # when no secret is provided.
     #
-    # Preferred: import a persistent distribution cert+key from CI secrets so the
-    # SAME certificate signs every build and is never revoked.
+    # Preferred: the encrypted certificate vault committed by the "Bootstrap iOS
+    # signing" workflow (phone-friendly, no Mac). Decrypt with CERT_VAULT_PASSWORD
+    # and import — the SAME certificate signs every build and is never revoked.
+    vault_path = File.expand_path("cert-vault.p12.enc", __dir__)
+    vault_pass = ENV["CERT_VAULT_PASSWORD"]
     cert_p12_b64 = ENV["APPLE_DISTRIBUTION_CERT_P12"]
-    if cert_p12_b64 && !cert_p12_b64.empty?
+    if vault_pass && !vault_pass.empty? && File.exist?(vault_path)
+      p12_path = File.expand_path("cert-vault.p12", Dir.tmpdir)
+      sh("openssl enc -d -aes-256-cbc -pbkdf2 -in #{vault_path.shellescape} " \
+         "-out #{p12_path.shellescape} -pass env:CERT_VAULT_PASSWORD")
+      import_certificate(
+        certificate_path: p12_path,
+        certificate_password: vault_pass,
+        keychain_name: keychain_name,
+        keychain_password: keychain_password
+      )
+      UI.message("Imported persistent distribution certificate from the vault (cert-vault.p12.enc)")
+    elsif cert_p12_b64 && !cert_p12_b64.empty?
       p12_path = File.expand_path("dist-cert.p12", Dir.tmpdir)
       File.binwrite(p12_path, Base64.decode64(cert_p12_b64))
       import_certificate(
@@ -114,6 +128,33 @@ platform :ios do
       changelog: changelog,
       skip_waiting_for_build_processing: true
     )
+  end
+
+  desc "Mint ONE distribution certificate and export it to fastlane/cert-vault.p12. " \
+       "Run by the 'Bootstrap iOS signing' workflow — see docs/SIGNING.md."
+  lane :bootstrap_cert do
+    api_key = app_store_connect_api_key(
+      key_id: ENV.fetch("APPSTORE_API_KEY_ID"),
+      issuer_id: ENV.fetch("APPSTORE_ISSUER_ID"),
+      key_filepath: ENV.fetch("ASC_API_KEY_PATH"),
+      in_house: false
+    )
+    keychain_name = ENV.fetch("SIGNING_KEYCHAIN")
+    keychain_password = ENV.fetch("SIGNING_KEYCHAIN_PASSWORD")
+    vault_pass = ENV.fetch("CERT_VAULT_PASSWORD")
+
+    get_certificates(
+      api_key: api_key,
+      development: false,
+      keychain_path: keychain_name,
+      keychain_password: keychain_password
+    )
+
+    out = File.expand_path("cert-vault.p12", __dir__)
+    # Export the identity (certificate + private key) from the CI keychain.
+    sh("security", "export", "-k", keychain_name, "-t", "identities",
+       "-f", "pkcs12", "-P", vault_pass, "-o", out)
+    UI.success("Exported distribution identity to #{out}")
   end
 end
 

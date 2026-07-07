@@ -160,4 +160,9 @@ jobs:
         env:
           APPSTORE_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
           APPSTORE_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
+          # Unlocks the committed certificate vault (see docs/SIGNING.md) so every
+          # build signs with the same never-revoked distribution certificate.
+          CERT_VAULT_PASSWORD: ${{ secrets.CERT_VAULT_PASSWORD }}
+          APPLE_DISTRIBUTION_CERT_P12: ${{ secrets.APPLE_DISTRIBUTION_CERT_P12 }}
+          APPLE_DISTRIBUTION_CERT_PASSWORD: ${{ secrets.APPLE_DISTRIBUTION_CERT_PASSWORD }}
         run: bundle exec fastlane ios beta

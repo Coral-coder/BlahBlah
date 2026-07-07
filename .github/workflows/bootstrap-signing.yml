@@ -1,0 +1,109 @@
+name: Bootstrap iOS signing
+
+# One-tap, phone-friendly setup of the PERMANENT iOS distribution certificate —
+# no Mac needed. Run this once from the Actions tab after adding the
+# CERT_VAULT_PASSWORD secret (any strong password you invent).
+#
+# What it does:
+#   1. Mints ONE Apple Distribution certificate via the App Store Connect API.
+#   2. Exports the certificate + private key as a .p12.
+#   3. Encrypts it (AES-256, your CERT_VAULT_PASSWORD) and commits the encrypted
+#      vault to the repo as fastlane/cert-vault.p12.enc.
+#
+# Every TestFlight build then decrypts the vault and signs with the SAME
+# certificate forever — no cert churn, no invalidated binaries, no Mac.
+# The private key only ever exists in plaintext inside the CI runner; what's
+# committed is AES-256 encrypted with a password that lives only in secrets.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    name: Mint & vault the distribution certificate
+    runs-on: macos-15
+    steps:
+      - name: Checkout (dreaming branch)
+        uses: actions/checkout@v4
+        with:
+          ref: claude/blahblah-next
+
+      - name: Refuse if a vault already exists
+        run: |
+          if [ -f fastlane/cert-vault.p12.enc ]; then
+            echo "::error::fastlane/cert-vault.p12.enc already exists — signing is already bootstrapped. Delete that file first if you really want to re-mint."
+            exit 1
+          fi
+
+      - name: Check required secrets
+        env:
+          CERT_VAULT_PASSWORD: ${{ secrets.CERT_VAULT_PASSWORD }}
+        run: |
+          if [ -z "${CERT_VAULT_PASSWORD:-}" ]; then
+            echo "::error::Add the CERT_VAULT_PASSWORD secret first (Settings → Secrets and variables → Actions). Any strong password you invent."
+            exit 1
+          fi
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: Write App Store Connect API key
+        env:
+          APPSTORE_API_PRIVATE_KEY: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+          KEY_PATH="$RUNNER_TEMP/AuthKey.p8"
+          if printf '%s' "$APPSTORE_API_PRIVATE_KEY" | grep -q "BEGIN"; then
+            printf '%s\n' "$APPSTORE_API_PRIVATE_KEY" > "$KEY_PATH"
+          else
+            printf '%s' "$APPSTORE_API_PRIVATE_KEY" | base64 --decode > "$KEY_PATH"
+          fi
+          echo "ASC_API_KEY_PATH=$KEY_PATH" >> "$GITHUB_ENV"
+
+      - name: Create signing keychain
+        run: |
+          set -euo pipefail
+          KEYCHAIN="$RUNNER_TEMP/signing.keychain-db"
+          PASSWORD="ci-build-keychain"
+          security create-keychain -p "$PASSWORD" "$KEYCHAIN"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN"
+          security unlock-keychain -p "$PASSWORD" "$KEYCHAIN"
+          security list-keychains -d user -s "$KEYCHAIN" $(security list-keychains -d user | tr -d '"')
+          security default-keychain -s "$KEYCHAIN"
+          echo "SIGNING_KEYCHAIN=$KEYCHAIN" >> "$GITHUB_ENV"
+          echo "SIGNING_KEYCHAIN_PASSWORD=$PASSWORD" >> "$GITHUB_ENV"
+
+      - name: Mint certificate & export vault
+        env:
+          APPSTORE_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
+          APPSTORE_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
+          CERT_VAULT_PASSWORD: ${{ secrets.CERT_VAULT_PASSWORD }}
+        run: bundle exec fastlane ios bootstrap_cert
+
+      - name: Encrypt & commit the vault
+        env:
+          CERT_VAULT_PASSWORD: ${{ secrets.CERT_VAULT_PASSWORD }}
+        run: |
+          set -euo pipefail
+          openssl enc -aes-256-cbc -pbkdf2 -salt \
+            -pass env:CERT_VAULT_PASSWORD \
+            -in fastlane/cert-vault.p12 -out fastlane/cert-vault.p12.enc
+          rm -f fastlane/cert-vault.p12
+          git config user.name "Coral Coder"
+          git config user.email "Coral-coder@proton.me"
+          git add fastlane/cert-vault.p12.enc
+          git commit -m "signing: add encrypted distribution-certificate vault [skip ci]"
+          for i in 1 2 3; do
+            if git pull --rebase origin claude/blahblah-next && git push origin HEAD:claude/blahblah-next; then
+              echo "Vault committed. All future builds sign with this certificate."
+              exit 0
+            fi
+            sleep $((i * 3))
+          done
+          echo "::error::could not push the vault"; exit 1
