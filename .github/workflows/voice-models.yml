@@ -35,6 +35,8 @@ jobs:
             "th_TH-mms-medium|vits-mms-tha"
             "fr_FR-siwis-medium|vits-piper-fr_FR-siwis-medium"
             "it_IT-paola-medium|vits-piper-it_IT-paola-medium"
+            "ru_RU-irina-medium|vits-piper-ru_RU-irina-medium"
+            "ja_JP-mms-medium|vits-mms-jpn"
           )
 
           for e in "${ENTRIES[@]}"; do

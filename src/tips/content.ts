@@ -248,66 +248,173 @@ const TIPS: Record<string, Tip[]> = {
       ],
     },
   ],
+  // Chinese — ordered beginner progression (script/tones taught in unit 1).
   zh: [
     {
       title: "The four tones",
-      body: "Mandarin is tonal — the same syllable means different things by pitch. mā (mother), má (hemp), mǎ (horse), mà (scold).",
+      body: "Mandarin is tonal — the same syllable means different things by pitch:\n\n• mā (high & flat) — mother\n• má (rising) — hemp\n• mǎ (dip then rise) — horse\n• mà (sharp fall) — scold\n\nAlways learn a word WITH its tone; copy the audio, not the letters.",
+      examples: [
+        { target: "妈", en: "mother (mā)" },
+        { target: "马", en: "horse (mǎ)" },
+      ],
     },
     {
-      title: "Measure words",
-      body: "Counting needs a measure word between number and noun. The general one is 个 (gè).",
+      title: "Word order is like English",
+      body: "Mandarin is Subject–Verb–Object, so simple sentences map straight across: 我爱你 = I love you, word for word. No conjugation, no gender, no plurals.",
       examples: [
-        { target: "三个人", en: "three people (sān gè rén)" },
-        { target: "一本书", en: "one book (yì běn shū)" },
+        { target: "我 爱 你", en: "I love you (wǒ ài nǐ)" },
+        { target: "我 喝 茶", en: "I drink tea (wǒ hē chá)" },
       ],
     },
     {
       title: "No verb conjugation",
-      body: "Verbs never change form. Time is shown with words like 了 (le), 昨天 (yesterday), 明天 (tomorrow).",
-      examples: [{ target: "我吃了", en: "I ate (wǒ chī le)" }],
+      body: "Verbs never change form — 吃 (chī, eat) is the same for I/you/she, past or future. Time comes from context words: 了 (le, completed), 昨天 (yesterday), 明天 (tomorrow).",
+      examples: [
+        { target: "我 吃 了", en: "I ate (wǒ chī le)" },
+        { target: "明天 我 去", en: "tomorrow I go (míngtiān wǒ qù)" },
+      ],
     },
     {
       title: "Questions with 吗",
-      body: "Turn a statement into a yes/no question by adding 吗 (ma) at the end.",
-      examples: [{ target: "你好吗？", en: "How are you? (nǐ hǎo ma)" }],
+      body: "Turn any statement into a yes/no question by adding 吗 (ma) at the end. No word-order change.",
+      examples: [
+        { target: "你 喝 茶 吗", en: "Do you drink tea? (nǐ hē chá ma)" },
+      ],
+    },
+    {
+      title: "Measure words",
+      body: "Counting needs a measure word between the number and the noun — like \"two SHEETS of paper\" for everything. The all-purpose one is 个 (gè); books use 本 (běn).",
+      examples: [
+        { target: "三 个 人", en: "three people (sān gè rén)" },
+        { target: "一 本 书", en: "one book (yì běn shū)" },
+      ],
+    },
+    {
+      title: "的 makes possession",
+      body: "Add 的 (de) after a person to say \"'s\": 我的 = my/mine, 你的 = your. It also links descriptions to nouns.",
+      examples: [
+        { target: "我 的 朋友", en: "my friend (wǒ de péngyou)" },
+        { target: "你 的 书", en: "your book (nǐ de shū)" },
+      ],
+    },
+    {
+      title: "Negation: 不 and 没",
+      body: "不 (bù) negates most verbs; 没 (méi) negates 有 (have) and completed actions. 我不喝 = I don't drink; 我没有 = I don't have.",
+      examples: [
+        { target: "我 不 喝 咖啡", en: "I don't drink coffee (wǒ bù hē kāfēi)" },
+        { target: "我 没有 时间", en: "I don't have time (wǒ méiyǒu shíjiān)" },
+      ],
     },
   ],
+  // Thai — ordered beginner progression (script/tones taught in unit 1).
   th: [
     {
       title: "Politeness particles",
-      body: "End sentences with ครับ (men) or ค่ะ (women) to sound polite. Use them generously.",
-      examples: [{ target: "สวัสดี ครับ", en: "Hello (polite, male)" }],
+      body: "End sentences with ครับ (khráp, men) or ค่ะ (khâ, women) to sound polite — Thais use them constantly, and they soften everything you say. When in doubt, add it.",
+      examples: [
+        { target: "สวัสดี ครับ", en: "hello (male speaker)" },
+        { target: "ขอบคุณ ค่ะ", en: "thank you (female speaker)" },
+      ],
     },
     {
       title: "Five tones",
-      body: "Thai has mid, low, falling, high, and rising tones. The same letters change meaning with tone — listen closely and copy.",
+      body: "Thai has five tones: mid, low, falling, high, rising. The romanization marks them (à low, â falling, á high, ǎ rising, plain mid). The same sounds with different tones are different words — mǎa (dog) vs máa (horse). Copy the audio closely.",
+      examples: [
+        { target: "หมา", en: "dog (mǎa — rising)" },
+        { target: "ม้า", en: "horse (máa — high)" },
+      ],
     },
     {
-      title: "No spaces, no plurals",
-      body: "Written Thai has no spaces between words, and nouns don't change for plural. Context (and number words) tells you how many.",
+      title: "No conjugation, no plurals",
+      body: "Verbs never change and nouns have no plural form. Time comes from context words: จะ (jà) = will, แล้ว (láew) = already. กิน (gin, eat) works for everyone, any time.",
+      examples: [
+        { target: "ฉัน จะ ไป", en: "I will go (chǎn jà bpai)" },
+        { target: "กิน แล้ว", en: "(I) ate already (gin láew)" },
+      ],
     },
     {
-      title: "Adjectives come after the noun",
-      body: "Unlike English, the describing word follows the noun.",
-      examples: [{ target: "บ้าน ใหญ่", en: "big house (lit. house big)" }],
+      title: "Adjectives follow the noun",
+      body: "The describing word comes AFTER the noun — \"house big\", not \"big house\". There's also no \"is\" before adjectives: บ้านใหญ่ already means \"the house is big\".",
+      examples: [
+        { target: "บ้าน ใหญ่", en: "big house (bâan yài)" },
+        { target: "อาหาร อร่อย", en: "the food is delicious (aa-hǎan à-ròi)" },
+      ],
+    },
+    {
+      title: "Questions with ไหม",
+      body: "Add ไหม (mái) to the end of a statement to make it a yes/no question. Answer by repeating the verb (yes) or ไม่ + verb (no) — Thai has no single word for yes/no.",
+      examples: [
+        { target: "อร่อย ไหม", en: "is it tasty? (à-ròi mái)" },
+        { target: "ไม่ อร่อย", en: "not tasty (mâi à-ròi)" },
+      ],
+    },
+    {
+      title: "I and you (politely)",
+      body: "ผม (phǒm) = I for men; ฉัน (chǎn) = I for women; คุณ (khun) = you (polite, works for everyone). Thais often drop pronouns entirely once context is clear.",
+      examples: [
+        { target: "ผม ชื่อ จอห์น", en: "my name is John (male)" },
+        { target: "คุณ ชื่อ อะไร", en: "what's your name?" },
+      ],
     },
   ],
+  // Icelandic — ordered beginner progression.
   is: [
     {
-      title: "Three genders",
-      body: "Icelandic nouns are masculine, feminine, or neuter, and the article is tacked on the END of the word.",
+      title: "Special letters",
+      body: "Icelandic keeps two letters English lost: þ (thorn) sounds like 'th' in 'thing'; ð (eth) like 'th' in 'this'. Also æ = 'eye' and ö like German ö. Once you know these, spelling is quite regular.",
+      examples: [
+        { target: "þú", en: "you ('thoo')" },
+        { target: "það", en: "it / that ('thath')" },
+      ],
+    },
+    {
+      title: "to be: að vera",
+      body: "The essential irregular verb:\n\n• ég er — I am\n• þú ert — you are\n• hann/hún er — he/she is\n• við erum — we are\n• þið eruð — you (pl.) are\n• þeir/þær eru — they are",
+      examples: [
+        { target: "Ég er þreyttur", en: "I am tired" },
+        { target: "Við erum hér", en: "We are here" },
+      ],
+    },
+    {
+      title: "The article goes on the END",
+      body: "Icelandic has no word for \"a\" — hundur is \"a dog\" by itself. \"The\" is a suffix glued onto the noun: hundur → hundurinn, hús → húsið.",
       examples: [
         { target: "hundur → hundurinn", en: "a dog → the dog" },
+        { target: "hús → húsið", en: "a house → the house" },
+      ],
+    },
+    {
+      title: "Three genders",
+      body: "Nouns are masculine, feminine or neuter, and adjectives agree. Typical endings: -ur masculine (hestur), -a feminine (kona), neuter often bare (barn). Learn each noun with its gender.",
+      examples: [
+        { target: "hestur", en: "horse (m.)" },
+        { target: "kona", en: "woman (f.)" },
+        { target: "barn", en: "child (n.)" },
       ],
     },
     {
       title: "Four cases",
-      body: "Nouns change form for nominative, accusative, dative and genitive. Learn nouns in context to absorb the patterns.",
+      body: "Nouns change form for their role: nominative (subject), accusative (object), dative (receiver / after certain prepositions), genitive (possession). Don't memorize tables first — meet nouns in sentences and the patterns start to stick.",
+      examples: [
+        { target: "Ég sé hundinn", en: "I see the dog (accusative)" },
+        { target: "Ég gef hundinum mat", en: "I give the dog food (dative)" },
+      ],
     },
     {
-      title: "Special letters",
-      body: "þ sounds like 'th' in 'thing'; ð like 'th' in 'this'; æ like 'eye'; ö like German ö.",
-      examples: [{ target: "þú", en: "you (thoo)" }],
+      title: "Verb second, like German",
+      body: "In statements the conjugated verb sits in second position, even when something else comes first.",
+      examples: [
+        { target: "Ég tala íslensku", en: "I speak Icelandic" },
+        { target: "Núna tala ég íslensku", en: "Now speak I Icelandic" },
+      ],
+    },
+    {
+      title: "Asking questions",
+      body: "Yes/no questions put the verb first: Talar þú íslensku? Question words: hvað (what), hver (who), hvar (where), hvenær (when), af hverju (why).",
+      examples: [
+        { target: "Talar þú ensku?", en: "Do you speak English?" },
+        { target: "Hvar er hótelið?", en: "Where is the hotel?" },
+      ],
     },
   ],
   // French — ordered beginner→A2 grammar progression.
@@ -544,3 +651,68 @@ const TIPS: Record<string, Tip[]> = {
 export function getTips(code: string): Tip[] {
   return TIPS[code] ?? [];
 }
+
+// Russian — ordered beginner progression (Cyrillic taught in unit 1).
+TIPS.ru = [
+  {
+    title: "No 'a', no 'the'",
+    body: "Russian has no articles at all. дом means \"house\", \"a house\" and \"the house\" — context does the work. One less thing to learn.",
+    examples: [{ target: "это дом", en: "this is a/the house (eto dom)" }],
+  },
+  {
+    title: "\"To be\" disappears",
+    body: "In the present tense Russian drops \"am/is/are\" entirely. Я студент = \"I (am a) student\". Just put the words next to each other.",
+    examples: [
+      { target: "я студент", en: "I am a student (ya studyent)" },
+      { target: "он друг", en: "he is a friend (on drug)" },
+    ],
+  },
+  {
+    title: "Three genders",
+    body: "Nouns are masculine, feminine or neuter — and the ending usually tells you: consonant = masculine (дом), -а/-я = feminine (вода), -о/-е = neuter (окно).",
+    examples: [
+      { target: "дом", en: "house (m.)" },
+      { target: "вода", en: "water (f.)" },
+      { target: "окно", en: "window (n.)" },
+    ],
+  },
+  {
+    title: "Verbs: the -ть family",
+    body: "Infinitives end in -ть. Present tense endings for знать (to know): я знаю, ты знаешь, он знает, мы знаем, вы знаете, они знают.",
+    examples: [
+      { target: "я знаю", en: "I know (ya znayu)" },
+      { target: "ты знаешь", en: "you know (ty znayesh)" },
+    ],
+  },
+  {
+    title: "Saying no: не",
+    body: "Put не directly before the word you're negating. Double negatives are required, not wrong: Я ничего не знаю = \"I don't know anything\".",
+    examples: [
+      { target: "я не знаю", en: "I don't know (ya nye znayu)" },
+      { target: "это не дом", en: "this is not a house" },
+    ],
+  },
+  {
+    title: "Questions by intonation",
+    body: "Yes/no questions keep the same word order — just raise your voice at the end. Question words: что (what), кто (who), где (where), когда (when), почему (why).",
+    examples: [
+      { target: "ты студент?", en: "are you a student? (ty studyent?)" },
+      { target: "где дом?", en: "where is the house? (gdye dom?)" },
+    ],
+  },
+  {
+    title: "Cases: the big idea",
+    body: "Russian nouns change endings for their role in the sentence (6 cases). Start by noticing the accusative: feminine -а becomes -у — я люблю воду (I love water). Meet cases in sentences; don't memorize tables first.",
+    examples: [
+      { target: "я люблю воду", en: "I love water (vodu ← voda)" },
+    ],
+  },
+  {
+    title: "ты vs вы",
+    body: "ты is informal (friends, family); вы is formal AND plural — like French tu/vous. With strangers and elders, use вы: Как вы?",
+    examples: [
+      { target: "как ты?", en: "how are you? (informal)" },
+      { target: "как вы?", en: "how are you? (formal)" },
+    ],
+  },
+];

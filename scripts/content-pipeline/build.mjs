@@ -43,10 +43,29 @@ const LANGS = [
   { code: "es", name: "Spanish", endonym: "Español", flag: "🇪🇸", speechLocale: "es-ES", freq: "es", dict: "spa-eng" },
   { code: "fr", name: "French", endonym: "Français", flag: "🇫🇷", speechLocale: "fr-FR", freq: "fr", dict: "fra-eng" },
   { code: "it", name: "Italian", endonym: "Italiano", flag: "🇮🇹", speechLocale: "it-IT", freq: "it", dict: "ita-eng" },
-  // Japanese needs a reading: we derive romaji from the kana, and only keep words
-  // we can read (so no unreadable tiles). Appends to the hand-authored ja course.
-  { code: "ja", name: "Japanese", endonym: "日本語", flag: "🇯🇵", speechLocale: "ja-JP", freq: "ja", dict: "jpn-eng", reading: true },
+  // Script languages need a reading: we derive one (romaji / Cyrillic translit)
+  // and only keep words we can read, so tiles are never unreadable. Generated
+  // sections append to each hand-authored course.
+  { code: "ja", name: "Japanese", endonym: "日本語", flag: "🇯🇵", speechLocale: "ja-JP", freq: "ja", dict: "jpn-eng", reading: "kana" },
+  { code: "ru", name: "Russian", endonym: "Русский", flag: "🇷🇺", speechLocale: "ru-RU", freq: "ru", dict: "rus-eng", reading: "cyrillic" },
 ];
+
+// --- Cyrillic → Latin (for readable Russian tiles) ---------------------------
+const CYR = {
+  а:"a",б:"b",в:"v",г:"g",д:"d",е:"ye",ё:"yo",ж:"zh",з:"z",и:"i",й:"y",к:"k",л:"l",м:"m",
+  н:"n",о:"o",п:"p",р:"r",с:"s",т:"t",у:"u",ф:"f",х:"kh",ц:"ts",ч:"ch",ш:"sh",щ:"shch",
+  ъ:"",ы:"y",ь:"",э:"e",ю:"yu",я:"ya",
+};
+export function cyrillicToLatin(input) {
+  const s = input.toLowerCase();
+  let out = "";
+  for (const ch of s) {
+    if (CYR[ch] != null) out += CYR[ch];
+    else if (ch === "-" || ch === " ") out += ch;
+    else return null; // not pure Cyrillic — skip
+  }
+  return out || null;
+}
 
 // --- Kana → romaji (for readable Japanese tiles) -----------------------------
 const KANA = {
@@ -225,15 +244,17 @@ async function loadDictionary(pair, wantReading) {
       const g = cleanGloss(t, orth);
       if (g && !glosses.includes(g)) glosses.push(g);
     }
-    // For languages that need a reading (Japanese), derive romaji from the kana:
-    // use the headword if it's already kana, else a <pron> reading in the entry.
+    // For script languages, derive a reading. Japanese: romaji from the kana
+    // headword or a <pron> reading. Russian: transliterate the Cyrillic headword.
     let reading = existing ? existing.reading : undefined;
-    if (wantReading && !reading) {
+    if (wantReading === "kana" && !reading) {
       if (isAllKana(orth)) reading = kanaToRomaji(orth);
       if (!reading) {
         const pron = block.match(/<pron[^>]*>([\s\S]*?)<\/pron>/);
         if (pron) reading = kanaToRomaji(decodeEntities(pron[1].replace(/<[^>]+>/g, "").trim()));
       }
+    } else if (wantReading === "cyrillic" && !reading) {
+      reading = cyrillicToLatin(orth);
     }
     if (glosses.length) map.set(key, { orth: existing ? existing.orth : orth, glosses, reading });
   }
