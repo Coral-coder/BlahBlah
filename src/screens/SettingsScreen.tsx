@@ -4,7 +4,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Button, Card, Chip, ProgressBar } from "@/components/ui";
 import { getCourse } from "@/curriculum";
-import { hasNaturalVoice, setNeuralEnabled, setVoiceDownloadListener } from "@/lib/speech";
+import { hasNaturalVoice, setNeuralEnabled, setSpeechRate, setVoiceDownloadListener, speak } from "@/lib/speech";
 import { neuralAvailable } from "@/lib/neuralTts";
 import {
   downloadModel,
@@ -111,6 +111,8 @@ export function SettingsScreen() {
         </Card>
 
         <NeuralVoicesCard />
+
+        <VoiceSpeedCard />
 
         <Card>
           <Text style={styles.cardTitle}>Sound effects 🔊</Text>
@@ -263,6 +265,62 @@ export function SettingsScreen() {
   );
 }
 
+// Speed steps for spoken audio. Each is a multiplier on the voice's natural
+// pace; the setting applies to system AND neural voices everywhere in the app.
+const SPEED_STEPS = [
+  { rate: 0.6, label: "0.6×", hint: "Very slow" },
+  { rate: 0.75, label: "0.75×", hint: "Slow" },
+  { rate: 0.9, label: "0.9×", hint: "Relaxed" },
+  { rate: 1.0, label: "1×", hint: "Natural" },
+  { rate: 1.15, label: "1.15×", hint: "Brisk" },
+];
+
+function VoiceSpeedCard() {
+  const { state, setSettings } = useProgress();
+  const current = state.settings.speechRate ?? 0.9;
+  const active =
+    SPEED_STEPS.reduce((best, s) =>
+      Math.abs(s.rate - current) < Math.abs(best.rate - current) ? s : best,
+    SPEED_STEPS[0]);
+  const course = state.currentCourse ? getCourse(state.currentCourse) : undefined;
+  // A short native phrase to preview with (first vocab word of the course).
+  const sample =
+    course?.sections[0]?.units[0]?.vocab?.[1]?.target ??
+    course?.sections[0]?.units[0]?.vocab?.[0]?.target ??
+    "Hola, ¿cómo estás?";
+
+  function pick(rate: number) {
+    setSettings({ speechRate: rate });
+    setSpeechRate(rate); // apply immediately, then preview at the new speed
+    setTimeout(() => speak(sample), 50);
+  }
+
+  return (
+    <Card>
+      <Text style={styles.cardTitle}>Voice speed 🐢</Text>
+      <Text style={styles.cardSub}>
+        How fast lessons are spoken. Tap a speed to hear a sample — this applies to
+        every voice in the app. (You can always long-press any speaker for extra-slow.)
+      </Text>
+      <View style={styles.speedRow}>
+        {SPEED_STEPS.map((s) => {
+          const on = s.rate === active.rate;
+          return (
+            <Pressable
+              key={s.rate}
+              onPress={() => pick(s.rate)}
+              style={[styles.speedStep, on && styles.speedStepActive]}
+            >
+              <Text style={[styles.speedStepText, on && styles.speedStepTextActive]}>{s.label}</Text>
+            </Pressable>
+          );
+        })}
+      </View>
+      <Text style={styles.speedHint}>{active.hint}</Text>
+    </Card>
+  );
+}
+
 function NeuralVoicesCard() {
   const { state, setSettings } = useProgress();
   const enabled = state.settings.neuralVoices;
@@ -386,6 +444,20 @@ const styles = StyleSheet.create({
     borderRadius: theme.radius.md,
   },
   voiceDlText: { color: theme.colors.primaryText, fontWeight: "800" },
+  speedRow: { flexDirection: "row", gap: 8, marginTop: theme.spacing(2) },
+  speedStep: {
+    flex: 1,
+    paddingVertical: 10,
+    borderRadius: theme.radius.md,
+    borderWidth: 2,
+    borderColor: theme.colors.border,
+    backgroundColor: theme.colors.surface,
+    alignItems: "center",
+  },
+  speedStepActive: { borderColor: theme.colors.primary, backgroundColor: theme.colors.surfaceAlt },
+  speedStepText: { color: theme.colors.textMuted, fontWeight: "700", fontSize: 13 },
+  speedStepTextActive: { color: theme.colors.primary },
+  speedHint: { color: theme.colors.textMuted, marginTop: 8, textAlign: "center", fontSize: 13 },
   voiceRemove: { color: theme.colors.danger, fontWeight: "700" },
   input: {
     backgroundColor: theme.colors.surfaceAlt,

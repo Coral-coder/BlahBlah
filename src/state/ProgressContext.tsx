@@ -34,6 +34,8 @@ export interface Settings {
   soundEnabled: boolean;
   /** One-time flag: existing installs have been migrated to auto-download voices. */
   voiceAutoMigrated: boolean;
+  /** Voice speed multiplier for spoken audio (0.5 slow … 1.2 brisk). */
+  speechRate: number;
 }
 
 export interface LearnedWord {
@@ -190,6 +192,7 @@ const DEFAULT: Persisted = {
     voicePromptDismissed: false,
     soundEnabled: true,
     voiceAutoMigrated: false,
+    speechRate: 0.9,
   },
 };
 

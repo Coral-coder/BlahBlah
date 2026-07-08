@@ -59,6 +59,16 @@ function playFile(path: string): void {
   });
 }
 
+// Global voice speed multiplier (0.5 = half speed … 1.2 = brisk), set from the
+// Settings slider. Applies to BOTH the neural voices and the system voice.
+let speechRate = 0.9; // slightly relaxed by default — learners found 1.0 too fast
+export function setSpeechRate(rate: number): void {
+  speechRate = Math.min(1.3, Math.max(0.5, rate || 1));
+}
+export function getSpeechRate(): number {
+  return speechRate;
+}
+
 // Returns true if it handled speaking via the neural engine.
 async function speakNeural(text: string, locale: string, slow: boolean): Promise<boolean> {
   const model = installedModelForLocale(locale);
@@ -70,8 +80,10 @@ async function speakNeural(text: string, locale: string, slow: boolean): Promise
     dataDir: model.dataDir,
   });
   if (!ok) return false;
-  // Higher speed value = slower speech in sherpa-onnx (length scale).
-  const speed = slow ? model.speed * 1.5 : model.speed;
+  // Higher speed value = slower speech in sherpa-onnx (length scale), so divide
+  // by the user rate (0.75× rate → 1.33× length scale).
+  const base = model.speed / speechRate;
+  const speed = slow ? base * 1.5 : base;
   const path = await synthesizeToFile(text, { sid: model.sid, speed });
   if (!path) return false;
   playFile(path);
@@ -208,7 +220,8 @@ export function speakSlow(text: string, languageTag?: string): void {
 function systemSpeak(spoken: string, locale?: string, slow?: boolean): void {
   try {
     Tts.stop();
-    Tts.setDefaultRate(slow ? 0.3 : 0.48);
+    // 0.48 is the engine's comfortable "normal"; scale it by the user's rate.
+    Tts.setDefaultRate((slow ? 0.3 : 0.48) * speechRate);
     if (locale) {
       const vid = chosenVoice[locale];
       if (vid) Tts.setDefaultVoice(vid).catch(() => {});

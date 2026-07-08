@@ -27,7 +27,7 @@ import { WordsScreen } from "@/screens/WordsScreen";
 import { onContentChange } from "@/curriculum";
 import { ensureCourse, initRemoteContent, refreshManifest } from "@/lib/remoteContent";
 import { setSfxEnabled } from "@/lib/sfx";
-import { setNeuralEnabled } from "@/lib/speech";
+import { setNeuralEnabled, setSpeechRate } from "@/lib/speech";
 import { NavProvider, useNav } from "@/navigation";
 import { ProgressProvider, useProgress } from "@/state/ProgressContext";
 import { theme } from "@/theme";
@@ -205,6 +205,9 @@ function Root() {
   useEffect(() => {
     setSfxEnabled(state.settings.soundEnabled !== false);
   }, [state.settings.soundEnabled]);
+  useEffect(() => {
+    setSpeechRate(state.settings.speechRate ?? 0.9);
+  }, [state.settings.speechRate]);
   if (!ready) {
     return <Splash />;
   }
