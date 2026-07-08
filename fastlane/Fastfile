@@ -143,6 +143,30 @@ platform :ios do
     keychain_password = ENV.fetch("SIGNING_KEYCHAIN_PASSWORD")
     vault_pass = ENV.fetch("CERT_VAULT_PASSWORD")
 
+    # FIRST, clear out the stale distribution certificates. Their private keys
+    # were created on ephemeral CI runners and are gone forever, so they can't
+    # sign anything — they only block Apple's 3-certificate cap. This is the ONE
+    # place revocation is allowed: a one-time bootstrap, before minting the
+    # certificate we keep. (Revoking here invalidates any TestFlight build those
+    # old certs signed — upload a fresh build right after bootstrapping.)
+    require "spaceship"
+    Spaceship::ConnectAPI.token = Spaceship::ConnectAPI::Token.create(
+      key_id: ENV.fetch("APPSTORE_API_KEY_ID"),
+      issuer_id: ENV.fetch("APPSTORE_ISSUER_ID"),
+      filepath: File.expand_path(ENV.fetch("ASC_API_KEY_PATH"))
+    )
+    Spaceship::ConnectAPI::Certificate.all.each do |cert|
+      next unless cert.certificate_type.to_s.include?("DISTRIBUTION")
+
+      UI.message("Revoking dead distribution certificate #{cert.id} (private key lost to an ephemeral runner)")
+      begin
+        cert.delete!
+      rescue StandardError => e
+        UI.important("Could not revoke #{cert.id}: #{e.message}")
+      end
+    end
+
+    # THEN mint the one certificate we keep forever (exported to the vault below).
     get_certificates(
       api_key: api_key,
       development: false,

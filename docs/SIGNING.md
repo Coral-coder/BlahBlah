@@ -17,6 +17,10 @@ Everything happens in CI; your phone only taps buttons. ~3 minutes.
 2. **Run the bootstrap.** Repo → **Actions** tab → **Bootstrap iOS signing**
    (left sidebar) → **Run workflow** → green **Run workflow** button.
 3. **Wait ~2 min.** The workflow:
+   - revokes the old, dead distribution certificates FIRST (their private keys
+     died with the CI runners that made them — they can't sign anything and only
+     block Apple's 3-cert cap; note this invalidates any TestFlight builds they
+     signed, so ship a fresh build right after),
    - mints ONE Apple Distribution certificate via the App Store Connect API,
    - exports the certificate + private key as a `.p12`,
    - encrypts it with your password (AES-256) and commits the encrypted vault
