@@ -50,7 +50,10 @@ const LANGS = [
   { code: "ru", name: "Russian", endonym: "Русский", flag: "🇷🇺", speechLocale: "ru-RU", freq: "ru", dict: "rus-eng", reading: "cyrillic" },
   // Irish subtitles are scarce, so its frequency list is small — the pipeline
   // still grows it as far as the open data allows (hand-authored core carries it).
-  { code: "ga", name: "Irish", endonym: "Gaeilge", flag: "🇮🇪", speechLocale: "ga-IE", freq: "ga", dict: "gle-eng" },
+  { code: "ga", name: "Irish", endonym: "Gaeilge", flag: "🇮🇪", speechLocale: "ga-IE", freq: "ga", dict: "gle-eng",
+    // OpenSubtitles has no Irish, so use the wordfrequency.info-derived list
+    // (ordered, one word per line). Only dictionary-confirmed words survive.
+    freqUrl: "https://raw.githubusercontent.com/frekwencja/most-common-words-multilingual/main/data/wordfrequency.info/ga.txt" },
 ];
 
 // --- Cyrillic → Latin (for readable Russian tiles) ---------------------------
@@ -277,14 +280,20 @@ function findFile(dir, pred) {
   return null;
 }
 
-async function loadFrequency(langDir) {
-  // hermitdave full list: "word count" per line, most frequent first.
+async function loadFrequency(langDir, freqUrl) {
+  // hermitdave full list: "word count" per line, most frequent first. Some
+  // languages aren't on OpenSubtitles — they pass an explicit freqUrl instead
+  // (same shape: one word per line, most frequent first).
   const base = "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018";
   let text;
-  try {
-    text = await fetchText(`${base}/${langDir}/${langDir}_full.txt`);
-  } catch {
-    text = await fetchText(`${base}/${langDir}/${langDir}_50k.txt`);
+  if (freqUrl) {
+    text = await fetchText(freqUrl);
+  } else {
+    try {
+      text = await fetchText(`${base}/${langDir}/${langDir}_full.txt`);
+    } catch {
+      text = await fetchText(`${base}/${langDir}/${langDir}_50k.txt`);
+    }
   }
   const words = [];
   for (const line of text.split("\n")) {
@@ -352,7 +361,7 @@ async function buildLang(lang, enRank) {
   console.log(`\n=== ${lang.code} (${lang.name}) ===`);
   const [dict, freq] = await Promise.all([
     loadDictionary(lang.dict, lang.reading),
-    loadFrequency(lang.freq),
+    loadFrequency(lang.freq, lang.freqUrl),
   ]);
   console.log(`  dict entries: ${dict.size}, frequency words: ${freq.length}`);
   // Choose the best sense: prefer a single common word over a phrase (FreeDict is
