@@ -48,6 +48,9 @@ const LANGS = [
   // sections append to each hand-authored course.
   { code: "ja", name: "Japanese", endonym: "日本語", flag: "🇯🇵", speechLocale: "ja-JP", freq: "ja", dict: "jpn-eng", reading: "kana" },
   { code: "ru", name: "Russian", endonym: "Русский", flag: "🇷🇺", speechLocale: "ru-RU", freq: "ru", dict: "rus-eng", reading: "cyrillic" },
+  // Irish subtitles are scarce, so its frequency list is small — the pipeline
+  // still grows it as far as the open data allows (hand-authored core carries it).
+  { code: "ga", name: "Irish", endonym: "Gaeilge", flag: "🇮🇪", speechLocale: "ga-IE", freq: "ga", dict: "gle-eng" },
 ];
 
 // --- Cyrillic → Latin (for readable Russian tiles) ---------------------------

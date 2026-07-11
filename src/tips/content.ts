@@ -716,3 +716,71 @@ TIPS.ru = [
     ],
   },
 ];
+
+// Irish — ordered beginner progression (sound code + core grammar taught in units).
+TIPS.ga = [
+  {
+    title: "Crack the spelling code",
+    body: "Irish spelling is a consistent code, not chaos:\n\n• bh/mh = \"v\" or \"w\" (an bhean = un VAN)\n• ch = throaty \"kh\" (loch)\n• s before e or i = \"sh\" (Seán = SHAWN)\n• fh = completely silent\n• aoi = \"ee\", ao = \"ay/ee\"\n\nEvery word in this course shows a pronunciation respelling until you don't need it.",
+    examples: [
+      { target: "bhfuil", en: "(is) — sounds like 'will'", pinyin: "will" },
+      { target: "oíche", en: "night", pinyin: "EE-hah" },
+    ],
+  },
+  {
+    title: "Verb first, always",
+    body: "Irish is Verb–Subject–Object. The verb opens the sentence: Tá mé anseo = \"Am I here\" = I am here. Ólaim tae = \"Drink-I tea\".",
+    examples: [
+      { target: "tá mé anseo", en: "I am here", pinyin: "taw may un-SHUH" },
+      { target: "ólaim tae", en: "I drink tea", pinyin: "OHL-im tay" },
+    ],
+  },
+  {
+    title: "No yes. No no.",
+    body: "Irish has no words for yes/no. Echo the verb instead: An bhfuil tú tuirseach? (Are you tired?) → Tá (am) or Níl (am not). This is why Irish English says \"I am, sure\" instead of \"yes\".",
+    examples: [
+      { target: "tá", en: "(yes,) I am / it is", pinyin: "taw" },
+      { target: "níl", en: "(no,) I'm not / it isn't", pinyin: "neel" },
+    ],
+  },
+  {
+    title: "tá vs is",
+    body: "Two verbs 'to be': tá for states, feelings and places; is for identity (X is a Y). Tá mé fuar = I'm cold. Is múinteoir mé = I'm a teacher.",
+    examples: [
+      { target: "tá mé fuar", en: "I am cold", pinyin: "taw may FOO-ar" },
+      { target: "is múinteoir mé", en: "I am a teacher", pinyin: "iss MOON-chore may" },
+    ],
+  },
+  {
+    title: "Lenition: words go soft",
+    body: "After mo (my), do (your), and many little words, the next consonant softens — an h appears in writing and the sound changes: cara → mo chara (KHAR-a), bean → an bhean (VAN). Listen for it; it becomes second nature.",
+    examples: [
+      { target: "mo chara", en: "my friend", pinyin: "muh KHAR-a" },
+      { target: "an bhean", en: "the woman", pinyin: "un VAN" },
+    ],
+  },
+  {
+    title: "Things are AT you",
+    body: "No verb 'to have': things are at you. Tá leabhar agam = \"A book is at-me\" = I have a book. And famously: Tá Gaeilge agam = \"Irish is at me\" = I speak Irish.",
+    examples: [
+      { target: "tá leabhar agam", en: "I have a book", pinyin: "taw LOW-er A-gum" },
+      { target: "tá gaeilge agam", en: "I speak Irish", pinyin: "taw GWAYL-geh A-gum" },
+    ],
+  },
+  {
+    title: "Negation with ní",
+    body: "Put ní before the verb to negate (it lenites the verb): Tuigim (I understand) → Ní thuigim (I don't understand — the t goes silent: nee HIG-im).",
+    examples: [
+      { target: "ní thuigim", en: "I don't understand", pinyin: "nee HIG-im" },
+      { target: "níl mé tuirseach", en: "I'm not tired", pinyin: "neel may TIR-shukh" },
+    ],
+  },
+  {
+    title: "Questions with an",
+    body: "Yes/no questions start with an (+ a changed verb form): An bhfuil tú go maith? = Are you well? Question words: cad (what), cé (who), cá (where), cathain (when), cén fáth (why).",
+    examples: [
+      { target: "an bhfuil tú go maith", en: "are you well?", pinyin: "un WILL too guh MAH" },
+      { target: "cad é sin", en: "what is that?", pinyin: "kod ay shin" },
+    ],
+  },
+];

@@ -37,6 +37,7 @@ jobs:
             "it_IT-paola-medium|vits-piper-it_IT-paola-medium"
             "ru_RU-irina-medium|vits-piper-ru_RU-irina-medium"
             "ja_JP-mms-medium|vits-mms-jpn"
+            "ga_IE-mms-medium|vits-mms-gle"
           )
 
           for e in "${ENTRIES[@]}"; do
