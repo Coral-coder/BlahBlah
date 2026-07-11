@@ -6,6 +6,7 @@ import { sections as frSections } from "@/curriculum/blueprints/generated/fr";
 import { sections as itSections } from "@/curriculum/blueprints/generated/it";
 import { sections as jaSections } from "@/curriculum/blueprints/generated/ja";
 import { sections as ruSections } from "@/curriculum/blueprints/generated/ru";
+import { sections as gaSections } from "@/curriculum/blueprints/generated/ga";
 
 export const generatedSections: Record<string, SectionBlueprint[]> = {
   de: deSections,
@@ -14,4 +15,5 @@ export const generatedSections: Record<string, SectionBlueprint[]> = {
   it: itSections,
   ja: jaSections,
   ru: ruSections,
+  ga: gaSections,
 };
