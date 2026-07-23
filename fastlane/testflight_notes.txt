@@ -1,24 +1,18 @@
-🗣️ Auto natural voices · 🔊 Softer sounds · ⌨️ Review fixes · 📚 More vocabulary
+🌍 Five new languages · 📚 24,000+ words · 🐢 Voice speed control
 
-• Natural voices: now ON by default and the voice for your course downloads
-  automatically in the background — no trip to Settings. You'll hear the system
-  voice until it finishes, then it upgrades to the natural one on its own.
-• Sounds: correct / complete / wrong are now soft, multi-voice instrument tones
-  with a light reverb tail — warm and roomy, not harsh or thin.
-• Review: the Check/Continue button rides above the keyboard, the return key
-  submits, the box clears between cards, and "turn off typing" now makes Review
-  all tap-to-choose too.
-• Vocabulary: German, Spanish, French and Italian each gained a new "Most common
-  words" section built from open data (high-frequency words + dictionary
-  translations). Hundreds of new words per language, validated before shipping.
-• Behind the scenes: the build pipeline now also produces Android releases.
+• New languages: Russian (Cyrillic taught from scratch), Irish (Gaeilge, with
+  pronunciation respellings), Swedish, Japanese (kana/kanji + romaji), plus the
+  existing nine. Every course now TEACHES — grammar concept cards open each unit.
+• Massive vocabulary: German/Russian/French/Italian ~5,000 words each, thousands
+  of lessons per language, all with heavy spaced repetition.
+• Voice speed: Settings → Voice speed — 5 steps with instant preview. Default is
+  now slightly relaxed (complaints heard!). Long-press any speaker for extra-slow.
+• Typing accepts romanization (pinyin/romaji/translit) for scripted languages;
+  pronunciation feedback colors each syllable green/amber/red.
 
 WHAT TO TEST
-• Open a course → the natural voice should auto-download (watch Settings →
-  Natural voices for live progress); speech upgrades automatically when ready.
-• Answer correct/wrong, finish a lesson → sounds should be soft & full.
-• Review with typing on: type, press return → submits & clears next card; the
-  button stays above the keyboard. With typing off → only tap-to-choose.
-• Open German/Spanish/French/Italian → scroll to the new "Most common words"
-  section near the end and try a few lessons. (These are dictionary-sourced, so
-  flag any odd translation — the hand-authored early units remain the polished core.)
+• Open Russian or Irish → unit 1 should TEACH the writing system before drilling.
+• Settings → Voice speed → tap a step — you should hear the sample immediately.
+• Spanish voice should feel less rushed by default.
+• New vocabulary sections ("Vocabulary builder") appear near the end of each
+  course path and grow over the air.
