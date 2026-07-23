@@ -43,6 +43,7 @@ const LANGS = [
   { code: "es", name: "Spanish", endonym: "Español", flag: "🇪🇸", speechLocale: "es-ES", freq: "es", dict: "spa-eng" },
   { code: "fr", name: "French", endonym: "Français", flag: "🇫🇷", speechLocale: "fr-FR", freq: "fr", dict: "fra-eng" },
   { code: "it", name: "Italian", endonym: "Italiano", flag: "🇮🇹", speechLocale: "it-IT", freq: "it", dict: "ita-eng" },
+  { code: "sv", name: "Swedish", endonym: "Svenska", flag: "🇸🇪", speechLocale: "sv-SE", freq: "sv", dict: "swe-eng" },
   // Script languages need a reading: we derive one (romaji / Cyrillic translit)
   // and only keep words we can read, so tiles are never unreadable. Generated
   // sections append to each hand-authored course.

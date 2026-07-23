@@ -38,4 +38,5 @@ export const VOICE_MODELS: VoiceModel[] = [
   { id: "ru_RU-irina-medium", locale: "ru-RU", name: "Irina (natural)", language: "Russian", mb: 64, modelFile: "model.onnx", tokensFile: "tokens.txt", dataDir: "espeak-ng-data", sid: 0, speed: 1.0 },
   { id: "ja_JP-mms-medium", locale: "ja-JP", name: "Japanese (natural)", language: "Japanese", mb: 38, modelFile: "model.onnx", tokensFile: "tokens.txt", dataDir: "espeak-ng-data", sid: 0, speed: 1.0 },
   { id: "ga_IE-mms-medium", locale: "ga-IE", name: "Irish (natural)", language: "Irish", mb: 38, modelFile: "model.onnx", tokensFile: "tokens.txt", dataDir: "espeak-ng-data", sid: 0, speed: 1.0 },
+  { id: "sv_SE-nst-medium", locale: "sv-SE", name: "NST (natural)", language: "Swedish", mb: 64, modelFile: "model.onnx", tokensFile: "tokens.txt", dataDir: "espeak-ng-data", sid: 0, speed: 1.0 },
 ];

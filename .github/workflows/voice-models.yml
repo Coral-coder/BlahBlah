@@ -38,6 +38,7 @@ jobs:
             "ru_RU-irina-medium|vits-piper-ru_RU-irina-medium"
             "ja_JP-mms-medium|vits-mms-jpn"
             "ga_IE-mms-medium|vits-mms-gle"
+            "sv_SE-nst-medium|vits-piper-sv_SE-nst-medium"
           )
 
           for e in "${ENTRIES[@]}"; do

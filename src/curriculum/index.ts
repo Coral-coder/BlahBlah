@@ -22,6 +22,7 @@ import { dovahzulBlueprint } from "@/curriculum/blueprints/dovahzul";
 import { japaneseBlueprint } from "@/curriculum/blueprints/japanese";
 import { russianBlueprint } from "@/curriculum/blueprints/russian";
 import { irishBlueprint } from "@/curriculum/blueprints/irish";
+import { swedishBlueprint } from "@/curriculum/blueprints/swedish";
 import { generatedSections } from "@/curriculum/blueprints/generated";
 
 // Append any pipeline-generated sections for a language onto its blueprint.
@@ -73,6 +74,7 @@ export const BLUEPRINTS: CourseBlueprint[] = [
   japaneseBlueprint,
   russianBlueprint,
   irishBlueprint,
+  swedishBlueprint,
   sindarinBlueprint,
   klingonBlueprint,
   dovahzulBlueprint,

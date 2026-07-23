@@ -784,3 +784,68 @@ TIPS.ga = [
     ],
   },
 ];
+
+// Swedish — ordered beginner progression.
+TIPS.sv = [
+  {
+    title: "Verbs never change for person",
+    body: "The best news in Swedish: one verb form for everyone. jag är, du är, vi är — all just är. jag pratar, hon pratar, de pratar — all pratar. Learn a verb once and you own it.",
+    examples: [
+      { target: "jag pratar svenska", en: "I speak Swedish" },
+      { target: "vi pratar svenska", en: "we speak Swedish" },
+    ],
+  },
+  {
+    title: "Two genders: en & ett",
+    body: "Nouns are en-words or ett-words (≈75% are en). There's no reliable rule — learn en/ett together with the noun: en hund, ett hus.",
+    examples: [
+      { target: "en hund", en: "a dog" },
+      { target: "ett hus", en: "a house" },
+    ],
+  },
+  {
+    title: "\"The\" is a suffix",
+    body: "No separate word for 'the' — glue the gender ending onto the noun: hund → hunden (the dog), hus → huset (the house). Plural: hundar → hundarna.",
+    examples: [
+      { target: "hunden", en: "the dog" },
+      { target: "huset", en: "the house" },
+    ],
+  },
+  {
+    title: "Verb second, like German",
+    body: "In statements the verb sits in slot 2 even when something else comes first: Idag dricker jag kaffe = 'Today drink I coffee'.",
+    examples: [
+      { target: "jag dricker kaffe idag", en: "I drink coffee today" },
+      { target: "idag dricker jag kaffe", en: "today drink I coffee" },
+    ],
+  },
+  {
+    title: "Saying no: inte",
+    body: "Put inte right after the verb: Jag förstår inte = I don't understand. (In subordinate clauses it hops before the verb — worry about that later.)",
+    examples: [
+      { target: "jag förstår inte", en: "I don't understand" },
+      { target: "jag dricker inte kaffe", en: "I don't drink coffee" },
+    ],
+  },
+  {
+    title: "Questions: flip verb and subject",
+    body: "Pratar du svenska? = 'Speak you Swedish?'. Question words: vad (what), vem (who), var (where), när (when), varför (why), hur (how).",
+    examples: [
+      { target: "pratar du engelska", en: "do you speak English?" },
+      { target: "var bor du", en: "where do you live?" },
+    ],
+  },
+  {
+    title: "Adjectives agree",
+    body: "Adjectives take -t for ett-words and -a for plurals/definites: en stor hund, ett stort hus, stora hundar.",
+    examples: [
+      { target: "ett stort hus", en: "a big house" },
+      { target: "stora hundar", en: "big dogs" },
+    ],
+  },
+  {
+    title: "du for everyone",
+    body: "Modern Swedish uses du (you) with everyone — bosses, strangers, elders. The old formal ni survives mostly in shops being extra-polite. Relax and say du.",
+    examples: [{ target: "vad heter du", en: "what's your name?" }],
+  },
+];
