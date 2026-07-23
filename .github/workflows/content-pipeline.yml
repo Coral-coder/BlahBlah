@@ -67,7 +67,6 @@ jobs:
             exit 0
           fi
           git add src/curriculum/blueprints/generated
-          # No [skip ci]: this commit should trigger the content-bundle publish.
           git commit -m "content: refresh generated vocabulary from open data"
           # Retry push a few times in case the branch moved under us.
           for i in 1 2 3 4; do
@@ -77,3 +76,22 @@ jobs:
             echo "push failed, retry $i"; sleep $((i * 3))
           done
           echo "::error::could not push generated content"; exit 1
+
+      # Pushes made with the workflow's own token do NOT trigger other workflows,
+      # so the content-bundle publish would never see the regen commit. Publish
+      # the bundle right here instead — every pipeline run, unconditionally
+      # (re-uploading an identical bundle is harmless and self-heals staleness).
+      - name: Publish OTA content bundle (manifest + chapters)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          node scripts/buildContentBundle.run.js dist-content "$(git rev-parse HEAD)"
+          if ! gh release view content >/dev/null 2>&1; then
+            gh release create content \
+              --title "Live content bundle" \
+              --notes "Over-the-air course content (manifest + per-course chapters). Auto-updated by CI; do not delete." \
+              --latest=false
+          fi
+          gh release upload content dist-content/*.json --clobber
+          echo "Published OTA bundle at $(git rev-parse --short HEAD)."
