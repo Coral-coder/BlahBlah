@@ -1,0 +1,232 @@
+require "base64"
+require "tmpdir"
+
+default_platform(:ios)
+
+APP_IDENTIFIER = "com.lightwave.blahblah".freeze
+XCODEPROJ = "ios/BlahBlah.xcodeproj".freeze
+WORKSPACE = "ios/BlahBlah.xcworkspace".freeze
+SCHEME = "BlahBlah".freeze
+
+platform :ios do
+  desc "Build the iOS app and upload it to TestFlight (App Store Connect API key + manual signing)"
+  lane :beta do
+    key_id = ENV.fetch("APPSTORE_API_KEY_ID")
+    issuer_id = ENV.fetch("APPSTORE_ISSUER_ID")
+    key_path = ENV.fetch("ASC_API_KEY_PATH") # .p8 written to disk by the workflow
+    # Team ID lives in the Appfile (not secret); allow an env override if set.
+    team_id = ENV["APPLE_TEAM_ID"] ||
+              CredentialsManager::AppfileConfig.try_fetch_value(:team_id)
+
+    api_key = app_store_connect_api_key(
+      key_id: key_id,
+      issuer_id: issuer_id,
+      key_filepath: key_path,
+      in_house: false
+    )
+
+    # The workflow creates and unlocks a dedicated keychain (absolute path in
+    # SIGNING_KEYCHAIN) and sets it as default, so the downloaded certificate
+    # imports somewhere xcodebuild can actually find it.
+    keychain_name = ENV.fetch("SIGNING_KEYCHAIN")
+    keychain_password = ENV.fetch("SIGNING_KEYCHAIN_PASSWORD")
+
+    # Monotonic build number from the CI run so TestFlight never rejects a dupe.
+    increment_build_number(
+      xcodeproj: XCODEPROJ,
+      build_number: ENV.fetch("GITHUB_RUN_NUMBER", Time.now.to_i.to_s)
+    )
+
+    # IMPORTANT: we must NOT revoke distribution certificates. Revoking the
+    # certificate that signed a build invalidates that build on App Store Connect
+    # (it flips to "Invalid Binary" / ITMS-90035 Invalid Signature). A previous
+    # version revoked all distribution certs every run, which silently invalidated
+    # every prior TestFlight binary. Instead we reuse a persistent distribution
+    # certificate imported from a secret (.p12), and only fall back to minting one
+    # when no secret is provided.
+    #
+    # Preferred: the encrypted certificate vault committed by the "Bootstrap iOS
+    # signing" workflow (phone-friendly, no Mac). Decrypt with CERT_VAULT_PASSWORD
+    # and import — the SAME certificate signs every build and is never revoked.
+    vault_path = File.expand_path("cert-vault.p12.enc", __dir__)
+    vault_pass = ENV["CERT_VAULT_PASSWORD"]
+    cert_p12_b64 = ENV["APPLE_DISTRIBUTION_CERT_P12"]
+    if vault_pass && !vault_pass.empty? && File.exist?(vault_path)
+      p12_path = File.expand_path("cert-vault.p12", Dir.tmpdir)
+      sh("openssl enc -d -aes-256-cbc -pbkdf2 -in #{vault_path.shellescape} " \
+         "-out #{p12_path.shellescape} -pass env:CERT_VAULT_PASSWORD")
+      import_certificate(
+        certificate_path: p12_path,
+        certificate_password: vault_pass,
+        keychain_name: keychain_name,
+        keychain_password: keychain_password
+      )
+      UI.message("Imported persistent distribution certificate from the vault (cert-vault.p12.enc)")
+    elsif cert_p12_b64 && !cert_p12_b64.empty?
+      p12_path = File.expand_path("dist-cert.p12", Dir.tmpdir)
+      File.binwrite(p12_path, Base64.decode64(cert_p12_b64))
+      import_certificate(
+        certificate_path: p12_path,
+        certificate_password: ENV.fetch("APPLE_DISTRIBUTION_CERT_PASSWORD", ""),
+        keychain_name: keychain_name,
+        keychain_password: keychain_password
+      )
+      UI.message("Imported persistent distribution certificate from APPLE_DISTRIBUTION_CERT_P12")
+    else
+      # Fallback: mint a distribution certificate for this run (does NOT revoke
+      # others). Note Apple caps distribution certs at 3 — once you hit that,
+      # add the APPLE_DISTRIBUTION_CERT_P12 secret for a stable, reusable cert.
+      UI.important("No APPLE_DISTRIBUTION_CERT_P12 secret set — minting a cert for this run. " \
+                   "Add that secret for stable signing that never invalidates old builds.")
+      get_certificates(
+        api_key: api_key,
+        development: false,
+        keychain_path: keychain_name,
+        keychain_password: keychain_password
+      )
+    end
+    get_provisioning_profile(
+      api_key: api_key,
+      app_identifier: APP_IDENTIFIER,
+      development: false,
+      force: true
+    )
+
+    profile_name = lane_context[SharedValues::SIGH_NAME]
+
+    update_code_signing_settings(
+      use_automatic_signing: false,
+      path: XCODEPROJ,
+      team_id: team_id,
+      targets: [SCHEME],
+      code_sign_identity: "Apple Distribution",
+      profile_name: profile_name
+    )
+
+    build_app(
+      workspace: WORKSPACE,
+      scheme: SCHEME,
+      configuration: "Release",
+      export_method: "app-store",
+      export_options: {
+        signingStyle: "manual",
+        teamID: team_id,
+        provisioningProfiles: {
+          APP_IDENTIFIER => profile_name
+        }
+      }
+    )
+
+    # "What to Test" notes for this build, authored in the repo so every ship
+    # carries a narrative for the tester. Optional — absent file = no changelog.
+    notes_path = File.expand_path("testflight_notes.txt", __dir__)
+    changelog = File.exist?(notes_path) ? File.read(notes_path).strip : nil
+
+    upload_to_testflight(
+      api_key: api_key,
+      app_identifier: APP_IDENTIFIER,
+      changelog: changelog,
+      skip_waiting_for_build_processing: true
+    )
+  end
+
+  desc "Mint ONE distribution certificate and export it to fastlane/cert-vault.p12. " \
+       "Run by the 'Bootstrap iOS signing' workflow — see docs/SIGNING.md."
+  lane :bootstrap_cert do
+    api_key = app_store_connect_api_key(
+      key_id: ENV.fetch("APPSTORE_API_KEY_ID"),
+      issuer_id: ENV.fetch("APPSTORE_ISSUER_ID"),
+      key_filepath: ENV.fetch("ASC_API_KEY_PATH"),
+      in_house: false
+    )
+    keychain_name = ENV.fetch("SIGNING_KEYCHAIN")
+    keychain_password = ENV.fetch("SIGNING_KEYCHAIN_PASSWORD")
+    vault_pass = ENV.fetch("CERT_VAULT_PASSWORD")
+
+    # FIRST, clear out the stale distribution certificates. Their private keys
+    # were created on ephemeral CI runners and are gone forever, so they can't
+    # sign anything — they only block Apple's 3-certificate cap. This is the ONE
+    # place revocation is allowed: a one-time bootstrap, before minting the
+    # certificate we keep. (Revoking here invalidates any TestFlight build those
+    # old certs signed — upload a fresh build right after bootstrapping.)
+    require "spaceship"
+    Spaceship::ConnectAPI.token = Spaceship::ConnectAPI::Token.create(
+      key_id: ENV.fetch("APPSTORE_API_KEY_ID"),
+      issuer_id: ENV.fetch("APPSTORE_ISSUER_ID"),
+      filepath: File.expand_path(ENV.fetch("ASC_API_KEY_PATH"))
+    )
+    Spaceship::ConnectAPI::Certificate.all.each do |cert|
+      next unless cert.certificate_type.to_s.include?("DISTRIBUTION")
+
+      UI.message("Revoking dead distribution certificate #{cert.id} (private key lost to an ephemeral runner)")
+      begin
+        cert.delete!
+      rescue StandardError => e
+        UI.important("Could not revoke #{cert.id}: #{e.message}")
+      end
+    end
+
+    # THEN mint the one certificate we keep forever (exported to the vault below).
+    get_certificates(
+      api_key: api_key,
+      development: false,
+      keychain_path: keychain_name,
+      keychain_password: keychain_password
+    )
+
+    out = File.expand_path("cert-vault.p12", __dir__)
+    # Export the identity (certificate + private key) from the CI keychain.
+    sh("security", "export", "-k", keychain_name, "-t", "identities",
+       "-f", "pkcs12", "-P", vault_pass, "-o", out)
+    UI.success("Exported distribution identity to #{out}")
+  end
+end
+
+platform :android do
+  desc "Build a signed release AAB and (if a Play service-account key is " \
+       "configured) upload it to the Google Play internal track. Without the " \
+       "key it just builds the artifact for the workflow to publish."
+  lane :beta do
+    # Build the App Bundle. Signing + versionCode come from env vars the workflow
+    # exports (BLAHBLAH_UPLOAD_* + BLAHBLAH_VERSION_CODE), read in app/build.gradle.
+    gradle(
+      project_dir: "android",
+      task: "bundle",
+      build_type: "Release"
+    )
+
+    aab = lane_context[SharedValues::GRADLE_AAB_OUTPUT_PATH]
+    UI.message("Built AAB: #{aab}")
+
+    json_key = ENV["PLAY_JSON_KEY_PATH"] # written to disk by the workflow if the secret exists
+    unless json_key && File.exist?(json_key)
+      UI.important("No Google Play service-account key configured " \
+                   "(PLAY_JSON_KEY_PATH unset). Skipping upload — the signed AAB " \
+                   "is still attached as a workflow artifact.")
+      next
+    end
+
+    # Play requires release notes under metadata/android/<locale>/changelogs/.
+    notes_path = File.expand_path("testflight_notes.txt", __dir__)
+    if File.exist?(notes_path)
+      changelog = File.read(notes_path).strip
+      changelog_dir = File.expand_path("metadata/android/en-US/changelogs", __dir__)
+      FileUtils.mkdir_p(changelog_dir)
+      version_code = ENV["BLAHBLAH_VERSION_CODE"]
+      File.write(File.join(changelog_dir, "#{version_code}.txt"), changelog) if version_code
+      File.write(File.join(changelog_dir, "default.txt"), changelog)
+    end
+
+    upload_to_play_store(
+      package_name: APP_IDENTIFIER,
+      track: "internal",
+      aab: aab,
+      json_key: json_key,
+      release_status: "draft",
+      skip_upload_apk: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+  end
+end

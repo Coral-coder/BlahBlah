@@ -1,0 +1,100 @@
+import type { Story } from "@/stories/types";
+
+export const spanishStories: Story[] = [
+  {
+    id: "es-story-1",
+    courseCode: "es",
+    title: "Un café, por favor",
+    emoji: "☕",
+    cefr: "A1",
+    blurb: "Ana orders at a busy café and gets a surprise.",
+    lines: [
+      { speaker: "📖", target: "Ana entra en un café.", en: "Ana enters a café." },
+      { speaker: "🧑‍🍳 Camarero", target: "¡Hola! ¿Qué desea?", en: "Hello! What would you like?" },
+      { speaker: "🧑 Ana", target: "Un café, por favor.", en: "A coffee, please." },
+      { speaker: "🧑‍🍳 Camarero", target: "¿Con leche o sin leche?", en: "With milk or without milk?" },
+      { speaker: "🧑 Ana", target: "Con leche, por favor.", en: "With milk, please." },
+      { speaker: "🧑‍🍳 Camarero", target: "¿Algo más?", en: "Anything else?" },
+      { speaker: "🧑 Ana", target: "No, gracias.", en: "No, thank you." },
+      { speaker: "🧑‍🍳 Camarero", target: "Aquí tiene. Son dos euros.", en: "Here you go. That's two euros." },
+      { speaker: "🧑 Ana", target: "¡Qué barato!", en: "How cheap!" },
+      { speaker: "🧑‍🍳 Camarero", target: "¡Hoy invita la casa!", en: "Today it's on the house!" },
+    ],
+    questions: [
+      {
+        question: "How does Ana want her coffee?",
+        options: ["With milk", "Without milk", "With sugar", "Cold"],
+        answer: 0,
+      },
+      {
+        question: "What happens at the end?",
+        options: ["She pays double", "The coffee is on the house", "She leaves", "She orders cake"],
+        answer: 1,
+      },
+    ],
+  },
+  {
+    id: "es-story-2",
+    courseCode: "es",
+    title: "¿Dónde está mi gato?",
+    emoji: "🐱",
+    cefr: "A1",
+    blurb: "Ana can't find her cat in the house.",
+    lines: [
+      { speaker: "🧑 Ana", target: "¿Dónde está mi gato?", en: "Where is my cat?" },
+      { speaker: "📖", target: "Ana busca en la cocina.", en: "Ana looks in the kitchen." },
+      { speaker: "🧑 Ana", target: "No está aquí.", en: "He is not here." },
+      { speaker: "📖", target: "Ana busca debajo de la cama.", en: "Ana looks under the bed." },
+      { speaker: "🧑 Ana", target: "¡Tampoco está aquí!", en: "He's not here either!" },
+      { speaker: "👵 Abuela", target: "¿Buscas a Michi?", en: "Are you looking for Michi?" },
+      { speaker: "🧑 Ana", target: "¡Sí! ¿Lo ves?", en: "Yes! Do you see him?" },
+      { speaker: "👵 Abuela", target: "Está en tu sombrero.", en: "He is in your hat." },
+      { speaker: "🧑 Ana", target: "¡Qué gato tan tonto!", en: "What a silly cat!" },
+      { speaker: "👵 Abuela", target: "Le gusta dormir allí.", en: "He likes to sleep there." },
+    ],
+    questions: [
+      {
+        question: "Where is the cat hiding?",
+        options: ["Under the bed", "In the kitchen", "In the hat", "Outside"],
+        answer: 2,
+      },
+      {
+        question: "Who finds the cat?",
+        options: ["Ana", "The grandmother", "A neighbor", "The waiter"],
+        answer: 1,
+      },
+    ],
+  },
+  {
+    id: "es-story-3",
+    courseCode: "es",
+    title: "El autobús equivocado",
+    emoji: "🚌",
+    cefr: "A2",
+    blurb: "Ana takes the wrong bus and meets a friend.",
+    lines: [
+      { speaker: "📖", target: "Ana sube al autobús número cinco.", en: "Ana gets on bus number five." },
+      { speaker: "🧑 Ana", target: "Este autobús va al centro, ¿verdad?", en: "This bus goes downtown, right?" },
+      { speaker: "🧑‍🍳 Conductor", target: "No, este va a la playa.", en: "No, this one goes to the beach." },
+      { speaker: "🧑 Ana", target: "¡Ay, no! Me equivoqué.", en: "Oh no! I made a mistake." },
+      { speaker: "👵 Señora", target: "¡Ana! ¿Tú aquí?", en: "Ana! You here?" },
+      { speaker: "🧑 Ana", target: "¡Hola! Subí al autobús equivocado.", en: "Hi! I got on the wrong bus." },
+      { speaker: "👵 Señora", target: "¡Pues vamos juntas a la playa!", en: "Then let's go to the beach together!" },
+      { speaker: "🧑 Ana", target: "Pero no tengo traje de baño.", en: "But I don't have a swimsuit." },
+      { speaker: "👵 Señora", target: "No importa, comemos un helado.", en: "It doesn't matter, we'll have an ice cream." },
+      { speaker: "🧑 Ana", target: "¡Buena idea! El error fue perfecto.", en: "Good idea! The mistake was perfect." },
+    ],
+    questions: [
+      {
+        question: "Where did Ana want to go?",
+        options: ["The beach", "Downtown", "The market", "Home"],
+        answer: 1,
+      },
+      {
+        question: "What do they decide to do at the beach?",
+        options: ["Swim", "Have an ice cream", "Go shopping", "Take another bus"],
+        answer: 1,
+      },
+    ],
+  },
+];

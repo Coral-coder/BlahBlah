@@ -1,0 +1,12 @@
+{
+  "name": "blah-neural-tts",
+  "version": "0.1.0",
+  "description": "On-device neural TTS (sherpa-onnx) for BlahBlah",
+  "main": "index.js",
+  "react-native": "index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }
+}
