@@ -163,6 +163,9 @@ jobs:
           # Unlocks the committed certificate vault (see docs/SIGNING.md) so every
           # build signs with the same never-revoked distribution certificate.
           CERT_VAULT_PASSWORD: ${{ secrets.CERT_VAULT_PASSWORD }}
-          APPLE_DISTRIBUTION_CERT_P12: ${{ secrets.APPLE_DISTRIBUTION_CERT_P12 }}
-          APPLE_DISTRIBUTION_CERT_PASSWORD: ${{ secrets.APPLE_DISTRIBUTION_CERT_PASSWORD }}
+          # The team's shared distribution certificate, copied in by Dev_deploy_setup's
+          # "Set up app repo" workflow (BUILD_CERTIFICATE_P12_BASE64 + P12_PASSWORD).
+          # Falls back to the older APPLE_DISTRIBUTION_CERT_* secret names if set.
+          APPLE_DISTRIBUTION_CERT_P12: ${{ secrets.BUILD_CERTIFICATE_P12_BASE64 || secrets.APPLE_DISTRIBUTION_CERT_P12 }}
+          APPLE_DISTRIBUTION_CERT_PASSWORD: ${{ secrets.P12_PASSWORD || secrets.APPLE_DISTRIBUTION_CERT_PASSWORD }}
         run: bundle exec fastlane ios beta
