@@ -1,0 +1,100 @@
+import type { Story } from "@/stories/types";
+
+export const chineseStories: Story[] = [
+  {
+    id: "zh-story-1",
+    courseCode: "zh",
+    title: "我要咖啡",
+    emoji: "☕",
+    cefr: "A1",
+    blurb: "Ana orders coffee, but the waiter mishears her.",
+    lines: [
+      { speaker: "📖", target: "安娜走进咖啡店。", pinyin: "Ānnà zǒu jìn kāfēi diàn.", en: "Ana walks into the café." },
+      { speaker: "🧑‍🍳 服务员", target: "你好！你要什么？", pinyin: "Nǐ hǎo! Nǐ yào shénme?", en: "Hello! What would you like?" },
+      { speaker: "🧑 安娜", target: "我要一杯咖啡。", pinyin: "Wǒ yào yì bēi kāfēi.", en: "I want a cup of coffee." },
+      { speaker: "🧑‍🍳 服务员", target: "一杯可乐？好的！", pinyin: "Yì bēi kělè? Hǎo de!", en: "A cola? Okay!" },
+      { speaker: "🧑 安娜", target: "不是，是咖啡！", pinyin: "Bú shì, shì kāfēi!", en: "No, it's coffee!" },
+      { speaker: "🧑‍🍳 服务员", target: "对不起，我听错了。", pinyin: "Duìbuqǐ, wǒ tīng cuò le.", en: "Sorry, I heard wrong." },
+      { speaker: "🧑 安娜", target: "没关系。", pinyin: "Méi guānxi.", en: "It's okay." },
+      { speaker: "🧑‍🍳 服务员", target: "你的咖啡来了。", pinyin: "Nǐ de kāfēi lái le.", en: "Your coffee is here." },
+      { speaker: "🧑 安娜", target: "谢谢你！", pinyin: "Xièxie nǐ!", en: "Thank you!" },
+      { speaker: "🧑‍🍳 服务员", target: "可乐也送你！", pinyin: "Kělè yě sòng nǐ!", en: "The cola is a gift too!" },
+    ],
+    questions: [
+      {
+        question: "What does Ana want to drink?",
+        options: ["Cola", "Coffee", "Tea", "Water"],
+        answer: 1,
+      },
+      {
+        question: "Why does the waiter apologize?",
+        options: ["He spilled the drink", "He heard wrong", "He is late", "The shop is closed"],
+        answer: 1,
+      },
+    ],
+  },
+  {
+    id: "zh-story-2",
+    courseCode: "zh",
+    title: "我的猫在哪里？",
+    emoji: "🐱",
+    cefr: "A1",
+    blurb: "Ana searches the house for her sleepy cat.",
+    lines: [
+      { speaker: "🧑 安娜", target: "我的猫在哪里？", pinyin: "Wǒ de māo zài nǎlǐ?", en: "Where is my cat?" },
+      { speaker: "📖", target: "安娜找厨房。", pinyin: "Ānnà zhǎo chúfáng.", en: "Ana searches the kitchen." },
+      { speaker: "🧑 安娜", target: "猫不在这里。", pinyin: "Māo bú zài zhèlǐ.", en: "The cat is not here." },
+      { speaker: "📖", target: "安娜找床下。", pinyin: "Ānnà zhǎo chuáng xià.", en: "Ana looks under the bed." },
+      { speaker: "🧑 安娜", target: "也不在！", pinyin: "Yě bú zài!", en: "Not here either!" },
+      { speaker: "👵 奶奶", target: "你找小猫吗？", pinyin: "Nǐ zhǎo xiǎo māo ma?", en: "Are you looking for the kitty?" },
+      { speaker: "🧑 安娜", target: "对！你看见了吗？", pinyin: "Duì! Nǐ kànjiàn le ma?", en: "Yes! Did you see it?" },
+      { speaker: "👵 奶奶", target: "它在你的帽子里。", pinyin: "Tā zài nǐ de màozi lǐ.", en: "It is in your hat." },
+      { speaker: "🧑 安娜", target: "这只猫真傻！", pinyin: "Zhè zhī māo zhēn shǎ!", en: "This cat is so silly!" },
+      { speaker: "👵 奶奶", target: "它喜欢在那里睡觉。", pinyin: "Tā xǐhuan zài nàlǐ shuìjiào.", en: "It likes to sleep there." },
+    ],
+    questions: [
+      {
+        question: "Where is the cat?",
+        options: ["Under the bed", "In the kitchen", "In the hat", "On the chair"],
+        answer: 2,
+      },
+      {
+        question: "Who finds the cat?",
+        options: ["Ana", "Grandma", "The waiter", "A neighbor"],
+        answer: 1,
+      },
+    ],
+  },
+  {
+    id: "zh-story-3",
+    courseCode: "zh",
+    title: "坐错车了",
+    emoji: "🚌",
+    cefr: "A2",
+    blurb: "Ana boards the wrong bus and ends up at the beach.",
+    lines: [
+      { speaker: "📖", target: "安娜上了五号公交车。", pinyin: "Ānnà shàng le wǔ hào gōngjiāochē.", en: "Ana got on bus number five." },
+      { speaker: "🧑 安娜", target: "这车去市中心吗？", pinyin: "Zhè chē qù shì zhōngxīn ma?", en: "Does this bus go downtown?" },
+      { speaker: "🧑‍🍳 司机", target: "不去，这车去海边。", pinyin: "Bú qù, zhè chē qù hǎibiān.", en: "No, this bus goes to the beach." },
+      { speaker: "🧑 安娜", target: "哎呀，我坐错了！", pinyin: "Āiyā, wǒ zuò cuò le!", en: "Oh no, I got on the wrong one!" },
+      { speaker: "👵 阿姨", target: "安娜！你也在这里？", pinyin: "Ānnà! Nǐ yě zài zhèlǐ?", en: "Ana! You're here too?" },
+      { speaker: "🧑 安娜", target: "你好！我坐错车了。", pinyin: "Nǐ hǎo! Wǒ zuò cuò chē le.", en: "Hi! I took the wrong bus." },
+      { speaker: "👵 阿姨", target: "那我们一起去海边吧！", pinyin: "Nà wǒmen yìqǐ qù hǎibiān ba!", en: "Then let's go to the beach together!" },
+      { speaker: "🧑 安娜", target: "可是我没有泳衣。", pinyin: "Kěshì wǒ méiyǒu yǒngyī.", en: "But I don't have a swimsuit." },
+      { speaker: "👵 阿姨", target: "没关系，我们吃冰淇淋。", pinyin: "Méi guānxi, wǒmen chī bīngqílín.", en: "It's okay, we'll eat ice cream." },
+      { speaker: "🧑 安娜", target: "好主意！这个错误真好。", pinyin: "Hǎo zhǔyi! Zhège cuòwù zhēn hǎo.", en: "Good idea! This mistake is great." },
+    ],
+    questions: [
+      {
+        question: "Where did Ana want to go?",
+        options: ["The beach", "Downtown", "Home", "The market"],
+        answer: 1,
+      },
+      {
+        question: "What do they decide to eat?",
+        options: ["Coffee", "Ice cream", "Cake", "Apples"],
+        answer: 1,
+      },
+    ],
+  },
+];

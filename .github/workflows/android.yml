@@ -1,0 +1,148 @@
+name: Android → release build
+
+# Builds the bare React Native Android app with Gradle and publishes the signed
+# release artifacts (AAB + APK) for every ship. The artifacts attach to the
+# workflow run so you can download and sideload/upload them.
+#
+# Signing:
+#   If an upload keystore is configured via secrets the release artifacts are
+#   signed with it; otherwise they fall back to the debug keystore so the build
+#   still succeeds and produces an installable APK. To produce Play-ready
+#   (upload-key-signed) builds, add these repo secrets:
+#     ANDROID_KEYSTORE_BASE64      base64 of your upload-keystore.jks
+#     ANDROID_KEYSTORE_PASSWORD    keystore (store) password
+#     ANDROID_KEY_ALIAS            key alias
+#     ANDROID_KEY_PASSWORD         key password
+#
+# Google Play upload (optional, off by default):
+#   Add a Play service-account JSON as the secret PLAY_JSON_KEY to also push each
+#   build to the Play "internal" testing track via Fastlane. Without it, this
+#   workflow just attaches the artifacts (the chosen "signed artifact in CI" mode).
+
+on:
+  push:
+    branches:
+      # Delivery branch ships; the dreaming branch builds artifacts for testing
+      # without triggering an iOS TestFlight upload.
+      - "claude/stoic-newton-or77ao"
+      - "claude/blahblah-next"
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  android:
+    name: Build signed Android release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install JS dependencies
+        run: npm ci
+
+      - name: Validate course content
+        run: npm run validate:content
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Decode upload keystore (if configured)
+        id: keystore
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        run: |
+          set -euo pipefail
+          if [ -n "${ANDROID_KEYSTORE_BASE64:-}" ]; then
+            KS="$RUNNER_TEMP/upload-keystore.jks"
+            printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > "$KS"
+            echo "BLAHBLAH_UPLOAD_STORE_FILE=$KS" >> "$GITHUB_ENV"
+            echo "release-signed: yes"
+          else
+            echo "::warning::No ANDROID_KEYSTORE_BASE64 secret — release artifacts will be debug-signed (still installable). Add the upload-keystore secrets for Play-ready builds."
+            echo "release-signed: no"
+          fi
+
+      - name: Build release AAB + APK
+        env:
+          # Monotonic Play versionCode from the CI run; version name from package.json.
+          BLAHBLAH_VERSION_CODE: ${{ github.run_number }}
+          BLAHBLAH_UPLOAD_STORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          BLAHBLAH_UPLOAD_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          BLAHBLAH_UPLOAD_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          set -euo pipefail
+          VERSION_NAME=$(node -p "require('./package.json').version || '1.0'")
+          export BLAHBLAH_VERSION_NAME="$VERSION_NAME"
+          echo "Building versionName=$VERSION_NAME versionCode=$BLAHBLAH_VERSION_CODE"
+          cd android
+          ./gradlew --no-daemon bundleRelease assembleRelease
+
+      - name: Collect artifacts
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          find android/app/build/outputs -name "*.aab" -exec cp {} dist/ \;
+          find android/app/build/outputs/apk/release -name "*.apk" -exec cp {} dist/ \;
+          # Stable, predictable names for the public install link.
+          APK=$(find dist -name "*.apk" | head -1)
+          AAB=$(find dist -name "*.aab" | head -1)
+          [ -n "$APK" ] && cp "$APK" dist/blahblah-latest.apk
+          [ -n "$AAB" ] && cp "$AAB" dist/blahblah-latest.aab
+          echo "Artifacts:"; ls -la dist
+
+      - name: Upload Android artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: blahblah-android-${{ github.run_number }}
+          path: dist/*
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Publish APK to the "android-latest" release (tap-to-install link)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if ! gh release view android-latest >/dev/null 2>&1; then
+            gh release create android-latest \
+              --title "Latest Android build" \
+              --notes "Newest installable Android build (sideload the .apk). Auto-updated by CI." \
+              --latest=false
+          fi
+          gh release upload android-latest dist/blahblah-latest.apk dist/blahblah-latest.aab --clobber
+          echo "Published APK: https://github.com/Coral-coder/BlahBlah/releases/download/android-latest/blahblah-latest.apk"
+
+
+      - name: Publish to Google Play internal track (if configured)
+        # The `secrets` context isn't allowed in `if:`, so gate inside the script:
+        # without a Play key this is a no-op (the AAB/APK artifacts are enough).
+        env:
+          PLAY_JSON_KEY: ${{ secrets.PLAY_JSON_KEY }}
+          BLAHBLAH_VERSION_CODE: ${{ github.run_number }}
+        run: |
+          set -euo pipefail
+          if [ -z "${PLAY_JSON_KEY:-}" ]; then
+            echo "No PLAY_JSON_KEY secret — skipping Play upload. Artifacts are attached to this run."
+            exit 0
+          fi
+          KEY_PATH="$RUNNER_TEMP/play-key.json"
+          printf '%s' "$PLAY_JSON_KEY" > "$KEY_PATH"
+          export PLAY_JSON_KEY_PATH="$KEY_PATH"
+          # Reuse the already-built AAB; fastlane's gradle step is incremental.
+          bundle exec fastlane android beta

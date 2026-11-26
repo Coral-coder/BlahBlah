@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Auto Backup rules (Android 11 and below). Progress/settings (AsyncStorage,
+     the "database" + "sharedpref" domains) are backed up so they survive an
+     uninstall/reinstall. The large, re-downloadable voice models and the cached
+     content bundle are excluded so we stay under the backup quota. -->
+<full-backup-content>
+    <exclude domain="file" path="voices/" />
+    <exclude domain="file" path="content-bundle.json" />
+</full-backup-content>

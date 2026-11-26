@@ -1,0 +1,101 @@
+import type { Story } from "@/stories/types";
+
+export const germanStories: Story[] = [
+  {
+    id: "de-story-1",
+    courseCode: "de",
+    title: "Kaffee, bitte!",
+    emoji: "☕",
+    cefr: "A1",
+    blurb: "Ana orders coffee but the waiter hears something else.",
+    lines: [
+      { speaker: "📖", target: "Ana geht in ein Café.", en: "Ana goes into a café." },
+      { speaker: "🧑‍🍳 Kellner", target: "Guten Tag! Was möchten Sie?", en: "Good day! What would you like?" },
+      { speaker: "🧑 Ana", target: "Einen Kaffee, bitte.", en: "A coffee, please." },
+      { speaker: "🧑‍🍳 Kellner", target: "Einen Kuchen? Sehr gern!", en: "A cake? With pleasure!" },
+      { speaker: "🧑 Ana", target: "Nein, einen Kaffee!", en: "No, a coffee!" },
+      { speaker: "🧑‍🍳 Kellner", target: "Ah, Entschuldigung!", en: "Ah, sorry!" },
+      { speaker: "🧑 Ana", target: "Kein Problem.", en: "No problem." },
+      { speaker: "🧑‍🍳 Kellner", target: "Hier ist Ihr Kaffee.", en: "Here is your coffee." },
+      { speaker: "🧑 Ana", target: "Danke schön!", en: "Thank you very much!" },
+      { speaker: "🧑‍🍳 Kellner", target: "Und ein Kuchen, gratis!", en: "And a cake, free!" },
+    ],
+    questions: [
+      {
+        question: "What does Ana order?",
+        options: ["A cake", "A coffee", "A tea", "Water"],
+        answer: 1,
+      },
+      {
+        question: "What does the waiter give her for free at the end?",
+        options: ["A coffee", "A cake", "Nothing", "A tea"],
+        answer: 1,
+      },
+    ],
+  },
+  {
+    id: "de-story-2",
+    courseCode: "de",
+    title: "Wo ist Oma?",
+    emoji: "👵",
+    cefr: "A1",
+    blurb: "Ana looks for Grandma at the market.",
+    lines: [
+      { speaker: "📖", target: "Ana ist auf dem Markt.", en: "Ana is at the market." },
+      { speaker: "🧑 Ana", target: "Wo ist Oma?", en: "Where is Grandma?" },
+      { speaker: "📖", target: "Sie sucht überall.", en: "She looks everywhere." },
+      { speaker: "🧑 Ana", target: "Ist Oma hier?", en: "Is Grandma here?" },
+      { speaker: "🧑‍🍳 Verkäufer", target: "Wie sieht sie aus?", en: "What does she look like?" },
+      { speaker: "🧑 Ana", target: "Sie ist klein und nett.", en: "She is small and kind." },
+      { speaker: "👵 Oma", target: "Ana! Ich bin hier!", en: "Ana! I am here!" },
+      { speaker: "🧑 Ana", target: "Oma! Endlich!", en: "Grandma! Finally!" },
+      { speaker: "👵 Oma", target: "Ich kaufe Äpfel.", en: "I am buying apples." },
+      { speaker: "🧑 Ana", target: "Ich liebe Äpfel!", en: "I love apples!" },
+    ],
+    questions: [
+      {
+        question: "Where does the story take place?",
+        options: ["At a café", "At the market", "At home", "At school"],
+        answer: 1,
+      },
+      {
+        question: "What is Grandma buying?",
+        options: ["Bread", "Apples", "Coffee", "Flowers"],
+        answer: 1,
+      },
+    ],
+  },
+  {
+    id: "de-story-3",
+    courseCode: "de",
+    title: "Der verlorene Hund",
+    emoji: "🐶",
+    cefr: "A2",
+    blurb: "A lost dog follows Ana all the way home.",
+    lines: [
+      { speaker: "📖", target: "Ana geht nach Hause.", en: "Ana is walking home." },
+      { speaker: "📖", target: "Ein kleiner Hund folgt ihr.", en: "A small dog follows her." },
+      { speaker: "🧑 Ana", target: "Wem gehörst du?", en: "Who do you belong to?" },
+      { speaker: "📖", target: "Der Hund hat kein Halsband.", en: "The dog has no collar." },
+      { speaker: "🧑 Ana", target: "Bist du verloren?", en: "Are you lost?" },
+      { speaker: "📖", target: "Der Hund wedelt mit dem Schwanz.", en: "The dog wags its tail." },
+      { speaker: "🧑 Ana", target: "Komm, ich helfe dir.", en: "Come, I will help you." },
+      { speaker: "👵 Oma", target: "Wessen Hund ist das?", en: "Whose dog is that?" },
+      { speaker: "🧑 Ana", target: "Ich weiß es nicht.", en: "I don't know." },
+      { speaker: "👵 Oma", target: "Dann bleibt er bei uns!", en: "Then he stays with us!" },
+      { speaker: "🧑 Ana", target: "Wirklich? Danke, Oma!", en: "Really? Thank you, Grandma!" },
+    ],
+    questions: [
+      {
+        question: "Why does Ana think the dog is lost?",
+        options: ["It is dirty", "It has no collar", "It is crying", "It is hungry"],
+        answer: 1,
+      },
+      {
+        question: "What does Grandma decide at the end?",
+        options: ["To sell the dog", "To keep the dog", "To find the owner", "To ignore it"],
+        answer: 1,
+      },
+    ],
+  },
+];

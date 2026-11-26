@@ -1,0 +1,67 @@
+name: Publish content bundle
+
+# Builds the over-the-air content bundle from the curriculum blueprints, validates
+# it, and publishes it to the "content" GitHub Release. Installed apps fetch this
+# on launch, so lesson edits/additions reach users WITHOUT a new app build.
+#
+# Auto-publishes on any content change to the dreaming branch (the generated-vocab
+# pipeline commits here too, so new words flow out automatically). The validator
+# gates every publish, so broken content never goes live.
+
+on:
+  push:
+    branches: ["claude/blahblah-next"]
+    # Only blueprint DATA changes publish — the generator/engine lives in the app
+    # binary, so the bundle is pure data. This keeps mid-refactor engine work on
+    # this branch from going live; only content edits + pipeline vocab publish.
+    paths:
+      - "src/curriculum/blueprints/**"
+      - "src/lib/voiceCatalog.ts"
+      - "scripts/buildContentBundle.run.js"
+      - ".github/workflows/content-bundle.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: content-bundle
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  publish-bundle:
+    name: Build, validate & publish content bundle
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install JS dependencies
+        run: npm ci
+
+      - name: Validate course content (gate)
+        run: npm run validate:content
+
+      - name: Build content (manifest + per-course chapters)
+        run: node scripts/buildContentBundle.run.js dist-content "${GITHUB_SHA}"
+
+      - name: Publish to the "content" release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          # Create the release once; thereafter just replace the assets in place.
+          if ! gh release view content >/dev/null 2>&1; then
+            gh release create content \
+              --title "Live content bundle" \
+              --notes "Over-the-air course content (manifest + per-course chapters). Auto-updated by CI; do not delete." \
+              --latest=false
+          fi
+          gh release upload content dist-content/*.json --clobber
+          echo "Published content manifest + per-course chapters (version ${GITHUB_SHA})."

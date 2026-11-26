@@ -1,0 +1,92 @@
+import type { CourseBlueprint } from "@/curriculum/generate";
+
+// A for-fun novelty course in Dovahzul — the Dragon language of The Elder Scrolls
+// V: Skyrim (the tongue of the Thu'um / Dragon Shouts). Built from a curated set
+// of in-game canon words and iconic shouts. Learn it to greet a dragon, not to
+// pass a class. No neural voice (uses the system voice).
+export const dovahzulBlueprint: CourseBlueprint = {
+  code: "dov",
+  name: "Dragon (Dovahzul)",
+  endonym: "Dovahzul",
+  flag: "🐉",
+  fromLanguage: "English",
+  sections: [
+    {
+      id: "dov-s1",
+      title: "Words of power",
+      subtitle: "Greet a dragon in its own tongue",
+      units: [
+        {
+          id: "dov-u1",
+          title: "Drem Yol Lok",
+          subtitle: "Greetings, Dovahkiin",
+          cefr: "A1",
+          color: "#2E7D32",
+          icon: "🐉",
+          vocab: [
+            { target: "dovah", en: "dragon" },
+            { target: "zul", en: "voice" },
+            { target: "thu'um", en: "shout" },
+            { target: "dovahkiin", en: "Dragonborn" },
+            { target: "zu'u", en: "I" },
+            { target: "hi", en: "you" },
+            { target: "mu", en: "we" },
+            { target: "los", en: "is / am / are" },
+            { target: "drem", en: "peace" },
+            { target: "pruzah", en: "good" },
+            { target: "geh", en: "yes" },
+            { target: "nid", en: "no" },
+            { target: "fin", en: "the" },
+            { target: "aan", en: "a / an" },
+            { target: "brit", en: "beautiful" },
+          ],
+          sentences: [
+            { target: "drem yol lok", en: "greetings (peace, fire, sky)" },
+            { target: "zu'u los dovahkiin", en: "I am Dragonborn" },
+            { target: "hi los pruzah", en: "you are good" },
+            { target: "mu los dovah", en: "we are dragons" },
+            { target: "fin dovah", en: "the dragon" },
+            { target: "aan thu'um", en: "a shout" },
+            { target: "zul", en: "voice" },
+            { target: "drem", en: "peace" },
+          ],
+        },
+        {
+          id: "dov-u2",
+          title: "Fus Ro Dah",
+          subtitle: "Fire, sky and the Thu'um",
+          cefr: "A1",
+          color: "#455A64",
+          icon: "🔥",
+          vocab: [
+            { target: "fus", en: "force" },
+            { target: "ro", en: "balance" },
+            { target: "dah", en: "push" },
+            { target: "yol", en: "fire" },
+            { target: "lok", en: "sky" },
+            { target: "shul", en: "sun" },
+            { target: "grah", en: "battle" },
+            { target: "krif", en: "to fight" },
+            { target: "mul", en: "strong" },
+            { target: "kron", en: "victory" },
+            { target: "joor", en: "mortal" },
+            { target: "bormah", en: "father" },
+            { target: "monah", en: "mother" },
+            { target: "briinah", en: "sister" },
+            { target: "zeymah", en: "brother" },
+          ],
+          sentences: [
+            { target: "fus ro dah", en: "Unrelenting Force (force, balance, push)" },
+            { target: "yol toor shul", en: "Fire Breath (fire, inferno, sun)" },
+            { target: "zu'u los mul", en: "I am strong" },
+            { target: "fin dovah los mul", en: "the dragon is strong" },
+            { target: "yol ahrk lok", en: "fire and sky" },
+            { target: "aan grah", en: "a battle" },
+            { target: "kron", en: "victory" },
+            { target: "fin thu'um", en: "the Thu'um (the shout)" },
+          ],
+        },
+      ],
+    },
+  ],
+};

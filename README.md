@@ -1,85 +1,252 @@
-# BlahBlah 🗣️
+# BlahBlah 🗣️ — *better than Duolingo*
 
-An immersion-first language-learning app — like Duolingo, but the lessons are
-generated on the fly by Claude and tailored to *you*. Lead languages are
-**German** and **Mandarin Chinese**, but you can learn **any** language.
+A structured, guided language-learning app. You follow a path of bite-sized
+lessons made of interactive exercises, and the app always shows you exactly what
+to do next. Built with **bare React Native + TypeScript** (no Expo). Course
+content is hand-authored and expanded by a generator — no AI writing lessons at
+runtime. Ships to TestFlight via `.github/workflows/testflight.yml`.
 
-Built with **Expo / React Native + TypeScript** and the **Claude API**
-(`claude-opus-4-8` by default).
+> This branch (`claude/blahblah-next`) is the **dreaming branch**: new features
+> are built and documented here continuously, then cherry-picked to ship. See the
+> **[Dream Log](#dream-log)** at the bottom for the running changelog.
 
-## What it does
+## Languages
 
-- **Pick any language & level.** German and Chinese are featured; a dozen more
-  are one tap away; or type any language at all. Set your CEFR level (A1–C1).
-- **AI-generated immersion lessons.** Give a topic ("ordering coffee") and Claude
-  writes an immersion passage in the target language, 8 vocabulary cards (with
-  pronunciation aids — pinyin for Chinese, romaji for Japanese, etc.), and 4
-  exercises. Lessons are cached on-device so you can revisit them.
-- **Conversation tutor.** Chat in your target language. Claude replies at your
-  level, gently corrects you, keeps the conversation going, and offers a
-  tap-to-reveal English translation of every reply.
-- **Listen.** Tap 🔊 on any phrase to hear it via on-device text-to-speech.
+German 🇩🇪 (to C2), Chinese 🇨🇳 (with pinyin), Spanish 🇪🇸, Thai 🇹🇭 (intensive),
+Icelandic 🇮🇸. Vocabulary builds gradually — one new word at a time with heavy
+spaced review between introductions.
 
-## Getting started
+## Core learning
+
+- **Guided path.** Sections → units → lessons. The current lesson pulses with a
+  **START** badge; finished lessons show **crowns**; completed units auto-collapse;
+  the path auto-scrolls to where you are.
+- **Placement test** to skip ahead if you already know some.
+- **Interactive exercises:**
+  - **Card** — picture (emoji) intro for a new word
+  - **Word bank** — tap tiles to build the translation
+  - **Fill in the blank** — choose the missing word
+  - **Match** — pair words with meanings (tap either side)
+  - **Multiple choice** — pick the right translation
+  - **Listen** — hear it and rebuild it
+  - **Speak** — say the whole sentence; pronunciation is scored
+  - **Type** — write the translation from memory (forgiving of accents/typos)
+- **Tap-to-translate.** Tap any dotted word (or hold a tile/option) in a lesson to
+  see its meaning and hear it — built from a per-course glossary.
+- **Mastery-gated.** Wrong answers come back around; hearts add light stakes.
+
+## Natural voices (on-device) ✨
+
+Free neural TTS that runs **entirely on the phone** — including **Icelandic**,
+which iOS doesn't offer. Voices (Piper / MMS via sherpa-onnx) are hosted in this
+repo's Releases and downloaded on demand from **Settings → Natural voices**. Fully
+offline once downloaded; falls back to the system voice otherwise.
+
+## Motivation & gamification
+
+- **Streaks** with a **Streak Freeze** power-up (buy with gems; auto-protects a
+  missed day).
+- **Gems** currency, earned per lesson and from quests.
+- **Daily Quests** — 3 rotating challenges/day with gem rewards.
+- **Crowns / mastery levels** — replay finished lessons to level them up (1–5).
+- **Achievements** — milestone badges across lessons, words, streaks, XP, languages.
+- **Daily goal**, weekly XP chart, animated mascot, and daily reminder notifications.
+
+## Practice & immersion
+
+- **Review (SRS)** — spaced-repetition recall of your weak words; due scheduling.
+- **Practice mistakes**, **Dictation**, **Grammar tips**.
+- **Stories** (auto-scrolling, read aloud), **Role-play** (act a scene aloud),
+  **Watch**, **News**, and **AI Story** generation.
+- **Words you know** list, **Match Blitz** game, **character tracing** practice
+  (fading stencil guides for non-Latin scripts).
+
+## Polish
+
+Juicy 3D buttons, animated progress bars, pulsing path nodes, screen transitions,
+animated tab bar and splash.
+
+## Run it locally
+
+Requires Xcode + CocoaPods (macOS) for iOS.
 
 ```bash
 npm install
-npm start
+bundle install
+bundle exec pod install --project-directory=ios
+npm run ios        # or open ios/BlahBlah.xcworkspace in Xcode
 ```
 
-Then press `i` (iOS simulator), `a` (Android), or `w` (web), or scan the QR code
-with the **Expo Go** app on your phone.
+## Ship to TestFlight
 
-### Add your Claude API key
+Push to the delivery branch (or run the **iOS → TestFlight** Action). Each ship
+carries tester notes from `fastlane/testflight_notes.txt`. The neural voice packs
+are (re)published by the **Publish voice models** workflow. Setup + secrets:
+**[docs/TESTFLIGHT.md](docs/TESTFLIGHT.md)**.
 
-1. Open the app → **Settings**.
-2. Paste a key from the [Anthropic Console](https://console.anthropic.com/settings/keys).
-3. (Optional) Choose a model — Opus 4.8 (best), Sonnet 4.6 (balanced), or
-   Haiku 4.5 (fastest/cheapest).
-
-The key is stored only on your device (AsyncStorage).
+The same delivery push also runs **Android → release build**, which produces a
+signed AAB + APK (download them from the workflow run's artifacts). Add an
+upload-keystore secret for Play-ready signing, and a Play service-account secret
+to auto-upload to the internal testing track. See **[docs/ANDROID.md](docs/ANDROID.md)**.
 
 ## Project structure
 
 ```
-app/                 Screens (expo-router, file-based)
-  _layout.tsx        Navigation stack + providers
-  index.tsx          Home: language/level selection
-  lesson.tsx         AI-generated immersion lessons
-  immersion.tsx      Conversation tutor
-  settings.tsx       API key + model
+App.tsx                  Providers + bottom-tab shell (Learn / Profile) + router + transitions
 src/
-  lib/claude.ts      Claude API calls (lesson gen + chat)
-  lib/languages.ts   Featured languages, CEFR levels
-  lib/storage.ts     AsyncStorage persistence
-  lib/types.ts       Shared types
-  state/AppContext.tsx  Global app state
-  components/ui.tsx  Buttons, cards, chips
-  theme.ts           Colors / spacing
+  curriculum/
+    types.ts             Course → Section → Unit → Lesson → Exercise model
+    generate.ts          Blueprint → many spaced-repetition lessons
+    blueprints/          Per-language vocab + sentences (de, zh, es, th, is, + themes)
+    index.ts             COURSES registry + getCourse()
+  lesson/engine.ts       Answer checking (incl. forgiving typed grading), XP
+  state/ProgressContext  Persisted store: XP, gems, streak+freezes, quests, crowns, …
+  navigation.tsx         Small stack navigator (useNav / useRoute)
+  components/            Exercise.tsx (all exercise renderers), ui.tsx, Mascot, Confetti
+  screens/               Path, Lesson, Review, Stories, Settings, Achievements, …
+  lib/
+    speech.ts            TTS routing (neural ↔ system)
+    neuralTts.ts         Bridge to the on-device sherpa-onnx engine
+    voiceModels.ts       Downloadable voice catalog + cache manager
+    glossary.ts          Per-course word→meaning lookup (tap-to-translate)
+    srs.ts, learned.ts, sfx.ts, reminders.ts, achievements.ts, ai.ts
+  theme.ts               Colors / spacing / shadow
+modules/blah-neural-tts  Native ObjC++ module wrapping sherpa-onnx (TTS)
+fastlane/                Fastfile (lane :beta) + tester notes
+.github/workflows/       testflight.yml (iOS), android.yml (AAB/APK), voice-models.yml,
+                         content-pipeline.yml (grow vocab), content-bundle.yml (OTA publish)
 ```
 
-## How the AI works
+## Dream Log
 
-- **Lessons** use Claude's **structured outputs** (`output_config.format` with a
-  JSON schema) so every lesson parses reliably into vocabulary + exercises.
-- **Conversation** sends the running history to Claude with a level- and
-  language-aware system prompt; the reply carries an inline `[[EN: …]]` gloss
-  that the app splits out for the translate toggle.
+Running changelog of features dreamed up on this branch (newest first).
 
-## ⚠️ Security note (read before shipping publicly)
+- **Deeper lessons** — the generator was reworked from one-word-per-lesson (very
+  repetitive) to dense batches: each lesson teaches ~7 new words, practises each
+  with a rotating exercise type, applies them in sentences, and weaves in spaced
+  review. Far less repetition and ~4× fewer total exercises generated (better
+  startup), while teaching the same vocabulary. Vocab budget per language raised
+  accordingly.
 
-This prototype calls the Claude API **directly from the device** using a key the
-user supplies, which is great for personal use and demos. An embedded API key
-can be extracted from network traffic, so for a **public release** you should:
+- **Voices in the OTA bundle** — the natural-voice catalog (which voices exist,
+  their settings and download source) now travels inside the content bundle, so a
+  new language ships with its voice config over-the-air, no app build. The app
+  also re-checks for a fresh bundle every time it returns to the foreground.
 
-1. Stand up a small backend that holds the Anthropic key server-side.
-2. Add per-user authentication and rate limiting.
-3. Point the app's `src/lib/claude.ts` calls at your backend instead of the
-   Anthropic API.
+- **Survives reinstall** — on Android, progress/settings are kept via Auto Backup
+  (the big re-downloadable voice/content caches are excluded from the backup
+  quota), so a delete/reinstall restores your data. iOS iCloud persistence is the
+  next step (needs the iCloud capability enabled on the App ID).
 
-## Roadmap ideas
+- **Chaptered OTA** — content is split into a tiny `content-manifest.json` (course
+  list + counts + voices, fetched on launch) and per-language `course-<code>.json`
+  chapters fetched only when a language is opened, then cached. Opening a language
+  downloads just that chapter (~tens–hundreds of KB) instead of every course at
+  once. The binary's bundled content is the always-safe fallback.
 
-- Spaced-repetition review of saved vocabulary
-- Streaks & daily goals
-- Speech *input* (speak your answers) via on-device speech recognition
-- Grammar deep-dives generated on demand
+- **Over-the-air content** — the app ships with content baked in, but on launch it
+  also pulls a `content-bundle.json` (all course blueprints) from this public
+  repo's GitHub Releases, caches it to disk, and regenerates courses live. Lessons
+  can be edited/added — even whole languages — without a new app build. A schema
+  number gates it so bundles authored for a newer engine are ignored by older
+  installs (they keep using the baked-in content). Publishing is automatic and
+  validator-gated (`content-bundle.yml`). See **[docs/CONTENT.md](docs/CONTENT.md)**.
+
+- **Auto natural voices** — on-device neural voices are now on by default and the
+  voice for your active course downloads automatically in the background the first
+  time you open it (falling back to the system voice until it lands, then
+  upgrading silently). Settings shows live progress and still lets you grab other
+  languages or turn it off.
+
+- **Content data pipeline** — a CI job (`scripts/content-pipeline/build.mjs`,
+  `.github/workflows/content-pipeline.yml`) grows each course's vocabulary from
+  open data: FreeDict translations ranked by hermitdave word-frequency lists. It
+  emits CEFR-laddered "Most common words" sections, gates them through
+  `validate:content`, and commits the generated blueprints back. Starts with DE
+  / ES / FR / IT; word budget scales over time toward the 5–10k goal.
+
+- **Android shipping** — the build pipeline now also produces a signed Android
+  release (AAB + APK) on every ship via `.github/workflows/android.yml`, attached
+  as downloadable artifacts. Play Store internal-track upload auto-activates when
+  a service-account secret is added. Android falls back to the system voice
+  (the neural engine is iOS-only for now).
+
+- **Review keyboard fixes** — in Review, the Check/Continue button now rides above
+  the keyboard, the return key submits, the typed box clears between cards, and
+  the "turn off typing" setting now also makes Review all tap-to-choose.
+
+- **Soft multi-voice sounds** — correct/complete/wrong re-synthesized as soft,
+  detuned multi-voice instrument tones (gentle harmonic stack + light chorus) with
+  a subtle reverb tail. Warm and roomy, not the harsh plucks.
+
+- **Auto-confirm speaking** — speaking exercises now detect when you stop talking,
+  score automatically, and auto-advance when correct. No more double-tap.
+
+- **Rich French & Italian** — added a full themed section to each (Around town,
+  Daily life, Shopping, Travel, Weather & nature). Now ~184 vocab / ~485 lessons
+  each, all validated.
+
+- **Typing opt-out** — Settings toggle to turn off typing exercises; they become
+  tap-the-tiles word banks instead.
+- **Instrument sound effects** — re-synthesized correct/complete/wrong as
+  Karplus-Strong plucked strings (harp/guitar) with soft reverb — warm and real,
+  not buzzy.
+- **Deeper French & Italian** — added Family and Numbers & time units (now ~90
+  vocab / 225 lessons each), all verified by the content checker.
+- **Content integrity suite** — `npm run validate:content` checks every exercise
+  in every course; runs in CI before each build. Census: 8 courses, 34k+
+  exercises, 1,760 vocab.
+
+- **New languages (proof set)** — **French** 🇫🇷 and **Italian** 🇮🇹 (full treatment +
+  downloadable neural voice packs), plus **Elvish (Sindarin)** 🧝 as a for-fun
+  mythical novelty (curated words/phrases, system voice). The framework supports
+  adding the rest of the top-20 the same way; word counts grow over time.
+
+- **What's-new card** in Settings; version bumped to 0.3.0.
+- **Sound-effects toggle** — mute the UI sounds from Settings.
+- **Unit progress bars** — each unit header on the path shows a white progress
+  bar of lessons completed.
+- **Streak milestones** — a one-time confetti toast at 3/7/14/30/60/100/180/365-day streaks.
+- **Daily-goal celebration** — confetti + a toast the first time you hit your
+  daily XP goal each day.
+- **Share progress** — a one-tap native share sheet posting your streak + XP.
+- **Flashcards** — a classic self-test deck over your learned words: tap to flip
+  (with audio), mark "Got it"/"Again"; missed cards loop until the deck clears.
+
+- **Feedback pass** — audio exercises now swap to a written equivalent instead of a
+  free skip; the path re-scrolls so the next lesson sits in "second place"; richer
+  sound effects; supercharged lesson-complete (emoji pop, XP count-up, PERFECT
+  badge, more confetti); colorful tile menu; a first-run prompt to download a
+  natural voice ("pronunciation is key").
+
+- **Combo meter** — consecutive correct answers build a 🔥 combo in-lesson, with
+  bonus XP for long perfect runs.
+- **Tricky words** — a Profile card surfacing your lowest-accuracy words (from
+  recall stats), tap to hear.
+- **Word of the Day** — a rotating vocabulary card on the path (tap to hear),
+  refreshed daily from the course vocab.
+- **Double or Nothing** — wager 💎50 that you'll practice every day for 7 days to
+  win 💎100. Tracked by completion days; miss one and it's lost.
+- **Weekly League** — a Duolingo-style XP leaderboard with simulated rivals,
+  promotion/demotion zones, and tiers (Bronze→Diamond). Fully local & deterministic
+  per week; your XP is real.
+- **Challenge mode** — a Settings toggle that turns word-bank exercises into
+  typed answers everywhere, for harder recall.
+- **Slow replay** — long-press any 🔊 (or the listen replay) to hear it slowly;
+  works with both neural and system voices.
+- **Practice calendar** — a 5-week heatmap of your active days on the Profile tab,
+  built from XP history (GitHub-contributions style).
+- **Accent bar** — a tap row of language-specific special characters
+  (ä ö ü ß · ñ ¿ ¡ · ð þ æ …) above the typing exercise, so you can enter them
+  without the system keyboard.
+- **Type-the-translation exercise** — typed production drill with forgiving
+  grading (ignores case/spacing/accents, tolerates minor typos). Added to review
+  lessons.
+- **On-device neural voices** — sherpa-onnx engine + downloadable Piper/MMS voice
+  packs (incl. Icelandic), Settings UI, system-voice fallback.
+- **Crowns / mastery levels** — replay lessons to level them up 1–5; crown pips on
+  the path; total crowns in the header.
+- **Achievements** — 17 milestone badges with progress.
+- **Gamification** — gems, daily quests, streak freezes.
+- **Tap-to-translate** — tap/hold any word in a lesson for its meaning.
+- **Visual polish** — 3D buttons, animated progress, pulsing nodes, transitions.

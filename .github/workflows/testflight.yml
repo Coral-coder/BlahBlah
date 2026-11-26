@@ -1,0 +1,168 @@
+name: iOS → TestFlight
+
+# Compiles the bare React Native iOS app with Xcode and uploads it straight to
+# TestFlight via Fastlane, using an App Store Connect API key with Xcode cloud
+# signing (Xcode creates/manages the signing cert + provisioning profile). Only
+# your Apple Developer account is involved — no Expo, no EAS, no second account.
+#
+# Trigger: push a version tag (e.g. v0.1.0) or run it manually.
+#
+# Required GitHub secrets:
+#   APPSTORE_API_KEY_ID       App Store Connect API key ID
+#   APPSTORE_API_PRIVATE_KEY  contents of the .p8 key (raw PEM, or base64)
+#   APPSTORE_ISSUER_ID        Issuer ID from the App Store Connect Keys page
+# Team ID is set in fastlane/Appfile (not secret). See docs/TESTFLIGHT.md.
+
+on:
+  push:
+    branches:
+      - "claude/stoic-newton-or77ao"
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+# Only one TestFlight build at a time. The Fastfile revokes stale distribution
+# certs at the start of each run, so overlapping builds would revoke each other's
+# signing cert and fail at upload ("Certificate Revoked"). Serialize to prevent it.
+concurrency:
+  group: testflight-upload
+  cancel-in-progress: false
+
+jobs:
+  testflight:
+    name: Build & upload to TestFlight
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select newest Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Verify iOS 26 SDK is available
+        run: |
+          set -euo pipefail
+          xcodebuild -version
+          SDK=$(xcodebuild -showsdks | grep -oE 'iphoneos[0-9.]+' | sed 's/iphoneos//' | sort -V | tail -1)
+          echo "Latest iOS SDK on runner: ${SDK:-none}"
+          major=${SDK%%.*}
+          if [ "${major:-0}" -lt 26 ]; then
+            echo "::error::App Store now requires the iOS 26 SDK (Xcode 26) but this runner's newest is ${SDK:-none}. Bump the runner image."
+            exit 1
+          fi
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install JS dependencies
+        run: npm ci
+
+      - name: Validate course content
+        run: npm run validate:content
+
+      - name: Fetch neural-voice frameworks (sherpa-onnx)
+        # CocoaPods does not run a podspec's prepare_command for local path pods,
+        # so we vendor the prebuilt sherpa-onnx + onnxruntime xcframeworks here,
+        # into the blah-neural-tts module, before `pod install`.
+        run: |
+          set -euo pipefail
+          MOD="node_modules/blah-neural-tts"
+          DEST="$MOD/frameworks"
+          if [ -d "$DEST/sherpa-onnx.xcframework" ] && [ -d "$DEST/onnxruntime.xcframework" ]; then
+            echo "frameworks already present"; exit 0
+          fi
+          mkdir -p "$DEST" work && cd work
+          VER="1.10.32"
+          URL="https://github.com/k2-fsa/sherpa-onnx/releases/download/v${VER}/sherpa-onnx-v${VER}-ios.tar.bz2"
+          echo "Trying pinned: $URL"
+          if ! curl -fL "$URL" -o sherpa.tar.bz2; then
+            echo "Pinned missing — discovering a valid iOS asset from the API…"
+            ASSET=$(curl -fsL "https://api.github.com/repos/k2-fsa/sherpa-onnx/releases?per_page=50" \
+              | grep -oE 'https://[^"]*sherpa-onnx-v[0-9.]+-ios\.tar\.bz2' | head -n1)
+            echo "Discovered: $ASSET"; test -n "$ASSET"
+            curl -fL "$ASSET" -o sherpa.tar.bz2
+          fi
+          tar -xjf sherpa.tar.bz2
+          cd ..
+          SO=$(find work -type d -name "sherpa-onnx.xcframework" | head -n1)
+          ORT=$(find work -type d -name "onnxruntime.xcframework" | head -n1)
+          echo "sherpa: $SO"; echo "onnx: $ORT"
+          test -n "$SO" && test -n "$ORT"
+          rm -rf "$DEST/sherpa-onnx.xcframework" "$DEST/onnxruntime.xcframework"
+          cp -R "$SO" "$DEST/sherpa-onnx.xcframework"
+          cp -R "$ORT" "$DEST/onnxruntime.xcframework"
+          rm -rf work
+          echo "Vendored:"; ls -1 "$DEST"
+          echo "Slices:"; ls -1 "$DEST/sherpa-onnx.xcframework"
+          test -d "$DEST/sherpa-onnx.xcframework"
+          test -d "$DEST/onnxruntime.xcframework"
+
+          # Copy the sherpa-onnx C-API headers next to the module source so
+          # `#import "c-api.h"` resolves regardless of the xcframework's internal
+          # layout. Must happen BEFORE pod install so source_files picks them up.
+          HDR=$(find "$DEST/sherpa-onnx.xcframework" -name "c-api.h" | head -n1)
+          echo "c-api.h: $HDR"
+          test -n "$HDR"
+          HDRDIR=$(dirname "$HDR")
+          cp "$HDRDIR"/*.h "$MOD/ios/" 2>/dev/null || cp "$HDR" "$MOD/ios/"
+          echo "Headers copied into module ios/:"; ls -1 "$MOD/ios/"*.h
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: Install CocoaPods
+        # Disable the React Native New Architecture: it's on by default in RN
+        # 0.76 but several native modules (e.g. react-native-tts) don't run under
+        # it, which silently breaks text-to-speech. We don't use any New-Arch
+        # features, so build the legacy architecture for reliable native modules.
+        env:
+          RCT_NEW_ARCH_ENABLED: "0"
+        run: bundle exec pod install --project-directory=ios
+
+      - name: Write App Store Connect API key
+        env:
+          APPSTORE_API_PRIVATE_KEY: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+          KEY_PATH="$RUNNER_TEMP/AuthKey.p8"
+          # Accept either the raw PEM (-----BEGIN PRIVATE KEY-----) or a base64 blob.
+          if printf '%s' "$APPSTORE_API_PRIVATE_KEY" | grep -q "BEGIN"; then
+            printf '%s\n' "$APPSTORE_API_PRIVATE_KEY" > "$KEY_PATH"
+          else
+            printf '%s' "$APPSTORE_API_PRIVATE_KEY" | base64 --decode > "$KEY_PATH"
+          fi
+          echo "ASC_API_KEY_PATH=$KEY_PATH" >> "$GITHUB_ENV"
+
+      - name: Create signing keychain
+        run: |
+          set -euo pipefail
+          KEYCHAIN="$RUNNER_TEMP/signing.keychain-db"
+          PASSWORD="ci-build-keychain"
+          security create-keychain -p "$PASSWORD" "$KEYCHAIN"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN"
+          security unlock-keychain -p "$PASSWORD" "$KEYCHAIN"
+          # Put our keychain first in the search list (keep the existing ones)
+          # and make it the default so xcodebuild/codesign use it.
+          security list-keychains -d user -s "$KEYCHAIN" $(security list-keychains -d user | tr -d '"')
+          security default-keychain -s "$KEYCHAIN"
+          echo "SIGNING_KEYCHAIN=$KEYCHAIN" >> "$GITHUB_ENV"
+          echo "SIGNING_KEYCHAIN_PASSWORD=$PASSWORD" >> "$GITHUB_ENV"
+
+      - name: Build & upload to TestFlight
+        env:
+          APPSTORE_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
+          APPSTORE_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
+          # Unlocks the committed certificate vault (see docs/SIGNING.md) so every
+          # build signs with the same never-revoked distribution certificate.
+          CERT_VAULT_PASSWORD: ${{ secrets.CERT_VAULT_PASSWORD }}
+          APPLE_DISTRIBUTION_CERT_P12: ${{ secrets.APPLE_DISTRIBUTION_CERT_P12 }}
+          APPLE_DISTRIBUTION_CERT_PASSWORD: ${{ secrets.APPLE_DISTRIBUTION_CERT_PASSWORD }}
+        run: bundle exec fastlane ios beta

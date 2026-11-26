@@ -1,0 +1,77 @@
+name: Publish voice models
+
+# Builds the on-device neural voice packs and hosts them in this repo's Releases
+# (tag: voice-models). The app downloads <id>.zip from that release on demand.
+# Source models are free/open Piper & MMS voices distributed by sherpa-onnx.
+on:
+  workflow_dispatch:
+  # Self-trigger: pushing a change to THIS file (re)publishes the voice packs,
+  # since the integration token can't dispatch workflows manually.
+  push:
+    branches:
+      - "claude/blahblah-next"
+    paths:
+      - ".github/workflows/voice-models.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build voice packs
+        run: |
+          set -euo pipefail
+          BASE="https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models"
+          mkdir -p packs work
+
+          # id | upstream archive (without .tar.bz2)
+          ENTRIES=(
+            "de_DE-thorsten-medium|vits-piper-de_DE-thorsten-medium"
+            "es_ES-davefx-medium|vits-piper-es_ES-davefx-medium"
+            "is_IS-steinn-medium|vits-piper-is_IS-steinn-medium"
+            "zh_CN-huayan-medium|vits-piper-zh_CN-huayan-medium"
+            "th_TH-mms-medium|vits-mms-tha"
+            "fr_FR-siwis-medium|vits-piper-fr_FR-siwis-medium"
+            "it_IT-paola-medium|vits-piper-it_IT-paola-medium"
+            "ru_RU-irina-medium|vits-piper-ru_RU-irina-medium"
+            "ja_JP-mms-medium|vits-mms-jpn"
+            "ga_IE-mms-medium|vits-mms-gle"
+            "sv_SE-nst-medium|vits-piper-sv_SE-nst-medium"
+          )
+
+          for e in "${ENTRIES[@]}"; do
+            id="${e%%|*}"; arc="${e##*|}"
+            echo "::group::$id ($arc)"
+            rm -rf "work/$id"; mkdir -p "work/$id"
+            if ! curl -fL "$BASE/$arc.tar.bz2" -o "work/$arc.tar.bz2"; then
+              echo "WARN: could not fetch $arc — skipping"; echo "::endgroup::"; continue
+            fi
+            tar -xjf "work/$arc.tar.bz2" -C "work"
+            src="work/$arc"
+
+            # Normalize layout: model.onnx + tokens.txt (+ espeak-ng-data if present)
+            onnx="$(find "$src" -maxdepth 1 -name '*.onnx' | head -n1)"
+            cp "$onnx" "work/$id/model.onnx"
+            cp "$src/tokens.txt" "work/$id/tokens.txt"
+            if [ -d "$src/espeak-ng-data" ]; then
+              cp -r "$src/espeak-ng-data" "work/$id/espeak-ng-data"
+            else
+              mkdir -p "work/$id/espeak-ng-data"   # MMS models don't use espeak
+            fi
+
+            (cd "work/$id" && zip -r -q "$GITHUB_WORKSPACE/packs/$id.zip" .)
+            ls -lh "packs/$id.zip"
+            echo "::endgroup::"
+          done
+
+          echo "Built packs:"; ls -lh packs
+
+      - name: Publish to Releases (tag voice-models)
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: voice-models
+          name: Voice models
+          body: On-device neural voice packs (Piper/MMS via sherpa-onnx). Downloaded by the app on demand.
+          files: packs/*.zip
