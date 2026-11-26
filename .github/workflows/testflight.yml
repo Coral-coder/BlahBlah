@@ -156,6 +156,21 @@ jobs:
           echo "SIGNING_KEYCHAIN=$KEYCHAIN" >> "$GITHUB_ENV"
           echo "SIGNING_KEYCHAIN_PASSWORD=$PASSWORD" >> "$GITHUB_ENV"
 
+      - name: Install Apple WWDR intermediate certificates
+        # The team's distribution .p12 holds only the leaf cert + key (no CA
+        # chain), so without the Apple Worldwide Developer Relations
+        # intermediates in the keychain the identity evaluates as invalid and
+        # `security find-identity -p codesigning` finds nothing. Install the
+        # current generations into our signing keychain (best effort per cert).
+        run: |
+          set -euo pipefail
+          for c in AppleWWDRCAG2 AppleWWDRCAG3 AppleWWDRCAG4 AppleWWDRCAG5 AppleWWDRCAG6 AppleWWDRCAG7 AppleWWDRCAG8; do
+            if curl -fsS "https://www.apple.com/certificateauthority/${c}.cer" -o "$RUNNER_TEMP/${c}.cer"; then
+              security import "$RUNNER_TEMP/${c}.cer" -k "$SIGNING_KEYCHAIN" -A || true
+              echo "installed ${c}"
+            fi
+          done
+
       - name: Build & upload to TestFlight
         env:
           APPSTORE_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}

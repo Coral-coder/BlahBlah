@@ -85,6 +85,12 @@ platform :ios do
         keychain_password: keychain_password
       )
     end
+    # Let codesign use the imported private key without a UI prompt, and show
+    # which identities the keychain actually holds (the next failure's first clue).
+    sh("security set-key-partition-list -S apple-tool:,apple:,codesign: -s " \
+       "-k #{keychain_password.shellescape} #{keychain_name.shellescape} >/dev/null 2>&1 || true")
+    sh("security find-identity -v -p codesigning #{keychain_name.shellescape} || true")
+
     get_provisioning_profile(
       api_key: api_key,
       app_identifier: APP_IDENTIFIER,
